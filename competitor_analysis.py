@@ -53,7 +53,7 @@ NEAR_ZERO_PCT        = 0.10
 MARKET_GROWTH_MIN    = 0.10
 LEADER_RATIO_MIN     = 0.15
 ZERO_STREAK_DAYS     = 10
-INSIDER_WINDOW_DAYS  = 10        # 10 дней до повышения цен
+INSIDER_WINDOW_DAYS  = 14        # 2 недели до повышения цен
 
 # --- Серая зона на графиках ---
 GRAY_BEFORE_WEEKS = 3
@@ -223,13 +223,38 @@ def _detect_insiders(comp, price_dates):
         w_end   = pd_date
         window  = comp[(comp[date_col] >= w_start) & (comp[date_col] <= w_end)]
 
+        # Считаем рост каждого конкурента в окне (в %)
+        growth_pct = {}
+        grew_significantly = set()
         for col in OTHER_COLS:
             if col not in window.columns:
                 continue
+            vals = window[col].dropna()
+            if vals.empty or len(vals) < 2:
+                growth_pct[col] = 0.0
+                continue
+            v_start = vals.iloc[0]
+            v_end   = vals.iloc[-1]
+            base = max(v_start, 1)  # избегаем деления на 0
+            growth_pct[col] = (v_end - v_start) / base
+
             avg_ship, avg_stk = avg_data.get(col, (0, 0))
             if _has_significant_growth(window, date_col, col,
                                        avg_ship, avg_stk,
                                        avg_market_stock, comp):
+                grew_significantly.add(col)
+
+        if not grew_significantly:
+            continue
+
+        # Инсайд = конкурент вырос значимо, а остальные НЕТ
+        # Медианный рост остальных (кроме проверяемого)
+        for col in grew_significantly:
+            others_growth = [g for c, g in growth_pct.items() if c != col]
+            median_others = float(np.median(others_growth)) if others_growth else 0.0
+            col_growth = growth_pct.get(col, 0.0)
+            # Подозрительно, если рост конкурента заметно выше медианы остальных
+            if col_growth > median_others + 0.25:
                 suspicious.add(col)
 
     # Фильтр: остаток подозрительного < 15% лидера → не инсайд
