@@ -16,10 +16,25 @@ android {
         versionName = "1.0"
     }
 
+    // Постоянный ключ подписи: благодаря ему новая сборка устанавливается
+    // поверх старой и заметки не теряются.
+    signingConfigs {
+        create("selfSigned") {
+            storeFile = rootProject.file("signing/app.jks")
+            storePassword = "zametki-key"
+            keyAlias = "notes"
+            keyPassword = "zametki-key"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("selfSigned")
+        }
+        debug {
+            signingConfig = signingConfigs.getByName("selfSigned")
         }
     }
 

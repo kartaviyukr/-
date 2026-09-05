@@ -1,0 +1,45 @@
+name: Сборка APK
+
+on:
+  push:
+    branches:
+      - claude/android-notes-password-photos-ke3bvb
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Собрать APK
+        run: ./gradlew --no-daemon assembleRelease
+
+      - name: Переименовать файл
+        run: cp app/build/outputs/apk/release/app-release.apk zametki.apk
+
+      - name: Загрузить как артефакт сборки
+        uses: actions/upload-artifact@v4
+        with:
+          name: zametki-apk
+          path: zametki.apk
+
+      - name: Опубликовать в релизе
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete apk-latest --yes --cleanup-tag || true
+          gh release create apk-latest zametki.apk \
+            --target "${{ github.sha }}" \
+            --title "Заметки — последняя сборка" \
+            --notes "Приложение «Заметки» с двойным паролем. Скачайте zametki.apk на телефон и откройте файл, чтобы установить. Сборка ${{ github.run_number }}."
