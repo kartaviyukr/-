@@ -9,6 +9,11 @@ on:
 permissions:
   contents: write
 
+# Одновременно идёт только одна сборка: иначе два запуска спорят за релиз.
+concurrency:
+  group: build-apk
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
