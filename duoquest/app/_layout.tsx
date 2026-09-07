@@ -15,7 +15,8 @@ void SplashScreen.preventAutoHideAsync();
 /** Держит пользователя в нужной ветке навигации: вход → пара → герой → приложение. */
 function useAuthRedirect() {
   const { session, couple, character, hydrated } = useSession();
-  const segments = useSegments();
+  // Типизированные маршруты сужают useSegments() до кортежа, а нам нужен произвольный доступ.
+  const segments = useSegments() as string[];
   const router = useRouter();
 
   useEffect(() => {
