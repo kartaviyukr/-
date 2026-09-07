@@ -14,8 +14,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.simple.notes.ui.ChangePasswordDialog
 import com.simple.notes.ui.EditorScreen
 import com.simple.notes.ui.LockScreen
+import com.simple.notes.ui.NewProfileDialog
 import com.simple.notes.ui.NotesListScreen
 import com.simple.notes.ui.NotesTheme
 import com.simple.notes.ui.SetupScreen
@@ -61,18 +63,43 @@ private fun App(isChangingConfigurations: () -> Boolean) {
 
         Stage.LOCK -> LockScreen(
             busy = state.busy,
+            message = state.message,
             onUnlock = vm::unlock
         )
 
-        Stage.LIST -> NotesListScreen(
-            notes = state.visibleNotes,
-            query = state.query,
-            onQueryChange = vm::setQuery,
-            onOpen = vm::openNote,
-            onCreate = vm::createNote,
-            onDelete = { vm.deleteNote(it) },
-            onLock = vm::lock
-        )
+        Stage.LIST -> {
+            NotesListScreen(
+                notes = state.visibleNotes,
+                query = state.query,
+                message = state.message,
+                onQueryChange = vm::setQuery,
+                onOpen = vm::openNote,
+                onCreate = vm::createNote,
+                onDelete = { vm.deleteNote(it) },
+                onLock = { vm.lock() },
+                onNewProfile = { vm.openDialog(PasswordDialog.NEW_PROFILE) },
+                onChangePassword = { vm.openDialog(PasswordDialog.CHANGE_PASSWORD) },
+                onMessageShown = vm::clearMessage
+            )
+
+            when (state.dialog) {
+                PasswordDialog.NEW_PROFILE -> NewProfileDialog(
+                    busy = state.busy,
+                    error = state.dialogError,
+                    onConfirm = vm::createProfile,
+                    onDismiss = vm::closeDialog
+                )
+
+                PasswordDialog.CHANGE_PASSWORD -> ChangePasswordDialog(
+                    busy = state.busy,
+                    error = state.dialogError,
+                    onConfirm = vm::changePassword,
+                    onDismiss = vm::closeDialog
+                )
+
+                PasswordDialog.NONE -> Unit
+            }
+        }
 
         Stage.EDITOR -> {
             val note = state.editing

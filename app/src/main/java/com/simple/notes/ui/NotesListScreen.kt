@@ -20,10 +20,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Image
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -31,11 +34,14 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -57,13 +63,26 @@ import java.util.Locale
 fun NotesListScreen(
     notes: List<Note>,
     query: String,
+    message: String?,
     onQueryChange: (String) -> Unit,
     onOpen: (Note) -> Unit,
     onCreate: () -> Unit,
     onDelete: (Note) -> Unit,
-    onLock: () -> Unit
+    onLock: () -> Unit,
+    onNewProfile: () -> Unit,
+    onChangePassword: () -> Unit,
+    onMessageShown: () -> Unit
 ) {
     var pendingDeletion by remember { mutableStateOf<Note?>(null) }
+    var menuOpen by remember { mutableStateOf(false) }
+    val snackbars = remember { SnackbarHostState() }
+
+    LaunchedEffect(message) {
+        if (message != null) {
+            snackbars.showSnackbar(message)
+            onMessageShown()
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -73,6 +92,25 @@ fun NotesListScreen(
                     IconButton(onClick = onLock) {
                         Icon(Icons.Default.Lock, contentDescription = "Заблокировать")
                     }
+                    IconButton(onClick = { menuOpen = true }) {
+                        Icon(Icons.Default.MoreVert, contentDescription = "Ещё")
+                    }
+                    DropdownMenu(expanded = menuOpen, onDismissRequest = { menuOpen = false }) {
+                        DropdownMenuItem(
+                            text = { Text("Новый блокнот") },
+                            onClick = {
+                                menuOpen = false
+                                onNewProfile()
+                            }
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Сменить пароль") },
+                            onClick = {
+                                menuOpen = false
+                                onChangePassword()
+                            }
+                        )
+                    }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
@@ -81,6 +119,7 @@ fun NotesListScreen(
                 )
             )
         },
+        snackbarHost = { SnackbarHost(snackbars) },
         floatingActionButton = {
             FloatingActionButton(onClick = onCreate) {
                 Icon(Icons.Default.Add, contentDescription = "Новая заметка")

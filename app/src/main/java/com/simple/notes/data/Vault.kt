@@ -57,6 +57,17 @@ class Vault(val id: String, private val key: ByteArray, val dir: File) {
         photoIds.forEach { File(mediaDir, it).delete() }
     }
 
+    /** Имена всех файлов фотографий блокнота — нужны при переносе на новый пароль. */
+    fun photoIds(): List<String> =
+        if (closed) emptyList() else mediaDir.listFiles()?.map { it.name }.orEmpty()
+
+    /** Сохраняет фотографию под уже существующим именем: ссылки в заметках не ломаются. */
+    fun writePhoto(photoId: String, bytes: ByteArray) {
+        if (closed) return
+        mediaDir.mkdirs()
+        writeAtomic(File(mediaDir, photoId), Crypto.encrypt(key, bytes))
+    }
+
     /** Стирает ключ из памяти при блокировке приложения. */
     fun close() {
         closed = true
@@ -72,6 +83,18 @@ class Vault(val id: String, private val key: ByteArray, val dir: File) {
             tmp.delete()
         }
     }
+}
+
+/**
+ * Открытый блокнот и то, какой пароль его открыл.
+ *
+ * [enteredVaultId] — папка, которую даёт введённый пароль. Для настоящего
+ * блокнота она совпадает с [Vault.id], а для чужого блокнота отличается:
+ * пароль не подошёл ни к одной папке. По этой разнице приложение понимает,
+ * что показывает подделку, — но наружу этого не показывает.
+ */
+class OpenedVault(val vault: Vault, val enteredVaultId: String) {
+    val isDecoy: Boolean get() = vault.id != enteredVaultId
 }
 
 /**
@@ -94,7 +117,7 @@ class VaultManager(context: Context) {
      * Первый запуск: каждый из паролей пользователя создаёт свой пустой блокнот.
      * Возвращает блокнот первого пароля, чтобы сразу его открыть.
      */
-    fun createMainVaults(passwords: List<CharArray>): Vault {
+    fun createMainVaults(passwords: List<CharArray>): OpenedVault {
         val vaults = passwords.map { password ->
             val derived = Crypto.derive(password, salt())
             Vault(derived.vaultId, derived.key, File(root, derived.vaultId)).apply {
@@ -106,7 +129,56 @@ class VaultManager(context: Context) {
         createPadding()
         prefs.edit().putBoolean("ready", true).apply()
         vaults.drop(1).forEach { it.close() }
-        return vaults.first()
+        return OpenedVault(vaults.first(), vaults.first().id)
+    }
+
+    /**
+     * Добавляет ещё один блокнот со своим паролем.
+     * Если папка такого пароля уже есть, не трогает её: чужие заметки затирать нельзя.
+     */
+    fun createProfile(password: CharArray) {
+        val derived = Crypto.derive(password, salt())
+        val dir = File(root, derived.vaultId)
+        if (dir.exists()) {
+            derived.wipe()
+            return
+        }
+        dir.mkdirs()
+        Vault(derived.vaultId, derived.key, dir).apply {
+            saveNotes(emptyList())
+            close()
+        }
+    }
+
+    /** Совпадает ли пароль с папкой, которую открыли: проверка старого пароля при смене. */
+    fun matchesVault(password: CharArray, vaultId: String): Boolean {
+        val derived = Crypto.derive(password, salt())
+        val same = derived.vaultId == vaultId
+        derived.wipe()
+        return same
+    }
+
+    /**
+     * Переносит блокнот на новый пароль: заметки и фотографии перешифровываются
+     * ключом нового пароля в новую папку, и только после этого старая удаляется.
+     * Возвращает false, если папка нового пароля уже занята другим блокнотом.
+     */
+    fun changePassword(vault: Vault, newPassword: CharArray): Boolean {
+        val derived = Crypto.derive(newPassword, salt())
+        val target = File(root, derived.vaultId)
+        if (target.exists()) {
+            derived.wipe()
+            return false
+        }
+        target.mkdirs()
+        val moved = Vault(derived.vaultId, derived.key, target)
+        moved.saveNotes(vault.loadNotes())
+        vault.photoIds().forEach { photoId ->
+            vault.readPhoto(photoId)?.let { moved.writePhoto(photoId, it) }
+        }
+        moved.close()
+        vault.dir.deleteRecursively()
+        return true
     }
 
     /**
@@ -117,12 +189,13 @@ class VaultManager(context: Context) {
      * пароль даёт имя папки, которой нет, — и открывается общий чужой блокнот.
      * Он всегда один и тот же: меняющиеся заметки выдали бы подделку.
      */
-    fun openVault(password: CharArray): Vault {
+    fun openVault(password: CharArray): OpenedVault {
         val derived = Crypto.derive(password, salt())
         val dir = File(root, derived.vaultId)
-        if (dir.exists()) return Vault(derived.vaultId, derived.key, dir)
+        if (dir.exists()) return OpenedVault(Vault(derived.vaultId, derived.key, dir), derived.vaultId)
+        val enteredVaultId = derived.vaultId
         derived.wipe()
-        return openDecoyVault()
+        return OpenedVault(openDecoyVault(), enteredVaultId)
     }
 
     /**
