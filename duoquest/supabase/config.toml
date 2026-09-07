@@ -1,0 +1,7 @@
+project_id = "duoquest"
+
+[functions.generate-story]
+verify_jwt = true
+
+[functions.notify-partner]
+verify_jwt = true
