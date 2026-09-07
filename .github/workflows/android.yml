@@ -87,8 +87,6 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          # Разовая уборка: тег latest остался от самой первой сборки.
-          gh release delete latest --yes --cleanup-tag || true
           gh release delete chto-nadet-latest --yes --cleanup-tag || true
           gh release create chto-nadet-latest dist/*.apk \
             --target "${GITHUB_SHA}" \
