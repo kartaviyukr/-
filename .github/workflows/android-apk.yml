@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       make_release:
-        description: 'Опубликовать APK в Releases (чтобы скачать по прямой ссылке с телефона)'
+        description: 'Опубликовать APK в Releases (прямая ссылка для скачивания с телефона)'
         type: boolean
         default: true
 
@@ -82,7 +82,8 @@ jobs:
           retention-days: 90
 
       - name: Опубликовать в Releases
-        if: github.event_name == 'workflow_dispatch' && inputs.make_release
+        # На пуше публикуем всегда, на ручном запуске — если попросили.
+        if: github.event_name != 'workflow_dispatch' || inputs.make_release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: apk-${{ github.run_number }}
