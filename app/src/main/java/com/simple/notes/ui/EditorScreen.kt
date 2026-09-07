@@ -3,6 +3,7 @@ package com.simple.notes.ui
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
@@ -24,14 +25,20 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.PhotoCamera
 import androidx.compose.material.icons.filled.PhotoLibrary
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -48,6 +55,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
@@ -56,20 +64,31 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.FileProvider
+import com.simple.notes.data.Match
 import com.simple.notes.data.Note
+import com.simple.notes.data.NoteSearch
 import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -92,6 +111,23 @@ fun EditorScreen(
     var fullscreen by remember { mutableStateOf<String?>(null) }
     var pendingShot by remember { mutableStateOf<File?>(null) }
 
+    // Поиск внутри заметки
+    var searching by remember(note.id) { mutableStateOf(false) }
+    var query by remember(note.id) { mutableStateOf("") }
+    var currentMatch by remember(note.id) { mutableStateOf(0) }
+    val matches = remember(note.title, note.body, query) {
+        NoteSearch.find(note.title, note.body, query)
+    }
+    val activeMatch = matches.getOrNull(currentMatch.coerceIn(0, (matches.size - 1).coerceAtLeast(0)))
+
+    fun closeSearch() {
+        searching = false
+        query = ""
+        currentMatch = 0
+    }
+
+    BackHandler(enabled = searching) { closeSearch() }
+
     val pickPhoto = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
         uri?.let(onPhotoPicked)
     }
@@ -103,58 +139,90 @@ fun EditorScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { },
-                navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Назад")
-                    }
-                },
-                actions = {
-                    IconButton(onClick = { confirmDelete = true }) {
-                        Icon(Icons.Default.Delete, contentDescription = "Удалить заметку")
-                    }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer,
-                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    actionIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer
+            if (searching) {
+                SearchTopBar(
+                    query = query,
+                    onQueryChange = {
+                        query = it
+                        currentMatch = 0
+                    },
+                    onClose = { closeSearch() }
                 )
-            )
+            } else {
+                TopAppBar(
+                    title = { },
+                    navigationIcon = {
+                        IconButton(onClick = onBack) {
+                            Icon(Icons.Default.ArrowBack, contentDescription = "Назад")
+                        }
+                    },
+                    actions = {
+                        IconButton(onClick = { searching = true }) {
+                            Icon(Icons.Default.Search, contentDescription = "Найти в заметке")
+                        }
+                        IconButton(onClick = { confirmDelete = true }) {
+                            Icon(Icons.Default.Delete, contentDescription = "Удалить заметку")
+                        }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        containerColor = MaterialTheme.colorScheme.primaryContainer,
+                        navigationIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                        actionIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                )
+            }
         },
         bottomBar = {
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
-                    .padding(horizontal = 12.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                OutlinedButton(
-                    onClick = {
-                        onExternalPickerStart()
-                        pickPhoto.launch(
-                            PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
-                        )
+            if (searching) {
+                MatchNavigationBar(
+                    query = query,
+                    total = matches.size,
+                    current = currentMatch,
+                    onPrevious = {
+                        if (matches.isNotEmpty()) {
+                            currentMatch = (currentMatch - 1 + matches.size) % matches.size
+                        }
                     },
-                    modifier = Modifier.weight(1f)
+                    onNext = {
+                        if (matches.isNotEmpty()) {
+                            currentMatch = (currentMatch + 1) % matches.size
+                        }
+                    }
+                )
+            } else {
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .background(MaterialTheme.colorScheme.surfaceVariant)
+                        .padding(horizontal = 12.dp, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Icon(Icons.Default.PhotoLibrary, contentDescription = null, modifier = Modifier.size(18.dp))
-                    Spacer(Modifier.size(8.dp))
-                    Text("Галерея")
-                }
-                OutlinedButton(
-                    onClick = {
-                        onExternalPickerStart()
-                        val file = newCameraFile(context)
-                        pendingShot = file
-                        takePhoto.launch(cameraUri(context, file))
-                    },
-                    modifier = Modifier.weight(1f)
-                ) {
-                    Icon(Icons.Default.PhotoCamera, contentDescription = null, modifier = Modifier.size(18.dp))
-                    Spacer(Modifier.size(8.dp))
-                    Text("Камера")
+                    OutlinedButton(
+                        onClick = {
+                            onExternalPickerStart()
+                            pickPhoto.launch(
+                                PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
+                            )
+                        },
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Icon(Icons.Default.PhotoLibrary, contentDescription = null, modifier = Modifier.size(18.dp))
+                        Spacer(Modifier.size(8.dp))
+                        Text("Галерея")
+                    }
+                    OutlinedButton(
+                        onClick = {
+                            onExternalPickerStart()
+                            val file = newCameraFile(context)
+                            pendingShot = file
+                            takePhoto.launch(cameraUri(context, file))
+                        },
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Icon(Icons.Default.PhotoCamera, contentDescription = null, modifier = Modifier.size(18.dp))
+                        Spacer(Modifier.size(8.dp))
+                        Text("Камера")
+                    }
                 }
             }
         }
@@ -167,63 +235,67 @@ fun EditorScreen(
         ) {
             if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
 
-            TextField(
-                value = note.title,
-                onValueChange = onTitleChange,
-                placeholder = { Text("Заголовок") },
-                singleLine = true,
-                textStyle = TextStyle(fontSize = 22.sp, fontWeight = FontWeight.SemiBold),
-                colors = transparentFieldColors(),
-                modifier = Modifier.fillMaxWidth()
-            )
+            if (searching) {
+                SearchResultView(note = note, matches = matches, active = activeMatch)
+            } else {
+                TextField(
+                    value = note.title,
+                    onValueChange = onTitleChange,
+                    placeholder = { Text("Заголовок") },
+                    singleLine = true,
+                    textStyle = TextStyle(fontSize = 22.sp, fontWeight = FontWeight.SemiBold),
+                    colors = transparentFieldColors(),
+                    modifier = Modifier.fillMaxWidth()
+                )
 
-            if (note.photos.isNotEmpty()) {
-                LazyRow(
-                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    items(note.photos, key = { it }) { photoId ->
-                        Box {
-                            VaultImage(
-                                photoId = photoId,
-                                loadPhoto = loadPhoto,
-                                modifier = Modifier
-                                    .size(104.dp)
-                                    .clip(RoundedCornerShape(10.dp))
-                                    .background(MaterialTheme.colorScheme.surfaceVariant)
-                                    .clickable { fullscreen = photoId }
-                            )
-                            Box(
-                                Modifier
-                                    .align(Alignment.TopEnd)
-                                    .padding(4.dp)
-                                    .size(24.dp)
-                                    .clip(CircleShape)
-                                    .background(Color.Black.copy(alpha = 0.55f))
-                                    .clickable { onPhotoRemoved(photoId) },
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Icon(
-                                    Icons.Default.Close,
-                                    contentDescription = "Удалить фото",
-                                    tint = Color.White,
-                                    modifier = Modifier.size(16.dp)
+                if (note.photos.isNotEmpty()) {
+                    LazyRow(
+                        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        items(note.photos, key = { it }) { photoId ->
+                            Box {
+                                VaultImage(
+                                    photoId = photoId,
+                                    loadPhoto = loadPhoto,
+                                    modifier = Modifier
+                                        .size(104.dp)
+                                        .clip(RoundedCornerShape(10.dp))
+                                        .background(MaterialTheme.colorScheme.surfaceVariant)
+                                        .clickable { fullscreen = photoId }
                                 )
+                                Box(
+                                    Modifier
+                                        .align(Alignment.TopEnd)
+                                        .padding(4.dp)
+                                        .size(24.dp)
+                                        .clip(CircleShape)
+                                        .background(Color.Black.copy(alpha = 0.55f))
+                                        .clickable { onPhotoRemoved(photoId) },
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(
+                                        Icons.Default.Close,
+                                        contentDescription = "Удалить фото",
+                                        tint = Color.White,
+                                        modifier = Modifier.size(16.dp)
+                                    )
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            TextField(
-                value = note.body,
-                onValueChange = onBodyChange,
-                placeholder = { Text("Текст заметки") },
-                colors = transparentFieldColors(),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
-            )
+                TextField(
+                    value = note.body,
+                    onValueChange = onBodyChange,
+                    placeholder = { Text("Текст заметки") },
+                    colors = transparentFieldColors(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                )
+            }
         }
     }
 
@@ -246,6 +318,151 @@ fun EditorScreen(
 
     fullscreen?.let { photoId ->
         PhotoViewer(photoId = photoId, loadPhoto = loadPhoto, onClose = { fullscreen = null })
+    }
+}
+
+/** Строка ввода поискового запроса вместо обычной шапки. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun SearchTopBar(query: String, onQueryChange: (String) -> Unit, onClose: () -> Unit) {
+    val focusRequester = remember { FocusRequester() }
+    LaunchedEffect(Unit) { focusRequester.requestFocus() }
+
+    TopAppBar(
+        title = {
+            TextField(
+                value = query,
+                onValueChange = onQueryChange,
+                placeholder = { Text("Найти в заметке") },
+                singleLine = true,
+                colors = transparentFieldColors(),
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .focusRequester(focusRequester)
+            )
+        },
+        navigationIcon = {
+            IconButton(onClick = onClose) {
+                Icon(Icons.Default.Close, contentDescription = "Закрыть поиск")
+            }
+        },
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+            navigationIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer
+        )
+    )
+}
+
+/** Счётчик совпадений и переход к предыдущему или следующему. */
+@Composable
+private fun MatchNavigationBar(
+    query: String,
+    total: Int,
+    current: Int,
+    onPrevious: () -> Unit,
+    onNext: () -> Unit
+) {
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.surfaceVariant)
+            .padding(start = 16.dp, end = 8.dp, top = 4.dp, bottom = 4.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            when {
+                query.isBlank() -> "Введите, что искать"
+                total == 0 -> "Ничего не найдено"
+                else -> "${current + 1} из $total"
+            },
+            style = MaterialTheme.typography.bodyMedium
+        )
+        Spacer(Modifier.weight(1f))
+        IconButton(onClick = onPrevious, enabled = total > 0) {
+            Icon(Icons.Default.KeyboardArrowUp, contentDescription = "Предыдущее совпадение")
+        }
+        IconButton(onClick = onNext, enabled = total > 0) {
+            Icon(Icons.Default.KeyboardArrowDown, contentDescription = "Следующее совпадение")
+        }
+    }
+}
+
+/**
+ * Заметка на время поиска показывается только для чтения: так все совпадения
+ * можно подсветить, а к текущему — прокрутить.
+ */
+@Composable
+private fun SearchResultView(note: Note, matches: List<Match>, active: Match?) {
+    val scroll = rememberScrollState()
+    val normalColor = MaterialTheme.colorScheme.primaryContainer
+    val activeColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.45f)
+
+    var bodyTop by remember { mutableStateOf(0f) }
+    var bodyLayout by remember { mutableStateOf<TextLayoutResult?>(null) }
+
+    LaunchedEffect(active, bodyLayout, bodyTop) {
+        val target = active ?: return@LaunchedEffect
+        if (target.inTitle) {
+            scroll.animateScrollTo(0)
+            return@LaunchedEffect
+        }
+        val layout = bodyLayout ?: return@LaunchedEffect
+        val offset = target.start.coerceIn(0, layout.layoutInput.text.length)
+        val top = layout.getBoundingBox(offset).top
+        scroll.animateScrollTo((bodyTop + top - 80f).toInt().coerceAtLeast(0))
+    }
+
+    Column(
+        Modifier
+            .fillMaxSize()
+            .verticalScroll(scroll)
+            .padding(horizontal = 16.dp, vertical = 12.dp)
+    ) {
+        Text(
+            text = highlighted(
+                text = note.title.ifBlank { "Без названия" },
+                matches = if (note.title.isBlank()) emptyList() else matches.filter { it.inTitle },
+                active = active,
+                normalColor = normalColor,
+                activeColor = activeColor
+            ),
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.SemiBold
+        )
+        Spacer(Modifier.height(12.dp))
+        Text(
+            text = highlighted(
+                text = note.body,
+                matches = matches.filter { !it.inTitle },
+                active = active,
+                normalColor = normalColor,
+                activeColor = activeColor
+            ),
+            style = MaterialTheme.typography.bodyLarge,
+            onTextLayout = { bodyLayout = it },
+            modifier = Modifier
+                .fillMaxWidth()
+                .onGloballyPositioned { bodyTop = it.positionInParent().y }
+        )
+        Spacer(Modifier.height(32.dp))
+    }
+}
+
+private fun highlighted(
+    text: String,
+    matches: List<Match>,
+    active: Match?,
+    normalColor: Color,
+    activeColor: Color
+): AnnotatedString = buildAnnotatedString {
+    append(text)
+    matches.forEach { match ->
+        val start = match.start.coerceIn(0, text.length)
+        val end = match.end.coerceIn(start, text.length)
+        if (start == end) return@forEach
+        val color = if (match == active) activeColor else normalColor
+        addStyle(SpanStyle(background = color), start, end)
     }
 }
 
