@@ -1,0 +1,105 @@
+name: Сборка APK
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Собрать и опубликовать APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Установить JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Настроить Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Установить компоненты Android SDK
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1 || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" \
+            "platform-tools" "platforms;android-35" "build-tools;35.0.0" > /dev/null
+
+      - name: Определить версию
+        id: version
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
+            VERSION_NAME="${GITHUB_REF#refs/tags/v}"
+          else
+            VERSION_NAME="1.0.${GITHUB_RUN_NUMBER}"
+          fi
+          echo "VERSION_NAME=${VERSION_NAME}" >> "$GITHUB_ENV"
+          echo "VERSION_CODE=${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
+          echo "version_name=${VERSION_NAME}" >> "$GITHUB_OUTPUT"
+
+      - name: Юнит-тесты
+        run: ./gradlew testReleaseUnitTest --no-daemon
+
+      - name: Сборка release APK
+        run: ./gradlew assembleRelease --no-daemon
+
+      - name: Переименовать APK
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/apk/release/app-release.apk \
+             "dist/chto-nadet-${VERSION_NAME}.apk"
+          ls -la dist
+
+      - name: Загрузить APK как артефакт сборки
+        uses: actions/upload-artifact@v4
+        with:
+          name: chto-nadet-apk
+          path: dist/*.apk
+          if-no-files-found: error
+
+      - name: Отчёт о тестах (при падении)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/tests/
+          if-no-files-found: ignore
+
+      - name: Опубликовать релиз по тегу
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF#refs/tags/}" dist/*.apk \
+            --title "Что надеть? ${VERSION_NAME}" \
+            --notes "APK для установки на Android. Скачайте файл и откройте его на телефоне." \
+            || gh release upload "${GITHUB_REF#refs/tags/}" dist/*.apk --clobber
+
+      - name: Обновить сборку «latest»
+        if: "!startsWith(github.ref, 'refs/tags/v')"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NOTES="Автоматическая сборка из ветки \`${GITHUB_REF#refs/heads/}\`, коммит ${GITHUB_SHA::7}.
+
+          Скачайте APK ниже и откройте его на Android-телефоне."
+          if gh release view latest > /dev/null 2>&1; then
+            gh release edit latest --notes "$NOTES" --prerelease
+            gh release upload latest dist/*.apk --clobber
+          else
+            gh release create latest dist/*.apk \
+              --title "Последняя сборка" \
+              --notes "$NOTES" \
+              --prerelease
+          fi
