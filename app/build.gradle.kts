@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.weatherwear.assistant"
-    compileSdk = 35
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.weatherwear.assistant"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 34
         versionCode = (System.getenv("VERSION_CODE") ?: "1").toInt()
         versionName = System.getenv("VERSION_NAME") ?: "1.0"
     }

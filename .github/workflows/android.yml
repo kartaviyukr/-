@@ -12,10 +12,16 @@ on:
 permissions:
   contents: write
 
+# Одновременно идёт одна сборка: два запуска не должны спорить за релиз.
+concurrency:
+  group: build-apk
+  cancel-in-progress: true
+
 jobs:
   build:
     name: Собрать и опубликовать APK
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
@@ -26,18 +32,9 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-
-      - name: Настроить Gradle
-        uses: gradle/actions/setup-gradle@v4
-
-      - name: Установить компоненты Android SDK
-        run: |
-          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1 || true
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" \
-            "platform-tools" "platforms;android-35" "build-tools;35.0.0" > /dev/null
+          cache: gradle
 
       - name: Определить версию
-        id: version
         run: |
           if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
             VERSION_NAME="${GITHUB_REF#refs/tags/v}"
@@ -46,15 +43,14 @@ jobs:
           fi
           echo "VERSION_NAME=${VERSION_NAME}" >> "$GITHUB_ENV"
           echo "VERSION_CODE=${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
-          echo "version_name=${VERSION_NAME}" >> "$GITHUB_OUTPUT"
 
       - name: Юнит-тесты
-        run: ./gradlew testReleaseUnitTest --no-daemon
+        run: ./gradlew --no-daemon testReleaseUnitTest
 
       - name: Сборка release APK
-        run: ./gradlew assembleRelease --no-daemon
+        run: ./gradlew --no-daemon assembleRelease
 
-      - name: Переименовать APK
+      - name: Подготовить файл
         run: |
           mkdir -p dist
           cp app/build/outputs/apk/release/app-release.apk \
@@ -91,15 +87,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          NOTES="Автоматическая сборка из ветки \`${GITHUB_REF#refs/heads/}\`, коммит ${GITHUB_SHA::7}.
+          gh release delete chto-nadet-latest --yes --cleanup-tag || true
+          gh release create chto-nadet-latest dist/*.apk \
+            --target "${GITHUB_SHA}" \
+            --title "Что надеть? — последняя сборка" \
+            --notes "Приложение «Что надеть?»: погода и совет по одежде.
 
-          Скачайте APK ниже и откройте его на Android-телефоне."
-          if gh release view latest > /dev/null 2>&1; then
-            gh release edit latest --notes "$NOTES" --prerelease
-            gh release upload latest dist/*.apk --clobber
-          else
-            gh release create latest dist/*.apk \
-              --title "Последняя сборка" \
-              --notes "$NOTES" \
-              --prerelease
-          fi
+          Скачайте APK ниже и откройте файл на Android-телефоне, чтобы установить.
+          Сборка ${VERSION_NAME} из ветки \`${GITHUB_REF#refs/heads/}\`."
