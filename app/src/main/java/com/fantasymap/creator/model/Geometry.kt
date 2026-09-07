@@ -96,12 +96,16 @@ object Geometry {
         return best
     }
 
+    /**
+     * Знаковая площадь по формуле шнурования.
+     * Знак должен совпадать с формулой центроида ниже, иначе центр «зеркалится».
+     */
     fun signedArea(polygon: List<Vec>): Float {
         if (polygon.size < 3) return 0f
         var sum = 0f
         var j = polygon.size - 1
         for (i in polygon.indices) {
-            sum += (polygon[j].x + polygon[i].x) * (polygon[j].y - polygon[i].y)
+            sum += polygon[j].x * polygon[i].y - polygon[i].x * polygon[j].y
             j = i
         }
         return sum * 0.5f
