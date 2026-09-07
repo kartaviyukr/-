@@ -55,22 +55,23 @@ class AppViewModel(app: Application) : AndroidViewModel(app) {
 
     // --- Вход ---
 
-    /** Первый запуск: пользователь задаёт свой основной пароль. */
-    fun setupPassword(password: String, confirmation: String) {
-        when {
-            password.length < 4 -> {
-                _state.update { it.copy(setupError = "Пароль слишком короткий (минимум 4 символа)") }
-                return
-            }
-            password != confirmation -> {
-                _state.update { it.copy(setupError = "Пароли не совпадают") }
-                return
-            }
+    /** Первый запуск: пользователь задаёт по паролю на каждый из своих блокнотов. */
+    fun setupPasswords(passwords: List<String>) {
+        val error = when {
+            passwords.any { it.length < 4 } ->
+                "Заполните все поля, минимум 4 символа в каждом"
+            passwords.distinct().size != passwords.size ->
+                "Пароли блокнотов должны быть разными"
+            else -> null
+        }
+        if (error != null) {
+            _state.update { it.copy(setupError = error) }
+            return
         }
         _state.update { it.copy(busy = true, setupError = null) }
         viewModelScope.launch {
             val opened = withContext(Dispatchers.IO) {
-                vaults.createMainVault(password.toCharArray())
+                vaults.createMainVaults(passwords.map { it.toCharArray() })
             }
             enter(opened)
         }

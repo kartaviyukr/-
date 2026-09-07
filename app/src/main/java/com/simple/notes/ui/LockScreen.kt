@@ -92,12 +92,14 @@ fun LockScreen(busy: Boolean, onUnlock: (String) -> Unit) {
     }
 }
 
-/** Первый запуск: пользователь задаёт основной пароль. */
+/** Первый запуск: пользователь задаёт по паролю на каждый из трёх своих блокнотов. */
 @Composable
-fun SetupScreen(busy: Boolean, error: String?, onCreate: (String, String) -> Unit) {
-    var password by remember { mutableStateOf("") }
-    var confirmation by remember { mutableStateOf("") }
+fun SetupScreen(busy: Boolean, error: String?, onCreate: (List<String>) -> Unit) {
+    var first by remember { mutableStateOf("") }
+    var second by remember { mutableStateOf("") }
+    var third by remember { mutableStateOf("") }
     var visible by remember { mutableStateOf(false) }
+    val passwords = listOf(first, second, third)
 
     Column(
         modifier = Modifier
@@ -115,19 +117,19 @@ fun SetupScreen(busy: Boolean, error: String?, onCreate: (String, String) -> Uni
             tint = MaterialTheme.colorScheme.primary
         )
         Spacer(Modifier.height(16.dp))
-        Text("Придумайте пароль", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.SemiBold)
+        Text("Придумайте три пароля", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.SemiBold)
         Spacer(Modifier.height(8.dp))
         Text(
-            "Этот пароль будет открывать ваши личные заметки.",
+            "Каждый пароль открывает свой отдельный блокнот.",
             style = MaterialTheme.typography.bodyMedium,
             textAlign = TextAlign.Center
         )
         Spacer(Modifier.height(24.dp))
 
         PasswordField(
-            value = password,
-            onValueChange = { password = it },
-            label = "Пароль",
+            value = first,
+            onValueChange = { first = it },
+            label = "Пароль первого блокнота",
             visible = visible,
             onToggleVisibility = { visible = !visible },
             imeAction = ImeAction.Next,
@@ -135,13 +137,23 @@ fun SetupScreen(busy: Boolean, error: String?, onCreate: (String, String) -> Uni
         )
         Spacer(Modifier.height(12.dp))
         PasswordField(
-            value = confirmation,
-            onValueChange = { confirmation = it },
-            label = "Повторите пароль",
+            value = second,
+            onValueChange = { second = it },
+            label = "Пароль второго блокнота",
+            visible = visible,
+            onToggleVisibility = { visible = !visible },
+            imeAction = ImeAction.Next,
+            onSubmit = {}
+        )
+        Spacer(Modifier.height(12.dp))
+        PasswordField(
+            value = third,
+            onValueChange = { third = it },
+            label = "Пароль третьего блокнота",
             visible = visible,
             onToggleVisibility = { visible = !visible },
             imeAction = ImeAction.Go,
-            onSubmit = { onCreate(password, confirmation) }
+            onSubmit = { onCreate(passwords) }
         )
 
         if (error != null) {
@@ -151,10 +163,10 @@ fun SetupScreen(busy: Boolean, error: String?, onCreate: (String, String) -> Uni
 
         Spacer(Modifier.height(20.dp))
         Button(
-            onClick = { onCreate(password, confirmation) },
+            onClick = { onCreate(passwords) },
             enabled = !busy,
             modifier = Modifier.fillMaxWidth()
-        ) { Text("Продолжить") }
+        ) { Text("Создать блокноты") }
 
         Spacer(Modifier.height(28.dp))
         Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)) {
@@ -162,11 +174,11 @@ fun SetupScreen(busy: Boolean, error: String?, onCreate: (String, String) -> Uni
                 Text("Как это работает", fontWeight = FontWeight.SemiBold)
                 Spacer(Modifier.height(8.dp))
                 Text(
-                    "Ваши заметки открываются только этим паролем. Любой другой пароль " +
-                        "откроет отдельный блокнот с посторонними заметками — приложение " +
-                        "никогда не сообщает, что пароль неверный.\n\n" +
-                        "Пароль нигде не сохраняется, восстановить его невозможно. " +
-                        "Если забудете — заметки прочитать не получится.",
+                    "Три пароля — три независимых блокнота, заметки одного не видны из другого. " +
+                        "Любой другой пароль открывает общий блокнот с посторонними заметками — " +
+                        "приложение никогда не сообщает, что пароль неверный.\n\n" +
+                        "Пароли нигде не сохраняются и не восстанавливаются. Нажмите на значок " +
+                        "глаза и проверьте, что набрали именно то, что хотели.",
                     style = MaterialTheme.typography.bodySmall
                 )
             }

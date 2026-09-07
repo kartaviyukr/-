@@ -56,7 +56,7 @@ private fun App(isChangingConfigurations: () -> Boolean) {
         Stage.SETUP -> SetupScreen(
             busy = state.busy,
             error = state.setupError,
-            onCreate = vm::setupPassword
+            onCreate = vm::setupPasswords
         )
 
         Stage.LOCK -> LockScreen(

@@ -90,29 +90,51 @@ class VaultManager(context: Context) {
     val isConfigured: Boolean
         get() = prefs.getBoolean("ready", false)
 
-    /** Первый запуск: пароль пользователя создаёт его настоящее хранилище — пустое. */
-    fun createMainVault(password: CharArray): Vault {
-        val derived = Crypto.derive(password, salt())
-        val vault = Vault(derived.vaultId, derived.key, File(root, derived.vaultId))
-        vault.dir.mkdirs()
-        vault.saveNotes(emptyList())
+    /**
+     * Первый запуск: каждый из паролей пользователя создаёт свой пустой блокнот.
+     * Возвращает блокнот первого пароля, чтобы сразу его открыть.
+     */
+    fun createMainVaults(passwords: List<CharArray>): Vault {
+        val vaults = passwords.map { password ->
+            val derived = Crypto.derive(password, salt())
+            Vault(derived.vaultId, derived.key, File(root, derived.vaultId)).apply {
+                dir.mkdirs()
+                saveNotes(emptyList())
+            }
+        }
+        openDecoyVault().close()
         createPadding()
         prefs.edit().putBoolean("ready", true).apply()
-        return vault
+        vaults.drop(1).forEach { it.close() }
+        return vaults.first()
     }
 
     /**
      * Открывает хранилище, соответствующее введённому паролю.
-     * Если такого хранилища ещё нет, оно молча создаётся и наполняется
-     * правдоподобными заметками — чтобы посторонний увидел обычный блокнот,
-     * а не пустой экран, выдающий, что пароль не тот.
+     *
+     * Папки настоящих блокнотов созданы при настройке паролей, поэтому такая
+     * папка существует только для одного из паролей пользователя. Любой другой
+     * пароль даёт имя папки, которой нет, — и открывается общий чужой блокнот.
+     * Он всегда один и тот же: меняющиеся заметки выдали бы подделку.
      */
     fun openVault(password: CharArray): Vault {
         val derived = Crypto.derive(password, salt())
         val dir = File(root, derived.vaultId)
-        val isNew = !dir.exists()
+        if (dir.exists()) return Vault(derived.vaultId, derived.key, dir)
+        derived.wipe()
+        return openDecoyVault()
+    }
+
+    /**
+     * Общий блокнот для всех неверных паролей. Его папка выводится из строки,
+     * которую нельзя набрать на клавиатуре, поэтому она никогда не совпадёт
+     * с папкой настоящего хранилища и выглядит так же, как остальные.
+     */
+    private fun openDecoyVault(): Vault {
+        val derived = Crypto.derive(DECOY_KEY_SOURCE, salt())
+        val dir = File(root, derived.vaultId)
         val vault = Vault(derived.vaultId, derived.key, dir)
-        if (isNew) {
+        if (!dir.exists()) {
             dir.mkdirs()
             vault.saveNotes(Decoy.generate(derived.vaultId))
         }
@@ -141,5 +163,10 @@ class VaultManager(context: Context) {
             vault.saveNotes(Decoy.generate(fakeId))
             vault.close()
         }
+    }
+
+    private companion object {
+        /** Содержит управляющие символы: ввести такой «пароль» с клавиатуры нельзя. */
+        val DECOY_KEY_SOURCE = charArrayOf('\u0000', 'd', 'e', 'c', 'o', 'y', '\u0000')
     }
 }
