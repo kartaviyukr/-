@@ -228,7 +228,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     // ------------------------------------------------------------- этапы
 
-    fun setStage(newStage: Stage) {
+    fun selectStage(newStage: Stage) {
         stage = newStage
         tool = defaultToolFor(newStage)
         selection = null

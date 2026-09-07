@@ -56,7 +56,7 @@ fun EditorBottomPanel(
         shadowElevation = 8.dp
     ) {
         Column(Modifier.padding(bottom = 6.dp)) {
-            StageBar(viewModel.stage) { viewModel.setStage(it) }
+            StageBar(viewModel.stage) { viewModel.selectStage(it) }
             Text(
                 text = viewModel.stage.hint,
                 style = MaterialTheme.typography.bodySmall,
