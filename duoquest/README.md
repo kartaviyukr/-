@@ -103,10 +103,14 @@ supabase functions deploy notify-partner
 
 ### Вариант А — через GitHub Actions (ничего не надо ставить на компьютер)
 
-1. В репозитории откройте **Settings → Secrets and variables → Actions** и добавьте
-   два секрета:
-   - `EXPO_PUBLIC_SUPABASE_URL` — Project URL из шага 1
-   - `EXPO_PUBLIC_SUPABASE_ANON_KEY` — anon public ключ из шага 1
+1. Ничего настраивать не нужно: адрес проекта и публичный ключ лежат прямо в
+   `src/lib/supabase.ts`. Публичный ключ и так извлекается из любого APK, данные
+   защищают политики RLS в базе, а не его секретность.
+
+   Собрать на **другой** проект Supabase можно, не трогая код: добавьте в
+   **Settings → Secrets and variables → Actions** секреты
+   `EXPO_PUBLIC_SUPABASE_URL` и `EXPO_PUBLIC_SUPABASE_ANON_KEY` — при сборке они
+   имеют приоритет над значениями из кода.
 2. Сборка запускается сама при каждом пуше в ветку. Вручную: вкладка **Actions**
    → workflow **«Сборка DuoQuest APK»** → **Run workflow**.
 3. Через 10–15 минут свежий `duoquest.apk` окажется в релизе
