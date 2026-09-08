@@ -3,6 +3,7 @@
 import { createClient } from 'jsr:@supabase/supabase-js@2';
 import { corsHeaders, json } from '../_shared/cors.ts';
 import { chat, LlmNotConfigured, parseJson } from '../_shared/llm.ts';
+import { requireCoupleMember } from '../_shared/auth.ts';
 
 interface Body {
   mode: 'chapter' | 'quest_flavor';
@@ -27,26 +28,15 @@ Deno.serve(async (req) => {
     const body = (await req.json()) as Body;
     if (!body?.couple_id) return json({ error: 'couple_id обязателен' }, 400);
 
-    const authHeader = req.headers.get('Authorization') ?? '';
-    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
+    const admin = createClient(
+      Deno.env.get('SUPABASE_URL')!,
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
+    );
 
-    // Клиент от имени пользователя — только чтобы проверить, что он в этой паре.
-    const asUser = createClient(supabaseUrl, Deno.env.get('SUPABASE_ANON_KEY')!, {
-      global: { headers: { Authorization: authHeader } },
-    });
-    const { data: userData } = await asUser.auth.getUser();
-    if (!userData?.user) return json({ error: 'Не авторизован' }, 401);
-
-    const { data: membership } = await asUser
-      .from('couple_members')
-      .select('couple_id')
-      .eq('couple_id', body.couple_id)
-      .eq('user_id', userData.user.id)
-      .maybeSingle();
-    if (!membership) return json({ error: 'Нет доступа к этой паре' }, 403);
-
-    // Запись — сервисным ключом, чтобы не зависеть от нюансов RLS.
-    const admin = createClient(supabaseUrl, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
+    // Проверяем токен вызывающего и его членство в паре явным запросом:
+    // сервисный ключ игнорирует RLS, поэтому доступ проверяем сами.
+    const user = await requireCoupleMember(admin, req, body.couple_id);
+    if ('error' in user) return json({ error: user.error }, user.status);
 
     const [{ data: characters }, { data: recentTasks }, { data: lastChapters }] = await Promise.all([
       admin.from('characters').select('name, hero_class, level, avatar_emoji').eq('couple_id', body.couple_id),

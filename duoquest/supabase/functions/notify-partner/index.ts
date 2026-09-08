@@ -2,6 +2,7 @@
 // Развернуть: supabase functions deploy notify-partner
 import { createClient } from 'jsr:@supabase/supabase-js@2';
 import { corsHeaders, json } from '../_shared/cors.ts';
+import { requireCoupleMember } from '../_shared/auth.ts';
 
 interface Body {
   couple_id: string;
@@ -18,24 +19,13 @@ Deno.serve(async (req) => {
     const payload = (await req.json()) as Body;
     if (!payload?.couple_id || !payload.title) return json({ error: 'couple_id и title обязательны' }, 400);
 
-    const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
-    const authHeader = req.headers.get('Authorization') ?? '';
+    const admin = createClient(
+      Deno.env.get('SUPABASE_URL')!,
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
+    );
 
-    const asUser = createClient(supabaseUrl, Deno.env.get('SUPABASE_ANON_KEY')!, {
-      global: { headers: { Authorization: authHeader } },
-    });
-    const { data: userData } = await asUser.auth.getUser();
-    if (!userData?.user) return json({ error: 'Не авторизован' }, 401);
-
-    const { data: membership } = await asUser
-      .from('couple_members')
-      .select('couple_id')
-      .eq('couple_id', payload.couple_id)
-      .eq('user_id', userData.user.id)
-      .maybeSingle();
-    if (!membership) return json({ error: 'Нет доступа к этой паре' }, 403);
-
-    const admin = createClient(supabaseUrl, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
+    const user = await requireCoupleMember(admin, req, payload.couple_id);
+    if ('error' in user) return json({ error: user.error }, user.status);
 
     const { data: members } = await admin
       .from('couple_members')
@@ -44,7 +34,7 @@ Deno.serve(async (req) => {
 
     const targets = (members ?? [])
       .map((m) => m.user_id)
-      .filter((id) => id !== (payload.exclude_user_id ?? userData.user.id));
+      .filter((id) => id !== (payload.exclude_user_id ?? user.id));
 
     if (targets.length === 0) return json({ ok: true, sent: 0 });
 
