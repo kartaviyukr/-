@@ -9,10 +9,10 @@ on:
       - '.github/workflows/duoquest-web.yml'
   workflow_dispatch:
 
+# Публикуем через ветку gh-pages: создать сам сайт Pages через API GITHUB_TOKEN
+# не может («Resource not accessible by integration»), а запушить ветку — вполне.
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # Публикация страницы одна на репозиторий: параллельные деплои отменять нельзя,
 # иначе сайт может остаться в промежуточном состоянии.
@@ -63,24 +63,25 @@ jobs:
           HTML
           ls -R ../_site | head -30
 
-      - name: Подготовить GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - name: Опубликовать в ветку gh-pages
+        working-directory: _site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Без .nojekyll Pages прогонит сайт через Jekyll, а тот выбрасывает
+          # каталоги, начинающиеся с подчёркивания — то есть весь _expo с бандлом.
+          touch .nojekyll
 
-      - name: Упаковать сайт
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
+          git init -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Веб-версия DuoQuest, сборка ${{ github.run_number }} (${GITHUB_SHA::7})"
+          git push --force \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
 
-  deploy:
-    name: Опубликовать
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Развернуть на GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Адрес приложения
+        run: |
+          echo "### Веб-версия опубликована" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://kartaviyukr.github.io/-/duoquest/" >> "$GITHUB_STEP_SUMMARY"
