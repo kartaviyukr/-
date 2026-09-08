@@ -4,11 +4,11 @@ import { ActivityIndicator, View } from 'react-native';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
-import * as Notifications from 'expo-notifications';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { colors } from '@/theme';
 import { useSession } from '@/store/useSession';
+import { addNotificationResponseListener } from '@/lib/notifications';
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -55,13 +55,10 @@ function RootNavigator() {
   }, [hydrated]);
 
   // Тап по уведомлению открывает соответствующий квест.
-  useEffect(() => {
-    const sub = Notifications.addNotificationResponseReceivedListener((response) => {
-      const taskId = response.notification.request.content.data?.taskId;
-      if (typeof taskId === 'string') router.push({ pathname: '/task/[id]', params: { id: taskId } });
-    });
-    return () => sub.remove();
-  }, [router]);
+  useEffect(
+    () => addNotificationResponseListener((taskId) => router.push({ pathname: '/task/[id]', params: { id: taskId } })),
+    [router],
+  );
 
   useAuthRedirect();
 

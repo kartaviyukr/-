@@ -50,8 +50,18 @@ const config: ExpoConfig = {
       },
     ],
   ],
+  web: {
+    // SPA: одна index.html и маршрутизация на клиенте. Для GitHub Pages это
+    // важно — там нет сервера, который умел бы отдавать index.html на любой путь.
+    bundler: 'metro',
+    output: 'single',
+    favicon: './assets/favicon.png',
+  },
   experiments: {
     typedRoutes: true,
+    // Сайт живёт не в корне домена, а в подпапке репозитория.
+    // Значение подставляется сборкой; локально baseUrl не нужен.
+    baseUrl: process.env.EXPO_PUBLIC_BASE_URL || undefined,
   },
   extra: {
     router: {},

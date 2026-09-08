@@ -4,6 +4,19 @@ import Constants from 'expo-constants';
 import { Platform } from 'react-native';
 import type { Task } from '@/types';
 
+/**
+ * Подписка на тап по уведомлению. Вынесена сюда, чтобы экраны не импортировали
+ * expo-notifications напрямую: на вебе у модуля своя реализация (notifications.web.ts),
+ * и прямой импорт утянул бы в веб-сборку нативный код.
+ */
+export function addNotificationResponseListener(onTaskId: (taskId: string) => void): () => void {
+  const sub = Notifications.addNotificationResponseReceivedListener((response) => {
+    const taskId = response.notification.request.content.data?.taskId;
+    if (typeof taskId === 'string') onTaskId(taskId);
+  });
+  return () => sub.remove();
+}
+
 /** Показывать уведомления, даже когда приложение открыто. */
 Notifications.setNotificationHandler({
   handleNotification: async () => ({

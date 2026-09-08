@@ -1,0 +1,86 @@
+name: Веб-версия DuoQuest (PWA)
+
+on:
+  push:
+    branches:
+      - claude/cross-platform-task-quest-app-i4mzto
+    paths:
+      - 'duoquest/**'
+      - '.github/workflows/duoquest-web.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Публикация страницы одна на репозиторий: параллельные деплои отменять нельзя,
+# иначе сайт может остаться в промежуточном состоянии.
+concurrency:
+  group: duoquest-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Собрать PWA
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: duoquest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Установить зависимости
+        run: npm install --legacy-peer-deps
+
+      - name: Выровнять версии пакетов под Expo SDK
+        run: npx expo install --fix
+        continue-on-error: true
+
+      - name: Собрать статику
+        env:
+          # Сайт лежит в подпапке репозитория, а не в корне домена.
+          EXPO_PUBLIC_BASE_URL: /-/duoquest
+        run: npx expo export --platform web --output-dir dist
+
+      - name: Разложить под адрес /-/duoquest/
+        run: |
+          mkdir -p ../_site/duoquest
+          cp -r dist/* ../_site/duoquest/
+          # Корень репозитория на Pages свободен — уводим с него на приложение.
+          cat > ../_site/index.html <<'HTML'
+          <!doctype html>
+          <meta charset="utf-8">
+          <title>DuoQuest</title>
+          <meta http-equiv="refresh" content="0; url=./duoquest/">
+          <a href="./duoquest/">Открыть DuoQuest</a>
+          HTML
+          ls -R ../_site | head -30
+
+      - name: Подготовить GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Упаковать сайт
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Опубликовать
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Развернуть на GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
