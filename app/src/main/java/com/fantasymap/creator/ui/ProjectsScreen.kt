@@ -12,11 +12,14 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
@@ -32,14 +35,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Slider
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -236,13 +241,20 @@ private fun CreateProjectDialog(
     onCreate: (String, Float, Float) -> Unit
 ) {
     var name by remember { mutableStateOf("") }
-    var preset by remember { mutableIntStateOf(0) }
+    var selected by remember { mutableStateOf(MapProject.PRESETS.firstOrNull { it.title == "Один континент" } ?: MapProject.PRESETS.first()) }
+    var custom by remember { mutableStateOf(false) }
+    var customWidth by remember { mutableFloatStateOf(2400f) }
+    var customHeight by remember { mutableFloatStateOf(1600f) }
 
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text("Новый мир") },
         text = {
-            Column {
+            Column(
+                Modifier
+                    .heightIn(max = 460.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
                 OutlinedTextField(
                     value = name,
                     onValueChange = { name = it },
@@ -250,27 +262,82 @@ private fun CreateProjectDialog(
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
-                Spacer(Modifier.height(12.dp))
-                Text("Размер и пропорции карты", style = MaterialTheme.typography.labelLarge)
-                MapProject.PRESETS.forEachIndexed { index, item ->
-                    Row(
-                        Modifier
-                            .fillMaxWidth()
-                            .selectable(selected = preset == index, onClick = { preset = index })
-                            .padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        RadioButton(selected = preset == index, onClick = { preset = index })
-                        Spacer(Modifier.width(4.dp))
-                        Text(item.first, style = MaterialTheme.typography.bodyMedium)
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    "Карта любого размера сразу видна целиком: двумя пальцами её можно " +
+                        "двигать и приближать. Чем больше размер, тем больше подробностей поместится.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(Modifier.height(10.dp))
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text("Свой размер", Modifier.weight(1f), style = MaterialTheme.typography.labelLarge)
+                    Switch(checked = custom, onCheckedChange = { custom = it })
+                }
+
+                if (custom) {
+                    Text(
+                        "${customWidth.toInt()} × ${customHeight.toInt()}",
+                        style = MaterialTheme.typography.titleMedium
+                    )
+                    Text("Ширина", style = MaterialTheme.typography.labelSmall)
+                    Slider(
+                        value = customWidth,
+                        onValueChange = { customWidth = it },
+                        valueRange = MapProject.MIN_WORLD_SIZE..MapProject.MAX_WORLD_SIZE
+                    )
+                    Text("Высота", style = MaterialTheme.typography.labelSmall)
+                    Slider(
+                        value = customHeight,
+                        onValueChange = { customHeight = it },
+                        valueRange = MapProject.MIN_WORLD_SIZE..MapProject.MAX_WORLD_SIZE
+                    )
+                } else {
+                    MapProject.PRESET_GROUPS.forEach { group ->
+                        Spacer(Modifier.height(8.dp))
+                        Text(
+                            group,
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        MapProject.PRESETS.filter { it.group == group }.forEach { preset ->
+                            Row(
+                                Modifier
+                                    .fillMaxWidth()
+                                    .selectable(
+                                        selected = selected == preset,
+                                        onClick = { selected = preset }
+                                    )
+                                    .padding(vertical = 2.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                RadioButton(
+                                    selected = selected == preset,
+                                    onClick = { selected = preset }
+                                )
+                                Spacer(Modifier.width(4.dp))
+                                Column {
+                                    Text(preset.title, style = MaterialTheme.typography.bodyMedium)
+                                    Text(
+                                        preset.caption,
+                                        style = MaterialTheme.typography.labelSmall,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
         },
         confirmButton = {
             TextButton(onClick = {
-                val item = MapProject.PRESETS[preset]
-                onCreate(name.trim(), item.second, item.third)
+                if (custom) {
+                    onCreate(name.trim(), customWidth, customHeight)
+                } else {
+                    onCreate(name.trim(), selected.width, selected.height)
+                }
             }) { Text("Создать") }
         },
         dismissButton = { TextButton(onClick = onDismiss) { Text("Отмена") } }

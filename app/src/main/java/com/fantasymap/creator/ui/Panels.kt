@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -55,7 +56,7 @@ fun EditorBottomPanel(
         tonalElevation = 3.dp,
         shadowElevation = 8.dp
     ) {
-        Column(Modifier.padding(bottom = 6.dp)) {
+        Column(Modifier.navigationBarsPadding()) {
             StageBar(viewModel.stage) { viewModel.selectStage(it) }
             Text(
                 text = viewModel.stage.hint,
@@ -65,6 +66,9 @@ fun EditorBottomPanel(
             )
             ToolBar(viewModel)
             ContextPicker(viewModel, onOpenCountries)
+            // Пустое место под последней строкой: до неё легко дотянуться,
+            // и она не прячется за системной панелью навигации.
+            Spacer(Modifier.height(44.dp))
         }
     }
 }
