@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+    <title>DuoQuest</title>
+    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
+    <style id="expo-reset">
+      /* These styles make the body full-height */
+      html,
+      body {
+        height: 100%;
+      }
+      /* These styles disable body scrolling if you are using <ScrollView> */
+      body {
+        overflow: hidden;
+      }
+      /* These styles make the root element full-height */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <link rel="icon" href="/-/duoquest/favicon.ico" />
+    <meta name="description" content="Задания, сроки, награды и наказания для двоих — в виде RPG." />
+    <link rel="manifest" href="/-/duoquest/manifest.json" />
+    <meta name="theme-color" content="#0B0A14" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- iOS не читает manifest.json: установку на домашний экран включают эти теги -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="DuoQuest" />
+    <link rel="apple-touch-icon" href="/-/duoquest/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/-/duoquest/icons/icon-192.png" />
+
+    <style id="duoquest-shell">
+      html, body, #root { background-color: #0B0A14; }
+      body {
+        margin: 0;
+        overscroll-behavior-y: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Безопасные зоны айфона: в установленном приложении статус-бар накладывается на контент */
+      #root {
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+    </style>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/-/duoquest/sw.js').catch(function () {
+            /* без service worker приложение просто работает онлайн */
+          });
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!-- The root element for your Expo app. -->
+    <div id="root"></div>
+  <script src="/-/duoquest/_expo/static/js/web/entry-3fe7a033441a446b1cf5b87be27d880d.js" defer></script>
+</body>
+</html>
