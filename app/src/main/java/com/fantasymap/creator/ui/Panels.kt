@@ -164,7 +164,7 @@ private fun BiomePicker(viewModel: EditorViewModel) {
                 Text("⇲ Выровнять границы зон")
             }
             Text(
-                "убирает наложения",
+                "сливает одинаковые, убирает наложения",
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

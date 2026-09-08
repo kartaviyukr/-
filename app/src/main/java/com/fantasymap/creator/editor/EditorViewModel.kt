@@ -43,6 +43,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.max
+import kotlin.math.min
 
 /** Состояние редактора карты: проект, инструменты, камера, история изменений. */
 class EditorViewModel(application: Application) : AndroidViewModel(application) {
@@ -596,9 +597,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     /**
-     * Выровнять границы природных зон: там, где области наложились друг на друга,
-     * лишнее вырезается у той, что нарисована раньше. Общая граница становится
-     * одной линией, без двойной закраски.
+     * Выровнять границы природных зон.
+     * Соседние области одного ландшафта сливаются в одну; у разных ландшафтов
+     * убирается наложение — лишнее вырезается у той, что нарисована раньше,
+     * так что общая граница становится одной линией без двойной закраски.
      */
     fun alignBiomeBorders() {
         val current = project ?: return
@@ -609,8 +611,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         viewModelScope.launch {
             busy = true
             val minArea = max(30f, current.worldWidth * current.worldHeight * 0.00002f)
+            val touchTolerance = max(3f, min(current.worldWidth, current.worldHeight) * 0.004f)
             val result = withContext(Dispatchers.Default) {
-                PolygonOps.resolveOverlaps(current.biomes, minArea)
+                PolygonOps.alignZones(current.biomes, minArea, touchTolerance)
             }
             busy = false
             if (project?.biomes !== current.biomes) {
@@ -625,7 +628,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             edit { it.copy(biomes = result.regions) }
             message = buildString {
                 append("Границы выровнены")
-                if (result.trimmed > 0) append(", подрезано зон: ${result.trimmed}")
+                if (result.merged > 0) append(", слито одинаковых: ${result.merged}")
+                if (result.trimmed > 0) append(", подрезано: ${result.trimmed}")
                 if (result.removed > 0) append(", убрано перекрытых: ${result.removed}")
             }
         }
