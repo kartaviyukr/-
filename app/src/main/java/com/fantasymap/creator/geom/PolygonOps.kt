@@ -62,15 +62,18 @@ object PolygonOps {
     }
 
     /**
-     * Выровнять границы зон целиком:
-     * сначала одинаковые соседние зоны сливаются в одну,
-     * затем у разных зон убираются наложения.
+     * Выровнять границы зон целиком.
+     *
+     * Главное правило — кто нанесён последним, тот и затирает: сначала у каждой
+     * области вырезается всё, что закрыто нарисованными позже. Только после этого
+     * соседние области одного ландшафта сливаются в одну, причём слияние уже
+     * ничего не может забрать у чужого ландшафта.
      */
     fun alignZones(regions: List<BiomeRegion>, minArea: Float, touchTolerance: Float): AlignResult {
-        val merge = mergeSameBiome(regions, minArea, touchTolerance)
-        val cut = resolveOverlaps(merge.first, minArea)
+        val cut = resolveOverlaps(regions, minArea)
+        val merge = mergeSameBiome(cut.regions, minArea, touchTolerance)
         return AlignResult(
-            regions = cut.regions,
+            regions = merge.first,
             merged = merge.second,
             trimmed = cut.trimmed,
             removed = cut.removed
@@ -81,6 +84,9 @@ object PolygonOps {
      * Слить соседние области одного и того же ландшафта в одну.
      * Предгорья рядом с предгорьями станут одной зоной, а предгорья
      * рядом с горами останутся двумя — граница между ними сохранится.
+     *
+     * Слияние не забирает площадь у других ландшафтов: тонкий шов между своими
+     * кусками заваривается только там, где не лежит чужая зона.
      *
      * Возвращает новый список и число слияний.
      */
@@ -133,6 +139,13 @@ object PolygonOps {
         }
         if (merges == 0) return regions to 0
 
+        // Всё, что уже занято зонами: за эти пределы слияние выходить не должно.
+        val everything = Path()
+        for (index in 0 until count) {
+            if (contours[index].isEmpty()) continue
+            everything.op(paths[index], Path.Op.UNION)
+        }
+
         val groups = LinkedHashMap<Int, MutableList<Int>>()
         for (index in 0 until count) {
             if (contours[index].isEmpty()) continue
@@ -146,13 +159,17 @@ object PolygonOps {
                 continue
             }
             // Сначала пробуем обычное объединение: если области налегают друг на
-            // друга, шва не будет. Если остался зазор, объединяем чуть раздутые.
+            // друга, шва не будет. Если остался зазор, объединяем чуть раздутые,
+            // но сразу вычитаем чужие зоны, чтобы не отнять у них ни кусочка.
             val union = Path(paths[members[0]])
             for (k in 1 until members.size) union.op(paths[members[k]], Path.Op.UNION)
             var pieces = contoursOf(union, minArea)
             if (pieces.size > 1) {
                 val welded = Path(grownPath(members[0]))
                 for (k in 1 until members.size) welded.op(grownPath(members[k]), Path.Op.UNION)
+                val strangers = Path(everything)
+                strangers.op(union, Path.Op.DIFFERENCE)
+                welded.op(strangers, Path.Op.DIFFERENCE)
                 val weldedPieces = contoursOf(welded, minArea)
                 if (weldedPieces.isNotEmpty() && weldedPieces.size < pieces.size) pieces = weldedPieces
             }

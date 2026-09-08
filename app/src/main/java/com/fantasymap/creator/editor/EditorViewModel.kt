@@ -635,6 +635,25 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
+    /**
+     * Поднять выбранную зону наверх: при выравнивании границ побеждает та,
+     * что нанесена последней, поэтому наверху зона затирает все остальные.
+     */
+    fun raiseSelectedZone() {
+        val target = selection as? Selection.Biome ?: return
+        val region = project?.biomes?.firstOrNull { it.id == target.id } ?: return
+        edit { state -> state.copy(biomes = state.biomes.filterNot { it.id == target.id } + region) }
+        message = "Зона наверху — при выравнивании она затирает остальные"
+    }
+
+    /** Опустить выбранную зону вниз: её затрут все остальные. */
+    fun lowerSelectedZone() {
+        val target = selection as? Selection.Biome ?: return
+        val region = project?.biomes?.firstOrNull { it.id == target.id } ?: return
+        edit { state -> state.copy(biomes = listOf(region) + state.biomes.filterNot { it.id == target.id }) }
+        message = "Зона внизу — при выравнивании её затирают остальные"
+    }
+
     fun changeBiomeOfSelection(newBiome: BiomeType) {
         val target = selection as? Selection.Biome ?: return
         edit { state ->

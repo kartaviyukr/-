@@ -6,6 +6,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -289,7 +290,7 @@ private fun MapControlButton(label: String, onClick: () -> Unit) {
     FilledTonalButton(
         onClick = onClick,
         modifier = Modifier.size(44.dp),
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(0.dp)
+        contentPadding = PaddingValues(0.dp)
     ) {
         Text(label, style = MaterialTheme.typography.titleMedium)
     }
@@ -355,6 +356,16 @@ private fun SelectionCard(
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
+            }
+            if (selection is Selection.Biome) {
+                TextButton(
+                    onClick = { viewModel.raiseSelectedZone() },
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                ) { Text("⬆") }
+                TextButton(
+                    onClick = { viewModel.lowerSelectedZone() },
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                ) { Text("⬇") }
             }
             IconButton(onClick = onEdit) {
                 Icon(Icons.Default.Edit, contentDescription = "Изменить")
