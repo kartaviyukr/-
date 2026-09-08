@@ -49,6 +49,18 @@ jobs:
           EXPO_PUBLIC_BASE_URL: /-/duoquest
         run: npx expo export --platform web --output-dir dist
 
+      # В SPA-режиме Expo берёт свой шаблон HTML и игнорирует app/+html.tsx,
+      # поэтому теги установки на домашний экран дописываются после экспорта.
+      - name: Дописать PWA-теги
+        run: node scripts/pwa-postbuild.mjs dist /-/duoquest
+
+      - name: Проверить, что теги на месте
+        run: |
+          grep -q 'apple-mobile-web-app-capable' dist/index.html
+          grep -q 'rel="manifest"' dist/index.html
+          grep -q 'apple-touch-icon' dist/index.html
+          echo "PWA-теги на месте"
+
       - name: Разложить под адрес /-/duoquest/
         run: |
           mkdir -p ../_site/duoquest
