@@ -1,21 +1,18 @@
-name: Сборка Android APK
+name: Сборка DuoQuest APK
 
 on:
   push:
-    branches: ['**']
-    paths:
-      - 'duoquest/**'
-      - '.github/workflows/android-apk.yml'
+    branches:
+      - claude/cross-platform-task-quest-app-i4mzto
   workflow_dispatch:
-    inputs:
-      make_release:
-        description: 'Опубликовать APK в Releases (прямая ссылка для скачивания с телефона)'
-        type: boolean
-        default: true
 
-# Нужно, чтобы шаг публикации мог создать релиз.
 permissions:
   contents: write
+
+# Одновременно идёт только одна сборка: иначе два запуска спорят за релиз.
+concurrency:
+  group: duoquest-apk
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -33,11 +30,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: JDK 17
+      - name: Java 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: 17
+          java-version: '17'
 
       - name: Android SDK
         uses: android-actions/setup-android@v3
@@ -57,7 +54,7 @@ jobs:
           EXPO_PUBLIC_EAS_PROJECT_ID: ${{ secrets.EXPO_PUBLIC_EAS_PROJECT_ID }}
         run: npx expo prebuild --platform android --no-install --clean
 
-      - name: Собрать release APK
+      - name: Собрать APK
         env:
           EXPO_PUBLIC_SUPABASE_URL: ${{ secrets.EXPO_PUBLIC_SUPABASE_URL }}
           EXPO_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.EXPO_PUBLIC_SUPABASE_ANON_KEY }}
@@ -65,38 +62,29 @@ jobs:
         run: |
           cd android
           chmod +x ./gradlew
-          ./gradlew assembleRelease --no-daemon --stacktrace
+          ./gradlew --no-daemon assembleRelease
 
-      - name: Переименовать APK
-        run: |
-          mkdir -p out
-          cp android/app/build/outputs/apk/release/app-release.apk \
-             "out/DuoQuest-${GITHUB_SHA::7}.apk"
-          ls -lh out
+      - name: Переименовать файл
+        run: cp android/app/build/outputs/apk/release/app-release.apk duoquest.apk
 
-      - name: Выложить APK как артефакт сборки
+      - name: Загрузить как артефакт сборки
         uses: actions/upload-artifact@v4
         with:
-          name: DuoQuest-APK
-          path: duoquest/out/*.apk
-          retention-days: 90
+          name: duoquest-apk
+          path: duoquest/duoquest.apk
 
-      - name: Опубликовать в Releases
-        # На пуше публикуем всегда, на ручном запуске — если попросили.
-        if: github.event_name != 'workflow_dispatch' || inputs.make_release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: apk-${{ github.run_number }}
-          name: DuoQuest APK (сборка ${{ github.run_number }})
-          body: |
-            Установочный файл для Android.
+      - name: Опубликовать в релизе
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Одноразовая уборка после прошлой схемы с нумерованными тегами.
+          gh release delete apk-3 --yes --cleanup-tag || true
 
-            **Как поставить:** скачайте `.apk` на телефон, откройте его и разрешите
-            установку из этого источника, когда Android спросит.
-
-            Коммит: ${{ github.sha }}
-          files: duoquest/out/*.apk
-          prerelease: true
+          gh release delete duoquest-latest --yes --cleanup-tag || true
+          gh release create duoquest-latest duoquest.apk \
+            --target "${{ github.sha }}" \
+            --title "DuoQuest — последняя сборка" \
+            --notes "Задания, дедлайны, награды и наказания для двоих в виде RPG. Скачайте duoquest.apk на телефон и откройте файл, чтобы установить. Сборка ${{ github.run_number }}."
 
   typecheck:
     name: Проверка типов
