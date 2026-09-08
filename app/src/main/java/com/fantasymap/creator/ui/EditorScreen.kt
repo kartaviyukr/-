@@ -127,6 +127,10 @@ fun EditorScreen(viewModel: EditorViewModel) {
                                 onClick = { menuOpen = false; showExport = true }
                             )
                             DropdownMenuItem(
+                                text = { Text("Выровнять границы зон") },
+                                onClick = { menuOpen = false; viewModel.alignBiomeBorders() }
+                            )
+                            DropdownMenuItem(
                                 text = { Text("Вид карты") },
                                 onClick = { menuOpen = false; showStyle = true }
                             )

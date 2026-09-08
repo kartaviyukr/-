@@ -223,10 +223,11 @@ class MapRenderer {
         patterns: Boolean
     ) {
         for (region in project.biomes) {
-            if (region.points.size < 3) continue
-            val bounds = Geometry.bounds(region.points)
+            val contours = region.contours().filter { it.size >= 3 }
+            if (contours.isEmpty()) continue
+            val bounds = Geometry.bounds(contours.flatten())
             if (!bounds.intersects(visible)) continue
-            buildPath(region.points, cam, true, path)
+            buildContoursPath(contours, cam, path)
             fill.color = withAlpha(region.biome.color, 205)
             canvas.drawPath(path, fill)
             stroke.color = withAlpha(darken(region.biome.color, 0.25f), 150)
@@ -606,7 +607,7 @@ class MapRenderer {
             is Selection.Water -> project.waters.firstOrNull { it.id == selection.id }
                 ?.let { outline(canvas, it.points, cam, true) }
             is Selection.Biome -> project.biomes.firstOrNull { it.id == selection.id }
-                ?.let { outline(canvas, it.points, cam, true) }
+                ?.let { region -> region.contours().forEach { outline(canvas, it, cam, true) } }
             is Selection.Line -> project.lines.firstOrNull { it.id == selection.id }
                 ?.let { outline(canvas, it.points, cam, false) }
             is Selection.RoadSel -> project.roads.firstOrNull { it.id == selection.id }
@@ -709,12 +710,28 @@ class MapRenderer {
 
     private fun buildPath(points: List<Vec>, cam: Camera, close: Boolean, out: Path): Path {
         out.reset()
+        out.fillType = Path.FillType.WINDING
         if (points.isEmpty()) return out
         out.moveTo(cam.screenX(points[0].x), cam.screenY(points[0].y))
         for (i in 1 until points.size) {
             out.lineTo(cam.screenX(points[i].x), cam.screenY(points[i].y))
         }
         if (close) out.close()
+        return out
+    }
+
+    /** Путь области из нескольких контуров: вложенный контур даёт дыру. */
+    private fun buildContoursPath(contours: List<List<Vec>>, cam: Camera, out: Path): Path {
+        out.reset()
+        out.fillType = Path.FillType.EVEN_ODD
+        for (contour in contours) {
+            if (contour.size < 3) continue
+            out.moveTo(cam.screenX(contour[0].x), cam.screenY(contour[0].y))
+            for (i in 1 until contour.size) {
+                out.lineTo(cam.screenX(contour[i].x), cam.screenY(contour[i].y))
+            }
+            out.close()
+        }
         return out
     }
 

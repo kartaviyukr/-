@@ -151,6 +151,24 @@ private fun ContextPicker(viewModel: EditorViewModel, onOpenCountries: () -> Uni
 private fun BiomePicker(viewModel: EditorViewModel) {
     val group = viewModel.biome.group
     Column {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 10.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            TextButton(
+                onClick = { viewModel.alignBiomeBorders() },
+                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
+            ) {
+                Text("⇲ Выровнять границы зон")
+            }
+            Text(
+                "убирает наложения",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)

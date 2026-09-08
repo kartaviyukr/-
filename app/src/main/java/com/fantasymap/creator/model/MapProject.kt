@@ -23,14 +23,28 @@ data class WaterBody(
     val points: List<Vec> = emptyList()
 )
 
-/** Область природной зоны / ландшафта. */
+/**
+ * Область природной зоны / ландшафта.
+ * После выравнивания границ область может состоять из нескольких контуров:
+ * отрезанных кусков и дыр. Они рисуются по правилу чётности, поэтому контур
+ * внутри другого контура даёт дыру.
+ */
 @Serializable
 data class BiomeRegion(
     val id: String = newId(),
     val biome: BiomeType = BiomeType.MIXED_FOREST,
     val name: String = "",
-    val points: List<Vec> = emptyList()
-)
+    val points: List<Vec> = emptyList(),
+    val extraContours: List<List<Vec>> = emptyList()
+) {
+    /** Все контуры области: основной и дополнительные. */
+    fun contours(): List<List<Vec>> =
+        if (extraContours.isEmpty()) {
+            listOf(points)
+        } else {
+            (listOf(points) + extraContours).filter { it.size >= 3 }
+        }
+}
 
 /** Линейный природный объект: река, хребет, обрыв, стена. */
 @Serializable

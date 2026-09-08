@@ -79,6 +79,34 @@ class GeometryTest {
     }
 
     @Test
+    fun `контур внутри контура даёт дыру`() {
+        val outer = listOf(Vec(0f, 0f), Vec(100f, 0f), Vec(100f, 100f), Vec(0f, 100f))
+        val hole = listOf(Vec(40f, 40f), Vec(60f, 40f), Vec(60f, 60f), Vec(40f, 60f))
+        val contours = listOf(outer, hole)
+        assertTrue(Geometry.pointInContours(Vec(10f, 10f), contours))
+        assertFalse(Geometry.pointInContours(Vec(50f, 50f), contours))
+        assertFalse(Geometry.pointInContours(Vec(150f, 50f), contours))
+    }
+
+    @Test
+    fun `разрезанная зона из двух кусков остаётся цельной областью`() {
+        val left = listOf(Vec(0f, 0f), Vec(40f, 0f), Vec(40f, 100f), Vec(0f, 100f))
+        val right = listOf(Vec(60f, 0f), Vec(100f, 0f), Vec(100f, 100f), Vec(60f, 100f))
+        val region = BiomeRegion(points = left, extraContours = listOf(right))
+        assertEquals(2, region.contours().size)
+        assertTrue(Geometry.pointInContours(Vec(20f, 50f), region.contours()))
+        assertTrue(Geometry.pointInContours(Vec(80f, 50f), region.contours()))
+        assertFalse(Geometry.pointInContours(Vec(50f, 50f), region.contours()))
+    }
+
+    @Test
+    fun `зона без дополнительных контуров ведёт себя как обычный многоугольник`() {
+        val region = BiomeRegion(points = square)
+        assertEquals(1, region.contours().size)
+        assertTrue(Geometry.pointInContours(Vec(50f, 50f), region.contours()))
+    }
+
+    @Test
     fun `анкета страны считает заполненные поля`() {
         val info = CountryInfo(capital = "Аргос", ruler = "Король Эйн", religion = "Culture of Dawn")
         assertEquals(3, info.filledCount())

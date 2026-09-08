@@ -9,6 +9,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.fantasymap.creator.data.ProjectStore
+import com.fantasymap.creator.geom.PolygonOps
 import com.fantasymap.creator.export.Exporter
 import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.BiomeType
@@ -518,7 +519,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
 
         current.biomes.asReversed()
-            .firstOrNull { Geometry.pointInPolygon(world, it.points) }
+            .firstOrNull { Geometry.pointInContours(world, it.contours()) }
             ?.let { return Selection.Biome(it.id) }
 
         current.waters.asReversed()
@@ -590,6 +591,42 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 is Selection.CountryArea -> state.copy(
                     countries = state.countries.map { if (it.id == target.id) it.copy(name = name) else it }
                 )
+            }
+        }
+    }
+
+    /**
+     * Выровнять границы природных зон: там, где области наложились друг на друга,
+     * лишнее вырезается у той, что нарисована раньше. Общая граница становится
+     * одной линией, без двойной закраски.
+     */
+    fun alignBiomeBorders() {
+        val current = project ?: return
+        if (current.biomes.size < 2) {
+            message = "Нужно хотя бы две зоны"
+            return
+        }
+        viewModelScope.launch {
+            busy = true
+            val minArea = max(30f, current.worldWidth * current.worldHeight * 0.00002f)
+            val result = withContext(Dispatchers.Default) {
+                PolygonOps.resolveOverlaps(current.biomes, minArea)
+            }
+            busy = false
+            if (project?.biomes !== current.biomes) {
+                message = "Карта изменилась, повторите выравнивание"
+                return@launch
+            }
+            if (!result.changed) {
+                message = "Наложений не найдено — границы уже совпадают"
+                return@launch
+            }
+            selection = null
+            edit { it.copy(biomes = result.regions) }
+            message = buildString {
+                append("Границы выровнены")
+                if (result.trimmed > 0) append(", подрезано зон: ${result.trimmed}")
+                if (result.removed > 0) append(", убрано перекрытых: ${result.removed}")
             }
         }
     }

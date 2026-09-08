@@ -68,6 +68,18 @@ object Geometry {
         return inside
     }
 
+    /**
+     * Точка внутри набора контуров по правилу чётности:
+     * контур внутри другого контура считается дырой.
+     */
+    fun pointInContours(p: Vec, contours: List<List<Vec>>): Boolean {
+        var inside = false
+        for (contour in contours) {
+            if (pointInPolygon(p, contour)) inside = !inside
+        }
+        return inside
+    }
+
     fun distanceToSegment(p: Vec, a: Vec, b: Vec): Float {
         val dx = b.x - a.x
         val dy = b.y - a.y
