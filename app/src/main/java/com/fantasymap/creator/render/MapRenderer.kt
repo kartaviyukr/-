@@ -289,6 +289,14 @@ class MapRenderer {
                 LineFeatureType.REEF_LINE -> drawDots(canvas, feature, cam, u)
                 LineFeatureType.GREAT_WALL, LineFeatureType.ICE_WALL -> drawWallLine(canvas, feature, cam, u)
                 LineFeatureType.LAVA_FLOW -> drawRiver(canvas, feature, cam, u)
+                LineFeatureType.AQUEDUCT -> drawWallLine(canvas, feature, cam, u)
+                LineFeatureType.CHASM -> drawCanyon(canvas, feature, cam, u)
+                LineFeatureType.ICE_RIDGE -> drawRidge(canvas, feature, cam, u, project.style.seed, true)
+                LineFeatureType.SAND_RIDGE -> drawRidge(canvas, feature, cam, u, project.style.seed, false)
+                LineFeatureType.ROOT_WALL -> drawForestBelt(canvas, feature, cam, u, project.style.seed)
+                LineFeatureType.LEY_LINE,
+                LineFeatureType.CORAL_WALL,
+                LineFeatureType.MIGRATION_PATH -> drawDots(canvas, feature, cam, u)
             }
             if (feature.name.isNotBlank()) {
                 val mid = feature.points[feature.points.size / 2]
