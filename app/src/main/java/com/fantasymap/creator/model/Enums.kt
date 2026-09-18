@@ -3,7 +3,8 @@ package com.fantasymap.creator.model
 /** Как рисуется заливка природной зоны поверх базового цвета. */
 enum class BiomePattern {
     NONE, TREES, CONIFERS, PALMS, DOTS, DUNES, GRASS, MOUNTAINS, HILLS,
-    SWAMP, ICE, ROCKS, WAVES, CRACKS, CRYSTALS, FUNGI, LAVA, FIELDS
+    SWAMP, ICE, ROCKS, WAVES, CRACKS, CRYSTALS, FUNGI, LAVA, FIELDS,
+    RUNES, BONES, STARS, SPIRES, EYES, FEATHERS
 }
 
 enum class BiomeGroup(val title: String) {
@@ -115,7 +116,31 @@ enum class BiomeType(
     MAGMA_WASTE("Огненные пустоши", BiomeGroup.FANTASY, 0xFF7E3F32.toInt(), BiomePattern.LAVA),
     FROZEN_WASTE("Ледяные пустоши", BiomeGroup.FANTASY, 0xFFCADCE8.toInt(), BiomePattern.ICE),
     HOLY_LAND("Священные земли", BiomeGroup.FANTASY, 0xFFDDCD93.toInt(), BiomePattern.DOTS),
-    BATTLE_SCARRED("Земли вечной войны", BiomeGroup.FANTASY, 0xFF8B7A63.toInt(), BiomePattern.CRACKS);
+    BATTLE_SCARRED("Земли вечной войны", BiomeGroup.FANTASY, 0xFF8B7A63.toInt(), BiomePattern.CRACKS),
+    SPIRIT_WOODS("Лес духов", BiomeGroup.FANTASY, 0xFF4A6E74.toInt(), BiomePattern.EYES),
+    TWILIGHT_FOREST("Сумеречный лес", BiomeGroup.FANTASY, 0xFF3A4458.toInt(), BiomePattern.CONIFERS),
+    AMBER_FOREST("Янтарный лес", BiomeGroup.FANTASY, 0xFFB08A47.toInt(), BiomePattern.TREES),
+    SILVER_TAIGA("Серебряная тайга", BiomeGroup.FANTASY, 0xFF7E9099.toInt(), BiomePattern.CONIFERS),
+    GIANT_FUNGI_PLAIN("Равнина грибов-исполинов", BiomeGroup.FANTASY, 0xFF7A5E86.toInt(), BiomePattern.FUNGI),
+    SINGING_DUNES("Поющие пески", BiomeGroup.FANTASY, 0xFFE0C79B.toInt(), BiomePattern.DUNES),
+    GLASS_DESERT("Стеклянная пустыня", BiomeGroup.FANTASY, 0xFFC8D4DA.toInt(), BiomePattern.CRYSTALS),
+    MIRROR_FLATS("Зеркальная равнина", BiomeGroup.FANTASY, 0xFFD3DCE2.toInt(), BiomePattern.CRACKS),
+    STORM_STEPPE("Грозовая степь", BiomeGroup.FANTASY, 0xFF8E9483.toInt(), BiomePattern.GRASS),
+    WHISPER_PLAINS("Шепчущие равнины", BiomeGroup.FANTASY, 0xFFAFB48C.toInt(), BiomePattern.GRASS),
+    BLOOD_MARSH("Кровавые топи", BiomeGroup.FANTASY, 0xFF6E3F44.toInt(), BiomePattern.SWAMP),
+    BONE_FIELDS("Костяные поля", BiomeGroup.FANTASY, 0xFFC4BCA6.toInt(), BiomePattern.BONES),
+    RUNE_WASTES("Рунные пустоши", BiomeGroup.FANTASY, 0xFF8A8478.toInt(), BiomePattern.RUNES),
+    STARFALL_FIELD("Поле звездопада", BiomeGroup.FANTASY, 0xFF4E5578.toInt(), BiomePattern.STARS),
+    SKY_MEADOWS("Небесные луга", BiomeGroup.FANTASY, 0xFFA9CBB0.toInt(), BiomePattern.FEATHERS),
+    MIST_VALE("Туманный дол", BiomeGroup.FANTASY, 0xFFAEB8B4.toInt(), BiomePattern.SWAMP),
+    EMBER_HILLS("Тлеющие холмы", BiomeGroup.FANTASY, 0xFF8E5C46.toInt(), BiomePattern.HILLS),
+    LIVING_STONE("Живой камень", BiomeGroup.FANTASY, 0xFF7E7468.toInt(), BiomePattern.EYES),
+    VOID_SCAR("Провал пустоты", BiomeGroup.FANTASY, 0xFF35303E.toInt(), BiomePattern.STARS),
+    SUNKEN_LANDS("Затонувшие земли", BiomeGroup.FANTASY, 0xFF5E7E86.toInt(), BiomePattern.WAVES),
+    CORAL_JUNGLE("Коралловые джунгли", BiomeGroup.FANTASY, 0xFF6EA8A0.toInt(), BiomePattern.SPIRES),
+    SPIRE_FOREST("Лес каменных шпилей", BiomeGroup.FANTASY, 0xFFA3998A.toInt(), BiomePattern.SPIRES),
+    ETERNAL_NIGHT("Земли вечной ночи", BiomeGroup.FANTASY, 0xFF3B3A4E.toInt(), BiomePattern.STARS),
+    DREAM_MEADOW("Сонные луга", BiomeGroup.FANTASY, 0xFFB7A9D6.toInt(), BiomePattern.GRASS);
 
     companion object {
         fun byGroup(group: BiomeGroup): List<BiomeType> = BiomeType.entries.filter { it.group == group }
@@ -127,7 +152,10 @@ enum class Glyph {
     CAPITAL, CITY, TOWN, VILLAGE, CASTLE, TOWER, GATE, WALL, CAMP, BATTLE, ARENA,
     ANCHOR, SHIP, LIGHTHOUSE, BRIDGE, MARKET, TEMPLE, OBELISK, GRAVE, PORTAL,
     STONE_CIRCLE, RUINS, DUNGEON, CAVE, MOUNTAIN, VOLCANO, WATERFALL, GEYSER,
-    WHIRLPOOL, ROCK, TREE, MINE, FARM, MILL, FORGE, MONSTER, TREASURE, ANOMALY
+    WHIRLPOOL, ROCK, TREE, MINE, FARM, MILL, FORGE, MONSTER, TREASURE, ANOMALY,
+    DRAGON, BEAST, NEST, CRYSTAL, MUSHROOM, DEAD_TREE, FLOWER, BEACON, STATUE,
+    WELL, AIRSHIP, EYE, SPIRE, BANNER, SWORD, BOOK, POTION, CROWN, OBSERVATORY,
+    ARCH, CAULDRON, TOTEM, BONES, FLOATING_ROCK, RUNE_STONE
 }
 
 enum class MarkerGroup(val title: String) {
@@ -140,7 +168,9 @@ enum class MarkerGroup(val title: String) {
     RUIN("Руины и подземелья"),
     NATURE("Природные объекты"),
     RESOURCE("Ресурсы"),
-    DANGER("Опасности и легенды")
+    DANGER("Опасности и легенды"),
+    WONDER("Чудеса света"),
+    FAUNA("Звери и гнёзда")
 }
 
 /** Все виды объектов фэнтезийного мира, которые можно поставить на карту. */
@@ -277,7 +307,131 @@ enum class MarkerType(
     HAUNTED_SITE("Призрачное место", MarkerGroup.DANGER, Glyph.GRAVE),
     DEMON_GATE("Врата демонов", MarkerGroup.DANGER, Glyph.PORTAL, 1.15f),
     TREASURE("Сокровище", MarkerGroup.DANGER, Glyph.TREASURE),
-    LEGEND_SITE("Легендарное место", MarkerGroup.DANGER, Glyph.ANOMALY);
+    LEGEND_SITE("Легендарное место", MarkerGroup.DANGER, Glyph.ANOMALY),
+
+    // Поселения — продолжение
+    TRIBAL_CAMP("Племенное стойбище", MarkerGroup.SETTLEMENT, Glyph.TOTEM),
+    HALFLING_SHIRE("Край полуросликов", MarkerGroup.SETTLEMENT, Glyph.VILLAGE, 0.9f),
+    GNOME_WORKSHOP("Гномья мастерская", MarkerGroup.SETTLEMENT, Glyph.FORGE, 0.95f),
+    MERFOLK_CITY("Город морского народа", MarkerGroup.SETTLEMENT, Glyph.SPIRE, 1.1f),
+    SKY_CITY("Небесный город", MarkerGroup.SETTLEMENT, Glyph.AIRSHIP, 1.2f),
+    CARAVAN_CITY("Караванный город", MarkerGroup.SETTLEMENT, Glyph.CITY, 1.1f),
+    MONASTIC_TOWN("Монашеский город", MarkerGroup.SETTLEMENT, Glyph.TEMPLE),
+    REFUGEE_CAMP("Лагерь беженцев", MarkerGroup.SETTLEMENT, Glyph.CAMP, 0.85f),
+
+    // Крепости и война — продолжение
+    SIGNAL_BEACON("Сигнальный костёр", MarkerGroup.MILITARY, Glyph.BEACON, 0.9f),
+    WAR_BANNER("Ставка войска", MarkerGroup.MILITARY, Glyph.BANNER),
+    DUEL_GROUND("Место поединков", MarkerGroup.MILITARY, Glyph.SWORD, 0.9f),
+    TRAINING_GROUND("Ристалище", MarkerGroup.MILITARY, Glyph.ARENA, 0.95f),
+    NAVAL_BASE("Военная гавань", MarkerGroup.MILITARY, Glyph.ANCHOR, 1.1f),
+    DRAGON_GATE("Драконьи врата", MarkerGroup.MILITARY, Glyph.GATE, 1.15f),
+    LAST_STAND("Место последней битвы", MarkerGroup.MILITARY, Glyph.SWORD),
+
+    // Порты и переправы — продолжение
+    SKY_DOCK("Причал воздушных кораблей", MarkerGroup.PORT, Glyph.AIRSHIP, 1.05f),
+    UNDERWATER_GATE("Подводные врата", MarkerGroup.PORT, Glyph.SPIRE),
+    RIVER_LOCK("Шлюз", MarkerGroup.PORT, Glyph.GATE, 0.85f),
+    ROPE_BRIDGE("Верёвочный мост", MarkerGroup.PORT, Glyph.BRIDGE, 0.85f),
+
+    // Торговля и знание — продолжение
+    ARCHIVE("Архив", MarkerGroup.TRADE, Glyph.BOOK),
+    SCRIPTORIUM("Скрипторий", MarkerGroup.TRADE, Glyph.BOOK, 0.9f),
+    OBSERVATORY("Обсерватория", MarkerGroup.TRADE, Glyph.OBSERVATORY, 1.05f),
+    BATH_HOUSE("Термы", MarkerGroup.TRADE, Glyph.WELL, 0.9f),
+    FOUNTAIN_SQUARE("Площадь с фонтаном", MarkerGroup.TRADE, Glyph.WELL, 0.9f),
+    THEATRE("Театр", MarkerGroup.TRADE, Glyph.ARENA, 0.95f),
+    HERBALIST("Лавка травника", MarkerGroup.TRADE, Glyph.POTION, 0.8f),
+    ROYAL_COURT("Королевский двор", MarkerGroup.TRADE, Glyph.CROWN, 1.15f),
+
+    // Храмы и погребения — продолжение
+    HERO_TOMB("Гробница героя", MarkerGroup.RELIGION, Glyph.STATUE),
+    IDOL("Идол", MarkerGroup.RELIGION, Glyph.TOTEM, 0.9f),
+    SACRED_SPRING("Священный источник", MarkerGroup.RELIGION, Glyph.WELL, 0.9f),
+    BONE_FIELD("Костище", MarkerGroup.RELIGION, Glyph.BONES),
+    COLOSSUS("Колосс", MarkerGroup.RELIGION, Glyph.STATUE, 1.3f),
+    TRIUMPHAL_ARCH("Триумфальная арка", MarkerGroup.RELIGION, Glyph.ARCH, 1.05f),
+    SKY_BURIAL("Небесное погребение", MarkerGroup.RELIGION, Glyph.BONES, 0.9f),
+
+    // Магия — продолжение
+    RUNE_STONE("Рунный камень", MarkerGroup.MAGIC, Glyph.RUNE_STONE, 0.9f),
+    WITCH_CAULDRON("Ведьмин котёл", MarkerGroup.MAGIC, Glyph.CAULDRON, 0.9f),
+    ALL_SEEING_EYE("Всевидящее око", MarkerGroup.MAGIC, Glyph.EYE),
+    CRYSTAL_SPIRE("Кристальный шпиль", MarkerGroup.MAGIC, Glyph.CRYSTAL, 1.1f),
+    FLOATING_ROCK("Парящая скала", MarkerGroup.MAGIC, Glyph.FLOATING_ROCK),
+    SUMMONING_CIRCLE("Круг призыва", MarkerGroup.MAGIC, Glyph.STONE_CIRCLE),
+    WISHING_WELL("Колодец желаний", MarkerGroup.MAGIC, Glyph.WELL, 0.85f),
+    TIME_RIFT("Разлом времени", MarkerGroup.MAGIC, Glyph.ANOMALY, 1.1f),
+    MANA_GEYSER("Гейзер силы", MarkerGroup.MAGIC, Glyph.GEYSER),
+    ELEMENTAL_NODE("Узел стихий", MarkerGroup.MAGIC, Glyph.CRYSTAL),
+
+    // Руины — продолжение
+    FALLEN_TOWER("Павшая башня", MarkerGroup.RUIN, Glyph.RUINS),
+    BURIED_CITY("Погребённый город", MarkerGroup.RUIN, Glyph.RUINS, 1.2f),
+    GIANT_BONES("Кости исполина", MarkerGroup.RUIN, Glyph.BONES, 1.1f),
+    DROWNED_TEMPLE("Затопленный храм", MarkerGroup.RUIN, Glyph.TEMPLE),
+    FORGOTTEN_VAULT("Забытое хранилище", MarkerGroup.RUIN, Glyph.DUNGEON),
+    BROKEN_ARCH("Разрушенная арка", MarkerGroup.RUIN, Glyph.ARCH, 0.95f),
+
+    // Природа — продолжение
+    GIANT_MUSHROOM("Гриб-исполин", MarkerGroup.NATURE, Glyph.MUSHROOM),
+    DEAD_GROVE("Мёртвая роща", MarkerGroup.NATURE, Glyph.DEAD_TREE),
+    FLOWER_FIELD("Цветочные поля", MarkerGroup.NATURE, Glyph.FLOWER, 0.9f),
+    CRYSTAL_CAVE("Кристальная пещера", MarkerGroup.NATURE, Glyph.CRYSTAL),
+    ICE_SPIRE("Ледяной шпиль", MarkerGroup.NATURE, Glyph.SPIRE),
+    RAINBOW_FALLS("Радужный водопад", MarkerGroup.NATURE, Glyph.WATERFALL),
+    SINGING_STONES("Поющие камни", MarkerGroup.NATURE, Glyph.STONE_CIRCLE),
+    TAR_PIT("Смоляная яма", MarkerGroup.NATURE, Glyph.ROCK, 0.9f),
+    MIRAGE("Мираж", MarkerGroup.NATURE, Glyph.ANOMALY, 0.9f),
+    GREAT_GEODE("Великая жеода", MarkerGroup.NATURE, Glyph.CRYSTAL),
+
+    // Ресурсы — продолжение
+    MITHRIL_MINE("Мифриловые копи", MarkerGroup.RESOURCE, Glyph.MINE),
+    CRYSTAL_QUARRY("Кристальная выработка", MarkerGroup.RESOURCE, Glyph.CRYSTAL, 0.95f),
+    AMBER_SHORE("Янтарный берег", MarkerGroup.RESOURCE, Glyph.ROCK, 0.9f),
+    PEARL_BEDS("Жемчужные отмели", MarkerGroup.RESOURCE, Glyph.ANCHOR, 0.85f),
+    SPICE_GARDEN("Пряные сады", MarkerGroup.RESOURCE, Glyph.FLOWER, 0.85f),
+    DYE_WORKS("Красильни", MarkerGroup.RESOURCE, Glyph.POTION, 0.85f),
+    GLASSWORKS("Стеклодувня", MarkerGroup.RESOURCE, Glyph.POTION, 0.85f),
+    PAPER_MILL("Бумажная мельница", MarkerGroup.RESOURCE, Glyph.MILL, 0.85f),
+    STUD_FARM("Конный завод", MarkerGroup.RESOURCE, Glyph.BEAST, 0.9f),
+
+    // Опасности — продолжение
+    SPIDER_NEST("Паучье гнездо", MarkerGroup.DANGER, Glyph.NEST),
+    WYVERN_ROOST("Логово виверн", MarkerGroup.DANGER, Glyph.DRAGON, 1.1f),
+    KRAKEN_WATERS("Воды кракена", MarkerGroup.DANGER, Glyph.WHIRLPOOL, 1.1f),
+    GIANT_LAIR("Логово великана", MarkerGroup.DANGER, Glyph.BONES, 1.1f),
+    NECROMANCER_TOWER("Башня некроманта", MarkerGroup.DANGER, Glyph.TOWER, 1.1f),
+    PLAGUE_VILLAGE("Чумная деревня", MarkerGroup.DANGER, Glyph.VILLAGE, 0.9f),
+    CURSED_WELL("Проклятый колодец", MarkerGroup.DANGER, Glyph.WELL, 0.85f),
+    SLAVER_PORT("Невольничий порт", MarkerGroup.DANGER, Glyph.ANCHOR),
+
+    // Чудеса света
+    WORLD_TREE("Мировое древо", MarkerGroup.WONDER, Glyph.TREE, 1.5f),
+    GREAT_COLOSSUS("Великий колосс", MarkerGroup.WONDER, Glyph.STATUE, 1.4f),
+    FLOATING_ISLAND("Парящий остров", MarkerGroup.WONDER, Glyph.FLOATING_ROCK, 1.3f),
+    ETERNAL_FLAME("Вечный огонь", MarkerGroup.WONDER, Glyph.BEACON, 1.2f),
+    SKY_BRIDGE("Небесный мост", MarkerGroup.WONDER, Glyph.BRIDGE, 1.25f),
+    WORLD_GATE("Врата миров", MarkerGroup.WONDER, Glyph.PORTAL, 1.35f),
+    CRYSTAL_THRONE("Кристальный трон", MarkerGroup.WONDER, Glyph.CROWN, 1.3f),
+    STAR_OBSERVATORY("Звёздная обсерватория", MarkerGroup.WONDER, Glyph.OBSERVATORY, 1.25f),
+    TITAN_REMAINS("Останки титана", MarkerGroup.WONDER, Glyph.BONES, 1.35f),
+    ENDLESS_STAIR("Бесконечная лестница", MarkerGroup.WONDER, Glyph.SPIRE, 1.25f),
+    GREAT_MAELSTROM("Великий мальстрём", MarkerGroup.WONDER, Glyph.WHIRLPOOL, 1.3f),
+
+    // Звери и гнёзда
+    DRAGON_ROOST("Драконье гнездовье", MarkerGroup.FAUNA, Glyph.DRAGON, 1.2f),
+    GRIFFIN_CLIFFS("Утёсы грифонов", MarkerGroup.FAUNA, Glyph.NEST),
+    PHOENIX_NEST("Гнездо феникса", MarkerGroup.FAUNA, Glyph.BEACON),
+    UNICORN_GLADE("Поляна единорогов", MarkerGroup.FAUNA, Glyph.FLOWER),
+    TREANT_GROVE("Роща древней", MarkerGroup.FAUNA, Glyph.TREE, 1.1f),
+    FAIRY_RING("Круг фей", MarkerGroup.FAUNA, Glyph.MUSHROOM, 0.9f),
+    WOLF_LANDS("Волчьи угодья", MarkerGroup.FAUNA, Glyph.BEAST),
+    MAMMOTH_RANGE("Земли мамонтов", MarkerGroup.FAUNA, Glyph.BEAST, 1.1f),
+    SEA_SERPENT("Воды морского змея", MarkerGroup.FAUNA, Glyph.WHIRLPOOL),
+    GIANT_EAGLE_NEST("Гнездо орлов-исполинов", MarkerGroup.FAUNA, Glyph.NEST),
+    HERD_GROUNDS("Пастбища диких стад", MarkerGroup.FAUNA, Glyph.BEAST, 0.95f),
+    SPIRIT_BEAST("Обитель духа-зверя", MarkerGroup.FAUNA, Glyph.EYE, 1.1f);
 
     val isSettlement: Boolean
         get() = group == MarkerGroup.SETTLEMENT
@@ -306,7 +460,15 @@ enum class LineFeatureType(
     REEF_LINE("Гряда рифов", 0xFF56A79A.toInt(), 4f),
     GREAT_WALL("Великая стена", 0xFF5A5048.toInt(), 5f),
     ICE_WALL("Ледяная стена", 0xFF9EC3D8.toInt(), 5f),
-    LAVA_FLOW("Лавовый поток", 0xFFB4502E.toInt(), 4f)
+    LAVA_FLOW("Лавовый поток", 0xFFB4502E.toInt(), 4f),
+    LEY_LINE("Линия силы", 0xFF7B62A8.toInt(), 3f),
+    CHASM("Расселина", 0xFF4E453C.toInt(), 5f),
+    AQUEDUCT("Акведук", 0xFF9A8E76.toInt(), 4f),
+    ICE_RIDGE("Ледяная гряда", 0xFF9FC4D8.toInt(), 8f),
+    SAND_RIDGE("Барханная гряда", 0xFFD9C08A.toInt(), 8f),
+    ROOT_WALL("Стена корней", 0xFF6B5433.toInt(), 8f),
+    CORAL_WALL("Коралловая гряда", 0xFF62B0A4.toInt(), 6f),
+    MIGRATION_PATH("Тропа зверей", 0xFF8A7B5C.toInt(), 2.5f)
 }
 
 /** Пути сообщения. */
@@ -321,7 +483,12 @@ enum class RoadType(
     TRAIL("Тропа", 0xFF937A55.toInt(), 1.6f, true),
     CARAVAN_ROUTE("Караванный путь", 0xFFA07C48.toInt(), 2.2f, true),
     SEA_ROUTE("Морской путь", 0xFF3D6E8E.toInt(), 2f, true),
-    SECRET_PATH("Тайная тропа", 0xFF6B5A6E.toInt(), 1.6f, true)
+    SECRET_PATH("Тайная тропа", 0xFF6B5A6E.toInt(), 1.6f, true),
+    ROYAL_ROAD("Королевский тракт", 0xFF8A5E2E.toInt(), 4f, false),
+    PILGRIM_ROAD("Паломничий путь", 0xFF97814F.toInt(), 2f, true),
+    SKY_ROUTE("Воздушный путь", 0xFF6E86A8.toInt(), 2f, true),
+    UNDERGROUND_ROAD("Подземный ход", 0xFF5E5148.toInt(), 2f, true),
+    RIVER_ROUTE("Речной путь", 0xFF4A7E9B.toInt(), 2f, true)
 }
 
 /** Виды суши. */
@@ -336,7 +503,12 @@ enum class WaterKind(val title: String, val color: Int) {
     LAKE("Озеро", 0xFF5E9AC0.toInt()),
     INNER_SEA("Внутреннее море", 0xFF4A85AE.toInt()),
     SALT_LAKE("Солёное озеро", 0xFF8FB0BE.toInt()),
-    BAY("Залив", 0xFF5A94BC.toInt())
+    BAY("Залив", 0xFF5A94BC.toInt()),
+    CRATER_LAKE("Кратерное озеро", 0xFF4E7E9E.toInt()),
+    GLACIAL_LAKE("Ледниковое озеро", 0xFF86B6CE.toInt()),
+    ENCHANTED_LAKE("Зачарованное озеро", 0xFF5E8FA8.toInt()),
+    MARSH_WATER("Заболоченная вода", 0xFF6E8878.toInt()),
+    HOT_LAKE("Горячее озеро", 0xFF7E93A0.toInt())
 }
 
 /** Стиль подписи на карте. */
@@ -377,5 +549,6 @@ enum class Tool(val title: String, val icon: String) {
     MARKER("Объект", "📍"),
     COUNTRY("Территория страны", "🚩"),
     LABEL("Подпись", "🔤"),
-    ERASER("Стереть", "🧽")
+    ERASER("Стереть", "🧽"),
+    FRAGMENT("Фрагмент → новая карта", "⧉")
 }

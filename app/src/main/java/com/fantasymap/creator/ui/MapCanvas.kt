@@ -129,7 +129,7 @@ fun MapCanvas(
                     uiScale = uiScale,
                     selection = viewModel.selection,
                     draft = viewModel.draft.toList(),
-                    draftClosed = viewModel.toolDrawsArea(),
+                    draftClosed = viewModel.draftClosed(),
                     draftColor = viewModel.draftColor(),
                     activeCountryId = viewModel.activeCountryId
                 )

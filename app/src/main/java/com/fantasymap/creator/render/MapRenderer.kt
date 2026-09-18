@@ -547,6 +547,8 @@ class MapRenderer {
             MarkerGroup.NATURE -> 0xFFD8DFC5.toInt()
             MarkerGroup.RESOURCE -> 0xFFE3D2B0.toInt()
             MarkerGroup.DANGER -> 0xFFE5C1B4.toInt()
+            MarkerGroup.WONDER -> 0xFFF0DFA8.toInt()
+            MarkerGroup.FAUNA -> 0xFFDCD0BC.toInt()
         }
     }
 

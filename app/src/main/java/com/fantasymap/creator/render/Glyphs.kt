@@ -62,7 +62,408 @@ class Glyphs {
             Glyph.MONSTER -> monster(canvas, cx, cy, s, fill, stroke)
             Glyph.TREASURE -> treasure(canvas, cx, cy, s, fill, stroke)
             Glyph.ANOMALY -> anomaly(canvas, cx, cy, s, fill, stroke)
+            Glyph.DRAGON -> dragon(canvas, cx, cy, s, fill, stroke)
+            Glyph.BEAST -> beast(canvas, cx, cy, s, fill, stroke)
+            Glyph.NEST -> nest(canvas, cx, cy, s, fill, stroke)
+            Glyph.CRYSTAL -> crystal(canvas, cx, cy, s, fill, stroke)
+            Glyph.MUSHROOM -> mushroom(canvas, cx, cy, s, fill, stroke)
+            Glyph.DEAD_TREE -> deadTree(canvas, cx, cy, s, stroke)
+            Glyph.FLOWER -> flower(canvas, cx, cy, s, fill, stroke)
+            Glyph.BEACON -> beacon(canvas, cx, cy, s, fill, stroke)
+            Glyph.STATUE -> statue(canvas, cx, cy, s, fill, stroke)
+            Glyph.WELL -> well(canvas, cx, cy, s, fill, stroke)
+            Glyph.AIRSHIP -> airship(canvas, cx, cy, s, fill, stroke)
+            Glyph.EYE -> eye(canvas, cx, cy, s, fill, stroke)
+            Glyph.SPIRE -> spire(canvas, cx, cy, s, fill, stroke)
+            Glyph.BANNER -> banner(canvas, cx, cy, s, fill, stroke)
+            Glyph.SWORD -> sword(canvas, cx, cy, s, fill, stroke)
+            Glyph.BOOK -> book(canvas, cx, cy, s, fill, stroke)
+            Glyph.POTION -> potion(canvas, cx, cy, s, fill, stroke)
+            Glyph.CROWN -> crown(canvas, cx, cy, s, fill, stroke)
+            Glyph.OBSERVATORY -> observatory(canvas, cx, cy, s, fill, stroke)
+            Glyph.ARCH -> arch(canvas, cx, cy, s, fill, stroke)
+            Glyph.CAULDRON -> cauldron(canvas, cx, cy, s, fill, stroke)
+            Glyph.TOTEM -> totem(canvas, cx, cy, s, fill, stroke)
+            Glyph.BONES -> bones(canvas, cx, cy, s, fill, stroke)
+            Glyph.FLOATING_ROCK -> floatingRock(canvas, cx, cy, s, fill, stroke)
+            Glyph.RUNE_STONE -> runeStone(canvas, cx, cy, s, fill, stroke)
         }
+    }
+
+    // ---------- новые значки ----------
+
+    private fun dragon(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 1.1f, cy + s * 0.95f)
+        path.quadTo(cx - s * 0.2f, cy + s * 0.45f, cx + s * 0.5f, cy + s * 0.15f)
+        path.quadTo(cx + s * 1.0f, cy - s * 0.05f, cx + s * 1.2f, cy - s * 0.65f)
+        path.lineTo(cx + s * 0.78f, cy - s * 0.5f)
+        path.quadTo(cx + s * 0.7f, cy + s * 0.05f, cx + s * 0.15f, cy + s * 0.5f)
+        path.quadTo(cx - s * 0.45f, cy + s * 0.85f, cx - s * 1.1f, cy + s * 0.95f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+
+        path.reset()
+        path.moveTo(cx + s * 0.05f, cy + s * 0.25f)
+        path.lineTo(cx - s * 0.55f, cy - s * 1.15f)
+        path.lineTo(cx + s * 0.55f, cy - s * 0.45f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+
+        path.reset()
+        path.moveTo(cx + s * 0.25f, cy + s * 0.15f)
+        path.lineTo(cx + s * 0.95f, cy - s * 1.05f)
+        path.lineTo(cx + s * 1.0f, cy - s * 0.2f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+    }
+
+    private fun beast(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.85f, cy - s * 0.3f, cx + s * 0.6f, cy + s * 0.4f)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawCircle(cx + s * 0.8f, cy - s * 0.45f, s * 0.34f, fill)
+        canvas.drawCircle(cx + s * 0.8f, cy - s * 0.45f, s * 0.34f, stroke)
+        canvas.drawLine(cx + s * 0.62f, cy - s * 0.25f, cx + s * 0.8f, cy - s * 0.45f, stroke)
+        var x = cx - s * 0.62f
+        while (x <= cx + s * 0.42f + 0.01f) {
+            canvas.drawLine(x, cy + s * 0.3f, x, cy + s * 0.95f, stroke)
+            x += s * 0.35f
+        }
+        canvas.drawLine(cx - s * 0.85f, cy - s * 0.05f, cx - s * 1.25f, cy - s * 0.5f, stroke)
+    }
+
+    private fun nest(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawCircle(cx - s * 0.3f, cy - s * 0.1f, s * 0.26f, fill)
+        canvas.drawCircle(cx - s * 0.3f, cy - s * 0.1f, s * 0.26f, stroke)
+        canvas.drawCircle(cx + s * 0.3f, cy - s * 0.1f, s * 0.26f, fill)
+        canvas.drawCircle(cx + s * 0.3f, cy - s * 0.1f, s * 0.26f, stroke)
+        canvas.drawCircle(cx, cy - s * 0.42f, s * 0.26f, fill)
+        canvas.drawCircle(cx, cy - s * 0.42f, s * 0.26f, stroke)
+        rect.set(cx - s * 1.05f, cy - s * 0.45f, cx + s * 1.05f, cy + s * 0.95f)
+        canvas.drawArc(rect, 0f, 180f, false, fill)
+        canvas.drawArc(rect, 0f, 180f, false, stroke)
+        canvas.drawLine(cx - s * 1.05f, cy + s * 0.25f, cx + s * 1.05f, cy + s * 0.25f, stroke)
+    }
+
+    private fun crystal(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        fun shard(ox: Float, half: Float, top: Float) {
+            path.reset()
+            path.moveTo(cx + ox, cy + s * 0.9f)
+            path.lineTo(cx + ox - half, cy + s * 0.1f)
+            path.lineTo(cx + ox, cy - top)
+            path.lineTo(cx + ox + half, cy + s * 0.1f)
+            path.close()
+            canvas.drawPath(path, fill)
+            canvas.drawPath(path, stroke)
+        }
+        shard(-s * 0.6f, s * 0.28f, s * 0.5f)
+        shard(s * 0.6f, s * 0.26f, s * 0.35f)
+        shard(0f, s * 0.36f, s * 1.15f)
+    }
+
+    private fun mushroom(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.26f, cy - s * 0.1f, cx + s * 0.26f, cy + s * 0.95f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 1.05f, cy - s * 1.0f, cx + s * 1.05f, cy + s * 0.35f)
+        canvas.drawArc(rect, 180f, 180f, false, fill)
+        canvas.drawArc(rect, 180f, 180f, false, stroke)
+        canvas.drawLine(cx - s * 1.05f, cy - s * 0.32f, cx + s * 1.05f, cy - s * 0.32f, stroke)
+        canvas.drawCircle(cx - s * 0.42f, cy - s * 0.62f, s * 0.14f, stroke)
+        canvas.drawCircle(cx + s * 0.36f, cy - s * 0.72f, s * 0.12f, stroke)
+    }
+
+    private fun deadTree(canvas: Canvas, cx: Float, cy: Float, s: Float, stroke: Paint) {
+        canvas.drawLine(cx, cy + s, cx, cy - s * 1.1f, stroke)
+        canvas.drawLine(cx, cy - s * 0.15f, cx - s * 0.75f, cy - s * 0.75f, stroke)
+        canvas.drawLine(cx, cy - s * 0.45f, cx + s * 0.7f, cy - s * 0.95f, stroke)
+        canvas.drawLine(cx, cy + s * 0.25f, cx + s * 0.5f, cy - s * 0.15f, stroke)
+        canvas.drawLine(cx - s * 0.75f, cy - s * 0.75f, cx - s * 0.95f, cy - s * 1.15f, stroke)
+    }
+
+    private fun flower(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx, cy + s, cx, cy + s * 0.1f, stroke)
+        for (i in 0 until 5) {
+            val a = (-Math.PI / 2 + i * 2.0 * Math.PI / 5).toFloat()
+            val x = cx + cos(a) * s * 0.55f
+            val y = cy - s * 0.25f + sin(a) * s * 0.55f
+            canvas.drawCircle(x, y, s * 0.34f, fill)
+            canvas.drawCircle(x, y, s * 0.34f, stroke)
+        }
+        canvas.drawCircle(cx, cy - s * 0.25f, s * 0.24f, stroke)
+    }
+
+    private fun beacon(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.55f, cy + s)
+        path.lineTo(cx - s * 0.3f, cy + s * 0.15f)
+        path.lineTo(cx + s * 0.3f, cy + s * 0.15f)
+        path.lineTo(cx + s * 0.55f, cy + s)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.75f, cy + s * 0.15f, cx + s * 0.75f, cy + s * 0.15f, stroke)
+        path.reset()
+        path.moveTo(cx, cy - s * 1.25f)
+        path.quadTo(cx + s * 0.6f, cy - s * 0.4f, cx + s * 0.25f, cy + s * 0.1f)
+        path.quadTo(cx, cy - s * 0.2f, cx - s * 0.25f, cy + s * 0.1f)
+        path.quadTo(cx - s * 0.6f, cy - s * 0.4f, cx, cy - s * 1.25f)
+        path.close()
+        val old = fill.color
+        fill.color = 0xFFE0913F.toInt()
+        canvas.drawPath(path, fill)
+        fill.color = old
+        canvas.drawPath(path, stroke)
+    }
+
+    private fun statue(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.8f, cy + s * 0.65f, cx + s * 0.8f, cy + s)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 0.32f, cy - s * 0.35f, cx + s * 0.32f, cy + s * 0.65f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawCircle(cx, cy - s * 0.62f, s * 0.3f, fill)
+        canvas.drawCircle(cx, cy - s * 0.62f, s * 0.3f, stroke)
+        canvas.drawLine(cx - s * 0.32f, cy - s * 0.15f, cx - s * 0.8f, cy - s * 0.55f, stroke)
+        canvas.drawLine(cx + s * 0.32f, cy - s * 0.15f, cx + s * 0.75f, cy + s * 0.15f, stroke)
+    }
+
+    private fun well(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.75f, cy + s * 0.2f, cx + s * 0.75f, cy + s)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 0.75f, cy + s * 0.02f, cx + s * 0.75f, cy + s * 0.4f)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawLine(cx - s * 0.6f, cy + s * 0.2f, cx - s * 0.6f, cy - s * 0.55f, stroke)
+        canvas.drawLine(cx + s * 0.6f, cy + s * 0.2f, cx + s * 0.6f, cy - s * 0.55f, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.95f, cy - s * 0.5f)
+        path.lineTo(cx, cy - s * 1.15f)
+        path.lineTo(cx + s * 0.95f, cy - s * 0.5f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+    }
+
+    private fun airship(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 1.15f, cy - s * 0.9f, cx + s * 1.15f, cy + s * 0.1f)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawLine(cx - s * 0.8f, cy - s * 0.75f, cx - s * 0.5f, cy + s * 0.02f, stroke)
+        canvas.drawLine(cx + s * 0.8f, cy - s * 0.75f, cx + s * 0.5f, cy + s * 0.02f, stroke)
+        rect.set(cx - s * 0.42f, cy + s * 0.32f, cx + s * 0.42f, cy + s * 0.85f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawLine(cx - s * 0.3f, cy + s * 0.1f, cx - s * 0.3f, cy + s * 0.32f, stroke)
+        canvas.drawLine(cx + s * 0.3f, cy + s * 0.1f, cx + s * 0.3f, cy + s * 0.32f, stroke)
+    }
+
+    private fun eye(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 1.15f, cy)
+        path.quadTo(cx, cy - s * 0.95f, cx + s * 1.15f, cy)
+        path.quadTo(cx, cy + s * 0.95f, cx - s * 1.15f, cy)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawCircle(cx, cy, s * 0.38f, stroke)
+        val old = fill.color
+        fill.color = 0xFF2B2620.toInt()
+        canvas.drawCircle(cx, cy, s * 0.18f, fill)
+        fill.color = old
+    }
+
+    private fun spire(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.45f, cy + s * 0.9f)
+        path.lineTo(cx - s * 0.12f, cy - s * 1.3f)
+        path.lineTo(cx + s * 0.2f, cy + s * 0.9f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        path.reset()
+        path.moveTo(cx + s * 0.25f, cy + s * 0.9f)
+        path.lineTo(cx + s * 0.62f, cy - s * 0.45f)
+        path.lineTo(cx + s * 0.9f, cy + s * 0.9f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+    }
+
+    private fun banner(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx - s * 0.5f, cy + s, cx - s * 0.5f, cy - s * 1.2f, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.5f, cy - s * 1.2f)
+        path.lineTo(cx + s * 0.95f, cy - s * 1.0f)
+        path.lineTo(cx + s * 0.6f, cy - s * 0.55f)
+        path.lineTo(cx + s * 0.95f, cy - s * 0.1f)
+        path.lineTo(cx - s * 0.5f, cy - s * 0.3f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+    }
+
+    private fun sword(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.2f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.2f, cy - s * 0.35f)
+        path.lineTo(cx, cy + s * 1.1f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.7f, cy - s * 0.35f, cx + s * 0.7f, cy - s * 0.35f, stroke)
+        canvas.drawLine(cx, cy - s * 0.35f, cx, cy - s * 1.05f, stroke)
+        canvas.drawCircle(cx, cy - s * 1.15f, s * 0.2f, fill)
+        canvas.drawCircle(cx, cy - s * 1.15f, s * 0.2f, stroke)
+    }
+
+    private fun book(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx, cy - s * 0.5f)
+        path.quadTo(cx - s * 0.5f, cy - s * 0.85f, cx - s * 1.1f, cy - s * 0.6f)
+        path.lineTo(cx - s * 1.1f, cy + s * 0.55f)
+        path.quadTo(cx - s * 0.5f, cy + s * 0.25f, cx, cy + s * 0.65f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        path.reset()
+        path.moveTo(cx, cy - s * 0.5f)
+        path.quadTo(cx + s * 0.5f, cy - s * 0.85f, cx + s * 1.1f, cy - s * 0.6f)
+        path.lineTo(cx + s * 1.1f, cy + s * 0.55f)
+        path.quadTo(cx + s * 0.5f, cy + s * 0.25f, cx, cy + s * 0.65f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx, cy - s * 0.5f, cx, cy + s * 0.65f, stroke)
+    }
+
+    private fun potion(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.22f, cy - s * 1.0f)
+        path.lineTo(cx - s * 0.22f, cy - s * 0.35f)
+        path.quadTo(cx - s * 0.95f, cy + s * 0.1f, cx - s * 0.6f, cy + s * 0.8f)
+        path.lineTo(cx + s * 0.6f, cy + s * 0.8f)
+        path.quadTo(cx + s * 0.95f, cy + s * 0.1f, cx + s * 0.22f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.22f, cy - s * 1.0f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.4f, cy - s * 1.0f, cx + s * 0.4f, cy - s * 1.0f, stroke)
+        canvas.drawLine(cx - s * 0.62f, cy + s * 0.32f, cx + s * 0.62f, cy + s * 0.32f, stroke)
+    }
+
+    private fun crown(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s, cy + s * 0.55f)
+        path.lineTo(cx - s * 1.1f, cy - s * 0.75f)
+        path.lineTo(cx - s * 0.5f, cy - s * 0.1f)
+        path.lineTo(cx, cy - s * 0.95f)
+        path.lineTo(cx + s * 0.5f, cy - s * 0.1f)
+        path.lineTo(cx + s * 1.1f, cy - s * 0.75f)
+        path.lineTo(cx + s, cy + s * 0.55f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s, cy + s * 0.2f, cx + s, cy + s * 0.2f, stroke)
+    }
+
+    private fun observatory(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.75f, cy + s * 0.05f, cx + s * 0.75f, cy + s)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 0.95f, cy - s * 0.95f, cx + s * 0.95f, cy + s * 0.45f)
+        canvas.drawArc(rect, 180f, 180f, false, fill)
+        canvas.drawArc(rect, 180f, 180f, false, stroke)
+        canvas.drawLine(cx - s * 0.95f, cy - s * 0.25f, cx + s * 0.95f, cy - s * 0.25f, stroke)
+        canvas.drawLine(cx + s * 0.1f, cy - s * 0.35f, cx + s * 0.85f, cy - s * 0.95f, stroke)
+    }
+
+    private fun arch(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.95f, cy - s * 0.1f, cx - s * 0.5f, cy + s)
+        canvas.drawRect(rect, fill); canvas.drawRect(rect, stroke)
+        rect.set(cx + s * 0.5f, cy - s * 0.1f, cx + s * 0.95f, cy + s)
+        canvas.drawRect(rect, fill); canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 0.95f, cy - s * 1.1f, cx + s * 0.95f, cy + s * 0.1f)
+        canvas.drawArc(rect, 180f, 180f, false, fill)
+        canvas.drawArc(rect, 180f, 180f, false, stroke)
+    }
+
+    private fun cauldron(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.9f, cy - s * 0.55f, cx + s * 0.9f, cy + s * 0.85f)
+        canvas.drawArc(rect, 0f, 180f, false, fill)
+        canvas.drawArc(rect, 0f, 180f, false, stroke)
+        rect.set(cx - s * 0.95f, cy - s * 0.7f, cx + s * 0.95f, cy - s * 0.25f)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawLine(cx - s * 0.5f, cy + s * 0.6f, cx - s * 0.65f, cy + s, stroke)
+        canvas.drawLine(cx + s * 0.5f, cy + s * 0.6f, cx + s * 0.65f, cy + s, stroke)
+    }
+
+    private fun totem(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.42f, cy - s * 1.15f, cx + s * 0.42f, cy + s)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawLine(cx - s * 0.42f, cy - s * 0.45f, cx + s * 0.42f, cy - s * 0.45f, stroke)
+        canvas.drawLine(cx - s * 0.42f, cy + s * 0.25f, cx + s * 0.42f, cy + s * 0.25f, stroke)
+        canvas.drawCircle(cx - s * 0.16f, cy - s * 0.82f, s * 0.09f, stroke)
+        canvas.drawCircle(cx + s * 0.16f, cy - s * 0.82f, s * 0.09f, stroke)
+        canvas.drawLine(cx - s * 0.42f, cy - s * 1.0f, cx - s * 0.95f, cy - s * 0.7f, stroke)
+        canvas.drawLine(cx + s * 0.42f, cy - s * 1.0f, cx + s * 0.95f, cy - s * 0.7f, stroke)
+    }
+
+    private fun bones(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        fun bone(angle: Float) {
+            val dx = cos(angle) * s * 0.8f
+            val dy = sin(angle) * s * 0.8f
+            canvas.drawLine(cx - dx, cy - dy, cx + dx, cy + dy, stroke)
+            val nx = -sin(angle) * s * 0.2f
+            val ny = cos(angle) * s * 0.2f
+            canvas.drawCircle(cx - dx + nx, cy - dy + ny, s * 0.2f, fill)
+            canvas.drawCircle(cx - dx + nx, cy - dy + ny, s * 0.2f, stroke)
+            canvas.drawCircle(cx - dx - nx, cy - dy - ny, s * 0.2f, fill)
+            canvas.drawCircle(cx - dx - nx, cy - dy - ny, s * 0.2f, stroke)
+            canvas.drawCircle(cx + dx + nx, cy + dy + ny, s * 0.2f, fill)
+            canvas.drawCircle(cx + dx + nx, cy + dy + ny, s * 0.2f, stroke)
+            canvas.drawCircle(cx + dx - nx, cy + dy - ny, s * 0.2f, fill)
+            canvas.drawCircle(cx + dx - nx, cy + dy - ny, s * 0.2f, stroke)
+        }
+        bone(0.7f)
+        bone(-0.7f)
+    }
+
+    private fun floatingRock(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 1.0f, cy - s * 0.35f)
+        path.lineTo(cx - s * 0.5f, cy - s * 0.85f)
+        path.lineTo(cx + s * 0.6f, cy - s * 0.75f)
+        path.lineTo(cx + s * 1.0f, cy - s * 0.25f)
+        path.lineTo(cx + s * 0.2f, cy + s * 0.55f)
+        path.lineTo(cx - s * 0.45f, cy + s * 0.2f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.55f, cy + s * 0.75f, cx + s * 0.55f, cy + s * 0.75f, stroke)
+        canvas.drawLine(cx - s * 0.3f, cy + s * 1.0f, cx + s * 0.3f, cy + s * 1.0f, stroke)
+    }
+
+    private fun runeStone(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.55f, cy + s)
+        path.lineTo(cx - s * 0.5f, cy - s * 0.6f)
+        path.quadTo(cx, cy - s * 1.3f, cx + s * 0.5f, cy - s * 0.6f)
+        path.lineTo(cx + s * 0.55f, cy + s)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx, cy - s * 0.55f, cx, cy + s * 0.6f, stroke)
+        canvas.drawLine(cx, cy - s * 0.15f, cx - s * 0.32f, cy - s * 0.45f, stroke)
+        canvas.drawLine(cx, cy + s * 0.15f, cx + s * 0.32f, cy - s * 0.15f, stroke)
     }
 
     // ---------- поселения ----------
@@ -662,6 +1063,37 @@ class Glyphs {
                 rect.set(x - s * 0.7f, y - s * 0.35f, x + s * 0.7f, y + s * 0.35f)
                 canvas.drawArc(rect, 0f, 360f, false, paint)
                 canvas.drawLine(x - s * 0.25f, y, x + s * 0.3f, y, paint)
+            }
+            BiomePattern.RUNES -> {
+                canvas.drawLine(x, y - s * 0.65f, x, y + s * 0.65f, paint)
+                canvas.drawLine(x, y - s * 0.15f, x - s * 0.45f, y - s * 0.55f, paint)
+                canvas.drawLine(x, y + s * 0.15f, x + s * 0.45f, y - s * 0.25f, paint)
+            }
+            BiomePattern.BONES -> {
+                canvas.drawLine(x - s * 0.5f, y - s * 0.25f, x + s * 0.5f, y + s * 0.25f, paint)
+                canvas.drawCircle(x - s * 0.55f, y - s * 0.35f, s * 0.14f, paint)
+                canvas.drawCircle(x + s * 0.55f, y + s * 0.35f, s * 0.14f, paint)
+            }
+            BiomePattern.STARS -> {
+                canvas.drawLine(x, y - s * 0.6f, x, y + s * 0.6f, paint)
+                canvas.drawLine(x - s * 0.6f, y, x + s * 0.6f, y, paint)
+                canvas.drawLine(x - s * 0.28f, y - s * 0.28f, x + s * 0.28f, y + s * 0.28f, paint)
+                canvas.drawLine(x - s * 0.28f, y + s * 0.28f, x + s * 0.28f, y - s * 0.28f, paint)
+            }
+            BiomePattern.SPIRES -> {
+                canvas.drawLine(x - s * 0.45f, y + s * 0.5f, x - s * 0.2f, y - s * 0.7f, paint)
+                canvas.drawLine(x - s * 0.2f, y - s * 0.7f, x + s * 0.05f, y + s * 0.5f, paint)
+                canvas.drawLine(x + s * 0.25f, y + s * 0.5f, x + s * 0.45f, y - s * 0.3f, paint)
+            }
+            BiomePattern.EYES -> {
+                rect.set(x - s * 0.6f, y - s * 0.35f, x + s * 0.6f, y + s * 0.35f)
+                canvas.drawOval(rect, paint)
+                canvas.drawPoint(x, y, paint)
+            }
+            BiomePattern.FEATHERS -> {
+                rect.set(x - s * 0.5f, y - s * 0.6f, x + s * 0.5f, y + s * 0.6f)
+                canvas.drawArc(rect, 250f, 220f, false, paint)
+                canvas.drawLine(x, y - s * 0.55f, x, y + s * 0.55f, paint)
             }
             BiomePattern.FIELDS -> {
                 rect.set(x - s * 0.7f, y - s * 0.5f, x + s * 0.7f, y + s * 0.5f)

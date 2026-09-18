@@ -38,6 +38,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
@@ -47,6 +48,7 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -356,6 +358,84 @@ fun ExportDialog(
     )
 }
 
+/**
+ * Создание отдельной карты из выделенного куска.
+ * Исходная карта остаётся нетронутой — фрагмент копируется.
+ */
+@Composable
+fun FragmentDialog(
+    sourceName: String,
+    fragmentWidth: Float,
+    fragmentHeight: Float,
+    onCreate: (String, Float) -> Unit,
+    onDismiss: () -> Unit
+) {
+    var name by remember { mutableStateOf("$sourceName — фрагмент") }
+    var longSide by remember { mutableFloatStateOf(2400f) }
+    val currentLongSide = maxOf(fragmentWidth, fragmentHeight, 1f)
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Новая карта из фрагмента") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 420.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    "Выделенный кусок ${fragmentWidth.toInt()} × ${fragmentHeight.toInt()} " +
+                        "будет скопирован в отдельную карту и растянут на весь её размер. " +
+                        "Эта карта останется без изменений.",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Spacer(Modifier.height(12.dp))
+                OutlinedTextField(
+                    value = name,
+                    onValueChange = { name = it },
+                    label = { Text("Название новой карты") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(12.dp))
+                Text("Размер новой карты", style = MaterialTheme.typography.labelLarge)
+                FRAGMENT_SIZES.forEach { size ->
+                    val zoom = size / currentLongSide
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { longSide = size }
+                            .padding(vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(selected = longSide == size, onClick = { longSide = size })
+                        Spacer(Modifier.width(4.dp))
+                        Column {
+                            Text("${size.toInt()} по длинной стороне", style = MaterialTheme.typography.bodyMedium)
+                            Text(
+                                "подробнее в ${formatZoom(zoom)} раза",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = { onCreate(name.trim(), longSide) }) { Text("Создать карту") }
+        },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Отмена") } }
+    )
+}
+
+private fun formatZoom(zoom: Float): String {
+    val rounded = (zoom * 10f).toInt() / 10f
+    return if (rounded >= 10f) rounded.toInt().toString() else rounded.toString()
+}
+
+private val FRAGMENT_SIZES = listOf(1600f, 2400f, 3200f, 4800f, 6400f)
+
 /** Краткая справка по работе с картой. */
 @Composable
 fun HelpDialog(onDismiss: () -> Unit) {
@@ -389,6 +469,12 @@ fun HelpDialog(onDismiss: () -> Unit) {
                 Text("6. Особые строения — храмы, башни магов, руины, шахты, порталы.")
                 Text("7. Границы стран — обведите территорию; граница может идти и по воде.")
                 Text("8. Информация о странах — заполните анкету каждого государства.")
+                Spacer(Modifier.height(10.dp))
+                Text("Фрагмент → новая карта", fontWeight = FontWeight.Bold)
+                Text("Инструмент «⧉» (и пункт меню ⋮) позволяет обвести прямоугольником " +
+                    "кусок карты и скопировать его в отдельную карту, растянув на весь лист. " +
+                    "Исходная карта при этом не меняется — удобно, чтобы проработать " +
+                    "один материк или область подробнее.")
                 Spacer(Modifier.height(10.dp))
                 Text("Сохранение", fontWeight = FontWeight.Bold)
                 Text("Карта сохраняется автоматически. Через меню «⋮» её можно выгрузить как картинку PNG, файл проекта .json или текстовое описание стран.")

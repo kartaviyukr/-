@@ -48,6 +48,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
 import com.fantasymap.creator.model.Selection
+import com.fantasymap.creator.model.Tool
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -126,6 +127,13 @@ fun EditorScreen(viewModel: EditorViewModel) {
                             DropdownMenuItem(
                                 text = { Text("Сохранить результат") },
                                 onClick = { menuOpen = false; showExport = true }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("Фрагмент → новая карта") },
+                                onClick = {
+                                    menuOpen = false
+                                    viewModel.tool = Tool.FRAGMENT
+                                }
                             )
                             DropdownMenuItem(
                                 text = { Text("Выровнять границы зон") },
@@ -251,6 +259,17 @@ fun EditorScreen(viewModel: EditorViewModel) {
                 viewModel.renameProject(it)
                 showRenameProject = false
             }
+        )
+    }
+
+    val fragment = viewModel.fragmentRect
+    if (fragment != null) {
+        FragmentDialog(
+            sourceName = project.name,
+            fragmentWidth = fragment.width,
+            fragmentHeight = fragment.height,
+            onCreate = { newName, longSide -> viewModel.createMapFromFragment(newName, longSide) },
+            onDismiss = { viewModel.cancelFragment() }
         )
     }
 

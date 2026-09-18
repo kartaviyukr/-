@@ -9,8 +9,10 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.fantasymap.creator.data.ProjectStore
+import com.fantasymap.creator.geom.FragmentCopy
 import com.fantasymap.creator.geom.PolygonOps
 import com.fantasymap.creator.export.Exporter
+import com.fantasymap.creator.model.BBox
 import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.Country
@@ -77,6 +79,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     /** Точки текущего, ещё не завершённого штриха. */
     val draft = mutableStateListOf<Vec>()
+
+    /** Выделенный прямоугольник фрагмента, ждущий подтверждения. */
+    var fragmentRect by mutableStateOf<BBox?>(null)
+        private set
+
+    private var fragmentStart: Vec? = null
 
     var canUndo by mutableStateOf(false)
         private set
@@ -250,13 +258,13 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     fun toolsFor(currentStage: Stage): List<Tool> = when (currentStage) {
-        Stage.CONTINENTS -> listOf(Tool.PAN, Tool.LAND, Tool.ISLAND, Tool.WATER, Tool.SELECT, Tool.ERASER)
-        Stage.BIOMES -> listOf(Tool.PAN, Tool.BIOME, Tool.SELECT, Tool.ERASER)
-        Stage.NATURE -> listOf(Tool.PAN, Tool.LINE, Tool.MARKER, Tool.LABEL, Tool.SELECT, Tool.ERASER)
-        Stage.SETTLEMENTS -> listOf(Tool.PAN, Tool.MARKER, Tool.ROAD, Tool.LABEL, Tool.SELECT, Tool.ERASER)
+        Stage.CONTINENTS -> listOf(Tool.PAN, Tool.LAND, Tool.ISLAND, Tool.WATER, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
+        Stage.BIOMES -> listOf(Tool.PAN, Tool.BIOME, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
+        Stage.NATURE -> listOf(Tool.PAN, Tool.LINE, Tool.MARKER, Tool.LABEL, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
+        Stage.SETTLEMENTS -> listOf(Tool.PAN, Tool.MARKER, Tool.ROAD, Tool.LABEL, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
         Stage.CAPITALS -> listOf(Tool.PAN, Tool.SELECT, Tool.MARKER)
-        Stage.SPECIAL -> listOf(Tool.PAN, Tool.MARKER, Tool.LABEL, Tool.SELECT, Tool.ERASER)
-        Stage.BORDERS -> listOf(Tool.PAN, Tool.COUNTRY, Tool.SELECT, Tool.ERASER)
+        Stage.SPECIAL -> listOf(Tool.PAN, Tool.MARKER, Tool.LABEL, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
+        Stage.BORDERS -> listOf(Tool.PAN, Tool.COUNTRY, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
         Stage.COUNTRIES -> listOf(Tool.PAN, Tool.SELECT)
     }
 
@@ -278,6 +286,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     fun toolDrawsLine(): Boolean = tool == Tool.LINE || tool == Tool.ROAD
 
+    /** Замкнут ли рисуемый сейчас контур (область или рамка фрагмента). */
+    fun draftClosed(): Boolean = toolDrawsArea() || tool == Tool.FRAGMENT
+
     fun draftColor(): Int = when (tool) {
         Tool.LAND, Tool.ISLAND -> 0xFF8A6A3A.toInt()
         Tool.WATER -> 0xFF2E6E93.toInt()
@@ -285,6 +296,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         Tool.COUNTRY -> project?.countryById(activeCountryId)?.color ?: 0xFFB03A2E.toInt()
         Tool.LINE -> lineType.color
         Tool.ROAD -> roadType.color
+        Tool.FRAGMENT -> 0xFF2E6E93.toInt()
         else -> 0xFF9B2C2C.toInt()
     }
 
@@ -325,6 +337,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (draggingSelection != null) pushHistoryForDrag()
             return
         }
+        if (tool == Tool.FRAGMENT) {
+            fragmentStart = world
+            draft.clear()
+            draft.add(world)
+            return
+        }
         if (!toolDrawsArea() && !toolDrawsLine()) return
         draft.clear()
         draft.add(world)
@@ -334,6 +352,15 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val dragging = draggingSelection
         if (dragging != null) {
             moveSelected(dragging, world)
+            return
+        }
+        val start = fragmentStart
+        if (start != null) {
+            draft.clear()
+            draft.add(Vec(start.x, start.y))
+            draft.add(Vec(world.x, start.y))
+            draft.add(Vec(world.x, world.y))
+            draft.add(Vec(start.x, world.y))
             return
         }
         if (draft.isEmpty()) return
@@ -347,6 +374,25 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             scheduleSave()
             return
         }
+        val start = fragmentStart
+        if (start != null) {
+            val corners = draft.toList()
+            fragmentStart = null
+            draft.clear()
+            if (corners.size < 4) {
+                message = "Обведите прямоугольник вокруг нужного куска карты"
+                return
+            }
+            val bounds = Geometry.bounds(corners)
+            val current = project
+            val minSide = if (current == null) 40f else min(current.worldWidth, current.worldHeight) * 0.03f
+            if (bounds.width < minSide || bounds.height < minSide) {
+                message = "Слишком маленький кусок — выделите область побольше"
+                return
+            }
+            fragmentRect = bounds
+            return
+        }
         if (draft.isEmpty()) return
         val points = draft.toList()
         draft.clear()
@@ -356,6 +402,36 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     fun cancelStroke() {
         draft.clear()
         draggingSelection = null
+        fragmentStart = null
+    }
+
+    /** Отменить выделение фрагмента. */
+    fun cancelFragment() {
+        fragmentRect = null
+        fragmentStart = null
+        draft.clear()
+    }
+
+    /**
+     * Создать отдельную карту из выделенного фрагмента.
+     * Исходная карта не меняется — фрагмент именно копируется.
+     */
+    fun createMapFromFragment(name: String, targetLongSide: Float) {
+        val current = project ?: return
+        val rect = fragmentRect ?: return
+        fragmentRect = null
+        viewModelScope.launch {
+            busy = true
+            saveNow()
+            val fragment = withContext(Dispatchers.Default) {
+                FragmentCopy.create(current, rect, name, targetLongSide)
+            }
+            withContext(Dispatchers.IO) { store.save(fragment) }
+            busy = false
+            refreshProjects()
+            openProject(fragment)
+            message = "Карта «${fragment.name}» создана из фрагмента"
+        }
     }
 
     private fun commitStroke(rawPoints: List<Vec>) {
