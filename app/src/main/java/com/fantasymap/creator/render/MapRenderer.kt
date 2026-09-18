@@ -533,11 +533,20 @@ class MapRenderer {
         val sy = cam.screenY(marker.pos.y)
         val size = 8.5f * u * marker.type.defaultScale * marker.scale
 
-        fill.color = markerFill(marker.type)
         stroke.color = inkColor
         stroke.strokeWidth = max(1f, 1.4f * u)
         stroke.pathEffect = null
-        glyphs.drawGlyph(canvas, marker.type.glyph, sx, sy, size, fill, stroke)
+        if (marker.type.group == MarkerGroup.GOODS) {
+            // Ресурс рисуется кружком-жетоном со знаком внутри.
+            fill.color = darken(markerFill(marker.type), 0.1f)
+            canvas.drawCircle(sx, sy, size * 1.2f, fill)
+            canvas.drawCircle(sx, sy, size * 1.2f, stroke)
+            fill.color = markerFill(marker.type)
+            glyphs.drawGlyph(canvas, marker.type.glyph, sx, sy, size * 0.6f, fill, stroke)
+        } else {
+            fill.color = markerFill(marker.type)
+            glyphs.drawGlyph(canvas, marker.type.glyph, sx, sy, size, fill, stroke)
+        }
 
         if (country != null && marker.type != MarkerType.CAPITAL) {
             fill.color = country.color
@@ -568,6 +577,7 @@ class MapRenderer {
             MarkerGroup.DANGER -> 0xFFE5C1B4.toInt()
             MarkerGroup.WONDER -> 0xFFF0DFA8.toInt()
             MarkerGroup.FAUNA -> 0xFFDCD0BC.toInt()
+            MarkerGroup.GOODS -> 0xFFEFE0BE.toInt()
         }
     }
 

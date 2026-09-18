@@ -87,7 +87,317 @@ class Glyphs {
             Glyph.BONES -> bones(canvas, cx, cy, s, fill, stroke)
             Glyph.FLOATING_ROCK -> floatingRock(canvas, cx, cy, s, fill, stroke)
             Glyph.RUNE_STONE -> runeStone(canvas, cx, cy, s, fill, stroke)
+            Glyph.INGOT -> ingot(canvas, cx, cy, s, fill, stroke)
+            Glyph.COINS -> coins(canvas, cx, cy, s, fill, stroke)
+            Glyph.GEM -> gem(canvas, cx, cy, s, fill, stroke)
+            Glyph.MITHRIL -> mithril(canvas, cx, cy, s, fill, stroke)
+            Glyph.SALT -> saltCube(canvas, cx, cy, s, fill, stroke)
+            Glyph.COAL -> coal(canvas, cx, cy, s, fill, stroke)
+            Glyph.SULFUR -> sulfur(canvas, cx, cy, s, fill, stroke)
+            Glyph.MARBLE -> marble(canvas, cx, cy, s, fill, stroke)
+            Glyph.STONE_BLOCKS -> stoneBlocks(canvas, cx, cy, s, fill, stroke)
+            Glyph.TIMBER -> timber(canvas, cx, cy, s, fill, stroke)
+            Glyph.WHEAT -> wheat(canvas, cx, cy, s, stroke)
+            Glyph.GRAPES -> grapes(canvas, cx, cy, s, fill, stroke)
+            Glyph.FISH -> fish(canvas, cx, cy, s, fill, stroke)
+            Glyph.PEARL -> pearl(canvas, cx, cy, s, fill, stroke)
+            Glyph.AMBER -> amber(canvas, cx, cy, s, fill, stroke)
+            Glyph.FUR -> fur(canvas, cx, cy, s, fill, stroke)
+            Glyph.WOOL -> wool(canvas, cx, cy, s, fill, stroke)
+            Glyph.SILK -> silk(canvas, cx, cy, s, fill, stroke)
+            Glyph.SPICE -> spice(canvas, cx, cy, s, fill, stroke)
+            Glyph.HERBS -> herbs(canvas, cx, cy, s, fill, stroke)
+            Glyph.HORSESHOE -> horseshoe(canvas, cx, cy, s, stroke)
+            Glyph.CATTLE -> cattle(canvas, cx, cy, s, fill, stroke)
+            Glyph.OIL -> oilDrop(canvas, cx, cy, s, fill, stroke)
         }
+    }
+
+    // ---------- знаки ресурсов ----------
+
+    private fun ingot(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.9f, cy + s * 0.55f)
+        path.lineTo(cx - s * 0.6f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.6f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.9f, cy + s * 0.55f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.6f, cy - s * 0.35f, cx + s * 0.6f, cy - s * 0.35f, stroke)
+    }
+
+    private fun coins(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        for (i in 0..2) {
+            val y = cy + s * 0.45f - i * s * 0.36f
+            rect.set(cx - s * 0.75f, y - s * 0.22f, cx + s * 0.75f, y + s * 0.22f)
+            canvas.drawOval(rect, fill)
+            canvas.drawOval(rect, stroke)
+        }
+    }
+
+    private fun gem(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx, cy - s * 0.85f)
+        path.lineTo(cx + s * 0.8f, cy - s * 0.15f)
+        path.lineTo(cx, cy + s * 0.85f)
+        path.lineTo(cx - s * 0.8f, cy - s * 0.15f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.8f, cy - s * 0.15f, cx + s * 0.8f, cy - s * 0.15f, stroke)
+        canvas.drawLine(cx - s * 0.4f, cy - s * 0.15f, cx, cy - s * 0.85f, stroke)
+        canvas.drawLine(cx + s * 0.4f, cy - s * 0.15f, cx, cy - s * 0.85f, stroke)
+    }
+
+    private fun mithril(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        gem(canvas, cx, cy, s * 0.9f, fill, stroke)
+        canvas.drawLine(cx + s * 0.75f, cy - s * 0.95f, cx + s * 1.15f, cy - s * 0.55f, stroke)
+        canvas.drawLine(cx + s * 1.15f, cy - s * 0.95f, cx + s * 0.75f, cy - s * 0.55f, stroke)
+    }
+
+    private fun saltCube(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.7f, cy - s * 0.5f, cx + s * 0.55f, cy + s * 0.75f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.7f, cy - s * 0.5f)
+        path.lineTo(cx - s * 0.4f, cy - s * 0.85f)
+        path.lineTo(cx + s * 0.85f, cy - s * 0.85f)
+        path.lineTo(cx + s * 0.55f, cy - s * 0.5f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx + s * 0.55f, cy - s * 0.5f, cx + s * 0.85f, cy - s * 0.85f, stroke)
+        canvas.drawLine(cx + s * 0.55f, cy + s * 0.75f, cx + s * 0.85f, cy + s * 0.4f, stroke)
+        canvas.drawLine(cx + s * 0.85f, cy - s * 0.85f, cx + s * 0.85f, cy + s * 0.4f, stroke)
+    }
+
+    private fun coal(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        val old = fill.color
+        fill.color = 0xFF3A3632.toInt()
+        path.reset()
+        path.moveTo(cx - s * 0.85f, cy + s * 0.5f)
+        path.lineTo(cx - s * 0.5f, cy - s * 0.45f)
+        path.lineTo(cx + s * 0.25f, cy - s * 0.75f)
+        path.lineTo(cx + s * 0.85f, cy - s * 0.05f)
+        path.lineTo(cx + s * 0.5f, cy + s * 0.65f)
+        path.close()
+        canvas.drawPath(path, fill)
+        fill.color = old
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.3f, cy + s * 0.35f, cx + s * 0.2f, cy - s * 0.25f, stroke)
+    }
+
+    private fun sulfur(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.75f, cy + s * 0.65f)
+        path.lineTo(cx - s * 0.25f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.25f, cy + s * 0.65f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        path.reset()
+        path.moveTo(cx + s * 0.15f, cy + s * 0.65f)
+        path.lineTo(cx + s * 0.55f, cy - s * 0.05f)
+        path.lineTo(cx + s * 0.9f, cy + s * 0.65f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.1f, cy - s * 0.65f, cx + s * 0.15f, cy - s * 1.05f, stroke)
+        canvas.drawLine(cx + s * 0.45f, cy - s * 0.45f, cx + s * 0.7f, cy - s * 0.85f, stroke)
+    }
+
+    private fun marble(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.5f, cy - s * 0.7f, cx + s * 0.5f, cy + s * 0.7f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 0.75f, cy + s * 0.7f, cx + s * 0.75f, cy + s)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 0.75f, cy - s, cx + s * 0.75f, cy - s * 0.7f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawLine(cx - s * 0.18f, cy - s * 0.7f, cx - s * 0.18f, cy + s * 0.7f, stroke)
+        canvas.drawLine(cx + s * 0.18f, cy - s * 0.7f, cx + s * 0.18f, cy + s * 0.7f, stroke)
+    }
+
+    private fun stoneBlocks(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.85f, cy + s * 0.05f, cx + s * 0.05f, cy + s * 0.7f)
+        canvas.drawRect(rect, fill); canvas.drawRect(rect, stroke)
+        rect.set(cx + s * 0.05f, cy + s * 0.05f, cx + s * 0.85f, cy + s * 0.7f)
+        canvas.drawRect(rect, fill); canvas.drawRect(rect, stroke)
+        rect.set(cx - s * 0.5f, cy - s * 0.6f, cx + s * 0.45f, cy + s * 0.05f)
+        canvas.drawRect(rect, fill); canvas.drawRect(rect, stroke)
+    }
+
+    private fun timber(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawCircle(cx - s * 0.45f, cy + s * 0.4f, s * 0.42f, fill)
+        canvas.drawCircle(cx - s * 0.45f, cy + s * 0.4f, s * 0.42f, stroke)
+        canvas.drawCircle(cx + s * 0.45f, cy + s * 0.4f, s * 0.42f, fill)
+        canvas.drawCircle(cx + s * 0.45f, cy + s * 0.4f, s * 0.42f, stroke)
+        canvas.drawCircle(cx, cy - s * 0.35f, s * 0.42f, fill)
+        canvas.drawCircle(cx, cy - s * 0.35f, s * 0.42f, stroke)
+        canvas.drawCircle(cx, cy - s * 0.35f, s * 0.14f, stroke)
+    }
+
+    private fun wheat(canvas: Canvas, cx: Float, cy: Float, s: Float, stroke: Paint) {
+        canvas.drawLine(cx, cy + s * 0.9f, cx, cy - s * 0.9f, stroke)
+        for (i in 0..3) {
+            val y = cy - s * 0.75f + i * s * 0.4f
+            canvas.drawLine(cx, y, cx - s * 0.6f, y + s * 0.3f, stroke)
+            canvas.drawLine(cx, y, cx + s * 0.6f, y + s * 0.3f, stroke)
+        }
+    }
+
+    private fun grapes(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        val positions = arrayOf(
+            floatArrayOf(-0.42f, 0.05f), floatArrayOf(0.42f, 0.05f), floatArrayOf(0f, 0.05f),
+            floatArrayOf(-0.22f, 0.5f), floatArrayOf(0.22f, 0.5f), floatArrayOf(0f, 0.92f)
+        )
+        for (position in positions) {
+            canvas.drawCircle(cx + position[0] * s, cy + position[1] * s, s * 0.26f, fill)
+            canvas.drawCircle(cx + position[0] * s, cy + position[1] * s, s * 0.26f, stroke)
+        }
+        canvas.drawLine(cx, cy - s * 0.2f, cx, cy - s * 0.85f, stroke)
+        canvas.drawLine(cx, cy - s * 0.85f, cx + s * 0.55f, cy - s * 1.05f, stroke)
+    }
+
+    private fun fish(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.5f, cy)
+        path.quadTo(cx + s * 0.1f, cy - s * 0.75f, cx + s * 0.75f, cy)
+        path.quadTo(cx + s * 0.1f, cy + s * 0.75f, cx - s * 0.5f, cy)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.5f, cy)
+        path.lineTo(cx - s, cy - s * 0.45f)
+        path.lineTo(cx - s, cy + s * 0.45f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawCircle(cx + s * 0.42f, cy - s * 0.1f, s * 0.09f, stroke)
+    }
+
+    private fun pearl(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.95f, cy - s * 0.55f, cx + s * 0.95f, cy + s * 0.95f)
+        canvas.drawArc(rect, 180f, 180f, false, fill)
+        canvas.drawArc(rect, 180f, 180f, false, stroke)
+        canvas.drawLine(cx - s * 0.95f, cy + s * 0.2f, cx + s * 0.95f, cy + s * 0.2f, stroke)
+        canvas.drawCircle(cx, cy - s * 0.12f, s * 0.3f, fill)
+        canvas.drawCircle(cx, cy - s * 0.12f, s * 0.3f, stroke)
+    }
+
+    private fun amber(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx, cy - s * 0.95f)
+        path.quadTo(cx + s * 0.85f, cy + s * 0.1f, cx, cy + s * 0.9f)
+        path.quadTo(cx - s * 0.85f, cy + s * 0.1f, cx, cy - s * 0.95f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.15f, cy + s * 0.05f, cx + s * 0.2f, cy + s * 0.05f, stroke)
+        canvas.drawLine(cx + s * 0.02f, cy - s * 0.2f, cx + s * 0.02f, cy + s * 0.3f, stroke)
+    }
+
+    private fun fur(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.55f, cy - s * 0.85f)
+        path.lineTo(cx - s * 0.95f, cy - s * 0.35f)
+        path.lineTo(cx - s * 0.6f, cy + s * 0.15f)
+        path.lineTo(cx - s * 0.75f, cy + s * 0.9f)
+        path.lineTo(cx + s * 0.75f, cy + s * 0.9f)
+        path.lineTo(cx + s * 0.6f, cy + s * 0.15f)
+        path.lineTo(cx + s * 0.95f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.55f, cy - s * 0.85f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+    }
+
+    private fun wool(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawCircle(cx - s * 0.35f, cy - s * 0.1f, s * 0.45f, fill)
+        canvas.drawCircle(cx + s * 0.35f, cy - s * 0.1f, s * 0.45f, fill)
+        canvas.drawCircle(cx, cy + s * 0.3f, s * 0.5f, fill)
+        canvas.drawCircle(cx - s * 0.35f, cy - s * 0.1f, s * 0.45f, stroke)
+        canvas.drawCircle(cx + s * 0.35f, cy - s * 0.1f, s * 0.45f, stroke)
+        canvas.drawCircle(cx, cy + s * 0.3f, s * 0.5f, stroke)
+    }
+
+    private fun silk(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.45f, cy - s * 0.7f, cx + s * 0.45f, cy + s * 0.7f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawLine(cx - s * 0.75f, cy - s * 0.7f, cx + s * 0.75f, cy - s * 0.7f, stroke)
+        canvas.drawLine(cx - s * 0.75f, cy + s * 0.7f, cx + s * 0.75f, cy + s * 0.7f, stroke)
+        canvas.drawLine(cx - s * 0.45f, cy - s * 0.25f, cx + s * 0.45f, cy - s * 0.05f, stroke)
+        canvas.drawLine(cx - s * 0.45f, cy + s * 0.15f, cx + s * 0.45f, cy + s * 0.35f, stroke)
+    }
+
+    private fun spice(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.9f, cy + s * 0.7f)
+        path.quadTo(cx, cy - s * 0.95f, cx + s * 0.9f, cy + s * 0.7f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawPoint(cx - s * 0.3f, cy + s * 0.3f, stroke)
+        canvas.drawPoint(cx + s * 0.25f, cy + s * 0.45f, stroke)
+        canvas.drawPoint(cx, cy - s * 0.05f, stroke)
+    }
+
+    private fun herbs(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx, cy + s * 0.9f, cx, cy - s * 0.4f, stroke)
+        fun leaf(dx: Float, dy: Float) {
+            path.reset()
+            path.moveTo(cx, cy + dy)
+            path.quadTo(cx + dx * 0.6f, cy + dy - s * 0.55f, cx + dx, cy + dy - s * 0.15f)
+            path.quadTo(cx + dx * 0.55f, cy + dy + s * 0.2f, cx, cy + dy)
+            path.close()
+            canvas.drawPath(path, fill)
+            canvas.drawPath(path, stroke)
+        }
+        leaf(-s * 0.85f, s * 0.35f)
+        leaf(s * 0.85f, s * 0.35f)
+        leaf(-s * 0.7f, -s * 0.3f)
+        leaf(s * 0.7f, -s * 0.3f)
+    }
+
+    private fun horseshoe(canvas: Canvas, cx: Float, cy: Float, s: Float, stroke: Paint) {
+        rect.set(cx - s * 0.8f, cy - s * 0.9f, cx + s * 0.8f, cy + s * 0.7f)
+        canvas.drawArc(rect, 150f, 240f, false, stroke)
+        canvas.drawLine(cx - s * 0.7f, cy + s * 0.4f, cx - s * 0.55f, cy + s * 0.85f, stroke)
+        canvas.drawLine(cx + s * 0.7f, cy + s * 0.4f, cx + s * 0.55f, cy + s * 0.85f, stroke)
+    }
+
+    private fun cattle(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawCircle(cx, cy + s * 0.15f, s * 0.6f, fill)
+        canvas.drawCircle(cx, cy + s * 0.15f, s * 0.6f, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.5f, cy - s * 0.25f)
+        path.quadTo(cx - s * 1.1f, cy - s * 0.6f, cx - s * 0.85f, cy - s * 1.0f)
+        canvas.drawPath(path, stroke)
+        path.reset()
+        path.moveTo(cx + s * 0.5f, cy - s * 0.25f)
+        path.quadTo(cx + s * 1.1f, cy - s * 0.6f, cx + s * 0.85f, cy - s * 1.0f)
+        canvas.drawPath(path, stroke)
+        canvas.drawCircle(cx - s * 0.2f, cy + s * 0.05f, s * 0.08f, stroke)
+        canvas.drawCircle(cx + s * 0.2f, cy + s * 0.05f, s * 0.08f, stroke)
+    }
+
+    private fun oilDrop(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx, cy - s * 0.95f)
+        path.quadTo(cx + s * 0.9f, cy + s * 0.15f, cx, cy + s * 0.9f)
+        path.quadTo(cx - s * 0.9f, cy + s * 0.15f, cx, cy - s * 0.95f)
+        path.close()
+        val old = fill.color
+        fill.color = 0xFF4A3F33.toInt()
+        canvas.drawPath(path, fill)
+        fill.color = old
+        canvas.drawPath(path, stroke)
     }
 
     // ---------- новые значки ----------

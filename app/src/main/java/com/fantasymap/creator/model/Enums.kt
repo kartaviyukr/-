@@ -155,7 +155,10 @@ enum class Glyph {
     WHIRLPOOL, ROCK, TREE, MINE, FARM, MILL, FORGE, MONSTER, TREASURE, ANOMALY,
     DRAGON, BEAST, NEST, CRYSTAL, MUSHROOM, DEAD_TREE, FLOWER, BEACON, STATUE,
     WELL, AIRSHIP, EYE, SPIRE, BANNER, SWORD, BOOK, POTION, CROWN, OBSERVATORY,
-    ARCH, CAULDRON, TOTEM, BONES, FLOATING_ROCK, RUNE_STONE
+    ARCH, CAULDRON, TOTEM, BONES, FLOATING_ROCK, RUNE_STONE,
+    INGOT, COINS, GEM, SALT, COAL, MARBLE, TIMBER, WHEAT, FISH, GRAPES, WOOL,
+    HORSESHOE, CATTLE, SPICE, SILK, FUR, AMBER, PEARL, OIL, SULFUR, HERBS,
+    STONE_BLOCKS, MITHRIL
 }
 
 enum class MarkerGroup(val title: String) {
@@ -170,7 +173,8 @@ enum class MarkerGroup(val title: String) {
     RESOURCE("Ресурсы"),
     DANGER("Опасности и легенды"),
     WONDER("Чудеса света"),
-    FAUNA("Звери и гнёзда")
+    FAUNA("Звери и гнёзда"),
+    GOODS("Ресурсы и товары")
 }
 
 /** Все виды объектов фэнтезийного мира, которые можно поставить на карту. */
@@ -431,7 +435,51 @@ enum class MarkerType(
     SEA_SERPENT("Воды морского змея", MarkerGroup.FAUNA, Glyph.WHIRLPOOL),
     GIANT_EAGLE_NEST("Гнездо орлов-исполинов", MarkerGroup.FAUNA, Glyph.NEST),
     HERD_GROUNDS("Пастбища диких стад", MarkerGroup.FAUNA, Glyph.BEAST, 0.95f),
-    SPIRIT_BEAST("Обитель духа-зверя", MarkerGroup.FAUNA, Glyph.EYE, 1.1f);
+    SPIRIT_BEAST("Обитель духа-зверя", MarkerGroup.FAUNA, Glyph.EYE, 1.1f),
+
+    // Ресурсы и товары — знаки того, что здесь добывают
+    RES_IRON("Железо", MarkerGroup.GOODS, Glyph.INGOT, 0.85f),
+    RES_COPPER("Медь", MarkerGroup.GOODS, Glyph.INGOT, 0.85f),
+    RES_TIN("Олово", MarkerGroup.GOODS, Glyph.INGOT, 0.85f),
+    RES_GOLD("Золото", MarkerGroup.GOODS, Glyph.COINS, 0.85f),
+    RES_SILVER("Серебро", MarkerGroup.GOODS, Glyph.COINS, 0.85f),
+    RES_MITHRIL("Мифрил", MarkerGroup.GOODS, Glyph.MITHRIL, 0.9f),
+    RES_GEMS("Самоцветы", MarkerGroup.GOODS, Glyph.GEM, 0.85f),
+    RES_CRYSTALS("Кристаллы силы", MarkerGroup.GOODS, Glyph.GEM, 0.85f),
+    RES_SALT("Соль", MarkerGroup.GOODS, Glyph.SALT, 0.85f),
+    RES_COAL("Уголь", MarkerGroup.GOODS, Glyph.COAL, 0.85f),
+    RES_SULFUR("Сера", MarkerGroup.GOODS, Glyph.SULFUR, 0.85f),
+    RES_OBSIDIAN("Обсидиан", MarkerGroup.GOODS, Glyph.COAL, 0.85f),
+    RES_MARBLE("Мрамор", MarkerGroup.GOODS, Glyph.MARBLE, 0.85f),
+    RES_GRANITE("Гранит", MarkerGroup.GOODS, Glyph.STONE_BLOCKS, 0.85f),
+    RES_CLAY("Глина", MarkerGroup.GOODS, Glyph.STONE_BLOCKS, 0.85f),
+    RES_GLASS_SAND("Стекольный песок", MarkerGroup.GOODS, Glyph.SALT, 0.85f),
+    RES_TIMBER("Корабельный лес", MarkerGroup.GOODS, Glyph.TIMBER, 0.85f),
+    RES_GRAIN("Зерно", MarkerGroup.GOODS, Glyph.WHEAT, 0.85f),
+    RES_RICE("Рис", MarkerGroup.GOODS, Glyph.WHEAT, 0.85f),
+    RES_FRUIT("Фрукты", MarkerGroup.GOODS, Glyph.GRAPES, 0.85f),
+    RES_WINE("Вино", MarkerGroup.GOODS, Glyph.GRAPES, 0.85f),
+    RES_OLIVES("Оливки", MarkerGroup.GOODS, Glyph.GRAPES, 0.85f),
+    RES_HONEY("Мёд", MarkerGroup.GOODS, Glyph.HERBS, 0.85f),
+    RES_FISH("Рыба", MarkerGroup.GOODS, Glyph.FISH, 0.85f),
+    RES_WHALE("Китовый промысел", MarkerGroup.GOODS, Glyph.FISH, 0.9f),
+    RES_PEARLS("Жемчуг", MarkerGroup.GOODS, Glyph.PEARL, 0.85f),
+    RES_AMBER("Янтарь", MarkerGroup.GOODS, Glyph.AMBER, 0.85f),
+    RES_FURS("Пушнина", MarkerGroup.GOODS, Glyph.FUR, 0.85f),
+    RES_LEATHER("Кожа", MarkerGroup.GOODS, Glyph.FUR, 0.85f),
+    RES_WOOL("Шерсть", MarkerGroup.GOODS, Glyph.WOOL, 0.85f),
+    RES_COTTON("Хлопок", MarkerGroup.GOODS, Glyph.WOOL, 0.85f),
+    RES_SILK("Шёлк", MarkerGroup.GOODS, Glyph.SILK, 0.85f),
+    RES_DYES("Красители", MarkerGroup.GOODS, Glyph.SPICE, 0.85f),
+    RES_SPICES("Пряности", MarkerGroup.GOODS, Glyph.SPICE, 0.85f),
+    RES_INCENSE("Благовония", MarkerGroup.GOODS, Glyph.SPICE, 0.85f),
+    RES_HERBS("Целебные травы", MarkerGroup.GOODS, Glyph.HERBS, 0.85f),
+    RES_REAGENTS("Магические реагенты", MarkerGroup.GOODS, Glyph.HERBS, 0.9f),
+    RES_HORSES("Кони", MarkerGroup.GOODS, Glyph.HORSESHOE, 0.85f),
+    RES_CATTLE("Скот", MarkerGroup.GOODS, Glyph.CATTLE, 0.85f),
+    RES_IVORY("Бивни", MarkerGroup.GOODS, Glyph.CATTLE, 0.85f),
+    RES_TAR("Смола", MarkerGroup.GOODS, Glyph.OIL, 0.85f),
+    RES_OIL("Масло", MarkerGroup.GOODS, Glyph.OIL, 0.85f);
 
     val isSettlement: Boolean
         get() = group == MarkerGroup.SETTLEMENT
