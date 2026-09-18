@@ -429,22 +429,84 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
      * Создать отдельную карту из выделенного фрагмента.
      * Исходная карта не меняется — фрагмент именно копируется.
      */
-    fun createMapFromFragment(name: String, targetLongSide: Float) {
+    fun createMapFromFragment(name: String, targetLongSide: Float, placeLink: Boolean) {
         val current = project ?: return
         val rect = fragmentRect ?: return
         fragmentRect = null
         viewModelScope.launch {
             busy = true
-            saveNow()
             val fragment = withContext(Dispatchers.Default) {
                 FragmentCopy.create(current, rect, name, targetLongSide)
             }
-            withContext(Dispatchers.IO) { store.save(fragment) }
+            // На исходной карте можно оставить метку, ведущую на новую карту.
+            val source = if (placeLink) {
+                current.copy(
+                    markers = current.markers + Marker(
+                        type = MarkerType.MAP_LINK,
+                        name = fragment.name,
+                        pos = Vec(rect.centerX, rect.centerY),
+                        linkedProjectId = fragment.id
+                    ),
+                    updatedAt = System.currentTimeMillis()
+                )
+            } else {
+                current
+            }
+            withContext(Dispatchers.IO) {
+                store.save(source)
+                store.save(fragment)
+            }
             busy = false
             refreshProjects()
             openProject(fragment)
             message = "Карта «${fragment.name}» создана из фрагмента"
         }
+    }
+
+    /** Вставить другую карту в выделенную область этой карты. */
+    fun insertMapIntoArea(sourceId: String) {
+        val current = project ?: return
+        val rect = fragmentRect ?: return
+        fragmentRect = null
+        viewModelScope.launch {
+            busy = true
+            val source = withContext(Dispatchers.IO) { store.load(sourceId) }
+            if (source == null) {
+                busy = false
+                message = "Не удалось открыть карту для вставки"
+                return@launch
+            }
+            val merged = withContext(Dispatchers.Default) {
+                FragmentCopy.insertInto(current, source, rect)
+            }
+            busy = false
+            edit { merged }
+            message = "Карта «${source.name}» вставлена в область"
+        }
+    }
+
+    /** Привязать к объекту подробную карту или снять привязку. */
+    fun setMarkerLink(markerId: String, projectId: String?) {
+        edit { state ->
+            state.copy(
+                markers = state.markers.map {
+                    if (it.id == markerId) it.copy(linkedProjectId = projectId) else it
+                }
+            )
+        }
+    }
+
+    /** Перейти на карту, связанную с объектом. */
+    fun openLinkedMap(markerId: String) {
+        val current = project ?: return
+        val marker = current.markers.firstOrNull { it.id == markerId } ?: return
+        val target = marker.linkedProjectId
+        if (target == null) {
+            message = "К объекту не привязана карта"
+            return
+        }
+        saveNow()
+        openProject(target)
     }
 
     private fun commitStroke(rawPoints: List<Vec>) {

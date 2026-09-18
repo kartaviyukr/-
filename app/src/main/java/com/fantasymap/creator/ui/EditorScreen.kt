@@ -402,6 +402,15 @@ private fun SelectionCard(
                     )
                 }
             }
+            val linked = (selection as? Selection.MarkerSel)?.let { sel ->
+                project.markers.firstOrNull { it.id == sel.id }?.linkedProjectId
+            }
+            if (linked != null) {
+                TextButton(
+                    onClick = { viewModel.openLinkedMap((selection as Selection.MarkerSel).id) },
+                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                ) { Text("→ карта") }
+            }
             if (selection is Selection.Biome) {
                 TextButton(
                     onClick = { viewModel.raiseSelectedZone() },

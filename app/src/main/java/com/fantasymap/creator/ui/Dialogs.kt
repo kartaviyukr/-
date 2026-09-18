@@ -168,6 +168,37 @@ fun MarkerEditDialog(
                 )
 
                 Spacer(Modifier.height(10.dp))
+                Text("Подробная карта", style = MaterialTheme.typography.labelLarge)
+                Text(
+                    "С объекта можно перейти на отдельную карту — получится атлас.",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    item {
+                        FilterChip(
+                            selected = draft.linkedProjectId == null,
+                            onClick = { draft = draft.copy(linkedProjectId = null) },
+                            label = { Text("нет") }
+                        )
+                    }
+                    items(viewModel.projects.filter { it.id != viewModel.project?.id }) { summary ->
+                        FilterChip(
+                            selected = draft.linkedProjectId == summary.id,
+                            onClick = { draft = draft.copy(linkedProjectId = summary.id) },
+                            label = { Text(summary.name) }
+                        )
+                    }
+                }
+                if (draft.linkedProjectId != null) {
+                    TextButton(onClick = {
+                        viewModel.updateMarker(draft)
+                        viewModel.openLinkedMap(draft.id)
+                        onDismiss()
+                    }) { Text("→ Открыть связанную карту") }
+                }
+
+                Spacer(Modifier.height(10.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text("Подпись на карте", Modifier.weight(1f))
                     Switch(
@@ -501,6 +532,255 @@ fun ExportDialog(
     )
 }
 
+/** Что сделать с выделенной областью карты. */
+@Composable
+fun AreaDialog(
+    viewModel: EditorViewModel,
+    sourceName: String,
+    fragmentWidth: Float,
+    fragmentHeight: Float,
+    onDismiss: () -> Unit
+) {
+    var mode by remember { mutableIntStateOf(0) }
+    var islands by remember { mutableStateOf(false) }
+    var roughness by remember { mutableFloatStateOf(0.55f) }
+    var riverCount by remember { mutableFloatStateOf(5f) }
+    var replaceZones by remember { mutableStateOf(true) }
+
+    if (mode == 1) {
+        FragmentDialog(
+            sourceName = sourceName,
+            fragmentWidth = fragmentWidth,
+            fragmentHeight = fragmentHeight,
+            onCreate = { name, longSide, placeLink ->
+                viewModel.createMapFromFragment(name, longSide, placeLink)
+            },
+            onDismiss = onDismiss
+        )
+        return
+    }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Выделенная область") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 440.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    "Кусок ${fragmentWidth.toInt()} × ${fragmentHeight.toInt()}. Что с ним сделать?",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Spacer(Modifier.height(8.dp))
+                when (mode) {
+                    2 -> {
+                        Text("Побережье", style = MaterialTheme.typography.labelLarge)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            RadioButton(selected = !islands, onClick = { islands = false })
+                            Text("Один материк", Modifier.weight(1f))
+                            RadioButton(selected = islands, onClick = { islands = true })
+                            Text("Острова")
+                        }
+                        Text(
+                            "Изрезанность берега: ${(roughness * 100).toInt()}%",
+                            style = MaterialTheme.typography.labelSmall
+                        )
+                        Slider(
+                            value = roughness,
+                            onValueChange = { roughness = it },
+                            valueRange = 0.1f..1f
+                        )
+                        Text(
+                            "Берег рисуется случайно — не понравится, отмените стрелкой ↶ и нажмите ещё раз.",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        TextButton(onClick = { viewModel.generateCoastline(islands, roughness) }) {
+                            Text("Нарисовать берег")
+                        }
+                    }
+
+                    3 -> {
+                        Text("Реки", style = MaterialTheme.typography.labelLarge)
+                        Text(
+                            "Истоки берутся у горных хребтов и вершин внутри области, " +
+                                "реки текут к ближайшей воде.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Text(
+                            "Сколько рек: ${riverCount.toInt()}",
+                            style = MaterialTheme.typography.labelSmall
+                        )
+                        Slider(
+                            value = riverCount,
+                            onValueChange = { riverCount = it },
+                            valueRange = 1f..12f
+                        )
+                        TextButton(onClick = { viewModel.generateRivers(riverCount.toInt()) }) {
+                            Text("Провести реки")
+                        }
+                    }
+
+                    4 -> {
+                        Text("Природные зоны", style = MaterialTheme.typography.labelLarge)
+                        Text(
+                            "Зоны раскладываются по широте: у полюсов льды и тундра, " +
+                                "в средних широтах леса и степи, у тропиков пустыни и саванна, " +
+                                "у экватора джунгли. Вдоль хребтов ложатся горы.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text("Заменить зоны в области", Modifier.weight(1f))
+                            Switch(checked = replaceZones, onCheckedChange = { replaceZones = it })
+                        }
+                        TextButton(onClick = { viewModel.generateBiomeBands(replaceZones) }) {
+                            Text("Разложить зоны")
+                        }
+                    }
+
+                    5 -> {
+                        Text("Вставить другую карту", style = MaterialTheme.typography.labelLarge)
+                        Text(
+                            "Выбранная карта впишется в выделенную область целиком — " +
+                                "со своей сушей, зонами, объектами и странами.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Spacer(Modifier.height(6.dp))
+                        val others = viewModel.projects.filter { it.id != viewModel.project?.id }
+                        if (others.isEmpty()) {
+                            Text("Других карт пока нет.", style = MaterialTheme.typography.bodyMedium)
+                        }
+                        others.forEach { summary ->
+                            TextButton(onClick = { viewModel.insertMapIntoArea(summary.id) }) {
+                                Text("${summary.name} · объектов ${summary.markerCount}")
+                            }
+                        }
+                    }
+
+                    else -> {
+                        TextButton(onClick = { mode = 1 }) { Text("⧉  Скопировать в новую карту") }
+                        TextButton(onClick = { mode = 5 }) { Text("⊞  Вставить сюда другую карту") }
+                        TextButton(onClick = { mode = 2 }) { Text("🗺  Сгенерировать побережье") }
+                        TextButton(onClick = { mode = 4 }) { Text("🖌  Разложить природные зоны") }
+                        TextButton(onClick = { mode = 3 }) { Text("〰  Провести реки от гор к морю") }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            if (mode == 0) {
+                TextButton(onClick = onDismiss) { Text("Закрыть") }
+            } else {
+                TextButton(onClick = { mode = 0 }) { Text("Назад") }
+            }
+        },
+        dismissButton = {
+            if (mode != 0) TextButton(onClick = onDismiss) { Text("Отмена") }
+        }
+    )
+}
+
+/**
+ * Создание отдельной карты из выделенного куска.
+ * Исходная карта остаётся нетронутой — фрагмент копируется.
+ */
+@Composable
+fun FragmentDialog(
+    sourceName: String,
+    fragmentWidth: Float,
+    fragmentHeight: Float,
+    onCreate: (String, Float, Boolean) -> Unit,
+    onDismiss: () -> Unit
+) {
+    var name by remember { mutableStateOf("$sourceName — фрагмент") }
+    var longSide by remember { mutableFloatStateOf(2400f) }
+    var placeLink by remember { mutableStateOf(true) }
+    val currentLongSide = maxOf(fragmentWidth, fragmentHeight, 1f)
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Новая карта из фрагмента") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 420.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    "Выделенный кусок ${fragmentWidth.toInt()} × ${fragmentHeight.toInt()} " +
+                        "будет скопирован в отдельную карту и растянут на весь её размер. " +
+                        "Эта карта останется без изменений.",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Spacer(Modifier.height(12.dp))
+                OutlinedTextField(
+                    value = name,
+                    onValueChange = { name = it },
+                    label = { Text("Название новой карты") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(8.dp))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(Modifier.weight(1f)) {
+                        Text("Оставить здесь метку-переход")
+                        Text(
+                            "на этой карте появится значок, с которого можно перейти на новую",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    Switch(checked = placeLink, onCheckedChange = { placeLink = it })
+                }
+                Spacer(Modifier.height(8.dp))
+                Text("Размер новой карты", style = MaterialTheme.typography.labelLarge)
+                FRAGMENT_SIZES.forEach { size ->
+                    val zoom = size / currentLongSide
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { longSide = size }
+                            .padding(vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(selected = longSide == size, onClick = { longSide = size })
+                        Spacer(Modifier.width(4.dp))
+                        Column {
+                            Text(
+                                "${size.toInt()} по длинной стороне",
+                                style = MaterialTheme.typography.bodyMedium
+                            )
+                            Text(
+                                "подробнее в ${formatZoom(zoom)} раза",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = { onCreate(name.trim(), longSide, placeLink) }) {
+                Text("Создать карту")
+            }
+        },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Отмена") } }
+    )
+}
+
+private fun formatZoom(zoom: Float): String {
+    val rounded = (zoom * 10f).toInt() / 10f
+    return if (rounded >= 10f) rounded.toInt().toString() else rounded.toString()
+}
+
+private val FRAGMENT_SIZES = listOf(1600f, 2400f, 3200f, 4800f, 6400f)
+
 /** Краткая справка по работе с картой. */
 @Composable
 fun HelpDialog(onDismiss: () -> Unit) {
@@ -535,11 +815,24 @@ fun HelpDialog(onDismiss: () -> Unit) {
                 Text("7. Границы стран — обведите территорию; граница может идти и по воде.")
                 Text("8. Информация о странах — заполните анкету каждого государства.")
                 Spacer(Modifier.height(10.dp))
-                Text("Фрагмент → новая карта", fontWeight = FontWeight.Bold)
-                Text("Инструмент «⧉» (и пункт меню ⋮) позволяет обвести прямоугольником " +
-                    "кусок карты и скопировать его в отдельную карту, растянув на весь лист. " +
-                    "Исходная карта при этом не меняется — удобно, чтобы проработать " +
-                    "один материк или область подробнее.")
+                Text("Выделенная область «⧉»", fontWeight = FontWeight.Bold)
+                Text("Обведите прямоугольником кусок карты — откроется меню из пяти действий:")
+                Text("• скопировать кусок в отдельную карту и заполнять её подробнее;")
+                Text("• вставить сюда другую карту целиком;")
+                Text("• сгенерировать рваное побережье — материк или острова;")
+                Text("• разложить природные зоны по широте, с горами вдоль хребтов;")
+                Text("• провести реки от гор к ближайшей воде.")
+                Text("Любую генерацию можно отменить стрелкой ↶ и повторить.")
+                Spacer(Modifier.height(10.dp))
+                Text("Атлас: переходы между картами", fontWeight = FontWeight.Bold)
+                Text("В карточке объекта можно выбрать «Подробная карта» — и с этого города " +
+                    "или области получится перейти на её отдельную карту. У связанного " +
+                    "объекта в углу появляется закладка, а в карточке выбора — кнопка «→ карта».")
+                Spacer(Modifier.height(10.dp))
+                Text("Слои и вид карты", fontWeight = FontWeight.Bold)
+                Text("Меню ⋮ → «Слои карты»: глаз прячет слой, замок защищает его от " +
+                    "выбора и стирания. Меню ⋮ → «Вид карты»: готовые стили — пергамент, " +
+                    "гравюра, цветная, тёмное фэнтези, набросок, с кнопкой «вернуть как было».")
                 Spacer(Modifier.height(10.dp))
                 Text("Сохранение", fontWeight = FontWeight.Bold)
                 Text("Карта сохраняется автоматически. Через меню «⋮» её можно выгрузить как картинку PNG, файл проекта .json или текстовое описание стран.")

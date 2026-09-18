@@ -548,6 +548,18 @@ class MapRenderer {
             glyphs.drawGlyph(canvas, marker.type.glyph, sx, sy, size, fill, stroke)
         }
 
+        if (marker.linkedProjectId != null) {
+            // Уголок-закладка: с этого объекта есть переход на подробную карту.
+            fill.color = 0xFF3D6E8E.toInt()
+            path.reset()
+            path.moveTo(sx - size * 1.45f, sy - size * 1.45f)
+            path.lineTo(sx - size * 0.55f, sy - size * 1.45f)
+            path.lineTo(sx - size * 1.0f, sy - size * 0.85f)
+            path.close()
+            canvas.drawPath(path, fill)
+            canvas.drawPath(path, stroke)
+        }
+
         if (country != null && marker.type != MarkerType.CAPITAL) {
             fill.color = country.color
             canvas.drawCircle(sx + size * 1.35f, sy - size * 1.15f, max(2f, 2.6f * u), fill)
@@ -578,6 +590,7 @@ class MapRenderer {
             MarkerGroup.WONDER -> 0xFFF0DFA8.toInt()
             MarkerGroup.FAUNA -> 0xFFDCD0BC.toInt()
             MarkerGroup.GOODS -> 0xFFEFE0BE.toInt()
+            MarkerGroup.ATLAS -> 0xFFCFE0EC.toInt()
         }
     }
 

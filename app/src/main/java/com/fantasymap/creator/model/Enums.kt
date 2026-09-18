@@ -174,7 +174,8 @@ enum class MarkerGroup(val title: String) {
     DANGER("Опасности и легенды"),
     WONDER("Чудеса света"),
     FAUNA("Звери и гнёзда"),
-    GOODS("Ресурсы и товары")
+    GOODS("Ресурсы и товары"),
+    ATLAS("Переходы между картами")
 }
 
 /** Все виды объектов фэнтезийного мира, которые можно поставить на карту. */
@@ -479,7 +480,10 @@ enum class MarkerType(
     RES_CATTLE("Скот", MarkerGroup.GOODS, Glyph.CATTLE, 0.85f),
     RES_IVORY("Бивни", MarkerGroup.GOODS, Glyph.CATTLE, 0.85f),
     RES_TAR("Смола", MarkerGroup.GOODS, Glyph.OIL, 0.85f),
-    RES_OIL("Масло", MarkerGroup.GOODS, Glyph.OIL, 0.85f);
+    RES_OIL("Масло", MarkerGroup.GOODS, Glyph.OIL, 0.85f),
+
+    // Переход на другую карту
+    MAP_LINK("Подробная карта", MarkerGroup.ATLAS, Glyph.BOOK, 1.05f);
 
     val isSettlement: Boolean
         get() = group == MarkerGroup.SETTLEMENT

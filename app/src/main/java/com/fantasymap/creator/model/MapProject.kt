@@ -79,7 +79,9 @@ data class Marker(
     val population: String = "",
     val ruler: String = "",
     val scale: Float = 1f,
-    val showLabel: Boolean = true
+    val showLabel: Boolean = true,
+    /** Карта, на которую ведёт этот объект: тапнул — перешёл к подробной карте. */
+    val linkedProjectId: String? = null
 )
 
 /**

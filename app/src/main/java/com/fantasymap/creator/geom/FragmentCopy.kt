@@ -13,7 +13,9 @@ import com.fantasymap.creator.model.Marker
 import com.fantasymap.creator.model.Road
 import com.fantasymap.creator.model.Vec
 import com.fantasymap.creator.model.WaterBody
+import java.util.UUID
 import kotlin.math.max
+import kotlin.math.min
 
 /**
  * Копирование куска карты в отдельную карту.
@@ -26,6 +28,63 @@ object FragmentCopy {
 
     /** Наименьшая площадь обрезка, который стоит переносить (в единицах исходной карты). */
     private const val MIN_PIECE_AREA = 6f
+
+    /**
+     * Вставить одну карту в прямоугольник другой.
+     * Содержимое вписывается в выделение целиком, с сохранением пропорций;
+     * страны переносятся с новыми идентификаторами, чтобы не спорить со своими.
+     */
+    fun insertInto(target: MapProject, source: MapProject, rect: BBox): MapProject {
+        val scale = min(
+            rect.width / max(source.worldWidth, 1f),
+            rect.height / max(source.worldHeight, 1f)
+        )
+        val offsetX = rect.minX + (rect.width - source.worldWidth * scale) / 2f
+        val offsetY = rect.minY + (rect.height - source.worldHeight * scale) / 2f
+
+        fun place(point: Vec) = Vec(offsetX + point.x * scale, offsetY + point.y * scale)
+        fun place(points: List<Vec>) = points.map { place(it) }
+        fun fresh() = UUID.randomUUID().toString()
+
+        val countryIds = source.countries.associate { it.id to fresh() }
+
+        val countries = source.countries.map { country ->
+            country.copy(
+                id = countryIds[country.id] ?: fresh(),
+                areas = country.areas.map { place(it) }
+            )
+        }
+        val markers = source.markers.map { marker ->
+            marker.copy(
+                id = fresh(),
+                pos = place(marker.pos),
+                countryId = marker.countryId?.let { countryIds[it] }
+            )
+        }
+
+        return target.copy(
+            landmasses = target.landmasses +
+                source.landmasses.map { it.copy(id = fresh(), points = place(it.points)) },
+            waters = target.waters +
+                source.waters.map { it.copy(id = fresh(), points = place(it.points)) },
+            biomes = target.biomes + source.biomes.map {
+                it.copy(
+                    id = fresh(),
+                    points = place(it.points),
+                    extraContours = it.extraContours.map { contour -> place(contour) }
+                )
+            },
+            lines = target.lines +
+                source.lines.map { it.copy(id = fresh(), points = place(it.points)) },
+            roads = target.roads +
+                source.roads.map { it.copy(id = fresh(), points = place(it.points)) },
+            markers = target.markers + markers,
+            labels = target.labels + source.labels.map {
+                it.copy(id = fresh(), pos = place(it.pos), path = place(it.path))
+            },
+            countries = target.countries + countries
+        )
+    }
 
     fun create(
         source: MapProject,
