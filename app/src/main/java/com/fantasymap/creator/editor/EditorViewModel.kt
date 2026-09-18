@@ -24,6 +24,7 @@ import com.fantasymap.creator.model.Landmass
 import com.fantasymap.creator.model.LineFeature
 import com.fantasymap.creator.model.LineFeatureType
 import com.fantasymap.creator.model.MapLabel
+import com.fantasymap.creator.model.MapLayer
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.model.MapStyle
 import com.fantasymap.creator.model.Marker
@@ -34,6 +35,7 @@ import com.fantasymap.creator.model.Road
 import com.fantasymap.creator.model.RoadType
 import com.fantasymap.creator.model.Selection
 import com.fantasymap.creator.model.Stage
+import com.fantasymap.creator.model.StylePreset
 import com.fantasymap.creator.model.Tool
 import com.fantasymap.creator.model.Vec
 import com.fantasymap.creator.model.WaterBody
@@ -77,6 +79,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var busy by mutableStateOf(false)
         private set
 
+    /** Развёрнута ли нижняя панель. В свёрнутом виде карте достаётся весь экран. */
+    var panelExpanded by mutableStateOf(true)
+
+    /** Рисовать подпись вдоль кривой, а не в точке. */
+    var labelCurved by mutableStateOf(false)
+
     /** Точки текущего, ещё не завершённого штриха. */
     val draft = mutableStateListOf<Vec>()
 
@@ -95,6 +103,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     private val redoStack = ArrayDeque<MapProject>()
     private var saveJob: Job? = null
     private var draggingSelection: Selection? = null
+
+    /** Подпись, только что нарисованная вдоль кривой: её карточку надо открыть. */
+    var pendingLabelEdit by mutableStateOf<String?>(null)
     private var viewWidth = 0f
     private var viewHeight = 0f
 
@@ -284,7 +295,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         tool == Tool.LAND || tool == Tool.ISLAND || tool == Tool.WATER ||
             tool == Tool.BIOME || tool == Tool.COUNTRY
 
-    fun toolDrawsLine(): Boolean = tool == Tool.LINE || tool == Tool.ROAD
+    fun toolDrawsLine(): Boolean =
+        tool == Tool.LINE || tool == Tool.ROAD || (tool == Tool.LABEL && labelCurved)
 
     /** Замкнут ли рисуемый сейчас контур (область или рамка фрагмента). */
     fun draftClosed(): Boolean = toolDrawsArea() || tool == Tool.FRAGMENT
@@ -472,6 +484,13 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             when (tool) {
                 Tool.LINE -> edit { it.copy(lines = it.lines + LineFeature(type = lineType, points = smooth)) }
                 Tool.ROAD -> edit { it.copy(roads = it.roads + Road(type = roadType, points = smooth)) }
+                Tool.LABEL -> {
+                    val middle = smooth[smooth.size / 2]
+                    val label = MapLabel(text = "Название", pos = middle, style = labelStyle, path = smooth)
+                    edit { it.copy(labels = it.labels + label) }
+                    selection = Selection.LabelSel(label.id)
+                    pendingLabelEdit = label.id
+                }
                 else -> Unit
             }
             return
@@ -565,29 +584,32 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     /** Поиск объекта под пальцем: сверху вниз по слоям. */
     fun hitTest(world: Vec): Selection? {
         val current = project ?: return null
+        val style = current.style
         val tolerance = max(6f, 16f / camera.scale)
 
-        current.markers
+        fun open(layer: MapLayer) = layer.visible(style) && !layer.locked(style)
+
+        if (open(MapLayer.MARKERS)) current.markers
             .filter { it.pos.distanceTo(world) <= tolerance * 1.3f }
             .minByOrNull { it.pos.distanceTo(world) }
             ?.let { return Selection.MarkerSel(it.id) }
 
-        current.labels
+        if (open(MapLayer.LABELS)) current.labels
             .filter { it.pos.distanceTo(world) <= tolerance * 1.6f }
             .minByOrNull { it.pos.distanceTo(world) }
             ?.let { return Selection.LabelSel(it.id) }
 
-        current.roads
+        if (open(MapLayer.ROADS)) current.roads
             .filter { Geometry.distanceToPolyline(world, it.points) <= tolerance }
             .minByOrNull { Geometry.distanceToPolyline(world, it.points) }
             ?.let { return Selection.RoadSel(it.id) }
 
-        current.lines
+        if (open(MapLayer.LINES)) current.lines
             .filter { Geometry.distanceToPolyline(world, it.points) <= tolerance }
             .minByOrNull { Geometry.distanceToPolyline(world, it.points) }
             ?.let { return Selection.Line(it.id) }
 
-        for (country in current.countries.asReversed()) {
+        if (open(MapLayer.COUNTRIES)) for (country in current.countries.asReversed()) {
             for ((index, area) in country.areas.withIndex()) {
                 if (Geometry.distanceToPolygonOutline(world, area) <= tolerance) {
                     return Selection.CountryArea(country.id, index)
@@ -595,19 +617,19 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             }
         }
 
-        current.biomes.asReversed()
+        if (open(MapLayer.BIOMES)) current.biomes.asReversed()
             .firstOrNull { Geometry.pointInContours(world, it.contours()) }
             ?.let { return Selection.Biome(it.id) }
 
-        current.waters.asReversed()
+        if (open(MapLayer.WATER)) current.waters.asReversed()
             .firstOrNull { Geometry.pointInPolygon(world, it.points) }
             ?.let { return Selection.Water(it.id) }
 
-        current.landmasses.asReversed()
+        if (open(MapLayer.LAND)) current.landmasses.asReversed()
             .firstOrNull { Geometry.pointInPolygon(world, it.points) }
             ?.let { return Selection.Land(it.id) }
 
-        for (country in current.countries.asReversed()) {
+        if (open(MapLayer.COUNTRIES)) for (country in current.countries.asReversed()) {
             for ((index, area) in country.areas.withIndex()) {
                 if (Geometry.pointInPolygon(world, area)) return Selection.CountryArea(country.id, index)
             }
@@ -827,6 +849,25 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     fun updateStyle(style: MapStyle) {
         edit { it.copy(style = style) }
+    }
+
+    /** Показать или спрятать слой. */
+    fun setLayerVisible(layer: MapLayer, visible: Boolean) {
+        editQuiet { it.copy(style = layer.withVisible(it.style, visible)) }
+        scheduleSave()
+    }
+
+    /** Запереть слой от правки: его объекты нельзя выбрать и стереть. */
+    fun setLayerLocked(layer: MapLayer, locked: Boolean) {
+        editQuiet { it.copy(style = layer.withLocked(it.style, locked)) }
+        scheduleSave()
+        if (locked) selection = null
+    }
+
+    /** Применить готовый вид карты. Отменяется стрелкой отмены. */
+    fun applyStylePreset(preset: StylePreset) {
+        edit { it.copy(style = preset.apply(it.style)) }
+        message = "Вид карты: ${preset.title}"
     }
 
     // ------------------------------------------------------------- экспорт

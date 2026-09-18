@@ -82,15 +82,21 @@ data class Marker(
     val showLabel: Boolean = true
 )
 
-/** Свободная подпись на карте. */
+/**
+ * Свободная подпись на карте.
+ * Если задан path, подпись идёт вдоль кривой — так подписывают реки и хребты.
+ */
 @Serializable
 data class MapLabel(
     val id: String = newId(),
     val text: String = "",
     val pos: Vec = Vec(0f, 0f),
     val style: LabelStyle = LabelStyle.REGION,
-    val rotation: Float = 0f
-)
+    val rotation: Float = 0f,
+    val path: List<Vec> = emptyList()
+) {
+    val curved: Boolean get() = path.size >= 2
+}
 
 /** Подробная анкета государства. */
 @Serializable
@@ -134,26 +140,174 @@ data class Country(
     val info: CountryInfo = CountryInfo()
 )
 
-/** Настройки отображения карты. */
+/** Настройки отображения карты: что видно, что заперто от правки и какими красками. */
 @Serializable
 data class MapStyle(
     val oceanColor: Int = 0xFF6E9EBF.toInt(),
     val landColor: Int = 0xFFE8DCBE.toInt(),
     val coastColor: Int = 0xFF4A6B80.toInt(),
+    val inkColor: Int = 0xFF3A2E22.toInt(),
+    val deskColor: Int = 0xFF2B2925.toInt(),
+    val labelColor: Int = 0,
     val parchment: Boolean = true,
     val showGrid: Boolean = false,
     val showBorders: Boolean = true,
     val bordersFilled: Boolean = true,
+    val showLand: Boolean = true,
+    val showWater: Boolean = true,
     val showBiomes: Boolean = true,
+    val showLines: Boolean = true,
     val showPatterns: Boolean = true,
     val showRoads: Boolean = true,
     val showMarkers: Boolean = true,
     val showLabels: Boolean = true,
     val showFrame: Boolean = true,
     val showCompass: Boolean = true,
+    val lockLand: Boolean = false,
+    val lockWater: Boolean = false,
+    val lockBiomes: Boolean = false,
+    val lockLines: Boolean = false,
+    val lockRoads: Boolean = false,
+    val lockMarkers: Boolean = false,
+    val lockLabels: Boolean = false,
+    val lockCountries: Boolean = false,
     val labelScale: Float = 1f,
     val seed: Int = 1337
 )
+
+/** Слой карты — строка в списке слоёв. */
+enum class MapLayer(val title: String) {
+    LAND("Суша и берега"),
+    WATER("Озёра и моря"),
+    BIOMES("Природные зоны"),
+    LINES("Реки, хребты, стены"),
+    ROADS("Дороги и пути"),
+    MARKERS("Объекты"),
+    LABELS("Подписи"),
+    COUNTRIES("Границы стран");
+
+    fun visible(style: MapStyle): Boolean = when (this) {
+        LAND -> style.showLand
+        WATER -> style.showWater
+        BIOMES -> style.showBiomes
+        LINES -> style.showLines
+        ROADS -> style.showRoads
+        MARKERS -> style.showMarkers
+        LABELS -> style.showLabels
+        COUNTRIES -> style.showBorders
+    }
+
+    fun locked(style: MapStyle): Boolean = when (this) {
+        LAND -> style.lockLand
+        WATER -> style.lockWater
+        BIOMES -> style.lockBiomes
+        LINES -> style.lockLines
+        ROADS -> style.lockRoads
+        MARKERS -> style.lockMarkers
+        LABELS -> style.lockLabels
+        COUNTRIES -> style.lockCountries
+    }
+
+    fun withVisible(style: MapStyle, value: Boolean): MapStyle = when (this) {
+        LAND -> style.copy(showLand = value)
+        WATER -> style.copy(showWater = value)
+        BIOMES -> style.copy(showBiomes = value)
+        LINES -> style.copy(showLines = value)
+        ROADS -> style.copy(showRoads = value)
+        MARKERS -> style.copy(showMarkers = value)
+        LABELS -> style.copy(showLabels = value)
+        COUNTRIES -> style.copy(showBorders = value)
+    }
+
+    fun withLocked(style: MapStyle, value: Boolean): MapStyle = when (this) {
+        LAND -> style.copy(lockLand = value)
+        WATER -> style.copy(lockWater = value)
+        BIOMES -> style.copy(lockBiomes = value)
+        LINES -> style.copy(lockLines = value)
+        ROADS -> style.copy(lockRoads = value)
+        MARKERS -> style.copy(lockMarkers = value)
+        LABELS -> style.copy(lockLabels = value)
+        COUNTRIES -> style.copy(lockCountries = value)
+    }
+}
+
+/** Готовый вид карты, который применяется одним нажатием. */
+data class StylePreset(val title: String, val hint: String, val apply: (MapStyle) -> MapStyle) {
+    companion object {
+        val ALL: List<StylePreset> = listOf(
+            StylePreset("Старый пергамент", "тёплая бумага, синее море") { base ->
+                base.copy(
+                    oceanColor = 0xFF6E9EBF.toInt(),
+                    landColor = 0xFFE8DCBE.toInt(),
+                    coastColor = 0xFF4A6B80.toInt(),
+                    inkColor = 0xFF3A2E22.toInt(),
+                    deskColor = 0xFF2B2925.toInt(),
+                    labelColor = 0,
+                    showBiomes = true,
+                    showPatterns = true,
+                    showFrame = true,
+                    showCompass = true
+                )
+            },
+            StylePreset("Чернильная гравюра", "светлая бумага, только линии") { base ->
+                base.copy(
+                    oceanColor = 0xFFE3DCCA.toInt(),
+                    landColor = 0xFFF6F1E3.toInt(),
+                    coastColor = 0xFF2E2A24.toInt(),
+                    inkColor = 0xFF23201B.toInt(),
+                    deskColor = 0xFF4A453C.toInt(),
+                    labelColor = 0xFF23201B.toInt(),
+                    showBiomes = false,
+                    showPatterns = true,
+                    showFrame = true,
+                    showCompass = true
+                )
+            },
+            StylePreset("Цветная карта", "яркие краски, всё видно") { base ->
+                base.copy(
+                    oceanColor = 0xFF4FA3D1.toInt(),
+                    landColor = 0xFFE2EFC8.toInt(),
+                    coastColor = 0xFF2E6E93.toInt(),
+                    inkColor = 0xFF33302A.toInt(),
+                    deskColor = 0xFF33414A.toInt(),
+                    labelColor = 0,
+                    showBiomes = true,
+                    showPatterns = true,
+                    showFrame = true,
+                    showCompass = true
+                )
+            },
+            StylePreset("Тёмное фэнтези", "ночная карта, светлые чернила") { base ->
+                base.copy(
+                    oceanColor = 0xFF1E2A33.toInt(),
+                    landColor = 0xFF3B3C34.toInt(),
+                    coastColor = 0xFF8FA9B8.toInt(),
+                    inkColor = 0xFFE8DEC6.toInt(),
+                    deskColor = 0xFF121417.toInt(),
+                    labelColor = 0xFFEDE3CC.toInt(),
+                    showBiomes = true,
+                    showPatterns = true,
+                    showFrame = true,
+                    showCompass = true
+                )
+            },
+            StylePreset("Чистый набросок", "без рамки и текстур") { base ->
+                base.copy(
+                    oceanColor = 0xFFD9E4EA.toInt(),
+                    landColor = 0xFFFAF6EC.toInt(),
+                    coastColor = 0xFF6E7B84.toInt(),
+                    inkColor = 0xFF44403A.toInt(),
+                    deskColor = 0xFF9EA6AB.toInt(),
+                    labelColor = 0,
+                    showBiomes = true,
+                    showPatterns = false,
+                    showFrame = false,
+                    showCompass = false
+                )
+            }
+        )
+    }
+}
 
 /** Полный проект карты — всё, что сохраняется в файл. */
 @Serializable

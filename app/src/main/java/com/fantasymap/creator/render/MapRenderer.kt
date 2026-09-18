@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.DashPathEffect
 import android.graphics.Paint
 import android.graphics.Path
+import android.graphics.PathMeasure
 import android.graphics.RectF
 import android.graphics.Typeface
 import com.fantasymap.creator.model.BBox
@@ -33,7 +34,8 @@ data class RenderOptions(
     val draftClosed: Boolean = true,
     val draftColor: Int = 0xFF9B2C2C.toInt(),
     val activeCountryId: String? = null,
-    val deskColor: Int = 0xFF2B2925.toInt()
+    /** 0 — взять цвет стола из настроек карты. */
+    val deskColor: Int = 0
 )
 
 /**
@@ -68,7 +70,9 @@ class MapRenderer {
         style = Paint.Style.STROKE
     }
 
-    private val inkColor = 0xFF3A2E22.toInt()
+    private var inkColor = 0xFF3A2E22.toInt()
+    private var haloColor = 0xFFFFF8E6.toInt()
+    private var labelOverride = 0
 
     fun render(
         canvas: Canvas,
@@ -80,9 +84,12 @@ class MapRenderer {
     ) {
         val style = project.style
         val u = options.uiScale
+        inkColor = style.inkColor
+        haloColor = if (luminance(style.inkColor) > 0.55f) 0xFF1A1814.toInt() else 0xFFFFF8E6.toInt()
+        labelOverride = style.labelColor
         val visible = cam.visibleWorld(viewWidth, viewHeight).expand(40f / max(cam.scale, 0.01f))
 
-        canvas.drawColor(options.deskColor)
+        canvas.drawColor(if (options.deskColor != 0) options.deskColor else style.deskColor)
 
         // Океан — прямоугольник мира
         val x0 = cam.screenX(0f)
@@ -98,10 +105,10 @@ class MapRenderer {
         drawOceanTexture(canvas, project, cam, visible, u)
         if (style.showGrid) drawGrid(canvas, project, cam, u)
 
-        drawLandmasses(canvas, project, cam, visible, u)
+        if (style.showLand) drawLandmasses(canvas, project, cam, visible, u)
         if (style.showBiomes) drawBiomes(canvas, project, cam, visible, u, style.showPatterns)
-        drawWaters(canvas, project, cam, visible, u)
-        drawLines(canvas, project, cam, visible, u)
+        if (style.showWater) drawWaters(canvas, project, cam, visible, u)
+        if (style.showLines) drawLines(canvas, project, cam, visible, u)
         if (style.showRoads) drawRoads(canvas, project, cam, visible, u)
         if (style.showBorders) drawCountries(canvas, project, cam, u, options)
         if (style.showMarkers) drawMarkers(canvas, project, cam, visible, u)
@@ -299,12 +306,16 @@ class MapRenderer {
                 LineFeatureType.MIGRATION_PATH -> drawDots(canvas, feature, cam, u)
             }
             if (feature.name.isNotBlank()) {
-                val mid = feature.points[feature.points.size / 2]
-                drawMapText(
-                    canvas, feature.name,
-                    cam.screenX(mid.x), cam.screenY(mid.y) - 8f * u,
-                    13f * u, darken(feature.type.color, 0.35f), true
-                )
+                val size = 13f * u * cam.scale.coerceIn(0.7f, 1.8f)
+                val color = darken(feature.type.color, 0.35f)
+                if (!drawTextAlongPath(canvas, feature.name, feature.points, cam, size, color, true)) {
+                    val mid = feature.points[feature.points.size / 2]
+                    drawMapText(
+                        canvas, feature.name,
+                        cam.screenX(mid.x), cam.screenY(mid.y) - 8f * u,
+                        size, color, true
+                    )
+                }
             }
         }
     }
@@ -565,15 +576,55 @@ class MapRenderer {
     private fun drawLabels(canvas: Canvas, project: MapProject, cam: Camera, u: Float) {
         for (label in project.labels) {
             if (label.text.isBlank()) continue
-            val sx = cam.screenX(label.pos.x)
-            val sy = cam.screenY(label.pos.y)
             val size = (label.style.size * project.style.labelScale * u * cam.scale)
                 .coerceIn(9f * u, 96f * u)
+            val color = if (labelOverride != 0) labelOverride else label.style.color
+            if (label.curved) {
+                if (drawTextAlongPath(canvas, label.text, label.path, cam, size, color, label.style.italic)) {
+                    continue
+                }
+            }
+            val sx = cam.screenX(label.pos.x)
+            val sy = cam.screenY(label.pos.y)
             canvas.save()
             if (abs(label.rotation) > 0.01f) canvas.rotate(label.rotation, sx, sy)
-            drawMapText(canvas, label.text, sx, sy, size, label.style.color, label.style.italic)
+            drawMapText(canvas, label.text, sx, sy, size, color, label.style.italic)
             canvas.restore()
         }
+    }
+
+    /** Подпись, изогнутая по линии. Возвращает false, если линия короче текста. */
+    private fun drawTextAlongPath(
+        canvas: Canvas,
+        text: String,
+        points: List<Vec>,
+        cam: Camera,
+        size: Float,
+        color: Int,
+        italic: Boolean
+    ): Boolean {
+        if (points.size < 2) return false
+        buildPath(points, cam, false, path2)
+        val face = Typeface.create(Typeface.SERIF, if (italic) Typeface.ITALIC else Typeface.NORMAL)
+        textPaint.typeface = face
+        textHalo.typeface = face
+        textPaint.textSize = size
+        textHalo.textSize = size
+        val width = textPaint.measureText(text)
+        val length = PathMeasure(path2, false).length
+        if (length < width * 1.05f) return false
+
+        textPaint.textAlign = Paint.Align.LEFT
+        textHalo.textAlign = Paint.Align.LEFT
+        textHalo.color = withAlpha(haloColor, 220)
+        textHalo.strokeWidth = max(2f, size * 0.22f)
+        textPaint.color = color
+        val offset = (length - width) / 2f
+        canvas.drawTextOnPath(text, path2, offset, -size * 0.35f, textHalo)
+        canvas.drawTextOnPath(text, path2, offset, -size * 0.35f, textPaint)
+        textPaint.textAlign = Paint.Align.CENTER
+        textHalo.textAlign = Paint.Align.CENTER
+        return true
     }
 
     private fun drawMapText(
@@ -597,7 +648,7 @@ class MapRenderer {
         textHalo.typeface = face
         textPaint.textSize = size
         textHalo.textSize = size
-        textHalo.color = withAlpha(0xFFFFF8E6.toInt(), 220)
+        textHalo.color = withAlpha(haloColor, 220)
         textHalo.strokeWidth = max(2f, size * 0.22f)
         canvas.drawText(text, x, y, textHalo)
         textPaint.color = color
@@ -629,8 +680,12 @@ class MapRenderer {
                 canvas.drawCircle(cam.screenX(it.pos.x), cam.screenY(it.pos.y), 20f * u, stroke)
             }
             is Selection.LabelSel -> project.labels.firstOrNull { it.id == selection.id }?.let {
-                stroke.pathEffect = null
-                canvas.drawCircle(cam.screenX(it.pos.x), cam.screenY(it.pos.y), 20f * u, stroke)
+                if (it.curved) {
+                    outline(canvas, it.path, cam, false)
+                } else {
+                    stroke.pathEffect = null
+                    canvas.drawCircle(cam.screenX(it.pos.x), cam.screenY(it.pos.y), 20f * u, stroke)
+                }
             }
         }
         stroke.pathEffect = null
@@ -744,6 +799,9 @@ class MapRenderer {
         }
         return out
     }
+
+    private fun luminance(color: Int): Float =
+        (0.299f * Color.red(color) + 0.587f * Color.green(color) + 0.114f * Color.blue(color)) / 255f
 
     companion object {
         fun withAlpha(color: Int, alpha: Int): Int =

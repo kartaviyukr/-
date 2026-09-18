@@ -2,6 +2,7 @@ package com.fantasymap.creator.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -57,18 +58,45 @@ fun EditorBottomPanel(
         shadowElevation = 8.dp
     ) {
         Column(Modifier.navigationBarsPadding()) {
-            StageBar(viewModel.stage) { viewModel.selectStage(it) }
-            Text(
-                text = viewModel.stage.hint,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(horizontal = 14.dp, vertical = 4.dp)
-            )
+            val expanded = viewModel.panelExpanded
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .clickable { viewModel.panelExpanded = !expanded }
+                    .padding(start = 14.dp, end = 6.dp, top = 4.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    "${viewModel.stage.number}. ${viewModel.stage.title}",
+                    style = MaterialTheme.typography.labelLarge,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.weight(1f)
+                )
+                TextButton(
+                    onClick = { viewModel.panelExpanded = !expanded },
+                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
+                ) {
+                    Text(if (expanded) "▾ свернуть" else "▴ развернуть")
+                }
+            }
+            if (expanded) {
+                StageBar(viewModel.stage) { viewModel.selectStage(it) }
+                Text(
+                    text = viewModel.stage.hint,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(horizontal = 14.dp, vertical = 4.dp)
+                )
+            }
             ToolBar(viewModel)
-            ContextPicker(viewModel, onOpenCountries)
-            // Пустое место под последней строкой: до неё легко дотянуться,
-            // и она не прячется за системной панелью навигации.
-            Spacer(Modifier.height(44.dp))
+            if (expanded) {
+                ContextPicker(viewModel, onOpenCountries)
+                // Пустое место под последней строкой: до неё легко дотянуться,
+                // и она не прячется за системной панелью навигации.
+                Spacer(Modifier.height(44.dp))
+            } else {
+                Spacer(Modifier.height(14.dp))
+            }
         }
     }
 }
@@ -291,15 +319,32 @@ private fun WaterPicker(viewModel: EditorViewModel) {
 
 @Composable
 private fun LabelPicker(viewModel: EditorViewModel) {
-    LazyRow(
-        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        items(LabelStyle.entries.toList()) { item ->
-            FilterChip(
-                selected = viewModel.labelStyle == item,
-                onClick = { viewModel.labelStyle = item },
-                label = { Text(item.title) }
+    Column {
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            item {
+                FilterChip(
+                    selected = viewModel.labelCurved,
+                    onClick = { viewModel.labelCurved = !viewModel.labelCurved },
+                    label = { Text(if (viewModel.labelCurved) "〜 вдоль кривой" else "• в точке") }
+                )
+            }
+            items(LabelStyle.entries.toList()) { item ->
+                FilterChip(
+                    selected = viewModel.labelStyle == item,
+                    onClick = { viewModel.labelStyle = item },
+                    label = { Text(item.title) }
+                )
+            }
+        }
+        if (viewModel.labelCurved) {
+            Text(
+                "Проведите линию — подпись изогнётся по ней.",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(horizontal = 14.dp)
             )
         }
     }

@@ -62,7 +62,9 @@ import com.fantasymap.creator.editor.EditorViewModel
 import com.fantasymap.creator.model.Country
 import com.fantasymap.creator.model.CountryInfo
 import com.fantasymap.creator.model.MapLabel
+import com.fantasymap.creator.model.MapLayer
 import com.fantasymap.creator.model.MapStyle
+import com.fantasymap.creator.model.StylePreset
 import com.fantasymap.creator.model.Marker
 import com.fantasymap.creator.model.MarkerGroup
 import com.fantasymap.creator.model.MarkerType
@@ -226,12 +228,23 @@ fun LabelEditDialog(
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(Modifier.height(10.dp))
-                Text("Поворот: ${draft.rotation.toInt()}°", style = MaterialTheme.typography.labelLarge)
-                Slider(
-                    value = draft.rotation,
-                    onValueChange = { draft = draft.copy(rotation = it) },
-                    valueRange = -90f..90f
-                )
+                if (draft.curved) {
+                    Text(
+                        "Подпись идёт вдоль нарисованной кривой.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    TextButton(onClick = { draft = draft.copy(path = emptyList()) }) {
+                        Text("Сделать обычной подписью")
+                    }
+                } else {
+                    Text("Поворот: ${draft.rotation.toInt()}°", style = MaterialTheme.typography.labelLarge)
+                    Slider(
+                        value = draft.rotation,
+                        onValueChange = { draft = draft.copy(rotation = it) },
+                        valueRange = -90f..90f
+                    )
+                }
             }
         },
         confirmButton = {
@@ -249,10 +262,66 @@ fun LabelEditDialog(
     )
 }
 
+/** Слои карты: что показывать и что запереть от правки. */
+@Composable
+fun LayersDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
+    val project = viewModel.project ?: return
+    val style = project.style
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Слои карты") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 460.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    "Глаз прячет слой, замок защищает его от выбора и стирания.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(Modifier.height(8.dp))
+                MapLayer.entries.forEach { layer ->
+                    val visible = layer.visible(style)
+                    val locked = layer.locked(style)
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 2.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            layer.title,
+                            Modifier.weight(1f),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = if (visible) {
+                                MaterialTheme.colorScheme.onSurface
+                            } else {
+                                MaterialTheme.colorScheme.onSurfaceVariant
+                            }
+                        )
+                        TextButton(
+                            onClick = { viewModel.setLayerVisible(layer, !visible) },
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                        ) { Text(if (visible) "👁 видно" else "🚫 скрыт") }
+                        TextButton(
+                            onClick = { viewModel.setLayerLocked(layer, !locked) },
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                        ) { Text(if (locked) "🔒 заперт" else "🔓 правится") }
+                    }
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text("Готово") } }
+    )
+}
+
 /** Настройки отображения карты. */
 @Composable
 fun StyleDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
     val project = viewModel.project ?: return
+    val initial = remember { project.style }
     var style by remember { mutableStateOf(project.style) }
 
     fun apply(new: MapStyle) {
@@ -269,6 +338,36 @@ fun StyleDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
                     .heightIn(max = 420.dp)
                     .verticalScroll(rememberScrollState())
             ) {
+                Text("Готовый вид", style = MaterialTheme.typography.labelLarge)
+                StylePreset.ALL.forEach { preset ->
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable {
+                                viewModel.applyStylePreset(preset)
+                                style = preset.apply(style)
+                            }
+                            .padding(vertical = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(Modifier.weight(1f)) {
+                            Text(preset.title, style = MaterialTheme.typography.bodyMedium)
+                            Text(
+                                preset.hint,
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        ColorDot(Color(preset.apply(style).oceanColor), size = 18)
+                        Spacer(Modifier.width(6.dp))
+                        ColorDot(Color(preset.apply(style).landColor), size = 18)
+                    }
+                }
+                TextButton(onClick = {
+                    viewModel.updateStyle(initial)
+                    style = initial
+                }) { Text("↺ Вернуть как было") }
+                HorizontalDivider(Modifier.padding(vertical = 6.dp))
                 ToggleRow("Природные зоны", style.showBiomes) { apply(style.copy(showBiomes = it)) }
                 ToggleRow("Текстуры ландшафта", style.showPatterns) { apply(style.copy(showPatterns = it)) }
                 ToggleRow("Дороги", style.showRoads) { apply(style.copy(showRoads = it)) }

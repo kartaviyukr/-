@@ -57,6 +57,7 @@ fun EditorScreen(viewModel: EditorViewModel) {
 
     var menuOpen by remember { mutableStateOf(false) }
     var showStyle by remember { mutableStateOf(false) }
+    var showLayers by remember { mutableStateOf(false) }
     var showExport by remember { mutableStateOf(false) }
     var showHelp by remember { mutableStateOf(false) }
     var showRenameProject by remember { mutableStateOf(false) }
@@ -138,6 +139,10 @@ fun EditorScreen(viewModel: EditorViewModel) {
                             DropdownMenuItem(
                                 text = { Text("Выровнять границы зон") },
                                 onClick = { menuOpen = false; viewModel.alignBiomeBorders() }
+                            )
+                            DropdownMenuItem(
+                                text = { Text("Слои карты") },
+                                onClick = { menuOpen = false; showLayers = true }
                             )
                             DropdownMenuItem(
                                 text = { Text("Вид карты") },
@@ -262,6 +267,13 @@ fun EditorScreen(viewModel: EditorViewModel) {
         )
     }
 
+    LaunchedEffect(viewModel.pendingLabelEdit) {
+        if (viewModel.pendingLabelEdit != null) {
+            showObjectDialog = true
+            viewModel.pendingLabelEdit = null
+        }
+    }
+
     val fragment = viewModel.fragmentRect
     if (fragment != null) {
         FragmentDialog(
@@ -274,6 +286,7 @@ fun EditorScreen(viewModel: EditorViewModel) {
     }
 
     if (showStyle) StyleDialog(viewModel) { showStyle = false }
+    if (showLayers) LayersDialog(viewModel) { showLayers = false }
     if (showHelp) HelpDialog { showHelp = false }
 
     if (showExport) {

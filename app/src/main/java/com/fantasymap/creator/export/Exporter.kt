@@ -34,7 +34,7 @@ class Exporter(private val context: Context) {
         val uiScale = (width / 1100f).coerceIn(1f, 4f)
         MapRenderer().render(
             canvas, project, camera, width.toFloat(), height.toFloat(),
-            RenderOptions(uiScale = uiScale, deskColor = 0xFFE6D9BA.toInt())
+            RenderOptions(uiScale = uiScale)
         )
 
         val ok = context.contentResolver.openOutputStream(uri)?.use { out ->
