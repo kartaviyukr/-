@@ -955,13 +955,32 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     // ------------------------------------------------------------- экспорт
 
-    fun exportPng(uri: Uri, longSide: Int) {
+    fun exportPng(uri: Uri, longSide: Int, withLegend: Boolean) {
         val current = project ?: return
         viewModelScope.launch {
             busy = true
-            val ok = withContext(Dispatchers.IO) { exporter.exportPng(current, uri, longSide) }
+            val ok = withContext(Dispatchers.IO) {
+                exporter.exportPng(current, uri, longSide, withLegend)
+            }
             busy = false
             message = if (ok) "Карта сохранена в PNG" else "Не удалось сохранить PNG"
+        }
+    }
+
+    /** Карта в PDF: одним листом или разрезанной на листы A4 для печати. */
+    fun exportPdf(uri: Uri, tilesAcross: Int, withLegend: Boolean) {
+        val current = project ?: return
+        viewModelScope.launch {
+            busy = true
+            val ok = withContext(Dispatchers.IO) {
+                exporter.exportPdf(current, uri, tilesAcross, withLegend)
+            }
+            busy = false
+            message = when {
+                !ok -> "Не удалось сохранить PDF"
+                tilesAcross <= 1 -> "Карта сохранена в PDF"
+                else -> "PDF готов: карта разрезана на листы A4"
+            }
         }
     }
 
@@ -979,9 +998,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val current = project ?: return
         viewModelScope.launch {
             busy = true
-            val ok = withContext(Dispatchers.IO) { exporter.writeText(uri, buildCountriesReport(current)) }
+            val ok = withContext(Dispatchers.IO) { exporter.writeText(uri, buildWorldReport(current)) }
             busy = false
-            message = if (ok) "Описание стран сохранено" else "Не удалось сохранить файл"
+            message = if (ok) "Описание мира сохранено" else "Не удалось сохранить файл"
         }
     }
 
@@ -1001,10 +1020,98 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    private fun buildCountriesReport(current: MapProject): String {
+    private fun buildWorldReport(current: MapProject): String {
         val builder = StringBuilder()
+        builder.append("═══════════════════════════════\n")
         builder.append("МИР: ${current.name}\n")
-        builder.append("Стран: ${current.countries.size}, объектов на карте: ${current.objectCount()}\n\n")
+        builder.append("═══════════════════════════════\n")
+        builder.append("Размер карты: ${current.worldWidth.toInt()} × ${current.worldHeight.toInt()}\n")
+        builder.append("Пройден шаг: ${current.stage} из 8\n")
+        builder.append("Всего объектов на карте: ${current.objectCount()}\n\n")
+
+        val continents = current.landmasses.filter { it.kind == LandKind.CONTINENT }
+        val islands = current.landmasses.filter { it.kind != LandKind.CONTINENT }
+        if (current.landmasses.isNotEmpty()) {
+            builder.append("─── СУША ───\n")
+            builder.append("Материков: ${continents.size}, островов и полуостровов: ${islands.size}\n")
+            for (land in current.landmasses) {
+                if (land.name.isNotBlank()) builder.append("  • ${land.kind.title}: ${land.name}\n")
+            }
+            builder.append("\n")
+        }
+
+        if (current.waters.isNotEmpty()) {
+            builder.append("─── ВОДЫ ───\n")
+            for ((kind, group) in current.waters.groupBy { it.kind }) {
+                val named = group.filter { it.name.isNotBlank() }.joinToString(", ") { it.name }
+                builder.append("  • ${kind.title}: ${group.size}")
+                if (named.isNotBlank()) builder.append(" — $named")
+                builder.append("\n")
+            }
+            builder.append("\n")
+        }
+
+        if (current.biomes.isNotEmpty()) {
+            builder.append("─── ПРИРОДНЫЕ ЗОНЫ ───\n")
+            for ((biome, group) in current.biomes.groupBy { it.biome }.entries.sortedByDescending { it.value.size }) {
+                builder.append("  • ${biome.title}: областей ${group.size}\n")
+            }
+            builder.append("\n")
+        }
+
+        if (current.lines.isNotEmpty()) {
+            builder.append("─── РЕКИ, ХРЕБТЫ И СТЕНЫ ───\n")
+            for ((type, group) in current.lines.groupBy { it.type }) {
+                val named = group.filter { it.name.isNotBlank() }.joinToString(", ") { it.name }
+                builder.append("  • ${type.title}: ${group.size}")
+                if (named.isNotBlank()) builder.append(" — $named")
+                builder.append("\n")
+            }
+            builder.append("\n")
+        }
+
+        if (current.roads.isNotEmpty()) {
+            builder.append("─── ПУТИ ───\n")
+            for ((type, group) in current.roads.groupBy { it.type }) {
+                val named = group.filter { it.name.isNotBlank() }.joinToString(", ") { it.name }
+                builder.append("  • ${type.title}: ${group.size}")
+                if (named.isNotBlank()) builder.append(" — $named")
+                builder.append("\n")
+            }
+            builder.append("\n")
+        }
+
+        if (current.markers.isNotEmpty()) {
+            builder.append("─── ОБЪЕКТЫ МИРА ───\n")
+            for (group in MarkerGroup.entries) {
+                val inGroup = current.markers.filter { it.type.group == group }
+                if (inGroup.isEmpty()) continue
+                builder.append("\n  ${group.title} (${inGroup.size}):\n")
+                for (marker in inGroup.sortedBy { it.type.title }) {
+                    builder.append("    • ${marker.type.title}")
+                    if (marker.name.isNotBlank()) builder.append(" «${marker.name}»")
+                    val country = current.countryById(marker.countryId)
+                    if (country != null && country.name.isNotBlank()) builder.append(", ${country.name}")
+                    if (marker.population.isNotBlank()) builder.append(", население: ${marker.population}")
+                    builder.append("\n")
+                    if (marker.description.isNotBlank()) {
+                        builder.append("      ${marker.description}\n")
+                    }
+                }
+            }
+            builder.append("\n")
+        }
+
+        if (current.labels.isNotEmpty()) {
+            builder.append("─── ПОДПИСИ НА КАРТЕ ───\n")
+            for (label in current.labels) {
+                if (label.text.isNotBlank()) builder.append("  • ${label.text}\n")
+            }
+            builder.append("\n")
+        }
+
+        builder.append("─── ГОСУДАРСТВА ───\n")
+        builder.append("Стран: ${current.countries.size}\n\n")
         for (country in current.countries) {
             val info = country.info
             builder.append("═══ ${country.name.ifBlank { "Без названия" }} ═══\n")

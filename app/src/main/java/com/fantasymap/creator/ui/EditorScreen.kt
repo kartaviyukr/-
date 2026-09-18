@@ -65,6 +65,8 @@ fun EditorScreen(viewModel: EditorViewModel) {
     var showObjectDialog by remember { mutableStateOf(false) }
     var renameTarget by remember { mutableStateOf<Selection?>(null) }
     var pngSize by remember { mutableIntStateOf(2048) }
+    var pdfTiles by remember { mutableIntStateOf(1) }
+    var exportLegend by remember { mutableStateOf(true) }
 
     val snackbarHostState = remember { SnackbarHostState() }
     LaunchedEffect(viewModel.message) {
@@ -77,7 +79,11 @@ fun EditorScreen(viewModel: EditorViewModel) {
 
     val pngLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.CreateDocument("image/png")
-    ) { uri -> if (uri != null) viewModel.exportPng(uri, pngSize) }
+    ) { uri -> if (uri != null) viewModel.exportPng(uri, pngSize, exportLegend) }
+
+    val pdfLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.CreateDocument("application/pdf")
+    ) { uri -> if (uri != null) viewModel.exportPdf(uri, pdfTiles, exportLegend) }
 
     val jsonLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.CreateDocument("application/json")
@@ -291,10 +297,17 @@ fun EditorScreen(viewModel: EditorViewModel) {
 
     if (showExport) {
         ExportDialog(
-            onPng = { size ->
+            onPng = { size, legend ->
                 pngSize = size
+                exportLegend = legend
                 showExport = false
                 pngLauncher.launch(fileBaseName(project.name) + ".png")
+            },
+            onPdf = { tiles, legend ->
+                pdfTiles = tiles
+                exportLegend = legend
+                showExport = false
+                pdfLauncher.launch(fileBaseName(project.name) + ".pdf")
             },
             onJson = {
                 showExport = false
@@ -302,7 +315,7 @@ fun EditorScreen(viewModel: EditorViewModel) {
             },
             onText = {
                 showExport = false
-                textLauncher.launch(fileBaseName(project.name) + "-страны.txt")
+                textLauncher.launch(fileBaseName(project.name) + "-мир.txt")
             },
             onDismiss = { showExport = false }
         )
@@ -311,7 +324,7 @@ fun EditorScreen(viewModel: EditorViewModel) {
     if (showCountries) {
         CountriesOverlay(
             viewModel = viewModel,
-            onExportText = { textLauncher.launch(fileBaseName(project.name) + "-страны.txt") },
+            onExportText = { textLauncher.launch(fileBaseName(project.name) + "-мир.txt") },
             onClose = { showCountries = false }
         )
     }

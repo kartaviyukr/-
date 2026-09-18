@@ -434,234 +434,72 @@ private fun ColorRow(colors: List<Int>, selected: Int, onSelect: (Int) -> Unit) 
 /** Выбор формата сохранения результата. */
 @Composable
 fun ExportDialog(
-    onPng: (Int) -> Unit,
+    onPng: (Int, Boolean) -> Unit,
+    onPdf: (Int, Boolean) -> Unit,
     onJson: () -> Unit,
     onText: () -> Unit,
     onDismiss: () -> Unit
 ) {
+    var withLegend by remember { mutableStateOf(true) }
+    var tiles by remember { mutableFloatStateOf(1f) }
+
     AlertDialog(
         onDismissRequest = onDismiss,
         title = { Text("Сохранить результат") },
         text = {
-            Column {
-                Text("Картинка карты (PNG)", fontWeight = FontWeight.Bold)
-                TextButton(onClick = { onPng(2048) }) { Text("PNG — обычный размер (2048 px)") }
-                TextButton(onClick = { onPng(4096) }) { Text("PNG — большой размер (4096 px)") }
-                TextButton(onClick = { onPng(6144) }) { Text("PNG — для печати (6144 px)") }
+            Column(
+                Modifier
+                    .heightIn(max = 460.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(Modifier.weight(1f)) {
+                        Text("Условные обозначения")
+                        Text(
+                            "список зон, объектов и стран рядом с картой",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    Switch(checked = withLegend, onCheckedChange = { withLegend = it })
+                }
                 HorizontalDivider(Modifier.padding(vertical = 6.dp))
-                Text("Проект и описания", fontWeight = FontWeight.Bold)
+
+                Text("Картинка (PNG)", fontWeight = FontWeight.Bold)
+                TextButton(onClick = { onPng(2048, withLegend) }) { Text("PNG — обычный размер (2048 px)") }
+                TextButton(onClick = { onPng(4096, withLegend) }) { Text("PNG — большой размер (4096 px)") }
+                TextButton(onClick = { onPng(6144, withLegend) }) { Text("PNG — для печати (6144 px)") }
+
+                HorizontalDivider(Modifier.padding(vertical = 6.dp))
+                Text("Печать (PDF)", fontWeight = FontWeight.Bold)
+                Text(
+                    if (tiles < 1.5f) {
+                        "Один лист A4 целиком"
+                    } else {
+                        "Плитками: ${tiles.toInt()} листа A4 по ширине — склеить в большую карту"
+                    },
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Slider(
+                    value = tiles,
+                    onValueChange = { tiles = it },
+                    valueRange = 1f..6f,
+                    steps = 4
+                )
+                TextButton(onClick = { onPdf(tiles.toInt(), withLegend) }) {
+                    Text(if (tiles < 1.5f) "Сохранить PDF" else "Сохранить PDF плитками")
+                }
+
+                HorizontalDivider(Modifier.padding(vertical = 6.dp))
+                Text("Текст и проект", fontWeight = FontWeight.Bold)
+                TextButton(onClick = onText) { Text("Описание мира (.txt)") }
                 TextButton(onClick = onJson) { Text("Файл проекта (.json) — можно открыть снова") }
-                TextButton(onClick = onText) { Text("Описания стран (.txt)") }
             }
         },
         confirmButton = { TextButton(onClick = onDismiss) { Text("Закрыть") } }
     )
 }
-
-/** Что сделать с выделенной областью карты. */
-@Composable
-fun AreaDialog(
-    viewModel: EditorViewModel,
-    sourceName: String,
-    fragmentWidth: Float,
-    fragmentHeight: Float,
-    onDismiss: () -> Unit
-) {
-    var mode by remember { mutableIntStateOf(0) }
-    var islands by remember { mutableStateOf(false) }
-    var roughness by remember { mutableFloatStateOf(0.55f) }
-    var riverCount by remember { mutableFloatStateOf(5f) }
-    var replaceZones by remember { mutableStateOf(true) }
-
-    if (mode == 1) {
-        FragmentDialog(
-            sourceName = sourceName,
-            fragmentWidth = fragmentWidth,
-            fragmentHeight = fragmentHeight,
-            onCreate = { name, longSide -> viewModel.createMapFromFragment(name, longSide) },
-            onDismiss = onDismiss
-        )
-        return
-    }
-
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text("Выделенная область") },
-        text = {
-            Column(
-                Modifier
-                    .heightIn(max = 440.dp)
-                    .verticalScroll(rememberScrollState())
-            ) {
-                Text(
-                    "Кусок ${fragmentWidth.toInt()} × ${fragmentHeight.toInt()}. Что с ним сделать?",
-                    style = MaterialTheme.typography.bodyMedium
-                )
-                Spacer(Modifier.height(8.dp))
-                when (mode) {
-                    2 -> {
-                        Text("Побережье", style = MaterialTheme.typography.labelLarge)
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            RadioButton(selected = !islands, onClick = { islands = false })
-                            Text("Один материк", Modifier.weight(1f))
-                            RadioButton(selected = islands, onClick = { islands = true })
-                            Text("Острова")
-                        }
-                        Text(
-                            "Изрезанность берега: ${(roughness * 100).toInt()}%",
-                            style = MaterialTheme.typography.labelSmall
-                        )
-                        Slider(
-                            value = roughness,
-                            onValueChange = { roughness = it },
-                            valueRange = 0.1f..1f
-                        )
-                        Text(
-                            "Берег рисуется случайно — не понравится, отмените стрелкой ↶ и нажмите ещё раз.",
-                            style = MaterialTheme.typography.labelSmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        TextButton(onClick = { viewModel.generateCoastline(islands, roughness) }) {
-                            Text("Нарисовать берег")
-                        }
-                    }
-
-                    3 -> {
-                        Text("Реки", style = MaterialTheme.typography.labelLarge)
-                        Text(
-                            "Истоки берутся у горных хребтов и вершин внутри области, " +
-                                "реки текут к ближайшей воде.",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        Text("Сколько рек: ${riverCount.toInt()}", style = MaterialTheme.typography.labelSmall)
-                        Slider(
-                            value = riverCount,
-                            onValueChange = { riverCount = it },
-                            valueRange = 1f..12f
-                        )
-                        TextButton(onClick = { viewModel.generateRivers(riverCount.toInt()) }) {
-                            Text("Провести реки")
-                        }
-                    }
-
-                    4 -> {
-                        Text("Природные зоны", style = MaterialTheme.typography.labelLarge)
-                        Text(
-                            "Зоны раскладываются по широте: у полюсов льды и тундра, " +
-                                "в средних широтах леса и степи, у тропиков пустыни и саванна, " +
-                                "у экватора джунгли. Вдоль хребтов ложатся горы.",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text("Заменить зоны в области", Modifier.weight(1f))
-                            Switch(checked = replaceZones, onCheckedChange = { replaceZones = it })
-                        }
-                        TextButton(onClick = { viewModel.generateBiomeBands(replaceZones) }) {
-                            Text("Разложить зоны")
-                        }
-                    }
-
-                    else -> {
-                        TextButton(onClick = { mode = 1 }) { Text("⧉  Скопировать в новую карту") }
-                        TextButton(onClick = { mode = 2 }) { Text("🗺  Сгенерировать побережье") }
-                        TextButton(onClick = { mode = 4 }) { Text("🖌  Разложить природные зоны") }
-                        TextButton(onClick = { mode = 3 }) { Text("〰  Провести реки от гор к морю") }
-                    }
-                }
-            }
-        },
-        confirmButton = {
-            if (mode == 0) {
-                TextButton(onClick = onDismiss) { Text("Закрыть") }
-            } else {
-                TextButton(onClick = { mode = 0 }) { Text("Назад") }
-            }
-        },
-        dismissButton = {
-            if (mode != 0) TextButton(onClick = onDismiss) { Text("Отмена") }
-        }
-    )
-}
-
-/**
- * Создание отдельной карты из выделенного куска.
- * Исходная карта остаётся нетронутой — фрагмент копируется.
- */
-@Composable
-fun FragmentDialog(
-    sourceName: String,
-    fragmentWidth: Float,
-    fragmentHeight: Float,
-    onCreate: (String, Float) -> Unit,
-    onDismiss: () -> Unit
-) {
-    var name by remember { mutableStateOf("$sourceName — фрагмент") }
-    var longSide by remember { mutableFloatStateOf(2400f) }
-    val currentLongSide = maxOf(fragmentWidth, fragmentHeight, 1f)
-
-    AlertDialog(
-        onDismissRequest = onDismiss,
-        title = { Text("Новая карта из фрагмента") },
-        text = {
-            Column(
-                Modifier
-                    .heightIn(max = 420.dp)
-                    .verticalScroll(rememberScrollState())
-            ) {
-                Text(
-                    "Выделенный кусок ${fragmentWidth.toInt()} × ${fragmentHeight.toInt()} " +
-                        "будет скопирован в отдельную карту и растянут на весь её размер. " +
-                        "Эта карта останется без изменений.",
-                    style = MaterialTheme.typography.bodyMedium
-                )
-                Spacer(Modifier.height(12.dp))
-                OutlinedTextField(
-                    value = name,
-                    onValueChange = { name = it },
-                    label = { Text("Название новой карты") },
-                    singleLine = true,
-                    modifier = Modifier.fillMaxWidth()
-                )
-                Spacer(Modifier.height(12.dp))
-                Text("Размер новой карты", style = MaterialTheme.typography.labelLarge)
-                FRAGMENT_SIZES.forEach { size ->
-                    val zoom = size / currentLongSide
-                    Row(
-                        Modifier
-                            .fillMaxWidth()
-                            .clickable { longSide = size }
-                            .padding(vertical = 4.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        RadioButton(selected = longSide == size, onClick = { longSide = size })
-                        Spacer(Modifier.width(4.dp))
-                        Column {
-                            Text("${size.toInt()} по длинной стороне", style = MaterialTheme.typography.bodyMedium)
-                            Text(
-                                "подробнее в ${formatZoom(zoom)} раза",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-                    }
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(onClick = { onCreate(name.trim(), longSide) }) { Text("Создать карту") }
-        },
-        dismissButton = { TextButton(onClick = onDismiss) { Text("Отмена") } }
-    )
-}
-
-private fun formatZoom(zoom: Float): String {
-    val rounded = (zoom * 10f).toInt() / 10f
-    return if (rounded >= 10f) rounded.toInt().toString() else rounded.toString()
-}
-
-private val FRAGMENT_SIZES = listOf(1600f, 2400f, 3200f, 4800f, 6400f)
 
 /** Краткая справка по работе с картой. */
 @Composable

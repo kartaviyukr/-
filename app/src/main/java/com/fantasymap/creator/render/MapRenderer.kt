@@ -810,6 +810,164 @@ class MapRenderer {
         return out
     }
 
+    // ---------------------------------------------------------------- легенда
+
+    private data class LegendItem(
+        val kind: Int,
+        val color: Int,
+        val glyph: com.fantasymap.creator.model.Glyph?,
+        val title: String
+    )
+
+    private fun legendSections(project: MapProject): List<Pair<String, List<LegendItem>>> {
+        val sections = ArrayList<Pair<String, List<LegendItem>>>()
+
+        val zones = project.biomes.map { it.biome }.distinct()
+            .map { LegendItem(0, it.color, null, it.title) }
+        if (zones.isNotEmpty()) sections.add("Природные зоны" to zones)
+
+        val objects = project.markers.map { it.type }.distinct()
+            .map { LegendItem(1, markerFill(it), it.glyph, it.title) }
+        if (objects.isNotEmpty()) sections.add("Объекты" to objects)
+
+        val lines = project.lines.map { it.type }.distinct()
+            .map { LegendItem(2, it.color, null, it.title) } +
+            project.roads.map { it.type }.distinct()
+                .map { LegendItem(2, it.color, null, it.title) }
+        if (lines.isNotEmpty()) sections.add("Реки, хребты и дороги" to lines)
+
+        val countries = project.countries
+            .filter { it.name.isNotBlank() || it.areas.isNotEmpty() }
+            .map { LegendItem(3, it.color, null, it.name.ifBlank { "Без названия" }) }
+        if (countries.isNotEmpty()) sections.add("Государства" to countries)
+
+        return sections
+    }
+
+    private fun legendColumns(width: Float, u: Float): Int =
+        (width / (230f * u)).toInt().coerceIn(1, 4)
+
+    /** Высота легенды при данной ширине — чтобы заранее выделить под неё место. */
+    fun legendHeight(project: MapProject, width: Float, u: Float): Float {
+        val sections = legendSections(project)
+        if (sections.isEmpty()) return 0f
+        val columns = legendColumns(width, u)
+        var height = 42f * u
+        for ((_, items) in sections) {
+            height += 26f * u
+            height += ((items.size + columns - 1) / columns) * 24f * u
+            height += 10f * u
+        }
+        return height + 16f * u
+    }
+
+    /** Нарисовать условные обозначения — под картой при выводе в файл. */
+    fun drawLegend(
+        canvas: Canvas,
+        project: MapProject,
+        left: Float,
+        top: Float,
+        width: Float,
+        u: Float
+    ) {
+        val sections = legendSections(project)
+        if (sections.isEmpty()) return
+        inkColor = project.style.inkColor
+        haloColor = if (luminance(project.style.inkColor) > 0.55f) 0xFF1A1814.toInt() else 0xFFFFF8E6.toInt()
+
+        val columns = legendColumns(width, u)
+        val columnWidth = width / columns
+        var y = top + 30f * u
+
+        textPaint.textAlign = Paint.Align.LEFT
+        textHalo.textAlign = Paint.Align.LEFT
+        drawPlainText(canvas, "Условные обозначения", left, y, 19f * u, inkColor, bold = true)
+        y += 22f * u
+
+        for ((title, items) in sections) {
+            drawPlainText(canvas, title, left, y + 14f * u, 14f * u, withAlpha(inkColor, 190), italic = true)
+            y += 26f * u
+            for ((index, item) in items.withIndex()) {
+                val column = index % columns
+                val row = index / columns
+                val x = left + column * columnWidth
+                val itemY = y + row * 24f * u + 12f * u
+                drawLegendMark(canvas, item, x + 11f * u, itemY, u)
+                drawPlainText(canvas, item.title, x + 26f * u, itemY + 5f * u, 13f * u, inkColor)
+            }
+            y += ((items.size + columns - 1) / columns) * 24f * u + 10f * u
+        }
+
+        textPaint.textAlign = Paint.Align.CENTER
+        textHalo.textAlign = Paint.Align.CENTER
+    }
+
+    private fun drawLegendMark(canvas: Canvas, item: LegendItem, x: Float, y: Float, u: Float) {
+        stroke.pathEffect = null
+        stroke.color = inkColor
+        stroke.strokeWidth = max(1f, 1.2f * u)
+        when (item.kind) {
+            0 -> {
+                fill.color = item.color
+                canvas.drawRect(x - 8f * u, y - 7f * u, x + 8f * u, y + 7f * u, fill)
+                canvas.drawRect(x - 8f * u, y - 7f * u, x + 8f * u, y + 7f * u, stroke)
+            }
+            1 -> {
+                fill.color = item.color
+                item.glyph?.let { glyphs.drawGlyph(canvas, it, x, y, 7f * u, fill, stroke) }
+            }
+            2 -> {
+                stroke.color = item.color
+                stroke.strokeWidth = max(1.5f, 2.4f * u)
+                canvas.drawLine(x - 9f * u, y, x + 9f * u, y, stroke)
+            }
+            else -> {
+                fill.color = withAlpha(item.color, 90)
+                canvas.drawRect(x - 8f * u, y - 7f * u, x + 8f * u, y + 7f * u, fill)
+                stroke.color = item.color
+                stroke.strokeWidth = max(1.5f, 2f * u)
+                canvas.drawRect(x - 8f * u, y - 7f * u, x + 8f * u, y + 7f * u, stroke)
+            }
+        }
+    }
+
+    /** Текст без обводки — для легенды и подписей листов. */
+    fun drawPlainText(
+        canvas: Canvas,
+        text: String,
+        x: Float,
+        y: Float,
+        size: Float,
+        color: Int,
+        bold: Boolean = false,
+        italic: Boolean = false
+    ) {
+        val style = when {
+            bold && italic -> Typeface.BOLD_ITALIC
+            bold -> Typeface.BOLD
+            italic -> Typeface.ITALIC
+            else -> Typeface.NORMAL
+        }
+        textPaint.typeface = Typeface.create(Typeface.SERIF, style)
+        textPaint.textSize = size
+        textPaint.color = color
+        canvas.drawText(text, x, y, textPaint)
+    }
+
+    /** Тонкая линия — метки склейки на листах PDF. */
+    fun drawHairline(canvas: Canvas, x1: Float, y1: Float, x2: Float, y2: Float, color: Int) {
+        stroke.pathEffect = null
+        stroke.color = color
+        stroke.strokeWidth = 0.6f
+        canvas.drawLine(x1, y1, x2, y2, stroke)
+    }
+
+    /** Залить прямоугольник цветом бумаги — фон легенды и полей листа. */
+    fun fillPaper(canvas: Canvas, left: Float, top: Float, right: Float, bottom: Float, color: Int) {
+        fill.color = color
+        canvas.drawRect(left, top, right, bottom, fill)
+    }
+
     private fun luminance(color: Int): Float =
         (0.299f * Color.red(color) + 0.587f * Color.green(color) + 0.114f * Color.blue(color)) / 255f
 
