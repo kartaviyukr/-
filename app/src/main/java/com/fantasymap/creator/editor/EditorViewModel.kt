@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import com.fantasymap.creator.data.ProjectStore
 import com.fantasymap.creator.geom.FragmentCopy
 import com.fantasymap.creator.geom.PolygonOps
+import com.fantasymap.creator.geom.WorldGenerator
 import com.fantasymap.creator.export.Exporter
 import com.fantasymap.creator.model.BBox
 import com.fantasymap.creator.model.BiomeRegion
@@ -862,6 +863,88 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         editQuiet { it.copy(style = layer.withLocked(it.style, locked)) }
         scheduleSave()
         if (locked) selection = null
+    }
+
+    // ------------------------------------------------------------- помощники по области
+
+    /** Нарисовать в выделенной области рваное побережье. */
+    fun generateCoastline(islands: Boolean, roughness: Float) {
+        val current = project ?: return
+        val rect = fragmentRect ?: return
+        fragmentRect = null
+        viewModelScope.launch {
+            busy = true
+            val seed = (System.currentTimeMillis() and 0xFFFF).toInt() + current.landmasses.size * 17
+            val shapes = withContext(Dispatchers.Default) {
+                if (islands) {
+                    WorldGenerator.islands(rect, 4, roughness, seed)
+                } else {
+                    listOf(WorldGenerator.coastline(rect, roughness, seed))
+                }
+            }
+            busy = false
+            if (shapes.isEmpty()) {
+                message = "Не получилось нарисовать берег"
+                return@launch
+            }
+            edit { state ->
+                state.copy(
+                    landmasses = state.landmasses + shapes.map {
+                        Landmass(kind = WorldGenerator.kindFor(it, state), points = it)
+                    }
+                )
+            }
+            message = if (islands) "Острова созданы — правьте как обычную сушу" else "Материк создан"
+        }
+    }
+
+    /** Провести реки от гор к ближайшей воде внутри области. */
+    fun generateRivers(count: Int) {
+        val current = project ?: return
+        val rect = fragmentRect ?: return
+        fragmentRect = null
+        viewModelScope.launch {
+            busy = true
+            val seed = (System.currentTimeMillis() and 0xFFFF).toInt() + current.lines.size * 7
+            val rivers = withContext(Dispatchers.Default) {
+                WorldGenerator.rivers(current, rect, count, seed)
+            }
+            busy = false
+            if (rivers.isEmpty()) {
+                message = "Не нашлось истоков: нарисуйте в области горный хребет или вершины"
+                return@launch
+            }
+            edit { it.copy(lines = it.lines + rivers) }
+            message = "Проведено рек: ${rivers.size}"
+        }
+    }
+
+    /** Разложить природные зоны по широте внутри области. */
+    fun generateBiomeBands(replaceExisting: Boolean) {
+        val current = project ?: return
+        val rect = fragmentRect ?: return
+        fragmentRect = null
+        viewModelScope.launch {
+            busy = true
+            val seed = current.style.seed
+            val bands = withContext(Dispatchers.Default) {
+                WorldGenerator.biomeBands(current, rect, seed)
+            }
+            busy = false
+            if (bands.isEmpty()) {
+                message = "В области нет суши — сначала нарисуйте материк"
+                return@launch
+            }
+            edit { state ->
+                val kept = if (replaceExisting) {
+                    state.biomes.filterNot { WorldGenerator.insideRect(it.points, rect) }
+                } else {
+                    state.biomes
+                }
+                state.copy(biomes = kept + bands)
+            }
+            message = "Разложено зон: ${bands.size}"
+        }
     }
 
     /** Применить готовый вид карты. Отменяется стрелкой отмены. */

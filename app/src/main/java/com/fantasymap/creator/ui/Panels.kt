@@ -167,8 +167,8 @@ private fun ContextPicker(viewModel: EditorViewModel, onOpenCountries: () -> Uni
         viewModel.tool == Tool.LABEL -> LabelPicker(viewModel)
         viewModel.tool == Tool.COUNTRY -> CountryPicker(viewModel, onOpenCountries)
         viewModel.tool == Tool.FRAGMENT -> Text(
-            "Обведите прямоугольником кусок карты — он скопируется в отдельную карту, " +
-                "а эта останется без изменений.",
+            "Обведите прямоугольником кусок карты — можно скопировать его в отдельную " +
+                "карту, сгенерировать там побережье, разложить природные зоны или провести реки.",
             style = MaterialTheme.typography.bodySmall,
             modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)
         )

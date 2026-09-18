@@ -130,7 +130,7 @@ fun EditorScreen(viewModel: EditorViewModel) {
                                 onClick = { menuOpen = false; showExport = true }
                             )
                             DropdownMenuItem(
-                                text = { Text("Фрагмент → новая карта") },
+                                text = { Text("Выделить область") },
                                 onClick = {
                                     menuOpen = false
                                     viewModel.tool = Tool.FRAGMENT
@@ -276,11 +276,11 @@ fun EditorScreen(viewModel: EditorViewModel) {
 
     val fragment = viewModel.fragmentRect
     if (fragment != null) {
-        FragmentDialog(
+        AreaDialog(
+            viewModel = viewModel,
             sourceName = project.name,
             fragmentWidth = fragment.width,
             fragmentHeight = fragment.height,
-            onCreate = { newName, longSide -> viewModel.createMapFromFragment(newName, longSide) },
             onDismiss = { viewModel.cancelFragment() }
         )
     }

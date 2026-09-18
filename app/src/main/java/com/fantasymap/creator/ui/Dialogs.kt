@@ -49,6 +49,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -454,6 +455,133 @@ fun ExportDialog(
             }
         },
         confirmButton = { TextButton(onClick = onDismiss) { Text("Закрыть") } }
+    )
+}
+
+/** Что сделать с выделенной областью карты. */
+@Composable
+fun AreaDialog(
+    viewModel: EditorViewModel,
+    sourceName: String,
+    fragmentWidth: Float,
+    fragmentHeight: Float,
+    onDismiss: () -> Unit
+) {
+    var mode by remember { mutableIntStateOf(0) }
+    var islands by remember { mutableStateOf(false) }
+    var roughness by remember { mutableFloatStateOf(0.55f) }
+    var riverCount by remember { mutableFloatStateOf(5f) }
+    var replaceZones by remember { mutableStateOf(true) }
+
+    if (mode == 1) {
+        FragmentDialog(
+            sourceName = sourceName,
+            fragmentWidth = fragmentWidth,
+            fragmentHeight = fragmentHeight,
+            onCreate = { name, longSide -> viewModel.createMapFromFragment(name, longSide) },
+            onDismiss = onDismiss
+        )
+        return
+    }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Выделенная область") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 440.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    "Кусок ${fragmentWidth.toInt()} × ${fragmentHeight.toInt()}. Что с ним сделать?",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Spacer(Modifier.height(8.dp))
+                when (mode) {
+                    2 -> {
+                        Text("Побережье", style = MaterialTheme.typography.labelLarge)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            RadioButton(selected = !islands, onClick = { islands = false })
+                            Text("Один материк", Modifier.weight(1f))
+                            RadioButton(selected = islands, onClick = { islands = true })
+                            Text("Острова")
+                        }
+                        Text(
+                            "Изрезанность берега: ${(roughness * 100).toInt()}%",
+                            style = MaterialTheme.typography.labelSmall
+                        )
+                        Slider(
+                            value = roughness,
+                            onValueChange = { roughness = it },
+                            valueRange = 0.1f..1f
+                        )
+                        Text(
+                            "Берег рисуется случайно — не понравится, отмените стрелкой ↶ и нажмите ещё раз.",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        TextButton(onClick = { viewModel.generateCoastline(islands, roughness) }) {
+                            Text("Нарисовать берег")
+                        }
+                    }
+
+                    3 -> {
+                        Text("Реки", style = MaterialTheme.typography.labelLarge)
+                        Text(
+                            "Истоки берутся у горных хребтов и вершин внутри области, " +
+                                "реки текут к ближайшей воде.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Text("Сколько рек: ${riverCount.toInt()}", style = MaterialTheme.typography.labelSmall)
+                        Slider(
+                            value = riverCount,
+                            onValueChange = { riverCount = it },
+                            valueRange = 1f..12f
+                        )
+                        TextButton(onClick = { viewModel.generateRivers(riverCount.toInt()) }) {
+                            Text("Провести реки")
+                        }
+                    }
+
+                    4 -> {
+                        Text("Природные зоны", style = MaterialTheme.typography.labelLarge)
+                        Text(
+                            "Зоны раскладываются по широте: у полюсов льды и тундра, " +
+                                "в средних широтах леса и степи, у тропиков пустыни и саванна, " +
+                                "у экватора джунгли. Вдоль хребтов ложатся горы.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text("Заменить зоны в области", Modifier.weight(1f))
+                            Switch(checked = replaceZones, onCheckedChange = { replaceZones = it })
+                        }
+                        TextButton(onClick = { viewModel.generateBiomeBands(replaceZones) }) {
+                            Text("Разложить зоны")
+                        }
+                    }
+
+                    else -> {
+                        TextButton(onClick = { mode = 1 }) { Text("⧉  Скопировать в новую карту") }
+                        TextButton(onClick = { mode = 2 }) { Text("🗺  Сгенерировать побережье") }
+                        TextButton(onClick = { mode = 4 }) { Text("🖌  Разложить природные зоны") }
+                        TextButton(onClick = { mode = 3 }) { Text("〰  Провести реки от гор к морю") }
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            if (mode == 0) {
+                TextButton(onClick = onDismiss) { Text("Закрыть") }
+            } else {
+                TextButton(onClick = { mode = 0 }) { Text("Назад") }
+            }
+        },
+        dismissButton = {
+            if (mode != 0) TextButton(onClick = onDismiss) { Text("Отмена") }
+        }
     )
 }
 

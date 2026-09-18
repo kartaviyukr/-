@@ -550,5 +550,5 @@ enum class Tool(val title: String, val icon: String) {
     COUNTRY("Территория страны", "🚩"),
     LABEL("Подпись", "🔤"),
     ERASER("Стереть", "🧽"),
-    FRAGMENT("Фрагмент → новая карта", "⧉")
+    FRAGMENT("Выделить область", "⧉")
 }
