@@ -72,7 +72,6 @@ import com.fantasymap.creator.model.MapLayer
 import com.fantasymap.creator.model.MapStyle
 import com.fantasymap.creator.model.StylePreset
 import com.fantasymap.creator.model.Marker
-import com.fantasymap.creator.model.MarkerGroup
 import com.fantasymap.creator.model.MarkerType
 
 /** Карточка объекта: имя, вид, принадлежность стране, описание. */
@@ -109,7 +108,7 @@ fun MarkerEditDialog(
 
                 Text("Вид объекта", style = MaterialTheme.typography.labelLarge)
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    items(MarkerGroup.entries.toList()) { item ->
+                    items(viewModel.markerGroups()) { item ->
                         FilterChip(
                             selected = group == item,
                             onClick = { group = item },
@@ -118,7 +117,7 @@ fun MarkerEditDialog(
                     }
                 }
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    items(MarkerType.byGroup(group)) { item ->
+                    items(MarkerType.byGroup(group, viewModel.mapKind)) { item ->
                         FilterChip(
                             selected = draft.type == item,
                             onClick = { draft = draft.copy(type = item) },

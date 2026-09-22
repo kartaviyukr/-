@@ -33,7 +33,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
-import com.fantasymap.creator.model.BiomeGroup
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
@@ -41,8 +40,6 @@ import com.fantasymap.creator.model.DistrictType
 import com.fantasymap.creator.model.MapStage
 import com.fantasymap.creator.model.LabelStyle
 import com.fantasymap.creator.model.LineFeatureType
-import com.fantasymap.creator.model.MarkerGroup
-import com.fantasymap.creator.model.MarkerType
 import com.fantasymap.creator.model.RoadType
 import com.fantasymap.creator.model.Stage
 import com.fantasymap.creator.model.Tool
@@ -213,7 +210,7 @@ private fun BiomePicker(viewModel: EditorViewModel) {
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            items(BiomeGroup.entries.toList()) { item ->
+            items(viewModel.biomeGroups()) { item ->
                 FilterChip(
                     selected = group == item,
                     onClick = {
@@ -323,13 +320,10 @@ private fun MarkerPicker(viewModel: EditorViewModel) {
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            items(MarkerGroup.entries.toList()) { item ->
+            items(viewModel.markerGroups()) { item ->
                 FilterChip(
                     selected = viewModel.markerGroup == item,
-                    onClick = {
-                        viewModel.markerGroup = item
-                        MarkerType.byGroup(item).firstOrNull()?.let { viewModel.markerType = it }
-                    },
+                    onClick = { viewModel.selectMarkerGroup(item) },
                     label = { Text(item.title) }
                 )
             }
@@ -338,7 +332,7 @@ private fun MarkerPicker(viewModel: EditorViewModel) {
             contentPadding = PaddingValues(horizontal = 10.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            items(MarkerType.byGroup(viewModel.markerGroup)) { item ->
+            items(viewModel.markerTypes()) { item ->
                 FilterChip(
                     selected = viewModel.markerType == item,
                     onClick = { viewModel.markerType = item },

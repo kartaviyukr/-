@@ -15,6 +15,7 @@ import com.fantasymap.creator.geom.PolygonOps
 import com.fantasymap.creator.geom.WorldGenerator
 import com.fantasymap.creator.export.Exporter
 import com.fantasymap.creator.model.BBox
+import com.fantasymap.creator.model.BiomeGroup
 import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.BuildingGroup
@@ -177,6 +178,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         canUndo = false
         canRedo = false
         activeCountryId = loaded.countries.firstOrNull()?.id
+        syncMarkerPickerToKind()
         if (viewWidth > 0f) fitToView(viewWidth, viewHeight)
     }
 
@@ -276,6 +278,36 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     /** Шаги для открытой карты. */
     fun stages(): List<MapStage> = stagesFor(mapKind)
 
+    /** Группы зон: на карте города городские идут первыми. */
+    fun biomeGroups(): List<BiomeGroup> =
+        if (mapKind == MapKind.CITY) listOf(BiomeGroup.CITY) + BiomeGroup.entries.filter { it != BiomeGroup.CITY }
+        else BiomeGroup.entries.filter { it != BiomeGroup.CITY } + BiomeGroup.CITY
+
+    /** Группы объектов, уместные на открытой карте. */
+    fun markerGroups(): List<MarkerGroup> = MarkerType.groupsFor(mapKind)
+
+    /** Объекты выбранной группы, уместные на открытой карте. */
+    fun markerTypes(): List<MarkerType> = MarkerType.byGroup(markerGroup, mapKind)
+
+    /** Подменяет группу, если на такой карте в ней нет ни одного объекта. */
+    private fun ensureGroupFits(group: MarkerGroup): MarkerGroup =
+        if (MarkerType.byGroup(group, mapKind).isNotEmpty()) group
+        else MarkerType.groupsFor(mapKind).firstOrNull() ?: group
+
+    /** Приводит выбранную группу и объект в соответствие виду карты. */
+    fun syncMarkerPickerToKind() {
+        val group = ensureGroupFits(markerGroup)
+        if (group != markerGroup) markerGroup = group
+        if (!markerType.fits(mapKind) || markerType.group != markerGroup) {
+            markerType = MarkerType.byGroup(markerGroup, mapKind).firstOrNull() ?: markerType
+        }
+    }
+
+    fun selectMarkerGroup(group: MarkerGroup) {
+        markerGroup = group
+        MarkerType.byGroup(group, mapKind).firstOrNull()?.let { markerType = it }
+    }
+
     fun selectStage(newStage: MapStage) {
         stage = newStage
         tool = defaultToolFor(newStage)
@@ -285,9 +317,14 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             Stage.NATURE -> MarkerGroup.NATURE
             Stage.SETTLEMENTS -> MarkerGroup.SETTLEMENT
             Stage.SPECIAL -> MarkerGroup.MAGIC
+            CityStage.WALLS -> MarkerGroup.CITY_WALLS
+            CityStage.DETAILS -> MarkerGroup.CITY_STREET
+            CityStage.GREEN -> MarkerGroup.CITY_SERVICE
+            CityStage.BUILDINGS -> MarkerGroup.CITY_SPECIAL
             else -> markerGroup
         }
-        markerType = MarkerType.byGroup(markerGroup).firstOrNull() ?: markerType
+        markerGroup = ensureGroupFits(markerGroup)
+        markerType = MarkerType.byGroup(markerGroup, mapKind).firstOrNull() ?: markerType
         if (newStage == Stage.SPECIAL) markerType = MarkerType.WIZARD_TOWER
         if (newStage == Stage.SETTLEMENTS) markerType = MarkerType.CITY
         if (newStage == Stage.NATURE) markerType = MarkerType.MOUNTAIN_PEAK
@@ -295,14 +332,11 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             CityStage.GROUND -> lineType = LineFeatureType.RIVER
             CityStage.WALLS -> {
                 lineType = LineFeatureType.CITY_WALL
-                markerType = MarkerType.GREAT_GATE
+                markerType = MarkerType.CITY_MAIN_GATE
             }
             CityStage.STREETS -> roadType = RoadType.MAIN_STREET
             CityStage.GREEN -> biome = BiomeType.CITY_PARK
-            CityStage.DETAILS -> {
-                markerGroup = MarkerGroup.TRADE
-                markerType = MarkerType.FOUNTAIN_SQUARE
-            }
+            CityStage.DETAILS -> markerType = MarkerType.CITY_FOUNTAIN
             else -> Unit
         }
         editQuiet { it.copy(stage = newStage.number) }
@@ -928,8 +962,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val current = project ?: return emptyList()
         val base = min(current.worldWidth, current.worldHeight)
         val scale = if (buildingType.big) 1.7f else 1f
-        val width = base * 0.016f * scale
-        val height = base * 0.012f * scale
+        val unit = base * 0.016f * scale
+        val width = unit * buildingType.shape.widthScale
+        val height = unit * buildingType.shape.depthScale
         val noise = Geometry.hashNoise(center.x.toInt(), center.y.toInt(), current.style.seed)
         val angle = (noise - 0.5f) * 0.5f
         return rotatedRect(center, width, height, angle)

@@ -311,6 +311,16 @@ class MapRenderer {
                 LineFeatureType.PALISADE -> drawWallLine(canvas, feature, cam, u)
                 LineFeatureType.MOAT -> drawRiver(canvas, feature, cam, u)
                 LineFeatureType.EMBANKMENT -> drawRidge(canvas, feature, cam, u, project.style.seed, false)
+                LineFeatureType.HIGH_WALL,
+                LineFeatureType.DOUBLE_WALL,
+                LineFeatureType.TOWERED_WALL,
+                LineFeatureType.RUINED_WALL,
+                LineFeatureType.WOODEN_WALL,
+                LineFeatureType.CITY_AQUEDUCT -> drawWallLine(canvas, feature, cam, u)
+                LineFeatureType.DRY_MOAT,
+                LineFeatureType.SPIKE_DITCH -> drawCanyon(canvas, feature, cam, u)
+                LineFeatureType.HEDGE_WALL -> drawForestBelt(canvas, feature, cam, u, project.style.seed)
+                LineFeatureType.MAGIC_WARD -> drawDots(canvas, feature, cam, u)
             }
             if (feature.name.isNotBlank()) {
                 val size = 13f * u * cam.scale.coerceIn(0.7f, 1.8f)

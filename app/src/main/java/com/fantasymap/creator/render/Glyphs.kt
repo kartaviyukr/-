@@ -111,7 +111,204 @@ class Glyphs {
             Glyph.CATTLE -> cattle(canvas, cx, cy, s, fill, stroke)
             Glyph.OIL -> oilDrop(canvas, cx, cy, s, fill, stroke)
             Glyph.INN_SIGN -> innSign(canvas, cx, cy, s, fill, stroke)
+            Glyph.FOUNTAIN -> fountain(canvas, cx, cy, s, fill, stroke)
+            Glyph.LANTERN -> lantern(canvas, cx, cy, s, fill, stroke)
+            Glyph.SIGNPOST -> signpost(canvas, cx, cy, s, fill, stroke)
+            Glyph.CART -> cart(canvas, cx, cy, s, fill, stroke)
+            Glyph.STALL -> stall(canvas, cx, cy, s, fill, stroke)
+            Glyph.BARREL -> barrel(canvas, cx, cy, s, fill, stroke)
+            Glyph.PILLORY -> pillory(canvas, cx, cy, s, fill, stroke)
+            Glyph.GALLOWS -> gallows(canvas, cx, cy, s, stroke)
+            Glyph.CLOCK -> clock(canvas, cx, cy, s, fill, stroke)
+            Glyph.BELL -> bell(canvas, cx, cy, s, fill, stroke)
+            Glyph.HATCH -> hatch(canvas, cx, cy, s, fill, stroke)
+            Glyph.PLAQUE -> plaque(canvas, cx, cy, s, fill, stroke)
+            Glyph.DRAWBRIDGE_GLYPH -> drawbridge(canvas, cx, cy, s, fill, stroke)
+            Glyph.PORTCULLIS -> portcullis(canvas, cx, cy, s, fill, stroke)
         }
+    }
+
+    // ---------- городские мелочи ----------
+
+    private fun fountain(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s, cy + s * 0.25f, cx + s, cy + s)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawLine(cx, cy + s * 0.4f, cx, cy - s * 0.3f, stroke)
+        rect.set(cx - s * 0.5f, cy - s * 0.45f, cx + s * 0.5f, cy + s * 0.05f)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawLine(cx, cy - s * 0.45f, cx - s * 0.5f, cy - s * 1.1f, stroke)
+        canvas.drawLine(cx, cy - s * 0.45f, cx + s * 0.5f, cy - s * 1.1f, stroke)
+        canvas.drawLine(cx, cy - s * 0.5f, cx, cy - s * 1.2f, stroke)
+    }
+
+    private fun lantern(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx, cy + s, cx, cy - s * 0.35f, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.45f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.45f, cy - s * 0.35f)
+        path.lineTo(cx + s * 0.3f, cy - s * 0.95f)
+        path.lineTo(cx - s * 0.3f, cy - s * 0.95f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx, cy - s * 0.95f, cx, cy - s * 1.2f, stroke)
+        canvas.drawLine(cx - s * 0.6f, cy + s, cx + s * 0.6f, cy + s, stroke)
+    }
+
+    private fun signpost(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx, cy + s, cx, cy - s * 1.1f, stroke)
+        path.reset()
+        path.moveTo(cx, cy - s * 0.95f)
+        path.lineTo(cx + s, cy - s * 0.95f)
+        path.lineTo(cx + s * 1.25f, cy - s * 0.65f)
+        path.lineTo(cx + s, cy - s * 0.35f)
+        path.lineTo(cx, cy - s * 0.35f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        path.reset()
+        path.moveTo(cx, cy - s * 0.2f)
+        path.lineTo(cx - s * 0.85f, cy - s * 0.2f)
+        path.lineTo(cx - s * 1.1f, cy + s * 0.1f)
+        path.lineTo(cx - s * 0.85f, cy + s * 0.4f)
+        path.lineTo(cx, cy + s * 0.4f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+    }
+
+    private fun cart(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.85f, cy - s * 0.45f, cx + s * 0.75f, cy + s * 0.25f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawCircle(cx - s * 0.45f, cy + s * 0.6f, s * 0.35f, fill)
+        canvas.drawCircle(cx - s * 0.45f, cy + s * 0.6f, s * 0.35f, stroke)
+        canvas.drawCircle(cx + s * 0.4f, cy + s * 0.6f, s * 0.35f, fill)
+        canvas.drawCircle(cx + s * 0.4f, cy + s * 0.6f, s * 0.35f, stroke)
+        canvas.drawLine(cx + s * 0.75f, cy - s * 0.3f, cx + s * 1.25f, cy - s * 0.55f, stroke)
+    }
+
+    private fun stall(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.8f, cy + s * 0.1f, cx + s * 0.8f, cy + s * 0.9f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        path.reset()
+        path.moveTo(cx - s * 1.1f, cy + s * 0.1f)
+        path.lineTo(cx - s * 0.75f, cy - s * 0.65f)
+        path.lineTo(cx + s * 0.75f, cy - s * 0.65f)
+        path.lineTo(cx + s * 1.1f, cy + s * 0.1f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.25f, cy - s * 0.65f, cx - s * 0.45f, cy + s * 0.1f, stroke)
+        canvas.drawLine(cx + s * 0.25f, cy - s * 0.65f, cx + s * 0.45f, cy + s * 0.1f, stroke)
+    }
+
+    private fun barrel(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.6f, cy - s * 0.75f, cx + s * 0.6f, cy + s * 0.9f)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawLine(cx - s * 0.58f, cy - s * 0.2f, cx + s * 0.58f, cy - s * 0.2f, stroke)
+        canvas.drawLine(cx - s * 0.58f, cy + s * 0.35f, cx + s * 0.58f, cy + s * 0.35f, stroke)
+        rect.set(cx - s * 0.42f, cy - s * 0.95f, cx + s * 0.42f, cy - s * 0.55f)
+        canvas.drawOval(rect, stroke)
+    }
+
+    private fun pillory(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx, cy + s, cx, cy - s * 0.55f, stroke)
+        rect.set(cx - s * 0.9f, cy - s * 0.95f, cx + s * 0.9f, cy - s * 0.5f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawCircle(cx, cy - s * 0.72f, s * 0.18f, stroke)
+        canvas.drawCircle(cx - s * 0.55f, cy - s * 0.72f, s * 0.13f, stroke)
+        canvas.drawCircle(cx + s * 0.55f, cy - s * 0.72f, s * 0.13f, stroke)
+        canvas.drawLine(cx - s * 0.6f, cy + s, cx + s * 0.6f, cy + s, stroke)
+    }
+
+    private fun gallows(canvas: Canvas, cx: Float, cy: Float, s: Float, stroke: Paint) {
+        canvas.drawLine(cx - s * 0.7f, cy + s, cx - s * 0.7f, cy - s * 1.1f, stroke)
+        canvas.drawLine(cx - s * 0.7f, cy - s * 1.1f, cx + s * 0.75f, cy - s * 1.1f, stroke)
+        canvas.drawLine(cx - s * 0.7f, cy - s * 0.7f, cx - s * 0.25f, cy - s * 1.1f, stroke)
+        canvas.drawLine(cx + s * 0.55f, cy - s * 1.1f, cx + s * 0.55f, cy - s * 0.4f, stroke)
+        canvas.drawCircle(cx + s * 0.55f, cy - s * 0.22f, s * 0.2f, stroke)
+        canvas.drawLine(cx - s * 1.05f, cy + s, cx + s * 0.4f, cy + s, stroke)
+    }
+
+    private fun clock(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawCircle(cx, cy, s * 0.95f, fill)
+        canvas.drawCircle(cx, cy, s * 0.95f, stroke)
+        canvas.drawLine(cx, cy, cx, cy - s * 0.6f, stroke)
+        canvas.drawLine(cx, cy, cx + s * 0.45f, cy + s * 0.2f, stroke)
+        canvas.drawLine(cx, cy - s * 0.95f, cx, cy - s * 0.75f, stroke)
+        canvas.drawLine(cx + s * 0.95f, cy, cx + s * 0.75f, cy, stroke)
+    }
+
+    private fun bell(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.8f, cy + s * 0.55f)
+        path.quadTo(cx - s * 0.7f, cy - s * 0.85f, cx, cy - s * 0.95f)
+        path.quadTo(cx + s * 0.7f, cy - s * 0.85f, cx + s * 0.8f, cy + s * 0.55f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.95f, cy + s * 0.55f, cx + s * 0.95f, cy + s * 0.55f, stroke)
+        canvas.drawCircle(cx, cy + s * 0.8f, s * 0.18f, fill)
+        canvas.drawCircle(cx, cy + s * 0.8f, s * 0.18f, stroke)
+    }
+
+    private fun hatch(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 0.85f, cy - s * 0.55f, cx + s * 0.85f, cy + s * 0.55f)
+        canvas.drawOval(rect, fill)
+        canvas.drawOval(rect, stroke)
+        canvas.drawLine(cx - s * 0.5f, cy - s * 0.2f, cx + s * 0.5f, cy - s * 0.2f, stroke)
+        canvas.drawLine(cx - s * 0.5f, cy + s * 0.15f, cx + s * 0.5f, cy + s * 0.15f, stroke)
+    }
+
+    private fun plaque(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx - s * 0.5f, cy + s, cx - s * 0.5f, cy + s * 0.4f, stroke)
+        canvas.drawLine(cx + s * 0.5f, cy + s, cx + s * 0.5f, cy + s * 0.4f, stroke)
+        rect.set(cx - s * 0.9f, cy - s * 0.85f, cx + s * 0.9f, cy + s * 0.45f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawLine(cx - s * 0.6f, cy - s * 0.5f, cx + s * 0.6f, cy - s * 0.5f, stroke)
+        canvas.drawLine(cx - s * 0.6f, cy - s * 0.15f, cx + s * 0.6f, cy - s * 0.15f, stroke)
+        canvas.drawLine(cx - s * 0.6f, cy + s * 0.2f, cx + s * 0.25f, cy + s * 0.2f, stroke)
+    }
+
+    private fun drawbridge(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        rect.set(cx - s * 1.1f, cy - s * 0.95f, cx - s * 0.6f, cy + s * 0.9f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        path.reset()
+        path.moveTo(cx - s * 0.6f, cy + s * 0.55f)
+        path.lineTo(cx + s * 0.95f, cy - s * 0.35f)
+        path.lineTo(cx + s * 1.1f, cy - s * 0.02f)
+        path.lineTo(cx - s * 0.55f, cy + s * 0.9f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        canvas.drawLine(cx - s * 0.85f, cy - s * 0.95f, cx + s * 0.95f, cy - s * 0.35f, stroke)
+    }
+
+    private fun portcullis(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        path.reset()
+        path.moveTo(cx - s * 0.95f, cy + s * 0.95f)
+        path.lineTo(cx - s * 0.95f, cy - s * 0.2f)
+        rect.set(cx - s * 0.95f, cy - s * 1.15f, cx + s * 0.95f, cy + s * 0.75f)
+        path.arcTo(rect, 180f, 180f)
+        path.lineTo(cx + s * 0.95f, cy + s * 0.95f)
+        path.close()
+        canvas.drawPath(path, fill)
+        canvas.drawPath(path, stroke)
+        var x = cx - s * 0.6f
+        while (x <= cx + s * 0.6f + 0.01f) {
+            canvas.drawLine(x, cy - s * 0.6f, x, cy + s * 0.95f, stroke)
+            x += s * 0.4f
+        }
+        canvas.drawLine(cx - s * 0.9f, cy - s * 0.15f, cx + s * 0.9f, cy - s * 0.15f, stroke)
+        canvas.drawLine(cx - s * 0.9f, cy + s * 0.4f, cx + s * 0.9f, cy + s * 0.4f, stroke)
     }
 
     /** Вывеска трактира: столб, кронштейн и качающаяся доска. */

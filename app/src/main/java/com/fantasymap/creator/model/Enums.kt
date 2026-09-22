@@ -175,7 +175,9 @@ enum class Glyph {
     ARCH, CAULDRON, TOTEM, BONES, FLOATING_ROCK, RUNE_STONE,
     INGOT, COINS, GEM, SALT, COAL, MARBLE, TIMBER, WHEAT, FISH, GRAPES, WOOL,
     HORSESHOE, CATTLE, SPICE, SILK, FUR, AMBER, PEARL, OIL, SULFUR, HERBS,
-    STONE_BLOCKS, MITHRIL, INN_SIGN
+    STONE_BLOCKS, MITHRIL, INN_SIGN,
+    FOUNTAIN, LANTERN, SIGNPOST, CART, STALL, BARREL, PILLORY, GALLOWS,
+    CLOCK, BELL, HATCH, PLAQUE, DRAWBRIDGE_GLYPH, PORTCULLIS
 }
 
 enum class MarkerGroup(val title: String) {
@@ -192,15 +194,23 @@ enum class MarkerGroup(val title: String) {
     WONDER("Чудеса света"),
     FAUNA("Звери и гнёзда"),
     GOODS("Ресурсы и товары"),
-    ATLAS("Переходы между картами")
+    ATLAS("Переходы между картами"),
+    CITY_WALLS("Ворота, башни, стены"),
+    CITY_STREET("Улица и площадь"),
+    CITY_SERVICE("Городские службы"),
+    CITY_SPECIAL("Особые места города")
 }
 
 /** Все виды объектов фэнтезийного мира, которые можно поставить на карту. */
+/** Где уместен объект: на карте мира, на карте города или везде. */
+enum class MarkerScope { WORLD, CITY, BOTH }
+
 enum class MarkerType(
     val title: String,
     val group: MarkerGroup,
     val glyph: Glyph,
-    val defaultScale: Float = 1f
+    val defaultScale: Float = 1f,
+    val scope: MarkerScope = MarkerScope.WORLD
 ) {
     // Поселения
     CAPITAL("Столица", MarkerGroup.SETTLEMENT, Glyph.CAPITAL, 1.5f),
@@ -238,8 +248,8 @@ enum class MarkerType(
     SHIPYARD("Верфь", MarkerGroup.PORT, Glyph.SHIP),
     LIGHTHOUSE("Маяк", MarkerGroup.PORT, Glyph.LIGHTHOUSE),
     FERRY("Переправа", MarkerGroup.PORT, Glyph.SHIP, 0.85f),
-    BRIDGE("Мост", MarkerGroup.PORT, Glyph.BRIDGE),
-    FORD("Брод", MarkerGroup.PORT, Glyph.BRIDGE, 0.8f),
+    BRIDGE("Мост", MarkerGroup.PORT, Glyph.BRIDGE, 1f, MarkerScope.BOTH),
+    FORD("Брод", MarkerGroup.PORT, Glyph.BRIDGE, 0.8f, MarkerScope.BOTH),
     TOLL_GATE("Таможенная застава", MarkerGroup.PORT, Glyph.GATE, 0.85f),
 
     // Торговля и ремёсла
@@ -500,13 +510,114 @@ enum class MarkerType(
     RES_OIL("Масло", MarkerGroup.GOODS, Glyph.OIL, 0.85f),
 
     // Переход на другую карту
-    MAP_LINK("Подробная карта", MarkerGroup.ATLAS, Glyph.BOOK, 1.05f);
+    MAP_LINK("Подробная карта", MarkerGroup.ATLAS, Glyph.BOOK, 1.05f, MarkerScope.BOTH),
+
+    // Ворота, башни и укрепления города
+    CITY_MAIN_GATE("Главные ворота", MarkerGroup.CITY_WALLS, Glyph.GATE, 1.25f, MarkerScope.CITY),
+    CITY_SIDE_GATE("Боковые ворота", MarkerGroup.CITY_WALLS, Glyph.GATE, 1f, MarkerScope.CITY),
+    CITY_WATER_GATE("Водяные ворота", MarkerGroup.CITY_WALLS, Glyph.GATE, 1.05f, MarkerScope.CITY),
+    CITY_POSTERN("Потайная калитка", MarkerGroup.CITY_WALLS, Glyph.GATE, 0.75f, MarkerScope.CITY),
+    CITY_TRAITOR_GATE("Ворота изменников", MarkerGroup.CITY_WALLS, Glyph.GATE, 0.9f, MarkerScope.CITY),
+    CITY_TRIUMPH_GATE("Триумфальные ворота", MarkerGroup.CITY_WALLS, Glyph.ARCH, 1.2f, MarkerScope.CITY),
+    CITY_DRAWBRIDGE("Подъёмный мост", MarkerGroup.CITY_WALLS, Glyph.DRAWBRIDGE_GLYPH, 1.05f, MarkerScope.CITY),
+    CITY_PORTCULLIS("Опускная решётка", MarkerGroup.CITY_WALLS, Glyph.PORTCULLIS, 1f, MarkerScope.CITY),
+    CITY_BARBICAN("Барбакан", MarkerGroup.CITY_WALLS, Glyph.CASTLE, 1.2f, MarkerScope.CITY),
+    CITY_CORNER_TOWER("Угловая башня", MarkerGroup.CITY_WALLS, Glyph.TOWER, 1.05f, MarkerScope.CITY),
+    CITY_ROUND_TOWER("Круглая башня", MarkerGroup.CITY_WALLS, Glyph.TOWER, 1f, MarkerScope.CITY),
+    CITY_SQUARE_TOWER("Квадратная башня", MarkerGroup.CITY_WALLS, Glyph.TOWER, 1f, MarkerScope.CITY),
+    CITY_WATCH_TOWER("Дозорная вышка", MarkerGroup.CITY_WALLS, Glyph.TOWER, 0.9f, MarkerScope.CITY),
+    CITY_SIGNAL_TOWER("Сигнальная башня", MarkerGroup.CITY_WALLS, Glyph.BEACON, 1f, MarkerScope.CITY),
+    CITY_BASTION("Бастион", MarkerGroup.CITY_WALLS, Glyph.CASTLE, 1.15f, MarkerScope.CITY),
+    CITY_WALL_BREACH("Пролом в стене", MarkerGroup.CITY_WALLS, Glyph.RUINS, 1f, MarkerScope.CITY),
+    CITY_GUARD_POST("Пост стражи", MarkerGroup.CITY_WALLS, Glyph.SWORD, 0.85f, MarkerScope.CITY),
+    CITY_TOLL_BAR("Шлагбаум", MarkerGroup.CITY_WALLS, Glyph.GATE, 0.8f, MarkerScope.CITY),
+
+    // Улица и площадь
+    CITY_WELL("Колодец", MarkerGroup.CITY_STREET, Glyph.WELL, 0.9f, MarkerScope.CITY),
+    CITY_FOUNTAIN("Фонтан", MarkerGroup.CITY_STREET, Glyph.FOUNTAIN, 1f, MarkerScope.CITY),
+    CITY_PUMP("Водоразборная колонка", MarkerGroup.CITY_STREET, Glyph.WELL, 0.75f, MarkerScope.CITY),
+    CITY_STATUE("Статуя", MarkerGroup.CITY_STREET, Glyph.STATUE, 1f, MarkerScope.CITY),
+    CITY_HORSE_STATUE("Конная статуя", MarkerGroup.CITY_STREET, Glyph.STATUE, 1.1f, MarkerScope.CITY),
+    CITY_MONUMENT("Памятная стела", MarkerGroup.CITY_STREET, Glyph.OBELISK, 1f, MarkerScope.CITY),
+    CITY_LANTERN("Фонарный столб", MarkerGroup.CITY_STREET, Glyph.LANTERN, 0.7f, MarkerScope.CITY),
+    CITY_SIGNPOST("Указатель", MarkerGroup.CITY_STREET, Glyph.SIGNPOST, 0.75f, MarkerScope.CITY),
+    CITY_CLOCK("Городские часы", MarkerGroup.CITY_STREET, Glyph.CLOCK, 0.95f, MarkerScope.CITY),
+    CITY_SUNDIAL("Солнечные часы", MarkerGroup.CITY_STREET, Glyph.CLOCK, 0.8f, MarkerScope.CITY),
+    CITY_BELL("Колокол", MarkerGroup.CITY_STREET, Glyph.BELL, 0.9f, MarkerScope.CITY),
+    CITY_STALL("Торговый лоток", MarkerGroup.CITY_STREET, Glyph.STALL, 0.85f, MarkerScope.CITY),
+    CITY_TENT("Торговый шатёр", MarkerGroup.CITY_STREET, Glyph.CAMP, 0.9f, MarkerScope.CITY),
+    CITY_CART("Телега", MarkerGroup.CITY_STREET, Glyph.CART, 0.8f, MarkerScope.CITY),
+    CITY_BARRELS("Бочки", MarkerGroup.CITY_STREET, Glyph.BARREL, 0.75f, MarkerScope.CITY),
+    CITY_WOODPILE("Поленница", MarkerGroup.CITY_STREET, Glyph.TIMBER, 0.75f, MarkerScope.CITY),
+    CITY_BONFIRE("Костёр", MarkerGroup.CITY_STREET, Glyph.BEACON, 0.8f, MarkerScope.CITY),
+    CITY_TREE("Дерево на площади", MarkerGroup.CITY_STREET, Glyph.TREE, 0.95f, MarkerScope.CITY),
+    CITY_FLOWERBED("Клумба", MarkerGroup.CITY_STREET, Glyph.FLOWER, 0.75f, MarkerScope.CITY),
+    CITY_HITCHING("Коновязь", MarkerGroup.CITY_STREET, Glyph.HORSESHOE, 0.75f, MarkerScope.CITY),
+    CITY_NOTICE("Доска объявлений", MarkerGroup.CITY_STREET, Glyph.PLAQUE, 0.8f, MarkerScope.CITY),
+
+    // Городские службы
+    CITY_PILLORY("Позорный столб", MarkerGroup.CITY_SERVICE, Glyph.PILLORY, 0.85f, MarkerScope.CITY),
+    CITY_GALLOWS("Виселица", MarkerGroup.CITY_SERVICE, Glyph.GALLOWS, 0.95f, MarkerScope.CITY),
+    CITY_BLOCK("Плаха", MarkerGroup.CITY_SERVICE, Glyph.STONE_BLOCKS, 0.8f, MarkerScope.CITY),
+    CITY_STOCKS("Колодки", MarkerGroup.CITY_SERVICE, Glyph.PILLORY, 0.75f, MarkerScope.CITY),
+    CITY_HERALD("Помост глашатая", MarkerGroup.CITY_SERVICE, Glyph.PLAQUE, 0.85f, MarkerScope.CITY),
+    CITY_DECREE("Доска указов", MarkerGroup.CITY_SERVICE, Glyph.PLAQUE, 0.8f, MarkerScope.CITY),
+    CITY_WEIGH("Городские весы", MarkerGroup.CITY_SERVICE, Glyph.MARKET, 0.85f, MarkerScope.CITY),
+    CITY_SEWER("Сточная канава", MarkerGroup.CITY_SERVICE, Glyph.HATCH, 0.8f, MarkerScope.CITY),
+    CITY_SEWER_HATCH("Люк в подземелье", MarkerGroup.CITY_SERVICE, Glyph.HATCH, 0.8f, MarkerScope.CITY),
+    CITY_DUMP("Мусорная куча", MarkerGroup.CITY_SERVICE, Glyph.ROCK, 0.8f, MarkerScope.CITY),
+    CITY_PIER("Причал", MarkerGroup.CITY_SERVICE, Glyph.ANCHOR, 0.9f, MarkerScope.CITY),
+    CITY_BOAT("Лодки", MarkerGroup.CITY_SERVICE, Glyph.SHIP, 0.8f, MarkerScope.CITY),
+    CITY_FERRY("Переправа", MarkerGroup.CITY_SERVICE, Glyph.SHIP, 0.85f, MarkerScope.CITY),
+    CITY_FOOTBRIDGE("Мостки", MarkerGroup.CITY_SERVICE, Glyph.BRIDGE, 0.8f, MarkerScope.CITY),
+    CITY_MILESTONE("Верстовой столб", MarkerGroup.CITY_SERVICE, Glyph.OBELISK, 0.7f, MarkerScope.CITY),
+    CITY_DOGHOUSE("Псарня", MarkerGroup.CITY_SERVICE, Glyph.BEAST, 0.75f, MarkerScope.CITY),
+    CITY_COOP("Курятник", MarkerGroup.CITY_SERVICE, Glyph.NEST, 0.7f, MarkerScope.CITY),
+    CITY_PIGSTY("Свинарник", MarkerGroup.CITY_SERVICE, Glyph.CATTLE, 0.75f, MarkerScope.CITY),
+    CITY_GARDEN_PLOT("Огород", MarkerGroup.CITY_SERVICE, Glyph.FARM, 0.8f, MarkerScope.CITY),
+
+    // Особые места города
+    CITY_FOUNDER("Статуя основателя", MarkerGroup.CITY_SPECIAL, Glyph.STATUE, 1.2f, MarkerScope.CITY),
+    CITY_DRAGON_FOUNTAIN("Фонтан с драконом", MarkerGroup.CITY_SPECIAL, Glyph.FOUNTAIN, 1.15f, MarkerScope.CITY),
+    CITY_WISH_STONE("Камень желаний", MarkerGroup.CITY_SPECIAL, Glyph.RUNE_STONE, 0.9f, MarkerScope.CITY),
+    CITY_HOLY_SPRING("Чудотворный источник", MarkerGroup.CITY_SPECIAL, Glyph.WELL, 0.95f, MarkerScope.CITY),
+    CITY_CROSSROAD_ALTAR("Алтарь на перекрёстке", MarkerGroup.CITY_SPECIAL, Glyph.OBELISK, 0.85f, MarkerScope.CITY),
+    CITY_MEMORIAL("Поминальный камень", MarkerGroup.CITY_SPECIAL, Glyph.GRAVE, 0.85f, MarkerScope.CITY),
+    CITY_PLAGUE_PIT("Чумная яма", MarkerGroup.CITY_SPECIAL, Glyph.BONES, 1f, MarkerScope.CITY),
+    CITY_HANGING_TREE("Дерево висельников", MarkerGroup.CITY_SPECIAL, Glyph.DEAD_TREE, 1f, MarkerScope.CITY),
+    CITY_DUEL_GROUND("Место поединков", MarkerGroup.CITY_SPECIAL, Glyph.SWORD, 0.95f, MarkerScope.CITY),
+    CITY_CATACOMB_ENTRY("Вход в катакомбы", MarkerGroup.CITY_SPECIAL, Glyph.DUNGEON, 1f, MarkerScope.CITY),
+    CITY_SECRET_WAY("Тайный лаз", MarkerGroup.CITY_SPECIAL, Glyph.HATCH, 0.85f, MarkerScope.CITY),
+    CITY_GHOST_GATE("Ворота призраков", MarkerGroup.CITY_SPECIAL, Glyph.PORTAL, 1.1f, MarkerScope.CITY),
+    CITY_CURSED_HOUSE("Проклятый дом", MarkerGroup.CITY_SPECIAL, Glyph.ANOMALY, 1f, MarkerScope.CITY),
+    CITY_THIEVES_MARK("Метка воров", MarkerGroup.CITY_SPECIAL, Glyph.EYE, 0.8f, MarkerScope.CITY),
+    CITY_GUILD_SIGN("Знак гильдии", MarkerGroup.CITY_SPECIAL, Glyph.BANNER, 0.85f, MarkerScope.CITY),
+    CITY_LEY_STONE("Камень силы", MarkerGroup.CITY_SPECIAL, Glyph.CRYSTAL, 0.95f, MarkerScope.CITY),
+    CITY_SLAVE_BLOCK("Помост работорговца", MarkerGroup.CITY_SPECIAL, Glyph.PILLORY, 0.9f, MarkerScope.CITY),
+    CITY_FAIR_GROUND("Ярмарочный помост", MarkerGroup.CITY_SPECIAL, Glyph.STALL, 0.95f, MarkerScope.CITY),
+    CITY_BEAR_PIT("Медвежья яма", MarkerGroup.CITY_SPECIAL, Glyph.MONSTER, 1f, MarkerScope.CITY),
+    CITY_PUPPET_STAGE("Балаган", MarkerGroup.CITY_SPECIAL, Glyph.ARENA, 0.9f, MarkerScope.CITY);
 
     val isSettlement: Boolean
         get() = group == MarkerGroup.SETTLEMENT
 
+    /** Уместен ли объект на карте такого вида. */
+    fun fits(kind: MapKind): Boolean = when (scope) {
+        MarkerScope.BOTH -> true
+        MarkerScope.CITY -> kind == MapKind.CITY
+        MarkerScope.WORLD -> kind == MapKind.WORLD
+    }
+
     companion object {
         fun byGroup(group: MarkerGroup): List<MarkerType> = MarkerType.entries.filter { it.group == group }
+
+        /** Объекты этой группы, уместные на карте такого вида. */
+        fun byGroup(group: MarkerGroup, kind: MapKind): List<MarkerType> =
+            MarkerType.entries.filter { it.group == group && it.fits(kind) }
+
+        /** Группы, в которых есть хоть один объект для такой карты. */
+        fun groupsFor(kind: MapKind): List<MarkerGroup> =
+            MarkerGroup.entries.filter { group -> MarkerType.entries.any { it.group == group && it.fits(kind) } }
     }
 }
 
@@ -542,7 +653,17 @@ enum class LineFeatureType(
     INNER_WALL("Внутренняя стена", 0xFF7A7164.toInt(), 4f),
     PALISADE("Частокол", 0xFF7E6A4E.toInt(), 3f),
     MOAT("Ров", 0xFF5E7E92.toInt(), 7f),
-    EMBANKMENT("Земляной вал", 0xFF8E7E62.toInt(), 8f)
+    EMBANKMENT("Земляной вал", 0xFF8E7E62.toInt(), 8f),
+    HIGH_WALL("Высокая стена", 0xFF655C50.toInt(), 8f),
+    DOUBLE_WALL("Двойная стена", 0xFF6A6154.toInt(), 10f),
+    TOWERED_WALL("Стена с башнями", 0xFF6E6558.toInt(), 7f),
+    RUINED_WALL("Разрушенная стена", 0xFF867C6E.toInt(), 5f),
+    WOODEN_WALL("Бревенчатая стена", 0xFF7E6A4E.toInt(), 4f),
+    DRY_MOAT("Сухой ров", 0xFF8A7E68.toInt(), 6f),
+    SPIKE_DITCH("Ров с кольями", 0xFF7E7058.toInt(), 6f),
+    HEDGE_WALL("Живая изгородь", 0xFF5E8050.toInt(), 5f),
+    MAGIC_WARD("Магический барьер", 0xFF8E7CC0.toInt(), 5f),
+    CITY_AQUEDUCT("Городской акведук", 0xFF9A8E76.toInt(), 5f)
 }
 
 /** Пути сообщения. */
@@ -685,8 +806,18 @@ enum class Tool(val title: String, val icon: String) {
     DISTRICT("Квартал", "▦")
 }
 
+/** Каким по форме рисуется дом. */
+enum class BuildingShape(val widthScale: Float, val depthScale: Float) {
+    NORMAL(1f, 0.78f),
+    WIDE(1.35f, 0.72f),
+    LONG(2.1f, 0.6f),
+    TOWER(0.72f, 0.72f),
+    HALL(1.55f, 1.1f)
+}
+
 /** Группы городских построек. */
 enum class BuildingGroup(val title: String) {
+    TOWERS("Башни и ворота"),
     HOME("Жильё"),
     POWER("Власть и порядок"),
     FAITH("Вера"),
@@ -708,100 +839,101 @@ enum class BuildingType(
     val group: BuildingGroup,
     val color: Int,
     val mark: Glyph? = null,
-    val big: Boolean = false
+    val big: Boolean = false,
+    val shape: BuildingShape = BuildingShape.NORMAL
 ) {
     // Жильё
     HUT("Лачуга", BuildingGroup.HOME, 0xFF9C8460.toInt()),
     HOUSE("Дом горожанина", BuildingGroup.HOME, 0xFFB08A5E.toInt()),
     TALL_HOUSE("Высокий дом", BuildingGroup.HOME, 0xFFA87F58.toInt()),
     RICH_HOUSE("Богатый дом", BuildingGroup.HOME, 0xFFC09A62.toInt()),
-    MANOR("Особняк", BuildingGroup.HOME, 0xFFC8A46C.toInt(), null, true),
-    TENEMENT("Доходный дом", BuildingGroup.HOME, 0xFF9E8358.toInt()),
-    TOWER_HOUSE("Дом-башня", BuildingGroup.HOME, 0xFFA98B66.toInt(), Glyph.TOWER),
-    FARMSTEAD_HOUSE("Усадьба с двором", BuildingGroup.HOME, 0xFFB6976A.toInt(), null, true),
-    SHACK_ROW("Ряд бараков", BuildingGroup.HOME, 0xFF8F7A58.toInt()),
+    MANOR("Особняк", BuildingGroup.HOME, 0xFFC8A46C.toInt(), null, true, shape = BuildingShape.HALL),
+    TENEMENT("Доходный дом", BuildingGroup.HOME, 0xFF9E8358.toInt(), shape = BuildingShape.LONG),
+    TOWER_HOUSE("Дом-башня", BuildingGroup.HOME, 0xFFA98B66.toInt(), Glyph.TOWER, shape = BuildingShape.TOWER),
+    FARMSTEAD_HOUSE("Усадьба с двором", BuildingGroup.HOME, 0xFFB6976A.toInt(), null, true, shape = BuildingShape.HALL),
+    SHACK_ROW("Ряд бараков", BuildingGroup.HOME, 0xFF8F7A58.toInt(), shape = BuildingShape.LONG),
 
     // Власть
-    TOWN_HALL("Ратуша", BuildingGroup.POWER, 0xFF9A6E4A.toInt(), Glyph.BANNER, true),
-    PALACE("Дворец", BuildingGroup.POWER, 0xFFB07A4E.toInt(), Glyph.CROWN, true),
-    KEEP("Донжон", BuildingGroup.POWER, 0xFF7E6B58.toInt(), Glyph.CASTLE, true),
+    TOWN_HALL("Ратуша", BuildingGroup.POWER, 0xFF9A6E4A.toInt(), Glyph.BANNER, true, shape = BuildingShape.HALL),
+    PALACE("Дворец", BuildingGroup.POWER, 0xFFB07A4E.toInt(), Glyph.CROWN, true, shape = BuildingShape.HALL),
+    KEEP("Донжон", BuildingGroup.POWER, 0xFF7E6B58.toInt(), Glyph.CASTLE, true, shape = BuildingShape.HALL),
     GUARD_HOUSE("Дом стражи", BuildingGroup.POWER, 0xFF8A7256.toInt(), Glyph.SWORD),
-    BARRACKS_HOUSE("Казармы", BuildingGroup.POWER, 0xFF87725A.toInt(), Glyph.SWORD, true),
-    COURT("Суд", BuildingGroup.POWER, 0xFF9E7C56.toInt(), Glyph.BOOK),
+    BARRACKS_HOUSE("Казармы", BuildingGroup.POWER, 0xFF87725A.toInt(), Glyph.SWORD, true, shape = BuildingShape.LONG),
+    COURT("Суд", BuildingGroup.POWER, 0xFF9E7C56.toInt(), Glyph.BOOK, shape = BuildingShape.WIDE),
     PRISON_HOUSE("Тюрьма", BuildingGroup.POWER, 0xFF6E6154.toInt(), Glyph.GATE),
     CUSTOMS("Таможня", BuildingGroup.POWER, 0xFF97764F.toInt(), Glyph.COINS),
     MINT_HOUSE("Монетный двор", BuildingGroup.POWER, 0xFFA5824F.toInt(), Glyph.COINS),
-    GUILD_HOUSE("Дом гильдии", BuildingGroup.POWER, 0xFFA07C53.toInt(), Glyph.BANNER),
+    GUILD_HOUSE("Дом гильдии", BuildingGroup.POWER, 0xFFA07C53.toInt(), Glyph.BANNER, shape = BuildingShape.WIDE),
 
     // Вера
-    CHAPEL("Часовня", BuildingGroup.FAITH, 0xFF8E8FA0.toInt(), Glyph.TEMPLE),
-    CHURCH("Церковь", BuildingGroup.FAITH, 0xFF8288A0.toInt(), Glyph.TEMPLE, true),
-    CATHEDRAL_HOUSE("Собор", BuildingGroup.FAITH, 0xFF7B85A6.toInt(), Glyph.TEMPLE, true),
-    MONASTERY_HOUSE("Монастырь", BuildingGroup.FAITH, 0xFF8A8C96.toInt(), Glyph.TEMPLE, true),
+    CHAPEL("Часовня", BuildingGroup.FAITH, 0xFF8E8FA0.toInt(), Glyph.TEMPLE, shape = BuildingShape.NORMAL),
+    CHURCH("Церковь", BuildingGroup.FAITH, 0xFF8288A0.toInt(), Glyph.TEMPLE, true, shape = BuildingShape.HALL),
+    CATHEDRAL_HOUSE("Собор", BuildingGroup.FAITH, 0xFF7B85A6.toInt(), Glyph.TEMPLE, true, shape = BuildingShape.HALL),
+    MONASTERY_HOUSE("Монастырь", BuildingGroup.FAITH, 0xFF8A8C96.toInt(), Glyph.TEMPLE, true, shape = BuildingShape.HALL),
     SHRINE_HOUSE("Святилище", BuildingGroup.FAITH, 0xFF98939E.toInt(), Glyph.OBELISK),
     OLD_TEMPLE("Старый храм", BuildingGroup.FAITH, 0xFF8E8778.toInt(), Glyph.TEMPLE),
-    CRYPT_HOUSE("Склеп", BuildingGroup.FAITH, 0xFF7E7A72.toInt(), Glyph.GRAVE),
+    CRYPT_HOUSE("Склеп", BuildingGroup.FAITH, 0xFF7E7A72.toInt(), Glyph.GRAVE, shape = BuildingShape.TOWER),
 
     // Торговля
     SHOP("Лавка", BuildingGroup.TRADE, 0xFFB79357.toInt()),
-    MARKET_HALL("Торговые ряды", BuildingGroup.TRADE, 0xFFC0A05E.toInt(), Glyph.MARKET, true),
-    WAREHOUSE("Склад", BuildingGroup.TRADE, 0xFF9C8A62.toInt()),
+    MARKET_HALL("Торговые ряды", BuildingGroup.TRADE, 0xFFC0A05E.toInt(), Glyph.MARKET, true, shape = BuildingShape.HALL),
+    WAREHOUSE("Склад", BuildingGroup.TRADE, 0xFF9C8A62.toInt(), shape = BuildingShape.LONG),
     BANK_HOUSE("Меняльная контора", BuildingGroup.TRADE, 0xFFAE8E58.toInt(), Glyph.COINS),
-    INN_HOUSE("Постоялый двор", BuildingGroup.TRADE, 0xFFB5915C.toInt(), Glyph.INN_SIGN, true),
+    INN_HOUSE("Постоялый двор", BuildingGroup.TRADE, 0xFFB5915C.toInt(), Glyph.INN_SIGN, true, shape = BuildingShape.WIDE),
     TAVERN("Таверна", BuildingGroup.TRADE, 0xFFB08B58.toInt(), Glyph.INN_SIGN),
     BAKERY("Пекарня", BuildingGroup.TRADE, 0xFFBE9A5E.toInt(), Glyph.WHEAT),
     BUTCHER("Мясная лавка", BuildingGroup.TRADE, 0xFFA87E5A.toInt(), Glyph.CATTLE),
     FISH_MARKET("Рыбный ряд", BuildingGroup.TRADE, 0xFF9FA07A.toInt(), Glyph.FISH),
     SPICE_SHOP("Лавка пряностей", BuildingGroup.TRADE, 0xFFB78F60.toInt(), Glyph.SPICE),
-    CARAVAN_YARD("Караванный двор", BuildingGroup.TRADE, 0xFFAE9060.toInt(), Glyph.HORSESHOE, true),
+    CARAVAN_YARD("Караванный двор", BuildingGroup.TRADE, 0xFFAE9060.toInt(), Glyph.HORSESHOE, true, shape = BuildingShape.HALL),
 
     // Ремёсла
-    SMITHY("Кузница", BuildingGroup.CRAFT, 0xFF8A7360.toInt(), Glyph.FORGE),
+    SMITHY("Кузница", BuildingGroup.CRAFT, 0xFF8A7360.toInt(), Glyph.FORGE, shape = BuildingShape.WIDE),
     ARMOURER("Оружейная", BuildingGroup.CRAFT, 0xFF897462.toInt(), Glyph.SWORD),
     POTTERY("Гончарня", BuildingGroup.CRAFT, 0xFFA98262.toInt(), Glyph.POTION),
-    TANNERY("Дубильня", BuildingGroup.CRAFT, 0xFF937C5C.toInt(), Glyph.FUR),
+    TANNERY("Дубильня", BuildingGroup.CRAFT, 0xFF937C5C.toInt(), Glyph.FUR, shape = BuildingShape.WIDE),
     WEAVER("Ткацкая", BuildingGroup.CRAFT, 0xFFAE9068.toInt(), Glyph.SILK),
     DYER("Красильня", BuildingGroup.CRAFT, 0xFFA07C70.toInt(), Glyph.SPICE),
     CARPENTER("Плотницкая", BuildingGroup.CRAFT, 0xFFA98A5E.toInt(), Glyph.TIMBER),
     GLASSBLOWER("Стеклодувня", BuildingGroup.CRAFT, 0xFF93998E.toInt(), Glyph.POTION),
     JEWELLER("Ювелир", BuildingGroup.CRAFT, 0xFFBE9C5E.toInt(), Glyph.GEM),
-    MILL_HOUSE("Мельница", BuildingGroup.CRAFT, 0xFFB09068.toInt(), Glyph.MILL),
-    BREWERY("Пивоварня", BuildingGroup.CRAFT, 0xFFAD8B5A.toInt(), Glyph.GRAPES),
-    SHIPYARD_HOUSE("Верфь", BuildingGroup.CRAFT, 0xFF94836A.toInt(), Glyph.SHIP, true),
+    MILL_HOUSE("Мельница", BuildingGroup.CRAFT, 0xFFB09068.toInt(), Glyph.MILL, shape = BuildingShape.TOWER),
+    BREWERY("Пивоварня", BuildingGroup.CRAFT, 0xFFAD8B5A.toInt(), Glyph.GRAPES, shape = BuildingShape.WIDE),
+    SHIPYARD_HOUSE("Верфь", BuildingGroup.CRAFT, 0xFF94836A.toInt(), Glyph.SHIP, true, shape = BuildingShape.LONG),
     STONECUTTER("Камнерезная", BuildingGroup.CRAFT, 0xFF9A9088.toInt(), Glyph.STONE_BLOCKS),
 
     // Знание и лекарство
-    LIBRARY_HOUSE("Библиотека", BuildingGroup.KNOWLEDGE, 0xFF8E8468.toInt(), Glyph.BOOK, true),
-    SCHOOL("Школа", BuildingGroup.KNOWLEDGE, 0xFF9C8E6C.toInt(), Glyph.BOOK),
-    UNIVERSITY_HOUSE("Университет", BuildingGroup.KNOWLEDGE, 0xFF93876A.toInt(), Glyph.BOOK, true),
-    OBSERVATORY_HOUSE("Обсерватория", BuildingGroup.KNOWLEDGE, 0xFF8A8C9C.toInt(), Glyph.OBSERVATORY),
+    LIBRARY_HOUSE("Библиотека", BuildingGroup.KNOWLEDGE, 0xFF8E8468.toInt(), Glyph.BOOK, true, shape = BuildingShape.HALL),
+    SCHOOL("Школа", BuildingGroup.KNOWLEDGE, 0xFF9C8E6C.toInt(), Glyph.BOOK, shape = BuildingShape.WIDE),
+    UNIVERSITY_HOUSE("Университет", BuildingGroup.KNOWLEDGE, 0xFF93876A.toInt(), Glyph.BOOK, true, shape = BuildingShape.HALL),
+    OBSERVATORY_HOUSE("Обсерватория", BuildingGroup.KNOWLEDGE, 0xFF8A8C9C.toInt(), Glyph.OBSERVATORY, shape = BuildingShape.TOWER),
     HEALER("Лекарня", BuildingGroup.KNOWLEDGE, 0xFFA69882.toInt(), Glyph.HERBS),
-    HOSPITAL("Госпиталь", BuildingGroup.KNOWLEDGE, 0xFFA0947E.toInt(), Glyph.HERBS, true),
+    HOSPITAL("Госпиталь", BuildingGroup.KNOWLEDGE, 0xFFA0947E.toInt(), Glyph.HERBS, true, shape = BuildingShape.LONG),
     APOTHECARY("Аптека", BuildingGroup.KNOWLEDGE, 0xFFA99A76.toInt(), Glyph.POTION),
 
     // Отдых и зрелища
-    BATH_HOUSE_CITY("Бани", BuildingGroup.FUN, 0xFF93A0A4.toInt(), Glyph.WELL),
-    THEATRE_HOUSE("Театр", BuildingGroup.FUN, 0xFFA98C74.toInt(), Glyph.ARENA, true),
-    ARENA_HOUSE("Арена", BuildingGroup.FUN, 0xFFA1906E.toInt(), Glyph.ARENA, true),
+    BATH_HOUSE_CITY("Бани", BuildingGroup.FUN, 0xFF93A0A4.toInt(), Glyph.WELL, shape = BuildingShape.WIDE),
+    THEATRE_HOUSE("Театр", BuildingGroup.FUN, 0xFFA98C74.toInt(), Glyph.ARENA, true, shape = BuildingShape.HALL),
+    ARENA_HOUSE("Арена", BuildingGroup.FUN, 0xFFA1906E.toInt(), Glyph.ARENA, true, shape = BuildingShape.HALL),
     GAMBLING_DEN("Игорный дом", BuildingGroup.FUN, 0xFF9C7E66.toInt(), Glyph.COINS),
     PLEASURE_HOUSE("Дом утех", BuildingGroup.FUN, 0xFFB0808A.toInt()),
     MUSIC_HALL("Дом музыки", BuildingGroup.FUN, 0xFFA98E84.toInt()),
 
     // Городские службы
-    STABLE("Конюшня", BuildingGroup.SERVICE, 0xFF9E8760.toInt(), Glyph.HORSESHOE),
-    CART_YARD("Каретный двор", BuildingGroup.SERVICE, 0xFF9A8A6A.toInt(), Glyph.HORSESHOE),
-    DOCK_HOUSE("Пакгауз у причала", BuildingGroup.SERVICE, 0xFF8E8874.toInt(), Glyph.ANCHOR),
-    GRANARY("Амбар", BuildingGroup.SERVICE, 0xFFB29868.toInt(), Glyph.WHEAT),
+    STABLE("Конюшня", BuildingGroup.SERVICE, 0xFF9E8760.toInt(), Glyph.HORSESHOE, shape = BuildingShape.LONG),
+    CART_YARD("Каретный двор", BuildingGroup.SERVICE, 0xFF9A8A6A.toInt(), Glyph.HORSESHOE, shape = BuildingShape.LONG),
+    DOCK_HOUSE("Пакгауз у причала", BuildingGroup.SERVICE, 0xFF8E8874.toInt(), Glyph.ANCHOR, shape = BuildingShape.LONG),
+    GRANARY("Амбар", BuildingGroup.SERVICE, 0xFFB29868.toInt(), Glyph.WHEAT, shape = BuildingShape.LONG),
     WATER_HOUSE("Водокачка", BuildingGroup.SERVICE, 0xFF8FA0A6.toInt(), Glyph.WELL),
-    GATE_HOUSE("Надвратная башня", BuildingGroup.SERVICE, 0xFF867A6A.toInt(), Glyph.GATE),
-    WALL_TOWER("Башня стены", BuildingGroup.SERVICE, 0xFF7E7468.toInt(), Glyph.TOWER),
-    LIGHTHOUSE_HOUSE("Маяк", BuildingGroup.SERVICE, 0xFF8C9298.toInt(), Glyph.LIGHTHOUSE),
+    GATE_HOUSE("Надвратная башня", BuildingGroup.SERVICE, 0xFF867A6A.toInt(), Glyph.GATE, shape = BuildingShape.WIDE),
+    WALL_TOWER("Башня стены", BuildingGroup.SERVICE, 0xFF7E7468.toInt(), Glyph.TOWER, shape = BuildingShape.TOWER),
+    LIGHTHOUSE_HOUSE("Маяк", BuildingGroup.SERVICE, 0xFF8C9298.toInt(), Glyph.LIGHTHOUSE, shape = BuildingShape.TOWER),
     DOVECOTE("Голубятня", BuildingGroup.SERVICE, 0xFFA2937A.toInt(), Glyph.NEST),
     GALLOWS_YARD("Помост с виселицей", BuildingGroup.SERVICE, 0xFF7E7266.toInt(), Glyph.GRAVE),
 
     // Магия
-    WIZARD_HOUSE("Башня мага", BuildingGroup.MAGIC_HOUSE, 0xFF7E7496.toInt(), Glyph.TOWER, true),
-    MAGE_SCHOOL("Академия магии", BuildingGroup.MAGIC_HOUSE, 0xFF7A7A9E.toInt(), Glyph.BOOK, true),
+    WIZARD_HOUSE("Башня мага", BuildingGroup.MAGIC_HOUSE, 0xFF7E7496.toInt(), Glyph.TOWER, true, shape = BuildingShape.TOWER),
+    MAGE_SCHOOL("Академия магии", BuildingGroup.MAGIC_HOUSE, 0xFF7A7A9E.toInt(), Glyph.BOOK, true, shape = BuildingShape.HALL),
     ALCHEMIST_HOUSE("Алхимик", BuildingGroup.MAGIC_HOUSE, 0xFF88849C.toInt(), Glyph.POTION),
     ENCHANTER("Чародейная лавка", BuildingGroup.MAGIC_HOUSE, 0xFF8E86A4.toInt(), Glyph.CRYSTAL),
     SEER_HOUSE("Дом прорицателя", BuildingGroup.MAGIC_HOUSE, 0xFF92869C.toInt(), Glyph.EYE),
@@ -810,7 +942,40 @@ enum class BuildingType(
     BURNT_HOUSE("Сгоревший дом", BuildingGroup.RUIN_HOUSE, 0xFF6E6358.toInt()),
     RUINED_HOUSE("Развалины", BuildingGroup.RUIN_HOUSE, 0xFF7E7668.toInt(), Glyph.RUINS),
     ABANDONED_HOUSE("Заброшенный дом", BuildingGroup.RUIN_HOUSE, 0xFF877E70.toInt()),
-    PLAGUE_HOUSE("Чумной дом", BuildingGroup.RUIN_HOUSE, 0xFF7A7264.toInt(), Glyph.GRAVE);
+    PLAGUE_HOUSE("Чумной дом", BuildingGroup.RUIN_HOUSE, 0xFF7A7264.toInt(), Glyph.GRAVE),
+
+    // Башни и ворота
+    CORNER_TOWER("Угловая башня", BuildingGroup.TOWERS, 0xFF7A7166.toInt(), Glyph.TOWER, shape = BuildingShape.TOWER),
+    ROUND_TOWER("Круглая башня", BuildingGroup.TOWERS, 0xFF807668.toInt(), Glyph.TOWER, shape = BuildingShape.TOWER),
+    SQUARE_TOWER("Квадратная башня", BuildingGroup.TOWERS, 0xFF7E7568.toInt(), Glyph.TOWER, shape = BuildingShape.TOWER),
+    WATCH_TOWER_HOUSE("Дозорная башня", BuildingGroup.TOWERS, 0xFF84796A.toInt(), Glyph.TOWER, shape = BuildingShape.TOWER),
+    CLOCK_TOWER("Часовая башня", BuildingGroup.TOWERS, 0xFF8A7E6E.toInt(), Glyph.CLOCK, shape = BuildingShape.TOWER),
+    BELL_TOWER("Колокольня", BuildingGroup.TOWERS, 0xFF8E8676.toInt(), Glyph.BELL, shape = BuildingShape.TOWER),
+    SIGNAL_TOWER("Сигнальная башня", BuildingGroup.TOWERS, 0xFF7E7264.toInt(), Glyph.BEACON, shape = BuildingShape.TOWER),
+    WATER_TOWER("Водонапорная башня", BuildingGroup.TOWERS, 0xFF8494A0.toInt(), Glyph.WELL, shape = BuildingShape.TOWER),
+    DOVE_TOWER("Голубиная башня", BuildingGroup.TOWERS, 0xFF9A8E7A.toInt(), Glyph.NEST, shape = BuildingShape.TOWER),
+    PRISON_TOWER("Тюремная башня", BuildingGroup.TOWERS, 0xFF6E655A.toInt(), Glyph.GATE, shape = BuildingShape.TOWER),
+    ASTROLOGER_TOWER("Башня астролога", BuildingGroup.TOWERS, 0xFF7C7898.toInt(), Glyph.OBSERVATORY, shape = BuildingShape.TOWER),
+    BEACON_TOWER("Башня-маяк", BuildingGroup.TOWERS, 0xFF8C9298.toInt(), Glyph.LIGHTHOUSE, shape = BuildingShape.TOWER),
+    RUINED_TOWER("Разрушенная башня", BuildingGroup.TOWERS, 0xFF877E70.toInt(), Glyph.RUINS, shape = BuildingShape.TOWER),
+    MAIN_GATE_HOUSE("Главные ворота", BuildingGroup.TOWERS, 0xFF7A7064.toInt(), Glyph.GATE, true, BuildingShape.WIDE),
+    SIDE_GATE_HOUSE("Боковые ворота", BuildingGroup.TOWERS, 0xFF827868.toInt(), Glyph.GATE, false, BuildingShape.WIDE),
+    WATER_GATE_HOUSE("Водяные ворота", BuildingGroup.TOWERS, 0xFF78808A.toInt(), Glyph.GATE, false, BuildingShape.WIDE),
+    BARBICAN_HOUSE("Барбакан", BuildingGroup.TOWERS, 0xFF756C60.toInt(), Glyph.CASTLE, true, BuildingShape.WIDE),
+    BASTION_HOUSE("Бастион", BuildingGroup.TOWERS, 0xFF6E6A5E.toInt(), Glyph.CASTLE, true, BuildingShape.WIDE),
+
+    // Зрелища — продолжение
+    AMPHITHEATRE("Амфитеатр", BuildingGroup.FUN, 0xFFA89474.toInt(), Glyph.ARENA, true, BuildingShape.HALL),
+    OPERA_HOUSE("Оперный дом", BuildingGroup.FUN, 0xFFB09078.toInt(), Glyph.ARENA, true, BuildingShape.HALL),
+    PUPPET_THEATRE("Кукольный театр", BuildingGroup.FUN, 0xFFA98E7A.toInt(), Glyph.ARENA, false, BuildingShape.WIDE),
+    CIRCUS_TENT("Шапито", BuildingGroup.FUN, 0xFFB08A86.toInt(), Glyph.CAMP, true, BuildingShape.HALL),
+    CONCERT_HALL("Концертный зал", BuildingGroup.FUN, 0xFFAE9480.toInt(), Glyph.BELL, true, BuildingShape.HALL),
+    DANCE_HOUSE("Танцевальный дом", BuildingGroup.FUN, 0xFFB29584.toInt(), Glyph.ARENA, false, BuildingShape.WIDE),
+    BEAR_PIT_HOUSE("Медвежья яма", BuildingGroup.FUN, 0xFF9C8874.toInt(), Glyph.MONSTER, false, BuildingShape.WIDE),
+    COCKPIT("Петушиная арена", BuildingGroup.FUN, 0xFFA48E76.toInt(), Glyph.NEST, false, BuildingShape.WIDE),
+    TOURNEY_GROUND("Ристалище", BuildingGroup.FUN, 0xFFA69270.toInt(), Glyph.SWORD, true, BuildingShape.HALL),
+    HIPPODROME("Ипподром", BuildingGroup.FUN, 0xFFA8996E.toInt(), Glyph.HORSESHOE, true, BuildingShape.HALL),
+    STORYTELLER_STAGE("Помост сказителя", BuildingGroup.FUN, 0xFFAE9686.toInt(), Glyph.BOOK, false, BuildingShape.WIDE);
 
     companion object {
         fun byGroup(group: BuildingGroup): List<BuildingType> =
@@ -833,6 +998,7 @@ enum class DistrictType(val title: String, val color: Int) {
     FOREIGN_QUARTER("Чужеземный квартал", 0xFFC3AE8E.toInt()),
     OLD_TOWN("Старый город", 0xFFC2B296.toInt()),
     NEW_TOWN("Новый город", 0xFFCBBF9E.toInt()),
+    FUN_QUARTER("Квартал зрелищ", 0xFFC9A98E.toInt()),
     FARM_QUARTER("Огороды и хозяйства", 0xFFB7C08E.toInt()),
     GRAVE_QUARTER("Кладбище", 0xFF9EA396.toInt()),
     PARK_QUARTER("Парк и сады", 0xFFA4C08C.toInt())
