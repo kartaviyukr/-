@@ -277,22 +277,6 @@ fun EditorScreen(viewModel: EditorViewModel) {
 
     // ---- диалоги ----
 
-    if (showObjectDialog && selection is Selection.TokenSel) {
-        val token = project.tokens.firstOrNull { it.id == selection.id }
-        if (token == null) {
-            showObjectDialog = false
-        } else {
-            TokenEditDialog(viewModel, token) { showObjectDialog = false }
-        }
-    }
-    when (battleDialog) {
-        BattleDialog.INITIATIVE -> InitiativeDialog(viewModel) { battleDialog = null }
-        BattleDialog.DICE -> DiceDialog(viewModel) { battleDialog = null }
-        BattleDialog.SCENE -> SceneDialog(viewModel) { battleDialog = null }
-        BattleDialog.GRID -> GridDialog(viewModel) { battleDialog = null }
-        null -> Unit
-    }
-
     if (showAssets) {
         CustomAssetsDialog(
             viewModel = viewModel,
@@ -313,6 +297,22 @@ fun EditorScreen(viewModel: EditorViewModel) {
     }
 
     val selection = viewModel.selection
+    if (showObjectDialog && selection is Selection.TokenSel) {
+        val token = project.tokens.firstOrNull { it.id == selection.id }
+        if (token == null) {
+            showObjectDialog = false
+        } else {
+            TokenEditDialog(viewModel, token) { showObjectDialog = false }
+        }
+    }
+    when (battleDialog) {
+        BattleDialog.INITIATIVE -> InitiativeDialog(viewModel) { battleDialog = null }
+        BattleDialog.DICE -> DiceDialog(viewModel) { battleDialog = null }
+        BattleDialog.SCENE -> SceneDialog(viewModel) { battleDialog = null }
+        BattleDialog.GRID -> GridDialog(viewModel) { battleDialog = null }
+        null -> Unit
+    }
+
     if (showObjectDialog && selection is Selection.MarkerSel) {
         val marker = project.markers.firstOrNull { it.id == selection.id }
         if (marker == null) {

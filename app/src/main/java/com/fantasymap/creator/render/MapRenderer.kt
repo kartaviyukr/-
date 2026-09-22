@@ -888,7 +888,7 @@ class MapRenderer {
 
         textPaint.textAlign = Paint.Align.LEFT
         textHalo.textAlign = Paint.Align.LEFT
-        textHalo.color = withAlpha(halo, 220)
+        textHalo.color = withAlpha(haloColor, 220)
         textHalo.strokeWidth = max(2f, size * 0.22f)
         textPaint.color = color
         val offset = (length - width) / 2f
@@ -921,7 +921,7 @@ class MapRenderer {
         textHalo.typeface = face
         textPaint.textSize = size
         textHalo.textSize = size
-        textHalo.color = withAlpha(haloColor, 220)
+        textHalo.color = withAlpha(halo, 220)
         textHalo.strokeWidth = max(2f, size * 0.22f)
         canvas.drawText(text, x, y, textHalo)
         textPaint.color = color

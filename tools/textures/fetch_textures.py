@@ -37,7 +37,7 @@ WANTED = {
     "wood_planks": ([["wood", "planks"], ["planks"], ["wood", "floor"]], ["laminate"]),
     "old_wood": ([["weathered", "planks"], ["old", "planks"], ["weathered", "wood"]], []),
     "bark": ([["bark"]], []),
-    "dirt": ([["dirt"], ["soil"], ["mud", "ground"]], ["concrete", "leaves"]),
+    "dirt": ([["dirt", "ground"], ["brown", "ground"], ["soil"], ["dirt"]], ["concrete", "leaves", "carpet", "dirty"]),
     "mud": ([["mud"]], []),
     "grass": ([["grass", "path"], ["grass"], ["meadow"], ["lawn"]], ["sand", "rock"]),
     "forest_floor": ([["forest", "ground"], ["forrest", "ground"], ["forest", "leaves"], ["leaves"]], []),
@@ -53,7 +53,7 @@ WANTED = {
     "metal": ([["metal", "plate"], ["metal"]], []),
     "dry_ground": ([["dry", "ground"], ["cracked", "ground"], ["dry", "soil"], ["cracked"]], ["wood", "paint"]),
     "hay": ([["hay"], ["straw"], ["thatch"]], []),
-    "aerial_grass": ([["aerial", "grass"], ["aerial", "ground"]], ["rock"]),
+    "aerial_grass": ([["aerial", "grass"], ["aerial", "ground"], ["grass", "field"], ["meadow"], ["grass"]], ["rock", "path"]),
     "aerial_rocks": ([["aerial", "rocks"], ["aerial", "rock"]], []),
     "aerial_sand": ([["aerial", "sand"], ["aerial", "beach"]], []),
 }
