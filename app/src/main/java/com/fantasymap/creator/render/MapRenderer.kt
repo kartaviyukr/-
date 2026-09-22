@@ -696,6 +696,10 @@ class MapRenderer {
             MarkerGroup.FAUNA -> 0xFFDCD0BC.toInt()
             MarkerGroup.GOODS -> 0xFFEFE0BE.toInt()
             MarkerGroup.ATLAS -> 0xFFCFE0EC.toInt()
+            MarkerGroup.CITY_WALLS -> 0xFFDCD3C0.toInt()
+            MarkerGroup.CITY_STREET -> 0xFFEDE3CA.toInt()
+            MarkerGroup.CITY_SERVICE -> 0xFFE2D9C2.toInt()
+            MarkerGroup.CITY_SPECIAL -> 0xFFE7D6C6.toInt()
         }
     }
 
