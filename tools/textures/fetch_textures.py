@@ -27,35 +27,35 @@ UA = "FantasyMapCreator-texture-fetch/1.0 (github.com/kartaviyukr)"
 # ключ -> варианты поиска: в каждом варианте все слова должны встретиться
 # в имени, названии, тегах или категориях ассета
 WANTED = {
-    "flagstone": [["flagstone"], ["stone", "floor"], ["paving"]],
-    "cobblestone": [["cobblestone"], ["cobble"]],
-    "stone_tiles": [["stone", "tiles"], ["floor", "tiles"], ["tiles"]],
-    "marble": [["marble"]],
-    "brick": [["brick", "wall"], ["brick"]],
-    "castle_wall": [["castle"], ["stone", "wall"]],
-    "wood_planks": [["wood", "planks"], ["planks"], ["wood", "floor"]],
-    "old_wood": [["weathered", "wood"], ["old", "wood"], ["wood"]],
-    "bark": [["bark"]],
-    "dirt": [["dirt"], ["soil"], ["ground"]],
-    "mud": [["mud"]],
-    "grass": [["grass"]],
-    "forest_floor": [["forest"], ["leaves"], ["leaf"]],
-    "sand": [["sand"]],
-    "gravel": [["gravel"], ["pebbles"]],
-    "rock": [["rock"], ["cliff"]],
-    "rocky_ground": [["rocky"], ["rocks", "ground"], ["stones"]],
-    "snow": [["snow"]],
-    "moss": [["moss"]],
-    "ice": [["ice"], ["frozen"]],
-    "fabric": [["carpet"], ["rug"], ["fabric"]],
-    "roof": [["roof"]],
-    "plaster": [["plaster"], ["concrete"]],
-    "metal": [["metal", "plate"], ["metal"]],
-    "dry_ground": [["dry"], ["cracked"]],
-    "hay": [["hay"], ["straw"]],
-    "aerial_grass": [["aerial", "grass"], ["aerial"]],
-    "aerial_rocks": [["aerial", "rock"], ["aerial"]],
-    "aerial_sand": [["aerial", "sand"], ["aerial", "beach"], ["aerial"]],
+    # ключ: (варианты слов в имени ассета, слова-исключения)
+    "flagstone": ([["flagstone"], ["stone", "floor"], ["paving"], ["granite", "tile"]], []),
+    "cobblestone": ([["cobblestone"], ["cobble"]], []),
+    "stone_tiles": ([["stone", "tiles"], ["floor", "tiles"]], ["rubber"]),
+    "marble": ([["marble"]], []),
+    "brick": ([["red", "brick"], ["brick", "wall"], ["brick"]], []),
+    "castle_wall": ([["castle"], ["stone", "wall"]], []),
+    "wood_planks": ([["wood", "planks"], ["planks"], ["wood", "floor"]], ["laminate"]),
+    "old_wood": ([["weathered", "planks"], ["old", "planks"], ["weathered", "wood"]], []),
+    "bark": ([["bark"]], []),
+    "dirt": ([["dirt"], ["soil"], ["mud", "ground"]], ["concrete", "leaves"]),
+    "mud": ([["mud"]], []),
+    "grass": ([["grass", "path"], ["grass"], ["meadow"], ["lawn"]], ["sand", "rock"]),
+    "forest_floor": ([["forest", "ground"], ["forrest", "ground"], ["forest", "leaves"], ["leaves"]], []),
+    "sand": ([["sand"]], ["rock", "aerial"]),
+    "gravel": ([["gravel"], ["pebbles"], ["rocks", "ground"]], []),
+    "rock": ([["rock", "wall"], ["cliff"], ["rock", "face"], ["rock"]], ["aerial", "ground"]),
+    "rocky_ground": ([["rocky", "terrain"], ["rocky"], ["rocks", "ground"]], []),
+    "snow": ([["snow"]], []),
+    "moss": ([["moss"], ["mossy"]], []),
+    "fabric": ([["carpet"], ["rug"], ["fabric", "pattern"], ["fabric"]], []),
+    "roof": ([["roof", "tiles"], ["clay", "roof"], ["roof"]], ["thatch", "rubber"]),
+    "plaster": ([["plaster"], ["clay", "wall"]], []),
+    "metal": ([["metal", "plate"], ["metal"]], []),
+    "dry_ground": ([["dry", "ground"], ["cracked", "ground"], ["dry", "soil"], ["cracked"]], ["wood", "paint"]),
+    "hay": ([["hay"], ["straw"], ["thatch"]], []),
+    "aerial_grass": ([["aerial", "grass"], ["aerial", "ground"]], ["rock"]),
+    "aerial_rocks": ([["aerial", "rocks"], ["aerial", "rock"]], []),
+    "aerial_sand": ([["aerial", "sand"], ["aerial", "beach"]], []),
 }
 
 
@@ -66,10 +66,8 @@ def get(url):
 
 
 def words_of(asset_id, info):
-    parts = [asset_id, info.get("name", "")]
-    parts += info.get("tags", []) or []
-    parts += info.get("categories", []) or []
-    return " ".join(parts).lower().replace("_", " ")
+    """Только имя и название: теги у Poly Haven слишком общие."""
+    return (asset_id + " " + info.get("name", "")).lower().replace("_", " ")
 
 
 def tile(image):
@@ -93,17 +91,24 @@ def fetch_polyhaven(credits):
         print("Poly Haven недоступен:", error)
         return
     print("всего текстур на Poly Haven:", len(assets))
+    # Poly Haven доступен — старые плитки можно убрать и собрать заново.
+    for name in os.listdir(OUT):
+        if name.endswith(".jpg"):
+            os.remove(os.path.join(OUT, name))
     used = set()
-    for key, variants in WANTED.items():
+    for key, (variants, excluded) in WANTED.items():
         chosen = None
         for terms in variants:
             matches = []
             for asset_id, info in assets.items():
                 text = words_of(asset_id, info)
+                if any(word in text for word in excluded):
+                    continue
                 if all(term in text for term in terms):
                     matches.append((asset_id in used, -int(info.get("download_count", 0)), asset_id))
             if matches:
                 matches.sort()
+                print(key, terms, "кандидаты:", [m[2] for m in matches[:6]])
                 chosen = matches[0][2]
                 break
         if chosen is None:
@@ -193,19 +198,29 @@ def generated(credits):
         "crystal": lambda: colorize(
             np.clip(veins(n, 101, 7) * 0.7 + periodic_noise(n, 5, 102) * 0.4, 0, 1),
             [(0, (40, 70, 100)), (0.5, (90, 160, 200)), (1, (220, 250, 255))]),
+        "ice": lambda: colorize(
+            np.clip(periodic_noise(n, 5, 141) * 0.6 + veins(n, 142, 26) * 0.5, 0, 1),
+            [(0, (120, 170, 200)), (0.5, (170, 210, 230)), (0.85, (215, 238, 248)),
+             (1, (250, 254, 255))]),
         "void_ice": lambda: colorize(
             np.clip(periodic_noise(n, 5, 111) * 0.7 + veins(n, 112, 14) * 0.4, 0, 1),
             [(0, (150, 190, 210)), (0.6, (200, 228, 240)), (1, (245, 252, 255))]),
         "poison_fog": lambda: colorize(
             periodic_noise(n, 4, 121),
             [(0, (60, 80, 40)), (0.5, (100, 130, 60)), (1, (170, 200, 110))]),
+        "dry_ground_generated": lambda: colorize(
+            np.clip(periodic_noise(n, 5, 151) * 0.7 - veins(n, 152, 30) * 0.6 + 0.3, 0, 1),
+            [(0, (80, 58, 40)), (0.4, (150, 118, 82)), (1, (196, 166, 124))]),
         "bones": lambda: colorize(
             np.clip(veins(n, 131, 22) + periodic_noise(n, 5, 132) * 0.4, 0, 1),
             [(0, (70, 62, 50)), (0.5, (120, 110, 92)), (0.8, (200, 190, 165)),
              (1, (235, 228, 205))]),
     }
     for key, recipe in recipes.items():
-        path = os.path.join(OUT, key + ".jpg")
+        if key.endswith("_generated"):
+            key = key[: -len("_generated")]
+            if os.path.exists(os.path.join(OUT, key + ".jpg")):
+                continue
         try:
             image = recipe().filter(ImageFilter.SMOOTH)
             save(key, image, credits, "нарисована процедурно для приложения (CC0)")
