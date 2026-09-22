@@ -109,7 +109,9 @@ class MapRenderer {
         if (style.showBiomes) drawBiomes(canvas, project, cam, visible, u, style.showPatterns)
         if (style.showWater) drawWaters(canvas, project, cam, visible, u)
         if (style.showLines) drawLines(canvas, project, cam, visible, u)
+        if (style.showDistricts) drawDistricts(canvas, project, cam, visible, u)
         if (style.showRoads) drawRoads(canvas, project, cam, visible, u)
+        if (style.showBuildings) drawBuildings(canvas, project, cam, visible, u)
         if (style.showBorders) drawCountries(canvas, project, cam, u, options)
         if (style.showMarkers) drawMarkers(canvas, project, cam, visible, u)
         if (style.showLabels) drawLabels(canvas, project, cam, u)
@@ -304,6 +306,11 @@ class MapRenderer {
                 LineFeatureType.LEY_LINE,
                 LineFeatureType.CORAL_WALL,
                 LineFeatureType.MIGRATION_PATH -> drawDots(canvas, feature, cam, u)
+                LineFeatureType.CITY_WALL,
+                LineFeatureType.INNER_WALL,
+                LineFeatureType.PALISADE -> drawWallLine(canvas, feature, cam, u)
+                LineFeatureType.MOAT -> drawRiver(canvas, feature, cam, u)
+                LineFeatureType.EMBANKMENT -> drawRidge(canvas, feature, cam, u, project.style.seed, false)
             }
             if (feature.name.isNotBlank()) {
                 val size = 13f * u * cam.scale.coerceIn(0.7f, 1.8f)
@@ -447,6 +454,94 @@ class MapRenderer {
             canvas.drawLine(sx, sy - tick, sx, sy + tick, stroke)
         }
     }
+
+    // ---------------------------------------------------------------- город
+
+    private fun drawDistricts(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
+        for (district in project.districts) {
+            if (district.points.size < 3) continue
+            if (!Geometry.bounds(district.points).intersects(visible)) continue
+            buildPath(district.points, cam, true, path)
+            fill.color = withAlpha(district.type.color, 90)
+            canvas.drawPath(path, fill)
+            stroke.color = withAlpha(darken(district.type.color, 0.35f), 210)
+            stroke.strokeWidth = 1.6f * u
+            stroke.pathEffect = DashPathEffect(floatArrayOf(7f * u, 5f * u), 0f)
+            canvas.drawPath(path, stroke)
+            stroke.pathEffect = null
+
+            val title = district.name.ifBlank { district.type.title }
+            val center = Geometry.centroid(district.points)
+            drawMapText(
+                canvas, title,
+                cam.screenX(center.x), cam.screenY(center.y),
+                (13f * u * cam.scale.coerceIn(0.6f, 1.6f)),
+                darken(district.type.color, 0.5f), true
+            )
+        }
+    }
+
+    private fun drawBuildings(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
+        for (building in project.buildings) {
+            val points = building.points
+            if (points.size < 3) continue
+            val bounds = Geometry.bounds(points)
+            if (!bounds.intersects(visible)) continue
+
+            buildPath(points, cam, true, path)
+            fill.color = building.type.color
+            canvas.drawPath(path, fill)
+            stroke.color = inkColor
+            stroke.strokeWidth = max(0.7f, 1.05f * u)
+            stroke.pathEffect = null
+            canvas.drawPath(path, stroke)
+
+            val screenSize = min(bounds.width, bounds.height) * cam.scale
+            // Конёк крыши — вдоль длинной стороны дома.
+            if (points.size == 4 && screenSize > 6f) {
+                val first = middle(points[0], points[1])
+                val second = middle(points[2], points[3])
+                val third = middle(points[1], points[2])
+                val fourth = middle(points[3], points[0])
+                val along = if (first.distanceTo(second) >= third.distanceTo(fourth)) {
+                    first to second
+                } else {
+                    third to fourth
+                }
+                stroke.color = darken(building.type.color, 0.32f)
+                stroke.strokeWidth = max(0.7f, 1.1f * u)
+                canvas.drawLine(
+                    cam.screenX(along.first.x), cam.screenY(along.first.y),
+                    cam.screenX(along.second.x), cam.screenY(along.second.y), stroke
+                )
+            }
+
+            val mark = building.type.mark
+            if (mark != null && screenSize > 13f) {
+                val center = Geometry.centroid(points)
+                fill.color = withAlpha(0xFFFFF6DF.toInt(), 210)
+                stroke.color = inkColor
+                stroke.strokeWidth = max(0.7f, 1f * u)
+                glyphs.drawGlyph(
+                    canvas, mark,
+                    cam.screenX(center.x), cam.screenY(center.y),
+                    min(screenSize * 0.3f, 8f * u), fill, stroke
+                )
+            }
+
+            if (building.showLabel && building.name.isNotBlank() && screenSize > 18f) {
+                val center = Geometry.centroid(points)
+                drawMapText(
+                    canvas, building.name,
+                    cam.screenX(center.x),
+                    cam.screenY(bounds.maxY) + 10f * u,
+                    10.5f * u, inkColor, false
+                )
+            }
+        }
+    }
+
+    private fun middle(a: Vec, b: Vec) = Vec((a.x + b.x) / 2f, (a.y + b.y) / 2f)
 
     // ---------------------------------------------------------------- дороги
 
@@ -689,6 +784,10 @@ class MapRenderer {
             is Selection.Land -> project.landmasses.firstOrNull { it.id == selection.id }
                 ?.let { outline(canvas, it.points, cam, true) }
             is Selection.Water -> project.waters.firstOrNull { it.id == selection.id }
+                ?.let { outline(canvas, it.points, cam, true) }
+            is Selection.BuildingSel -> project.buildings.firstOrNull { it.id == selection.id }
+                ?.let { outline(canvas, it.points, cam, true) }
+            is Selection.DistrictSel -> project.districts.firstOrNull { it.id == selection.id }
                 ?.let { outline(canvas, it.points, cam, true) }
             is Selection.Biome -> project.biomes.firstOrNull { it.id == selection.id }
                 ?.let { region -> region.contours().forEach { outline(canvas, it, cam, true) } }

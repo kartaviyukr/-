@@ -9,6 +9,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.fantasymap.creator.data.ProjectStore
+import com.fantasymap.creator.geom.CityGenerator
 import com.fantasymap.creator.geom.FragmentCopy
 import com.fantasymap.creator.geom.PolygonOps
 import com.fantasymap.creator.geom.WorldGenerator
@@ -16,6 +17,10 @@ import com.fantasymap.creator.export.Exporter
 import com.fantasymap.creator.model.BBox
 import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.BiomeType
+import com.fantasymap.creator.model.BuildingGroup
+import com.fantasymap.creator.model.BuildingType
+import com.fantasymap.creator.model.CityStage
+import com.fantasymap.creator.model.DistrictType
 import com.fantasymap.creator.model.Country
 import com.fantasymap.creator.model.CountryInfo
 import com.fantasymap.creator.model.Geometry
@@ -25,7 +30,9 @@ import com.fantasymap.creator.model.Landmass
 import com.fantasymap.creator.model.LineFeature
 import com.fantasymap.creator.model.LineFeatureType
 import com.fantasymap.creator.model.MapLabel
+import com.fantasymap.creator.model.MapKind
 import com.fantasymap.creator.model.MapLayer
+import com.fantasymap.creator.model.MapStage
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.model.MapStyle
 import com.fantasymap.creator.model.Marker
@@ -35,7 +42,11 @@ import com.fantasymap.creator.model.ProjectSummary
 import com.fantasymap.creator.model.Road
 import com.fantasymap.creator.model.RoadType
 import com.fantasymap.creator.model.Selection
+import com.fantasymap.creator.model.Building
+import com.fantasymap.creator.model.District
 import com.fantasymap.creator.model.Stage
+import com.fantasymap.creator.model.stageFor
+import com.fantasymap.creator.model.stagesFor
 import com.fantasymap.creator.model.StylePreset
 import com.fantasymap.creator.model.Tool
 import com.fantasymap.creator.model.Vec
@@ -48,7 +59,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.max
+import kotlin.math.cos
 import kotlin.math.min
+import kotlin.math.sin
 
 /** Состояние редактора карты: проект, инструменты, камера, история изменений. */
 class EditorViewModel(application: Application) : AndroidViewModel(application) {
@@ -62,7 +75,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var project by mutableStateOf<MapProject?>(null)
         private set
 
-    var stage by mutableStateOf(Stage.CONTINENTS)
+    var stage by mutableStateOf<MapStage>(Stage.CONTINENTS)
         private set
 
     var tool by mutableStateOf(Tool.LAND)
@@ -73,6 +86,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var roadType by mutableStateOf(RoadType.ROAD)
     var labelStyle by mutableStateOf(LabelStyle.REGION)
     var waterKind by mutableStateOf(WaterKind.LAKE)
+    var buildingType by mutableStateOf(BuildingType.HOUSE)
+    var buildingGroup by mutableStateOf(BuildingGroup.HOME)
+    var districtType by mutableStateOf(DistrictType.OLD_TOWN)
+
+    /** Плотность застройки квартала: 0 — просторно, 1 — тесно. */
+    var buildDensity by mutableStateOf(0.5f)
     var activeCountryId by mutableStateOf<String?>(null)
     var selection by mutableStateOf<Selection?>(null)
     var camera by mutableStateOf(Camera())
@@ -122,11 +141,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun createProject(name: String, width: Float, height: Float) {
+    fun createProject(name: String, width: Float, height: Float, kind: MapKind = MapKind.WORLD) {
         val fresh = MapProject(
-            name = name.ifBlank { "Новый мир" },
+            name = name.ifBlank { if (kind == MapKind.CITY) "Новый город" else "Новый мир" },
             worldWidth = width,
-            worldHeight = height
+            worldHeight = height,
+            kind = kind
         )
         viewModelScope.launch {
             withContext(Dispatchers.IO) { store.save(fresh) }
@@ -148,7 +168,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     private fun openProject(loaded: MapProject) {
         project = loaded
-        stage = Stage.byNumber(loaded.stage)
+        stage = stageFor(loaded.kind, loaded.stage)
         tool = defaultToolFor(stage)
         selection = null
         draft.clear()
@@ -250,7 +270,13 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     // ------------------------------------------------------------- этапы
 
-    fun selectStage(newStage: Stage) {
+    /** Вид открытой карты: мир или город. */
+    val mapKind: MapKind get() = project?.kind ?: MapKind.WORLD
+
+    /** Шаги для открытой карты. */
+    fun stages(): List<MapStage> = stagesFor(mapKind)
+
+    fun selectStage(newStage: MapStage) {
         stage = newStage
         tool = defaultToolFor(newStage)
         selection = null
@@ -265,11 +291,41 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         if (newStage == Stage.SPECIAL) markerType = MarkerType.WIZARD_TOWER
         if (newStage == Stage.SETTLEMENTS) markerType = MarkerType.CITY
         if (newStage == Stage.NATURE) markerType = MarkerType.MOUNTAIN_PEAK
+        when (newStage) {
+            CityStage.GROUND -> lineType = LineFeatureType.RIVER
+            CityStage.WALLS -> {
+                lineType = LineFeatureType.CITY_WALL
+                markerType = MarkerType.GREAT_GATE
+            }
+            CityStage.STREETS -> roadType = RoadType.MAIN_STREET
+            CityStage.GREEN -> biome = BiomeType.CITY_PARK
+            CityStage.DETAILS -> {
+                markerGroup = MarkerGroup.TRADE
+                markerType = MarkerType.FOUNTAIN_SQUARE
+            }
+            else -> Unit
+        }
         editQuiet { it.copy(stage = newStage.number) }
         scheduleSave()
     }
 
-    fun toolsFor(currentStage: Stage): List<Tool> = when (currentStage) {
+    fun toolsFor(currentStage: MapStage): List<Tool> = when (currentStage) {
+        is CityStage -> cityToolsFor(currentStage)
+        else -> worldToolsFor(currentStage)
+    }
+
+    private fun cityToolsFor(currentStage: CityStage): List<Tool> = when (currentStage) {
+        CityStage.GROUND -> listOf(Tool.PAN, Tool.LAND, Tool.WATER, Tool.LINE, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
+        CityStage.WALLS -> listOf(Tool.PAN, Tool.LINE, Tool.MARKER, Tool.SELECT, Tool.ERASER)
+        CityStage.DISTRICTS -> listOf(Tool.PAN, Tool.DISTRICT, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
+        CityStage.STREETS -> listOf(Tool.PAN, Tool.ROAD, Tool.LABEL, Tool.SELECT, Tool.ERASER)
+        CityStage.BUILDINGS -> listOf(Tool.PAN, Tool.BUILDING, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
+        CityStage.GREEN -> listOf(Tool.PAN, Tool.BIOME, Tool.SELECT, Tool.ERASER)
+        CityStage.DETAILS -> listOf(Tool.PAN, Tool.MARKER, Tool.LABEL, Tool.SELECT, Tool.ERASER)
+        CityStage.CITY_INFO -> listOf(Tool.PAN, Tool.LABEL, Tool.SELECT)
+    }
+
+    private fun worldToolsFor(currentStage: MapStage): List<Tool> = when (currentStage) {
         Stage.CONTINENTS -> listOf(Tool.PAN, Tool.LAND, Tool.ISLAND, Tool.WATER, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
         Stage.BIOMES -> listOf(Tool.PAN, Tool.BIOME, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
         Stage.NATURE -> listOf(Tool.PAN, Tool.LINE, Tool.MARKER, Tool.LABEL, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
@@ -277,10 +333,18 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         Stage.CAPITALS -> listOf(Tool.PAN, Tool.SELECT, Tool.MARKER)
         Stage.SPECIAL -> listOf(Tool.PAN, Tool.MARKER, Tool.LABEL, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
         Stage.BORDERS -> listOf(Tool.PAN, Tool.COUNTRY, Tool.SELECT, Tool.ERASER, Tool.FRAGMENT)
-        Stage.COUNTRIES -> listOf(Tool.PAN, Tool.SELECT)
+        else -> listOf(Tool.PAN, Tool.SELECT)
     }
 
-    private fun defaultToolFor(currentStage: Stage): Tool = when (currentStage) {
+    private fun defaultToolFor(currentStage: MapStage): Tool = when (currentStage) {
+        CityStage.GROUND -> Tool.LAND
+        CityStage.WALLS -> Tool.LINE
+        CityStage.DISTRICTS -> Tool.DISTRICT
+        CityStage.STREETS -> Tool.ROAD
+        CityStage.BUILDINGS -> Tool.BUILDING
+        CityStage.GREEN -> Tool.BIOME
+        CityStage.DETAILS -> Tool.MARKER
+        CityStage.CITY_INFO -> Tool.LABEL
         Stage.CONTINENTS -> Tool.LAND
         Stage.BIOMES -> Tool.BIOME
         Stage.NATURE -> Tool.LINE
@@ -288,19 +352,19 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         Stage.CAPITALS -> Tool.SELECT
         Stage.SPECIAL -> Tool.MARKER
         Stage.BORDERS -> Tool.COUNTRY
-        Stage.COUNTRIES -> Tool.PAN
+        else -> Tool.PAN
     }
 
     /** Рисуется ли текущим инструментом замкнутая область. */
     fun toolDrawsArea(): Boolean =
         tool == Tool.LAND || tool == Tool.ISLAND || tool == Tool.WATER ||
-            tool == Tool.BIOME || tool == Tool.COUNTRY
+            tool == Tool.BIOME || tool == Tool.COUNTRY || tool == Tool.DISTRICT
 
     fun toolDrawsLine(): Boolean =
         tool == Tool.LINE || tool == Tool.ROAD || (tool == Tool.LABEL && labelCurved)
 
     /** Замкнут ли рисуемый сейчас контур (область или рамка фрагмента). */
-    fun draftClosed(): Boolean = toolDrawsArea() || tool == Tool.FRAGMENT
+    fun draftClosed(): Boolean = toolDrawsArea() || tool == Tool.FRAGMENT || tool == Tool.BUILDING
 
     fun draftColor(): Int = when (tool) {
         Tool.LAND, Tool.ISLAND -> 0xFF8A6A3A.toInt()
@@ -310,6 +374,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         Tool.LINE -> lineType.color
         Tool.ROAD -> roadType.color
         Tool.FRAGMENT -> 0xFF2E6E93.toInt()
+        Tool.BUILDING -> buildingType.color
+        Tool.DISTRICT -> districtType.color
         else -> 0xFF9B2C2C.toInt()
     }
 
@@ -350,7 +416,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (draggingSelection != null) pushHistoryForDrag()
             return
         }
-        if (tool == Tool.FRAGMENT) {
+        if (tool == Tool.FRAGMENT || tool == Tool.BUILDING) {
             fragmentStart = world
             draft.clear()
             draft.add(world)
@@ -392,6 +458,17 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             val corners = draft.toList()
             fragmentStart = null
             draft.clear()
+            if (tool == Tool.BUILDING) {
+                if (corners.size >= 4) {
+                    val bounds = Geometry.bounds(corners)
+                    if (bounds.width > 2f && bounds.height > 2f) {
+                        addBuilding(rectangle(bounds))
+                        return
+                    }
+                }
+                addBuilding(defaultFootprint(start))
+                return
+            }
             if (corners.size < 4) {
                 message = "Обведите прямоугольник вокруг нужного куска карты"
                 return
@@ -531,6 +608,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 Tool.WATER -> edit { it.copy(waters = it.waters + WaterBody(kind = waterKind, points = smooth)) }
                 Tool.BIOME -> edit { it.copy(biomes = it.biomes + BiomeRegion(biome = biome, points = smooth)) }
                 Tool.COUNTRY -> addCountryArea(smooth)
+                Tool.DISTRICT -> edit {
+                    it.copy(districts = it.districts + District(type = districtType, points = smooth))
+                }
                 else -> Unit
             }
             return
@@ -621,6 +701,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 selection = Selection.LabelSel(label.id)
                 return true
             }
+            Tool.BUILDING -> {
+                addBuilding(defaultFootprint(world))
+                return false
+            }
             Tool.ERASER -> {
                 val hit = hitTest(world)
                 if (hit != null) {
@@ -667,6 +751,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             .minByOrNull { Geometry.distanceToPolyline(world, it.points) }
             ?.let { return Selection.RoadSel(it.id) }
 
+        if (open(MapLayer.BUILDINGS)) current.buildings.asReversed()
+            .firstOrNull { Geometry.pointInPolygon(world, it.points) }
+            ?.let { return Selection.BuildingSel(it.id) }
+
         if (open(MapLayer.LINES)) current.lines
             .filter { Geometry.distanceToPolyline(world, it.points) <= tolerance }
             .minByOrNull { Geometry.distanceToPolyline(world, it.points) }
@@ -679,6 +767,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 }
             }
         }
+
+        if (open(MapLayer.DISTRICTS)) current.districts.asReversed()
+            .firstOrNull { Geometry.pointInPolygon(world, it.points) }
+            ?.let { return Selection.DistrictSel(it.id) }
 
         if (open(MapLayer.BIOMES)) current.biomes.asReversed()
             .firstOrNull { Geometry.pointInContours(world, it.contours()) }
@@ -718,6 +810,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 is Selection.RoadSel -> state.copy(roads = state.roads.filterNot { it.id == target.id })
                 is Selection.MarkerSel -> state.copy(markers = state.markers.filterNot { it.id == target.id })
                 is Selection.LabelSel -> state.copy(labels = state.labels.filterNot { it.id == target.id })
+                is Selection.BuildingSel -> state.copy(buildings = state.buildings.filterNot { it.id == target.id })
+                is Selection.DistrictSel -> state.copy(districts = state.districts.filterNot { it.id == target.id })
                 is Selection.CountryArea -> state.copy(
                     countries = state.countries.map { country ->
                         if (country.id == target.id) {
@@ -750,6 +844,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 is Selection.RoadSel -> state.copy(roads = state.roads.map { if (it.id == target.id) it.copy(name = name) else it })
                 is Selection.MarkerSel -> state.copy(markers = state.markers.map { if (it.id == target.id) it.copy(name = name) else it })
                 is Selection.LabelSel -> state.copy(labels = state.labels.map { if (it.id == target.id) it.copy(text = name) else it })
+                is Selection.BuildingSel -> state.copy(
+                    buildings = state.buildings.map { if (it.id == target.id) it.copy(name = name) else it }
+                )
+                is Selection.DistrictSel -> state.copy(
+                    districts = state.districts.map { if (it.id == target.id) it.copy(name = name) else it }
+                )
                 is Selection.CountryArea -> state.copy(
                     countries = state.countries.map { if (it.id == target.id) it.copy(name = name) else it }
                 )
@@ -813,6 +913,90 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val region = project?.biomes?.firstOrNull { it.id == target.id } ?: return
         edit { state -> state.copy(biomes = listOf(region) + state.biomes.filterNot { it.id == target.id }) }
         message = "Зона внизу — при выравнивании её затирают остальные"
+    }
+
+    /** Поставить здание выбранного вида. */
+    private fun addBuilding(footprint: List<Vec>) {
+        if (footprint.size < 3) return
+        val building = Building(type = buildingType, points = footprint)
+        edit { it.copy(buildings = it.buildings + building) }
+        selection = Selection.BuildingSel(building.id)
+    }
+
+    /** След здания по умолчанию: небольшой дом со слегка случайным поворотом. */
+    private fun defaultFootprint(center: Vec): List<Vec> {
+        val current = project ?: return emptyList()
+        val base = min(current.worldWidth, current.worldHeight)
+        val scale = if (buildingType.big) 1.7f else 1f
+        val width = base * 0.016f * scale
+        val height = base * 0.012f * scale
+        val noise = Geometry.hashNoise(center.x.toInt(), center.y.toInt(), current.style.seed)
+        val angle = (noise - 0.5f) * 0.5f
+        return rotatedRect(center, width, height, angle)
+    }
+
+    private fun rotatedRect(center: Vec, width: Float, height: Float, angle: Float): List<Vec> {
+        val halfWidth = width / 2f
+        val halfHeight = height / 2f
+        val cosA = cos(angle)
+        val sinA = sin(angle)
+        fun corner(dx: Float, dy: Float) = Vec(
+            center.x + dx * cosA - dy * sinA,
+            center.y + dx * sinA + dy * cosA
+        )
+        return listOf(
+            corner(-halfWidth, -halfHeight),
+            corner(halfWidth, -halfHeight),
+            corner(halfWidth, halfHeight),
+            corner(-halfWidth, halfHeight)
+        )
+    }
+
+    private fun rectangle(bounds: BBox): List<Vec> = listOf(
+        Vec(bounds.minX, bounds.minY),
+        Vec(bounds.maxX, bounds.minY),
+        Vec(bounds.maxX, bounds.maxY),
+        Vec(bounds.minX, bounds.maxY)
+    )
+
+    /**
+     * Застроить выбранный квартал домами: ряды вдоль ближайшей улицы,
+     * с оглядкой на улицы, воду и уже стоящие дома.
+     */
+    fun fillDistrictWithHouses() {
+        val current = project ?: return
+        val target = selection as? Selection.DistrictSel
+        val district = target?.let { sel -> current.districts.firstOrNull { it.id == sel.id } }
+        if (district == null) {
+            message = "Выберите квартал инструментом «☝ Выбрать» и нажмите ещё раз"
+            return
+        }
+        viewModelScope.launch {
+            busy = true
+            val seed = (System.currentTimeMillis() and 0xFFFF).toInt() + current.buildings.size
+            val houses = withContext(Dispatchers.Default) {
+                CityGenerator.fillDistrict(current, district, buildDensity, seed)
+            }
+            busy = false
+            if (houses.isEmpty()) {
+                message = "Дома не поместились — квартал мал или весь занят улицами"
+                return@launch
+            }
+            edit { it.copy(buildings = it.buildings + houses) }
+            message = "Поставлено домов: ${houses.size}"
+        }
+    }
+
+    fun updateBuilding(building: Building) {
+        edit { state ->
+            state.copy(buildings = state.buildings.map { if (it.id == building.id) building else it })
+        }
+    }
+
+    fun updateDistrict(district: District) {
+        edit { state ->
+            state.copy(districts = state.districts.map { if (it.id == district.id) district else it })
+        }
     }
 
     fun changeBiomeOfSelection(newBiome: BiomeType) {

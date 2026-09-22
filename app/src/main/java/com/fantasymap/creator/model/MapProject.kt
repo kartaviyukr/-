@@ -85,6 +85,32 @@ data class Marker(
 )
 
 /**
+ * Отдельное здание на карте города: дом, церковь, ратуша, лавка.
+ * points — след здания на земле, обычно четырёхугольник.
+ */
+@Serializable
+data class Building(
+    val id: String = newId(),
+    val type: BuildingType = BuildingType.HOUSE,
+    val name: String = "",
+    val description: String = "",
+    val points: List<Vec> = emptyList(),
+    val floors: Int = 1,
+    val owner: String = "",
+    val showLabel: Boolean = false
+)
+
+/** Квартал города — район со своим характером. */
+@Serializable
+data class District(
+    val id: String = newId(),
+    val type: DistrictType = DistrictType.OLD_TOWN,
+    val name: String = "",
+    val description: String = "",
+    val points: List<Vec> = emptyList()
+)
+
+/**
  * Свободная подпись на карте.
  * Если задан path, подпись идёт вдоль кривой — так подписывают реки и хребты.
  */
@@ -173,6 +199,10 @@ data class MapStyle(
     val lockMarkers: Boolean = false,
     val lockLabels: Boolean = false,
     val lockCountries: Boolean = false,
+    val showDistricts: Boolean = true,
+    val showBuildings: Boolean = true,
+    val lockDistricts: Boolean = false,
+    val lockBuildings: Boolean = false,
     val labelScale: Float = 1f,
     val seed: Int = 1337
 )
@@ -186,7 +216,9 @@ enum class MapLayer(val title: String) {
     ROADS("Дороги и пути"),
     MARKERS("Объекты"),
     LABELS("Подписи"),
-    COUNTRIES("Границы стран");
+    COUNTRIES("Границы стран"),
+    DISTRICTS("Кварталы города"),
+    BUILDINGS("Здания");
 
     fun visible(style: MapStyle): Boolean = when (this) {
         LAND -> style.showLand
@@ -197,6 +229,8 @@ enum class MapLayer(val title: String) {
         MARKERS -> style.showMarkers
         LABELS -> style.showLabels
         COUNTRIES -> style.showBorders
+        DISTRICTS -> style.showDistricts
+        BUILDINGS -> style.showBuildings
     }
 
     fun locked(style: MapStyle): Boolean = when (this) {
@@ -208,6 +242,8 @@ enum class MapLayer(val title: String) {
         MARKERS -> style.lockMarkers
         LABELS -> style.lockLabels
         COUNTRIES -> style.lockCountries
+        DISTRICTS -> style.lockDistricts
+        BUILDINGS -> style.lockBuildings
     }
 
     fun withVisible(style: MapStyle, value: Boolean): MapStyle = when (this) {
@@ -219,6 +255,8 @@ enum class MapLayer(val title: String) {
         MARKERS -> style.copy(showMarkers = value)
         LABELS -> style.copy(showLabels = value)
         COUNTRIES -> style.copy(showBorders = value)
+        DISTRICTS -> style.copy(showDistricts = value)
+        BUILDINGS -> style.copy(showBuildings = value)
     }
 
     fun withLocked(style: MapStyle, value: Boolean): MapStyle = when (this) {
@@ -230,6 +268,8 @@ enum class MapLayer(val title: String) {
         MARKERS -> style.copy(lockMarkers = value)
         LABELS -> style.copy(lockLabels = value)
         COUNTRIES -> style.copy(lockCountries = value)
+        DISTRICTS -> style.copy(lockDistricts = value)
+        BUILDINGS -> style.copy(lockBuildings = value)
     }
 }
 
@@ -320,6 +360,7 @@ data class MapProject(
     val worldHeight: Float = 1600f,
     val createdAt: Long = System.currentTimeMillis(),
     val updatedAt: Long = System.currentTimeMillis(),
+    val kind: MapKind = MapKind.WORLD,
     val stage: Int = 1,
     val landmasses: List<Landmass> = emptyList(),
     val waters: List<WaterBody> = emptyList(),
@@ -329,6 +370,8 @@ data class MapProject(
     val markers: List<Marker> = emptyList(),
     val countries: List<Country> = emptyList(),
     val labels: List<MapLabel> = emptyList(),
+    val districts: List<District> = emptyList(),
+    val buildings: List<Building> = emptyList(),
     val style: MapStyle = MapStyle()
 ) {
     fun countryById(id: String?): Country? =
@@ -343,10 +386,10 @@ data class MapProject(
 
     fun isEmpty(): Boolean = landmasses.isEmpty() && waters.isEmpty() && biomes.isEmpty() &&
         lines.isEmpty() && roads.isEmpty() && markers.isEmpty() &&
-        countries.isEmpty() && labels.isEmpty()
+        countries.isEmpty() && labels.isEmpty() && buildings.isEmpty() && districts.isEmpty()
 
     fun objectCount(): Int = landmasses.size + waters.size + biomes.size + lines.size +
-        roads.size + markers.size + labels.size
+        roads.size + markers.size + labels.size + buildings.size + districts.size
 
     companion object {
         const val MIN_WORLD_SIZE = 600f
@@ -382,6 +425,18 @@ data class MapProject(
         )
 
         val PRESET_GROUPS: List<String> = PRESETS.map { it.group }.distinct()
+
+        /** Размеры карты города: от деревни до столицы. */
+        val CITY_PRESETS: List<WorldPreset> = listOf(
+            WorldPreset("Деревня", "Небольшие", 600f, 450f, "4:3"),
+            WorldPreset("Городок", "Небольшие", 900f, 700f, "9:7"),
+            WorldPreset("Город у реки", "Средние", 1400f, 900f, "3:2"),
+            WorldPreset("Крепостной город", "Средние", 1200f, 1200f, "1:1"),
+            WorldPreset("Портовый город", "Средние", 1600f, 1000f, "8:5"),
+            WorldPreset("Большой город", "Большие", 2200f, 1600f, "11:8"),
+            WorldPreset("Столица", "Большие", 3000f, 2200f, "15:11"),
+            WorldPreset("Великий город", "Огромные", 4000f, 3000f, "4:3")
+        )
     }
 }
 
@@ -409,6 +464,8 @@ sealed interface Selection {
     data class RoadSel(override val id: String) : Selection
     data class MarkerSel(override val id: String) : Selection
     data class CountryArea(override val id: String, val index: Int) : Selection
+    data class BuildingSel(override val id: String) : Selection
+    data class DistrictSel(override val id: String) : Selection
     data class LabelSel(override val id: String) : Selection
 }
 
@@ -416,6 +473,7 @@ sealed interface Selection {
 data class ProjectSummary(
     val id: String,
     val name: String,
+    val kind: MapKind = MapKind.WORLD,
     val updatedAt: Long,
     val stage: Int,
     val landCount: Int,

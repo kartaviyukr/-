@@ -29,6 +29,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -56,7 +57,9 @@ import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.model.ProjectSummary
-import com.fantasymap.creator.model.Stage
+import com.fantasymap.creator.model.MapKind
+import com.fantasymap.creator.model.WorldPreset
+import com.fantasymap.creator.model.stageFor
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -133,9 +136,9 @@ fun ProjectsScreen(viewModel: EditorViewModel) {
     if (showCreate) {
         CreateProjectDialog(
             onDismiss = { showCreate = false },
-            onCreate = { name, width, height ->
+            onCreate = { name, width, height, kind ->
                 showCreate = false
-                viewModel.createProject(name, width, height)
+                viewModel.createProject(name, width, height, kind)
             }
         )
     }
@@ -204,7 +207,8 @@ private fun ProjectCard(
             Text(summary.name, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
             Spacer(Modifier.height(4.dp))
             Text(
-                "Шаг ${summary.stage} из 8 · ${Stage.byNumber(summary.stage).title}",
+                "${summary.kind.title} · шаг ${summary.stage} из 8 · " +
+                    stageFor(summary.kind, summary.stage).title,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.primary
             )
@@ -238,9 +242,10 @@ private fun ProjectCard(
 @Composable
 private fun CreateProjectDialog(
     onDismiss: () -> Unit,
-    onCreate: (String, Float, Float) -> Unit
+    onCreate: (String, Float, Float, MapKind) -> Unit
 ) {
     var name by remember { mutableStateOf("") }
+    var kind by remember { mutableStateOf(MapKind.WORLD) }
     var selected by remember { mutableStateOf(MapProject.PRESETS.firstOrNull { it.title == "Один континент" } ?: MapProject.PRESETS.first()) }
     var custom by remember { mutableStateOf(false) }
     var customWidth by remember { mutableFloatStateOf(2400f) }
@@ -261,6 +266,25 @@ private fun CreateProjectDialog(
                     label = { Text("Название мира") },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(10.dp))
+                Text("Что рисуем", style = MaterialTheme.typography.labelLarge)
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    MapKind.entries.forEach { item ->
+                        FilterChip(
+                            selected = kind == item,
+                            onClick = {
+                                kind = item
+                                selected = presetsFor(item).first()
+                            },
+                            label = { Text(item.title) }
+                        )
+                    }
+                }
+                Text(
+                    kind.hint,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(Modifier.height(6.dp))
                 Text(
@@ -294,14 +318,15 @@ private fun CreateProjectDialog(
                         valueRange = MapProject.MIN_WORLD_SIZE..MapProject.MAX_WORLD_SIZE
                     )
                 } else {
-                    MapProject.PRESET_GROUPS.forEach { group ->
+                    val presets = presetsFor(kind)
+                    presets.map { it.group }.distinct().forEach { group ->
                         Spacer(Modifier.height(8.dp))
                         Text(
                             group,
                             style = MaterialTheme.typography.labelLarge,
                             color = MaterialTheme.colorScheme.primary
                         )
-                        MapProject.PRESETS.filter { it.group == group }.forEach { preset ->
+                        presets.filter { it.group == group }.forEach { preset ->
                             Row(
                                 Modifier
                                     .fillMaxWidth()
@@ -334,12 +359,17 @@ private fun CreateProjectDialog(
         confirmButton = {
             TextButton(onClick = {
                 if (custom) {
-                    onCreate(name.trim(), customWidth, customHeight)
+                    onCreate(name.trim(), customWidth, customHeight, kind)
                 } else {
-                    onCreate(name.trim(), selected.width, selected.height)
+                    onCreate(name.trim(), selected.width, selected.height, kind)
                 }
             }) { Text("Создать") }
         },
         dismissButton = { TextButton(onClick = onDismiss) { Text("Отмена") } }
     )
+}
+
+private fun presetsFor(kind: MapKind): List<WorldPreset> = when (kind) {
+    MapKind.WORLD -> MapProject.PRESETS
+    MapKind.CITY -> MapProject.CITY_PRESETS
 }

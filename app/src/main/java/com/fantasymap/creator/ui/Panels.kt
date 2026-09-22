@@ -35,6 +35,10 @@ import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
 import com.fantasymap.creator.model.BiomeGroup
 import com.fantasymap.creator.model.BiomeType
+import com.fantasymap.creator.model.BuildingGroup
+import com.fantasymap.creator.model.BuildingType
+import com.fantasymap.creator.model.DistrictType
+import com.fantasymap.creator.model.MapStage
 import com.fantasymap.creator.model.LabelStyle
 import com.fantasymap.creator.model.LineFeatureType
 import com.fantasymap.creator.model.MarkerGroup
@@ -80,7 +84,7 @@ fun EditorBottomPanel(
                 }
             }
             if (expanded) {
-                StageBar(viewModel.stage) { viewModel.selectStage(it) }
+                StageBar(viewModel.stages(), viewModel.stage) { viewModel.selectStage(it) }
                 Text(
                     text = viewModel.stage.hint,
                     style = MaterialTheme.typography.bodySmall,
@@ -102,12 +106,12 @@ fun EditorBottomPanel(
 }
 
 @Composable
-private fun StageBar(current: Stage, onSelect: (Stage) -> Unit) {
+private fun StageBar(stages: List<MapStage>, current: MapStage, onSelect: (MapStage) -> Unit) {
     LazyRow(
         contentPadding = PaddingValues(horizontal = 10.dp, vertical = 6.dp),
         horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
-        items(Stage.entries.toList()) { stage ->
+        items(stages) { stage ->
             val selected = stage == current
             FilterChip(
                 selected = selected,
@@ -159,6 +163,8 @@ private fun ContextPicker(viewModel: EditorViewModel, onOpenCountries: () -> Uni
             }
         }
 
+        viewModel.tool == Tool.BUILDING -> BuildingPicker(viewModel)
+        viewModel.tool == Tool.DISTRICT -> DistrictPicker(viewModel)
         viewModel.tool == Tool.BIOME -> BiomePicker(viewModel)
         viewModel.tool == Tool.MARKER -> MarkerPicker(viewModel)
         viewModel.tool == Tool.LINE -> LinePicker(viewModel)
@@ -225,6 +231,83 @@ private fun BiomePicker(viewModel: EditorViewModel) {
                 FilterChip(
                     selected = viewModel.biome == item,
                     onClick = { viewModel.biome = item },
+                    label = { Text(item.title) },
+                    leadingIcon = { ColorDot(Color(item.color)) }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun BuildingPicker(viewModel: EditorViewModel) {
+    Column {
+        Text(
+            "Касание ставит дом, протяжка задаёт его размер.",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 14.dp)
+        )
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(BuildingGroup.entries.toList()) { item ->
+                FilterChip(
+                    selected = viewModel.buildingGroup == item,
+                    onClick = {
+                        viewModel.buildingGroup = item
+                        BuildingType.byGroup(item).firstOrNull()?.let { viewModel.buildingType = it }
+                    },
+                    label = { Text(item.title) }
+                )
+            }
+        }
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(BuildingType.byGroup(viewModel.buildingGroup)) { item ->
+                FilterChip(
+                    selected = viewModel.buildingType == item,
+                    onClick = { viewModel.buildingType = item },
+                    label = { Text(item.title) },
+                    leadingIcon = { ColorDot(Color(item.color)) }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun DistrictPicker(viewModel: EditorViewModel) {
+    Column {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 10.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            TextButton(
+                onClick = { viewModel.fillDistrictWithHouses() },
+                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
+            ) {
+                Text("🏘 Застроить квартал домами")
+            }
+            Text(
+                "выберите квартал",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(DistrictType.entries.toList()) { item ->
+                FilterChip(
+                    selected = viewModel.districtType == item,
+                    onClick = { viewModel.districtType = item },
                     label = { Text(item.title) },
                     leadingIcon = { ColorDot(Color(item.color)) }
                 )

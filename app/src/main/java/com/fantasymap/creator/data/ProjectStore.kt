@@ -35,6 +35,7 @@ class ProjectStore(context: Context) {
                 ProjectSummary(
                     id = project.id,
                     name = project.name,
+                    kind = project.kind,
                     updatedAt = project.updatedAt,
                     stage = project.stage,
                     landCount = project.landmasses.size,

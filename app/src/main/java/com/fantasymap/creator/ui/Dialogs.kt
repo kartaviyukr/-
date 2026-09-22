@@ -60,7 +60,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
+import com.fantasymap.creator.model.Building
+import com.fantasymap.creator.model.BuildingGroup
+import com.fantasymap.creator.model.BuildingType
 import com.fantasymap.creator.model.Country
+import com.fantasymap.creator.model.District
+import com.fantasymap.creator.model.DistrictType
 import com.fantasymap.creator.model.CountryInfo
 import com.fantasymap.creator.model.MapLabel
 import com.fantasymap.creator.model.MapLayer
@@ -282,6 +287,184 @@ fun LabelEditDialog(
         confirmButton = {
             TextButton(onClick = {
                 viewModel.updateLabel(draft)
+                onDismiss()
+            }) { Text("Готово") }
+        },
+        dismissButton = {
+            TextButton(onClick = {
+                viewModel.deleteSelection()
+                onDismiss()
+            }) { Text("Удалить") }
+        }
+    )
+}
+
+/** Карточка здания: вид, название, этажи, хозяин, описание. */
+@Composable
+fun BuildingEditDialog(
+    viewModel: EditorViewModel,
+    building: Building,
+    onDismiss: () -> Unit
+) {
+    var draft by remember(building.id) { mutableStateOf(building) }
+    var group by remember(building.id) { mutableStateOf(building.type.group) }
+
+    AlertDialog(
+        onDismissRequest = {
+            viewModel.updateBuilding(draft)
+            onDismiss()
+        },
+        title = { Text(draft.type.title) },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 460.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                OutlinedTextField(
+                    value = draft.name,
+                    onValueChange = { draft = draft.copy(name = it) },
+                    label = { Text("Название") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(10.dp))
+                Text("Вид постройки", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(BuildingGroup.entries.toList()) { item ->
+                        FilterChip(
+                            selected = group == item,
+                            onClick = { group = item },
+                            label = { Text(item.title) }
+                        )
+                    }
+                }
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(BuildingType.byGroup(group)) { item ->
+                        FilterChip(
+                            selected = draft.type == item,
+                            onClick = { draft = draft.copy(type = item) },
+                            label = { Text(item.title) },
+                            leadingIcon = { ColorDot(Color(item.color)) }
+                        )
+                    }
+                }
+                Spacer(Modifier.height(10.dp))
+                OutlinedTextField(
+                    value = draft.owner,
+                    onValueChange = { draft = draft.copy(owner = it) },
+                    label = { Text("Хозяин, кто здесь живёт или работает") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(8.dp))
+                OutlinedTextField(
+                    value = draft.description,
+                    onValueChange = { draft = draft.copy(description = it) },
+                    label = { Text("Описание, слухи, что внутри") },
+                    minLines = 3,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(10.dp))
+                Text("Этажей: ${draft.floors}", style = MaterialTheme.typography.labelLarge)
+                Slider(
+                    value = draft.floors.toFloat(),
+                    onValueChange = { draft = draft.copy(floors = it.toInt().coerceIn(1, 9)) },
+                    valueRange = 1f..9f,
+                    steps = 7
+                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text("Подпись на карте", Modifier.weight(1f))
+                    Switch(
+                        checked = draft.showLabel,
+                        onCheckedChange = { draft = draft.copy(showLabel = it) }
+                    )
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                viewModel.updateBuilding(draft)
+                onDismiss()
+            }) { Text("Готово") }
+        },
+        dismissButton = {
+            TextButton(onClick = {
+                viewModel.deleteSelection()
+                onDismiss()
+            }) { Text("Удалить") }
+        }
+    )
+}
+
+/** Карточка квартала: вид, название, описание, застройка домами. */
+@Composable
+fun DistrictEditDialog(
+    viewModel: EditorViewModel,
+    district: District,
+    onDismiss: () -> Unit
+) {
+    var draft by remember(district.id) { mutableStateOf(district) }
+
+    AlertDialog(
+        onDismissRequest = {
+            viewModel.updateDistrict(draft)
+            onDismiss()
+        },
+        title = { Text(draft.type.title) },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 440.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                OutlinedTextField(
+                    value = draft.name,
+                    onValueChange = { draft = draft.copy(name = it) },
+                    label = { Text("Название квартала") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(10.dp))
+                Text("Какой это квартал", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(DistrictType.entries.toList()) { item ->
+                        FilterChip(
+                            selected = draft.type == item,
+                            onClick = { draft = draft.copy(type = item) },
+                            label = { Text(item.title) },
+                            leadingIcon = { ColorDot(Color(item.color)) }
+                        )
+                    }
+                }
+                Spacer(Modifier.height(10.dp))
+                OutlinedTextField(
+                    value = draft.description,
+                    onValueChange = { draft = draft.copy(description = it) },
+                    label = { Text("Чем живёт квартал") },
+                    minLines = 3,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(10.dp))
+                Text(
+                    "Плотность застройки: ${(viewModel.buildDensity * 100).toInt()}%",
+                    style = MaterialTheme.typography.labelLarge
+                )
+                Slider(
+                    value = viewModel.buildDensity,
+                    onValueChange = { viewModel.buildDensity = it },
+                    valueRange = 0f..1f
+                )
+                TextButton(onClick = {
+                    viewModel.updateDistrict(draft)
+                    viewModel.fillDistrictWithHouses()
+                    onDismiss()
+                }) { Text("🏘 Застроить квартал домами") }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                viewModel.updateDistrict(draft)
                 onDismiss()
             }) { Text("Готово") }
         },

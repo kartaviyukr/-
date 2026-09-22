@@ -110,7 +110,20 @@ class Glyphs {
             Glyph.HORSESHOE -> horseshoe(canvas, cx, cy, s, stroke)
             Glyph.CATTLE -> cattle(canvas, cx, cy, s, fill, stroke)
             Glyph.OIL -> oilDrop(canvas, cx, cy, s, fill, stroke)
+            Glyph.INN_SIGN -> innSign(canvas, cx, cy, s, fill, stroke)
         }
+    }
+
+    /** Вывеска трактира: столб, кронштейн и качающаяся доска. */
+    private fun innSign(canvas: Canvas, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        canvas.drawLine(cx - s * 0.75f, cy + s, cx - s * 0.75f, cy - s, stroke)
+        canvas.drawLine(cx - s * 0.75f, cy - s, cx + s * 0.55f, cy - s, stroke)
+        canvas.drawLine(cx + s * 0.35f, cy - s, cx + s * 0.35f, cy - s * 0.6f, stroke)
+        rect.set(cx - s * 0.35f, cy - s * 0.6f, cx + s * 0.9f, cy + s * 0.35f)
+        canvas.drawRect(rect, fill)
+        canvas.drawRect(rect, stroke)
+        canvas.drawLine(cx - s * 0.15f, cy - s * 0.3f, cx + s * 0.7f, cy - s * 0.3f, stroke)
+        canvas.drawLine(cx - s * 0.15f, cy + s * 0.05f, cx + s * 0.7f, cy + s * 0.05f, stroke)
     }
 
     // ---------- знаки ресурсов ----------

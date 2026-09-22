@@ -217,7 +217,9 @@ fun EditorScreen(viewModel: EditorViewModel) {
                         .align(Alignment.BottomCenter)
                         .padding(10.dp),
                     onEdit = {
-                        if (selection is Selection.MarkerSel || selection is Selection.LabelSel) {
+                        if (selection is Selection.MarkerSel || selection is Selection.LabelSel ||
+                            selection is Selection.BuildingSel || selection is Selection.DistrictSel
+                        ) {
                             showObjectDialog = true
                         } else {
                             renameTarget = selection
@@ -237,6 +239,22 @@ fun EditorScreen(viewModel: EditorViewModel) {
             showObjectDialog = false
         } else {
             MarkerEditDialog(viewModel, marker) { showObjectDialog = false }
+        }
+    }
+    if (showObjectDialog && selection is Selection.BuildingSel) {
+        val building = project.buildings.firstOrNull { it.id == selection.id }
+        if (building == null) {
+            showObjectDialog = false
+        } else {
+            BuildingEditDialog(viewModel, building) { showObjectDialog = false }
+        }
+    }
+    if (showObjectDialog && selection is Selection.DistrictSel) {
+        val district = project.districts.firstOrNull { it.id == selection.id }
+        if (district == null) {
+            showObjectDialog = false
+        } else {
+            DistrictEditDialog(viewModel, district) { showObjectDialog = false }
         }
     }
     if (showObjectDialog && selection is Selection.LabelSel) {
@@ -382,6 +400,22 @@ private fun SelectionCard(
             val country = project.countryById(selection.id)
             (country?.name?.takeIf { it.isNotBlank() } ?: "Страна") to "Территория страны"
         }
+        is Selection.BuildingSel -> {
+            val building = project.buildings.firstOrNull { it.id == selection.id }
+            if (building == null) {
+                "Здание" to ""
+            } else {
+                building.name.ifBlank { building.type.title } to building.type.title
+            }
+        }
+        is Selection.DistrictSel -> {
+            val district = project.districts.firstOrNull { it.id == selection.id }
+            if (district == null) {
+                "Квартал" to ""
+            } else {
+                district.name.ifBlank { district.type.title } to district.type.title
+            }
+        }
     }
 
     Card(
@@ -467,6 +501,8 @@ private fun currentNameOf(viewModel: EditorViewModel, selection: Selection): Str
         is Selection.MarkerSel -> project.markers.firstOrNull { it.id == selection.id }?.name.orEmpty()
         is Selection.LabelSel -> project.labels.firstOrNull { it.id == selection.id }?.text.orEmpty()
         is Selection.CountryArea -> project.countryById(selection.id)?.name.orEmpty()
+        is Selection.BuildingSel -> project.buildings.firstOrNull { it.id == selection.id }?.name.orEmpty()
+        is Selection.DistrictSel -> project.districts.firstOrNull { it.id == selection.id }?.name.orEmpty()
     }
 }
 
