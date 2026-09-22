@@ -64,6 +64,9 @@ import com.fantasymap.creator.model.Building
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
 import com.fantasymap.creator.model.Country
+import com.fantasymap.creator.model.CustomAsset
+import com.fantasymap.creator.model.CustomKind
+import com.fantasymap.creator.model.MarkerScope
 import com.fantasymap.creator.model.District
 import com.fantasymap.creator.model.DistrictType
 import com.fantasymap.creator.model.CountryInfo
@@ -1011,6 +1014,13 @@ fun HelpDialog(onDismiss: () -> Unit) {
                     "или области получится перейти на её отдельную карту. У связанного " +
                     "объекта в углу появляется закладка, а в карточке выбора — кнопка «→ карта».")
                 Spacer(Modifier.height(10.dp))
+                Text("Авторский контент", fontWeight = FontWeight.Bold)
+                Text("Меню ⋮ → «Авторский контент»: загрузите свою картинку и укажите, " +
+                    "чем она станет — постройкой, зоной или объектом. Заготовка появится " +
+                    "первой строкой в выборе зон, зданий и объектов (кнопка «＋ своё»), " +
+                    "годится и для карты мира, и для карты города и остаётся в " +
+                    "приложении для всех ваших карт.")
+                Spacer(Modifier.height(10.dp))
                 Text("Слои и вид карты", fontWeight = FontWeight.Bold)
                 Text("Меню ⋮ → «Слои карты»: глаз прячет слой, замок защищает его от " +
                     "выбора и стирания. Меню ⋮ → «Вид карты»: готовые стили — пергамент, " +
@@ -1284,3 +1294,228 @@ private val LAND_COLORS = listOf(
     0xFFE8DCBE.toInt(), 0xFFEFE3C6.toInt(), 0xFFDDCFAA.toInt(), 0xFFD8C9A3.toInt(),
     0xFFE6D9B8.toInt(), 0xFFCFC29C.toInt(), 0xFFF2E8CF.toInt(), 0xFFC8BB94.toInt()
 )
+
+/**
+ * Библиотека авторского контента: свои постройки, зоны и объекты.
+ * Каждая заготовка — картинка плюс несколько настроек.
+ */
+@Composable
+fun CustomAssetsDialog(
+    viewModel: EditorViewModel,
+    onAddImage: () -> Unit,
+    onDismiss: () -> Unit
+) {
+    var editing by remember { mutableStateOf<CustomAsset?>(null) }
+    val assets = viewModel.customAssets
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Авторский контент") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 460.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    "Загрузите свою картинку — и ставьте её на карту как постройку, " +
+                        "зону или объект. Заготовки хранятся в приложении и годятся " +
+                        "для всех ваших карт.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(Modifier.height(10.dp))
+
+                if (assets.isEmpty()) {
+                    Text("Пока пусто.", style = MaterialTheme.typography.bodyMedium)
+                } else {
+                    for (asset in assets) {
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .clickable { editing = asset }
+                                .padding(vertical = 6.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            AssetThumb(viewModel, asset, 40.dp)
+                            Spacer(Modifier.width(10.dp))
+                            Column(Modifier.weight(1f)) {
+                                Text(
+                                    asset.title.ifBlank { "Без названия" },
+                                    fontWeight = FontWeight.Bold,
+                                    style = MaterialTheme.typography.bodyMedium
+                                )
+                                Text(
+                                    "${asset.kind.title} · ${scopeTitle(asset.scope)}",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                            TextButton(onClick = { viewModel.selectAsset(asset) }) { Text("Взять") }
+                            IconButton(onClick = { viewModel.deleteAsset(asset.id) }) {
+                                Icon(Icons.Default.Delete, contentDescription = "Удалить заготовку")
+                            }
+                        }
+                        HorizontalDivider()
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onAddImage) { Text("Загрузить картинку") }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) { Text("Закрыть") }
+        }
+    )
+
+    val target = editing
+    if (target != null) {
+        AssetSettingsDialog(
+            viewModel = viewModel,
+            asset = target,
+            title = "Заготовка",
+            onSave = { viewModel.updateAsset(it); editing = null },
+            onDismiss = { editing = null }
+        )
+    }
+}
+
+/** Что заполняется сразу после загрузки картинки. */
+@Composable
+fun NewAssetDialog(
+    viewModel: EditorViewModel,
+    onSave: (CustomAsset) -> Unit,
+    onDismiss: () -> Unit
+) {
+    val draft = remember { CustomAsset(title = "Моя заготовка") }
+    AssetSettingsDialog(
+        viewModel = viewModel,
+        asset = draft,
+        title = "Новая заготовка",
+        preview = null,
+        onSave = onSave,
+        onDismiss = onDismiss
+    )
+}
+
+private fun scopeTitle(scope: MarkerScope): String = when (scope) {
+    MarkerScope.BOTH -> "мир и город"
+    MarkerScope.WORLD -> "только карта мира"
+    MarkerScope.CITY -> "только карта города"
+}
+
+/** Общие настройки заготовки: название, вид, где применять, размер. */
+@Composable
+private fun AssetSettingsDialog(
+    viewModel: EditorViewModel,
+    asset: CustomAsset,
+    title: String,
+    preview: CustomAsset? = asset,
+    onSave: (CustomAsset) -> Unit,
+    onDismiss: () -> Unit
+) {
+    var draft by remember(asset.id) { mutableStateOf(asset) }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text(title) },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 460.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                if (preview != null) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        AssetThumb(viewModel, preview, 56.dp)
+                        Spacer(Modifier.width(10.dp))
+                        Text(
+                            "Картинка уже в библиотеке.",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    Spacer(Modifier.height(8.dp))
+                }
+
+                OutlinedTextField(
+                    value = draft.title,
+                    onValueChange = { draft = draft.copy(title = it) },
+                    label = { Text("Название") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(10.dp))
+
+                Text("Чем ставить на карту", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(CustomKind.entries.toList()) { item ->
+                        FilterChip(
+                            selected = draft.kind == item,
+                            onClick = { draft = draft.copy(kind = item) },
+                            label = { Text(item.title) }
+                        )
+                    }
+                }
+                Text(
+                    draft.kind.hint,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+
+                Spacer(Modifier.height(10.dp))
+                Text("Где пригодится", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(MarkerScope.entries.toList()) { item ->
+                        FilterChip(
+                            selected = draft.scope == item,
+                            onClick = { draft = draft.copy(scope = item) },
+                            label = { Text(scopeTitle(item)) }
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(10.dp))
+                if (draft.kind == CustomKind.ZONE) {
+                    Text(
+                        "Размер плитки: ${draft.tile.toInt()}",
+                        style = MaterialTheme.typography.labelLarge
+                    )
+                    Slider(
+                        value = draft.tile,
+                        onValueChange = { draft = draft.copy(tile = it) },
+                        valueRange = 20f..400f
+                    )
+                } else {
+                    Text(
+                        "Размер: ${"%.1f".format(draft.size)}×",
+                        style = MaterialTheme.typography.labelLarge
+                    )
+                    Slider(
+                        value = draft.size,
+                        onValueChange = { draft = draft.copy(size = it) },
+                        valueRange = 0.3f..4f
+                    )
+                }
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Switch(
+                        checked = draft.outlined,
+                        onCheckedChange = { draft = draft.copy(outlined = it) }
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Text("Обводить контур", style = MaterialTheme.typography.bodyMedium)
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(
+                onClick = { onSave(draft.copy(title = draft.title.ifBlank { "Моя заготовка" })) }
+            ) { Text("Сохранить") }
+        },
+        dismissButton = {
+            TextButton(onClick = onDismiss) { Text("Отмена") }
+        }
+    )
+}

@@ -35,7 +35,9 @@ data class BiomeRegion(
     val biome: BiomeType = BiomeType.MIXED_FOREST,
     val name: String = "",
     val points: List<Vec> = emptyList(),
-    val extraContours: List<List<Vec>> = emptyList()
+    val extraContours: List<List<Vec>> = emptyList(),
+    /** Авторская заготовка: область замащивается своей картинкой. */
+    val assetId: String? = null
 ) {
     /** Все контуры области: основной и дополнительные. */
     fun contours(): List<List<Vec>> =
@@ -81,7 +83,9 @@ data class Marker(
     val scale: Float = 1f,
     val showLabel: Boolean = true,
     /** Карта, на которую ведёт этот объект: тапнул — перешёл к подробной карте. */
-    val linkedProjectId: String? = null
+    val linkedProjectId: String? = null,
+    /** Авторская заготовка: вместо знака рисуется своя картинка. */
+    val assetId: String? = null
 )
 
 /**
@@ -97,7 +101,9 @@ data class Building(
     val points: List<Vec> = emptyList(),
     val floors: Int = 1,
     val owner: String = "",
-    val showLabel: Boolean = false
+    val showLabel: Boolean = false,
+    /** Авторская заготовка: след здания закрывается своей картинкой. */
+    val assetId: String? = null
 )
 
 /** Квартал города — район со своим характером. */

@@ -1,5 +1,6 @@
 package com.fantasymap.creator.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -26,16 +27,22 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
+import com.fantasymap.creator.model.CustomAsset
+import com.fantasymap.creator.model.CustomKind
 import com.fantasymap.creator.model.DistrictType
 import com.fantasymap.creator.model.MapStage
 import com.fantasymap.creator.model.LabelStyle
@@ -50,6 +57,7 @@ import com.fantasymap.creator.model.WaterKind
 fun EditorBottomPanel(
     viewModel: EditorViewModel,
     onOpenCountries: () -> Unit,
+    onOpenAssets: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Surface(
@@ -91,7 +99,7 @@ fun EditorBottomPanel(
             }
             ToolBar(viewModel)
             if (expanded) {
-                ContextPicker(viewModel, onOpenCountries)
+                ContextPicker(viewModel, onOpenCountries, onOpenAssets)
                 // Пустое место под последней строкой: до неё легко дотянуться,
                 // и она не прячется за системной панелью навигации.
                 Spacer(Modifier.height(44.dp))
@@ -142,7 +150,11 @@ private fun ToolBar(viewModel: EditorViewModel) {
 }
 
 @Composable
-private fun ContextPicker(viewModel: EditorViewModel, onOpenCountries: () -> Unit) {
+private fun ContextPicker(
+    viewModel: EditorViewModel,
+    onOpenCountries: () -> Unit,
+    onOpenAssets: () -> Unit
+) {
     when {
         viewModel.stage == Stage.COUNTRIES -> {
             Row(
@@ -160,10 +172,10 @@ private fun ContextPicker(viewModel: EditorViewModel, onOpenCountries: () -> Uni
             }
         }
 
-        viewModel.tool == Tool.BUILDING -> BuildingPicker(viewModel)
+        viewModel.tool == Tool.BUILDING -> BuildingPicker(viewModel, onOpenAssets)
         viewModel.tool == Tool.DISTRICT -> DistrictPicker(viewModel)
-        viewModel.tool == Tool.BIOME -> BiomePicker(viewModel)
-        viewModel.tool == Tool.MARKER -> MarkerPicker(viewModel)
+        viewModel.tool == Tool.BIOME -> BiomePicker(viewModel, onOpenAssets)
+        viewModel.tool == Tool.MARKER -> MarkerPicker(viewModel, onOpenAssets)
         viewModel.tool == Tool.LINE -> LinePicker(viewModel)
         viewModel.tool == Tool.ROAD -> RoadPicker(viewModel)
         viewModel.tool == Tool.WATER -> WaterPicker(viewModel)
@@ -185,7 +197,7 @@ private fun ContextPicker(viewModel: EditorViewModel, onOpenCountries: () -> Uni
 }
 
 @Composable
-private fun BiomePicker(viewModel: EditorViewModel) {
+private fun BiomePicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
     val group = viewModel.biome.group
     Column {
         Row(
@@ -206,15 +218,16 @@ private fun BiomePicker(viewModel: EditorViewModel) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
+        CustomAssetRow(viewModel, CustomKind.ZONE, viewModel.customZone, onOpenAssets)
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             items(viewModel.biomeGroups()) { item ->
                 FilterChip(
-                    selected = group == item,
+                    selected = group == item && viewModel.customZone == null,
                     onClick = {
-                        BiomeType.byGroup(item).firstOrNull()?.let { viewModel.biome = it }
+                        BiomeType.byGroup(item).firstOrNull()?.let { viewModel.selectBiome(it) }
                     },
                     label = { Text(item.title) }
                 )
@@ -226,8 +239,8 @@ private fun BiomePicker(viewModel: EditorViewModel) {
         ) {
             items(BiomeType.byGroup(group)) { item ->
                 FilterChip(
-                    selected = viewModel.biome == item,
-                    onClick = { viewModel.biome = item },
+                    selected = viewModel.biome == item && viewModel.customZone == null,
+                    onClick = { viewModel.selectBiome(item) },
                     label = { Text(item.title) },
                     leadingIcon = { ColorDot(Color(item.color)) }
                 )
@@ -237,7 +250,7 @@ private fun BiomePicker(viewModel: EditorViewModel) {
 }
 
 @Composable
-private fun BuildingPicker(viewModel: EditorViewModel) {
+private fun BuildingPicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
     Column {
         Text(
             "Касание ставит дом, протяжка задаёт его размер.",
@@ -245,16 +258,17 @@ private fun BuildingPicker(viewModel: EditorViewModel) {
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(horizontal = 14.dp)
         )
+        CustomAssetRow(viewModel, CustomKind.BUILDING, viewModel.customBuilding, onOpenAssets)
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             items(BuildingGroup.entries.toList()) { item ->
                 FilterChip(
-                    selected = viewModel.buildingGroup == item,
+                    selected = viewModel.buildingGroup == item && viewModel.customBuilding == null,
                     onClick = {
                         viewModel.buildingGroup = item
-                        BuildingType.byGroup(item).firstOrNull()?.let { viewModel.buildingType = it }
+                        BuildingType.byGroup(item).firstOrNull()?.let { viewModel.selectBuildingType(it) }
                     },
                     label = { Text(item.title) }
                 )
@@ -266,8 +280,8 @@ private fun BuildingPicker(viewModel: EditorViewModel) {
         ) {
             items(BuildingType.byGroup(viewModel.buildingGroup)) { item ->
                 FilterChip(
-                    selected = viewModel.buildingType == item,
-                    onClick = { viewModel.buildingType = item },
+                    selected = viewModel.buildingType == item && viewModel.customBuilding == null,
+                    onClick = { viewModel.selectBuildingType(item) },
                     label = { Text(item.title) },
                     leadingIcon = { ColorDot(Color(item.color)) }
                 )
@@ -314,15 +328,16 @@ private fun DistrictPicker(viewModel: EditorViewModel) {
 }
 
 @Composable
-private fun MarkerPicker(viewModel: EditorViewModel) {
+private fun MarkerPicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
     Column {
+        CustomAssetRow(viewModel, CustomKind.OBJECT, viewModel.customObject, onOpenAssets)
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             items(viewModel.markerGroups()) { item ->
                 FilterChip(
-                    selected = viewModel.markerGroup == item,
+                    selected = viewModel.markerGroup == item && viewModel.customObject == null,
                     onClick = { viewModel.selectMarkerGroup(item) },
                     label = { Text(item.title) }
                 )
@@ -334,8 +349,8 @@ private fun MarkerPicker(viewModel: EditorViewModel) {
         ) {
             items(viewModel.markerTypes()) { item ->
                 FilterChip(
-                    selected = viewModel.markerType == item,
-                    onClick = { viewModel.markerType = item },
+                    selected = viewModel.markerType == item && viewModel.customObject == null,
+                    onClick = { viewModel.selectMarkerType(item) },
                     label = { Text(item.title) }
                 )
             }
@@ -466,6 +481,60 @@ private fun CountryPicker(viewModel: EditorViewModel, onOpenCountries: () -> Uni
                 )
             }
         }
+    }
+}
+
+/**
+ * Строка авторских заготовок: свои картинки, поставленные в библиотеку.
+ * Первая кнопка открывает саму библиотеку, где картинку можно добавить.
+ */
+@Composable
+private fun CustomAssetRow(
+    viewModel: EditorViewModel,
+    kind: CustomKind,
+    selected: CustomAsset?,
+    onOpenAssets: () -> Unit
+) {
+    val assets = viewModel.assetsOf(kind)
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        item {
+            FilterChip(
+                selected = false,
+                onClick = onOpenAssets,
+                label = { Text(if (assets.isEmpty()) "＋ своё, с картинкой" else "＋ своё") }
+            )
+        }
+        items(assets) { asset ->
+            FilterChip(
+                selected = selected?.id == asset.id,
+                onClick = {
+                    if (selected?.id == asset.id) viewModel.clearAsset(kind) else viewModel.selectAsset(asset)
+                },
+                label = { Text(asset.title) },
+                leadingIcon = { AssetThumb(viewModel, asset) }
+            )
+        }
+    }
+}
+
+/** Значок авторской заготовки: её же картинка. */
+@Composable
+fun AssetThumb(viewModel: EditorViewModel, asset: CustomAsset, size: Dp = 22.dp) {
+    val bitmap = remember(asset.id, asset.createdAt) { viewModel.assetStore.texture(asset.id) }
+    if (bitmap != null) {
+        Image(
+            bitmap = bitmap.asImageBitmap(),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .size(size)
+                .clip(RoundedCornerShape(4.dp))
+        )
+    } else {
+        ColorDot(Color(asset.color))
     }
 }
 

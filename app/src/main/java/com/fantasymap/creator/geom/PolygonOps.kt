@@ -127,6 +127,8 @@ object PolygonOps {
             for (j in i + 1 until count) {
                 if (contours[j].isEmpty()) continue
                 if (regions[i].biome != regions[j].biome) continue
+                // Авторские зоны сливаются только со своей же заготовкой.
+                if (regions[i].assetId != regions[j].assetId) continue
                 if (namedApart(regions[i].name, regions[j].name)) continue
                 val rootI = root(i)
                 val rootJ = root(j)

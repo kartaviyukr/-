@@ -5,6 +5,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.pdf.PdfDocument
 import android.net.Uri
+import com.fantasymap.creator.data.AssetStore
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.render.Camera
 import com.fantasymap.creator.render.MapRenderer
@@ -14,6 +15,9 @@ import kotlin.math.max
 
 /** Сохранение карты в PNG, PDF и текст через системный выбор места. */
 class Exporter(private val context: Context) {
+
+    /** Авторские картинки нужны и при сохранении карты в файл. */
+    private val textures by lazy { AssetStore(context) }
 
     fun exportPng(project: MapProject, uri: Uri, longSide: Int, withLegend: Boolean): Boolean =
         runCatching {
@@ -28,7 +32,7 @@ class Exporter(private val context: Context) {
                 width = (longSide / ratio).toInt().coerceAtLeast(64)
             }
 
-            val renderer = MapRenderer()
+            val renderer = MapRenderer().apply { textures = this@Exporter.textures }
             val uiScale = (width / 1100f).coerceIn(1f, 4f)
             val padding = width * 0.025f
             val legendHeight = if (withLegend) {
@@ -74,7 +78,7 @@ class Exporter(private val context: Context) {
      */
     fun exportPdf(project: MapProject, uri: Uri, tilesAcross: Int, withLegend: Boolean): Boolean =
         runCatching {
-            val renderer = MapRenderer()
+            val renderer = MapRenderer().apply { textures = this@Exporter.textures }
             val document = PdfDocument()
             val landscape = project.worldWidth >= project.worldHeight
             val pageWidth = if (landscape) A4_LONG else A4_SHORT

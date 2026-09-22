@@ -157,7 +157,8 @@ object FragmentCopy {
                     biome = region.biome,
                     name = region.name,
                     points = pieces.first(),
-                    extraContours = pieces.drop(1)
+                    extraContours = pieces.drop(1),
+                    assetId = region.assetId
                 )
             )
         }

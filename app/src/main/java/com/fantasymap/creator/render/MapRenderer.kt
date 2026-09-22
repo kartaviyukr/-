@@ -1,14 +1,19 @@
 package com.fantasymap.creator.render
 
+import android.graphics.Bitmap
+import android.graphics.BitmapShader
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.DashPathEffect
+import android.graphics.Matrix
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.PathMeasure
 import android.graphics.RectF
+import android.graphics.Shader
 import android.graphics.Typeface
 import com.fantasymap.creator.model.BBox
+import com.fantasymap.creator.model.CustomAsset
 import com.fantasymap.creator.model.BiomePattern
 import com.fantasymap.creator.model.Country
 import com.fantasymap.creator.model.Geometry
@@ -37,6 +42,15 @@ data class RenderOptions(
     /** 0 — взять цвет стола из настроек карты. */
     val deskColor: Int = 0
 )
+
+/** Откуда рисовальщик берёт авторские картинки. */
+interface TextureSource {
+    /** Описание авторской заготовки. */
+    fun asset(id: String): CustomAsset?
+
+    /** Картинка заготовки, если она на месте. */
+    fun bitmap(id: String): Bitmap?
+}
 
 /**
  * Рисует карту на обычном android.graphics.Canvas.
@@ -69,6 +83,13 @@ class MapRenderer {
         textAlign = Paint.Align.CENTER
         style = Paint.Style.STROKE
     }
+
+    /** Авторские картинки: без них всё рисуется как раньше. */
+    var textures: TextureSource? = null
+
+    private val textureMatrix = Matrix()
+    private val texturePaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { isFilterBitmap = true }
+    private val shaders = HashMap<Bitmap, BitmapShader>()
 
     private var inkColor = 0xFF3A2E22.toInt()
     private var haloColor = 0xFFFFF8E6.toInt()
@@ -237,6 +258,26 @@ class MapRenderer {
             val bounds = Geometry.bounds(contours.flatten())
             if (!bounds.intersects(visible)) continue
             buildContoursPath(contours, cam, path)
+
+            // Авторская зона: область замащивается своей картинкой.
+            val zoneAsset = assetOf(region.assetId)
+            if (zoneAsset != null) {
+                val bitmap = textureOf(region.assetId)
+                if (bitmap != null) {
+                    fillWithTexture(canvas, path, bitmap, zoneAsset, cam)
+                } else {
+                    fill.color = withAlpha(zoneAsset.color, 205)
+                    canvas.drawPath(path, fill)
+                }
+                if (zoneAsset.outlined) {
+                    stroke.color = withAlpha(darken(zoneAsset.color, 0.35f), 160)
+                    stroke.strokeWidth = 1.2f * u
+                    stroke.pathEffect = null
+                    canvas.drawPath(path, stroke)
+                }
+                continue
+            }
+
             fill.color = withAlpha(region.biome.color, 205)
             canvas.drawPath(path, fill)
             stroke.color = withAlpha(darken(region.biome.color, 0.25f), 150)
@@ -499,6 +540,35 @@ class MapRenderer {
             if (!bounds.intersects(visible)) continue
 
             buildPath(points, cam, true, path)
+            val screenSize = min(bounds.width, bounds.height) * cam.scale
+
+            // Авторская постройка: вместо крыши на след ложится своя картинка.
+            val houseAsset = assetOf(building.assetId)
+            if (houseAsset != null) {
+                val bitmap = textureOf(building.assetId)
+                if (bitmap != null) {
+                    drawTextureOnQuad(canvas, bitmap, points, path, cam)
+                } else {
+                    fill.color = houseAsset.color
+                    canvas.drawPath(path, fill)
+                }
+                if (houseAsset.outlined) {
+                    stroke.color = inkColor
+                    stroke.strokeWidth = max(0.7f, 1.05f * u)
+                    stroke.pathEffect = null
+                    canvas.drawPath(path, stroke)
+                }
+                if (building.showLabel && building.name.isNotBlank() && screenSize > 18f) {
+                    drawMapText(
+                        canvas, building.name,
+                        cam.screenX(Geometry.centroid(points).x),
+                        cam.screenY(bounds.maxY) + 10f * u,
+                        10.5f * u, inkColor, false
+                    )
+                }
+                continue
+            }
+
             fill.color = building.type.color
             canvas.drawPath(path, fill)
             stroke.color = inkColor
@@ -506,7 +576,6 @@ class MapRenderer {
             stroke.pathEffect = null
             canvas.drawPath(path, stroke)
 
-            val screenSize = min(bounds.width, bounds.height) * cam.scale
             // Конёк крыши — вдоль длинной стороны дома.
             if (points.size == 4 && screenSize > 6f) {
                 val first = middle(points[0], points[1])
@@ -641,7 +710,21 @@ class MapRenderer {
         stroke.color = inkColor
         stroke.strokeWidth = max(1f, 1.4f * u)
         stroke.pathEffect = null
-        if (marker.type.group == MarkerGroup.GOODS) {
+
+        // Авторский объект: вместо знака рисуется своя картинка.
+        val asset = assetOf(marker.assetId)
+        val bitmap = textureOf(marker.assetId)
+        if (asset != null && bitmap != null) {
+            val half = size * 1.6f * asset.size
+            val ratio = bitmap.height.toFloat() / max(1, bitmap.width)
+            rectF.set(sx - half, sy - half * ratio, sx + half, sy + half * ratio)
+            canvas.drawBitmap(bitmap, null, rectF, texturePaint)
+            if (asset.outlined) canvas.drawRect(rectF, stroke)
+        } else if (asset != null) {
+            fill.color = asset.color
+            canvas.drawCircle(sx, sy, size, fill)
+            canvas.drawCircle(sx, sy, size, stroke)
+        } else if (marker.type.group == MarkerGroup.GOODS) {
             // Ресурс рисуется кружком-жетоном со знаком внутри.
             fill.color = darken(markerFill(marker.type), 0.1f)
             canvas.drawCircle(sx, sy, size * 1.2f, fill)
@@ -909,6 +992,66 @@ class MapRenderer {
         textHalo.textAlign = Paint.Align.CENTER
     }
 
+    // ------------------------------------------------------- авторские картинки
+
+    /** Описание авторской заготовки объекта карты. */
+    private fun assetOf(id: String?): CustomAsset? {
+        val source = textures ?: return null
+        val key = id ?: return null
+        return source.asset(key)
+    }
+
+    private fun textureOf(id: String?): Bitmap? {
+        val source = textures ?: return null
+        val key = id ?: return null
+        val bitmap = source.bitmap(key) ?: return null
+        return if (bitmap.isRecycled) null else bitmap
+    }
+
+    /** Замостить область картинкой: плитка привязана к карте, а не к экрану. */
+    private fun fillWithTexture(canvas: Canvas, area: Path, bitmap: Bitmap, asset: CustomAsset, cam: Camera) {
+        val shader = shaders.getOrPut(bitmap) {
+            BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT)
+        }
+        val tile = max(8f, asset.tile)
+        val scale = tile * cam.scale / max(1, bitmap.width)
+        textureMatrix.reset()
+        textureMatrix.setScale(scale, scale)
+        textureMatrix.postTranslate(cam.screenX(0f), cam.screenY(0f))
+        shader.setLocalMatrix(textureMatrix)
+        texturePaint.shader = shader
+        texturePaint.alpha = 255
+        canvas.drawPath(area, texturePaint)
+        texturePaint.shader = null
+    }
+
+    /** Натянуть картинку на след постройки. */
+    private fun drawTextureOnQuad(canvas: Canvas, bitmap: Bitmap, points: List<Vec>, area: Path, cam: Camera) {
+        canvas.save()
+        canvas.clipPath(area)
+        if (points.size == 4) {
+            val width = bitmap.width.toFloat()
+            val height = bitmap.height.toFloat()
+            val src = floatArrayOf(0f, 0f, width, 0f, width, height, 0f, height)
+            val dst = FloatArray(8)
+            for (i in 0 until 4) {
+                dst[i * 2] = cam.screenX(points[i].x)
+                dst[i * 2 + 1] = cam.screenY(points[i].y)
+            }
+            textureMatrix.reset()
+            textureMatrix.setPolyToPoly(src, 0, dst, 0, 4)
+            canvas.drawBitmap(bitmap, textureMatrix, texturePaint)
+        } else {
+            val bounds = Geometry.bounds(points)
+            rectF.set(
+                cam.screenX(bounds.minX), cam.screenY(bounds.minY),
+                cam.screenX(bounds.maxX), cam.screenY(bounds.maxY)
+            )
+            canvas.drawBitmap(bitmap, null, rectF, texturePaint)
+        }
+        canvas.restore()
+    }
+
     private fun buildPath(points: List<Vec>, cam: Camera, close: Boolean, out: Path): Path {
         out.reset()
         out.fillType = Path.FillType.WINDING
@@ -948,13 +1091,21 @@ class MapRenderer {
     private fun legendSections(project: MapProject): List<Pair<String, List<LegendItem>>> {
         val sections = ArrayList<Pair<String, List<LegendItem>>>()
 
-        val zones = project.biomes.map { it.biome }.distinct()
+        val zones = project.biomes.filter { it.assetId == null }.map { it.biome }.distinct()
             .map { LegendItem(0, it.color, null, it.title) }
         if (zones.isNotEmpty()) sections.add("Природные зоны" to zones)
 
-        val objects = project.markers.map { it.type }.distinct()
+        val objects = project.markers.filter { it.assetId == null }.map { it.type }.distinct()
             .map { LegendItem(1, markerFill(it), it.glyph, it.title) }
         if (objects.isNotEmpty()) sections.add("Объекты" to objects)
+
+        // Авторские заготовки: в легенде они идут под своими названиями.
+        val ownIds = (project.biomes.mapNotNull { it.assetId } +
+            project.markers.mapNotNull { it.assetId } +
+            project.buildings.mapNotNull { it.assetId }).distinct()
+        val own = ownIds.mapNotNull { assetOf(it) }
+            .map { LegendItem(0, it.color, null, it.title) }
+        if (own.isNotEmpty()) sections.add("Своё" to own)
 
         val lines = project.lines.map { it.type }.distinct()
             .map { LegendItem(2, it.color, null, it.title) } +

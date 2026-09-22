@@ -1,5 +1,6 @@
 package com.fantasymap.creator.ui
 
+import android.net.Uri
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -63,6 +64,8 @@ fun EditorScreen(viewModel: EditorViewModel) {
     var showRenameProject by remember { mutableStateOf(false) }
     var showCountries by remember { mutableStateOf(false) }
     var showObjectDialog by remember { mutableStateOf(false) }
+    var showAssets by remember { mutableStateOf(false) }
+    var pendingImage by remember { mutableStateOf<Uri?>(null) }
     var renameTarget by remember { mutableStateOf<Selection?>(null) }
     var pngSize by remember { mutableIntStateOf(2048) }
     var pdfTiles by remember { mutableIntStateOf(1) }
@@ -93,8 +96,20 @@ fun EditorScreen(viewModel: EditorViewModel) {
         ActivityResultContracts.CreateDocument("text/plain")
     ) { uri -> if (uri != null) viewModel.exportCountriesText(uri) }
 
+    // Своя картинка для авторской заготовки: постройки, зоны или объекта.
+    val imageLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.OpenDocument()
+    ) { uri ->
+        if (uri != null) {
+            showAssets = false
+            pendingImage = uri
+        }
+    }
+
     BackHandler {
         when {
+            pendingImage != null -> pendingImage = null
+            showAssets -> showAssets = false
             showCountries -> showCountries = false
             viewModel.selection != null -> viewModel.selection = null
             else -> viewModel.closeProject()
@@ -147,6 +162,10 @@ fun EditorScreen(viewModel: EditorViewModel) {
                                 onClick = { menuOpen = false; viewModel.alignBiomeBorders() }
                             )
                             DropdownMenuItem(
+                                text = { Text("Авторский контент") },
+                                onClick = { menuOpen = false; showAssets = true }
+                            )
+                            DropdownMenuItem(
                                 text = { Text("Слои карты") },
                                 onClick = { menuOpen = false; showLayers = true }
                             )
@@ -178,7 +197,8 @@ fun EditorScreen(viewModel: EditorViewModel) {
         bottomBar = {
             EditorBottomPanel(
                 viewModel = viewModel,
-                onOpenCountries = { showCountries = true }
+                onOpenCountries = { showCountries = true },
+                onOpenAssets = { showAssets = true }
             )
         }
     ) { padding ->
@@ -231,6 +251,25 @@ fun EditorScreen(viewModel: EditorViewModel) {
     }
 
     // ---- диалоги ----
+
+    if (showAssets) {
+        CustomAssetsDialog(
+            viewModel = viewModel,
+            onAddImage = { imageLauncher.launch(arrayOf("image/*")) },
+            onDismiss = { showAssets = false }
+        )
+    }
+    val image = pendingImage
+    if (image != null) {
+        NewAssetDialog(
+            viewModel = viewModel,
+            onSave = { asset ->
+                viewModel.addAsset(image, asset)
+                pendingImage = null
+            },
+            onDismiss = { pendingImage = null }
+        )
+    }
 
     val selection = viewModel.selection
     if (showObjectDialog && selection is Selection.MarkerSel) {

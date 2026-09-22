@@ -31,7 +31,7 @@ fun MapCanvas(
     onEditRequest: () -> Unit
 ) {
     val project = viewModel.project ?: return
-    val renderer = remember { MapRenderer() }
+    val renderer = remember { MapRenderer().apply { textures = viewModel.assetStore } }
     val uiScale = LocalDensity.current.density.coerceIn(1f, 3f)
 
     Canvas(

@@ -14,7 +14,10 @@ import com.fantasymap.creator.geom.FragmentCopy
 import com.fantasymap.creator.geom.PolygonOps
 import com.fantasymap.creator.geom.WorldGenerator
 import com.fantasymap.creator.export.Exporter
+import com.fantasymap.creator.data.AssetStore
 import com.fantasymap.creator.model.BBox
+import com.fantasymap.creator.model.CustomAsset
+import com.fantasymap.creator.model.CustomKind
 import com.fantasymap.creator.model.BiomeGroup
 import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.BiomeType
@@ -70,6 +73,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     private val store = ProjectStore(application)
     private val exporter = Exporter(application)
 
+    /** Авторский контент: свои постройки, зоны и объекты с картинками. */
+    val assetStore = AssetStore(application)
+
     var projects by mutableStateOf<List<ProjectSummary>>(emptyList())
         private set
 
@@ -90,6 +96,18 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var buildingType by mutableStateOf(BuildingType.HOUSE)
     var buildingGroup by mutableStateOf(BuildingGroup.HOME)
     var districtType by mutableStateOf(DistrictType.OLD_TOWN)
+
+    /** Вся авторская библиотека. Обновляется после каждого изменения. */
+    var customAssets by mutableStateOf<List<CustomAsset>>(emptyList())
+        private set
+
+    /** Выбранные авторские заготовки: зона, постройка и объект. */
+    var customZone by mutableStateOf<CustomAsset?>(null)
+        private set
+    var customBuilding by mutableStateOf<CustomAsset?>(null)
+        private set
+    var customObject by mutableStateOf<CustomAsset?>(null)
+        private set
 
     /** Плотность застройки квартала: 0 — просторно, 1 — тесно. */
     var buildDensity by mutableStateOf(0.5f)
@@ -132,6 +150,106 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     init {
         refreshProjects()
+        refreshAssets()
+    }
+
+    // --------------------------------------------------- авторский контент
+
+    fun refreshAssets() {
+        viewModelScope.launch {
+            customAssets = withContext(Dispatchers.IO) { assetStore.list() }
+        }
+    }
+
+    /** Заготовки, уместные на открытой карте. */
+    fun assetsOf(kind: CustomKind): List<CustomAsset> =
+        customAssets.filter { it.kind == kind && it.fits(mapKind) }
+
+    /**
+     * Внести свою картинку в библиотеку.
+     * Картинка переносится во внутреннюю память, карта хранит только ссылку на заготовку.
+     */
+    fun addAsset(uri: Uri, draft: CustomAsset) {
+        viewModelScope.launch {
+            busy = true
+            val saved = withContext(Dispatchers.IO) {
+                if (!assetStore.importImage(uri, draft.id)) return@withContext null
+                val color = assetStore.averageColor(draft.id) ?: draft.color
+                val asset = draft.copy(color = color, createdAt = System.currentTimeMillis())
+                assetStore.save(asset)
+                asset
+            }
+            customAssets = withContext(Dispatchers.IO) { assetStore.list() }
+            busy = false
+            if (saved == null) {
+                message = "Не удалось прочитать картинку"
+            } else {
+                message = "«${saved.title}» добавлена в вашу библиотеку"
+                selectAsset(saved)
+            }
+        }
+    }
+
+    fun updateAsset(asset: CustomAsset) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) { assetStore.save(asset) }
+            customAssets = withContext(Dispatchers.IO) { assetStore.list() }
+            if (customZone?.id == asset.id) customZone = asset
+            if (customBuilding?.id == asset.id) customBuilding = asset
+            if (customObject?.id == asset.id) customObject = asset
+        }
+    }
+
+    fun deleteAsset(id: String) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) { assetStore.delete(id) }
+            customAssets = withContext(Dispatchers.IO) { assetStore.list() }
+            if (customZone?.id == id) customZone = null
+            if (customBuilding?.id == id) customBuilding = null
+            if (customObject?.id == id) customObject = null
+        }
+    }
+
+    /** Выбрать авторскую заготовку — ею и будет рисовать выбранный инструмент. */
+    fun selectAsset(asset: CustomAsset) {
+        when (asset.kind) {
+            CustomKind.ZONE -> {
+                customZone = asset
+                tool = Tool.BIOME
+            }
+            CustomKind.BUILDING -> {
+                customBuilding = asset
+                tool = Tool.BUILDING
+            }
+            CustomKind.OBJECT -> {
+                customObject = asset
+                tool = Tool.MARKER
+            }
+        }
+    }
+
+    fun clearAsset(kind: CustomKind) {
+        when (kind) {
+            CustomKind.ZONE -> customZone = null
+            CustomKind.BUILDING -> customBuilding = null
+            CustomKind.OBJECT -> customObject = null
+        }
+    }
+
+    /** Выбор обычной зоны отменяет авторскую. */
+    fun selectBiome(type: BiomeType) {
+        biome = type
+        customZone = null
+    }
+
+    fun selectMarkerType(type: MarkerType) {
+        markerType = type
+        customObject = null
+    }
+
+    fun selectBuildingType(type: BuildingType) {
+        buildingType = type
+        customBuilding = null
     }
 
     // ------------------------------------------------------------- проекты
@@ -640,7 +758,17 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 Tool.LAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.CONTINENT, points = smooth)) }
                 Tool.ISLAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.ISLAND, points = smooth)) }
                 Tool.WATER -> edit { it.copy(waters = it.waters + WaterBody(kind = waterKind, points = smooth)) }
-                Tool.BIOME -> edit { it.copy(biomes = it.biomes + BiomeRegion(biome = biome, points = smooth)) }
+                Tool.BIOME -> edit {
+                    val asset = customZone
+                    it.copy(
+                        biomes = it.biomes + BiomeRegion(
+                            biome = biome,
+                            name = if (asset != null) asset.title else "",
+                            points = smooth,
+                            assetId = asset?.id
+                        )
+                    )
+                }
                 Tool.COUNTRY -> addCountryArea(smooth)
                 Tool.DISTRICT -> edit {
                     it.copy(districts = it.districts + District(type = districtType, points = smooth))
@@ -719,11 +847,13 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     fun tap(world: Vec): Boolean {
         when (tool) {
             Tool.MARKER -> {
+                val asset = customObject
                 val marker = Marker(
                     type = markerType,
                     pos = world,
                     countryId = activeCountryId,
-                    name = ""
+                    name = if (asset != null) asset.title else "",
+                    assetId = asset?.id
                 )
                 edit { it.copy(markers = it.markers + marker) }
                 selection = Selection.MarkerSel(marker.id)
@@ -952,7 +1082,13 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     /** Поставить здание выбранного вида. */
     private fun addBuilding(footprint: List<Vec>) {
         if (footprint.size < 3) return
-        val building = Building(type = buildingType, points = footprint)
+        val asset = customBuilding
+        val building = Building(
+            type = buildingType,
+            name = if (asset != null) asset.title else "",
+            points = footprint,
+            assetId = asset?.id
+        )
         edit { it.copy(buildings = it.buildings + building) }
         selection = Selection.BuildingSel(building.id)
     }
@@ -961,10 +1097,11 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     private fun defaultFootprint(center: Vec): List<Vec> {
         val current = project ?: return emptyList()
         val base = min(current.worldWidth, current.worldHeight)
-        val scale = if (buildingType.big) 1.7f else 1f
+        val asset = customBuilding
+        val scale = if (asset != null) asset.size else if (buildingType.big) 1.7f else 1f
         val unit = base * 0.016f * scale
-        val width = unit * buildingType.shape.widthScale
-        val height = unit * buildingType.shape.depthScale
+        val width = if (asset != null) unit else unit * buildingType.shape.widthScale
+        val height = if (asset != null) unit * 0.78f else unit * buildingType.shape.depthScale
         val noise = Geometry.hashNoise(center.x.toInt(), center.y.toInt(), current.style.seed)
         val angle = (noise - 0.5f) * 0.5f
         return rotatedRect(center, width, height, angle)
