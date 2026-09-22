@@ -203,10 +203,33 @@ object FragmentCopy {
             countries.add(country.copy(areas = areas))
         }
 
+        val tokens = source.tokens
+            .filter { rect.contains(it.pos) }
+            .map { it.copy(pos = move(it.pos)) }
+        val fog = source.fog.flatMap { area ->
+            cutArea(listOf(area.points)).map { com.fantasymap.creator.model.FogArea(points = it) }
+        }
+        val buildings = source.buildings
+            .filter { it.points.isNotEmpty() && it.points.all { point -> rect.contains(point) } }
+            .map { building -> building.copy(points = building.points.map { move(it) }) }
+        val districts = source.districts.flatMap { district ->
+            cutArea(listOf(district.points)).map { piece -> district.copy(id = java.util.UUID.randomUUID().toString(), points = piece) }
+        }
+
         return MapProject(
             name = name.ifBlank { source.name + " — фрагмент" },
             worldWidth = width * scale,
             worldHeight = height * scale,
+            kind = source.kind,
+            landBase = source.landBase,
+            groundBiome = source.groundBiome,
+            gridCell = source.gridCell * scale,
+            gridKind = source.gridKind,
+            feetPerCell = source.feetPerCell,
+            tokens = tokens,
+            fog = fog,
+            buildings = buildings,
+            districts = districts,
             stage = source.stage,
             landmasses = landmasses,
             waters = waters,

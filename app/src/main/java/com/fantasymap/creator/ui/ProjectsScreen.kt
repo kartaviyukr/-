@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.verticalScroll
@@ -57,6 +58,7 @@ import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.model.ProjectSummary
+import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.MapKind
 import com.fantasymap.creator.model.WorldPreset
 import com.fantasymap.creator.model.stageFor
@@ -136,9 +138,9 @@ fun ProjectsScreen(viewModel: EditorViewModel) {
     if (showCreate) {
         CreateProjectDialog(
             onDismiss = { showCreate = false },
-            onCreate = { name, width, height, kind ->
+            onCreate = { name, width, height, kind, ground, landBase ->
                 showCreate = false
-                viewModel.createProject(name, width, height, kind)
+                viewModel.createProject(name, width, height, kind, ground, landBase)
             }
         )
     }
@@ -242,8 +244,9 @@ private fun ProjectCard(
 @Composable
 private fun CreateProjectDialog(
     onDismiss: () -> Unit,
-    onCreate: (String, Float, Float, MapKind) -> Unit
+    onCreate: (String, Float, Float, MapKind, BiomeType?, Boolean) -> Unit
 ) {
+    var landBase by remember { mutableStateOf(false) }
     var name by remember { mutableStateOf("") }
     var kind by remember { mutableStateOf(MapKind.WORLD) }
     var selected by remember { mutableStateOf(MapProject.PRESETS.firstOrNull { it.title == "Один континент" } ?: MapProject.PRESETS.first()) }
@@ -253,7 +256,7 @@ private fun CreateProjectDialog(
 
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text("Новый мир") },
+        title = { Text("Новая карта") },
         text = {
             Column(
                 Modifier
@@ -263,13 +266,18 @@ private fun CreateProjectDialog(
                 OutlinedTextField(
                     value = name,
                     onValueChange = { name = it },
-                    label = { Text("Название мира") },
+                    label = { Text("Название") },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
                 Spacer(Modifier.height(10.dp))
                 Text("Что рисуем", style = MaterialTheme.typography.labelLarge)
-                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .horizontalScroll(rememberScrollState()),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
                     MapKind.entries.forEach { item ->
                         FilterChip(
                             selected = kind == item,
@@ -294,6 +302,20 @@ private fun CreateProjectDialog(
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(Modifier.height(10.dp))
+
+                if (kind != MapKind.BATTLE) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            Text("Вся карта — суша", style = MaterialTheme.typography.labelLarge)
+                            Text(
+                                "Без океана вокруг: моря и озёра дорисуете сами",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        Switch(checked = landBase, onCheckedChange = { landBase = it })
+                    }
+                }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text("Свой размер", Modifier.weight(1f), style = MaterialTheme.typography.labelLarge)
@@ -359,9 +381,10 @@ private fun CreateProjectDialog(
         confirmButton = {
             TextButton(onClick = {
                 if (custom) {
-                    onCreate(name.trim(), customWidth, customHeight, kind)
+                    val ground = if (kind == MapKind.BATTLE) BiomeType.STONE_FLOOR else null
+                    onCreate(name.trim(), customWidth, customHeight, kind, ground, landBase)
                 } else {
-                    onCreate(name.trim(), selected.width, selected.height, kind)
+                    onCreate(name.trim(), selected.width, selected.height, kind, selected.ground, landBase)
                 }
             }) { Text("Создать") }
         },
@@ -372,4 +395,5 @@ private fun CreateProjectDialog(
 private fun presetsFor(kind: MapKind): List<WorldPreset> = when (kind) {
     MapKind.WORLD -> MapProject.PRESETS
     MapKind.CITY -> MapProject.CITY_PRESETS
+    MapKind.BATTLE -> MapProject.BATTLE_PRESETS
 }

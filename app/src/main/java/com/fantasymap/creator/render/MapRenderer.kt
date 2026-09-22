@@ -13,7 +13,13 @@ import android.graphics.RectF
 import android.graphics.Shader
 import android.graphics.Typeface
 import com.fantasymap.creator.model.BBox
+import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.CustomAsset
+import com.fantasymap.creator.model.FogArea
+import com.fantasymap.creator.model.GridKind
+import com.fantasymap.creator.model.MapKind
+import com.fantasymap.creator.model.Token
+import com.fantasymap.creator.model.TokenFaction
 import com.fantasymap.creator.model.BiomePattern
 import com.fantasymap.creator.model.Country
 import com.fantasymap.creator.model.Geometry
@@ -40,7 +46,11 @@ data class RenderOptions(
     val draftColor: Int = 0xFF9B2C2C.toInt(),
     val activeCountryId: String? = null,
     /** 0 — взять цвет стола из настроек карты. */
-    val deskColor: Int = 0
+    val deskColor: Int = 0,
+    /** Подпись линейки у конца штриха: «30 фт · 6 клеток». */
+    val rulerText: String? = null,
+    /** Чей сейчас ход — фишка подсвечивается. */
+    val activeTokenId: String? = null
 )
 
 /** Откуда рисовальщик берёт авторские картинки. */
@@ -50,6 +60,9 @@ interface TextureSource {
 
     /** Картинка заготовки, если она на месте. */
     fun bitmap(id: String): Bitmap?
+
+    /** Встроенная фото-текстура из assets/textures по ключу. */
+    fun builtin(key: String): Bitmap? = null
 }
 
 /**
@@ -117,31 +130,39 @@ class MapRenderer {
         val y0 = cam.screenY(0f)
         val x1 = cam.screenX(project.worldWidth)
         val y1 = cam.screenY(project.worldHeight)
-        fill.color = style.oceanColor
+        fill.color = if (project.landBase && project.kind != MapKind.BATTLE) style.landColor else style.oceanColor
         canvas.drawRect(x0, y0, x1, y1, fill)
 
         canvas.save()
         canvas.clipRect(x0, y0, x1, y1)
 
-        drawOceanTexture(canvas, project, cam, visible, u)
-        if (style.showGrid) drawGrid(canvas, project, cam, u)
+        val battle = project.kind == MapKind.BATTLE
+        if (battle) {
+            drawGround(canvas, project, cam, visible, x0, y0, x1, y1)
+        } else {
+            if (!project.landBase) drawOceanTexture(canvas, project, cam, visible, u)
+            if (style.showGrid) drawGrid(canvas, project, cam, u)
+        }
 
         if (style.showLand) drawLandmasses(canvas, project, cam, visible, u)
         if (style.showBiomes) drawBiomes(canvas, project, cam, visible, u, style.showPatterns)
         if (style.showWater) drawWaters(canvas, project, cam, visible, u)
+        if (battle) drawBattleGrid(canvas, project, cam, visible, u)
         if (style.showLines) drawLines(canvas, project, cam, visible, u)
         if (style.showDistricts) drawDistricts(canvas, project, cam, visible, u)
         if (style.showRoads) drawRoads(canvas, project, cam, visible, u)
         if (style.showBuildings) drawBuildings(canvas, project, cam, visible, u)
         if (style.showBorders) drawCountries(canvas, project, cam, u, options)
         if (style.showMarkers) drawMarkers(canvas, project, cam, visible, u)
+        if (battle && style.showTokens) drawTokens(canvas, project, cam, visible, u, options)
         if (style.showLabels) drawLabels(canvas, project, cam, u)
+        if (battle && style.showFog) drawFog(canvas, project, cam, u)
 
         drawSelection(canvas, project, cam, u, options.selection)
         drawDraft(canvas, cam, u, options)
 
-        if (style.showCompass) drawCompass(canvas, project, cam, u)
-        drawScaleBar(canvas, project, cam, u)
+        if (style.showCompass && !battle) drawCompass(canvas, project, cam, u)
+        if (battle) drawBattleScale(canvas, project, cam, u) else drawScaleBar(canvas, project, cam, u)
 
         canvas.restore()
 
@@ -278,6 +299,17 @@ class MapRenderer {
                 continue
             }
 
+            // Фото-текстура вместо рисованного узора.
+            val photo = if (project.style.photoTextures) region.biome.texture?.let { builtinTexture(it) } else null
+            if (photo != null) {
+                fillWithTile(canvas, path, photo, textureTile(project), cam, 255)
+                stroke.color = withAlpha(darken(region.biome.color, 0.35f), 120)
+                stroke.strokeWidth = 1.2f * u
+                stroke.pathEffect = null
+                canvas.drawPath(path, stroke)
+                continue
+            }
+
             fill.color = withAlpha(region.biome.color, 205)
             canvas.drawPath(path, fill)
             stroke.color = withAlpha(darken(region.biome.color, 0.25f), 150)
@@ -328,6 +360,10 @@ class MapRenderer {
         for (feature in project.lines) {
             if (feature.points.size < 2) continue
             if (!Geometry.bounds(feature.points).intersects(visible)) continue
+            if (feature.type.battle) {
+                drawBattleLine(canvas, feature, cam, project.style.seed)
+                continue
+            }
             when (feature.type) {
                 LineFeatureType.RIVER, LineFeatureType.BIG_RIVER,
                 LineFeatureType.STREAM, LineFeatureType.CANAL -> drawRiver(canvas, feature, cam, u)
@@ -362,6 +398,7 @@ class MapRenderer {
                 LineFeatureType.SPIKE_DITCH -> drawCanyon(canvas, feature, cam, u)
                 LineFeatureType.HEDGE_WALL -> drawForestBelt(canvas, feature, cam, u, project.style.seed)
                 LineFeatureType.MAGIC_WARD -> drawDots(canvas, feature, cam, u)
+                else -> drawWallLine(canvas, feature, cam, u)
             }
             if (feature.name.isNotBlank()) {
                 val size = 13f * u * cam.scale.coerceIn(0.7f, 1.8f)
@@ -695,17 +732,31 @@ class MapRenderer {
 
     private fun drawMarkers(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
         val sorted = project.markers.sortedBy { it.pos.y }
+        // На боевой локации значки растут вместе с сеткой.
+        val cell = if (project.kind == MapKind.BATTLE) project.gridCell else 0f
         for (marker in sorted) {
             if (!visible.contains(marker.pos)) continue
+            if (project.style.playerView && marker.type == MarkerType.B_GM_NOTE) continue
             val country = project.countryById(marker.countryId)
-            drawMarker(canvas, marker, cam, u, country)
+            drawMarker(canvas, marker, cam, u, country, cell)
         }
     }
 
-    private fun drawMarker(canvas: Canvas, marker: Marker, cam: Camera, u: Float, country: Country?) {
+    private fun drawMarker(
+        canvas: Canvas,
+        marker: Marker,
+        cam: Camera,
+        u: Float,
+        country: Country?,
+        cell: Float = 0f
+    ) {
         val sx = cam.screenX(marker.pos.x)
         val sy = cam.screenY(marker.pos.y)
-        val size = 8.5f * u * marker.type.defaultScale * marker.scale
+        val size = if (cell > 0f) {
+            cell * 0.42f * cam.scale * marker.type.defaultScale * marker.scale
+        } else {
+            8.5f * u * marker.type.defaultScale * marker.scale
+        }
 
         stroke.color = inkColor
         stroke.strokeWidth = max(1f, 1.4f * u)
@@ -783,6 +834,12 @@ class MapRenderer {
             MarkerGroup.CITY_STREET -> 0xFFEDE3CA.toInt()
             MarkerGroup.CITY_SERVICE -> 0xFFE2D9C2.toInt()
             MarkerGroup.CITY_SPECIAL -> 0xFFE7D6C6.toInt()
+            MarkerGroup.BATTLE_DOORS -> 0xFFB08A5E.toInt()
+            MarkerGroup.BATTLE_FURNITURE -> 0xFFC49A6C.toInt()
+            MarkerGroup.BATTLE_NATURE -> 0xFF8FAF6E.toInt()
+            MarkerGroup.BATTLE_TRAPS -> 0xFFD9A441.toInt()
+            MarkerGroup.BATTLE_LOOT -> 0xFFF0CF5A.toInt()
+            MarkerGroup.BATTLE_TACTICS -> 0xFFE8E2D4.toInt()
         }
     }
 
@@ -831,7 +888,7 @@ class MapRenderer {
 
         textPaint.textAlign = Paint.Align.LEFT
         textHalo.textAlign = Paint.Align.LEFT
-        textHalo.color = withAlpha(haloColor, 220)
+        textHalo.color = withAlpha(halo, 220)
         textHalo.strokeWidth = max(2f, size * 0.22f)
         textPaint.color = color
         val offset = (length - width) / 2f
@@ -850,7 +907,8 @@ class MapRenderer {
         size: Float,
         color: Int,
         italic: Boolean,
-        bold: Boolean = false
+        bold: Boolean = false,
+        halo: Int = haloColor
     ) {
         val style = when {
             bold && italic -> Typeface.BOLD_ITALIC
@@ -898,6 +956,13 @@ class MapRenderer {
                 stroke.pathEffect = null
                 canvas.drawCircle(cam.screenX(it.pos.x), cam.screenY(it.pos.y), 20f * u, stroke)
             }
+            is Selection.TokenSel -> project.tokens.firstOrNull { it.id == selection.id }?.let {
+                stroke.pathEffect = null
+                val r = tokenRadius(project, it) * cam.scale + 5f * u
+                canvas.drawCircle(cam.screenX(it.pos.x), cam.screenY(it.pos.y), r, stroke)
+            }
+            is Selection.FogSel -> project.fog.firstOrNull { it.id == selection.id }
+                ?.let { outline(canvas, it.points, cam, true) }
             is Selection.LabelSel -> project.labels.firstOrNull { it.id == selection.id }?.let {
                 if (it.curved) {
                     outline(canvas, it.path, cam, false)
@@ -929,6 +994,23 @@ class MapRenderer {
         stroke.pathEffect = DashPathEffect(floatArrayOf(8f * u, 5f * u), 0f)
         canvas.drawPath(path, stroke)
         stroke.pathEffect = null
+
+        val ruler = options.rulerText
+        if (ruler != null) {
+            val end = draft.last()
+            val sx = cam.screenX(end.x)
+            val sy = cam.screenY(end.y) - 26f * u
+            textPaint.textSize = 14f * u
+            val half = textPaint.measureText(ruler) / 2f + 8f * u
+            fill.color = 0xE6202020.toInt()
+            rectF.set(sx - half, sy - 14f * u, sx + half, sy + 7f * u)
+            canvas.drawRoundRect(rectF, 8f * u, 8f * u, fill)
+            textPaint.color = 0xFFFFFFFF.toInt()
+            textPaint.isFakeBoldText = true
+            canvas.drawText(ruler, sx, sy, textPaint)
+            textPaint.isFakeBoldText = false
+            canvas.drawCircle(cam.screenX(draft.first().x), cam.screenY(draft.first().y), 4f * u, fill)
+        }
     }
 
     private fun drawFrame(canvas: Canvas, x0: Float, y0: Float, x1: Float, y1: Float, u: Float) {
@@ -1052,6 +1134,393 @@ class MapRenderer {
         canvas.restore()
     }
 
+    // ---------------------------------------------------------- боевая локация
+
+    private fun builtinTexture(key: String): Bitmap? {
+        val bitmap = textures?.builtin(key) ?: return null
+        return if (bitmap.isRecycled) null else bitmap
+    }
+
+    /** Размер плитки фото-текстуры в единицах карты. */
+    private fun textureTile(project: MapProject): Float = when (project.kind) {
+        MapKind.BATTLE -> project.gridCell * 3f
+        MapKind.CITY -> 140f
+        MapKind.WORLD -> 220f
+    }
+
+    private fun fillWithTile(canvas: Canvas, area: Path, bitmap: Bitmap, tile: Float, cam: Camera, alpha: Int) {
+        val shader = shaders.getOrPut(bitmap) {
+            BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT)
+        }
+        val scale = max(4f, tile) * cam.scale / max(1, bitmap.width)
+        textureMatrix.reset()
+        textureMatrix.setScale(scale, scale)
+        textureMatrix.postTranslate(cam.screenX(0f), cam.screenY(0f))
+        shader.setLocalMatrix(textureMatrix)
+        texturePaint.shader = shader
+        texturePaint.alpha = alpha
+        canvas.drawPath(area, texturePaint)
+        texturePaint.shader = null
+        texturePaint.alpha = 255
+    }
+
+    /** Основа боевой локации: весь лист залит полом или землёй. */
+    private fun drawGround(
+        canvas: Canvas,
+        project: MapProject,
+        cam: Camera,
+        visible: BBox,
+        x0: Float,
+        y0: Float,
+        x1: Float,
+        y1: Float
+    ) {
+        val ground: BiomeType = project.groundBiome ?: return
+        path.reset()
+        path.addRect(x0, y0, x1, y1, Path.Direction.CW)
+        val photo = if (project.style.photoTextures) ground.texture?.let { builtinTexture(it) } else null
+        if (photo != null) {
+            fillWithTile(canvas, path, photo, textureTile(project), cam, 255)
+            return
+        }
+        fill.color = ground.color
+        canvas.drawPath(path, fill)
+        if (!project.style.showPatterns || ground.pattern == BiomePattern.NONE) return
+        val step = project.gridCell
+        if (step * cam.scale < 10f) return
+        thin.color = withAlpha(darken(ground.color, 0.3f), 130)
+        thin.strokeWidth = max(1f, step * cam.scale * 0.02f)
+        val size = step * cam.scale * 0.3f
+        var wy = max(0f, (Math.floor((visible.minY / step).toDouble()) * step).toFloat())
+        var drawn = 0
+        while (wy < min(project.worldHeight, visible.maxY) && drawn < 4000) {
+            var wx = max(0f, (Math.floor((visible.minX / step).toDouble()) * step).toFloat())
+            while (wx < min(project.worldWidth, visible.maxX) && drawn < 4000) {
+                val n = Geometry.hashNoise((wx / step).toInt(), (wy / step).toInt(), project.style.seed)
+                if (n > 0.45f) {
+                    glyphs.drawPattern(
+                        canvas, ground.pattern,
+                        cam.screenX(wx + step * (0.3f + n * 0.4f)),
+                        cam.screenY(wy + step * (0.7f - n * 0.4f)),
+                        size, thin
+                    )
+                    drawn++
+                }
+                wx += step
+            }
+            wy += step
+        }
+    }
+
+    /** Сетка клеток: квадратная или шестиугольная. */
+    private fun drawBattleGrid(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
+        if (project.gridKind == GridKind.NONE) return
+        val cell = project.gridCell
+        if (cell * cam.scale < 6f) return
+        val alpha = (project.style.gridOpacity.coerceIn(0f, 1f) * 255).toInt()
+        thin.color = withAlpha(if (project.style.playerView) 0xFF000000.toInt() else 0xFF101010.toInt(), alpha)
+        thin.strokeWidth = max(1f, 0.9f * u)
+        val fromX = max(0f, visible.minX)
+        val toX = min(project.worldWidth, visible.maxX)
+        val fromY = max(0f, visible.minY)
+        val toY = min(project.worldHeight, visible.maxY)
+        if (project.gridKind == GridKind.SQUARE) {
+            var x = (Math.floor((fromX / cell).toDouble()) * cell).toFloat()
+            while (x <= toX) {
+                canvas.drawLine(cam.screenX(x), cam.screenY(fromY), cam.screenX(x), cam.screenY(toY), thin)
+                x += cell
+            }
+            var y = (Math.floor((fromY / cell).toDouble()) * cell).toFloat()
+            while (y <= toY) {
+                canvas.drawLine(cam.screenX(fromX), cam.screenY(y), cam.screenX(toX), cam.screenY(y), thin)
+                y += cell
+            }
+            return
+        }
+        // Шестиугольники «остриём вверх»: ширина — клетка, шаг рядов — 3/4 высоты.
+        val r = cell / kotlin.math.sqrt(3f)
+        val rowStep = r * 1.5f
+        var row = kotlin.math.floor(fromY / rowStep).toInt() - 1
+        var drawn = 0
+        while (row * rowStep <= toY + r && drawn < 6000) {
+            val offset = if (row % 2 != 0) cell / 2f else 0f
+            var col = kotlin.math.floor((fromX - offset) / cell).toInt() - 1
+            while (col * cell + offset <= toX + cell && drawn < 6000) {
+                val hx = col * cell + offset + cell / 2f
+                val hy = row * rowStep + r
+                path.reset()
+                for (i in 0 until 6) {
+                    val a = Math.toRadians((60.0 * i - 90.0)).toFloat()
+                    val px = cam.screenX(hx + r * cos(a))
+                    val py = cam.screenY(hy + r * sin(a))
+                    if (i == 0) path.moveTo(px, py) else path.lineTo(px, py)
+                }
+                path.close()
+                canvas.drawPath(path, thin)
+                drawn++
+                col++
+            }
+            row++
+        }
+    }
+
+    /** Стены, решётки и прочие линии боевой локации — толщина в единицах карты. */
+    private fun drawBattleLine(canvas: Canvas, feature: LineFeature, cam: Camera, seed: Int) {
+        val width = max(1.5f, feature.effectiveWidth * cam.scale)
+        buildPath(feature.points, cam, false, path)
+        stroke.pathEffect = null
+        val color = feature.type.color
+        when (feature.type) {
+            LineFeatureType.IRON_BARS, LineFeatureType.FENCE -> {
+                stroke.color = color
+                stroke.strokeWidth = width * 0.35f
+                canvas.drawPath(path, stroke)
+                val step = max(8f, 12f / max(cam.scale, 0.05f))
+                for (p in Geometry.resample(feature.points, step)) {
+                    fill.color = color
+                    canvas.drawCircle(cam.screenX(p.x), cam.screenY(p.y), width * 0.45f, fill)
+                }
+            }
+            LineFeatureType.MAGIC_BARRIER, LineFeatureType.WEB_STRANDS -> {
+                stroke.color = withAlpha(color, 90)
+                stroke.strokeWidth = width * 2.2f
+                canvas.drawPath(path, stroke)
+                stroke.color = color
+                stroke.strokeWidth = width * 0.5f
+                stroke.pathEffect = DashPathEffect(floatArrayOf(width * 1.5f, width), 0f)
+                canvas.drawPath(path, stroke)
+                stroke.pathEffect = null
+            }
+            LineFeatureType.ROPE -> {
+                stroke.color = color
+                stroke.strokeWidth = width
+                stroke.pathEffect = DashPathEffect(floatArrayOf(width * 2f, width * 0.6f), 0f)
+                canvas.drawPath(path, stroke)
+                stroke.pathEffect = null
+            }
+            LineFeatureType.DITCH_WATER, LineFeatureType.LAVA_STREAM -> {
+                stroke.color = darken(color, 0.3f)
+                stroke.strokeWidth = width * 1.15f
+                canvas.drawPath(path, stroke)
+                stroke.color = color
+                stroke.strokeWidth = width * 0.85f
+                canvas.drawPath(path, stroke)
+                stroke.color = withAlpha(lighten(color, 0.5f), 160)
+                stroke.strokeWidth = width * 0.2f
+                canvas.drawPath(path, stroke)
+            }
+            LineFeatureType.HEDGE, LineFeatureType.RUBBLE_LINE -> {
+                val step = max(4f, feature.effectiveWidth * 0.6f)
+                val pts = Geometry.resample(feature.points, step)
+                for ((i, p) in pts.withIndex()) {
+                    val n = Geometry.hashNoise(i, (p.x + p.y).toInt(), seed)
+                    fill.color = if (i % 2 == 0) color else lighten(color, 0.15f)
+                    val r = width * (0.45f + n * 0.25f)
+                    canvas.drawCircle(cam.screenX(p.x), cam.screenY(p.y), r, fill)
+                }
+            }
+            LineFeatureType.LEDGE -> {
+                stroke.color = color
+                stroke.strokeWidth = width * 0.5f
+                canvas.drawPath(path, stroke)
+                val step = max(6f, 14f / max(cam.scale, 0.05f))
+                val pts = Geometry.resample(feature.points, step)
+                for (i in 1 until pts.size) {
+                    val a = pts[i - 1]
+                    val b = pts[i]
+                    val dx = b.x - a.x
+                    val dy = b.y - a.y
+                    val len = max(0.001f, kotlin.math.sqrt(dx * dx + dy * dy))
+                    val nx = -dy / len * feature.effectiveWidth * 1.4f
+                    val ny = dx / len * feature.effectiveWidth * 1.4f
+                    canvas.drawLine(
+                        cam.screenX(b.x), cam.screenY(b.y),
+                        cam.screenX(b.x + nx), cam.screenY(b.y + ny), stroke
+                    )
+                }
+            }
+            else -> {
+                // Сплошная стена: тёмное тело и светлая кромка сверху.
+                stroke.strokeCap = Paint.Cap.SQUARE
+                stroke.color = color
+                stroke.strokeWidth = width
+                canvas.drawPath(path, stroke)
+                stroke.color = withAlpha(lighten(color, 0.35f), 200)
+                stroke.strokeWidth = max(1f, width * 0.22f)
+                canvas.drawPath(path, stroke)
+                stroke.strokeCap = Paint.Cap.ROUND
+            }
+        }
+    }
+
+    /** Радиус фишки в единицах карты. */
+    private fun tokenRadius(project: MapProject, token: Token): Float =
+        token.size.cells * project.gridCell * 0.5f * 0.9f
+
+    private fun drawTokens(
+        canvas: Canvas,
+        project: MapProject,
+        cam: Camera,
+        visible: BBox,
+        u: Float,
+        options: RenderOptions
+    ) {
+        val playerView = project.style.playerView
+        // Крупные — снизу, мелкие поверх.
+        for (token in project.tokens.sortedByDescending { it.size.cells }) {
+            if (playerView && token.hidden) continue
+            val radiusWorld = tokenRadius(project, token)
+            if (!visible.expand(radiusWorld * 2f).contains(token.pos)) continue
+            val sx = cam.screenX(token.pos.x)
+            val sy = cam.screenY(token.pos.y)
+            val r = radiusWorld * cam.scale
+            val ring = token.faction.color
+            val ghost = token.hidden
+
+            // Аура
+            if (token.aura > 0) {
+                val auraR = (token.aura.toFloat() / project.feetPerCell.coerceAtLeast(1)) * project.gridCell * cam.scale + r
+                fill.color = withAlpha(ring, 34)
+                canvas.drawCircle(sx, sy, auraR, fill)
+                stroke.color = withAlpha(ring, 130)
+                stroke.strokeWidth = max(1f, 1.4f * u)
+                stroke.pathEffect = DashPathEffect(floatArrayOf(7f * u, 5f * u), 0f)
+                canvas.drawCircle(sx, sy, auraR, stroke)
+                stroke.pathEffect = null
+            }
+
+            // Тень и основа
+            fill.color = 0x55000000
+            canvas.drawCircle(sx + r * 0.08f, sy + r * 0.1f, r, fill)
+            fill.color = if (token.dead) 0xFF6E6A66.toInt() else lighten(ring, 0.72f)
+            if (ghost) fill.alpha = 150
+            canvas.drawCircle(sx, sy, r, fill)
+            fill.alpha = 255
+
+            val bitmap = textureOf(token.assetId)
+            if (bitmap != null) {
+                canvas.save()
+                path.reset()
+                path.addCircle(sx, sy, r * 0.94f, Path.Direction.CW)
+                canvas.clipPath(path)
+                val side = kotlin.math.min(bitmap.width, bitmap.height)
+                val src = android.graphics.Rect(
+                    (bitmap.width - side) / 2, (bitmap.height - side) / 2,
+                    (bitmap.width + side) / 2, (bitmap.height + side) / 2
+                )
+                rectF.set(sx - r, sy - r, sx + r, sy + r)
+                canvas.drawBitmap(bitmap, src, rectF, texturePaint)
+                canvas.restore()
+            } else if (r > 4f) {
+                fill.color = if (token.dead) 0xFFBDB6AC.toInt() else 0xFFFFFBF2.toInt()
+                stroke.color = 0xFF2A2420.toInt()
+                stroke.strokeWidth = max(1f, r * 0.07f)
+                glyphs.drawGlyph(canvas, token.type.glyph, sx, sy, r * 0.58f, fill, stroke)
+            }
+
+            // Кольцо стороны
+            stroke.color = if (token.dead) 0xFF4A4642.toInt() else ring
+            stroke.strokeWidth = max(2f, r * 0.14f)
+            if (ghost) stroke.pathEffect = DashPathEffect(floatArrayOf(r * 0.3f, r * 0.2f), 0f)
+            canvas.drawCircle(sx, sy, r * 0.93f, stroke)
+            stroke.pathEffect = null
+
+            if (token.id == options.activeTokenId) {
+                stroke.color = 0xFFFFC400.toInt()
+                stroke.strokeWidth = max(2.5f, r * 0.12f)
+                canvas.drawCircle(sx, sy, r * 1.12f, stroke)
+            }
+
+            if (token.dead) {
+                stroke.color = 0xFF8E1B1B.toInt()
+                stroke.strokeWidth = max(2f, r * 0.14f)
+                val d = r * 0.6f
+                canvas.drawLine(sx - d, sy - d, sx + d, sy + d, stroke)
+                canvas.drawLine(sx + d, sy - d, sx - d, sy + d, stroke)
+            }
+
+            // Полоса здоровья: игрокам — только своих
+            val showBar = token.maxHp > 0 &&
+                (!playerView || token.faction == TokenFaction.HERO || token.faction == TokenFaction.ALLY)
+            if (showBar && r > 5f) {
+                val ratio = (token.hp.toFloat() / token.maxHp).coerceIn(0f, 1f)
+                val h = max(3f, r * 0.16f)
+                val top = sy - r - h * 1.8f
+                fill.color = 0xCC1A1A1A.toInt()
+                rectF.set(sx - r, top, sx + r, top + h)
+                canvas.drawRoundRect(rectF, h / 2f, h / 2f, fill)
+                fill.color = when {
+                    ratio > 0.6f -> 0xFF4CAF50.toInt()
+                    ratio > 0.3f -> 0xFFFFB300.toInt()
+                    else -> 0xFFE53935.toInt()
+                }
+                rectF.set(sx - r, top, sx - r + 2f * r * ratio, top + h)
+                canvas.drawRoundRect(rectF, h / 2f, h / 2f, fill)
+            }
+
+            // Состояния — цветные метки по нижней дуге
+            if (token.conditions.isNotEmpty() && r > 5f) {
+                val dot = max(2.5f, r * 0.17f)
+                for ((i, condition) in token.conditions.take(8).withIndex()) {
+                    val a = Math.toRadians(20.0 + i * 22.0).toFloat()
+                    val dx = sx + cos(a) * r * 0.98f
+                    val dy = sy + sin(a) * r * 0.98f
+                    fill.color = condition.color
+                    canvas.drawCircle(dx, dy, dot, fill)
+                    stroke.color = 0xFF1A1A1A.toInt()
+                    stroke.strokeWidth = max(1f, dot * 0.25f)
+                    canvas.drawCircle(dx, dy, dot, stroke)
+                }
+            }
+
+            if (token.showLabel && r > 7f) {
+                drawMapText(
+                    canvas, token.title, sx, sy + r + 12f * u,
+                    11f * u, 0xFFFFFFFF.toInt(), false,
+                    bold = token.faction == TokenFaction.BOSS, halo = 0xFF111111.toInt()
+                )
+            }
+        }
+    }
+
+    /** Туман войны: мастеру — полупрозрачный, игрокам — сплошной. */
+    private fun drawFog(canvas: Canvas, project: MapProject, cam: Camera, u: Float) {
+        if (project.fog.isEmpty()) return
+        val opaque = project.style.playerView
+        for (area: FogArea in project.fog) {
+            if (area.points.size < 3) continue
+            buildPath(area.points, cam, true, path)
+            fill.color = if (opaque) 0xFF0B0B0E.toInt() else 0x990B0B0E.toInt()
+            canvas.drawPath(path, fill)
+            if (!opaque) {
+                stroke.color = 0xAA9AA4B0.toInt()
+                stroke.strokeWidth = 1.5f * u
+                stroke.pathEffect = DashPathEffect(floatArrayOf(6f * u, 6f * u), 0f)
+                canvas.drawPath(path, stroke)
+                stroke.pathEffect = null
+            }
+        }
+    }
+
+    /** Масштаб боевой локации: одна клетка — столько-то футов. */
+    private fun drawBattleScale(canvas: Canvas, project: MapProject, cam: Camera, u: Float) {
+        val length = project.gridCell * cam.scale
+        if (length < 8f) return
+        val x = cam.screenX(0f) + 18f * u
+        val y = cam.screenY(project.worldHeight) - 18f * u
+        fill.color = 0xCC1A1A1A.toInt()
+        rectF.set(x - 6f * u, y - 20f * u, x + max(length, 50f * u) + 6f * u, y + 8f * u)
+        canvas.drawRoundRect(rectF, 6f * u, 6f * u, fill)
+        stroke.color = 0xFFFFFFFF.toInt()
+        stroke.strokeWidth = 2f * u
+        canvas.drawLine(x, y, x + length, y, stroke)
+        textPaint.textAlign = Paint.Align.LEFT
+        textPaint.textSize = 11f * u
+        textPaint.color = 0xFFFFFFFF.toInt()
+        canvas.drawText("клетка = ${project.feetPerCell} фт", x, y - 7f * u, textPaint)
+        textPaint.textAlign = Paint.Align.CENTER
+    }
+
     private fun buildPath(points: List<Vec>, cam: Camera, close: Boolean, out: Path): Path {
         out.reset()
         out.fillType = Path.FillType.WINDING
@@ -1098,6 +1567,10 @@ class MapRenderer {
         val objects = project.markers.filter { it.assetId == null }.map { it.type }.distinct()
             .map { LegendItem(1, markerFill(it), it.glyph, it.title) }
         if (objects.isNotEmpty()) sections.add("Объекты" to objects)
+
+        val creatures = project.tokens.map { it.type }.distinct()
+            .map { LegendItem(1, lighten(it.faction.color, 0.6f), it.glyph, it.title) }
+        if (creatures.isNotEmpty()) sections.add("Существа" to creatures)
 
         // Авторские заготовки: в легенде они идут под своими названиями.
         val ownIds = (project.biomes.mapNotNull { it.assetId } +

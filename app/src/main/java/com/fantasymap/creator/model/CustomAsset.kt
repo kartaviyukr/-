@@ -16,6 +16,10 @@ enum class CustomKind(val title: String, val hint: String) {
     OBJECT(
         "Объект",
         "Картинка ставится значком в точке: свой знак, свой зверь, своё чудо."
+    ),
+    TOKEN(
+        "Фишка",
+        "Картинка вписывается в круглую фишку боевой локации — портрет героя или врага."
     )
 }
 
@@ -32,7 +36,7 @@ data class CustomAsset(
     val title: String = "",
     val kind: CustomKind = CustomKind.BUILDING,
     /** Где уместна заготовка: на карте мира, города или везде. */
-    val scope: MarkerScope = MarkerScope.BOTH,
+    val scope: MarkerScope = MarkerScope.ALL,
     /** Размер заготовки относительно обычного дома или значка. */
     val size: Float = 1f,
     /** Размер плитки текстуры зоны в единицах карты. */
@@ -43,11 +47,7 @@ data class CustomAsset(
     val outlined: Boolean = true,
     val createdAt: Long = 0L
 ) {
-    fun fits(mapKind: MapKind): Boolean = when (scope) {
-        MarkerScope.BOTH -> true
-        MarkerScope.CITY -> mapKind == MapKind.CITY
-        MarkerScope.WORLD -> mapKind == MapKind.WORLD
-    }
+    fun fits(mapKind: MapKind): Boolean = scope.fits(mapKind)
 }
 
 /** Вся авторская библиотека одним файлом. */

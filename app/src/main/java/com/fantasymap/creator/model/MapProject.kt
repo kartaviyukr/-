@@ -210,7 +210,19 @@ data class MapStyle(
     val lockDistricts: Boolean = false,
     val lockBuildings: Boolean = false,
     val labelScale: Float = 1f,
-    val seed: Int = 1337
+    val seed: Int = 1337,
+    val showTokens: Boolean = true,
+    val lockTokens: Boolean = false,
+    val showFog: Boolean = true,
+    val lockFog: Boolean = false,
+    /** Вид для игроков: туман непрозрачен, скрытое мастером не видно. */
+    val playerView: Boolean = false,
+    /** Заливать зоны фото-текстурами вместо рисованного узора. */
+    val photoTextures: Boolean = false,
+    /** Фишки встают ровно по клеткам. */
+    val snapToGrid: Boolean = true,
+    /** Насколько заметна сетка боевой локации: 0..1. */
+    val gridOpacity: Float = 0.45f
 )
 
 /** Слой карты — строка в списке слоёв. */
@@ -224,7 +236,9 @@ enum class MapLayer(val title: String) {
     LABELS("Подписи"),
     COUNTRIES("Границы стран"),
     DISTRICTS("Кварталы города"),
-    BUILDINGS("Здания");
+    BUILDINGS("Здания"),
+    TOKENS("Фишки существ"),
+    FOG("Туман войны");
 
     fun visible(style: MapStyle): Boolean = when (this) {
         LAND -> style.showLand
@@ -237,6 +251,8 @@ enum class MapLayer(val title: String) {
         COUNTRIES -> style.showBorders
         DISTRICTS -> style.showDistricts
         BUILDINGS -> style.showBuildings
+        TOKENS -> style.showTokens
+        FOG -> style.showFog
     }
 
     fun locked(style: MapStyle): Boolean = when (this) {
@@ -250,6 +266,8 @@ enum class MapLayer(val title: String) {
         COUNTRIES -> style.lockCountries
         DISTRICTS -> style.lockDistricts
         BUILDINGS -> style.lockBuildings
+        TOKENS -> style.lockTokens
+        FOG -> style.lockFog
     }
 
     fun withVisible(style: MapStyle, value: Boolean): MapStyle = when (this) {
@@ -263,6 +281,8 @@ enum class MapLayer(val title: String) {
         COUNTRIES -> style.copy(showBorders = value)
         DISTRICTS -> style.copy(showDistricts = value)
         BUILDINGS -> style.copy(showBuildings = value)
+        TOKENS -> style.copy(showTokens = value)
+        FOG -> style.copy(showFog = value)
     }
 
     fun withLocked(style: MapStyle, value: Boolean): MapStyle = when (this) {
@@ -276,6 +296,8 @@ enum class MapLayer(val title: String) {
         COUNTRIES -> style.copy(lockCountries = value)
         DISTRICTS -> style.copy(lockDistricts = value)
         BUILDINGS -> style.copy(lockBuildings = value)
+        TOKENS -> style.copy(lockTokens = value)
+        FOG -> style.copy(lockFog = value)
     }
 }
 
@@ -378,7 +400,21 @@ data class MapProject(
     val labels: List<MapLabel> = emptyList(),
     val districts: List<District> = emptyList(),
     val buildings: List<Building> = emptyList(),
-    val style: MapStyle = MapStyle()
+    val style: MapStyle = MapStyle(),
+    /** Боевая локация: фишки существ. */
+    val tokens: List<Token> = emptyList(),
+    /** Боевая локация: области под туманом войны. */
+    val fog: List<FogArea> = emptyList(),
+    /** Размер клетки сетки в единицах карты. */
+    val gridCell: Float = 50f,
+    val gridKind: GridKind = GridKind.SQUARE,
+    /** Сколько футов в одной клетке. */
+    val feetPerCell: Int = 5,
+    /** Основа боевой локации: чем залита вся карта под зонами. */
+    val groundBiome: BiomeType? = null,
+    /** Вся карта — суша: моря и озёра рисуются поверх водой, а не наоборот. */
+    val landBase: Boolean = false,
+    val scene: SceneInfo = SceneInfo()
 ) {
     fun countryById(id: String?): Country? =
         if (id == null) null else countries.firstOrNull { it.id == id }
@@ -392,10 +428,12 @@ data class MapProject(
 
     fun isEmpty(): Boolean = landmasses.isEmpty() && waters.isEmpty() && biomes.isEmpty() &&
         lines.isEmpty() && roads.isEmpty() && markers.isEmpty() &&
-        countries.isEmpty() && labels.isEmpty() && buildings.isEmpty() && districts.isEmpty()
+        countries.isEmpty() && labels.isEmpty() && buildings.isEmpty() && districts.isEmpty() &&
+        tokens.isEmpty() && fog.isEmpty()
 
     fun objectCount(): Int = landmasses.size + waters.size + biomes.size + lines.size +
-        roads.size + markers.size + labels.size + buildings.size + districts.size
+        roads.size + markers.size + labels.size + buildings.size + districts.size +
+        tokens.size + fog.size
 
     companion object {
         const val MIN_WORLD_SIZE = 600f
@@ -443,6 +481,32 @@ data class MapProject(
             WorldPreset("Столица", "Большие", 3000f, 2200f, "15:11"),
             WorldPreset("Великий город", "Огромные", 4000f, 3000f, "4:3")
         )
+
+        /** Боевые локации: размер в клетках по 5 футов, у каждой своя основа. */
+        val BATTLE_PRESETS: List<WorldPreset> = listOf(
+            battle("Комната", "В помещении", 12, 10, BiomeType.STONE_FLOOR),
+            battle("Таверна", "В помещении", 20, 14, BiomeType.WOOD_FLOOR),
+            battle("Храм", "В помещении", 22, 28, BiomeType.MARBLE_FLOOR),
+            battle("Тронный зал", "В помещении", 24, 30, BiomeType.TILE_FLOOR),
+            battle("Корабль", "В помещении", 14, 32, BiomeType.WOOD_FLOOR),
+            battle("Подземелье", "Под землёй", 30, 24, BiomeType.STONE_FLOOR),
+            battle("Пещера", "Под землёй", 30, 24, BiomeType.CAVE_FLOOR),
+            battle("Логово дракона", "Под землёй", 40, 32, BiomeType.ROCK_GROUND),
+            battle("Катакомбы", "Под землёй", 36, 28, BiomeType.CASTLE_FLOOR),
+            battle("Лесная поляна", "Под открытым небом", 24, 18, BiomeType.GRASS_GROUND),
+            battle("Засада на дороге", "Под открытым небом", 36, 16, BiomeType.DIRT_GROUND),
+            battle("Улица города", "Под открытым небом", 30, 20, BiomeType.COBBLE_FLOOR),
+            battle("Болото", "Под открытым небом", 30, 24, BiomeType.MUD_GROUND),
+            battle("Снежный перевал", "Под открытым небом", 30, 20, BiomeType.SNOW_GROUND),
+            battle("Пустыня", "Под открытым небом", 30, 24, BiomeType.SAND_GROUND),
+            battle("Поле битвы", "Под открытым небом", 60, 40, BiomeType.GRASS_GROUND)
+        )
+
+        private fun battle(title: String, group: String, cellsX: Int, cellsY: Int, ground: BiomeType) =
+            WorldPreset(
+                title, group, cellsX * 50f, cellsY * 50f, "$cellsX × $cellsY клеток",
+                ground = ground
+            )
     }
 }
 
@@ -452,11 +516,13 @@ data class WorldPreset(
     val group: String,
     val width: Float,
     val height: Float,
-    val ratio: String
+    val ratio: String,
+    /** Основа боевой локации. */
+    val ground: BiomeType? = null
 ) {
     /** Подпись вида «2400 × 1600 · 3:2». */
     val caption: String
-        get() = "${width.toInt()} × ${height.toInt()} · $ratio"
+        get() = if (ground != null) ratio else "${width.toInt()} × ${height.toInt()} · $ratio"
 }
 
 /** Что сейчас выделено в редакторе (только состояние UI, не сохраняется). */
@@ -473,6 +539,8 @@ sealed interface Selection {
     data class BuildingSel(override val id: String) : Selection
     data class DistrictSel(override val id: String) : Selection
     data class LabelSel(override val id: String) : Selection
+    data class TokenSel(override val id: String) : Selection
+    data class FogSel(override val id: String) : Selection
 }
 
 /** Краткая карточка проекта для списка. */

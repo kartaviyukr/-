@@ -48,6 +48,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
+import com.fantasymap.creator.model.MapKind
 import com.fantasymap.creator.model.Selection
 import com.fantasymap.creator.model.Tool
 
@@ -65,6 +66,7 @@ fun EditorScreen(viewModel: EditorViewModel) {
     var showCountries by remember { mutableStateOf(false) }
     var showObjectDialog by remember { mutableStateOf(false) }
     var showAssets by remember { mutableStateOf(false) }
+    var battleDialog by remember { mutableStateOf<BattleDialog?>(null) }
     var pendingImage by remember { mutableStateOf<Uri?>(null) }
     var renameTarget by remember { mutableStateOf<Selection?>(null) }
     var pngSize by remember { mutableIntStateOf(2048) }
@@ -161,6 +163,27 @@ fun EditorScreen(viewModel: EditorViewModel) {
                                 text = { Text("Выровнять границы зон") },
                                 onClick = { menuOpen = false; viewModel.alignBiomeBorders() }
                             )
+                            if (project.kind == MapKind.BATTLE) {
+                                DropdownMenuItem(
+                                    text = {
+                                        Text(if (project.style.playerView) "Вид мастера" else "Вид для игроков")
+                                    },
+                                    onClick = { menuOpen = false; viewModel.togglePlayerView() }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text("Сетка и текстуры") },
+                                    onClick = { menuOpen = false; battleDialog = BattleDialog.GRID }
+                                )
+                                DropdownMenuItem(
+                                    text = { Text("Кубики") },
+                                    onClick = { menuOpen = false; battleDialog = BattleDialog.DICE }
+                                )
+                            } else {
+                                DropdownMenuItem(
+                                    text = { Text(if (project.landBase) "Основа: океан" else "Вся карта — суша") },
+                                    onClick = { menuOpen = false; viewModel.toggleLandBase() }
+                                )
+                            }
                             DropdownMenuItem(
                                 text = { Text("Авторский контент") },
                                 onClick = { menuOpen = false; showAssets = true }
@@ -198,7 +221,8 @@ fun EditorScreen(viewModel: EditorViewModel) {
             EditorBottomPanel(
                 viewModel = viewModel,
                 onOpenCountries = { showCountries = true },
-                onOpenAssets = { showAssets = true }
+                onOpenAssets = { showAssets = true },
+                onBattleDialog = { battleDialog = it }
             )
         }
     ) { padding ->
@@ -238,7 +262,8 @@ fun EditorScreen(viewModel: EditorViewModel) {
                         .padding(10.dp),
                     onEdit = {
                         if (selection is Selection.MarkerSel || selection is Selection.LabelSel ||
-                            selection is Selection.BuildingSel || selection is Selection.DistrictSel
+                            selection is Selection.BuildingSel || selection is Selection.DistrictSel ||
+                            selection is Selection.TokenSel
                         ) {
                             showObjectDialog = true
                         } else {
@@ -251,6 +276,22 @@ fun EditorScreen(viewModel: EditorViewModel) {
     }
 
     // ---- диалоги ----
+
+    if (showObjectDialog && selection is Selection.TokenSel) {
+        val token = project.tokens.firstOrNull { it.id == selection.id }
+        if (token == null) {
+            showObjectDialog = false
+        } else {
+            TokenEditDialog(viewModel, token) { showObjectDialog = false }
+        }
+    }
+    when (battleDialog) {
+        BattleDialog.INITIATIVE -> InitiativeDialog(viewModel) { battleDialog = null }
+        BattleDialog.DICE -> DiceDialog(viewModel) { battleDialog = null }
+        BattleDialog.SCENE -> SceneDialog(viewModel) { battleDialog = null }
+        BattleDialog.GRID -> GridDialog(viewModel) { battleDialog = null }
+        null -> Unit
+    }
 
     if (showAssets) {
         CustomAssetsDialog(
@@ -455,6 +496,16 @@ private fun SelectionCard(
                 district.name.ifBlank { district.type.title } to district.type.title
             }
         }
+        is Selection.TokenSel -> {
+            val token = project.tokens.firstOrNull { it.id == selection.id }
+            if (token == null) {
+                "Фишка" to ""
+            } else {
+                val health = if (token.maxHp > 0) "здоровье ${token.hp}/${token.maxHp} · " else ""
+                token.title to "$health защита ${token.ac} · ${token.faction.title}"
+            }
+        }
+        is Selection.FogSel -> "Туман войны" to "Удалите, чтобы открыть этот кусок"
     }
 
     Card(
@@ -483,6 +534,20 @@ private fun SelectionCard(
                     onClick = { viewModel.openLinkedMap((selection as Selection.MarkerSel).id) },
                     contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
                 ) { Text("→ карта") }
+            }
+            if (selection is Selection.TokenSel) {
+                TextButton(
+                    onClick = { viewModel.changeHp(selection.id, -1) },
+                    contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
+                ) { Text("−1") }
+                TextButton(
+                    onClick = { viewModel.changeHp(selection.id, -5) },
+                    contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
+                ) { Text("−5") }
+                TextButton(
+                    onClick = { viewModel.changeHp(selection.id, 1) },
+                    contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
+                ) { Text("+1") }
             }
             if (selection is Selection.Biome) {
                 TextButton(
@@ -542,6 +607,8 @@ private fun currentNameOf(viewModel: EditorViewModel, selection: Selection): Str
         is Selection.CountryArea -> project.countryById(selection.id)?.name.orEmpty()
         is Selection.BuildingSel -> project.buildings.firstOrNull { it.id == selection.id }?.name.orEmpty()
         is Selection.DistrictSel -> project.districts.firstOrNull { it.id == selection.id }?.name.orEmpty()
+        is Selection.TokenSel -> project.tokens.firstOrNull { it.id == selection.id }?.name.orEmpty()
+        is Selection.FogSel -> ""
     }
 }
 

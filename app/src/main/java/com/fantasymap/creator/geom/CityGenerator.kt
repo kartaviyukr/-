@@ -111,6 +111,16 @@ object CityGenerator {
             size = 1.35f, gap = 0.5f, rowGap = 0.8f, jitter = 0.2f,
             tilt = 0.08f, skip = 0.22f, bigShare = 0.45f, landmark = BuildingType.THEATRE_HOUSE
         )
+        // Дворцовый квартал: дворец посередине, вокруг просторные особняки и службы.
+        DistrictType.PALACE_QUARTER -> DistrictPlan(
+            size = 1.9f, gap = 1.0f, rowGap = 1.2f, jitter = 0.08f,
+            tilt = 0f, skip = 0.32f, bigShare = 0.5f, landmark = BuildingType.PALACE
+        )
+        // Квартал гильдий: солидные дома гильдий плотными рядами.
+        DistrictType.GUILD_QUARTER -> DistrictPlan(
+            size = 1.2f, gap = 0.3f, rowGap = 0.6f, jitter = 0.1f,
+            tilt = 0.03f, skip = 0.12f, bigShare = 0.35f, landmark = BuildingType.ADVENTURERS_GUILD
+        )
         // Огороды: редкие усадьбы среди грядок.
         DistrictType.FARM_QUARTER -> DistrictPlan(
             size = 1.15f, gap = 1.1f, rowGap = 1.4f, jitter = 0.3f,
@@ -343,6 +353,7 @@ object CityGenerator {
     /** Какие дома уместны в квартале такого рода. */
     fun housesFor(type: DistrictType): List<BuildingType> = when (type) {
         DistrictType.MARKET_QUARTER -> listOf(
+            BuildingType.AUCTION_HOUSE, BuildingType.BLACK_MARKET,
             BuildingType.SHOP, BuildingType.SHOP, BuildingType.SHOP, BuildingType.HOUSE,
             BuildingType.TAVERN, BuildingType.WAREHOUSE, BuildingType.BAKERY,
             BuildingType.BUTCHER, BuildingType.SPICE_SHOP, BuildingType.BANK_HOUSE,
@@ -350,50 +361,59 @@ object CityGenerator {
             BuildingType.CUSTOMS, BuildingType.GUILD_HOUSE
         )
         DistrictType.CRAFT_QUARTER -> listOf(
+            BuildingType.DWARVEN_FORGE, BuildingType.LOCKSMITH, BuildingType.BOWYER, BuildingType.TAILOR,
             BuildingType.SMITHY, BuildingType.POTTERY, BuildingType.WEAVER, BuildingType.HOUSE,
             BuildingType.CARPENTER, BuildingType.TANNERY, BuildingType.DYER,
             BuildingType.ARMOURER, BuildingType.STONECUTTER, BuildingType.GLASSBLOWER,
             BuildingType.BREWERY, BuildingType.HOUSE, BuildingType.GUILD_HOUSE
         )
         DistrictType.TEMPLE_QUARTER -> listOf(
+            BuildingType.SUN_TEMPLE, BuildingType.ALMSHOUSE,
             BuildingType.CHAPEL, BuildingType.SHRINE_HOUSE, BuildingType.CHURCH,
             BuildingType.MONASTERY_HOUSE, BuildingType.HEALER, BuildingType.OLD_TEMPLE,
             BuildingType.BELL_TOWER, BuildingType.HOUSE, BuildingType.CRYPT_HOUSE,
             BuildingType.HOSPITAL
         )
         DistrictType.NOBLE_QUARTER -> listOf(
+            BuildingType.VAMPIRE_MANOR, BuildingType.EMBASSY,
             BuildingType.MANOR, BuildingType.RICH_HOUSE, BuildingType.MANOR,
             BuildingType.RICH_HOUSE, BuildingType.JEWELLER, BuildingType.STABLE,
             BuildingType.TOWER_HOUSE, BuildingType.BATH_HOUSE_CITY, BuildingType.CART_YARD,
             BuildingType.OPERA_HOUSE
         )
         DistrictType.POOR_QUARTER -> listOf(
+            BuildingType.ORPHANAGE, BuildingType.ALMSHOUSE,
             BuildingType.HUT, BuildingType.HOUSE, BuildingType.TENEMENT,
             BuildingType.SHACK_ROW, BuildingType.HUT, BuildingType.TAVERN,
             BuildingType.ABANDONED_HOUSE
         )
         DistrictType.SLUMS -> listOf(
+            BuildingType.SMUGGLERS_DEN, BuildingType.HAUNTED_HOUSE,
             BuildingType.HUT, BuildingType.HUT, BuildingType.SHACK_ROW,
             BuildingType.ABANDONED_HOUSE, BuildingType.HUT, BuildingType.BURNT_HOUSE,
             BuildingType.RUINED_HOUSE, BuildingType.PLAGUE_HOUSE
         )
         DistrictType.HARBOUR_QUARTER -> listOf(
+            BuildingType.SMUGGLERS_DEN, BuildingType.AIRSHIP_DOCK,
             BuildingType.WAREHOUSE, BuildingType.DOCK_HOUSE, BuildingType.TAVERN,
             BuildingType.HOUSE, BuildingType.FISH_MARKET, BuildingType.SHIPYARD_HOUSE,
             BuildingType.WAREHOUSE, BuildingType.INN_HOUSE, BuildingType.CUSTOMS,
             BuildingType.LIGHTHOUSE_HOUSE
         )
         DistrictType.GARRISON_QUARTER -> listOf(
+            BuildingType.ARSENAL, BuildingType.GRIFFON_AERIE,
             BuildingType.BARRACKS_HOUSE, BuildingType.GUARD_HOUSE, BuildingType.STABLE,
             BuildingType.SMITHY, BuildingType.ARMOURER, BuildingType.GRANARY,
             BuildingType.WATCH_TOWER_HOUSE, BuildingType.PRISON_HOUSE, BuildingType.HOUSE
         )
         DistrictType.SCHOLAR_QUARTER -> listOf(
+            BuildingType.STAR_DOME, BuildingType.GREENHOUSE, BuildingType.CARTOGRAPHER, BuildingType.ASYLUM,
             BuildingType.SCHOOL, BuildingType.LIBRARY_HOUSE, BuildingType.HOUSE,
             BuildingType.APOTHECARY, BuildingType.RICH_HOUSE, BuildingType.OBSERVATORY_HOUSE,
             BuildingType.HEALER, BuildingType.TALL_HOUSE
         )
         DistrictType.MAGIC_QUARTER -> listOf(
+            BuildingType.WITCH_HOUSE, BuildingType.GOLEM_WORKSHOP, BuildingType.ALCHEMY_LAB, BuildingType.PORTAL_HALL,
             BuildingType.ALCHEMIST_HOUSE, BuildingType.ENCHANTER, BuildingType.HOUSE,
             BuildingType.SEER_HOUSE, BuildingType.WIZARD_HOUSE, BuildingType.ASTROLOGER_TOWER,
             BuildingType.TOWER_HOUSE, BuildingType.APOTHECARY
@@ -414,11 +434,25 @@ object CityGenerator {
             BuildingType.SCHOOL, BuildingType.WATER_HOUSE
         )
         DistrictType.FUN_QUARTER -> listOf(
+            BuildingType.MENAGERIE, BuildingType.FIGHTING_PIT,
             BuildingType.THEATRE_HOUSE, BuildingType.PUPPET_THEATRE, BuildingType.DANCE_HOUSE,
             BuildingType.MUSIC_HALL, BuildingType.GAMBLING_DEN, BuildingType.TAVERN,
             BuildingType.BATH_HOUSE_CITY, BuildingType.STORYTELLER_STAGE,
             BuildingType.AMPHITHEATRE, BuildingType.CONCERT_HALL, BuildingType.CIRCUS_TENT,
             BuildingType.PLEASURE_HOUSE, BuildingType.COCKPIT, BuildingType.INN_HOUSE
+        )
+        DistrictType.PALACE_QUARTER -> listOf(
+            BuildingType.MANOR, BuildingType.RICH_HOUSE, BuildingType.TREASURY,
+            BuildingType.EMBASSY, BuildingType.HALL_OF_FAME, BuildingType.STABLE,
+            BuildingType.CART_YARD, BuildingType.GUARD_HOUSE, BuildingType.GREENHOUSE,
+            BuildingType.ARSENAL, BuildingType.CHAPEL
+        )
+        DistrictType.GUILD_QUARTER -> listOf(
+            BuildingType.GUILD_HOUSE, BuildingType.MAGES_GUILD, BuildingType.MERCENARY_HALL,
+            BuildingType.ADVENTURERS_GUILD, BuildingType.AUCTION_HOUSE, BuildingType.CARTOGRAPHER,
+            BuildingType.LOCKSMITH, BuildingType.BOWYER, BuildingType.TAILOR,
+            BuildingType.CANDLE_MAKER, BuildingType.MONSTER_HUNTERS, BuildingType.TAVERN,
+            BuildingType.BARD_COLLEGE, BuildingType.HOUSE
         )
         DistrictType.FARM_QUARTER -> listOf(
             BuildingType.FARMSTEAD_HOUSE, BuildingType.GRANARY, BuildingType.HUT,
@@ -426,10 +460,12 @@ object CityGenerator {
             BuildingType.HOUSE
         )
         DistrictType.GRAVE_QUARTER -> listOf(
+            BuildingType.DEATH_TEMPLE,
             BuildingType.CRYPT_HOUSE, BuildingType.CHAPEL, BuildingType.CRYPT_HOUSE,
             BuildingType.SHRINE_HOUSE, BuildingType.PLAGUE_HOUSE
         )
         DistrictType.PARK_QUARTER -> listOf(
+            BuildingType.TREEHOUSE, BuildingType.GREENHOUSE,
             BuildingType.BATH_HOUSE_CITY, BuildingType.RICH_HOUSE, BuildingType.DOVECOTE,
             BuildingType.STORYTELLER_STAGE, BuildingType.SHRINE_HOUSE
         )

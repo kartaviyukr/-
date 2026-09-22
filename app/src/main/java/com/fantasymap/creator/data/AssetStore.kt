@@ -69,6 +69,18 @@ class AssetStore(private val context: Context) : TextureSource {
 
     override fun bitmap(id: String): Bitmap? = texture(id)
 
+    private val builtins = HashMap<String, Bitmap?>()
+
+    /** Встроенные фото-текстуры (Poly Haven, CC0) лежат в assets/textures. */
+    override fun builtin(key: String): Bitmap? {
+        if (builtins.containsKey(key)) return builtins[key]
+        val bitmap = runCatching {
+            context.assets.open("textures/$key.jpg").use { BitmapFactory.decodeStream(it) }
+        }.getOrNull()
+        builtins[key] = bitmap
+        return bitmap
+    }
+
     /**
      * Перенести выбранную картинку в библиотеку.
      * Большие картинки ужимаются: на карте всё равно не видно больше.

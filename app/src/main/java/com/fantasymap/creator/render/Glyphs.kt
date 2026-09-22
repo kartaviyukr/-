@@ -17,6 +17,7 @@ class Glyphs {
 
     private val path = Path()
     private val rect = RectF()
+    private val battle = BattleGlyphs()
 
     /**
      * Значок объекта. Центр — (cx, cy), s — характерный радиус в пикселях экрана.
@@ -125,6 +126,62 @@ class Glyphs {
             Glyph.PLAQUE -> plaque(canvas, cx, cy, s, fill, stroke)
             Glyph.DRAWBRIDGE_GLYPH -> drawbridge(canvas, cx, cy, s, fill, stroke)
             Glyph.PORTCULLIS -> portcullis(canvas, cx, cy, s, fill, stroke)
+            Glyph.HUMANOID,
+            Glyph.GOBLIN,
+            Glyph.SKULL,
+            Glyph.PAW,
+            Glyph.SPIDER,
+            Glyph.SERPENT,
+            Glyph.BAT,
+            Glyph.HORNS,
+            Glyph.FLAME,
+            Glyph.WINGS,
+            Glyph.TENTACLES,
+            Glyph.GOLEM,
+            Glyph.OOZE,
+            Glyph.GHOST,
+            Glyph.GIANT,
+            Glyph.HAT,
+            Glyph.DAGGER,
+            Glyph.BOW,
+            Glyph.SUN,
+            Glyph.LUTE,
+            Glyph.LEAF,
+            Glyph.SHIELD,
+            Glyph.LOCK,
+            Glyph.CHEST,
+            Glyph.DOOR,
+            Glyph.STAIRS,
+            Glyph.LADDER,
+            Glyph.WINDOW,
+            Glyph.TABLE,
+            Glyph.CHAIR,
+            Glyph.BED,
+            Glyph.CRATE,
+            Glyph.BOOKSHELF,
+            Glyph.THRONE,
+            Glyph.ALTAR,
+            Glyph.COFFIN,
+            Glyph.ANVIL,
+            Glyph.FIREPLACE,
+            Glyph.BRAZIER,
+            Glyph.TORCH,
+            Glyph.PILLAR,
+            Glyph.CAGE,
+            Glyph.SACK,
+            Glyph.BUSH,
+            Glyph.STUMP,
+            Glyph.CAMPFIRE,
+            Glyph.WEB,
+            Glyph.SPIKES,
+            Glyph.PIT,
+            Glyph.BEAR_TRAP,
+            Glyph.PLATE,
+            Glyph.ARROW,
+            Glyph.LEVER,
+            Glyph.SCROLL,
+            Glyph.KEY,
+            Glyph.TARGET -> battle.draw(canvas, glyph, cx, cy, s, fill, stroke)
         }
     }
 
@@ -1619,6 +1676,19 @@ class Glyphs {
                 rect.set(x - s * 0.7f, y - s * 0.5f, x + s * 0.7f, y + s * 0.5f)
                 canvas.drawRect(rect, paint)
                 canvas.drawLine(x - s * 0.7f, y, x + s * 0.7f, y, paint)
+            }
+            BiomePattern.PLANKS -> {
+                canvas.drawLine(x - s, y - s * 0.35f, x + s, y - s * 0.35f, paint)
+                canvas.drawLine(x - s, y + s * 0.35f, x + s, y + s * 0.35f, paint)
+                canvas.drawLine(x + s * 0.3f, y - s * 0.35f, x + s * 0.3f, y + s * 0.35f, paint)
+            }
+            BiomePattern.TILES -> {
+                rect.set(x - s * 0.8f, y - s * 0.8f, x + s * 0.8f, y + s * 0.8f)
+                canvas.drawRect(rect, paint)
+            }
+            BiomePattern.COBBLES -> {
+                rect.set(x - s * 0.6f, y - s * 0.45f, x + s * 0.6f, y + s * 0.45f)
+                canvas.drawRoundRect(rect, s * 0.3f, s * 0.3f, paint)
             }
         }
     }

@@ -23,7 +23,17 @@ import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
+import com.fantasymap.creator.model.BattleStage
 import com.fantasymap.creator.model.CityStage
+import com.fantasymap.creator.model.Condition
+import com.fantasymap.creator.model.FogArea
+import com.fantasymap.creator.model.GridKind
+import com.fantasymap.creator.model.SceneInfo
+import com.fantasymap.creator.model.Token
+import com.fantasymap.creator.model.TokenFaction
+import com.fantasymap.creator.model.TokenGroup
+import com.fantasymap.creator.model.TokenSize
+import com.fantasymap.creator.model.TokenType
 import com.fantasymap.creator.model.DistrictType
 import com.fantasymap.creator.model.Country
 import com.fantasymap.creator.model.CountryInfo
@@ -97,6 +107,17 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var buildingGroup by mutableStateOf(BuildingGroup.HOME)
     var districtType by mutableStateOf(DistrictType.OLD_TOWN)
 
+    /** Фишка, которую ставит инструмент «Фишка». */
+    var tokenType by mutableStateOf(TokenType.GOBLIN)
+    var tokenGroup by mutableStateOf(TokenGroup.GREENSKINS)
+
+    /** Подпись линейки, пока палец ведёт замер. */
+    var rulerText by mutableStateOf<String?>(null)
+        private set
+
+    /** Последние броски кубиков, свежие сверху. */
+    val diceLog = mutableStateListOf<String>()
+
     /** Вся авторская библиотека. Обновляется после каждого изменения. */
     var customAssets by mutableStateOf<List<CustomAsset>>(emptyList())
         private set
@@ -107,6 +128,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var customBuilding by mutableStateOf<CustomAsset?>(null)
         private set
     var customObject by mutableStateOf<CustomAsset?>(null)
+        private set
+    var customToken by mutableStateOf<CustomAsset?>(null)
         private set
 
     /** Плотность застройки квартала: 0 — просторно, 1 — тесно. */
@@ -197,6 +220,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (customZone?.id == asset.id) customZone = asset
             if (customBuilding?.id == asset.id) customBuilding = asset
             if (customObject?.id == asset.id) customObject = asset
+            if (customToken?.id == asset.id) customToken = asset
         }
     }
 
@@ -207,6 +231,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (customZone?.id == id) customZone = null
             if (customBuilding?.id == id) customBuilding = null
             if (customObject?.id == id) customObject = null
+            if (customToken?.id == id) customToken = null
         }
     }
 
@@ -225,6 +250,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 customObject = asset
                 tool = Tool.MARKER
             }
+            CustomKind.TOKEN -> {
+                customToken = asset
+                tool = Tool.TOKEN
+            }
         }
     }
 
@@ -233,6 +262,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             CustomKind.ZONE -> customZone = null
             CustomKind.BUILDING -> customBuilding = null
             CustomKind.OBJECT -> customObject = null
+            CustomKind.TOKEN -> customToken = null
         }
     }
 
@@ -260,13 +290,42 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    fun createProject(name: String, width: Float, height: Float, kind: MapKind = MapKind.WORLD) {
-        val fresh = MapProject(
-            name = name.ifBlank { if (kind == MapKind.CITY) "Новый город" else "Новый мир" },
+    fun createProject(
+        name: String,
+        width: Float,
+        height: Float,
+        kind: MapKind = MapKind.WORLD,
+        ground: BiomeType? = null,
+        landBase: Boolean = false
+    ) {
+        val base = MapProject(
+            name = name.ifBlank {
+                when (kind) {
+                    MapKind.CITY -> "Новый город"
+                    MapKind.BATTLE -> "Новая локация"
+                    MapKind.WORLD -> "Новый мир"
+                }
+            },
             worldWidth = width,
             worldHeight = height,
-            kind = kind
+            kind = kind,
+            landBase = landBase && kind != MapKind.BATTLE
         )
+        // Боевая локация: тёмный стол, основа-пол, фото-текстуры, без компаса и рамки.
+        val fresh = if (kind == MapKind.BATTLE) {
+            base.copy(
+                groundBiome = ground ?: BiomeType.STONE_FLOOR,
+                style = base.style.copy(
+                    oceanColor = 0xFF24211E.toInt(),
+                    deskColor = 0xFF161412.toInt(),
+                    showCompass = false,
+                    showFrame = false,
+                    photoTextures = true
+                )
+            )
+        } else {
+            base
+        }
         viewModelScope.launch {
             withContext(Dispatchers.IO) { store.save(fresh) }
             openProject(fresh)
@@ -397,9 +456,18 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     fun stages(): List<MapStage> = stagesFor(mapKind)
 
     /** Группы зон: на карте города городские идут первыми. */
-    fun biomeGroups(): List<BiomeGroup> =
-        if (mapKind == MapKind.CITY) listOf(BiomeGroup.CITY) + BiomeGroup.entries.filter { it != BiomeGroup.CITY }
-        else BiomeGroup.entries.filter { it != BiomeGroup.CITY } + BiomeGroup.CITY
+    fun biomeGroups(): List<BiomeGroup> {
+        val world = BiomeGroup.entries.filter { !it.battle && it != BiomeGroup.CITY }
+        val battle = BiomeGroup.entries.filter { it.battle }
+        return when (mapKind) {
+            MapKind.CITY -> listOf(BiomeGroup.CITY) + world
+            MapKind.BATTLE -> battle + BiomeGroup.CITY
+            MapKind.WORLD -> world + BiomeGroup.CITY
+        }
+    }
+
+    /** Виды линий, уместные на открытой карте. */
+    fun lineTypes(): List<LineFeatureType> = LineFeatureType.entries.filter { it.fits(mapKind) }
 
     /** Группы объектов, уместные на открытой карте. */
     fun markerGroups(): List<MarkerGroup> = MarkerType.groupsFor(mapKind)
@@ -455,6 +523,32 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             CityStage.STREETS -> roadType = RoadType.MAIN_STREET
             CityStage.GREEN -> biome = BiomeType.CITY_PARK
             CityStage.DETAILS -> markerType = MarkerType.CITY_FOUNTAIN
+            BattleStage.GROUND -> biome = BiomeType.GRASS_GROUND
+            BattleStage.WALLS -> {
+                lineType = LineFeatureType.DUNGEON_WALL
+                markerGroup = MarkerGroup.BATTLE_DOORS
+                markerType = MarkerType.B_DOOR
+            }
+            BattleStage.PROPS -> {
+                markerGroup = MarkerGroup.BATTLE_FURNITURE
+                markerType = MarkerType.B_TABLE
+            }
+            BattleStage.TRAPS -> {
+                markerGroup = MarkerGroup.BATTLE_TRAPS
+                markerType = MarkerType.B_SPIKE_TRAP
+            }
+            BattleStage.ENEMIES -> {
+                tokenGroup = TokenGroup.GREENSKINS
+                tokenType = TokenType.GOBLIN
+            }
+            BattleStage.HEROES -> {
+                tokenGroup = TokenGroup.HEROES
+                tokenType = TokenType.HERO_FIGHTER
+            }
+            BattleStage.FOG -> {
+                markerGroup = MarkerGroup.BATTLE_TACTICS
+                markerType = MarkerType.B_LIGHT
+            }
             else -> Unit
         }
         editQuiet { it.copy(stage = newStage.number) }
@@ -463,7 +557,19 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     fun toolsFor(currentStage: MapStage): List<Tool> = when (currentStage) {
         is CityStage -> cityToolsFor(currentStage)
+        is BattleStage -> battleToolsFor(currentStage)
         else -> worldToolsFor(currentStage)
+    }
+
+    private fun battleToolsFor(currentStage: BattleStage): List<Tool> = when (currentStage) {
+        BattleStage.GROUND -> listOf(Tool.PAN, Tool.BIOME, Tool.SELECT, Tool.ERASER, Tool.RULER, Tool.FRAGMENT)
+        BattleStage.WALLS -> listOf(Tool.PAN, Tool.LINE, Tool.MARKER, Tool.SELECT, Tool.ERASER, Tool.RULER)
+        BattleStage.PROPS -> listOf(Tool.PAN, Tool.MARKER, Tool.SELECT, Tool.ERASER, Tool.RULER)
+        BattleStage.TRAPS -> listOf(Tool.PAN, Tool.MARKER, Tool.SELECT, Tool.ERASER)
+        BattleStage.ENEMIES -> listOf(Tool.PAN, Tool.TOKEN, Tool.SELECT, Tool.ERASER, Tool.RULER)
+        BattleStage.HEROES -> listOf(Tool.PAN, Tool.TOKEN, Tool.SELECT, Tool.ERASER, Tool.RULER)
+        BattleStage.FOG -> listOf(Tool.PAN, Tool.FOG, Tool.MARKER, Tool.SELECT, Tool.ERASER)
+        BattleStage.SCENE -> listOf(Tool.SELECT, Tool.PAN, Tool.RULER, Tool.TOKEN, Tool.LABEL, Tool.ERASER)
     }
 
     private fun cityToolsFor(currentStage: CityStage): List<Tool> = when (currentStage) {
@@ -489,6 +595,14 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     private fun defaultToolFor(currentStage: MapStage): Tool = when (currentStage) {
+        BattleStage.GROUND -> Tool.BIOME
+        BattleStage.WALLS -> Tool.LINE
+        BattleStage.PROPS -> Tool.MARKER
+        BattleStage.TRAPS -> Tool.MARKER
+        BattleStage.ENEMIES -> Tool.TOKEN
+        BattleStage.HEROES -> Tool.TOKEN
+        BattleStage.FOG -> Tool.FOG
+        BattleStage.SCENE -> Tool.SELECT
         CityStage.GROUND -> Tool.LAND
         CityStage.WALLS -> Tool.LINE
         CityStage.DISTRICTS -> Tool.DISTRICT
@@ -510,10 +624,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     /** Рисуется ли текущим инструментом замкнутая область. */
     fun toolDrawsArea(): Boolean =
         tool == Tool.LAND || tool == Tool.ISLAND || tool == Tool.WATER ||
-            tool == Tool.BIOME || tool == Tool.COUNTRY || tool == Tool.DISTRICT
+            tool == Tool.BIOME || tool == Tool.COUNTRY || tool == Tool.DISTRICT || tool == Tool.FOG
 
     fun toolDrawsLine(): Boolean =
-        tool == Tool.LINE || tool == Tool.ROAD || (tool == Tool.LABEL && labelCurved)
+        tool == Tool.LINE || tool == Tool.ROAD || (tool == Tool.LABEL && labelCurved) || tool == Tool.RULER
 
     /** Замкнут ли рисуемый сейчас контур (область или рамка фрагмента). */
     fun draftClosed(): Boolean = toolDrawsArea() || tool == Tool.FRAGMENT || tool == Tool.BUILDING
@@ -528,6 +642,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         Tool.FRAGMENT -> 0xFF2E6E93.toInt()
         Tool.BUILDING -> buildingType.color
         Tool.DISTRICT -> districtType.color
+        Tool.FOG -> 0xFF2A2F3A.toInt()
+        Tool.RULER -> 0xFFFFC400.toInt()
         else -> 0xFF9B2C2C.toInt()
     }
 
@@ -564,7 +680,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         if (tool == Tool.SELECT) {
             val hit = hitTest(world)
             selection = hit
-            draggingSelection = if (hit is Selection.MarkerSel || hit is Selection.LabelSel) hit else null
+            draggingSelection = if (
+                hit is Selection.MarkerSel || hit is Selection.LabelSel || hit is Selection.TokenSel
+            ) hit else null
             if (draggingSelection != null) pushHistoryForDrag()
             return
         }
@@ -585,6 +703,15 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             moveSelected(dragging, world)
             return
         }
+        if (tool == Tool.RULER) {
+            if (draft.isEmpty()) return
+            val first = draft.first()
+            draft.clear()
+            draft.add(first)
+            draft.add(world)
+            rulerText = measure(first, world)
+            return
+        }
         val start = fragmentStart
         if (start != null) {
             draft.clear()
@@ -600,9 +727,18 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     fun finishStroke() {
-        if (draggingSelection != null) {
+        val dragged = draggingSelection
+        if (dragged != null) {
+            if (dragged is Selection.TokenSel) snapToken(dragged.id)
             draggingSelection = null
             scheduleSave()
+            return
+        }
+        if (tool == Tool.RULER) {
+            val text = rulerText
+            draft.clear()
+            rulerText = null
+            if (text != null) message = "Расстояние: $text"
             return
         }
         val start = fragmentStart
@@ -643,6 +779,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     fun cancelStroke() {
         draft.clear()
+        rulerText = null
         draggingSelection = null
         fragmentStart = null
     }
@@ -773,6 +910,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 Tool.DISTRICT -> edit {
                     it.copy(districts = it.districts + District(type = districtType, points = smooth))
                 }
+                Tool.FOG -> edit { it.copy(fog = it.fog + FogArea(points = smooth)) }
                 else -> Unit
             }
             return
@@ -787,7 +925,11 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (simplified.size < 2) return
             val smooth = Geometry.smoothOpen(simplified, 2)
             when (tool) {
-                Tool.LINE -> edit { it.copy(lines = it.lines + LineFeature(type = lineType, points = smooth)) }
+                Tool.LINE -> edit {
+                    // Стены боевой локации — ровные отрезки по узлам сетки.
+                    val points = if (lineType.battle) wallPoints(rawPoints) else smooth
+                    if (points.size < 2) it else it.copy(lines = it.lines + LineFeature(type = lineType, points = points))
+                }
                 Tool.ROAD -> edit { it.copy(roads = it.roads + Road(type = roadType, points = smooth)) }
                 Tool.LABEL -> {
                     val middle = smooth[smooth.size / 2]
@@ -837,6 +979,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             is Selection.LabelSel -> editQuiet { state ->
                 state.copy(labels = state.labels.map { if (it.id == target.id) it.copy(pos = world) else it })
             }
+            is Selection.TokenSel -> editQuiet { state ->
+                state.copy(tokens = state.tokens.map { if (it.id == target.id) it.copy(pos = world) else it })
+            }
             else -> Unit
         }
     }
@@ -869,6 +1014,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 addBuilding(defaultFootprint(world))
                 return false
             }
+            Tool.TOKEN -> {
+                placeToken(world)
+                return false
+            }
             Tool.ERASER -> {
                 val hit = hitTest(world)
                 if (hit != null) {
@@ -899,6 +1048,20 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val tolerance = max(6f, 16f / camera.scale)
 
         fun open(layer: MapLayer) = layer.visible(style) && !layer.locked(style)
+
+        fun fogAt(): Selection? {
+            if (!open(MapLayer.FOG)) return null
+            return current.fog.asReversed()
+                .firstOrNull { Geometry.pointInPolygon(world, it.points) }
+                ?.let { Selection.FogSel(it.id) }
+        }
+
+        if (stage == BattleStage.FOG) fogAt()?.let { return it }
+
+        if (open(MapLayer.TOKENS)) current.tokens
+            .filter { it.pos.distanceTo(world) <= max(tolerance, it.size.cells * current.gridCell * 0.5f) }
+            .minByOrNull { it.pos.distanceTo(world) }
+            ?.let { return Selection.TokenSel(it.id) }
 
         if (open(MapLayer.MARKERS)) current.markers
             .filter { it.pos.distanceTo(world) <= tolerance * 1.3f }
@@ -948,6 +1111,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             .firstOrNull { Geometry.pointInPolygon(world, it.points) }
             ?.let { return Selection.Land(it.id) }
 
+        if (current.kind == MapKind.BATTLE) fogAt()?.let { return it }
+
         if (open(MapLayer.COUNTRIES)) for (country in current.countries.asReversed()) {
             for ((index, area) in country.areas.withIndex()) {
                 if (Geometry.pointInPolygon(world, area)) return Selection.CountryArea(country.id, index)
@@ -976,6 +1141,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 is Selection.LabelSel -> state.copy(labels = state.labels.filterNot { it.id == target.id })
                 is Selection.BuildingSel -> state.copy(buildings = state.buildings.filterNot { it.id == target.id })
                 is Selection.DistrictSel -> state.copy(districts = state.districts.filterNot { it.id == target.id })
+                is Selection.TokenSel -> state.copy(tokens = state.tokens.filterNot { it.id == target.id })
+                is Selection.FogSel -> state.copy(fog = state.fog.filterNot { it.id == target.id })
                 is Selection.CountryArea -> state.copy(
                     countries = state.countries.map { country ->
                         if (country.id == target.id) {
@@ -1014,11 +1181,319 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 is Selection.DistrictSel -> state.copy(
                     districts = state.districts.map { if (it.id == target.id) it.copy(name = name) else it }
                 )
+                is Selection.TokenSel -> state.copy(
+                    tokens = state.tokens.map { if (it.id == target.id) it.copy(name = name) else it }
+                )
+                is Selection.FogSel -> state
                 is Selection.CountryArea -> state.copy(
                     countries = state.countries.map { if (it.id == target.id) it.copy(name = name) else it }
                 )
             }
         }
+    }
+
+    // ------------------------------------------------------------- боевая локация
+
+    /** Центр клетки (или узел сетки для фишек чётного размера). */
+    fun snap(world: Vec, cells: Float = 1f): Vec {
+        val current = project ?: return world
+        if (current.kind != MapKind.BATTLE || !current.style.snapToGrid) return world
+        val cell = current.gridCell
+        if (current.gridKind == GridKind.HEX) {
+            val r = cell / kotlin.math.sqrt(3f)
+            val rowStep = r * 1.5f
+            var best = world
+            var bestDistance = Float.MAX_VALUE
+            val baseRow = kotlin.math.floor((world.y - r) / rowStep).toInt()
+            for (row in baseRow - 1..baseRow + 1) {
+                val offset = if (row % 2 != 0) cell / 2f else 0f
+                val col = kotlin.math.round((world.x - offset - cell / 2f) / cell).toInt()
+                for (c in col - 1..col + 1) {
+                    val center = Vec(c * cell + offset + cell / 2f, row * rowStep + r)
+                    val distance = center.distanceTo(world)
+                    if (distance < bestDistance) {
+                        bestDistance = distance
+                        best = center
+                    }
+                }
+            }
+            return best
+        }
+        val even = cells >= 2f && cells.toInt() % 2 == 0
+        return if (even) {
+            Vec(kotlin.math.round(world.x / cell) * cell, kotlin.math.round(world.y / cell) * cell)
+        } else {
+            Vec(
+                kotlin.math.floor(world.x / cell) * cell + cell / 2f,
+                kotlin.math.floor(world.y / cell) * cell + cell / 2f
+            )
+        }
+    }
+
+    /** Узел сетки — к нему липнут концы стен. */
+    private fun snapCorner(world: Vec): Vec {
+        val current = project ?: return world
+        if (!current.style.snapToGrid || current.gridKind == GridKind.NONE) return world
+        val half = current.gridCell / 2f
+        return Vec(kotlin.math.round(world.x / half) * half, kotlin.math.round(world.y / half) * half)
+    }
+
+    /** Штрих стены превращается в ломаную по узлам сетки. */
+    private fun wallPoints(raw: List<Vec>): List<Vec> {
+        val current = project ?: return raw
+        val simplified = Geometry.simplify(raw, current.gridCell * 0.35f)
+        val snapped = ArrayList<Vec>()
+        for (point in simplified) {
+            val p = snapCorner(point)
+            if (snapped.isEmpty() || snapped.last().distanceTo(p) > 0.5f) snapped.add(p)
+        }
+        return snapped
+    }
+
+    /** Расстояние по правилам настолки: диагональ считается как одна клетка. */
+    private fun measure(from: Vec, to: Vec): String {
+        val current = project ?: return ""
+        val cell = current.gridCell
+        val cells = if (current.gridKind == GridKind.SQUARE) {
+            max(kotlin.math.abs(to.x - from.x), kotlin.math.abs(to.y - from.y)) / cell
+        } else {
+            from.distanceTo(to) / cell
+        }
+        val rounded = kotlin.math.round(cells).toInt()
+        return "${rounded * current.feetPerCell} фт · $rounded кл."
+    }
+
+    private fun placeToken(world: Vec) {
+        val current = project ?: return
+        val type = tokenType
+        val asset = customToken
+        val sameType = current.tokens.count { it.type == type && it.assetId == asset?.id }
+        val baseName = asset?.title ?: type.title
+        val token = Token(
+            type = type,
+            name = if (sameType == 0) baseName else "$baseName ${sameType + 1}",
+            pos = snap(world, type.size.cells),
+            size = type.size,
+            faction = type.faction,
+            hp = type.hp,
+            maxHp = type.hp,
+            ac = type.ac,
+            assetId = asset?.id
+        )
+        edit { it.copy(tokens = it.tokens + token) }
+        selection = Selection.TokenSel(token.id)
+    }
+
+    private fun snapToken(id: String) {
+        editQuiet { state ->
+            state.copy(tokens = state.tokens.map { if (it.id == id) it.copy(pos = snap(it.pos, it.size.cells)) else it })
+        }
+    }
+
+    fun selectTokenType(type: TokenType) {
+        tokenType = type
+        customToken = null
+    }
+
+    fun updateToken(token: Token) {
+        edit { state -> state.copy(tokens = state.tokens.map { if (it.id == token.id) token else it }) }
+    }
+
+    /** Урон или лечение: delta < 0 — урон. */
+    fun changeHp(id: String, delta: Int) {
+        edit { state ->
+            state.copy(tokens = state.tokens.map {
+                if (it.id == id) it.copy(hp = (it.hp + delta).coerceIn(0, max(it.maxHp, 0))) else it
+            })
+        }
+    }
+
+    fun toggleCondition(id: String, condition: Condition) {
+        edit { state ->
+            state.copy(tokens = state.tokens.map {
+                if (it.id != id) it
+                else if (condition in it.conditions) it.copy(conditions = it.conditions - condition)
+                else it.copy(conditions = it.conditions + condition)
+            })
+        }
+    }
+
+    fun duplicateToken(id: String) {
+        val current = project ?: return
+        val original = current.tokens.firstOrNull { it.id == id } ?: return
+        val same = current.tokens.count { it.type == original.type }
+        val copy = original.copy(
+            id = java.util.UUID.randomUUID().toString(),
+            name = "${original.type.title} ${same + 1}",
+            pos = snap(Vec(original.pos.x + current.gridCell, original.pos.y), original.size.cells),
+            hp = original.maxHp,
+            conditions = emptyList(),
+            initiative = null
+        )
+        edit { it.copy(tokens = it.tokens + copy) }
+        selection = Selection.TokenSel(copy.id)
+    }
+
+    /** Порядок ходов: по убыванию инициативы, у кого её нет — в конце. */
+    fun initiativeOrder(): List<Token> {
+        val current = project ?: return emptyList()
+        return current.tokens
+            .filter { it.initiative != null && !it.dead }
+            .sortedWith(compareByDescending<Token> { it.initiative }.thenBy { it.title })
+    }
+
+    /** Фишка, чей сейчас ход. */
+    fun activeTokenId(): String? {
+        val current = project ?: return null
+        val order = initiativeOrder()
+        if (order.isEmpty()) return null
+        return order[current.scene.turn.mod(order.size)].id
+    }
+
+    /** Бросить инициативу (к20) всем, у кого её ещё нет. */
+    fun rollInitiative(onlyMissing: Boolean) {
+        val random = kotlin.random.Random(System.nanoTime())
+        edit { state ->
+            state.copy(
+                tokens = state.tokens.map {
+                    if (onlyMissing && it.initiative != null) it
+                    else it.copy(initiative = random.nextInt(1, 21))
+                },
+                scene = state.scene.copy(round = 1, turn = 0)
+            )
+        }
+        message = "Инициатива брошена"
+    }
+
+    fun setInitiative(id: String, value: Int?) {
+        edit { state -> state.copy(tokens = state.tokens.map { if (it.id == id) it.copy(initiative = value) else it }) }
+    }
+
+    fun nextTurn() {
+        val current = project ?: return
+        val order = initiativeOrder()
+        if (order.isEmpty()) {
+            message = "Сначала бросьте инициативу"
+            return
+        }
+        var turn = current.scene.turn + 1
+        var round = current.scene.round
+        if (turn >= order.size) {
+            turn = 0
+            round++
+        }
+        edit { it.copy(scene = it.scene.copy(turn = turn, round = round)) }
+        val active = order[turn]
+        selection = Selection.TokenSel(active.id)
+        message = "Раунд $round · ходит ${active.title}"
+    }
+
+    fun endCombat() {
+        edit { state ->
+            state.copy(
+                tokens = state.tokens.map { it.copy(initiative = null) },
+                scene = state.scene.copy(round = 1, turn = 0)
+            )
+        }
+    }
+
+    fun updateScene(scene: SceneInfo) {
+        edit { it.copy(scene = scene) }
+    }
+
+    fun setGround(ground: BiomeType) {
+        edit { it.copy(groundBiome = ground) }
+    }
+
+    fun setGrid(kind: GridKind, feet: Int, opacity: Float) {
+        edit {
+            it.copy(
+                gridKind = kind,
+                feetPerCell = feet.coerceIn(1, 100),
+                style = it.style.copy(gridOpacity = opacity.coerceIn(0f, 1f))
+            )
+        }
+    }
+
+    /** Вся карта — суша или океан. На суше моря и озёра рисуются инструментом воды. */
+    fun toggleLandBase() {
+        edit { it.copy(landBase = !it.landBase) }
+        message = if (project?.landBase == true) {
+            "Вся карта теперь суша — моря и озёра рисуйте инструментом «Озеро / море»"
+        } else {
+            "Карта снова океан — материки рисуются инструментом «Континент»"
+        }
+    }
+
+    fun togglePlayerView() {
+        edit { it.copy(style = it.style.copy(playerView = !it.style.playerView)) }
+        message = if (project?.style?.playerView == true) "Вид для игроков: туман сплошной, тайное скрыто"
+        else "Вид мастера"
+    }
+
+    fun toggleSnap() {
+        edit { it.copy(style = it.style.copy(snapToGrid = !it.style.snapToGrid)) }
+    }
+
+    fun togglePhotoTextures() {
+        edit { it.copy(style = it.style.copy(photoTextures = !it.style.photoTextures)) }
+    }
+
+    /** Убрать весь туман разом. */
+    fun clearFog() {
+        edit { it.copy(fog = emptyList()) }
+    }
+
+    /** Закрыть туманом всю карту — дальше открывать по частям ластиком. */
+    fun coverWithFog() {
+        val current = project ?: return
+        val all = FogArea(
+            points = listOf(
+                Vec(0f, 0f), Vec(current.worldWidth, 0f),
+                Vec(current.worldWidth, current.worldHeight), Vec(0f, current.worldHeight)
+            )
+        )
+        edit { it.copy(fog = it.fog + all) }
+    }
+
+    /**
+     * Бросок кубиков: count × кD sides + modifier.
+     * advantage: 1 — с преимуществом, -1 — с помехой (для одиночного к20).
+     */
+    fun rollDice(count: Int, sides: Int, modifier: Int, advantage: Int = 0): String {
+        val random = kotlin.random.Random(System.nanoTime())
+        val safeCount = count.coerceIn(1, 20)
+        val text = if (sides == 20 && safeCount == 1 && advantage != 0) {
+            val first = random.nextInt(1, 21)
+            val second = random.nextInt(1, 21)
+            val kept = if (advantage > 0) max(first, second) else min(first, second)
+            val label = if (advantage > 0) "преимущество" else "помеха"
+            val total = kept + modifier
+            "к20 ($label): $first и $second → $kept${modText(modifier)} = $total" +
+                (if (kept == 20) " · КРИТ!" else if (kept == 1) " · провал" else "")
+        } else {
+            val rolls = List(safeCount) { random.nextInt(1, sides + 1) }
+            val total = rolls.sum() + modifier
+            val crit = if (sides == 20 && safeCount == 1) {
+                when (rolls[0]) {
+                    20 -> " · КРИТ!"
+                    1 -> " · провал"
+                    else -> ""
+                }
+            } else {
+                ""
+            }
+            "${safeCount}к$sides${modText(modifier)}: ${rolls.joinToString(" + ")}${modText(modifier)} = $total$crit"
+        }
+        diceLog.add(0, text)
+        while (diceLog.size > 30) diceLog.removeAt(diceLog.lastIndex)
+        return text
+    }
+
+    private fun modText(modifier: Int): String = when {
+        modifier > 0 -> " + $modifier"
+        modifier < 0 -> " − ${-modifier}"
+        else -> ""
     }
 
     /**
@@ -1497,6 +1972,31 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 builder.append("\n")
             }
             builder.append("\n")
+        }
+
+        if (current.kind == MapKind.BATTLE) {
+            val scene = current.scene
+            builder.append("─── СЦЕНА ───\n")
+            if (scene.goal.isNotBlank()) builder.append("  Цель: ${scene.goal}\n")
+            if (scene.enemyTactics.isNotBlank()) builder.append("  Тактика врагов: ${scene.enemyTactics}\n")
+            if (scene.reward.isNotBlank()) builder.append("  Награда: ${scene.reward}\n")
+            if (scene.notes.isNotBlank()) builder.append("  Заметки: ${scene.notes}\n")
+            builder.append("  Сетка: клетка ${current.feetPerCell} фт, раунд ${scene.round}\n\n")
+            if (current.tokens.isNotEmpty()) {
+                builder.append("─── СУЩЕСТВА ───\n")
+                for ((faction, group) in current.tokens.groupBy { it.faction }) {
+                    builder.append("\n  ${faction.title} (${group.size}):\n")
+                    for (token in group.sortedBy { it.title }) {
+                        builder.append("    • ${token.title} — ${token.type.title}, ${token.size.title.lowercase()}")
+                        if (token.maxHp > 0) builder.append(", здоровье ${token.hp}/${token.maxHp}")
+                        builder.append(", защита ${token.ac}")
+                        if (token.conditions.isNotEmpty()) builder.append(", ${token.conditions.joinToString { it.title.lowercase() }}")
+                        builder.append("\n")
+                        if (token.notes.isNotBlank()) builder.append("      ${token.notes}\n")
+                    }
+                }
+                builder.append("\n")
+            }
         }
 
         if (current.markers.isNotEmpty()) {

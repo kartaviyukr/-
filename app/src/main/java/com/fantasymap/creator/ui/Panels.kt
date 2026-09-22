@@ -38,7 +38,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
+import com.fantasymap.creator.model.BattleStage
 import com.fantasymap.creator.model.BiomeType
+import com.fantasymap.creator.model.TokenGroup
+import com.fantasymap.creator.model.TokenType
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
 import com.fantasymap.creator.model.CustomAsset
@@ -58,6 +61,7 @@ fun EditorBottomPanel(
     viewModel: EditorViewModel,
     onOpenCountries: () -> Unit,
     onOpenAssets: () -> Unit,
+    onBattleDialog: (BattleDialog) -> Unit,
     modifier: Modifier = Modifier
 ) {
     Surface(
@@ -99,7 +103,10 @@ fun EditorBottomPanel(
             }
             ToolBar(viewModel)
             if (expanded) {
-                ContextPicker(viewModel, onOpenCountries, onOpenAssets)
+                if (viewModel.stage == Stage.CONTINENTS || viewModel.stage == com.fantasymap.creator.model.CityStage.GROUND) {
+                    LandBaseRow(viewModel)
+                }
+                ContextPicker(viewModel, onOpenCountries, onOpenAssets, onBattleDialog)
                 // Пустое место под последней строкой: до неё легко дотянуться,
                 // и она не прячется за системной панелью навигации.
                 Spacer(Modifier.height(44.dp))
@@ -153,9 +160,20 @@ private fun ToolBar(viewModel: EditorViewModel) {
 private fun ContextPicker(
     viewModel: EditorViewModel,
     onOpenCountries: () -> Unit,
-    onOpenAssets: () -> Unit
+    onOpenAssets: () -> Unit,
+    onBattleDialog: (BattleDialog) -> Unit
 ) {
     when {
+        viewModel.stage == BattleStage.SCENE &&
+            viewModel.tool != Tool.TOKEN && viewModel.tool != Tool.LABEL -> ScenePanel(viewModel, onBattleDialog)
+        viewModel.tool == Tool.TOKEN -> TokenPicker(viewModel, onOpenAssets)
+        viewModel.tool == Tool.FOG -> FogPanel(viewModel)
+        viewModel.tool == Tool.RULER -> Text(
+            "Проведите пальцем от одной клетки до другой — появится расстояние в футах. " +
+                "Диагональ считается как одна клетка.",
+            style = MaterialTheme.typography.bodySmall,
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)
+        )
         viewModel.stage == Stage.COUNTRIES -> {
             Row(
                 Modifier
@@ -217,6 +235,27 @@ private fun BiomePicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+        }
+        if (viewModel.mapKind == com.fantasymap.creator.model.MapKind.BATTLE) {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 10.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                TextButton(
+                    onClick = { viewModel.setGround(viewModel.biome) },
+                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
+                ) {
+                    Text("⬚ Залить всю карту: ${viewModel.biome.title}")
+                }
+                TextButton(
+                    onClick = { viewModel.togglePhotoTextures() },
+                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
+                ) {
+                    Text(if (viewModel.project?.style?.photoTextures == true) "🖼 фото" else "✏ рисунок")
+                }
+            }
         }
         CustomAssetRow(viewModel, CustomKind.ZONE, viewModel.customZone, onOpenAssets)
         LazyRow(
@@ -364,7 +403,7 @@ private fun LinePicker(viewModel: EditorViewModel) {
         contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
-        items(LineFeatureType.entries.toList()) { item ->
+        items(viewModel.lineTypes()) { item ->
             FilterChip(
                 selected = viewModel.lineType == item,
                 onClick = { viewModel.lineType = item },
@@ -478,6 +517,145 @@ private fun CountryPicker(viewModel: EditorViewModel, onOpenCountries: () -> Uni
                     selected = false,
                     onClick = onOpenCountries,
                     label = { Text("Список стран") }
+                )
+            }
+        }
+    }
+}
+
+/** Переключатель основы карты: океан с материками или сплошная суша. */
+@Composable
+private fun LandBaseRow(viewModel: EditorViewModel) {
+    val landBase = viewModel.project?.landBase == true
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 2.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        item {
+            FilterChip(
+                selected = !landBase,
+                onClick = { if (landBase) viewModel.toggleLandBase() },
+                label = { Text("🌊 Основа — океан") }
+            )
+        }
+        item {
+            FilterChip(
+                selected = landBase,
+                onClick = { if (!landBase) viewModel.toggleLandBase() },
+                label = { Text("⛰ Вся карта — суша") }
+            )
+        }
+    }
+}
+
+/** Окна боевой локации, которые открываются из нижней панели. */
+enum class BattleDialog { INITIATIVE, DICE, SCENE, GRID }
+
+@Composable
+private fun TokenPicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
+    Column {
+        Text(
+            "Касание ставит фишку в клетку. Повторные получают номера: Гоблин 2, Гоблин 3.",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 14.dp)
+        )
+        CustomAssetRow(viewModel, CustomKind.TOKEN, viewModel.customToken, onOpenAssets)
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(TokenGroup.entries.toList()) { item ->
+                FilterChip(
+                    selected = viewModel.tokenGroup == item && viewModel.customToken == null,
+                    onClick = {
+                        viewModel.tokenGroup = item
+                        TokenType.byGroup(item).firstOrNull()?.let { viewModel.selectTokenType(it) }
+                    },
+                    label = { Text(item.title) }
+                )
+            }
+        }
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(TokenType.byGroup(viewModel.tokenGroup)) { item ->
+                FilterChip(
+                    selected = viewModel.tokenType == item && viewModel.customToken == null,
+                    onClick = { viewModel.selectTokenType(item) },
+                    label = { Text(item.title) },
+                    leadingIcon = { ColorDot(Color(item.faction.color)) }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun FogPanel(viewModel: EditorViewModel) {
+    Column(Modifier.padding(horizontal = 10.dp)) {
+        Text(
+            "Обведите то, чего герои ещё не видят. Открыть кусок — выберите туман и удалите его.",
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 4.dp)
+        )
+        LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            item {
+                FilterChip(selected = false, onClick = { viewModel.coverWithFog() }, label = { Text("Закрыть всю карту") })
+            }
+            item {
+                FilterChip(selected = false, onClick = { viewModel.clearFog() }, label = { Text("Убрать весь туман") })
+            }
+            item {
+                FilterChip(
+                    selected = viewModel.project?.style?.playerView == true,
+                    onClick = { viewModel.togglePlayerView() },
+                    label = { Text("Вид игроков") }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ScenePanel(viewModel: EditorViewModel, onBattleDialog: (BattleDialog) -> Unit) {
+    val project = viewModel.project ?: return
+    Column(Modifier.padding(horizontal = 10.dp)) {
+        val active = project.tokens.firstOrNull { it.id == viewModel.activeTokenId() }
+        Text(
+            if (active != null) "Раунд ${project.scene.round} · ходит ${active.title}"
+            else "Бой не начат: бросьте инициативу",
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
+        )
+        LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            item {
+                FilterChip(selected = false, onClick = { viewModel.nextTurn() }, label = { Text("▶ Следующий ход") })
+            }
+            item {
+                FilterChip(
+                    selected = false,
+                    onClick = { onBattleDialog(BattleDialog.INITIATIVE) },
+                    label = { Text("⚔ Инициатива") }
+                )
+            }
+            item {
+                FilterChip(selected = false, onClick = { onBattleDialog(BattleDialog.DICE) }, label = { Text("🎲 Кубики") })
+            }
+            item {
+                FilterChip(selected = false, onClick = { onBattleDialog(BattleDialog.SCENE) }, label = { Text("📜 Сцена") })
+            }
+            item {
+                FilterChip(selected = false, onClick = { onBattleDialog(BattleDialog.GRID) }, label = { Text("▦ Сетка") })
+            }
+            item {
+                FilterChip(
+                    selected = project.style.playerView,
+                    onClick = { viewModel.togglePlayerView() },
+                    label = { Text("👁 Вид игроков") }
                 )
             }
         }

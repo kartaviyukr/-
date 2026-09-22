@@ -59,6 +59,16 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.material3.FilledTonalButton
+import com.fantasymap.creator.model.Condition
+import com.fantasymap.creator.model.GridKind
+import com.fantasymap.creator.model.Token
+import com.fantasymap.creator.model.TokenFaction
+import com.fantasymap.creator.model.TokenGroup
+import com.fantasymap.creator.model.TokenSize
+import com.fantasymap.creator.model.TokenType
 import com.fantasymap.creator.editor.EditorViewModel
 import com.fantasymap.creator.model.Building
 import com.fantasymap.creator.model.BuildingGroup
@@ -1014,6 +1024,19 @@ fun HelpDialog(onDismiss: () -> Unit) {
                     "или области получится перейти на её отдельную карту. У связанного " +
                     "объекта в углу появляется закладка, а в карточке выбора — кнопка «→ карта».")
                 Spacer(Modifier.height(10.dp))
+                Text("Вся карта — суша", fontWeight = FontWeight.Bold)
+                Text("На первом шаге (или в меню ⋮) выберите «Вся карта — суша»: океана не будет, " +
+                    "а моря и озёра рисуются инструментом «Озеро / море».")
+                Spacer(Modifier.height(10.dp))
+                Text("Боевая локация", fontWeight = FontWeight.Bold)
+                Text("Третий вид карты — для боя: подземелье, таверна, поляна. Сетка по 5 футов, " +
+                    "пол и земля с фото-текстурами, стены липнут к узлам сетки.")
+                Text("• Фишки врагов и героев: у каждой здоровье, защита, размер, сторона " +
+                    "(кольцо своего цвета), состояния и аура. Свою картинку можно вставить в фишку как портрет.")
+                Text("• Выбранная фишка: кнопки −1, −5, +1 меняют здоровье, карандаш открывает карточку.")
+                Text("• Туман войны и «Вид для игроков»: туман сплошной, спрятанное мастером не видно.")
+                Text("• Линейка меряет расстояние в футах; на шаге «Бой»: инициатива, раунды, кубики, сцена.")
+                Spacer(Modifier.height(10.dp))
                 Text("Авторский контент", fontWeight = FontWeight.Bold)
                 Text("Меню ⋮ → «Авторский контент»: загрузите свою картинку и укажите, " +
                     "чем она станет — постройкой, зоной или объектом. Заготовка появится " +
@@ -1403,6 +1426,8 @@ private fun scopeTitle(scope: MarkerScope): String = when (scope) {
     MarkerScope.BOTH -> "мир и город"
     MarkerScope.WORLD -> "только карта мира"
     MarkerScope.CITY -> "только карта города"
+    MarkerScope.BATTLE -> "только боевая локация"
+    MarkerScope.ALL -> "любая карта"
 }
 
 /** Общие настройки заготовки: название, вид, где применять, размер. */
@@ -1516,6 +1541,477 @@ private fun AssetSettingsDialog(
         },
         dismissButton = {
             TextButton(onClick = onDismiss) { Text("Отмена") }
+        }
+    )
+}
+
+// ------------------------------------------------------------------ боевая локация
+
+private fun numberOrNull(text: String): Int? = text.trim().replace("−", "-").toIntOrNull()
+
+@Composable
+private fun NumberField(label: String, value: String, modifier: Modifier = Modifier, onChange: (String) -> Unit) {
+    OutlinedTextField(
+        value = value,
+        onValueChange = { text -> onChange(text.filter { it.isDigit() || it == '-' }.take(5)) },
+        label = { Text(label) },
+        singleLine = true,
+        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+        modifier = modifier
+    )
+}
+
+/** Карточка фишки: имя, сторона, размер, здоровье, защита, состояния, аура. */
+@Composable
+fun TokenEditDialog(viewModel: EditorViewModel, token: Token, onDismiss: () -> Unit) {
+    var draft by remember(token.id) { mutableStateOf(token) }
+    var hpText by remember(token.id) { mutableStateOf(token.hp.toString()) }
+    var maxHpText by remember(token.id) { mutableStateOf(token.maxHp.toString()) }
+    var acText by remember(token.id) { mutableStateOf(token.ac.toString()) }
+    var initText by remember(token.id) { mutableStateOf(token.initiative?.toString().orEmpty()) }
+    var group by remember(token.id) { mutableStateOf(token.type.group) }
+    val portraits = viewModel.assetsOf(CustomKind.TOKEN)
+
+    fun result(): Token = draft.copy(
+        hp = numberOrNull(hpText) ?: draft.hp,
+        maxHp = numberOrNull(maxHpText) ?: draft.maxHp,
+        ac = numberOrNull(acText) ?: draft.ac,
+        initiative = numberOrNull(initText)
+    )
+
+    AlertDialog(
+        onDismissRequest = {
+            viewModel.updateToken(result())
+            onDismiss()
+        },
+        title = { Text(draft.title) },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 480.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                OutlinedTextField(
+                    value = draft.name,
+                    onValueChange = { draft = draft.copy(name = it) },
+                    label = { Text("Имя") },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Spacer(Modifier.height(8.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    NumberField("Здоровье", hpText, Modifier.weight(1f)) { hpText = it }
+                    NumberField("Из", maxHpText, Modifier.weight(1f)) { maxHpText = it }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    NumberField("Защита", acText, Modifier.weight(1f)) { acText = it }
+                    NumberField("Инициатива", initText, Modifier.weight(1f)) { initText = it }
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    for (delta in listOf(-10, -5, -1, 1, 5)) {
+                        TextButton(
+                            onClick = {
+                                val max = numberOrNull(maxHpText) ?: draft.maxHp
+                                val current = numberOrNull(hpText) ?: draft.hp
+                                hpText = (current + delta).coerceIn(0, maxOf(max, 0)).toString()
+                            },
+                            contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
+                        ) { Text(if (delta > 0) "+$delta" else "$delta") }
+                    }
+                }
+
+                Spacer(Modifier.height(8.dp))
+                Text("Сторона", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(TokenFaction.entries.toList()) { item ->
+                        FilterChip(
+                            selected = draft.faction == item,
+                            onClick = { draft = draft.copy(faction = item) },
+                            label = { Text(item.title) },
+                            leadingIcon = { ColorDot(Color(item.color)) }
+                        )
+                    }
+                }
+                Text("Размер", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(TokenSize.entries.toList()) { item ->
+                        FilterChip(
+                            selected = draft.size == item,
+                            onClick = { draft = draft.copy(size = item) },
+                            label = { Text(item.title) }
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(6.dp))
+                Text("Состояния", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(Condition.entries.toList()) { item ->
+                        val on = item in draft.conditions
+                        FilterChip(
+                            selected = on,
+                            onClick = {
+                                draft = draft.copy(
+                                    conditions = if (on) draft.conditions - item else draft.conditions + item
+                                )
+                            },
+                            label = { Text(item.title) },
+                            leadingIcon = { ColorDot(Color(item.color)) }
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    if (draft.aura > 0) "Аура: ${draft.aura} фт" else "Аура: нет",
+                    style = MaterialTheme.typography.labelLarge
+                )
+                Slider(
+                    value = draft.aura.toFloat(),
+                    onValueChange = { draft = draft.copy(aura = (it / 5f).toInt() * 5) },
+                    valueRange = 0f..60f
+                )
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Switch(checked = draft.showLabel, onCheckedChange = { draft = draft.copy(showLabel = it) })
+                    Spacer(Modifier.width(8.dp))
+                    Text("Подписывать имя")
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Switch(checked = draft.hidden, onCheckedChange = { draft = draft.copy(hidden = it) })
+                    Spacer(Modifier.width(8.dp))
+                    Text("Спрятать от игроков")
+                }
+
+                Spacer(Modifier.height(6.dp))
+                Text("Кто это", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(TokenGroup.entries.toList()) { item ->
+                        FilterChip(selected = group == item, onClick = { group = item }, label = { Text(item.title) })
+                    }
+                }
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(TokenType.byGroup(group)) { item ->
+                        FilterChip(
+                            selected = draft.type == item,
+                            onClick = { draft = draft.copy(type = item) },
+                            label = { Text(item.title) }
+                        )
+                    }
+                }
+
+                if (portraits.isNotEmpty()) {
+                    Spacer(Modifier.height(6.dp))
+                    Text("Портрет", style = MaterialTheme.typography.labelLarge)
+                    LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                        item {
+                            FilterChip(
+                                selected = draft.assetId == null,
+                                onClick = { draft = draft.copy(assetId = null) },
+                                label = { Text("Значок") }
+                            )
+                        }
+                        items(portraits) { asset ->
+                            FilterChip(
+                                selected = draft.assetId == asset.id,
+                                onClick = { draft = draft.copy(assetId = asset.id) },
+                                label = { Text(asset.title) },
+                                leadingIcon = { AssetThumb(viewModel, asset) }
+                            )
+                        }
+                    }
+                }
+
+                Spacer(Modifier.height(6.dp))
+                OutlinedTextField(
+                    value = draft.notes,
+                    onValueChange = { draft = draft.copy(notes = it) },
+                    label = { Text("Заметки мастера: атаки, тактика, добыча") },
+                    minLines = 2,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                viewModel.updateToken(result())
+                onDismiss()
+            }) { Text("Готово") }
+        },
+        dismissButton = {
+            TextButton(onClick = {
+                viewModel.duplicateToken(token.id)
+                onDismiss()
+            }) { Text("Копия") }
+        }
+    )
+}
+
+/** Список инициативы: кто за кем ходит, раунд, быстрые правки здоровья. */
+@Composable
+fun InitiativeDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
+    val project = viewModel.project ?: return
+    val order = viewModel.initiativeOrder()
+    val activeId = viewModel.activeTokenId()
+    val waiting = project.tokens.filter { it.initiative == null && !it.dead }
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Инициатива · раунд ${project.scene.round}") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 480.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    item {
+                        FilterChip(selected = false, onClick = { viewModel.rollInitiative(onlyMissing = false) }, label = { Text("🎲 Всем заново") })
+                    }
+                    item {
+                        FilterChip(selected = false, onClick = { viewModel.rollInitiative(onlyMissing = true) }, label = { Text("🎲 Кто без") })
+                    }
+                    item {
+                        FilterChip(selected = false, onClick = { viewModel.endCombat() }, label = { Text("Конец боя") })
+                    }
+                }
+                Spacer(Modifier.height(6.dp))
+                if (order.isEmpty()) {
+                    Text(
+                        "Никто ещё не бросал инициативу. Нажмите «Всем заново» или впишите число в карточке фишки.",
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                }
+                for (token in order) {
+                    val active = token.id == activeId
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .background(
+                                if (active) MaterialTheme.colorScheme.primaryContainer else Color.Transparent
+                            )
+                            .clickable { viewModel.selection = com.fantasymap.creator.model.Selection.TokenSel(token.id) }
+                            .padding(vertical = 4.dp, horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            "${token.initiative}",
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.width(34.dp)
+                        )
+                        ColorDot(Color(token.faction.color))
+                        Spacer(Modifier.width(6.dp))
+                        Column(Modifier.weight(1f)) {
+                            Text(token.title, fontWeight = if (active) FontWeight.Bold else FontWeight.Normal)
+                            if (token.maxHp > 0) {
+                                Text(
+                                    "здоровье ${token.hp}/${token.maxHp} · защита ${token.ac}" +
+                                        if (token.conditions.isNotEmpty()) " · " + token.conditions.joinToString { it.title } else "",
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        }
+                        TextButton(
+                            onClick = { viewModel.changeHp(token.id, -1) },
+                            contentPadding = PaddingValues(horizontal = 4.dp, vertical = 0.dp)
+                        ) { Text("−1") }
+                        TextButton(
+                            onClick = { viewModel.changeHp(token.id, -5) },
+                            contentPadding = PaddingValues(horizontal = 4.dp, vertical = 0.dp)
+                        ) { Text("−5") }
+                        TextButton(
+                            onClick = { viewModel.changeHp(token.id, 1) },
+                            contentPadding = PaddingValues(horizontal = 4.dp, vertical = 0.dp)
+                        ) { Text("+1") }
+                    }
+                    HorizontalDivider()
+                }
+                if (waiting.isNotEmpty()) {
+                    Spacer(Modifier.height(8.dp))
+                    Text(
+                        "Без инициативы: " + waiting.joinToString { it.title },
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = { viewModel.nextTurn() }) { Text("▶ Следующий ход") } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Закрыть") } }
+    )
+}
+
+/** Кубики: к4…к100, количество, модификатор, преимущество и помеха. */
+@Composable
+fun DiceDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
+    var count by remember { mutableIntStateOf(1) }
+    var bonus by remember { mutableIntStateOf(0) }
+    val log = viewModel.diceLog
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Кубики") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 480.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text("Сколько: $count", Modifier.weight(1f))
+                    TextButton(onClick = { if (count > 1) count-- }) { Text("−") }
+                    TextButton(onClick = { if (count < 20) count++ }) { Text("+") }
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        "Модификатор: " + if (bonus >= 0) "+$bonus" else "$bonus",
+                        Modifier.weight(1f)
+                    )
+                    TextButton(onClick = { if (bonus > -20) bonus-- }) { Text("−") }
+                    TextButton(onClick = { if (bonus < 30) bonus++ }) { Text("+") }
+                }
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(listOf(4, 6, 8, 10, 12, 20, 100)) { sides ->
+                        FilledTonalButton(
+                            onClick = { viewModel.rollDice(count, sides, bonus) },
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
+                        ) { Text("к$sides") }
+                    }
+                }
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    item {
+                        FilterChip(
+                            selected = false,
+                            onClick = { viewModel.rollDice(1, 20, bonus, advantage = 1) },
+                            label = { Text("к20 с преимуществом") }
+                        )
+                    }
+                    item {
+                        FilterChip(
+                            selected = false,
+                            onClick = { viewModel.rollDice(1, 20, bonus, advantage = -1) },
+                            label = { Text("к20 с помехой") }
+                        )
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+                for ((index, line) in log.withIndex()) {
+                    Text(
+                        line,
+                        style = if (index == 0) MaterialTheme.typography.titleMedium else MaterialTheme.typography.bodySmall,
+                        fontWeight = if (index == 0) FontWeight.Bold else FontWeight.Normal
+                    )
+                }
+            }
+        },
+        confirmButton = { TextButton(onClick = onDismiss) { Text("Закрыть") } }
+    )
+}
+
+/** Описание сцены для мастера: цель, тактика врагов, награда, заметки. */
+@Composable
+fun SceneDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
+    val project = viewModel.project ?: return
+    var draft by remember { mutableStateOf(project.scene) }
+    AlertDialog(
+        onDismissRequest = {
+            viewModel.updateScene(draft)
+            onDismiss()
+        },
+        title = { Text("Сцена") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 480.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                OutlinedTextField(
+                    value = draft.goal,
+                    onValueChange = { draft = draft.copy(goal = it) },
+                    label = { Text("Цель героев") },
+                    minLines = 2,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                OutlinedTextField(
+                    value = draft.enemyTactics,
+                    onValueChange = { draft = draft.copy(enemyTactics = it) },
+                    label = { Text("Тактика врагов") },
+                    minLines = 2,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                OutlinedTextField(
+                    value = draft.reward,
+                    onValueChange = { draft = draft.copy(reward = it) },
+                    label = { Text("Награда и добыча") },
+                    minLines = 2,
+                    modifier = Modifier.fillMaxWidth()
+                )
+                OutlinedTextField(
+                    value = draft.notes,
+                    onValueChange = { draft = draft.copy(notes = it) },
+                    label = { Text("Заметки мастера") },
+                    minLines = 3,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                viewModel.updateScene(draft)
+                onDismiss()
+            }) { Text("Готово") }
+        }
+    )
+}
+
+/** Сетка: вид, футы в клетке, заметность, прилипание фишек. */
+@Composable
+fun GridDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
+    val project = viewModel.project ?: return
+    var kind by remember { mutableStateOf(project.gridKind) }
+    var feet by remember { mutableIntStateOf(project.feetPerCell) }
+    var opacity by remember { mutableFloatStateOf(project.style.gridOpacity) }
+    AlertDialog(
+        onDismissRequest = {
+            viewModel.setGrid(kind, feet, opacity)
+            onDismiss()
+        },
+        title = { Text("Сетка") },
+        text = {
+            Column {
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(GridKind.entries.toList()) { item ->
+                        FilterChip(selected = kind == item, onClick = { kind = item }, label = { Text(item.title) })
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+                Text("Одна клетка: $feet фт", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(listOf(5, 10, 15, 30, 50, 100)) { item ->
+                        FilterChip(selected = feet == item, onClick = { feet = item }, label = { Text("$item фт") })
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+                Text("Заметность сетки", style = MaterialTheme.typography.labelLarge)
+                Slider(value = opacity, onValueChange = { opacity = it }, valueRange = 0.05f..1f)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Switch(checked = project.style.snapToGrid, onCheckedChange = { viewModel.toggleSnap() })
+                    Spacer(Modifier.width(8.dp))
+                    Text("Фишки и стены липнут к клеткам")
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Switch(checked = project.style.photoTextures, onCheckedChange = { viewModel.togglePhotoTextures() })
+                    Spacer(Modifier.width(8.dp))
+                    Text("Фото-текстуры пола и земли")
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                viewModel.setGrid(kind, feet, opacity)
+                onDismiss()
+            }) { Text("Готово") }
         }
     )
 }

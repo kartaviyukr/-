@@ -131,7 +131,9 @@ fun MapCanvas(
                     draft = viewModel.draft.toList(),
                     draftClosed = viewModel.draftClosed(),
                     draftColor = viewModel.draftColor(),
-                    activeCountryId = viewModel.activeCountryId
+                    activeCountryId = viewModel.activeCountryId,
+                    rulerText = viewModel.rulerText,
+                    activeTokenId = viewModel.activeTokenId()
                 )
             )
         }

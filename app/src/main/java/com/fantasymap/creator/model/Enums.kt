@@ -4,10 +4,15 @@ package com.fantasymap.creator.model
 enum class BiomePattern {
     NONE, TREES, CONIFERS, PALMS, DOTS, DUNES, GRASS, MOUNTAINS, HILLS,
     SWAMP, ICE, ROCKS, WAVES, CRACKS, CRYSTALS, FUNGI, LAVA, FIELDS,
-    RUNES, BONES, STARS, SPIRES, EYES, FEATHERS
+    RUNES, BONES, STARS, SPIRES, EYES, FEATHERS,
+    PLANKS, TILES, COBBLES
 }
 
-enum class BiomeGroup(val title: String) {
+enum class BiomeGroup(val title: String, val battle: Boolean = false) {
+    BATTLE_FLOOR("Полы и кладка", true),
+    BATTLE_GROUND("Земля и природа", true),
+    BATTLE_HAZARD("Вода, лава и опасности", true),
+    BATTLE_MAGIC("Магические зоны", true),
     CITY("Городские зоны"),
     WATER("Вода"),
     FOREST("Леса"),
@@ -27,7 +32,9 @@ enum class BiomeType(
     val title: String,
     val group: BiomeGroup,
     val color: Int,
-    val pattern: BiomePattern
+    val pattern: BiomePattern,
+    /** Фото-текстура из assets/textures, если есть подходящая. */
+    private val textureKey: String? = null
 ) {
     // Вода
     SHALLOW_SEA("Мелководье", BiomeGroup.WATER, 0xFF6FA6C9.toInt(), BiomePattern.WAVES),
@@ -157,10 +164,136 @@ enum class BiomeType(
     CITY_POND("Городской пруд", BiomeGroup.CITY, 0xFF7FA8C0.toInt(), BiomePattern.WAVES),
     CITY_DRILL_YARD("Плац", BiomeGroup.CITY, 0xFFBFB396.toInt(), BiomePattern.DOTS),
     CITY_FAIR("Ярмарочное поле", BiomeGroup.CITY, 0xFFCDBE96.toInt(), BiomePattern.DOTS),
-    CITY_GROVE("Роща у стен", BiomeGroup.CITY, 0xFF86A96C.toInt(), BiomePattern.TREES);
+    CITY_GROVE("Роща у стен", BiomeGroup.CITY, 0xFF86A96C.toInt(), BiomePattern.TREES),
+    CITY_ARENA_SAND("Песок арены", BiomeGroup.CITY, 0xFFD9C79A.toInt(), BiomePattern.DOTS, "sand"),
+    CITY_CANALS("Каналы", BiomeGroup.CITY, 0xFF6E9AB8.toInt(), BiomePattern.WAVES, "water"),
+    CITY_DOCKS("Доки и причалы", BiomeGroup.CITY, 0xFF9C8C74.toInt(), BiomePattern.PLANKS, "wood_planks"),
+    CITY_PAVEMENT("Мостовая", BiomeGroup.CITY, 0xFFBDB3A0.toInt(), BiomePattern.COBBLES, "cobblestone"),
+    CITY_TILED_PLAZA("Плиточная площадь", BiomeGroup.CITY, 0xFFCFC3A8.toInt(), BiomePattern.TILES, "stone_tiles"),
+    CITY_SLUM_MUD("Грязь трущоб", BiomeGroup.CITY, 0xFF8F836C.toInt(), BiomePattern.CRACKS, "mud"),
+    CITY_ROYAL_GARDEN("Королевский сад", BiomeGroup.CITY, 0xFF7FB56E.toInt(), BiomePattern.TREES, "grass"),
+    CITY_TOURNEY_FIELD("Турнирное поле", BiomeGroup.CITY, 0xFFB9B37E.toInt(), BiomePattern.GRASS, "grass"),
+    CITY_OLD_CHURCHYARD("Старый погост", BiomeGroup.CITY, 0xFF8E9486.toInt(), BiomePattern.BONES, "moss"),
+    CITY_HERB_GARDEN("Аптекарский огород", BiomeGroup.CITY, 0xFF9FBE84.toInt(), BiomePattern.FIELDS),
+    CITY_LUMBER_YARD("Дровяной двор", BiomeGroup.CITY, 0xFFA88E6A.toInt(), BiomePattern.PLANKS, "old_wood"),
+    CITY_QUARRY("Каменоломня", BiomeGroup.CITY, 0xFFA9A396.toInt(), BiomePattern.ROCKS, "rocky_ground"),
+    CITY_MAGIC_GARDEN("Волшебный сад", BiomeGroup.CITY, 0xFF8FA7C8.toInt(), BiomePattern.CRYSTALS),
+    CITY_BURNT_QUARTER("Выгоревший квартал", BiomeGroup.CITY, 0xFF6E6862.toInt(), BiomePattern.CRACKS, "ash"),
+
+    // Ещё земли мира: реальные и фэнтезийные
+    CHAPARRAL("Чапараль", BiomeGroup.GRASS, 0xFFA7A266.toInt(), BiomePattern.DOTS),
+    HEATH("Вересковая пустошь", BiomeGroup.GRASS, 0xFFA08AA0.toInt(), BiomePattern.DOTS),
+    TEPUI("Столовые горы", BiomeGroup.HIGH, 0xFFA89A82.toInt(), BiomePattern.ROCKS),
+    LOESS_HILLS("Лёссовые холмы", BiomeGroup.HIGH, 0xFFC9B48A.toInt(), BiomePattern.HILLS),
+    SALT_MARSH("Солёные марши", BiomeGroup.WET, 0xFF8FA98A.toInt(), BiomePattern.SWAMP),
+    LAGOON("Лагуна", BiomeGroup.WATER, 0xFF7CC4C8.toInt(), BiomePattern.WAVES),
+    OBSIDIAN_PLAINS("Обсидиановые равнины", BiomeGroup.FANTASY, 0xFF3E3A40.toInt(), BiomePattern.CRACKS),
+    PETRIFIED_FOREST("Окаменелый лес", BiomeGroup.FANTASY, 0xFF8E8A80.toInt(), BiomePattern.SPIRES),
+    CARNIVOROUS_JUNGLE("Хищные джунгли", BiomeGroup.FANTASY, 0xFF3E6A3A.toInt(), BiomePattern.PALMS),
+    AURORA_TUNDRA("Сияющая тундра", BiomeGroup.FANTASY, 0xFF9CC2B4.toInt(), BiomePattern.STARS),
+    ACID_BOGS("Кислотные топи", BiomeGroup.FANTASY, 0xFF7E9A3A.toInt(), BiomePattern.SWAMP),
+    CLOUD_PEAKS("Облачные пики", BiomeGroup.FANTASY, 0xFFC9D3DC.toInt(), BiomePattern.MOUNTAINS),
+    CRIMSON_DESERT("Багровая пустыня", BiomeGroup.FANTASY, 0xFFB06A52.toInt(), BiomePattern.DUNES),
+    GOLDEN_STEPPE("Золотая степь", BiomeGroup.FANTASY, 0xFFD8B35A.toInt(), BiomePattern.GRASS),
+    SHATTERED_LANDS("Расколотые земли", BiomeGroup.FANTASY, 0xFF7A6E62.toInt(), BiomePattern.CRACKS),
+    FIREFLY_WOODS("Лес светлячков", BiomeGroup.FANTASY, 0xFF3C5E4A.toInt(), BiomePattern.STARS),
+    DEADWOOD("Мёртвый лес", BiomeGroup.FANTASY, 0xFF6A6258.toInt(), BiomePattern.SPIRES),
+    TITAN_BONES("Кости титанов", BiomeGroup.FANTASY, 0xFFCFC6AE.toInt(), BiomePattern.BONES),
+    HONEY_MEADOWS("Медовые луга", BiomeGroup.FANTASY, 0xFFD6BE6E.toInt(), BiomePattern.GRASS),
+    FLESH_WASTES("Плотяные пустоши", BiomeGroup.FANTASY, 0xFF9E6A66.toInt(), BiomePattern.EYES),
+
+    // Боевая локация: полы и кладка
+    STONE_FLOOR("Каменный пол", BiomeGroup.BATTLE_FLOOR, 0xFF8C867C.toInt(), BiomePattern.TILES, "flagstone"),
+    TILE_FLOOR("Плиточный пол", BiomeGroup.BATTLE_FLOOR, 0xFFA69E8E.toInt(), BiomePattern.TILES, "stone_tiles"),
+    MARBLE_FLOOR("Мраморный пол", BiomeGroup.BATTLE_FLOOR, 0xFFD8D4CC.toInt(), BiomePattern.TILES, "marble"),
+    WOOD_FLOOR("Дощатый пол", BiomeGroup.BATTLE_FLOOR, 0xFF9C7A52.toInt(), BiomePattern.PLANKS, "wood_planks"),
+    OLD_WOOD_FLOOR("Старые доски", BiomeGroup.BATTLE_FLOOR, 0xFF7E6A52.toInt(), BiomePattern.PLANKS, "old_wood"),
+    COBBLE_FLOOR("Брусчатка", BiomeGroup.BATTLE_FLOOR, 0xFF8E8A82.toInt(), BiomePattern.COBBLES, "cobblestone"),
+    BRICK_FLOOR("Кирпичная кладка", BiomeGroup.BATTLE_FLOOR, 0xFF9A6A52.toInt(), BiomePattern.TILES, "brick"),
+    CASTLE_FLOOR("Замковая кладка", BiomeGroup.BATTLE_FLOOR, 0xFF7E7A72.toInt(), BiomePattern.COBBLES, "castle_wall"),
+    CARPET("Ковёр", BiomeGroup.BATTLE_FLOOR, 0xFF8E3B3B.toInt(), BiomePattern.NONE, "fabric"),
+    METAL_FLOOR("Железный настил", BiomeGroup.BATTLE_FLOOR, 0xFF7A7E82.toInt(), BiomePattern.TILES, "metal"),
+    CLAY_FLOOR("Глиняный пол", BiomeGroup.BATTLE_FLOOR, 0xFFB8A58A.toInt(), BiomePattern.DOTS, "plaster"),
+    STRAW_FLOOR("Солома", BiomeGroup.BATTLE_FLOOR, 0xFFC9B070.toInt(), BiomePattern.GRASS, "hay"),
+    ROOF_FLOOR("Крыша", BiomeGroup.BATTLE_FLOOR, 0xFF8E5A48.toInt(), BiomePattern.TILES, "roof"),
+
+    // Боевая локация: земля и природа
+    DIRT_GROUND("Земля", BiomeGroup.BATTLE_GROUND, 0xFF8A7458.toInt(), BiomePattern.DOTS, "dirt"),
+    MUD_GROUND("Грязь", BiomeGroup.BATTLE_GROUND, 0xFF6E5E48.toInt(), BiomePattern.SWAMP, "mud"),
+    GRASS_GROUND("Трава", BiomeGroup.BATTLE_GROUND, 0xFF6E9150.toInt(), BiomePattern.GRASS, "grass"),
+    FOREST_GROUND("Лесная подстилка", BiomeGroup.BATTLE_GROUND, 0xFF6A6A44.toInt(), BiomePattern.TREES, "forest_floor"),
+    SAND_GROUND("Песок", BiomeGroup.BATTLE_GROUND, 0xFFD6C08E.toInt(), BiomePattern.DUNES, "sand"),
+    GRAVEL_GROUND("Гравий", BiomeGroup.BATTLE_GROUND, 0xFF9A948A.toInt(), BiomePattern.DOTS, "gravel"),
+    ROCK_GROUND("Скала", BiomeGroup.BATTLE_GROUND, 0xFF7C7670.toInt(), BiomePattern.ROCKS, "rock"),
+    ROCKY_GROUND("Каменистая земля", BiomeGroup.BATTLE_GROUND, 0xFF8E8676.toInt(), BiomePattern.ROCKS, "rocky_ground"),
+    CAVE_FLOOR("Пол пещеры", BiomeGroup.BATTLE_GROUND, 0xFF5E5852.toInt(), BiomePattern.ROCKS, "rocky_ground"),
+    SNOW_GROUND("Снег", BiomeGroup.BATTLE_GROUND, 0xFFE8EEF2.toInt(), BiomePattern.ICE, "snow"),
+    MOSS_GROUND("Мох", BiomeGroup.BATTLE_GROUND, 0xFF5E7A44.toInt(), BiomePattern.DOTS, "moss"),
+    DRY_EARTH("Растрескавшаяся земля", BiomeGroup.BATTLE_GROUND, 0xFFB4966E.toInt(), BiomePattern.CRACKS, "dry_ground"),
+    ROOTS_GROUND("Корни и кора", BiomeGroup.BATTLE_GROUND, 0xFF6E5438.toInt(), BiomePattern.TREES, "bark"),
+
+    // Боевая локация: вода, лава и опасности
+    SHALLOW_WATER("Мелкая вода", BiomeGroup.BATTLE_HAZARD, 0xFF5E94B4.toInt(), BiomePattern.WAVES, "water"),
+    DEEP_WATER("Глубокая вода", BiomeGroup.BATTLE_HAZARD, 0xFF2A5478.toInt(), BiomePattern.WAVES, "deep_water"),
+    LAVA_POOL("Лава", BiomeGroup.BATTLE_HAZARD, 0xFFC8501E.toInt(), BiomePattern.LAVA, "lava"),
+    ICE_FLOOR("Лёд", BiomeGroup.BATTLE_HAZARD, 0xFFBFDCEA.toInt(), BiomePattern.ICE, "ice"),
+    QUAGMIRE("Трясина", BiomeGroup.BATTLE_HAZARD, 0xFF4E5A36.toInt(), BiomePattern.SWAMP, "swamp"),
+    ACID_POOL("Кислота", BiomeGroup.BATTLE_HAZARD, 0xFF8CC43A.toInt(), BiomePattern.SWAMP, "acid"),
+    POISON_CLOUD("Ядовитый туман", BiomeGroup.BATTLE_HAZARD, 0xFF8EA85E.toInt(), BiomePattern.DOTS, "poison_fog"),
+    BLOOD_POOL("Лужа крови", BiomeGroup.BATTLE_HAZARD, 0xFF7A1A1A.toInt(), BiomePattern.NONE, "blood"),
+    ASH_GROUND("Пепел", BiomeGroup.BATTLE_HAZARD, 0xFF6E6A66.toInt(), BiomePattern.DOTS, "ash"),
+    BONE_PILE("Груда костей", BiomeGroup.BATTLE_HAZARD, 0xFFC8BCA0.toInt(), BiomePattern.BONES, "bones"),
+    PIT_ABYSS("Пропасть", BiomeGroup.BATTLE_HAZARD, 0xFF121018.toInt(), BiomePattern.NONE, "abyss"),
+    DIFFICULT_TERRAIN("Трудная местность", BiomeGroup.BATTLE_HAZARD, 0xFF9A8A6E.toInt(), BiomePattern.ROCKS),
+    RUBBLE_FLOOR("Обломки", BiomeGroup.BATTLE_HAZARD, 0xFF8A8278.toInt(), BiomePattern.ROCKS, "gravel"),
+    THORNS("Колючие заросли", BiomeGroup.BATTLE_HAZARD, 0xFF4E6A38.toInt(), BiomePattern.SPIRES, "forest_floor"),
+
+    // Боевая локация: магические зоны
+    MAGIC_CIRCLE("Магический круг", BiomeGroup.BATTLE_MAGIC, 0xFF6A58B8.toInt(), BiomePattern.RUNES, "magic"),
+    CRYSTAL_FLOOR("Кристаллы", BiomeGroup.BATTLE_MAGIC, 0xFF8EC4DC.toInt(), BiomePattern.CRYSTALS, "crystal"),
+    HOLY_GROUND("Святая земля", BiomeGroup.BATTLE_MAGIC, 0xFFE8D89A.toInt(), BiomePattern.STARS, "marble"),
+    CURSED_GROUND("Проклятая земля", BiomeGroup.BATTLE_MAGIC, 0xFF4E3A56.toInt(), BiomePattern.EYES, "ash"),
+    FIRE_ZONE("Стена огня", BiomeGroup.BATTLE_MAGIC, 0xFFE8742E.toInt(), BiomePattern.LAVA, "lava"),
+    FROST_ZONE("Ледяной вихрь", BiomeGroup.BATTLE_MAGIC, 0xFFCFE6F2.toInt(), BiomePattern.ICE, "void_ice"),
+    FEY_RING("Кольцо фей", BiomeGroup.BATTLE_MAGIC, 0xFF7ACBA0.toInt(), BiomePattern.FUNGI, "moss"),
+    VOID_RIFT("Разлом пустоты", BiomeGroup.BATTLE_MAGIC, 0xFF2A2238.toInt(), BiomePattern.STARS, "abyss"),
+    SPELL_AREA("Зона заклинания", BiomeGroup.BATTLE_MAGIC, 0xFF9B7ED8.toInt(), BiomePattern.NONE, "magic"),
+    MAGIC_DARKNESS("Магическая тьма", BiomeGroup.BATTLE_MAGIC, 0xFF0E0C14.toInt(), BiomePattern.NONE, "abyss"),
+    WEB_FIELD("Паутина", BiomeGroup.BATTLE_MAGIC, 0xFFD6D4CC.toInt(), BiomePattern.CRACKS);
+
+    /** Ключ фото-текстуры: своя у зоны или подходящая по смыслу. */
+    val texture: String? get() = textureKey ?: WORLD_TEXTURES[this]
 
     companion object {
         fun byGroup(group: BiomeGroup): List<BiomeType> = BiomeType.entries.filter { it.group == group }
+
+        /** Фото-текстуры для природных зон мира и города. */
+        private val WORLD_TEXTURES: Map<BiomeType, String> by lazy {
+            mapOf(
+                SHALLOW_SEA to "water", DEEP_SEA to "deep_water", ABYSS to "deep_water",
+                ICE_SEA to "ice", LAGOON to "water",
+                TAIGA to "forest_floor", CONIFER_FOREST to "forest_floor", MIXED_FOREST to "forest_floor",
+                BROADLEAF_FOREST to "forest_floor", RAINFOREST to "moss", MONSOON_FOREST to "moss",
+                STEPPE to "aerial_grass", PRAIRIE to "aerial_grass", SAVANNA to "dry_ground",
+                MEADOW to "grass", FARMLAND to "aerial_grass",
+                SAND_DESERT to "aerial_sand", COASTAL_DUNES to "sand", SEMI_DESERT to "dry_ground",
+                ROCK_DESERT to "rocky_ground", BADLANDS to "dry_ground", SALT_FLAT to "dry_ground",
+                VOLCANIC_FIELD to "ash", LAVA_FIELD to "lava", MAGMA_WASTE to "lava",
+                TUNDRA to "moss", POLAR_DESERT to "snow", ICE_SHEET to "ice", GLACIER to "ice",
+                SNOWFIELD to "snow", FROZEN_WASTE to "snow", PERMAFROST to "snow",
+                HIGH_MOUNTAINS to "aerial_rocks", MOUNTAINS to "aerial_rocks", PLATEAU to "rock",
+                CANYONS to "rock", KARST to "rock", CLIFF_COAST to "rock",
+                SWAMP to "swamp", MARSH to "swamp", PEAT_BOG to "mud", SHADOW_MARSH to "swamp",
+                BLOOD_MARSH to "blood", ACID_BOGS to "acid", ASHLANDS to "ash",
+                CRYSTAL_FIELDS to "crystal", GLASS_DESERT to "crystal", VOID_SCAR to "abyss",
+                BONE_FIELDS to "bones", TITAN_BONES to "bones", OBSIDIAN_PLAINS to "abyss",
+                CITY_PARK to "grass", CITY_GARDEN to "grass", CITY_ORCHARD to "grass",
+                CITY_VEGETABLE to "dirt", CITY_GRAVEYARD to "moss", CITY_SQUARE to "cobblestone",
+                CITY_MARKET_SQUARE to "stone_tiles", CITY_YARD to "dirt", CITY_MUD to "mud",
+                CITY_RUBBLE to "gravel", CITY_POND to "water", CITY_DRILL_YARD to "sand",
+                CITY_FAIR to "grass", CITY_GROVE to "forest_floor"
+            )
+        }
     }
 }
 
@@ -177,7 +310,18 @@ enum class Glyph {
     HORSESHOE, CATTLE, SPICE, SILK, FUR, AMBER, PEARL, OIL, SULFUR, HERBS,
     STONE_BLOCKS, MITHRIL, INN_SIGN,
     FOUNTAIN, LANTERN, SIGNPOST, CART, STALL, BARREL, PILLORY, GALLOWS,
-    CLOCK, BELL, HATCH, PLAQUE, DRAWBRIDGE_GLYPH, PORTCULLIS
+    CLOCK, BELL, HATCH, PLAQUE, DRAWBRIDGE_GLYPH, PORTCULLIS,
+
+    // существа — для фишек боевой локации
+    HUMANOID, GOBLIN, SKULL, PAW, SPIDER, SERPENT, BAT, HORNS, FLAME, WINGS,
+    TENTACLES, GOLEM, OOZE, GHOST, GIANT, HAT, DAGGER, BOW, SUN, LUTE, LEAF,
+    SHIELD, LOCK, CHEST,
+
+    // обстановка боевой локации
+    DOOR, STAIRS, LADDER, WINDOW, TABLE, CHAIR, BED, CRATE, BOOKSHELF, THRONE,
+    ALTAR, COFFIN, ANVIL, FIREPLACE, BRAZIER, TORCH, PILLAR, CAGE, SACK, BUSH,
+    STUMP, CAMPFIRE, WEB, SPIKES, PIT, BEAR_TRAP, PLATE, ARROW, LEVER, SCROLL,
+    KEY, TARGET
 }
 
 enum class MarkerGroup(val title: String) {
@@ -198,12 +342,33 @@ enum class MarkerGroup(val title: String) {
     CITY_WALLS("Ворота, башни, стены"),
     CITY_STREET("Улица и площадь"),
     CITY_SERVICE("Городские службы"),
+    BATTLE_DOORS("Двери и проходы"),
+    BATTLE_FURNITURE("Мебель и утварь"),
+    BATTLE_NATURE("Природа и укрытия"),
+    BATTLE_TRAPS("Ловушки и секреты"),
+    BATTLE_LOOT("Добыча и ключи"),
+    BATTLE_TACTICS("Тактические метки"),
     CITY_SPECIAL("Особые места города")
 }
 
 /** Все виды объектов фэнтезийного мира, которые можно поставить на карту. */
 /** Где уместен объект: на карте мира, на карте города или везде. */
-enum class MarkerScope { WORLD, CITY, BOTH }
+enum class MarkerScope {
+    WORLD, CITY,
+    /** Мир и город. */
+    BOTH,
+    BATTLE,
+    /** Любая карта. */
+    ALL;
+
+    fun fits(kind: MapKind): Boolean = when (this) {
+        WORLD -> kind == MapKind.WORLD
+        CITY -> kind == MapKind.CITY
+        BOTH -> kind == MapKind.WORLD || kind == MapKind.CITY
+        BATTLE -> kind == MapKind.BATTLE
+        ALL -> true
+    }
+}
 
 enum class MarkerType(
     val title: String,
@@ -596,17 +761,190 @@ enum class MarkerType(
     CITY_SLAVE_BLOCK("Помост работорговца", MarkerGroup.CITY_SPECIAL, Glyph.PILLORY, 0.9f, MarkerScope.CITY),
     CITY_FAIR_GROUND("Ярмарочный помост", MarkerGroup.CITY_SPECIAL, Glyph.STALL, 0.95f, MarkerScope.CITY),
     CITY_BEAR_PIT("Медвежья яма", MarkerGroup.CITY_SPECIAL, Glyph.MONSTER, 1f, MarkerScope.CITY),
-    CITY_PUPPET_STAGE("Балаган", MarkerGroup.CITY_SPECIAL, Glyph.ARENA, 0.9f, MarkerScope.CITY);
+    CITY_PUPPET_STAGE("Балаган", MarkerGroup.CITY_SPECIAL, Glyph.ARENA, 0.9f, MarkerScope.CITY),
+
+    // Ещё места мира
+    FALLEN_STAR("Упавшая звезда", MarkerGroup.WONDER, Glyph.CRYSTAL, 1.05f, MarkerScope.WORLD),
+    SLEEPING_TITAN("Спящий титан", MarkerGroup.WONDER, Glyph.GIANT, 1.05f, MarkerScope.WORLD),
+    GIANTS_BRIDGE("Мост великанов", MarkerGroup.WONDER, Glyph.BRIDGE, 1.05f, MarkerScope.WORLD),
+    DRAGON_SKELETON("Скелет дракона", MarkerGroup.WONDER, Glyph.BONES, 1.05f, MarkerScope.WORLD),
+    SKY_ANCHOR("Небесный якорь", MarkerGroup.WONDER, Glyph.ANCHOR, 1.05f, MarkerScope.WORLD),
+    FROZEN_ARMY("Замёрзшее войско", MarkerGroup.WONDER, Glyph.SWORD, 1.05f, MarkerScope.WORLD),
+    LIVING_MOUNTAIN("Живая гора", MarkerGroup.WONDER, Glyph.MOUNTAIN, 1.05f, MarkerScope.WORLD),
+    HANGING_GARDENS("Висячие сады", MarkerGroup.WONDER, Glyph.FLOWER, 1.05f, MarkerScope.WORLD),
+    MOON_WELL("Лунный колодец", MarkerGroup.MAGIC, Glyph.WELL, 1.05f, MarkerScope.WORLD),
+    DRUID_GROVE("Роща друидов", MarkerGroup.MAGIC, Glyph.LEAF, 1.05f, MarkerScope.WORLD),
+    ABYSS_GATE("Врата бездны", MarkerGroup.DANGER, Glyph.PORTAL, 1.05f, MarkerScope.WORLD),
+    ETERNAL_STORM("Вечная буря", MarkerGroup.DANGER, Glyph.ANOMALY, 1.05f, MarkerScope.WORLD),
+    GOBLIN_WARREN("Нора гоблинов", MarkerGroup.DANGER, Glyph.GOBLIN, 1.05f, MarkerScope.WORLD),
+    BANDIT_HIDEOUT("Логово разбойников", MarkerGroup.DANGER, Glyph.DAGGER, 1.05f, MarkerScope.WORLD),
+    VAMPIRE_CASTLE("Замок вампира", MarkerGroup.DANGER, Glyph.BAT, 1.05f, MarkerScope.WORLD),
+    LICH_TOMB("Гробница лича", MarkerGroup.DANGER, Glyph.SKULL, 1.05f, MarkerScope.WORLD),
+    TROLL_BRIDGE("Мост тролля", MarkerGroup.DANGER, Glyph.GIANT, 1.05f, MarkerScope.WORLD),
+    HAUNTED_MOOR("Проклятая пустошь с призраками", MarkerGroup.DANGER, Glyph.GHOST, 1.05f, MarkerScope.WORLD),
+    ORC_WARCAMP("Военный лагерь орков", MarkerGroup.MILITARY, Glyph.HORNS, 1.05f, MarkerScope.WORLD),
+    SUNKEN_CITY("Затонувший город", MarkerGroup.RUIN, Glyph.CITY, 1.05f, MarkerScope.WORLD),
+    SPIDER_LAIR("Паучье логово", MarkerGroup.FAUNA, Glyph.SPIDER, 1.05f, MarkerScope.WORLD),
+    SERPENT_NEST("Гнездо морского змея", MarkerGroup.FAUNA, Glyph.SERPENT, 1.05f, MarkerScope.WORLD),
+    HERMIT_CAVE("Пещера отшельника", MarkerGroup.NATURE, Glyph.CAVE, 1.05f, MarkerScope.WORLD),
+
+    // Ещё городские места
+    CITY_ADVENTURE_BOARD("Доска заказов искателей", MarkerGroup.CITY_SPECIAL, Glyph.SCROLL, 0.9f, MarkerScope.CITY),
+    CITY_WANTED_POSTER("Объявление о розыске", MarkerGroup.CITY_SPECIAL, Glyph.SKULL, 0.9f, MarkerScope.CITY),
+    CITY_BARD_CORNER("Уголок уличного барда", MarkerGroup.CITY_STREET, Glyph.LUTE, 0.9f, MarkerScope.CITY),
+    CITY_FORTUNE_TENT("Шатёр гадалки", MarkerGroup.CITY_SPECIAL, Glyph.EYE, 0.9f, MarkerScope.CITY),
+    CITY_DRAGON_STATUE("Статуя дракона", MarkerGroup.CITY_SPECIAL, Glyph.DRAGON, 0.9f, MarkerScope.CITY),
+    CITY_SUN_DIAL_TOWER("Храмовый огонь", MarkerGroup.CITY_SPECIAL, Glyph.FLAME, 0.9f, MarkerScope.CITY),
+    CITY_HERO_TOMB("Надгробие героя", MarkerGroup.CITY_SPECIAL, Glyph.SHIELD, 0.9f, MarkerScope.CITY),
+    CITY_TORCH_POST("Сигнальный факел", MarkerGroup.CITY_WALLS, Glyph.TORCH, 0.9f, MarkerScope.CITY),
+    CITY_ARMORY_POST("Оружейная стражи", MarkerGroup.CITY_WALLS, Glyph.SHIELD, 0.9f, MarkerScope.CITY),
+    CITY_LOCKED_GATE("Запертая калитка", MarkerGroup.CITY_WALLS, Glyph.LOCK, 0.9f, MarkerScope.CITY),
+    CITY_CRATES("Штабеля ящиков", MarkerGroup.CITY_SERVICE, Glyph.CRATE, 0.9f, MarkerScope.CITY),
+    CITY_SACKS("Мешки с зерном", MarkerGroup.CITY_SERVICE, Glyph.SACK, 0.9f, MarkerScope.CITY),
+    CITY_ANVIL("Уличная наковальня", MarkerGroup.CITY_SERVICE, Glyph.ANVIL, 0.9f, MarkerScope.CITY),
+    CITY_CAMPFIRE("Костёр бродяг", MarkerGroup.CITY_STREET, Glyph.CAMPFIRE, 0.9f, MarkerScope.CITY),
+    CITY_BUSH("Кусты", MarkerGroup.CITY_STREET, Glyph.BUSH, 0.9f, MarkerScope.CITY),
+
+    // Боевая локация
+    B_DOOR("Дверь", MarkerGroup.BATTLE_DOORS, Glyph.DOOR, 0.9f, MarkerScope.BATTLE),
+    B_DOUBLE_DOOR("Двустворчатая дверь", MarkerGroup.BATTLE_DOORS, Glyph.DOOR, 1.1f, MarkerScope.BATTLE),
+    B_LOCKED_DOOR("Запертая дверь", MarkerGroup.BATTLE_DOORS, Glyph.LOCK, 0.9f, MarkerScope.BATTLE),
+    B_SECRET_DOOR("Потайная дверь", MarkerGroup.BATTLE_DOORS, Glyph.DOOR, 0.85f, MarkerScope.BATTLE),
+    B_IRON_DOOR("Железная дверь", MarkerGroup.BATTLE_DOORS, Glyph.DOOR, 0.95f, MarkerScope.BATTLE),
+    B_BARRED_GATE("Решётчатые ворота", MarkerGroup.BATTLE_DOORS, Glyph.PORTCULLIS, 1.0f, MarkerScope.BATTLE),
+    B_ARCHWAY("Арка", MarkerGroup.BATTLE_DOORS, Glyph.ARCH, 1.0f, MarkerScope.BATTLE),
+    B_STAIRS_UP("Лестница вверх", MarkerGroup.BATTLE_DOORS, Glyph.STAIRS, 1.0f, MarkerScope.BATTLE),
+    B_STAIRS_DOWN("Лестница вниз", MarkerGroup.BATTLE_DOORS, Glyph.STAIRS, 1.0f, MarkerScope.BATTLE),
+    B_SPIRAL_STAIRS("Винтовая лестница", MarkerGroup.BATTLE_DOORS, Glyph.STAIRS, 0.95f, MarkerScope.BATTLE),
+    B_LADDER("Приставная лестница", MarkerGroup.BATTLE_DOORS, Glyph.LADDER, 0.9f, MarkerScope.BATTLE),
+    B_TRAPDOOR("Люк в полу", MarkerGroup.BATTLE_DOORS, Glyph.HATCH, 0.9f, MarkerScope.BATTLE),
+    B_WINDOW("Окно", MarkerGroup.BATTLE_DOORS, Glyph.WINDOW, 0.8f, MarkerScope.BATTLE),
+    B_ARROW_SLIT("Бойница", MarkerGroup.BATTLE_DOORS, Glyph.WINDOW, 0.7f, MarkerScope.BATTLE),
+    B_PORTAL("Магический портал", MarkerGroup.BATTLE_DOORS, Glyph.PORTAL, 1.1f, MarkerScope.BATTLE),
+    B_CURTAIN("Занавес", MarkerGroup.BATTLE_DOORS, Glyph.BANNER, 0.9f, MarkerScope.BATTLE),
+    B_ROPE_BRIDGE("Подвесной мост", MarkerGroup.BATTLE_DOORS, Glyph.BRIDGE, 1.0f, MarkerScope.BATTLE),
+    B_CRAWLWAY("Лаз", MarkerGroup.BATTLE_DOORS, Glyph.CAVE, 0.9f, MarkerScope.BATTLE),
+    B_TABLE("Стол", MarkerGroup.BATTLE_FURNITURE, Glyph.TABLE, 0.9f, MarkerScope.BATTLE),
+    B_LONG_TABLE("Длинный стол", MarkerGroup.BATTLE_FURNITURE, Glyph.TABLE, 1.2f, MarkerScope.BATTLE),
+    B_ROUND_TABLE("Круглый стол", MarkerGroup.BATTLE_FURNITURE, Glyph.TABLE, 1.0f, MarkerScope.BATTLE),
+    B_CHAIR("Стул", MarkerGroup.BATTLE_FURNITURE, Glyph.CHAIR, 0.7f, MarkerScope.BATTLE),
+    B_BENCH("Скамья", MarkerGroup.BATTLE_FURNITURE, Glyph.TABLE, 0.8f, MarkerScope.BATTLE),
+    B_BED("Кровать", MarkerGroup.BATTLE_FURNITURE, Glyph.BED, 0.95f, MarkerScope.BATTLE),
+    B_BUNKS("Нары", MarkerGroup.BATTLE_FURNITURE, Glyph.BED, 0.9f, MarkerScope.BATTLE),
+    B_CHEST("Сундук", MarkerGroup.BATTLE_FURNITURE, Glyph.CHEST, 0.8f, MarkerScope.BATTLE),
+    B_CRATE("Ящик", MarkerGroup.BATTLE_FURNITURE, Glyph.CRATE, 0.8f, MarkerScope.BATTLE),
+    B_CRATE_STACK("Штабель ящиков", MarkerGroup.BATTLE_FURNITURE, Glyph.CRATE, 1.0f, MarkerScope.BATTLE),
+    B_BARREL("Бочка", MarkerGroup.BATTLE_FURNITURE, Glyph.BARREL, 0.75f, MarkerScope.BATTLE),
+    B_SACKS("Мешки", MarkerGroup.BATTLE_FURNITURE, Glyph.SACK, 0.8f, MarkerScope.BATTLE),
+    B_SHELF("Полки", MarkerGroup.BATTLE_FURNITURE, Glyph.BOOKSHELF, 0.9f, MarkerScope.BATTLE),
+    B_BOOKSHELF("Книжный шкаф", MarkerGroup.BATTLE_FURNITURE, Glyph.BOOKSHELF, 1.0f, MarkerScope.BATTLE),
+    B_WARDROBE("Шкаф", MarkerGroup.BATTLE_FURNITURE, Glyph.CRATE, 0.9f, MarkerScope.BATTLE),
+    B_THRONE("Трон", MarkerGroup.BATTLE_FURNITURE, Glyph.THRONE, 1.1f, MarkerScope.BATTLE),
+    B_ALTAR("Жертвенник", MarkerGroup.BATTLE_FURNITURE, Glyph.ALTAR, 1.0f, MarkerScope.BATTLE),
+    B_SARCOPHAGUS("Саркофаг", MarkerGroup.BATTLE_FURNITURE, Glyph.COFFIN, 1.0f, MarkerScope.BATTLE),
+    B_COFFIN("Гроб", MarkerGroup.BATTLE_FURNITURE, Glyph.COFFIN, 0.85f, MarkerScope.BATTLE),
+    B_ANVIL("Наковальня", MarkerGroup.BATTLE_FURNITURE, Glyph.ANVIL, 0.8f, MarkerScope.BATTLE),
+    B_FORGE("Горн", MarkerGroup.BATTLE_FURNITURE, Glyph.FORGE, 1.0f, MarkerScope.BATTLE),
+    B_CAULDRON("Котёл", MarkerGroup.BATTLE_FURNITURE, Glyph.CAULDRON, 0.9f, MarkerScope.BATTLE),
+    B_ALCHEMY("Алхимический стол", MarkerGroup.BATTLE_FURNITURE, Glyph.POTION, 0.9f, MarkerScope.BATTLE),
+    B_FIREPLACE("Камин", MarkerGroup.BATTLE_FURNITURE, Glyph.FIREPLACE, 1.0f, MarkerScope.BATTLE),
+    B_BRAZIER("Жаровня", MarkerGroup.BATTLE_FURNITURE, Glyph.BRAZIER, 0.85f, MarkerScope.BATTLE),
+    B_TORCH("Факел на стене", MarkerGroup.BATTLE_FURNITURE, Glyph.TORCH, 0.7f, MarkerScope.BATTLE),
+    B_CANDLES("Канделябр", MarkerGroup.BATTLE_FURNITURE, Glyph.TORCH, 0.75f, MarkerScope.BATTLE),
+    B_CHANDELIER("Люстра", MarkerGroup.BATTLE_FURNITURE, Glyph.LANTERN, 0.9f, MarkerScope.BATTLE),
+    B_PILLAR("Колонна", MarkerGroup.BATTLE_FURNITURE, Glyph.PILLAR, 0.9f, MarkerScope.BATTLE),
+    B_BROKEN_PILLAR("Упавшая колонна", MarkerGroup.BATTLE_FURNITURE, Glyph.RUINS, 0.9f, MarkerScope.BATTLE),
+    B_STATUE("Изваяние", MarkerGroup.BATTLE_FURNITURE, Glyph.STATUE, 1.0f, MarkerScope.BATTLE),
+    B_FOUNTAIN("Фонтанчик", MarkerGroup.BATTLE_FURNITURE, Glyph.FOUNTAIN, 1.0f, MarkerScope.BATTLE),
+    B_WELL("Колодец в подземелье", MarkerGroup.BATTLE_FURNITURE, Glyph.WELL, 0.9f, MarkerScope.BATTLE),
+    B_WEAPON_RACK("Стойка с оружием", MarkerGroup.BATTLE_FURNITURE, Glyph.SWORD, 0.85f, MarkerScope.BATTLE),
+    B_DUMMY("Соломенное чучело", MarkerGroup.BATTLE_FURNITURE, Glyph.TOTEM, 0.8f, MarkerScope.BATTLE),
+    B_CAGE("Клетка", MarkerGroup.BATTLE_FURNITURE, Glyph.CAGE, 0.9f, MarkerScope.BATTLE),
+    B_STOCKS("Колодки узника", MarkerGroup.BATTLE_FURNITURE, Glyph.PILLORY, 0.8f, MarkerScope.BATTLE),
+    B_RACK("Дыба", MarkerGroup.BATTLE_FURNITURE, Glyph.GALLOWS, 0.9f, MarkerScope.BATTLE),
+    B_BAR("Стойка трактирщика", MarkerGroup.BATTLE_FURNITURE, Glyph.INN_SIGN, 1.0f, MarkerScope.BATTLE),
+    B_MAP_TABLE("Стол с картой", MarkerGroup.BATTLE_FURNITURE, Glyph.SCROLL, 0.95f, MarkerScope.BATTLE),
+    B_BANNER("Знамя", MarkerGroup.BATTLE_FURNITURE, Glyph.BANNER, 0.9f, MarkerScope.BATTLE),
+    B_CART("Повозка", MarkerGroup.BATTLE_FURNITURE, Glyph.CART, 0.95f, MarkerScope.BATTLE),
+    B_HAY("Стог сена", MarkerGroup.BATTLE_FURNITURE, Glyph.WHEAT, 0.9f, MarkerScope.BATTLE),
+    B_BELL("Большой колокол", MarkerGroup.BATTLE_FURNITURE, Glyph.BELL, 1.0f, MarkerScope.BATTLE),
+    B_BATH("Купель", MarkerGroup.BATTLE_FURNITURE, Glyph.WELL, 0.85f, MarkerScope.BATTLE),
+    B_TENT("Шатёр", MarkerGroup.BATTLE_FURNITURE, Glyph.CAMP, 1.0f, MarkerScope.BATTLE),
+    B_BOULDER("Валун", MarkerGroup.BATTLE_NATURE, Glyph.ROCK, 1.0f, MarkerScope.BATTLE),
+    B_ROCKS("Камни", MarkerGroup.BATTLE_NATURE, Glyph.ROCK, 0.8f, MarkerScope.BATTLE),
+    B_TREE("Дерево", MarkerGroup.BATTLE_NATURE, Glyph.TREE, 1.1f, MarkerScope.BATTLE),
+    B_BIG_TREE("Старый дуб", MarkerGroup.BATTLE_NATURE, Glyph.TREE, 1.4f, MarkerScope.BATTLE),
+    B_DEAD_TREE("Сухое дерево", MarkerGroup.BATTLE_NATURE, Glyph.DEAD_TREE, 1.0f, MarkerScope.BATTLE),
+    B_BUSH("Куст", MarkerGroup.BATTLE_NATURE, Glyph.BUSH, 0.85f, MarkerScope.BATTLE),
+    B_STUMP("Пень", MarkerGroup.BATTLE_NATURE, Glyph.STUMP, 0.75f, MarkerScope.BATTLE),
+    B_LOG("Бревно", MarkerGroup.BATTLE_NATURE, Glyph.TIMBER, 0.85f, MarkerScope.BATTLE),
+    B_FALLEN_TREE("Поваленное дерево", MarkerGroup.BATTLE_NATURE, Glyph.TIMBER, 1.1f, MarkerScope.BATTLE),
+    B_STALAGMITE("Сталагмит", MarkerGroup.BATTLE_NATURE, Glyph.SPIRE, 0.85f, MarkerScope.BATTLE),
+    B_MUSHROOMS("Грибы", MarkerGroup.BATTLE_NATURE, Glyph.MUSHROOM, 0.8f, MarkerScope.BATTLE),
+    B_GIANT_MUSHROOM("Гигантский гриб", MarkerGroup.BATTLE_NATURE, Glyph.MUSHROOM, 1.2f, MarkerScope.BATTLE),
+    B_CRYSTAL("Друза кристаллов", MarkerGroup.BATTLE_NATURE, Glyph.CRYSTAL, 0.9f, MarkerScope.BATTLE),
+    B_CAMPFIRE("Походный костёр", MarkerGroup.BATTLE_NATURE, Glyph.CAMPFIRE, 0.9f, MarkerScope.BATTLE),
+    B_WEB("Паутина в углу", MarkerGroup.BATTLE_NATURE, Glyph.WEB, 1.0f, MarkerScope.BATTLE),
+    B_NEST("Гнездо", MarkerGroup.BATTLE_NATURE, Glyph.NEST, 0.9f, MarkerScope.BATTLE),
+    B_FLOWERS("Цветы", MarkerGroup.BATTLE_NATURE, Glyph.FLOWER, 0.7f, MarkerScope.BATTLE),
+    B_REEDS("Камыш", MarkerGroup.BATTLE_NATURE, Glyph.HERBS, 0.8f, MarkerScope.BATTLE),
+    B_BONES("Кости", MarkerGroup.BATTLE_NATURE, Glyph.BONES, 0.8f, MarkerScope.BATTLE),
+    B_TOTEM("Тотем", MarkerGroup.BATTLE_NATURE, Glyph.TOTEM, 0.95f, MarkerScope.BATTLE),
+    B_STANDING_STONES("Стоячие камни", MarkerGroup.BATTLE_NATURE, Glyph.STONE_CIRCLE, 1.1f, MarkerScope.BATTLE),
+    B_GEYSER("Бурлящий источник", MarkerGroup.BATTLE_NATURE, Glyph.GEYSER, 0.9f, MarkerScope.BATTLE),
+    B_SPIKE_TRAP("Шипы", MarkerGroup.BATTLE_TRAPS, Glyph.SPIKES, 0.9f, MarkerScope.BATTLE),
+    B_PIT_TRAP("Яма-ловушка", MarkerGroup.BATTLE_TRAPS, Glyph.PIT, 0.95f, MarkerScope.BATTLE),
+    B_BEAR_TRAP("Капкан", MarkerGroup.BATTLE_TRAPS, Glyph.BEAR_TRAP, 0.8f, MarkerScope.BATTLE),
+    B_PRESSURE_PLATE("Нажимная плита", MarkerGroup.BATTLE_TRAPS, Glyph.PLATE, 0.8f, MarkerScope.BATTLE),
+    B_ARROW_TRAP("Самострел в стене", MarkerGroup.BATTLE_TRAPS, Glyph.ARROW, 0.85f, MarkerScope.BATTLE),
+    B_FIRE_TRAP("Огненная ловушка", MarkerGroup.BATTLE_TRAPS, Glyph.FLAME, 0.9f, MarkerScope.BATTLE),
+    B_POISON_TRAP("Ядовитая игла", MarkerGroup.BATTLE_TRAPS, Glyph.POTION, 0.75f, MarkerScope.BATTLE),
+    B_GAS_TRAP("Ядовитый газ", MarkerGroup.BATTLE_TRAPS, Glyph.ANOMALY, 0.9f, MarkerScope.BATTLE),
+    B_ROCKFALL("Обвал", MarkerGroup.BATTLE_TRAPS, Glyph.ROCK, 0.95f, MarkerScope.BATTLE),
+    B_NET_TRAP("Сеть", MarkerGroup.BATTLE_TRAPS, Glyph.WEB, 0.9f, MarkerScope.BATTLE),
+    B_RUNE_TRAP("Руна-ловушка", MarkerGroup.BATTLE_TRAPS, Glyph.RUNE_STONE, 0.85f, MarkerScope.BATTLE),
+    B_BLADE_TRAP("Маятник-лезвие", MarkerGroup.BATTLE_TRAPS, Glyph.SWORD, 0.9f, MarkerScope.BATTLE),
+    B_ALARM("Сигнальный колокольчик", MarkerGroup.BATTLE_TRAPS, Glyph.BELL, 0.7f, MarkerScope.BATTLE),
+    B_LEVER("Рычаг", MarkerGroup.BATTLE_TRAPS, Glyph.LEVER, 0.8f, MarkerScope.BATTLE),
+    B_SECRET_SWITCH("Тайная кнопка", MarkerGroup.BATTLE_TRAPS, Glyph.LEVER, 0.7f, MarkerScope.BATTLE),
+    B_TRIPWIRE("Растяжка", MarkerGroup.BATTLE_TRAPS, Glyph.PLATE, 0.7f, MarkerScope.BATTLE),
+    B_FLOOD_TRAP("Затопление", MarkerGroup.BATTLE_TRAPS, Glyph.WHIRLPOOL, 0.9f, MarkerScope.BATTLE),
+    B_SUMMON_CIRCLE("Печать призыва", MarkerGroup.BATTLE_TRAPS, Glyph.PORTAL, 1.0f, MarkerScope.BATTLE),
+    B_TREASURE("Сундук с сокровищами", MarkerGroup.BATTLE_LOOT, Glyph.TREASURE, 1.0f, MarkerScope.BATTLE),
+    B_GOLD("Горка золота", MarkerGroup.BATTLE_LOOT, Glyph.COINS, 0.85f, MarkerScope.BATTLE),
+    B_POTION("Зелье", MarkerGroup.BATTLE_LOOT, Glyph.POTION, 0.7f, MarkerScope.BATTLE),
+    B_SCROLL("Свиток", MarkerGroup.BATTLE_LOOT, Glyph.SCROLL, 0.75f, MarkerScope.BATTLE),
+    B_KEY("Ключ", MarkerGroup.BATTLE_LOOT, Glyph.KEY, 0.7f, MarkerScope.BATTLE),
+    B_WEAPON("Оружие", MarkerGroup.BATTLE_LOOT, Glyph.SWORD, 0.8f, MarkerScope.BATTLE),
+    B_ARMOR("Доспех", MarkerGroup.BATTLE_LOOT, Glyph.SHIELD, 0.85f, MarkerScope.BATTLE),
+    B_BOOK("Книга", MarkerGroup.BATTLE_LOOT, Glyph.BOOK, 0.75f, MarkerScope.BATTLE),
+    B_GEMS("Россыпь самоцветов", MarkerGroup.BATTLE_LOOT, Glyph.GEM, 0.75f, MarkerScope.BATTLE),
+    B_ARTIFACT("Артефакт", MarkerGroup.BATTLE_LOOT, Glyph.CROWN, 0.9f, MarkerScope.BATTLE),
+    B_MAP_PIECE("Обрывок карты", MarkerGroup.BATTLE_LOOT, Glyph.SCROLL, 0.7f, MarkerScope.BATTLE),
+    B_FOOD("Припасы", MarkerGroup.BATTLE_LOOT, Glyph.WHEAT, 0.75f, MarkerScope.BATTLE),
+    B_STASH("Тайник", MarkerGroup.BATTLE_LOOT, Glyph.HATCH, 0.8f, MarkerScope.BATTLE),
+    B_START_HEROES("Старт героев", MarkerGroup.BATTLE_TACTICS, Glyph.BANNER, 1.0f, MarkerScope.BATTLE),
+    B_START_ENEMIES("Старт врагов", MarkerGroup.BATTLE_TACTICS, Glyph.SKULL, 1.0f, MarkerScope.BATTLE),
+    B_EXIT("Выход", MarkerGroup.BATTLE_TACTICS, Glyph.ARROW, 0.9f, MarkerScope.BATTLE),
+    B_OBJECTIVE("Цель сцены", MarkerGroup.BATTLE_TACTICS, Glyph.TARGET, 1.0f, MarkerScope.BATTLE),
+    B_AMBUSH("Засада", MarkerGroup.BATTLE_TACTICS, Glyph.EYE, 0.9f, MarkerScope.BATTLE),
+    B_HALF_COVER("Укрытие ½", MarkerGroup.BATTLE_TACTICS, Glyph.SHIELD, 0.8f, MarkerScope.BATTLE),
+    B_THREE_QUARTER_COVER("Укрытие ¾", MarkerGroup.BATTLE_TACTICS, Glyph.SHIELD, 0.9f, MarkerScope.BATTLE),
+    B_TOTAL_COVER("Полное укрытие", MarkerGroup.BATTLE_TACTICS, Glyph.WALL, 0.9f, MarkerScope.BATTLE),
+    B_LIGHT("Источник света", MarkerGroup.BATTLE_TACTICS, Glyph.LANTERN, 0.85f, MarkerScope.BATTLE),
+    B_DARKNESS("Тьма", MarkerGroup.BATTLE_TACTICS, Glyph.ANOMALY, 0.9f, MarkerScope.BATTLE),
+    B_SPELL_MARK("След заклинания", MarkerGroup.BATTLE_TACTICS, Glyph.RUNE_STONE, 0.85f, MarkerScope.BATTLE),
+    B_DANGER("Опасно", MarkerGroup.BATTLE_TACTICS, Glyph.SKULL, 0.85f, MarkerScope.BATTLE),
+    B_REINFORCEMENTS("Подкрепление врагов", MarkerGroup.BATTLE_TACTICS, Glyph.SWORD, 0.9f, MarkerScope.BATTLE),
+    B_GM_NOTE("Заметка мастера", MarkerGroup.BATTLE_TACTICS, Glyph.PLAQUE, 0.85f, MarkerScope.BATTLE),
+    B_CLUE("Улика", MarkerGroup.BATTLE_TACTICS, Glyph.EYE, 0.75f, MarkerScope.BATTLE),
+    B_MEETING("Место встречи", MarkerGroup.BATTLE_TACTICS, Glyph.BANNER, 0.85f, MarkerScope.BATTLE);
 
     val isSettlement: Boolean
         get() = group == MarkerGroup.SETTLEMENT
 
     /** Уместен ли объект на карте такого вида. */
-    fun fits(kind: MapKind): Boolean = when (scope) {
-        MarkerScope.BOTH -> true
-        MarkerScope.CITY -> kind == MapKind.CITY
-        MarkerScope.WORLD -> kind == MapKind.WORLD
-    }
+    fun fits(kind: MapKind): Boolean = scope.fits(kind)
 
     companion object {
         fun byGroup(group: MarkerGroup): List<MarkerType> = MarkerType.entries.filter { it.group == group }
@@ -626,7 +964,9 @@ enum class LineFeatureType(
     val title: String,
     val color: Int,
     val defaultWidth: Float,
-    val closedLoop: Boolean = false
+    val closedLoop: Boolean = false,
+    /** На каких картах уместна линия. */
+    val scope: MarkerScope = MarkerScope.BOTH
 ) {
     RIVER("Река", 0xFF4C86AE.toInt(), 3.5f),
     BIG_RIVER("Великая река", 0xFF3F7BA4.toInt(), 6f),
@@ -663,7 +1003,30 @@ enum class LineFeatureType(
     SPIKE_DITCH("Ров с кольями", 0xFF7E7058.toInt(), 6f),
     HEDGE_WALL("Живая изгородь", 0xFF5E8050.toInt(), 5f),
     MAGIC_WARD("Магический барьер", 0xFF8E7CC0.toInt(), 5f),
-    CITY_AQUEDUCT("Городской акведук", 0xFF9A8E76.toInt(), 5f)
+    CITY_AQUEDUCT("Городской акведук", 0xFF9A8E76.toInt(), 5f),
+
+    // Боевая локация: толщина в единицах карты, клетка — 50
+    DUNGEON_WALL("Каменная стена", 0xFF3E3A36.toInt(), 12f, false, MarkerScope.BATTLE),
+    BRICK_WALL("Кирпичная стена", 0xFF6E4636.toInt(), 10f, false, MarkerScope.BATTLE),
+    TIMBER_WALL("Деревянная стена", 0xFF5E4630.toInt(), 8f, false, MarkerScope.BATTLE),
+    CAVE_WALL("Стена пещеры", 0xFF34302C.toInt(), 18f, false, MarkerScope.BATTLE),
+    IRON_BARS("Решётка", 0xFF4A4E54.toInt(), 5f, false, MarkerScope.BATTLE),
+    FENCE("Забор", 0xFF7A5E3E.toInt(), 5f, false, MarkerScope.BATTLE),
+    STAKE_WALL("Деревянный частокол", 0xFF6E5236.toInt(), 9f, false, MarkerScope.BATTLE),
+    RUBBLE_LINE("Завал", 0xFF6E6860.toInt(), 16f, false, MarkerScope.BATTLE),
+    LEDGE("Уступ", 0xFF4E4842.toInt(), 6f, false, MarkerScope.BATTLE),
+    MAGIC_BARRIER("Силовой барьер", 0xFF8E7CE0.toInt(), 6f, false, MarkerScope.BATTLE),
+    ROPE("Верёвка", 0xFFB09062.toInt(), 3f, false, MarkerScope.BATTLE),
+    DITCH_WATER("Канава с водой", 0xFF4E86AA.toInt(), 16f, false, MarkerScope.BATTLE),
+    LAVA_STREAM("Лавовый ручей", 0xFFD4581E.toInt(), 16f, false, MarkerScope.BATTLE),
+    WEB_STRANDS("Нити паутины", 0xFFDAD8D0.toInt(), 4f, false, MarkerScope.BATTLE),
+    HEDGE("Кусты", 0xFF3E6A34.toInt(), 14f, false, MarkerScope.BATTLE),
+    CURTAIN_WALL("Ширма", 0xFF8E3B3B.toInt(), 4f, false, MarkerScope.BATTLE);
+
+    fun fits(kind: MapKind): Boolean = scope.fits(kind)
+
+    /** Линии боевой локации рисуются в единицах карты и растут вместе с масштабом. */
+    val battle: Boolean get() = scope == MarkerScope.BATTLE
 }
 
 /** Пути сообщения. */
@@ -732,7 +1095,8 @@ interface MapStage {
 /** Вид карты: мир целиком или один город вблизи. */
 enum class MapKind(val title: String, val hint: String) {
     WORLD("Карта мира", "материки, страны, города на всём материке"),
-    CITY("Карта города", "улицы, кварталы и отдельные дома одного города")
+    CITY("Карта города", "улицы, кварталы и отдельные дома одного города"),
+    BATTLE("Боевая локация", "подземелье, поляна или таверна: сетка, враги и герои")
 }
 
 /** Этапы создания карты — порядок работы над миром. */
@@ -780,11 +1144,13 @@ enum class CityStage(
 fun stagesFor(kind: MapKind): List<MapStage> = when (kind) {
     MapKind.WORLD -> Stage.entries.toList()
     MapKind.CITY -> CityStage.entries.toList()
+    MapKind.BATTLE -> BattleStage.entries.toList()
 }
 
 fun stageFor(kind: MapKind, number: Int): MapStage = when (kind) {
     MapKind.WORLD -> Stage.byNumber(number)
     MapKind.CITY -> CityStage.byNumber(number)
+    MapKind.BATTLE -> BattleStage.byNumber(number)
 }
 
 /** Инструмент рисования. */
@@ -803,7 +1169,10 @@ enum class Tool(val title: String, val icon: String) {
     ERASER("Стереть", "🧽"),
     FRAGMENT("Выделить область", "⧉"),
     BUILDING("Здание", "🏠"),
-    DISTRICT("Квартал", "▦")
+    DISTRICT("Квартал", "▦"),
+    TOKEN("Фишка", "♟"),
+    FOG("Туман войны", "🌫"),
+    RULER("Линейка", "📏")
 }
 
 /** Каким по форме рисуется дом. */
@@ -975,7 +1344,47 @@ enum class BuildingType(
     COCKPIT("Петушиная арена", BuildingGroup.FUN, 0xFFA48E76.toInt(), Glyph.NEST, false, BuildingShape.WIDE),
     TOURNEY_GROUND("Ристалище", BuildingGroup.FUN, 0xFFA69270.toInt(), Glyph.SWORD, true, BuildingShape.HALL),
     HIPPODROME("Ипподром", BuildingGroup.FUN, 0xFFA8996E.toInt(), Glyph.HORSESHOE, true, BuildingShape.HALL),
-    STORYTELLER_STAGE("Помост сказителя", BuildingGroup.FUN, 0xFFAE9686.toInt(), Glyph.BOOK, false, BuildingShape.WIDE);
+    STORYTELLER_STAGE("Помост сказителя", BuildingGroup.FUN, 0xFFAE9686.toInt(), Glyph.BOOK, false, BuildingShape.WIDE),
+
+    // Уникальные строения
+    MAGES_GUILD("Гильдия магов", BuildingGroup.MAGIC_HOUSE, 0xFF6E6A9A.toInt(), Glyph.BOOK, true, BuildingShape.HALL),
+    THIEVES_GUILD("Гильдия воров", BuildingGroup.POWER, 0xFF5E5650.toInt(), Glyph.EYE, false, BuildingShape.WIDE),
+    ADVENTURERS_GUILD("Гильдия искателей приключений", BuildingGroup.POWER, 0xFF9A7650.toInt(), Glyph.SWORD, true, BuildingShape.WIDE),
+    MERCENARY_HALL("Дом наёмников", BuildingGroup.POWER, 0xFF8A6E56.toInt(), Glyph.SHIELD, false, BuildingShape.WIDE),
+    ALCHEMY_LAB("Лаборатория алхимиков", BuildingGroup.MAGIC_HOUSE, 0xFF7E8A7A.toInt(), Glyph.POTION, false, BuildingShape.WIDE),
+    DRAGON_ROOST("Драконий насест", BuildingGroup.MAGIC_HOUSE, 0xFF8A5A4A.toInt(), Glyph.DRAGON, true, BuildingShape.TOWER),
+    GRIFFON_AERIE("Грифонья башня", BuildingGroup.SERVICE, 0xFF8E826E.toInt(), Glyph.WINGS, false, BuildingShape.TOWER),
+    AIRSHIP_DOCK("Причал дирижаблей", BuildingGroup.SERVICE, 0xFF7E8A96.toInt(), Glyph.AIRSHIP, true, BuildingShape.LONG),
+    ORPHANAGE("Сиротский приют", BuildingGroup.HOME, 0xFFA88E6E.toInt(), null, false, BuildingShape.WIDE),
+    ALMSHOUSE("Богадельня", BuildingGroup.FAITH, 0xFF9A9486.toInt(), Glyph.SUN, false, BuildingShape.WIDE),
+    ASYLUM("Лечебница для безумцев", BuildingGroup.KNOWLEDGE, 0xFF8A8A84.toInt(), Glyph.EYE, true, BuildingShape.HALL),
+    EMBASSY("Посольство", BuildingGroup.POWER, 0xFFA8865A.toInt(), Glyph.BANNER, false, BuildingShape.WIDE),
+    TREASURY("Казна", BuildingGroup.POWER, 0xFFB08E4A.toInt(), Glyph.COINS, true, BuildingShape.HALL),
+    ARSENAL("Арсенал", BuildingGroup.POWER, 0xFF7A6E62.toInt(), Glyph.SWORD, true, BuildingShape.LONG),
+    HALL_OF_FAME("Зал славы героев", BuildingGroup.POWER, 0xFFA8905E.toInt(), Glyph.CROWN, true, BuildingShape.HALL),
+    BLACK_MARKET("Чёрный рынок", BuildingGroup.TRADE, 0xFF6E6258.toInt(), Glyph.DAGGER, false, BuildingShape.WIDE),
+    AUCTION_HOUSE("Аукционный дом", BuildingGroup.TRADE, 0xFFB4945E.toInt(), Glyph.COINS, false, BuildingShape.WIDE),
+    MENAGERIE("Зверинец", BuildingGroup.FUN, 0xFF9A8A62.toInt(), Glyph.PAW, true, BuildingShape.HALL),
+    GREENHOUSE("Оранжерея", BuildingGroup.KNOWLEDGE, 0xFF8EAE8A.toInt(), Glyph.LEAF, false, BuildingShape.LONG),
+    STAR_DOME("Звёздный купол", BuildingGroup.KNOWLEDGE, 0xFF7E829E.toInt(), Glyph.OBSERVATORY, true, BuildingShape.HALL),
+    DEATH_TEMPLE("Храм бога смерти", BuildingGroup.FAITH, 0xFF5E5A62.toInt(), Glyph.SKULL, true, BuildingShape.HALL),
+    SUN_TEMPLE("Храм солнца", BuildingGroup.FAITH, 0xFFC8A860.toInt(), Glyph.SUN, true, BuildingShape.HALL),
+    DWARVEN_FORGE("Гномья кузня", BuildingGroup.CRAFT, 0xFF7E6A5A.toInt(), Glyph.ANVIL, false, BuildingShape.WIDE),
+    TREEHOUSE("Эльфийский дом на дереве", BuildingGroup.HOME, 0xFF7E9A6A.toInt(), Glyph.LEAF, false, BuildingShape.TOWER),
+    WITCH_HOUSE("Дом ведьмы", BuildingGroup.MAGIC_HOUSE, 0xFF6E6A5A.toInt(), Glyph.HAT, false, BuildingShape.NORMAL),
+    VAMPIRE_MANOR("Особняк вампира", BuildingGroup.HOME, 0xFF6A4A52.toInt(), Glyph.BAT, true, BuildingShape.HALL),
+    HAUNTED_HOUSE("Дом с привидениями", BuildingGroup.RUIN_HOUSE, 0xFF7A7470.toInt(), Glyph.GHOST, false, BuildingShape.NORMAL),
+    SMUGGLERS_DEN("Притон контрабандистов", BuildingGroup.TRADE, 0xFF7E6E58.toInt(), Glyph.BARREL, false, BuildingShape.NORMAL),
+    CARTOGRAPHER("Картограф", BuildingGroup.KNOWLEDGE, 0xFFAE9A76.toInt(), Glyph.SCROLL, false, BuildingShape.NORMAL),
+    LOCKSMITH("Слесарь", BuildingGroup.CRAFT, 0xFF8E8272.toInt(), Glyph.KEY, false, BuildingShape.NORMAL),
+    BOWYER("Лучный мастер", BuildingGroup.CRAFT, 0xFFA08660.toInt(), Glyph.BOW, false, BuildingShape.NORMAL),
+    CANDLE_MAKER("Свечная мастерская", BuildingGroup.CRAFT, 0xFFB8A070.toInt(), Glyph.TORCH, false, BuildingShape.NORMAL),
+    TAILOR("Портной", BuildingGroup.CRAFT, 0xFFAE8E86.toInt(), Glyph.SILK, false, BuildingShape.NORMAL),
+    GOLEM_WORKSHOP("Мастерская големов", BuildingGroup.MAGIC_HOUSE, 0xFF807870.toInt(), Glyph.GOLEM, true, BuildingShape.WIDE),
+    PORTAL_HALL("Зал порталов", BuildingGroup.MAGIC_HOUSE, 0xFF7466A0.toInt(), Glyph.PORTAL, true, BuildingShape.HALL),
+    FIGHTING_PIT("Бойцовская яма", BuildingGroup.FUN, 0xFF8E765E.toInt(), Glyph.SWORD, false, BuildingShape.WIDE),
+    BARD_COLLEGE("Коллегия бардов", BuildingGroup.KNOWLEDGE, 0xFFA88E7E.toInt(), Glyph.LUTE, true, BuildingShape.HALL),
+    MONSTER_HUNTERS("Дом охотников на чудовищ", BuildingGroup.POWER, 0xFF7A6852.toInt(), Glyph.BOW, false, BuildingShape.WIDE);
 
     companion object {
         fun byGroup(group: BuildingGroup): List<BuildingType> =
@@ -999,6 +1408,8 @@ enum class DistrictType(val title: String, val color: Int) {
     OLD_TOWN("Старый город", 0xFFC2B296.toInt()),
     NEW_TOWN("Новый город", 0xFFCBBF9E.toInt()),
     FUN_QUARTER("Квартал зрелищ", 0xFFC9A98E.toInt()),
+    PALACE_QUARTER("Дворцовый квартал", 0xFFD9B48E.toInt()),
+    GUILD_QUARTER("Квартал гильдий", 0xFFC2A67E.toInt()),
     FARM_QUARTER("Огороды и хозяйства", 0xFFB7C08E.toInt()),
     GRAVE_QUARTER("Кладбище", 0xFF9EA396.toInt()),
     PARK_QUARTER("Парк и сады", 0xFFA4C08C.toInt())
