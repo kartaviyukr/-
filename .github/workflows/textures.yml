@@ -1,0 +1,54 @@
+name: Текстуры
+
+# Скачивает текстуры (Poly Haven, CC0) и дорисовывает недостающие,
+# затем кладёт их в app/src/main/assets/textures отдельным коммитом.
+on:
+  push:
+    branches:
+      - 'claude/**'
+    paths:
+      - 'tools/textures/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-textures
+  cancel-in-progress: false
+
+jobs:
+  textures:
+    name: Скачать и подготовить текстуры
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Зависимости
+        run: pip install pillow numpy
+
+      - name: Подготовить текстуры
+        run: python tools/textures/fetch_textures.py
+
+      - name: Сохранить в ветку
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/src/main/assets/textures
+          if git diff --cached --quiet; then
+            echo "Ничего нового"
+            exit 0
+          fi
+          git commit -m "Текстуры: Poly Haven (CC0) и процедурные"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF#refs/heads/}" && git push origin "HEAD:${GITHUB_REF#refs/heads/}" && exit 0
+            sleep 5
+          done
+          exit 1
