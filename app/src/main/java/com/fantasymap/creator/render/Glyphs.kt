@@ -6,6 +6,7 @@ import android.graphics.Path
 import android.graphics.RectF
 import com.fantasymap.creator.model.BiomePattern
 import com.fantasymap.creator.model.Glyph
+import com.fantasymap.creator.model.MarkerType
 import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.sin
@@ -20,6 +21,17 @@ class Glyphs {
     private val rect = RectF()
     private val battle = BattleGlyphs()
     private val art = PatternArt()
+    private val icons = MarkerIconPainter()
+
+    /**
+     * Значок объекта на карте: собственный рисунок, если он есть, иначе общий знак.
+     * Рисунки заданы в квадрате [-1, 1], знаки чуть шире — отсюда множитель.
+     */
+    fun drawMarker(canvas: Canvas, type: MarkerType, cx: Float, cy: Float, s: Float, fill: Paint, stroke: Paint) {
+        if (!icons.draw(canvas, type, cx, cy, s * 1.1f, fill, stroke)) {
+            drawGlyph(canvas, type.glyph, cx, cy, s, fill, stroke)
+        }
+    }
 
     /**
      * Значок объекта. Центр — (cx, cy), s — характерный радиус в пикселях экрана.

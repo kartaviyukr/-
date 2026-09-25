@@ -1230,10 +1230,10 @@ class MapRenderer {
             canvas.drawCircle(sx, sy, size * 1.2f, fill)
             canvas.drawCircle(sx, sy, size * 1.2f, stroke)
             fill.color = markerFill(marker.type)
-            glyphs.drawGlyph(canvas, marker.type.glyph, sx, sy, size * 0.6f, fill, stroke)
+            glyphs.drawMarker(canvas, marker.type, sx, sy, size * 0.6f, fill, stroke)
         } else {
             fill.color = markerFill(marker.type)
-            glyphs.drawGlyph(canvas, marker.type.glyph, sx, sy, size, fill, stroke)
+            glyphs.drawMarker(canvas, marker.type, sx, sy, size, fill, stroke)
         }
 
         if (marker.linkedProjectId != null) {
@@ -2003,7 +2003,8 @@ class MapRenderer {
         val kind: Int,
         val color: Int,
         val glyph: com.fantasymap.creator.model.Glyph?,
-        val title: String
+        val title: String,
+        val marker: MarkerType? = null
     )
 
     private fun legendSections(project: MapProject): List<Pair<String, List<LegendItem>>> {
@@ -2014,7 +2015,7 @@ class MapRenderer {
         if (zones.isNotEmpty()) sections.add("Природные зоны" to zones)
 
         val objects = project.markers.filter { it.assetId == null }.map { it.type }.distinct()
-            .map { LegendItem(1, markerFill(it), it.glyph, it.title) }
+            .map { LegendItem(1, markerFill(it), it.glyph, it.title, it) }
         if (objects.isNotEmpty()) sections.add("Объекты" to objects)
 
         val creatures = project.tokens.map { it.type }.distinct()
@@ -2113,7 +2114,9 @@ class MapRenderer {
             }
             1 -> {
                 fill.color = item.color
-                item.glyph?.let { glyphs.drawGlyph(canvas, it, x, y, 7f * u, fill, stroke) }
+                val m = item.marker
+                if (m != null) glyphs.drawMarker(canvas, m, x, y, 7f * u, fill, stroke)
+                else item.glyph?.let { glyphs.drawGlyph(canvas, it, x, y, 7f * u, fill, stroke) }
             }
             2 -> {
                 stroke.color = item.color
