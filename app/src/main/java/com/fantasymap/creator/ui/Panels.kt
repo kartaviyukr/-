@@ -228,13 +228,14 @@ private fun BiomePicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
                 onClick = { viewModel.alignBiomeBorders() },
                 contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
             ) {
-                Text("⇲ Выровнять границы зон")
+                Text("⇲ Выровнять границы")
             }
-            Text(
-                "сливает одинаковые, убирает наложения",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            TextButton(
+                onClick = { viewModel.showShoreDialog = true },
+                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
+            ) {
+                Text("🏖 Берега")
+            }
         }
         if (viewModel.mapKind == com.fantasymap.creator.model.MapKind.BATTLE) {
             Row(
@@ -352,6 +353,13 @@ private fun DistrictPicker(viewModel: EditorViewModel) {
             }
             item {
                 FilterChip(
+                    selected = false,
+                    onClick = { viewModel.connectDistrictStreets() },
+                    label = { Text("🔗 Соединить улицы") }
+                )
+            }
+            item {
+                FilterChip(
                     selected = viewModel.fillWithStreets,
                     onClick = { viewModel.fillWithStreets = !viewModel.fillWithStreets },
                     label = { Text("с улицами") }
@@ -431,17 +439,27 @@ private fun LinePicker(viewModel: EditorViewModel) {
 
 @Composable
 private fun RoadPicker(viewModel: EditorViewModel) {
-    LazyRow(
-        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        items(RoadType.entries.toList()) { item ->
-            FilterChip(
-                selected = viewModel.roadType == item,
-                onClick = { viewModel.roadType = item },
-                label = { Text(item.title) },
-                leadingIcon = { ColorDot(Color(item.color)) }
-            )
+    Column {
+        if (viewModel.mapKind == com.fantasymap.creator.model.MapKind.CITY) {
+            TextButton(
+                onClick = { viewModel.connectDistrictStreets() },
+                contentPadding = PaddingValues(horizontal = 14.dp, vertical = 0.dp)
+            ) {
+                Text("🔗 Соединить улицы на границах кварталов")
+            }
+        }
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(RoadType.entries.toList()) { item ->
+                FilterChip(
+                    selected = viewModel.roadType == item,
+                    onClick = { viewModel.roadType = item },
+                    label = { Text(item.title) },
+                    leadingIcon = { ColorDot(Color(item.color)) }
+                )
+            }
         }
     }
 }
@@ -558,6 +576,13 @@ private fun LandBaseRow(viewModel: EditorViewModel) {
                 selected = landBase,
                 onClick = { if (!landBase) viewModel.toggleLandBase() },
                 label = { Text("⛰ Вся карта — суша") }
+            )
+        }
+        item {
+            FilterChip(
+                selected = false,
+                onClick = { viewModel.showShoreDialog = true },
+                label = { Text("🏖 Берега") }
             )
         }
     }

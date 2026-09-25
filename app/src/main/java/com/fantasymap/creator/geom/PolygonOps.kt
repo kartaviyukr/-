@@ -6,6 +6,7 @@ import android.graphics.PathMeasure
 import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.Geometry
 import com.fantasymap.creator.model.Vec
+import kotlin.math.min
 
 /** Итог выравнивания границ. */
 data class AlignResult(
@@ -38,21 +39,26 @@ object PolygonOps {
     }
 
     /** Разобрать путь обратно на контуры, отбросив слишком мелкие обрезки. */
-    fun contoursOf(path: Path, minArea: Float): List<List<Vec>> {
+    fun contoursOf(
+        path: Path,
+        minArea: Float,
+        step: Float = SAMPLE_STEP,
+        maxPoints: Int = 600
+    ): List<List<Vec>> {
         val result = ArrayList<List<Vec>>()
         val measure = PathMeasure(path, true)
         val position = FloatArray(2)
         do {
             val length = measure.length
             if (length > MIN_CONTOUR_LENGTH) {
-                val count = (length / SAMPLE_STEP).toInt().coerceIn(12, 600)
+                val count = (length / step).toInt().coerceIn(12, maxPoints)
                 val points = ArrayList<Vec>(count)
                 for (i in 0 until count) {
                     if (measure.getPosTan(length * i / count, position, null)) {
                         points.add(Vec(position[0], position[1]))
                     }
                 }
-                val simplified = Geometry.simplify(points, SIMPLIFY_TOLERANCE)
+                val simplified = Geometry.simplify(points, min(SIMPLIFY_TOLERANCE, step * 0.4f))
                 if (simplified.size >= 3 && Geometry.area(simplified) >= minArea) {
                     result.add(simplified)
                 }

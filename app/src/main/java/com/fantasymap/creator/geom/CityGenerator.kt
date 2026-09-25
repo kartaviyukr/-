@@ -265,6 +265,8 @@ object CityGenerator {
         if (unit <= 0.01f) return empty
         val gap = unit * plan.gap * gapByDensity + unit * 0.02f
         val rowStep = unit * 0.95f + unit * plan.rowGap * gapByDensity
+        // Густота управляет и пустырями: правее — меньше дворов и проулков.
+        val skipChance = plan.skip * (1.4f - density * 0.8f)
 
         fun inside(p: Vec) = Geometry.pointInContours(p, contours)
 
@@ -342,14 +344,13 @@ object CityGenerator {
             if (!free(u0, u1, v0, v1, 0f)) return
             val corners = rectLocal(u0, u1, v0, v1)
             if (corners.any { !inside(it) }) return
-            if (corners.any { tooCloseToStreet(allRoads, project, it, unit * 0.1f) }) return
+            if (blocked(allRoads, project, corners, unit * 0.04f)) return
             taken.add(floatArrayOf(u0, u1, v0, v1))
             gardens.add(BiomeRegion(biome = kind, points = corners))
         }
 
         /** Поставить дом, если место свободно и он целиком внутри квартала. */
         fun place(type: BuildingType, u: Float, v: Float, width: Float, depth: Float, tilt: Float, behind: Float): Boolean {
-            val half = max(width, depth) * 0.5f
             val u0 = u - width * 0.5f
             val u1 = u + width * 0.5f
             val v0 = v - depth * 0.5f
@@ -359,7 +360,7 @@ object CityGenerator {
             if (!inside(spot)) return false
             val footprint = rect(spot, width, depth, angle + tilt)
             if (footprint.any { !inside(it) }) return false
-            if (tooCloseToStreet(allRoads, project, spot, half * 0.92f)) return false
+            if (blocked(allRoads, project, footprint, unit * 0.04f)) return false
             taken.add(floatArrayOf(u0, u1, v0, v1))
             placed.add(Building(type = type, points = footprint))
             if (type.big || (plan.gardens != null && random.nextFloat() < 0.35f)) {
@@ -580,7 +581,7 @@ object CityGenerator {
             var u = uMin + random.nextFloat() * gap
             while (u < uMax && guard < GUARD_LIMIT) {
                 guard++
-                if (random.nextFloat() < plan.skip) {
+                if (random.nextFloat() < skipChance) {
                     u += unit * (0.7f + random.nextFloat() * 1.8f)
                     continue
                 }
@@ -599,7 +600,7 @@ object CityGenerator {
             plan.clusters -> {
                 // Кучки лачуг: вокруг случайных середин, вкривь и вкось.
                 val area = (uMax - uMin) * (vMax - vMin)
-                val count = (area / (unit * unit * 18f)).toInt().coerceIn(3, 400)
+                val count = (area / (unit * unit * 18f) * (0.6f + density * 0.8f)).toInt().coerceIn(3, 500)
                 repeat(count) {
                     val cu = uMin + random.nextFloat() * (uMax - uMin)
                     val cv = vMin + random.nextFloat() * (vMax - vMin)
@@ -648,6 +649,133 @@ object CityGenerator {
         return DistrictFill(placed, roads, gardens)
     }
 
+    /** Итог соединения улиц: новые улицы, снесённые на пути дома, число связок. */
+    data class StreetLinks(
+        val roads: List<Road>,
+        val removedBuildings: Set<String>,
+        val links: Int
+    )
+
+    private class StreetEnd(val road: Int, val atStart: Boolean, val point: Vec, val dirX: Float, val dirY: Float)
+
+    /**
+     * Соединить улицы соседних кварталов на их границе.
+     *
+     * Трогаются только оборванные концы улиц рядом с границей квартала:
+     * конец дотягивается до конца соседней улицы или упирается в ближайшую
+     * улицу по ту сторону. Длина связки ограничена, так что дальние улицы
+     * не перекраиваются; сносятся только дома, стоящие прямо на связке.
+     */
+    fun connectStreets(project: MapProject): StreetLinks {
+        val roads = project.roads.toMutableList()
+        val unit = min(project.worldWidth, project.worldHeight) * 0.0165f
+        val maxGap = unit * 5f
+        val borders = project.districts.flatMap { it.contours() }.filter { it.size >= 3 }
+
+        fun nearBorder(p: Vec): Boolean =
+            borders.isEmpty() || borders.any { Geometry.distanceToPolygonOutline(p, it) <= maxGap }
+
+        // Оборванные концы: рядом нет другой улицы.
+        val ends = ArrayList<StreetEnd>()
+        for ((index, road) in roads.withIndex()) {
+            val pts = road.points
+            if (pts.size < 2) continue
+            for (atStart in listOf(true, false)) {
+                val p = if (atStart) pts.first() else pts.last()
+                val q = if (atStart) pts[1] else pts[pts.size - 2]
+                val touching = roads.withIndex().any { (other, candidate) ->
+                    other != index && candidate.points.size >= 2 &&
+                        Geometry.distanceToPolyline(p, candidate.points) <= candidate.type.width * 0.5f + road.type.width
+                }
+                if (touching || !nearBorder(p)) continue
+                val dx = p.x - q.x
+                val dy = p.y - q.y
+                val len = max(0.0001f, sqrt(dx * dx + dy * dy))
+                ends.add(StreetEnd(index, atStart, p, dx / len, dy / len))
+            }
+        }
+
+        fun facing(end: StreetEnd, target: Vec): Float {
+            val dx = target.x - end.point.x
+            val dy = target.y - end.point.y
+            val len = max(0.0001f, sqrt(dx * dx + dy * dy))
+            return (dx * end.dirX + dy * end.dirY) / len
+        }
+
+        val links = ArrayList<Pair<StreetEnd, Vec>>()
+        val used = HashSet<StreetEnd>()
+
+        // 1. Конец к концу: две улицы смотрят друг на друга через границу.
+        data class Candidate(val a: StreetEnd, val b: StreetEnd, val score: Float)
+        val pairs = ArrayList<Candidate>()
+        for (i in ends.indices) {
+            for (j in i + 1 until ends.size) {
+                val a = ends[i]
+                val b = ends[j]
+                if (a.road == b.road) continue
+                val distance = a.point.distanceTo(b.point)
+                if (distance > maxGap) continue
+                val fa = facing(a, b.point)
+                val fb = facing(b, a.point)
+                // Совсем рядом — соединяем и вбок, издалека — только если смотрят друг на друга.
+                val close = distance < unit * 2.5f
+                if (close && (fa < -0.3f || fb < -0.3f)) continue
+                if (!close && (fa < 0.1f || fb < 0.1f)) continue
+                pairs.add(Candidate(a, b, distance * (2.2f - fa - fb)))
+            }
+        }
+        for (candidate in pairs.sortedBy { it.score }) {
+            if (candidate.a in used || candidate.b in used) continue
+            used.add(candidate.a)
+            used.add(candidate.b)
+            links.add(candidate.a to candidate.b.point)
+        }
+
+        // 2. Конец упирается в ближайшую улицу: перекрёсток буквой Т.
+        for (end in ends) {
+            if (end in used) continue
+            var best: Vec? = null
+            var bestDistance = maxGap * 0.8f
+            for ((index, road) in roads.withIndex()) {
+                if (index == end.road || road.points.size < 2) continue
+                for (k in 0 until road.points.size - 1) {
+                    val q = closestOnSegment(end.point, road.points[k], road.points[k + 1])
+                    val distance = end.point.distanceTo(q)
+                    if (distance < bestDistance && facing(end, q) > 0.35f) {
+                        bestDistance = distance
+                        best = q
+                    }
+                }
+            }
+            val target = best ?: continue
+            used.add(end)
+            links.add(end to target)
+        }
+
+        // Удлинить улицы и снести дома, стоящие прямо на связке.
+        val removed = HashSet<String>()
+        for ((end, target) in links) {
+            val road = roads[end.road]
+            val points = road.points.toMutableList()
+            if (end.atStart) points.add(0, target) else points.add(target)
+            roads[end.road] = road.copy(points = points)
+            for (building in project.buildings) {
+                if (building.id in removed || building.points.size < 3) continue
+                if (segmentHitsPolygon(end.point, target, building.points)) removed.add(building.id)
+            }
+        }
+        return StreetLinks(roads, removed, links.size)
+    }
+
+    private fun closestOnSegment(p: Vec, a: Vec, b: Vec): Vec {
+        val dx = b.x - a.x
+        val dy = b.y - a.y
+        val lengthSq = dx * dx + dy * dy
+        if (lengthSq < 0.0001f) return a
+        val t = (((p.x - a.x) * dx + (p.y - a.y) * dy) / lengthSq).coerceIn(0f, 1f)
+        return Vec(a.x + dx * t, a.y + dy * t)
+    }
+
     /** Направление ближайшей улицы — дома встают вдоль неё. */
     private fun streetAngle(project: MapProject, center: Vec, bounds: BBox): Float {
         var best: Pair<Vec, Vec>? = null
@@ -667,17 +795,58 @@ object CityGenerator {
         return atan2(segment.second.y - segment.first.y, segment.second.x - segment.first.x)
     }
 
-    private fun tooCloseToStreet(roads: List<Road>, project: MapProject, point: Vec, halfSize: Float): Boolean {
+    private fun segmentsCross(a: Vec, b: Vec, c: Vec, d: Vec): Boolean {
+        fun side(o: Vec, p: Vec, q: Vec) = (p.x - o.x) * (q.y - o.y) - (p.y - o.y) * (q.x - o.x)
+        val d1 = side(c, d, a)
+        val d2 = side(c, d, b)
+        val d3 = side(a, b, c)
+        val d4 = side(a, b, d)
+        return (d1 > 0f) != (d2 > 0f) && (d3 > 0f) != (d4 > 0f)
+    }
+
+    /** Отрезок пересекает многоугольник или лежит внутри него. */
+    private fun segmentHitsPolygon(a: Vec, b: Vec, polygon: List<Vec>): Boolean {
+        if (Geometry.pointInPolygon(a, polygon) || Geometry.pointInPolygon(b, polygon)) return true
+        for (j in polygon.indices) {
+            if (segmentsCross(a, b, polygon[j], polygon[(j + 1) % polygon.size])) return true
+        }
+        return false
+    }
+
+    /**
+     * Мешает ли что-то дому: улица проходит сквозь него или ближе половины
+     * своей ширины, стена с башнями, вода. Проверяется сам след дома,
+     * а не круг вокруг него, — длинные дома встают вплотную к улице.
+     */
+    private fun blocked(roads: List<Road>, project: MapProject, footprint: List<Vec>, margin: Float): Boolean {
+        val box = Geometry.bounds(footprint)
+        fun near(a: Vec, b: Vec, clearance: Float): Boolean =
+            !(max(a.x, b.x) < box.minX - clearance || min(a.x, b.x) > box.maxX + clearance ||
+                max(a.y, b.y) < box.minY - clearance || min(a.y, b.y) > box.maxY + clearance)
+
+        fun hits(points: List<Vec>, clearance: Float): Boolean {
+            for (i in 0 until points.size - 1) {
+                val a = points[i]
+                val b = points[i + 1]
+                if (!near(a, b, clearance)) continue
+                if (segmentHitsPolygon(a, b, footprint)) return true
+                for (corner in footprint) {
+                    if (Geometry.distanceToSegment(corner, a, b) < clearance) return true
+                }
+            }
+            return false
+        }
+
         for (road in roads) {
-            val distance = Geometry.distanceToPolyline(point, road.points)
-            if (distance < road.type.width * 0.6f + halfSize) return true
+            if (hits(road.points, road.type.width * 0.5f + margin)) return true
         }
         for (feature in project.lines) {
-            val distance = Geometry.distanceToPolyline(point, feature.points)
-            if (distance < feature.effectiveWidth * 0.8f + halfSize) return true
+            // У стен по бокам башни — держимся подальше.
+            if (hits(feature.points, feature.effectiveWidth * 1.6f + margin)) return true
         }
         for (water in project.waters) {
-            if (Geometry.pointInPolygon(point, water.points)) return true
+            if (footprint.any { Geometry.pointInPolygon(it, water.points) }) return true
+            if (water.points.any { Geometry.pointInPolygon(it, footprint) }) return true
         }
         return false
     }

@@ -1028,6 +1028,14 @@ fun HelpDialog(onDismiss: () -> Unit) {
                 Text("На первом шаге (или в меню ⋮) выберите «Вся карта — суша»: океана не будет, " +
                     "а моря и озёра рисуются инструментом «Озеро / море».")
                 Spacer(Modifier.height(10.dp))
+                Text("Берега", fontWeight = FontWeight.Bold)
+                Text("Кнопка «🏖 Берега» (в выборе зон, на первом шаге и в меню ⋮) рисует узкую полосу " +
+                    "вдоль всей воды: пляж, галька, скалы, камыши, ил, припай или набережная.")
+                Spacer(Modifier.height(10.dp))
+                Text("Улицы кварталов", fontWeight = FontWeight.Bold)
+                Text("Застройка квартала прокладывает улицы сама. «🔗 Соединить улицы» дотягивает " +
+                    "оборванные улицы соседних кварталов друг до друга только у общей границы.")
+                Spacer(Modifier.height(10.dp))
                 Text("Боевая локация", fontWeight = FontWeight.Bold)
                 Text("Третий вид карты — для боя: подземелье, таверна, поляна. Сетка по 5 футов, " +
                     "пол и земля с фото-текстурами, стены липнут к узлам сетки.")
@@ -2015,5 +2023,67 @@ fun GridDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
                 onDismiss()
             }) { Text("Готово") }
         }
+    )
+}
+
+
+/** Берега: вид берега, ширина полосы, заменить ли прежние. */
+@Composable
+fun ShoreDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
+    val kinds = com.fantasymap.creator.model.BiomeType.byGroup(com.fantasymap.creator.model.BiomeGroup.SHORE)
+    var kind by remember { mutableStateOf(kinds.first()) }
+    var width by remember { mutableFloatStateOf(1f) }
+    var replace by remember { mutableStateOf(true) }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("Берега") },
+        text = {
+            Column(
+                Modifier
+                    .heightIn(max = 460.dp)
+                    .verticalScroll(rememberScrollState())
+            ) {
+                Text(
+                    "Вдоль всей воды — океана у материков, озёр, морей, водных зон и рек — " +
+                        "появится узкая полоса берега с неровной кромкой.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(Modifier.height(8.dp))
+                Text("Какой берег", style = MaterialTheme.typography.labelLarge)
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    items(kinds) { item ->
+                        FilterChip(
+                            selected = kind == item,
+                            onClick = { kind = item },
+                            label = { Text(item.title) },
+                            leadingIcon = { ColorDot(Color(item.color)) }
+                        )
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    when {
+                        width < 0.8f -> "Ширина: узкая кромка"
+                        width < 1.6f -> "Ширина: небольшой пляж"
+                        else -> "Ширина: широкий берег"
+                    },
+                    style = MaterialTheme.typography.labelLarge
+                )
+                Slider(value = width, onValueChange = { width = it }, valueRange = 0.4f..3f)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Switch(checked = replace, onCheckedChange = { replace = it })
+                    Spacer(Modifier.width(8.dp))
+                    Text("Заменить прежние берега")
+                }
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = {
+                viewModel.generateShores(kind, width, replace)
+                onDismiss()
+            }) { Text("Нарисовать") }
+        },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Отмена") } }
     )
 }

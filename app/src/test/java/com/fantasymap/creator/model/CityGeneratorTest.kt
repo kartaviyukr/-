@@ -85,3 +85,47 @@ class CityGeneratorTest {
         assertTrue(result.buildings.isNotEmpty())
     }
 }
+
+/** Густота бедного квартала и соединение улиц соседних кварталов. */
+class CityDensityAndLinksTest {
+
+    private val project = MapProject(kind = MapKind.CITY, worldWidth = 1400f, worldHeight = 1000f)
+
+    private fun rect(x: Float, y: Float, w: Float, h: Float) =
+        listOf(Vec(x, y), Vec(x + w, y), Vec(x + w, y + h), Vec(x, y + h))
+
+    @Test
+    fun `бедный квартал застроен плотно`() {
+        val fill = CityGenerator.fillDistrict(
+            project, District(type = DistrictType.POOR_QUARTER, points = rect(100f, 100f, 420f, 420f)), 0.5f, 5
+        )
+        assertTrue("домов: ${fill.buildings.size}", fill.buildings.size >= 100)
+    }
+
+    @Test
+    fun `ползунок густоты добавляет дома`() {
+        for (type in listOf(DistrictType.POOR_QUARTER, DistrictType.SLUMS, DistrictType.OLD_TOWN)) {
+            val district = District(type = type, points = rect(100f, 100f, 420f, 420f))
+            val sparse = CityGenerator.fillDistrict(project, district, 0.1f, 9).buildings.size
+            val dense = CityGenerator.fillDistrict(project, district, 0.9f, 9).buildings.size
+            assertTrue("$type: $sparse → $dense", dense > sparse)
+        }
+    }
+
+    @Test
+    fun `улицы соседних кварталов соединяются на границе`() {
+        val left = District(type = DistrictType.NEW_TOWN, points = rect(100f, 100f, 420f, 420f))
+        val right = District(type = DistrictType.CRAFT_QUARTER, points = rect(520f, 100f, 420f, 420f))
+        var state = project.copy(districts = listOf(left, right))
+        for (district in listOf(left, right)) {
+            val fill = CityGenerator.fillDistrict(state, district, 0.5f, 11)
+            state = state.copy(buildings = state.buildings + fill.buildings, roads = state.roads + fill.roads)
+        }
+        val links = CityGenerator.connectStreets(state)
+        assertTrue("связок: ${links.links}", links.links > 0)
+        // Далёкие улицы не перекраиваются: каждая связка — короткая.
+        for ((before, after) in state.roads.zip(links.roads)) {
+            assertTrue(after.points.size - before.points.size <= 2)
+        }
+    }
+}

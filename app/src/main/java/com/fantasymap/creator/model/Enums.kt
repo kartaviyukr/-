@@ -14,6 +14,7 @@ enum class BiomeGroup(val title: String, val battle: Boolean = false) {
     BATTLE_HAZARD("Вода, лава и опасности", true),
     BATTLE_MAGIC("Магические зоны", true),
     CITY("Городские зоны"),
+    SHORE("Берега"),
     WATER("Вода"),
     FOREST("Леса"),
     GRASS("Травы и поля"),
@@ -259,7 +260,17 @@ enum class BiomeType(
     VOID_RIFT("Разлом пустоты", BiomeGroup.BATTLE_MAGIC, 0xFF2A2238.toInt(), BiomePattern.STARS, "abyss"),
     SPELL_AREA("Зона заклинания", BiomeGroup.BATTLE_MAGIC, 0xFF9B7ED8.toInt(), BiomePattern.NONE, "magic"),
     MAGIC_DARKNESS("Магическая тьма", BiomeGroup.BATTLE_MAGIC, 0xFF0E0C14.toInt(), BiomePattern.NONE, "abyss"),
-    WEB_FIELD("Паутина", BiomeGroup.BATTLE_MAGIC, 0xFFD6D4CC.toInt(), BiomePattern.CRACKS);
+    WEB_FIELD("Паутина", BiomeGroup.BATTLE_MAGIC, 0xFFD6D4CC.toInt(), BiomePattern.CRACKS),
+
+    // Берега — полоса вдоль воды, её рисует кнопка «Берега»
+    BEACH("Песчаный пляж", BiomeGroup.SHORE, 0xFFE8D7A4.toInt(), BiomePattern.DOTS, "sand"),
+    PEBBLE_SHORE("Галечный берег", BiomeGroup.SHORE, 0xFFB9B2A4.toInt(), BiomePattern.DOTS, "gravel"),
+    ROCKY_SHORE("Скалистый берег", BiomeGroup.SHORE, 0xFF8E8880.toInt(), BiomePattern.ROCKS, "rock"),
+    MARSH_SHORE("Заболоченный берег", BiomeGroup.SHORE, 0xFF7E8E62.toInt(), BiomePattern.SWAMP, "mud"),
+    REED_SHORE("Заросли камыша", BiomeGroup.SHORE, 0xFF9AA86A.toInt(), BiomePattern.GRASS, "grass"),
+    MUD_FLATS("Илистая отмель", BiomeGroup.SHORE, 0xFF9C8A6E.toInt(), BiomePattern.CRACKS, "mud"),
+    ICE_SHORE("Ледяной припай", BiomeGroup.SHORE, 0xFFD8E8F0.toInt(), BiomePattern.ICE, "ice"),
+    QUAY_SHORE("Каменная набережная", BiomeGroup.SHORE, 0xFFB0A898.toInt(), BiomePattern.COBBLES, "cobblestone");
 
     /** Ключ фото-текстуры: своя у зоны или подходящая по смыслу. */
     val texture: String? get() = textureKey ?: WORLD_TEXTURES[this]

@@ -185,6 +185,10 @@ fun EditorScreen(viewModel: EditorViewModel) {
                                 )
                             }
                             DropdownMenuItem(
+                                text = { Text("Берега вдоль воды") },
+                                onClick = { menuOpen = false; viewModel.showShoreDialog = true }
+                            )
+                            DropdownMenuItem(
                                 text = { Text("Авторский контент") },
                                 onClick = { menuOpen = false; showAssets = true }
                             )
@@ -276,6 +280,10 @@ fun EditorScreen(viewModel: EditorViewModel) {
     }
 
     // ---- диалоги ----
+
+    if (viewModel.showShoreDialog) {
+        ShoreDialog(viewModel) { viewModel.showShoreDialog = false }
+    }
 
     if (showAssets) {
         CustomAssetsDialog(

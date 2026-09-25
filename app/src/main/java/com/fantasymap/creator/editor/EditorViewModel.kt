@@ -13,6 +13,7 @@ import com.fantasymap.creator.geom.CityGenerator
 import com.fantasymap.creator.geom.FragmentCopy
 import com.fantasymap.creator.geom.AlignResult
 import com.fantasymap.creator.geom.PolygonOps
+import com.fantasymap.creator.geom.ShoreGenerator
 import com.fantasymap.creator.geom.WorldGenerator
 import com.fantasymap.creator.export.Exporter
 import com.fantasymap.creator.data.AssetStore
@@ -462,7 +463,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val battle = BiomeGroup.entries.filter { it.battle }
         return when (mapKind) {
             MapKind.CITY -> listOf(BiomeGroup.CITY) + world
-            MapKind.BATTLE -> battle + BiomeGroup.CITY
+            MapKind.BATTLE -> battle + BiomeGroup.SHORE + BiomeGroup.CITY
             MapKind.WORLD -> world + BiomeGroup.CITY
         }
     }
@@ -1669,6 +1670,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
      * Застроить выбранный квартал домами: ряды вдоль ближайшей улицы,
      * с оглядкой на улицы, воду и уже стоящие дома.
      */
+    /** Открыто ли окно «Берега». */
+    var showShoreDialog by mutableStateOf(false)
+
     /** Прокладывать ли улицы при застройке квартала. */
     var fillWithStreets by mutableStateOf(true)
 
@@ -1726,6 +1730,59 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 append("Поставлено домов: $houses")
                 if (streetCount > 0) append(", улиц: $streetCount")
             }
+        }
+    }
+
+    /**
+     * Соединить улицы соседних кварталов на их границе. Трогаются только
+     * оборванные концы у границы; дома прямо на новой связке сносятся.
+     */
+    fun connectDistrictStreets() {
+        val current = project ?: return
+        if (current.roads.size < 2) {
+            message = "Сначала застройте кварталы с улицами или проведите улицы"
+            return
+        }
+        viewModelScope.launch {
+            busy = true
+            val result = withContext(Dispatchers.Default) { CityGenerator.connectStreets(current) }
+            busy = false
+            if (result.links == 0) {
+                message = "Нечего соединять: у границ кварталов нет оборванных улиц"
+                return@launch
+            }
+            edit { state ->
+                state.copy(
+                    roads = result.roads,
+                    buildings = state.buildings.filterNot { it.id in result.removedBuildings }
+                )
+            }
+            message = buildString {
+                append("Соединено улиц: ${result.links}")
+                if (result.removedBuildings.isNotEmpty()) append(", снесено домов на пути: ${result.removedBuildings.size}")
+            }
+        }
+    }
+
+    /** Нарисовать берега вдоль всей воды на карте. */
+    fun generateShores(type: BiomeType, widthScale: Float, replace: Boolean) {
+        val current = project ?: return
+        viewModelScope.launch {
+            busy = true
+            val seed = (System.currentTimeMillis() and 0xFFFF).toInt()
+            val shores = withContext(Dispatchers.Default) {
+                runCatching { ShoreGenerator.generate(current, type, widthScale, seed) }.getOrDefault(emptyList())
+            }
+            busy = false
+            if (shores.isEmpty()) {
+                message = "Воды не найдено — нарисуйте озеро, море, реку или материк в океане"
+                return@launch
+            }
+            edit { state ->
+                val kept = if (replace) state.biomes.filterNot { ShoreGenerator.isShore(it.biome) } else state.biomes
+                state.copy(biomes = kept + shores)
+            }
+            message = "Берега готовы: ${type.title.lowercase()}"
         }
     }
 
