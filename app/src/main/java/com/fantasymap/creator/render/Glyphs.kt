@@ -19,6 +19,7 @@ class Glyphs {
     private val path = Path()
     private val rect = RectF()
     private val battle = BattleGlyphs()
+    private val art = PatternArt()
 
     /**
      * Значок объекта. Центр — (cx, cy), s — характерный радиус в пикселях экрана.
@@ -1986,7 +1987,7 @@ class Glyphs {
                 canvas.drawLine(x - s * 0.3f, y - s * 0.25f, x + s * 0.3f, y - s * 0.25f, paint)
             }
 
-            else -> Unit
+            else -> art.draw(canvas, pattern, x, y, s, paint, variant)
         }
     }
 }
