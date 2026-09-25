@@ -86,11 +86,23 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release delete fantasy-map-latest --yes --cleanup-tag || true
-          gh release create fantasy-map-latest dist/*.apk \
-            --target "${GITHUB_SHA}" \
-            --title "Фэнтези-карты — последняя сборка" \
+          TAG=fantasy-map-latest
+          TITLE="Фэнтези-карты — последняя сборка"
+          # Убрать прежний релиз и черновики, оставшиеся от прошлых гонок.
+          gh release delete "$TAG" --yes || true
+          for id in $(gh api "repos/${GITHUB_REPOSITORY}/releases?per_page=100" \
+                        -q ".[] | select(.draft and .name == \"$TITLE\") | .id"); do
+            gh api -X DELETE "repos/${GITHUB_REPOSITORY}/releases/$id" || true
+          done
+          # Сначала сам тег на текущий коммит, потом релиз к готовому тегу.
+          git tag -f "$TAG" "$GITHUB_SHA"
+          git push -f origin "refs/tags/$TAG"
+          sleep 3
+          gh release create "$TAG" dist/*.apk \
+            --verify-tag \
+            --title "$TITLE" \
             --notes "Приложение для рисования карт фэнтезийных миров.
 
           Скачайте APK ниже и откройте файл на Android-телефоне, чтобы установить.
           Сборка ${VERSION_NAME} из ветки \`${GITHUB_REF#refs/heads/}\`."
+          gh release edit "$TAG" --draft=false || true
