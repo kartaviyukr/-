@@ -43,7 +43,7 @@ class CatalogTest {
     @Test
     fun `каждая зона разложена по группам без потерь`() {
         val fromGroups = BiomeGroup.entries.flatMap { BiomeType.byGroup(it) }
-        assertEquals(BiomeType.entries.size, fromGroups.size)
+        assertEquals(BiomeType.entries.count { !it.legacy }, fromGroups.size)
     }
 
     @Test

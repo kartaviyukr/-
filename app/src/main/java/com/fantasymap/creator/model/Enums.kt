@@ -5,7 +5,13 @@ enum class BiomePattern {
     NONE, TREES, CONIFERS, PALMS, DOTS, DUNES, GRASS, MOUNTAINS, HILLS,
     SWAMP, ICE, ROCKS, WAVES, CRACKS, CRYSTALS, FUNGI, LAVA, FIELDS,
     RUNES, BONES, STARS, SPIRES, EYES, FEATHERS,
-    PLANKS, TILES, COBBLES
+    PLANKS, TILES, COBBLES,
+    MIXED_TREES, MONSOON, SPARSE_TREES, OLIVES, TALL_GRASS, TUSSOCKS, CREVASSES,
+    FOOTHILLS, KARST, MESAS, REEDS, DRAGONS, FLOATING, LIGHTNING, FLYTRAPS, FAULTS,
+    TITAN_BONES, ORCHARD, FLOWERS, GRAVES;
+
+    /** Узор, который ставится ровными рядами: сады, кладбища, рощи. */
+    val regular: Boolean get() = this == ORCHARD || this == GRAVES || this == OLIVES
 }
 
 enum class BiomeGroup(val title: String, val battle: Boolean = false) {
@@ -35,7 +41,9 @@ enum class BiomeType(
     val color: Int,
     val pattern: BiomePattern,
     /** Фото-текстура из assets/textures, если есть подходящая. */
-    private val textureKey: String? = null
+    private val textureKey: String? = null,
+    /** Старая зона, слитая с другой: в выборе не показывается. */
+    val legacy: Boolean = false
 ) {
     // Вода
     SHALLOW_SEA("Мелководье", BiomeGroup.WATER, 0xFF6FA6C9.toInt(), BiomePattern.WAVES),
@@ -46,27 +54,28 @@ enum class BiomeType(
     ICE_SEA("Ледяное море", BiomeGroup.WATER, 0xFFA9C9D9.toInt(), BiomePattern.ICE),
 
     // Леса
-    TAIGA("Тайга", BiomeGroup.FOREST, 0xFF3B6349.toInt(), BiomePattern.CONIFERS),
-    CONIFER_FOREST("Хвойный лес", BiomeGroup.FOREST, 0xFF41704F.toInt(), BiomePattern.CONIFERS),
-    MIXED_FOREST("Смешанный лес", BiomeGroup.FOREST, 0xFF56814F.toInt(), BiomePattern.TREES),
+    TAIGA("Тайга и хвойный лес", BiomeGroup.FOREST, 0xFF3B6349.toInt(), BiomePattern.CONIFERS),
+    // Слит с тайгой: остаётся только для старых карт.
+    CONIFER_FOREST("Хвойный лес", BiomeGroup.FOREST, 0xFF41704F.toInt(), BiomePattern.CONIFERS, null, true),
+    MIXED_FOREST("Смешанный лес", BiomeGroup.FOREST, 0xFF56814F.toInt(), BiomePattern.MIXED_TREES),
     BROADLEAF_FOREST("Широколиственный лес", BiomeGroup.FOREST, 0xFF66914D.toInt(), BiomePattern.TREES),
     RAINFOREST("Тропический дождевой лес", BiomeGroup.FOREST, 0xFF36763F.toInt(), BiomePattern.PALMS),
-    MONSOON_FOREST("Муссонный лес", BiomeGroup.FOREST, 0xFF4E8A45.toInt(), BiomePattern.PALMS),
+    MONSOON_FOREST("Муссонный лес", BiomeGroup.FOREST, 0xFF6E9440.toInt(), BiomePattern.MONSOON),
     CLOUD_FOREST("Туманный лес", BiomeGroup.FOREST, 0xFF63947A.toInt(), BiomePattern.TREES),
     BAMBOO_FOREST("Бамбуковый лес", BiomeGroup.FOREST, 0xFF87A960.toInt(), BiomePattern.GRASS),
     MANGROVE("Мангровые заросли", BiomeGroup.FOREST, 0xFF477355.toInt(), BiomePattern.SWAMP),
-    WOODLAND("Редколесье", BiomeGroup.FOREST, 0xFF849A5C.toInt(), BiomePattern.TREES),
-    OLIVE_GROVE("Оливковые рощи", BiomeGroup.FOREST, 0xFF8A9A63.toInt(), BiomePattern.TREES),
+    WOODLAND("Редколесье", BiomeGroup.FOREST, 0xFF9FB06A.toInt(), BiomePattern.SPARSE_TREES),
+    OLIVE_GROVE("Оливковые рощи", BiomeGroup.FOREST, 0xFF9AA37A.toInt(), BiomePattern.OLIVES),
 
     // Травы и поля
     STEPPE("Степь", BiomeGroup.GRASS, 0xFFC6B76B.toInt(), BiomePattern.GRASS),
-    PRAIRIE("Прерия", BiomeGroup.GRASS, 0xFFCCC074.toInt(), BiomePattern.GRASS),
+    PRAIRIE("Прерия", BiomeGroup.GRASS, 0xFFAFC16C.toInt(), BiomePattern.TALL_GRASS),
     SAVANNA("Саванна", BiomeGroup.GRASS, 0xFFCDAE55.toInt(), BiomePattern.GRASS),
     MEADOW("Луга", BiomeGroup.GRASS, 0xFFA1BD70.toInt(), BiomePattern.GRASS),
     FARMLAND("Пашни и поля", BiomeGroup.GRASS, 0xFFBFAF67.toInt(), BiomePattern.FIELDS),
     SHRUBLAND("Кустарниковые пустоши", BiomeGroup.GRASS, 0xFF9FA064.toInt(), BiomePattern.DOTS),
     MAQUIS("Маквис (средиземноморье)", BiomeGroup.GRASS, 0xFFA8AE62.toInt(), BiomePattern.DOTS),
-    TUSSOCK("Кочкарник", BiomeGroup.GRASS, 0xFFB2B071.toInt(), BiomePattern.GRASS),
+    TUSSOCK("Кочкарник", BiomeGroup.GRASS, 0xFFB2B071.toInt(), BiomePattern.TUSSOCKS),
 
     // Сухие земли
     SAND_DESERT("Песчаная пустыня", BiomeGroup.DRY, 0xFFE3CF93.toInt(), BiomePattern.DUNES),
@@ -83,8 +92,8 @@ enum class BiomeType(
     TUNDRA("Тундра", BiomeGroup.COLD, 0xFFAEB99E.toInt(), BiomePattern.DOTS),
     FOREST_TUNDRA("Лесотундра", BiomeGroup.COLD, 0xFF94A887.toInt(), BiomePattern.CONIFERS),
     POLAR_DESERT("Полярная пустыня", BiomeGroup.COLD, 0xFFDDE7ED.toInt(), BiomePattern.ICE),
-    ICE_SHEET("Ледниковый щит", BiomeGroup.COLD, 0xFFEAF2F7.toInt(), BiomePattern.ICE),
-    GLACIER("Ледник", BiomeGroup.COLD, 0xFFD2E5F0.toInt(), BiomePattern.ICE),
+    ICE_SHEET("Ледниковый щит", BiomeGroup.COLD, 0xFFC4E0F0.toInt(), BiomePattern.CREVASSES),
+    GLACIER("Ледник", BiomeGroup.COLD, 0xFFA8D0E6.toInt(), BiomePattern.CREVASSES),
     PERMAFROST("Вечная мерзлота", BiomeGroup.COLD, 0xFFBECAC6.toInt(), BiomePattern.CRACKS),
     SNOWFIELD("Снежники", BiomeGroup.COLD, 0xFFEFF4F8.toInt(), BiomePattern.ICE),
 
@@ -92,17 +101,17 @@ enum class BiomeType(
     HIGH_MOUNTAINS("Высокие горы", BiomeGroup.HIGH, 0xFF90857D.toInt(), BiomePattern.MOUNTAINS),
     MOUNTAINS("Горы", BiomeGroup.HIGH, 0xFF9E9389.toInt(), BiomePattern.MOUNTAINS),
     HILLS("Холмы", BiomeGroup.HIGH, 0xFFACA57C.toInt(), BiomePattern.HILLS),
-    FOOTHILLS("Предгорья", BiomeGroup.HIGH, 0xFFB4AC87.toInt(), BiomePattern.HILLS),
+    FOOTHILLS("Предгорья", BiomeGroup.HIGH, 0xFFBBA67C.toInt(), BiomePattern.FOOTHILLS),
     PLATEAU("Плоскогорье", BiomeGroup.HIGH, 0xFFB9AD91.toInt(), BiomePattern.ROCKS),
     ALPINE_MEADOW("Альпийские луга", BiomeGroup.HIGH, 0xFF93B47E.toInt(), BiomePattern.GRASS),
-    KARST("Карстовые земли", BiomeGroup.HIGH, 0xFFBBB6AA.toInt(), BiomePattern.ROCKS),
+    KARST("Карстовые земли", BiomeGroup.HIGH, 0xFFBBB6AA.toInt(), BiomePattern.KARST),
     CANYONS("Каньоны", BiomeGroup.HIGH, 0xFFB48868.toInt(), BiomePattern.ROCKS),
     FJORDS("Фьорды", BiomeGroup.HIGH, 0xFF839EAA.toInt(), BiomePattern.ROCKS),
     CLIFF_COAST("Скалистое побережье", BiomeGroup.HIGH, 0xFFA5A398.toInt(), BiomePattern.ROCKS),
 
     // Влажные земли
     SWAMP("Болото", BiomeGroup.WET, 0xFF6F7E59.toInt(), BiomePattern.SWAMP),
-    MARSH("Топи", BiomeGroup.WET, 0xFF798965.toInt(), BiomePattern.SWAMP),
+    MARSH("Топи", BiomeGroup.WET, 0xFF6A8E80.toInt(), BiomePattern.REEDS),
     PEAT_BOG("Торфяник", BiomeGroup.WET, 0xFF6E6E52.toInt(), BiomePattern.SWAMP),
     FLOODPLAIN("Пойма", BiomeGroup.WET, 0xFF94AB6F.toInt(), BiomePattern.GRASS),
     DELTA("Дельта реки", BiomeGroup.WET, 0xFF83A47E.toInt(), BiomePattern.SWAMP),
@@ -120,8 +129,8 @@ enum class BiomeType(
     CRYSTAL_FIELDS("Кристальные поля", BiomeGroup.FANTASY, 0xFF92A0CD.toInt(), BiomePattern.CRYSTALS),
     FEY_GLADE("Поляны фей", BiomeGroup.FANTASY, 0xFF83CDA9.toInt(), BiomePattern.GRASS),
     SHADOW_MARSH("Сумрачные топи", BiomeGroup.FANTASY, 0xFF4E4E62.toInt(), BiomePattern.SWAMP),
-    DRAGON_WASTES("Драконьи пустоши", BiomeGroup.FANTASY, 0xFF8E5E4E.toInt(), BiomePattern.ROCKS),
-    FLOATING_ISLES("Парящие острова", BiomeGroup.FANTASY, 0xFFADC8DA.toInt(), BiomePattern.CRYSTALS),
+    DRAGON_WASTES("Драконьи пустоши", BiomeGroup.FANTASY, 0xFF8E5E4E.toInt(), BiomePattern.DRAGONS),
+    FLOATING_ISLES("Парящие острова", BiomeGroup.FANTASY, 0xFFADC8DA.toInt(), BiomePattern.FLOATING),
     MAGMA_WASTE("Огненные пустоши", BiomeGroup.FANTASY, 0xFF7E3F32.toInt(), BiomePattern.LAVA),
     FROZEN_WASTE("Ледяные пустоши", BiomeGroup.FANTASY, 0xFFCADCE8.toInt(), BiomePattern.ICE),
     HOLY_LAND("Священные земли", BiomeGroup.FANTASY, 0xFFDDCD93.toInt(), BiomePattern.DOTS),
@@ -134,7 +143,7 @@ enum class BiomeType(
     SINGING_DUNES("Поющие пески", BiomeGroup.FANTASY, 0xFFE0C79B.toInt(), BiomePattern.DUNES),
     GLASS_DESERT("Стеклянная пустыня", BiomeGroup.FANTASY, 0xFFC8D4DA.toInt(), BiomePattern.CRYSTALS),
     MIRROR_FLATS("Зеркальная равнина", BiomeGroup.FANTASY, 0xFFD3DCE2.toInt(), BiomePattern.CRACKS),
-    STORM_STEPPE("Грозовая степь", BiomeGroup.FANTASY, 0xFF8E9483.toInt(), BiomePattern.GRASS),
+    STORM_STEPPE("Грозовая степь", BiomeGroup.FANTASY, 0xFF8E9483.toInt(), BiomePattern.LIGHTNING),
     WHISPER_PLAINS("Шепчущие равнины", BiomeGroup.FANTASY, 0xFFAFB48C.toInt(), BiomePattern.GRASS),
     BLOOD_MARSH("Кровавые топи", BiomeGroup.FANTASY, 0xFF6E3F44.toInt(), BiomePattern.SWAMP),
     BONE_FIELDS("Костяные поля", BiomeGroup.FANTASY, 0xFFC4BCA6.toInt(), BiomePattern.BONES),
@@ -153,10 +162,10 @@ enum class BiomeType(
 
     // Городские зоны — для карты города
     CITY_PARK("Парк", BiomeGroup.CITY, 0xFF8FBE79.toInt(), BiomePattern.TREES),
-    CITY_GARDEN("Сады", BiomeGroup.CITY, 0xFFA8C97F.toInt(), BiomePattern.TREES),
-    CITY_ORCHARD("Плодовый сад", BiomeGroup.CITY, 0xFFB2CC84.toInt(), BiomePattern.TREES),
+    CITY_GARDEN("Сады", BiomeGroup.CITY, 0xFFB4CF86.toInt(), BiomePattern.FLOWERS),
+    CITY_ORCHARD("Плодовый сад", BiomeGroup.CITY, 0xFFA6C77A.toInt(), BiomePattern.ORCHARD),
     CITY_VEGETABLE("Огороды", BiomeGroup.CITY, 0xFFBCC182.toInt(), BiomePattern.FIELDS),
-    CITY_GRAVEYARD("Кладбище", BiomeGroup.CITY, 0xFF9DA592.toInt(), BiomePattern.BONES),
+    CITY_GRAVEYARD("Кладбище", BiomeGroup.CITY, 0xFF8F9A88.toInt(), BiomePattern.GRAVES),
     CITY_SQUARE("Мощёная площадь", BiomeGroup.CITY, 0xFFC9BFA6.toInt(), BiomePattern.FIELDS),
     CITY_MARKET_SQUARE("Рыночная площадь", BiomeGroup.CITY, 0xFFD3BE8E.toInt(), BiomePattern.DOTS),
     CITY_YARD("Дворы", BiomeGroup.CITY, 0xFFC4B69A.toInt(), BiomePattern.DOTS),
@@ -174,7 +183,7 @@ enum class BiomeType(
     CITY_SLUM_MUD("Грязь трущоб", BiomeGroup.CITY, 0xFF8F836C.toInt(), BiomePattern.CRACKS, "mud"),
     CITY_ROYAL_GARDEN("Королевский сад", BiomeGroup.CITY, 0xFF7FB56E.toInt(), BiomePattern.TREES, "grass"),
     CITY_TOURNEY_FIELD("Турнирное поле", BiomeGroup.CITY, 0xFFB9B37E.toInt(), BiomePattern.GRASS, "grass"),
-    CITY_OLD_CHURCHYARD("Старый погост", BiomeGroup.CITY, 0xFF8E9486.toInt(), BiomePattern.BONES, "moss"),
+    CITY_OLD_CHURCHYARD("Старый погост", BiomeGroup.CITY, 0xFF8E9486.toInt(), BiomePattern.GRAVES, "moss"),
     CITY_HERB_GARDEN("Аптекарский огород", BiomeGroup.CITY, 0xFF9FBE84.toInt(), BiomePattern.FIELDS),
     CITY_LUMBER_YARD("Дровяной двор", BiomeGroup.CITY, 0xFFA88E6A.toInt(), BiomePattern.PLANKS, "old_wood"),
     CITY_QUARRY("Каменоломня", BiomeGroup.CITY, 0xFFA9A396.toInt(), BiomePattern.ROCKS, "rocky_ground"),
@@ -184,22 +193,22 @@ enum class BiomeType(
     // Ещё земли мира: реальные и фэнтезийные
     CHAPARRAL("Чапараль", BiomeGroup.GRASS, 0xFFA7A266.toInt(), BiomePattern.DOTS),
     HEATH("Вересковая пустошь", BiomeGroup.GRASS, 0xFFA08AA0.toInt(), BiomePattern.DOTS),
-    TEPUI("Столовые горы", BiomeGroup.HIGH, 0xFFA89A82.toInt(), BiomePattern.ROCKS),
+    TEPUI("Столовые горы", BiomeGroup.HIGH, 0xFFA89A82.toInt(), BiomePattern.MESAS),
     LOESS_HILLS("Лёссовые холмы", BiomeGroup.HIGH, 0xFFC9B48A.toInt(), BiomePattern.HILLS),
     SALT_MARSH("Солёные марши", BiomeGroup.WET, 0xFF8FA98A.toInt(), BiomePattern.SWAMP),
     LAGOON("Лагуна", BiomeGroup.WATER, 0xFF7CC4C8.toInt(), BiomePattern.WAVES),
     OBSIDIAN_PLAINS("Обсидиановые равнины", BiomeGroup.FANTASY, 0xFF3E3A40.toInt(), BiomePattern.CRACKS),
     PETRIFIED_FOREST("Окаменелый лес", BiomeGroup.FANTASY, 0xFF8E8A80.toInt(), BiomePattern.SPIRES),
-    CARNIVOROUS_JUNGLE("Хищные джунгли", BiomeGroup.FANTASY, 0xFF3E6A3A.toInt(), BiomePattern.PALMS),
+    CARNIVOROUS_JUNGLE("Хищные джунгли", BiomeGroup.FANTASY, 0xFF3E6A3A.toInt(), BiomePattern.FLYTRAPS),
     AURORA_TUNDRA("Сияющая тундра", BiomeGroup.FANTASY, 0xFF9CC2B4.toInt(), BiomePattern.STARS),
     ACID_BOGS("Кислотные топи", BiomeGroup.FANTASY, 0xFF7E9A3A.toInt(), BiomePattern.SWAMP),
     CLOUD_PEAKS("Облачные пики", BiomeGroup.FANTASY, 0xFFC9D3DC.toInt(), BiomePattern.MOUNTAINS),
     CRIMSON_DESERT("Багровая пустыня", BiomeGroup.FANTASY, 0xFFB06A52.toInt(), BiomePattern.DUNES),
     GOLDEN_STEPPE("Золотая степь", BiomeGroup.FANTASY, 0xFFD8B35A.toInt(), BiomePattern.GRASS),
-    SHATTERED_LANDS("Расколотые земли", BiomeGroup.FANTASY, 0xFF7A6E62.toInt(), BiomePattern.CRACKS),
+    SHATTERED_LANDS("Расколотые земли", BiomeGroup.FANTASY, 0xFF7A6E62.toInt(), BiomePattern.FAULTS),
     FIREFLY_WOODS("Лес светлячков", BiomeGroup.FANTASY, 0xFF3C5E4A.toInt(), BiomePattern.STARS),
     DEADWOOD("Мёртвый лес", BiomeGroup.FANTASY, 0xFF6A6258.toInt(), BiomePattern.SPIRES),
-    TITAN_BONES("Кости титанов", BiomeGroup.FANTASY, 0xFFCFC6AE.toInt(), BiomePattern.BONES),
+    TITAN_BONES("Кости титанов", BiomeGroup.FANTASY, 0xFFCFC6AE.toInt(), BiomePattern.TITAN_BONES),
     HONEY_MEADOWS("Медовые луга", BiomeGroup.FANTASY, 0xFFD6BE6E.toInt(), BiomePattern.GRASS),
     FLESH_WASTES("Плотяные пустоши", BiomeGroup.FANTASY, 0xFF9E6A66.toInt(), BiomePattern.EYES),
 
@@ -276,7 +285,8 @@ enum class BiomeType(
     val texture: String? get() = textureKey ?: WORLD_TEXTURES[this]
 
     companion object {
-        fun byGroup(group: BiomeGroup): List<BiomeType> = BiomeType.entries.filter { it.group == group }
+        fun byGroup(group: BiomeGroup): List<BiomeType> =
+            BiomeType.entries.filter { it.group == group && !it.legacy }
 
         /** Фото-текстуры для природных зон мира и города. */
         private val WORLD_TEXTURES: Map<BiomeType, String> by lazy {

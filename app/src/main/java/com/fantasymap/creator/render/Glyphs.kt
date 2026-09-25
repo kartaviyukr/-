@@ -6,6 +6,7 @@ import android.graphics.Path
 import android.graphics.RectF
 import com.fantasymap.creator.model.BiomePattern
 import com.fantasymap.creator.model.Glyph
+import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.sin
 
@@ -1551,7 +1552,19 @@ class Glyphs {
     // ---------- текстуры природных зон ----------
 
     /** Один элемент текстуры ландшафта в точке (x, y) размером s. */
-    fun drawPattern(canvas: Canvas, pattern: BiomePattern, x: Float, y: Float, s: Float, paint: Paint) {
+    /**
+     * Узор зоны. variant — случайное число 0..1, своё для каждой клетки:
+     * по нему редкий узор решает, рисовать ли крупный знак или мелочь.
+     */
+    fun drawPattern(
+        canvas: Canvas,
+        pattern: BiomePattern,
+        x: Float,
+        y: Float,
+        s: Float,
+        paint: Paint,
+        variant: Float = 0.5f
+    ) {
         when (pattern) {
             BiomePattern.NONE -> Unit
             BiomePattern.TREES -> {
@@ -1690,6 +1703,290 @@ class Glyphs {
                 rect.set(x - s * 0.6f, y - s * 0.45f, x + s * 0.6f, y + s * 0.45f)
                 canvas.drawRoundRect(rect, s * 0.3f, s * 0.3f, paint)
             }
+            else -> naturePattern(canvas, pattern, x, y, s, paint, variant)
+        }
+    }
+
+    // ---------- особые узоры природных и городских зон ----------
+
+    private fun roundTree(canvas: Canvas, x: Float, y: Float, s: Float, paint: Paint) {
+        canvas.drawLine(x, y + s * 0.6f, x, y, paint)
+        rect.set(x - s * 0.5f, y - s * 0.75f, x + s * 0.5f, y + s * 0.15f)
+        canvas.drawArc(rect, 0f, 360f, false, paint)
+    }
+
+    private fun conifer(canvas: Canvas, x: Float, y: Float, s: Float, paint: Paint) {
+        canvas.drawLine(x, y + s * 0.65f, x, y - s * 0.75f, paint)
+        canvas.drawLine(x, y - s * 0.75f, x - s * 0.5f, y + s * 0.15f, paint)
+        canvas.drawLine(x, y - s * 0.75f, x + s * 0.5f, y + s * 0.15f, paint)
+        canvas.drawLine(x - s * 0.5f, y + s * 0.15f, x + s * 0.5f, y + s * 0.15f, paint)
+    }
+
+    private fun tuft(canvas: Canvas, x: Float, y: Float, s: Float, paint: Paint) {
+        canvas.drawLine(x, y + s * 0.3f, x - s * 0.25f, y - s * 0.3f, paint)
+        canvas.drawLine(x, y + s * 0.3f, x, y - s * 0.45f, paint)
+        canvas.drawLine(x, y + s * 0.3f, x + s * 0.25f, y - s * 0.3f, paint)
+    }
+
+    /** Временно другой цвет и толщина для яркой детали узора. */
+    private inline fun accent(paint: Paint, color: Int, widthScale: Float, block: () -> Unit) {
+        val oldColor = paint.color
+        val oldWidth = paint.strokeWidth
+        paint.color = color
+        paint.strokeWidth = oldWidth * widthScale
+        block()
+        paint.color = oldColor
+        paint.strokeWidth = oldWidth
+    }
+
+    private fun naturePattern(
+        canvas: Canvas,
+        pattern: BiomePattern,
+        x: Float,
+        y: Float,
+        s: Float,
+        paint: Paint,
+        variant: Float
+    ) {
+        when (pattern) {
+            // Смешанный лес: лиственные и хвойные вперемешку.
+            BiomePattern.MIXED_TREES -> if (variant < 0.5f) roundTree(canvas, x, y, s, paint) else conifer(canvas, x, y, s, paint)
+
+            // Муссонный лес: раскидистая крона-зонтик с плетями лиан.
+            BiomePattern.MONSOON -> {
+                canvas.drawLine(x, y + s * 0.7f, x, y - s * 0.2f, paint)
+                rect.set(x - s * 0.8f, y - s * 0.75f, x + s * 0.8f, y + s * 0.05f)
+                canvas.drawArc(rect, 180f, 180f, true, paint)
+                canvas.drawLine(x - s * 0.55f, y - s * 0.35f, x - s * 0.55f, y + s * 0.15f, paint)
+                canvas.drawLine(x + s * 0.55f, y - s * 0.35f, x + s * 0.55f, y + s * 0.2f, paint)
+            }
+
+            // Редколесье: изредка дерево, остальное — травы.
+            BiomePattern.SPARSE_TREES -> if (variant < 0.25f) roundTree(canvas, x, y, s, paint) else tuft(canvas, x, y, s * 0.75f, paint)
+
+            // Оливковые рощи: низкие кривые деревца с плодами, рядами.
+            BiomePattern.OLIVES -> {
+                path.reset()
+                path.moveTo(x - s * 0.1f, y + s * 0.6f)
+                path.quadTo(x + s * 0.2f, y + s * 0.2f, x - s * 0.05f, y - s * 0.05f)
+                canvas.drawPath(path, paint)
+                rect.set(x - s * 0.55f, y - s * 0.6f, x + s * 0.55f, y + s * 0.05f)
+                canvas.drawOval(rect, paint)
+                canvas.drawCircle(x - s * 0.2f, y - s * 0.3f, s * 0.07f, paint)
+                canvas.drawCircle(x + s * 0.18f, y - s * 0.22f, s * 0.07f, paint)
+                canvas.drawCircle(x, y - s * 0.45f, s * 0.07f, paint)
+            }
+
+            // Прерия: высокая волнистая трава, клонящаяся по ветру, редкие цветы.
+            BiomePattern.TALL_GRASS -> {
+                for (i in -1..1) {
+                    path.reset()
+                    path.moveTo(x + i * s * 0.25f, y + s * 0.5f)
+                    path.quadTo(x + i * s * 0.25f + s * 0.1f, y - s * 0.3f, x + i * s * 0.25f + s * 0.5f, y - s * 0.75f)
+                    canvas.drawPath(path, paint)
+                }
+                if (variant < 0.2f) canvas.drawCircle(x + s * 0.75f, y - s * 0.8f, s * 0.1f, paint)
+            }
+
+            // Кочкарник: бугорки с пучками травы.
+            BiomePattern.TUSSOCKS -> {
+                rect.set(x - s * 0.5f, y - s * 0.1f, x + s * 0.5f, y + s * 0.5f)
+                canvas.drawArc(rect, 180f, 180f, false, paint)
+                canvas.drawLine(x - s * 0.15f, y, x - s * 0.3f, y - s * 0.4f, paint)
+                canvas.drawLine(x, y - s * 0.05f, x, y - s * 0.5f, paint)
+                canvas.drawLine(x + s * 0.15f, y, x + s * 0.3f, y - s * 0.4f, paint)
+            }
+
+            // Ледник: трещины-разломы во льду.
+            BiomePattern.CREVASSES -> {
+                path.reset()
+                path.moveTo(x - s * 0.8f, y - s * 0.1f)
+                path.lineTo(x - s * 0.3f, y - s * 0.25f)
+                path.lineTo(x + s * 0.1f, y + s * 0.05f)
+                path.lineTo(x + s * 0.7f, y - s * 0.15f)
+                canvas.drawPath(path, paint)
+                canvas.drawLine(x - s * 0.5f, y + s * 0.25f, x + s * 0.3f, y + s * 0.35f, paint)
+            }
+
+            // Предгорья: невысокая вершинка за пологим холмом.
+            BiomePattern.FOOTHILLS -> {
+                canvas.drawLine(x - s * 0.45f, y, x - s * 0.05f, y - s * 0.6f, paint)
+                canvas.drawLine(x - s * 0.05f, y - s * 0.6f, x + s * 0.3f, y - s * 0.05f, paint)
+                rect.set(x - s * 0.9f, y - s * 0.15f, x + s * 0.9f, y + s * 0.65f)
+                canvas.drawArc(rect, 195f, 150f, false, paint)
+            }
+
+            // Карст: воронки провалов и каменные столбы.
+            BiomePattern.KARST -> if (variant < 0.4f) {
+                rect.set(x - s * 0.18f, y - s * 0.7f, x + s * 0.18f, y + s * 0.5f)
+                canvas.drawRoundRect(rect, s * 0.18f, s * 0.18f, paint)
+                canvas.drawLine(x - s * 0.45f, y + s * 0.5f, x + s * 0.45f, y + s * 0.5f, paint)
+            } else {
+                canvas.drawCircle(x, y, s * 0.45f, paint)
+                canvas.drawCircle(x, y, s * 0.18f, paint)
+            }
+
+            // Столовые горы: плоская вершина, отвесные склоны, слои породы.
+            BiomePattern.MESAS -> {
+                path.reset()
+                path.moveTo(x - s * 0.9f, y + s * 0.45f)
+                path.lineTo(x - s * 0.5f, y - s * 0.4f)
+                path.lineTo(x + s * 0.5f, y - s * 0.4f)
+                path.lineTo(x + s * 0.9f, y + s * 0.45f)
+                canvas.drawPath(path, paint)
+                canvas.drawLine(x - s * 0.62f, y - s * 0.1f, x + s * 0.62f, y - s * 0.1f, paint)
+            }
+
+            // Топи: рогоз над открытой водой.
+            BiomePattern.REEDS -> {
+                for (i in -1..1) {
+                    val bx = x + i * s * 0.28f
+                    canvas.drawLine(bx, y + s * 0.4f, bx, y - s * 0.55f + abs(i) * s * 0.15f, paint)
+                    rect.set(bx - s * 0.08f, y - s * 0.6f + abs(i) * s * 0.15f, bx + s * 0.08f, y - s * 0.25f + abs(i) * s * 0.15f)
+                    canvas.drawOval(rect, paint)
+                }
+                canvas.drawLine(x - s * 0.7f, y + s * 0.45f, x - s * 0.35f, y + s * 0.45f, paint)
+                canvas.drawLine(x + s * 0.35f, y + s * 0.45f, x + s * 0.7f, y + s * 0.45f, paint)
+            }
+
+            // Драконьи пустоши: изредка парящий дракон, в остальном — оплавленные камни.
+            BiomePattern.DRAGONS -> if (variant < 0.16f) {
+                val d = s * 2.2f
+                accent(paint, 0xFF7A1E14.toInt(), 1.4f) {
+                    path.reset()
+                    path.moveTo(x - d * 0.8f, y + d * 0.1f)
+                    path.quadTo(x - d * 0.3f, y - d * 0.05f, x, y)
+                    path.quadTo(x + d * 0.35f, y + d * 0.05f, x + d * 0.6f, y - d * 0.15f)
+                    canvas.drawPath(path, paint)
+                    canvas.drawLine(x + d * 0.6f, y - d * 0.15f, x + d * 0.8f, y - d * 0.1f, paint)
+                    path.reset()
+                    path.moveTo(x - d * 0.1f, y)
+                    path.lineTo(x - d * 0.35f, y - d * 0.6f)
+                    path.lineTo(x + d * 0.05f, y - d * 0.35f)
+                    path.lineTo(x + d * 0.2f, y - d * 0.65f)
+                    path.lineTo(x + d * 0.2f, y)
+                    canvas.drawPath(path, paint)
+                    canvas.drawLine(x - d * 0.8f, y + d * 0.1f, x - d * 0.95f, y + d * 0.25f, paint)
+                }
+            } else {
+                canvas.drawLine(x - s * 0.4f, y + s * 0.3f, x - s * 0.1f, y - s * 0.2f, paint)
+                canvas.drawLine(x - s * 0.1f, y - s * 0.2f, x + s * 0.3f, y + s * 0.3f, paint)
+                canvas.drawPoint(x + s * 0.5f, y - s * 0.2f, paint)
+            }
+
+            // Парящие острова: скала-перевёрнутый конус и облачко под ней.
+            BiomePattern.FLOATING -> {
+                path.reset()
+                path.moveTo(x - s * 0.7f, y - s * 0.4f)
+                path.lineTo(x + s * 0.7f, y - s * 0.4f)
+                path.lineTo(x + s * 0.1f, y + s * 0.4f)
+                path.close()
+                canvas.drawPath(path, paint)
+                canvas.drawLine(x - s * 0.3f, y - s * 0.4f, x - s * 0.3f, y - s * 0.7f, paint)
+                rect.set(x - s * 0.9f, y + s * 0.45f, x - s * 0.2f, y + s * 0.85f)
+                canvas.drawArc(rect, 180f, 180f, false, paint)
+                rect.set(x - s * 0.35f, y + s * 0.5f, x + s * 0.35f, y + s * 0.85f)
+                canvas.drawArc(rect, 180f, 180f, false, paint)
+            }
+
+            // Грозовая степь: молнии над травой.
+            BiomePattern.LIGHTNING -> if (variant < 0.3f) {
+                accent(paint, 0xFFE8C530.toInt(), 1.6f) {
+                    path.reset()
+                    path.moveTo(x + s * 0.2f, y - s * 0.9f)
+                    path.lineTo(x - s * 0.2f, y - s * 0.1f)
+                    path.lineTo(x + s * 0.15f, y - s * 0.1f)
+                    path.lineTo(x - s * 0.25f, y + s * 0.8f)
+                    canvas.drawPath(path, paint)
+                }
+            } else {
+                tuft(canvas, x, y, s * 0.8f, paint)
+            }
+
+            // Хищные джунгли: цветы-ловушки с зубастыми челюстями.
+            BiomePattern.FLYTRAPS -> {
+                canvas.drawLine(x, y + s * 0.7f, x, y - s * 0.05f, paint)
+                rect.set(x - s * 0.6f, y - s * 0.75f, x + s * 0.6f, y + s * 0.05f)
+                canvas.drawArc(rect, 200f, 140f, false, paint)
+                canvas.drawArc(rect, 20f, 140f, false, paint)
+                for (i in -1..1) {
+                    canvas.drawLine(x + i * s * 0.25f, y - s * 0.62f, x + i * s * 0.25f, y - s * 0.45f, paint)
+                    canvas.drawLine(x + i * s * 0.25f, y - s * 0.08f, x + i * s * 0.25f, y - s * 0.25f, paint)
+                }
+                canvas.drawLine(x, y + s * 0.3f, x - s * 0.4f, y + s * 0.1f, paint)
+            }
+
+            // Расколотые земли: длинные ломаные разломы с ответвлениями.
+            BiomePattern.FAULTS -> accent(paint, paint.color, 1.5f) {
+                path.reset()
+                path.moveTo(x - s * 1.4f, y - s * 0.3f)
+                path.lineTo(x - s * 0.7f, y + s * 0.1f)
+                path.lineTo(x - s * 0.2f, y - s * 0.2f)
+                path.lineTo(x + s * 0.4f, y + s * 0.3f)
+                path.lineTo(x + s * 1.3f, y + s * 0.05f)
+                canvas.drawPath(path, paint)
+                canvas.drawLine(x - s * 0.2f, y - s * 0.2f, x - s * 0.1f, y - s * 0.75f, paint)
+                canvas.drawLine(x + s * 0.4f, y + s * 0.3f, x + s * 0.55f, y + s * 0.8f, paint)
+            }
+
+            // Кости титанов: огромные рёбра и хребет, изредка.
+            BiomePattern.TITAN_BONES -> if (variant < 0.3f) {
+                val d = s * 2.6f
+                accent(paint, paint.color, 1.6f) {
+                    canvas.drawLine(x - d, y, x + d, y, paint)
+                    for (i in -2..2) {
+                        val bx = x + i * d * 0.32f
+                        val h = d * (0.75f - abs(i) * 0.12f)
+                        rect.set(bx - d * 0.18f, y - h, bx + d * 0.18f, y + h)
+                        canvas.drawArc(rect, 110f, 140f, false, paint)
+                    }
+                    canvas.drawCircle(x + d * 1.1f, y, d * 0.22f, paint)
+                }
+            } else if (variant < 0.55f) {
+                canvas.drawLine(x - s * 0.4f, y, x + s * 0.4f, y, paint)
+                canvas.drawCircle(x - s * 0.45f, y, s * 0.1f, paint)
+                canvas.drawCircle(x + s * 0.45f, y, s * 0.1f, paint)
+            }
+
+            // Плодовый сад: ровные ряды деревьев с плодами.
+            BiomePattern.ORCHARD -> {
+                roundTree(canvas, x, y, s * 0.9f, paint)
+                accent(paint, 0xFFB5402E.toInt(), 1f) {
+                    canvas.drawCircle(x - s * 0.18f, y - s * 0.35f, s * 0.08f, paint)
+                    canvas.drawCircle(x + s * 0.2f, y - s * 0.3f, s * 0.08f, paint)
+                    canvas.drawCircle(x, y - s * 0.55f, s * 0.08f, paint)
+                }
+            }
+
+            // Сады: цветы и живые изгороди.
+            BiomePattern.FLOWERS -> if (variant < 0.35f) {
+                rect.set(x - s * 0.7f, y - s * 0.25f, x + s * 0.7f, y + s * 0.25f)
+                canvas.drawRoundRect(rect, s * 0.25f, s * 0.25f, paint)
+            } else {
+                accent(paint, 0xFFC0507A.toInt(), 1f) {
+                    for (i in 0 until 5) {
+                        val a = i * 1.2566f
+                        canvas.drawCircle(x + cos(a) * s * 0.22f, y + sin(a) * s * 0.22f, s * 0.1f, paint)
+                    }
+                }
+                canvas.drawLine(x, y + s * 0.25f, x, y + s * 0.6f, paint)
+            }
+
+            // Кладбище: ровные ряды надгробий и крестов.
+            BiomePattern.GRAVES -> if (variant < 0.5f) {
+                path.reset()
+                path.moveTo(x - s * 0.3f, y + s * 0.45f)
+                path.lineTo(x - s * 0.3f, y - s * 0.2f)
+                path.quadTo(x - s * 0.3f, y - s * 0.55f, x, y - s * 0.55f)
+                path.quadTo(x + s * 0.3f, y - s * 0.55f, x + s * 0.3f, y - s * 0.2f)
+                path.lineTo(x + s * 0.3f, y + s * 0.45f)
+                canvas.drawPath(path, paint)
+            } else {
+                canvas.drawLine(x, y + s * 0.5f, x, y - s * 0.55f, paint)
+                canvas.drawLine(x - s * 0.3f, y - s * 0.25f, x + s * 0.3f, y - s * 0.25f, paint)
+            }
+
+            else -> Unit
         }
     }
 }

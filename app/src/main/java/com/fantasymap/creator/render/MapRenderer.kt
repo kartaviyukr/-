@@ -9,6 +9,7 @@ import android.graphics.Matrix
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.PathMeasure
+import android.graphics.RadialGradient
 import android.graphics.RectF
 import android.graphics.Shader
 import android.graphics.Typeface
@@ -31,6 +32,7 @@ import com.fantasymap.creator.model.MarkerGroup
 import com.fantasymap.creator.model.MarkerType
 import com.fantasymap.creator.model.Selection
 import com.fantasymap.creator.model.Vec
+import com.fantasymap.creator.model.WaterKind
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.cos
@@ -257,14 +259,145 @@ class MapRenderer {
     private fun drawWaters(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
         for (water in project.waters) {
             if (water.points.size < 3) continue
-            if (!Geometry.bounds(water.points).intersects(visible)) continue
+            val bounds = Geometry.bounds(water.points)
+            if (!bounds.expand(bounds.width * 0.3f).intersects(visible)) continue
+            val center = Geometry.centroid(water.points)
+            val cx = cam.screenX(center.x)
+            val cy = cam.screenY(center.y)
+            val radius = max(bounds.width, bounds.height) * 0.5f * cam.scale
+
+            if (water.kind == WaterKind.CRATER_LAKE) drawCraterRim(canvas, water.points, center, cam, u, radius)
+
             buildPath(water.points, cam, true, path)
-            fill.color = water.kind.color
-            canvas.drawPath(path, fill)
+            when (water.kind) {
+                WaterKind.ENCHANTED_LAKE -> {
+                    // Сияние вокруг и переливы внутри.
+                    stroke.pathEffect = null
+                    stroke.color = 0x55B79CFF
+                    stroke.strokeWidth = 9f * u
+                    canvas.drawPath(path, stroke)
+                    stroke.color = 0x88D8C8FF.toInt()
+                    stroke.strokeWidth = 4f * u
+                    canvas.drawPath(path, stroke)
+                    fill.shader = RadialGradient(
+                        cx, cy, max(1f, radius),
+                        intArrayOf(0xFF9FE8E0.toInt(), 0xFF5E8FC8.toInt(), 0xFF6A4E9E.toInt()),
+                        floatArrayOf(0f, 0.55f, 1f), Shader.TileMode.CLAMP
+                    )
+                    canvas.drawPath(path, fill)
+                    fill.shader = null
+                }
+                WaterKind.HOT_LAKE -> {
+                    // Как горячий источник: бирюза в середине, рыжая кромка.
+                    fill.shader = RadialGradient(
+                        cx, cy, max(1f, radius),
+                        intArrayOf(0xFF2F7FA8.toInt(), 0xFF6FC4B8.toInt(), 0xFFE2B04A.toInt(), 0xFFC0642E.toInt()),
+                        floatArrayOf(0f, 0.45f, 0.8f, 1f), Shader.TileMode.CLAMP
+                    )
+                    canvas.drawPath(path, fill)
+                    fill.shader = null
+                }
+                else -> {
+                    fill.color = water.kind.color
+                    canvas.drawPath(path, fill)
+                }
+            }
             stroke.color = darken(water.kind.color, 0.3f)
             stroke.strokeWidth = 1.6f * u
             stroke.pathEffect = null
             canvas.drawPath(path, stroke)
+
+            when (water.kind) {
+                WaterKind.ENCHANTED_LAKE -> drawSparkles(canvas, water.points, bounds, cam, u, project.style.seed)
+                WaterKind.HOT_LAKE -> drawSteam(canvas, water.points, bounds, cam, u, project.style.seed)
+                else -> Unit
+            }
+        }
+    }
+
+    /** Кольцо гор вокруг кратерного озера. */
+    private fun drawCraterRim(canvas: Canvas, points: List<Vec>, center: Vec, cam: Camera, u: Float, radius: Float) {
+        val rim = points.map { Vec(center.x + (it.x - center.x) * 1.22f, center.y + (it.y - center.y) * 1.22f) }
+        buildPath(rim, cam, true, path2)
+        fill.color = 0xFF9A8A74.toInt()
+        canvas.drawPath(path2, fill)
+        stroke.color = 0xFF6E6252.toInt()
+        stroke.strokeWidth = 1.2f * u
+        stroke.pathEffect = null
+        canvas.drawPath(path2, stroke)
+
+        val ridge = points.map { Vec(center.x + (it.x - center.x) * 1.12f, center.y + (it.y - center.y) * 1.12f) }
+        val screen = ridge.map { Vec(cam.screenX(it.x), cam.screenY(it.y)) }
+        val size = (radius * 0.11f).coerceIn(3f * u, 14f * u)
+        val peaks = Geometry.resample(screen + screen.first(), size * 1.5f)
+        thin.color = 0xFF4E4438.toInt()
+        thin.strokeWidth = max(1f, 1.2f * u)
+        fill.color = 0xFFB2A38C.toInt()
+        for (p in peaks) {
+            path.reset()
+            path.moveTo(p.x - size * 0.8f, p.y + size * 0.45f)
+            path.lineTo(p.x, p.y - size * 0.75f)
+            path.lineTo(p.x + size * 0.8f, p.y + size * 0.45f)
+            canvas.drawPath(path, fill)
+            canvas.drawPath(path, thin)
+            canvas.drawLine(p.x, p.y - size * 0.75f, p.x + size * 0.15f, p.y + size * 0.1f, thin)
+        }
+    }
+
+    /** Искры и звёздочки над зачарованной водой. */
+    private fun drawSparkles(canvas: Canvas, points: List<Vec>, bounds: BBox, cam: Camera, u: Float, seed: Int) {
+        val count = ((bounds.width * bounds.height * cam.scale * cam.scale) / (900f * u * u)).toInt().coerceIn(4, 60)
+        thin.strokeWidth = max(1f, 1.2f * u)
+        var placed = 0
+        var attempt = 0
+        while (placed < count && attempt < count * 4) {
+            attempt++
+            val p = Vec(
+                bounds.minX + Geometry.hashNoise(attempt, 17, seed) * bounds.width,
+                bounds.minY + Geometry.hashNoise(attempt, 91, seed) * bounds.height
+            )
+            if (!Geometry.pointInPolygon(p, points)) continue
+            placed++
+            val sx = cam.screenX(p.x)
+            val sy = cam.screenY(p.y)
+            val r = (2.5f + Geometry.hashNoise(attempt, 5, seed) * 4f) * u
+            thin.color = if (attempt % 3 == 0) 0xFFFFF4B0.toInt() else 0xFFE8FFFF.toInt()
+            canvas.drawLine(sx - r, sy, sx + r, sy, thin)
+            canvas.drawLine(sx, sy - r, sx, sy + r, thin)
+            canvas.drawLine(sx - r * 0.45f, sy - r * 0.45f, sx + r * 0.45f, sy + r * 0.45f, thin)
+            canvas.drawLine(sx + r * 0.45f, sy - r * 0.45f, sx - r * 0.45f, sy + r * 0.45f, thin)
+        }
+    }
+
+    /** Пар и пузыри над горячим озером. */
+    private fun drawSteam(canvas: Canvas, points: List<Vec>, bounds: BBox, cam: Camera, u: Float, seed: Int) {
+        val count = ((bounds.width * bounds.height * cam.scale * cam.scale) / (1600f * u * u)).toInt().coerceIn(3, 40)
+        stroke.pathEffect = null
+        stroke.strokeWidth = max(1.2f, 2f * u)
+        var placed = 0
+        var attempt = 0
+        while (placed < count && attempt < count * 4) {
+            attempt++
+            val p = Vec(
+                bounds.minX + Geometry.hashNoise(attempt, 23, seed) * bounds.width,
+                bounds.minY + Geometry.hashNoise(attempt, 61, seed) * bounds.height
+            )
+            if (!Geometry.pointInPolygon(p, points)) continue
+            placed++
+            val sx = cam.screenX(p.x)
+            val sy = cam.screenY(p.y)
+            val h = (8f + Geometry.hashNoise(attempt, 7, seed) * 8f) * u
+            // Струйка пара — змейкой вверх.
+            stroke.color = 0xB0FFFFFF.toInt()
+            path.reset()
+            path.moveTo(sx, sy)
+            path.cubicTo(sx - h * 0.4f, sy - h * 0.3f, sx + h * 0.4f, sy - h * 0.6f, sx, sy - h)
+            canvas.drawPath(path, stroke)
+            // Пузыри
+            thin.color = 0xCCFFFFFF.toInt()
+            thin.strokeWidth = max(1f, u)
+            canvas.drawCircle(sx + h * 0.35f, sy + h * 0.1f, 1.8f * u, thin)
+            canvas.drawCircle(sx - h * 0.3f, sy + h * 0.2f, 1.2f * u, thin)
         }
     }
 
@@ -342,12 +475,22 @@ class MapRenderer {
                 while (wx < toX && drawn < 3000) {
                     val n1 = Geometry.hashNoise((wx / step).toInt(), (wy / step).toInt(), project.style.seed)
                     val n2 = Geometry.hashNoise((wx / step).toInt() + 71, (wy / step).toInt() - 13, project.style.seed)
-                    if (n1 > 0.22f) {
+                    val n3 = Geometry.hashNoise((wx / step).toInt() - 37, (wy / step).toInt() + 53, project.style.seed)
+                    val pattern = region.biome.pattern
+                    if (pattern.regular) {
+                        // Сады, рощи и кладбища — ровными рядами.
                         glyphs.drawPattern(
-                            canvas, region.biome.pattern,
+                            canvas, pattern,
+                            cam.screenX(wx + step * 0.5f), cam.screenY(wy + step * 0.5f),
+                            glyphSize, thin, n3
+                        )
+                        drawn++
+                    } else if (n1 > 0.22f) {
+                        glyphs.drawPattern(
+                            canvas, pattern,
                             cam.screenX(wx + (n1 - 0.5f) * step * 0.7f),
                             cam.screenY(wy + (n2 - 0.5f) * step * 0.7f),
-                            glyphSize, thin
+                            glyphSize, thin, n3
                         )
                         drawn++
                     }

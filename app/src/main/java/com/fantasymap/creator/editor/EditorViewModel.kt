@@ -346,7 +346,15 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    private fun openProject(loaded: MapProject) {
+    private fun openProject(opened: MapProject) {
+        // Хвойный лес слит с тайгой: старые карты переводятся при открытии.
+        val loaded = if (opened.biomes.any { it.biome.legacy }) {
+            opened.copy(biomes = opened.biomes.map {
+                if (it.biome == BiomeType.CONIFER_FOREST) it.copy(biome = BiomeType.TAIGA) else it
+            })
+        } else {
+            opened
+        }
         project = loaded
         stage = stageFor(loaded.kind, loaded.stage)
         tool = defaultToolFor(stage)
@@ -896,7 +904,11 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             when (tool) {
                 Tool.LAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.CONTINENT, points = smooth)) }
                 Tool.ISLAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.ISLAND, points = smooth)) }
-                Tool.WATER -> edit { it.copy(waters = it.waters + WaterBody(kind = waterKind, points = smooth)) }
+                Tool.WATER -> {
+                    // Кратерное озеро бывает только круглым или овальным.
+                    val shape = if (waterKind == WaterKind.CRATER_LAKE) ovalAround(smooth) else smooth
+                    edit { it.copy(waters = it.waters + WaterBody(kind = waterKind, points = shape)) }
+                }
                 Tool.BIOME -> edit {
                     val asset = customZone
                     it.copy(
@@ -943,6 +955,42 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 else -> Unit
             }
             return
+        }
+    }
+
+    /** Овал, лучше всего описывающий обведённую область: по главным осям разброса точек. */
+    private fun ovalAround(points: List<Vec>): List<Vec> {
+        val cx = points.map { it.x }.average().toFloat()
+        val cy = points.map { it.y }.average().toFloat()
+        var sxx = 0f
+        var syy = 0f
+        var sxy = 0f
+        for (p in points) {
+            val dx = p.x - cx
+            val dy = p.y - cy
+            sxx += dx * dx
+            syy += dy * dy
+            sxy += dx * dy
+        }
+        val angle = 0.5f * kotlin.math.atan2(2f * sxy, sxx - syy)
+        val cosA = cos(angle)
+        val sinA = sin(angle)
+        var ra = 0f
+        var rb = 0f
+        for (p in points) {
+            val dx = p.x - cx
+            val dy = p.y - cy
+            ra = max(ra, kotlin.math.abs(dx * cosA + dy * sinA))
+            rb = max(rb, kotlin.math.abs(-dx * sinA + dy * cosA))
+        }
+        // Обводка пальцем всегда чуть шире задуманного — берём среднее от края.
+        ra *= 0.9f
+        rb *= 0.9f
+        return List(48) { i ->
+            val t = i * 2f * Math.PI.toFloat() / 48
+            val x = cos(t) * ra
+            val y = sin(t) * rb
+            Vec(cx + x * cosA - y * sinA, cy + x * sinA + y * cosA)
         }
     }
 
