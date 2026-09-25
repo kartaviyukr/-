@@ -619,7 +619,10 @@ object CityGenerator {
             streetRows.isNotEmpty() -> {
                 // Ряды домов с двух сторон каждой улицы, между ними — задние дворы.
                 val lines = streetRows.sorted()
-                val road = plan.laneRoad.width * 0.5f
+                // Отступ ряда от оси улицы: полширины улицы, запас проверки,
+                // кривизна улицы и разброс дома — иначе ряд целиком отбраковывается.
+                val road = max(plan.laneRoad.width, plan.mainRoad.width) * 0.5f + unit * 0.06f +
+                    plan.wiggle * unit * 1.25f + plan.jitter * unit * 0.5f
                 val edges = listOf(vMin) + lines + listOf(vMax)
                 for (i in 0 until edges.size - 1) {
                     val top = edges[i]

@@ -18,7 +18,7 @@ class CityGeneratorTest {
     )
 
     private fun fill(type: DistrictType, seed: Int = 7) =
-        CityGenerator.fillDistrict(project, District(type = type, points = square(420f)), 0.5f, seed)
+        CityGenerator.fillDistrict(project, District(id = "test-district", type = type, points = square(420f)), 0.5f, seed)
 
     private fun averageArea(buildings: List<Building>): Float =
         buildings.map { Geometry.area(it.points) }.average().toFloat()
@@ -79,7 +79,7 @@ class CityGeneratorTest {
     @Test
     fun `без улиц — только дома`() {
         val result = CityGenerator.fillDistrict(
-            project, District(type = DistrictType.NEW_TOWN, points = square(420f)), 0.5f, 3, withStreets = false
+            project, District(id = "test-district", type = DistrictType.NEW_TOWN, points = square(420f)), 0.5f, 3, withStreets = false
         )
         assertTrue(result.roads.isEmpty())
         assertTrue(result.buildings.isNotEmpty())
@@ -97,7 +97,7 @@ class CityDensityAndLinksTest {
     @Test
     fun `бедный квартал застроен плотно`() {
         val fill = CityGenerator.fillDistrict(
-            project, District(type = DistrictType.POOR_QUARTER, points = rect(100f, 100f, 420f, 420f)), 0.5f, 5
+            project, District(id = "test-district", type = DistrictType.POOR_QUARTER, points = rect(100f, 100f, 420f, 420f)), 0.5f, 5
         )
         assertTrue("домов: ${fill.buildings.size}", fill.buildings.size >= 100)
     }
@@ -105,7 +105,7 @@ class CityDensityAndLinksTest {
     @Test
     fun `ползунок густоты добавляет дома`() {
         for (type in listOf(DistrictType.POOR_QUARTER, DistrictType.SLUMS, DistrictType.OLD_TOWN)) {
-            val district = District(type = type, points = rect(100f, 100f, 420f, 420f))
+            val district = District(id = "test-district", type = type, points = rect(100f, 100f, 420f, 420f))
             val sparse = CityGenerator.fillDistrict(project, district, 0.1f, 9).buildings.size
             val dense = CityGenerator.fillDistrict(project, district, 0.9f, 9).buildings.size
             assertTrue("$type: $sparse → $dense", dense > sparse)
@@ -114,8 +114,8 @@ class CityDensityAndLinksTest {
 
     @Test
     fun `улицы соседних кварталов соединяются на границе`() {
-        val left = District(type = DistrictType.NEW_TOWN, points = rect(100f, 100f, 420f, 420f))
-        val right = District(type = DistrictType.CRAFT_QUARTER, points = rect(520f, 100f, 420f, 420f))
+        val left = District(id = "test-district", type = DistrictType.NEW_TOWN, points = rect(100f, 100f, 420f, 420f))
+        val right = District(id = "test-district", type = DistrictType.CRAFT_QUARTER, points = rect(520f, 100f, 420f, 420f))
         var state = project.copy(districts = listOf(left, right))
         for (district in listOf(left, right)) {
             val fill = CityGenerator.fillDistrict(state, district, 0.5f, 11)
