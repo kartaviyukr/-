@@ -332,23 +332,38 @@ private fun BuildingPicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit)
 @Composable
 private fun DistrictPicker(viewModel: EditorViewModel) {
     Column {
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 10.dp),
-            verticalAlignment = Alignment.CenterVertically
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 2.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            TextButton(
-                onClick = { viewModel.fillDistrictWithHouses() },
-                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 0.dp)
-            ) {
-                Text("🏘 Застроить квартал домами")
+            item {
+                FilterChip(
+                    selected = false,
+                    onClick = { viewModel.fillDistrictWithHouses() },
+                    label = { Text("🏘 Застроить выбранный") }
+                )
             }
-            Text(
-                "выберите квартал",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
+            item {
+                FilterChip(
+                    selected = false,
+                    onClick = { viewModel.fillAllDistricts() },
+                    label = { Text("🏙 Застроить все") }
+                )
+            }
+            item {
+                FilterChip(
+                    selected = viewModel.fillWithStreets,
+                    onClick = { viewModel.fillWithStreets = !viewModel.fillWithStreets },
+                    label = { Text("с улицами") }
+                )
+            }
+            item {
+                FilterChip(
+                    selected = false,
+                    onClick = { viewModel.alignBiomeBorders() },
+                    label = { Text("⇲ Выровнять границы") }
+                )
+            }
         }
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),

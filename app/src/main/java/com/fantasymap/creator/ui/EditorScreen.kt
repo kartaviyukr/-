@@ -549,7 +549,7 @@ private fun SelectionCard(
                     contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
                 ) { Text("+1") }
             }
-            if (selection is Selection.Biome) {
+            if (selection is Selection.Biome || selection is Selection.DistrictSel) {
                 TextButton(
                     onClick = { viewModel.raiseSelectedZone() },
                     contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)

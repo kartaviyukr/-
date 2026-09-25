@@ -11,6 +11,7 @@ import androidx.lifecycle.viewModelScope
 import com.fantasymap.creator.data.ProjectStore
 import com.fantasymap.creator.geom.CityGenerator
 import com.fantasymap.creator.geom.FragmentCopy
+import com.fantasymap.creator.geom.AlignResult
 import com.fantasymap.creator.geom.PolygonOps
 import com.fantasymap.creator.geom.WorldGenerator
 import com.fantasymap.creator.export.Exporter
@@ -1096,7 +1097,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         }
 
         if (open(MapLayer.DISTRICTS)) current.districts.asReversed()
-            .firstOrNull { Geometry.pointInPolygon(world, it.points) }
+            .firstOrNull { Geometry.pointInContours(world, it.contours()) }
             ?.let { return Selection.DistrictSel(it.id) }
 
         if (open(MapLayer.BIOMES)) current.biomes.asReversed()
@@ -1504,35 +1505,79 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
      */
     fun alignBiomeBorders() {
         val current = project ?: return
-        if (current.biomes.size < 2) {
-            message = "Нужно хотя бы две зоны"
+        val alignBiomes = current.biomes.size >= 2
+        val alignDistricts = current.districts.size >= 2
+        if (!alignBiomes && !alignDistricts) {
+            message = "Нужно хотя бы две зоны или два квартала"
             return
         }
         viewModelScope.launch {
             busy = true
             val minArea = max(30f, current.worldWidth * current.worldHeight * 0.00002f)
             val touchTolerance = max(3f, min(current.worldWidth, current.worldHeight) * 0.004f)
-            val result = withContext(Dispatchers.Default) {
-                PolygonOps.alignZones(current.biomes, minArea, touchTolerance)
+            val (zones, quarters) = withContext(Dispatchers.Default) {
+                val zones = if (alignBiomes) PolygonOps.alignZones(current.biomes, minArea, touchTolerance) else null
+                val quarters = if (alignDistricts) alignDistrictsOf(current.districts, minArea, touchTolerance) else null
+                zones to quarters
             }
             busy = false
-            if (project?.biomes !== current.biomes) {
+            if (project?.biomes !== current.biomes || project?.districts !== current.districts) {
                 message = "Карта изменилась, повторите выравнивание"
                 return@launch
             }
-            if (!result.changed) {
+            val zonesChanged = zones?.changed == true
+            val quartersChanged = quarters?.second?.changed == true
+            if (!zonesChanged && !quartersChanged) {
                 message = "Наложений не найдено — границы уже совпадают"
                 return@launch
             }
             selection = null
-            edit { it.copy(biomes = result.regions) }
+            edit { state ->
+                var next = state
+                if (zones != null && zonesChanged) next = next.copy(biomes = zones.regions)
+                if (quarters != null && quartersChanged) next = next.copy(districts = quarters.first)
+                next
+            }
             message = buildString {
                 append("Границы выровнены")
-                if (result.merged > 0) append(", слито одинаковых: ${result.merged}")
-                if (result.trimmed > 0) append(", подрезано: ${result.trimmed}")
-                if (result.removed > 0) append(", убрано перекрытых: ${result.removed}")
+                val merged = (zones?.merged ?: 0) + (quarters?.second?.merged ?: 0)
+                val trimmed = (zones?.trimmed ?: 0) + (quarters?.second?.trimmed ?: 0)
+                val removed = (zones?.removed ?: 0) + (quarters?.second?.removed ?: 0)
+                if (merged > 0) append(", слито одинаковых: $merged")
+                if (trimmed > 0) append(", подрезано: $trimmed")
+                if (removed > 0) append(", убрано перекрытых: $removed")
+                if (quartersChanged) append(" (кварталы тоже)")
             }
         }
+    }
+
+    /**
+     * Выровнять кварталы теми же правилами, что и природные зоны: последний
+     * нарисованный затирает прежние, соседние кварталы одного рода сливаются.
+     */
+    private fun alignDistrictsOf(
+        districts: List<District>,
+        minArea: Float,
+        touchTolerance: Float
+    ): Pair<List<District>, AlignResult> {
+        val byId = districts.associateBy { it.id }
+        // Род квартала прячется в метку заготовки — так слияние сравнит его, как вид зоны.
+        val asZones = districts.map {
+            BiomeRegion(
+                id = it.id,
+                biome = BiomeType.CITY_YARD,
+                name = it.name,
+                points = it.points,
+                extraContours = it.extraContours,
+                assetId = DISTRICT_KEY + it.type.name
+            )
+        }
+        val result = PolygonOps.alignZones(asZones, minArea, touchTolerance)
+        val back = result.regions.mapNotNull { region ->
+            val original = byId[region.id] ?: return@mapNotNull null
+            original.copy(name = region.name, points = region.points, extraContours = region.extraContours)
+        }
+        return back to result
     }
 
     /**
@@ -1540,6 +1585,13 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
      * что нанесена последней, поэтому наверху зона затирает все остальные.
      */
     fun raiseSelectedZone() {
+        val quarter = selection as? Selection.DistrictSel
+        if (quarter != null) {
+            val district = project?.districts?.firstOrNull { it.id == quarter.id } ?: return
+            edit { state -> state.copy(districts = state.districts.filterNot { it.id == quarter.id } + district) }
+            message = "Квартал наверху — при выравнивании он затирает соседей"
+            return
+        }
         val target = selection as? Selection.Biome ?: return
         val region = project?.biomes?.firstOrNull { it.id == target.id } ?: return
         edit { state -> state.copy(biomes = state.biomes.filterNot { it.id == target.id } + region) }
@@ -1548,6 +1600,13 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     /** Опустить выбранную зону вниз: её затрут все остальные. */
     fun lowerSelectedZone() {
+        val quarter = selection as? Selection.DistrictSel
+        if (quarter != null) {
+            val district = project?.districts?.firstOrNull { it.id == quarter.id } ?: return
+            edit { state -> state.copy(districts = listOf(district) + state.districts.filterNot { it.id == quarter.id }) }
+            message = "Квартал внизу — при выравнивании его затирают соседи"
+            return
+        }
         val target = selection as? Selection.Biome ?: return
         val region = project?.biomes?.firstOrNull { it.id == target.id } ?: return
         edit { state -> state.copy(biomes = listOf(region) + state.biomes.filterNot { it.id == target.id }) }
@@ -1610,6 +1669,9 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
      * Застроить выбранный квартал домами: ряды вдоль ближайшей улицы,
      * с оглядкой на улицы, воду и уже стоящие дома.
      */
+    /** Прокладывать ли улицы при застройке квартала. */
+    var fillWithStreets by mutableStateOf(true)
+
     fun fillDistrictWithHouses() {
         val current = project ?: return
         val target = selection as? Selection.DistrictSel
@@ -1618,19 +1680,52 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             message = "Выберите квартал инструментом «☝ Выбрать» и нажмите ещё раз"
             return
         }
+        fillDistricts(current, listOf(district))
+    }
+
+    /** Застроить разом все кварталы города. */
+    fun fillAllDistricts() {
+        val current = project ?: return
+        if (current.districts.isEmpty()) {
+            message = "Сначала разметьте кварталы"
+            return
+        }
+        fillDistricts(current, current.districts)
+    }
+
+    private fun fillDistricts(current: MapProject, targets: List<District>) {
         viewModelScope.launch {
             busy = true
-            val seed = (System.currentTimeMillis() and 0xFFFF).toInt() + current.buildings.size
-            val houses = withContext(Dispatchers.Default) {
-                CityGenerator.fillDistrict(current, district, buildDensity, seed)
+            val streets = fillWithStreets
+            val result = withContext(Dispatchers.Default) {
+                var state = current
+                var houses = 0
+                var streetCount = 0
+                for ((index, district) in targets.withIndex()) {
+                    val seed = (System.currentTimeMillis() and 0xFFFF).toInt() + state.buildings.size + index * 131
+                    val fill = CityGenerator.fillDistrict(state, district, buildDensity, seed, streets)
+                    houses += fill.buildings.size
+                    streetCount += fill.roads.size
+                    // Сады и площади кладутся под старые зоны, чтобы ничего не затереть.
+                    state = state.copy(
+                        buildings = state.buildings + fill.buildings,
+                        roads = state.roads + fill.roads,
+                        biomes = fill.gardens + state.biomes
+                    )
+                }
+                Triple(state, houses, streetCount)
             }
             busy = false
-            if (houses.isEmpty()) {
+            val (state, houses, streetCount) = result
+            if (houses == 0 && streetCount == 0) {
                 message = "Дома не поместились — квартал мал или весь занят улицами"
                 return@launch
             }
-            edit { it.copy(buildings = it.buildings + houses) }
-            message = "Поставлено домов: ${houses.size}"
+            edit { it.copy(buildings = state.buildings, roads = state.roads, biomes = state.biomes) }
+            message = buildString {
+                append("Поставлено домов: $houses")
+                if (streetCount > 0) append(", улиц: $streetCount")
+            }
         }
     }
 
@@ -2071,6 +2166,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     companion object {
         private const val HISTORY_LIMIT = 40
+        private const val DISTRICT_KEY = "district:"
 
         val COUNTRY_COLORS = listOf(
             0xFFB03A2E.toInt(), 0xFF1F618D.toInt(), 0xFF117A65.toInt(), 0xFF7D6608.toInt(),

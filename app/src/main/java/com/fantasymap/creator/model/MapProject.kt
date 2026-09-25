@@ -113,8 +113,13 @@ data class District(
     val type: DistrictType = DistrictType.OLD_TOWN,
     val name: String = "",
     val description: String = "",
-    val points: List<Vec> = emptyList()
-)
+    val points: List<Vec> = emptyList(),
+    /** Куски и дыры после выравнивания границ — как у природных зон. */
+    val extraContours: List<List<Vec>> = emptyList()
+) {
+    fun contours(): List<List<Vec>> =
+        if (extraContours.isEmpty()) listOf(points) else (listOf(points) + extraContours).filter { it.size >= 3 }
+}
 
 /**
  * Свободная подпись на карте.

@@ -213,7 +213,9 @@ object FragmentCopy {
             .filter { it.points.isNotEmpty() && it.points.all { point -> rect.contains(point) } }
             .map { building -> building.copy(points = building.points.map { move(it) }) }
         val districts = source.districts.flatMap { district ->
-            cutArea(listOf(district.points)).map { piece -> district.copy(id = java.util.UUID.randomUUID().toString(), points = piece) }
+            cutArea(district.contours()).map { piece ->
+                district.copy(id = java.util.UUID.randomUUID().toString(), points = piece, extraContours = emptyList())
+            }
         }
 
         return MapProject(
