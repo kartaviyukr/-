@@ -48,6 +48,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.fantasymap.creator.editor.EditorViewModel
+import com.fantasymap.creator.model.AreaShape
 import com.fantasymap.creator.model.MapKind
 import com.fantasymap.creator.model.Selection
 import com.fantasymap.creator.model.Tool
@@ -556,6 +557,29 @@ private fun SelectionCard(
                     onClick = { viewModel.changeHp(selection.id, 1) },
                     contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
                 ) { Text("+1") }
+            }
+            if (selection is Selection.Biome || selection is Selection.DistrictSel ||
+                selection is Selection.Land || selection is Selection.Water || selection is Selection.FogSel
+            ) {
+                Box {
+                    var shapeMenu by remember { mutableStateOf(false) }
+                    TextButton(
+                        onClick = { shapeMenu = true },
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                    ) { Text("◇") }
+                    DropdownMenu(expanded = shapeMenu, onDismissRequest = { shapeMenu = false }) {
+                        for (shape in AreaShape.entries) {
+                            if (shape == AreaShape.FREE) continue
+                            DropdownMenuItem(
+                                text = { Text("${shape.icon} ${shape.title}") },
+                                onClick = {
+                                    shapeMenu = false
+                                    viewModel.reshapeSelection(shape)
+                                }
+                            )
+                        }
+                    }
+                }
             }
             if (selection is Selection.Biome || selection is Selection.DistrictSel) {
                 TextButton(

@@ -52,6 +52,7 @@ import com.fantasymap.creator.model.LabelStyle
 import com.fantasymap.creator.model.LineFeatureType
 import com.fantasymap.creator.model.RoadType
 import com.fantasymap.creator.model.Stage
+import com.fantasymap.creator.model.AreaShape
 import com.fantasymap.creator.model.Tool
 import com.fantasymap.creator.model.WaterKind
 
@@ -106,6 +107,7 @@ fun EditorBottomPanel(
                 if (viewModel.stage == Stage.CONTINENTS || viewModel.stage == com.fantasymap.creator.model.CityStage.GROUND) {
                     LandBaseRow(viewModel)
                 }
+                if (viewModel.toolDrawsArea()) AreaShapeRow(viewModel)
                 ContextPicker(viewModel, onOpenCountries, onOpenAssets, onBattleDialog)
                 // Пустое место под последней строкой: до неё легко дотянуться,
                 // и она не прячется за системной панелью навигации.
@@ -113,6 +115,23 @@ fun EditorBottomPanel(
             } else {
                 Spacer(Modifier.height(14.dp))
             }
+        }
+    }
+}
+
+/** Форма области: от руки или ровная фигура. */
+@Composable
+private fun AreaShapeRow(viewModel: EditorViewModel) {
+    LazyRow(
+        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 2.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        items(AreaShape.entries.toList()) { item ->
+            FilterChip(
+                selected = viewModel.areaShape == item,
+                onClick = { viewModel.areaShape = item },
+                label = { Text("${item.icon} ${item.title}") }
+            )
         }
     }
 }
@@ -445,7 +464,7 @@ private fun RoadPicker(viewModel: EditorViewModel) {
                 onClick = { viewModel.connectDistrictStreets() },
                 contentPadding = PaddingValues(horizontal = 14.dp, vertical = 0.dp)
             ) {
-                Text("🔗 Соединить улицы на границах кварталов")
+                Text("🔗 Свести улицы в одну сеть")
             }
         }
         LazyRow(

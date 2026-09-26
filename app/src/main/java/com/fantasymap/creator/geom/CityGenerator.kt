@@ -235,6 +235,80 @@ object CityGenerator {
             skip = 0.65f, bigShare = 0.3f, streets = StreetPattern.PATHS,
             laneRoad = RoadType.ALLEY, wiggle = 0.9f
         )
+        // Гномий квартал: каменные дома по линейке, длинные прямые улицы, кузни.
+        DistrictType.DWARF_QUARTER -> DistrictPlan(
+            size = 0.9f, gap = 0.05f, rowGap = 0.2f, jitter = 0f, tilt = 0f,
+            skip = 0.04f, bigShare = 0.15f, landmark = BuildingType.DWARVEN_FORGE,
+            streets = StreetPattern.GRID, blockDepth = 2.8f, blockLength = 9f,
+            mainRoad = RoadType.MAIN_STREET, laneRoad = RoadType.LANE, wiggle = 0f,
+            aspect = 0.05f, plaza = BiomeType.CITY_TILED_PLAZA, setback = 0.03f
+        )
+        // Эльфийский квартал: дома в садах вдоль плавных тропинок.
+        DistrictType.ELVEN_QUARTER -> DistrictPlan(
+            size = 1.05f, gap = 0.9f, rowGap = 1f, jitter = 0.4f, tilt = 0.3f,
+            skip = 0.25f, bigShare = 0.25f, streets = StreetPattern.PATHS,
+            laneRoad = RoadType.LANE, wiggle = 1f, aspect = 0.2f,
+            gardens = BiomeType.CITY_GARDEN, setback = 0.3f
+        )
+        // Воровской квартал: тесные кривые закоулки, тупики и притоны.
+        DistrictType.THIEVES_QUARTER -> DistrictPlan(
+            size = 0.75f, gap = 0.04f, rowGap = 0.15f, jitter = 0.3f, tilt = 0.3f,
+            skip = 0.05f, bigShare = 0.05f, landmark = BuildingType.THIEVES_GUILD,
+            streets = StreetPattern.CROOKED, blockDepth = 3.2f, blockLength = 3.5f,
+            mainRoad = RoadType.LANE, laneRoad = RoadType.ALLEY, wiggle = 0.7f,
+            deadEnds = 0.4f, aspect = 0.35f, landmarkScale = 1.8f
+        )
+        // Купеческий квартал: широкие улицы, крупные дома с дворами и складами.
+        DistrictType.MERCHANT_QUARTER -> DistrictPlan(
+            size = 1.25f, gap = 0.25f, rowGap = 0.5f, jitter = 0.05f, tilt = 0.02f,
+            skip = 0.08f, bigShare = 0.3f, landmark = BuildingType.AUCTION_HOUSE,
+            streets = StreetPattern.GRID, blockDepth = 3.8f, blockLength = 6f,
+            mainRoad = RoadType.MAIN_STREET, laneRoad = RoadType.STREET, wiggle = 0.05f,
+            aspect = 0.2f, gardens = BiomeType.CITY_YARD, plaza = BiomeType.CITY_SQUARE, setback = 0.15f
+        )
+        // Рыбацкая слобода: хижины кучками вдоль кривых тропок к воде.
+        DistrictType.FISHER_QUARTER -> DistrictPlan(
+            size = 0.7f, gap = 0.35f, rowGap = 0.5f, jitter = 0.45f, tilt = 0.45f,
+            skip = 0.15f, bigShare = 0.08f, streets = StreetPattern.CROOKED,
+            blockDepth = 3.6f, blockLength = 5f, mainRoad = RoadType.LANE, laneRoad = RoadType.ALLEY,
+            wiggle = 0.8f, deadEnds = 0.3f, aspect = 0.4f
+        )
+        // Квартал каналов: вода вместо главных улиц, высокие дома вплотную.
+        DistrictType.CANAL_QUARTER -> DistrictPlan(
+            size = 0.9f, gap = 0.03f, rowGap = 0.15f, jitter = 0.03f, tilt = 0.02f,
+            skip = 0.04f, bigShare = 0.1f, streets = StreetPattern.GRID,
+            blockDepth = 3f, blockLength = 7f, mainRoad = RoadType.CITY_CANAL_WAY, laneRoad = RoadType.LANE,
+            wiggle = 0.12f, aspect = 0.15f, setback = 0.03f
+        )
+        // Проклятый квартал: заброшенные дома, склепы, всё вкривь.
+        DistrictType.CURSED_QUARTER -> DistrictPlan(
+            size = 0.95f, gap = 0.4f, rowGap = 0.6f, jitter = 0.4f, tilt = 0.35f,
+            skip = 0.3f, bigShare = 0.15f, landmark = BuildingType.DEATH_TEMPLE,
+            streets = StreetPattern.CROOKED, blockDepth = 3.6f, blockLength = 4.5f,
+            laneRoad = RoadType.ALLEY, wiggle = 0.6f, deadEnds = 0.35f, aspect = 0.3f,
+            gardens = BiomeType.CITY_GRAVEYARD
+        )
+        // Разорённый квартал: остовы домов и пустыри вдоль старых улиц.
+        DistrictType.RUINED_QUARTER -> DistrictPlan(
+            size = 0.95f, gap = 0.3f, rowGap = 0.5f, jitter = 0.3f, tilt = 0.25f,
+            skip = 0.35f, bigShare = 0.1f, streets = StreetPattern.GRID,
+            blockDepth = 3.4f, blockLength = 5f, laneRoad = RoadType.LANE, wiggle = 0.3f,
+            deadEnds = 0.25f, aspect = 0.25f
+        )
+        // Слобода: дворы с огородами вдоль пары длинных улиц.
+        DistrictType.SUBURB -> DistrictPlan(
+            size = 1f, gap = 0.7f, rowGap = 0.9f, jitter = 0.25f, tilt = 0.12f,
+            skip = 0.18f, bigShare = 0.2f, streets = StreetPattern.TERRACES,
+            blockDepth = 4.6f, blockLength = 16f, mainRoad = RoadType.STREET, laneRoad = RoadType.LANE,
+            wiggle = 0.35f, aspect = 0.2f, gardens = BiomeType.CITY_VEGETABLE, setback = 0.25f
+        )
+        // Квартал воздухоплавателей: причальные башни и склады вокруг площади.
+        DistrictType.SKY_QUARTER -> DistrictPlan(
+            size = 1.2f, gap = 0.5f, rowGap = 0.7f, jitter = 0.1f, tilt = 0.05f,
+            skip = 0.15f, bigShare = 0.35f, landmark = BuildingType.AIRSHIP_DOCK,
+            streets = StreetPattern.RADIAL, mainRoad = RoadType.STREET, laneRoad = RoadType.LANE,
+            plaza = BiomeType.CITY_SQUARE, landmarkScale = 2.6f
+        )
     }
 
     /**
@@ -369,6 +443,38 @@ object CityGenerator {
             return true
         }
 
+        /** Поставить дом с произвольным поворотом — вдоль кривой улицы. */
+        fun placeAt(type: BuildingType, center: Vec, width: Float, depth: Float, turn: Float, behind: Float): Boolean {
+            if (!inside(center)) return false
+            val footprint = rect(center, width, depth, turn)
+            if (footprint.any { !inside(it) }) return false
+            var u0 = Float.MAX_VALUE
+            var u1 = -Float.MAX_VALUE
+            var v0 = Float.MAX_VALUE
+            var v1 = -Float.MAX_VALUE
+            for (corner in footprint) {
+                val local = toLocal(corner)
+                u0 = min(u0, local.x)
+                u1 = max(u1, local.x)
+                v0 = min(v0, local.y)
+                v1 = max(v1, local.y)
+            }
+            // Повёрнутый дом занимает рамку шире себя — сжимаем её к середине.
+            val shrinkU = (u1 - u0 - width) * 0.35f
+            val shrinkV = (v1 - v0 - depth) * 0.35f
+            u0 += max(0f, shrinkU); u1 -= max(0f, shrinkU)
+            v0 += max(0f, shrinkV); v1 -= max(0f, shrinkV)
+            if (!free(u0, u1, v0, v1)) return false
+            if (blocked(allRoads, project, footprint, unit * 0.04f)) return false
+            taken.add(floatArrayOf(u0, u1, v0, v1))
+            placed.add(Building(type = type, points = footprint))
+            if (type.big && plan.gardens != null) {
+                val local = toLocal(center)
+                addGarden(local.x, local.y, width, depth, behind)
+            }
+            return true
+        }
+
         /** Зеркальная застройка: дом ставится и по другую сторону аллеи. */
         fun placeMaybeMirrored(type: BuildingType, u: Float, v: Float, width: Float, depth: Float, tilt: Float, behind: Float) {
             val ok = place(type, u, v, width, depth, tilt, behind)
@@ -454,7 +560,8 @@ object CityGenerator {
             }
             for (point in sampled) {
                 val local = toLocal(point)
-                val nearCenter = plazaRadius > 0f && sqrt(local.x * local.x + local.y * local.y) < plazaRadius * 0.8f
+                val nearCenter = plazaRadius > 0f &&
+                    sqrt(local.x * local.x / 1.3225f + local.y * local.y) < plazaRadius * 0.98f
                 if (inside(point) && !nearCenter) run.add(point) else flush()
             }
             flush()
@@ -570,6 +677,26 @@ object CityGenerator {
                 }
                 StreetPattern.NONE -> Unit
             }
+            // Улица вокруг площади или главного здания: в неё упираются все улицы.
+            if (plazaRadius > 0f && roads.isNotEmpty()) {
+                val ring = List(41) { i ->
+                    val a = i * 2f * PI.toFloat() / 40
+                    Vec(cos(a) * plazaRadius * 1.15f, sin(a) * plazaRadius)
+                }
+                val saved = plazaRadius
+                plazaRadius = 0f
+                addStreet(ring, plan.laneRoad)
+                plazaRadius = saved
+            }
+            // Одна сеть: хвостики обрезаны, концы дотянуты, куски связаны.
+            if (roads.isNotEmpty()) {
+                val welded = StreetNetwork.weld(
+                    roads, project.roads,
+                    stub = unit * 0.8f, snap = unit * 1.1f, ray = unit * 2f, link = unit * 4f
+                )
+                roads.clear()
+                roads.addAll(welded)
+            }
         }
         allRoads = project.roads + roads
 
@@ -593,6 +720,57 @@ object CityGenerator {
                 // v — линия фасадов: дома стоят лицом к улице, вглубь квартала.
                 placeMaybeMirrored(type, u + width * 0.5f + jitterU, v + behind * depth * 0.5f + jitterV, width, depth, tilt, behind)
                 u += width + gap * (0.7f + random.nextFloat() * 0.8f)
+            }
+        }
+
+        // Дома лицом к улице вдоль каждой улицы квартала, повторяя её изгибы.
+        if (roads.isNotEmpty() && !plan.mirror) {
+            for (road in roads) {
+                val line = Geometry.resample(road.points, unit * 0.2f)
+                if (line.size < 2) continue
+                val offset = road.type.width * 0.5f + unit * (0.07f + plan.setback)
+                for (side in intArrayOf(-1, 1)) {
+                    var along = random.nextFloat() * gap
+                    var walked = 0f
+                    var k = 0
+                    while (k < line.size - 1 && guard < GUARD_LIMIT) {
+                        guard++
+                        val a = line[k]
+                        val b = line[k + 1]
+                        val step = a.distanceTo(b)
+                        if (walked + step < along) {
+                            walked += step
+                            k++
+                            continue
+                        }
+                        val t = if (step > 0.0001f) (along - walked) / step else 0f
+                        val px = a.x + (b.x - a.x) * t
+                        val py = a.y + (b.y - a.y) * t
+                        // Направление улицы усредняется по соседним точкам.
+                        val back = line[max(0, k - 2)]
+                        val ahead = line[min(line.size - 1, k + 3)]
+                        val dirAngle = atan2(ahead.y - back.y, ahead.x - back.x)
+                        if (random.nextFloat() < skipChance * 0.8f) {
+                            along += unit * (0.6f + random.nextFloat() * 1.2f)
+                            continue
+                        }
+                        val type = pickType()
+                        val (width, depth) = houseSize(type)
+                        val nx = -sin(dirAngle) * side
+                        val ny = cos(dirAngle) * side
+                        val jitter = random.nextFloat() * unit * plan.jitter * 0.3f
+                        val center = Vec(
+                            px + cos(dirAngle) * width * 0.5f + nx * (offset + depth * 0.5f + jitter),
+                            py + sin(dirAngle) * width * 0.5f + ny * (offset + depth * 0.5f + jitter)
+                        )
+                        val tilt = (random.nextFloat() - 0.5f) * plan.tilt * 0.5f
+                        if (placeAt(type, center, width, depth, dirAngle + tilt, side.toFloat())) {
+                            along += width + gap * (0.6f + random.nextFloat() * 0.8f)
+                        } else {
+                            along += unit * 0.3f
+                        }
+                    }
+                }
             }
         }
 
@@ -659,115 +837,49 @@ object CityGenerator {
         val links: Int
     )
 
-    private class StreetEnd(val road: Int, val atStart: Boolean, val point: Vec, val dirX: Float, val dirY: Float)
-
     /**
-     * Соединить улицы соседних кварталов на их границе.
+     * Свести все улицы города в одну сеть.
      *
-     * Трогаются только оборванные концы улиц рядом с границей квартала:
-     * конец дотягивается до конца соседней улицы или упирается в ближайшую
-     * улицу по ту сторону. Длина связки ограничена, так что дальние улицы
-     * не перекраиваются; сносятся только дома, стоящие прямо на связке.
+     * Хвостики за перекрёстками обрезаются, оборванные концы у границ кварталов
+     * дотягиваются до соседней улицы (конец к концу или буквой Т), а оторванные
+     * куски сети соединяются с основной короткой связкой. Длина связки ограничена,
+     * так что дальние улицы не перекраиваются; сносятся только дома прямо на связке.
      */
     fun connectStreets(project: MapProject): StreetLinks {
-        val roads = project.roads.toMutableList()
         val unit = min(project.worldWidth, project.worldHeight) * 0.0165f
         val maxGap = unit * 5f
         val borders = project.districts.flatMap { it.contours() }.filter { it.size >= 3 }
-
         fun nearBorder(p: Vec): Boolean =
             borders.isEmpty() || borders.any { Geometry.distanceToPolygonOutline(p, it) <= maxGap }
 
-        // Оборванные концы: рядом нет другой улицы.
-        val ends = ArrayList<StreetEnd>()
-        for ((index, road) in roads.withIndex()) {
-            val pts = road.points
-            if (pts.size < 2) continue
-            for (atStart in listOf(true, false)) {
-                val p = if (atStart) pts.first() else pts.last()
-                val q = if (atStart) pts[1] else pts[pts.size - 2]
-                val touching = roads.withIndex().any { (other, candidate) ->
-                    other != index && candidate.points.size >= 2 &&
-                        Geometry.distanceToPolyline(p, candidate.points) <= candidate.type.width * 0.5f + road.type.width
-                }
-                if (touching || !nearBorder(p)) continue
-                val dx = p.x - q.x
-                val dy = p.y - q.y
-                val len = max(0.0001f, sqrt(dx * dx + dy * dy))
-                ends.add(StreetEnd(index, atStart, p, dx / len, dy / len))
+        val before = project.roads.associateBy { it.id }
+        val welded = StreetNetwork.weld(
+            project.roads, emptyList(),
+            stub = unit * 0.8f, snap = maxGap, ray = maxGap * 1.2f, link = maxGap * 1.6f,
+            allowEnd = ::nearBorder
+        )
+
+        // Новые куски улиц: всё, чего не было раньше.
+        val fresh = ArrayList<Pair<Vec, Vec>>()
+        for (road in welded) {
+            val old = before[road.id]
+            val known = old?.points?.toHashSet() ?: emptySet()
+            if (old != null && old.points == road.points) continue
+            for (k in 0 until road.points.size - 1) {
+                val a = road.points[k]
+                val b = road.points[k + 1]
+                if (a !in known || b !in known) fresh.add(a to b)
             }
         }
-
-        fun facing(end: StreetEnd, target: Vec): Float {
-            val dx = target.x - end.point.x
-            val dy = target.y - end.point.y
-            val len = max(0.0001f, sqrt(dx * dx + dy * dy))
-            return (dx * end.dirX + dy * end.dirY) / len
-        }
-
-        val links = ArrayList<Pair<StreetEnd, Vec>>()
-        val used = HashSet<StreetEnd>()
-
-        // 1. Конец к концу: две улицы смотрят друг на друга через границу.
-        data class Candidate(val a: StreetEnd, val b: StreetEnd, val score: Float)
-        val pairs = ArrayList<Candidate>()
-        for (i in ends.indices) {
-            for (j in i + 1 until ends.size) {
-                val a = ends[i]
-                val b = ends[j]
-                if (a.road == b.road) continue
-                val distance = a.point.distanceTo(b.point)
-                if (distance > maxGap) continue
-                val fa = facing(a, b.point)
-                val fb = facing(b, a.point)
-                // Совсем рядом — соединяем и вбок, издалека — только если смотрят друг на друга.
-                val close = distance < unit * 2.5f
-                if (close && (fa < -0.3f || fb < -0.3f)) continue
-                if (!close && (fa < 0.1f || fb < 0.1f)) continue
-                pairs.add(Candidate(a, b, distance * (2.2f - fa - fb)))
-            }
-        }
-        for (candidate in pairs.sortedBy { it.score }) {
-            if (candidate.a in used || candidate.b in used) continue
-            used.add(candidate.a)
-            used.add(candidate.b)
-            links.add(candidate.a to candidate.b.point)
-        }
-
-        // 2. Конец упирается в ближайшую улицу: перекрёсток буквой Т.
-        for (end in ends) {
-            if (end in used) continue
-            var best: Vec? = null
-            var bestDistance = maxGap * 0.8f
-            for ((index, road) in roads.withIndex()) {
-                if (index == end.road || road.points.size < 2) continue
-                for (k in 0 until road.points.size - 1) {
-                    val q = closestOnSegment(end.point, road.points[k], road.points[k + 1])
-                    val distance = end.point.distanceTo(q)
-                    if (distance < bestDistance && facing(end, q) > 0.35f) {
-                        bestDistance = distance
-                        best = q
-                    }
-                }
-            }
-            val target = best ?: continue
-            used.add(end)
-            links.add(end to target)
-        }
-
-        // Удлинить улицы и снести дома, стоящие прямо на связке.
         val removed = HashSet<String>()
-        for ((end, target) in links) {
-            val road = roads[end.road]
-            val points = road.points.toMutableList()
-            if (end.atStart) points.add(0, target) else points.add(target)
-            roads[end.road] = road.copy(points = points)
+        for ((a, b) in fresh) {
             for (building in project.buildings) {
                 if (building.id in removed || building.points.size < 3) continue
-                if (segmentHitsPolygon(end.point, target, building.points)) removed.add(building.id)
+                if (segmentHitsPolygon(a, b, building.points)) removed.add(building.id)
             }
         }
-        return StreetLinks(roads, removed, links.size)
+        val changed = welded.count { before[it.id]?.points != it.points }
+        return StreetLinks(welded, removed, changed)
     }
 
     private fun closestOnSegment(p: Vec, a: Vec, b: Vec): Vec {
@@ -988,6 +1100,55 @@ object CityGenerator {
             BuildingType.TREEHOUSE, BuildingType.GREENHOUSE,
             BuildingType.BATH_HOUSE_CITY, BuildingType.RICH_HOUSE, BuildingType.DOVECOTE,
             BuildingType.STORYTELLER_STAGE, BuildingType.SHRINE_HOUSE
+        )
+        DistrictType.DWARF_QUARTER -> listOf(
+            BuildingType.HOUSE, BuildingType.HOUSE, BuildingType.STONECUTTER, BuildingType.SMITHY,
+            BuildingType.DWARVEN_FORGE, BuildingType.BREWERY, BuildingType.TOWER_HOUSE,
+            BuildingType.ARMOURER, BuildingType.JEWELLER, BuildingType.GUILD_HOUSE, BuildingType.WAREHOUSE
+        )
+        DistrictType.ELVEN_QUARTER -> listOf(
+            BuildingType.TREEHOUSE, BuildingType.TREEHOUSE, BuildingType.RICH_HOUSE, BuildingType.GREENHOUSE,
+            BuildingType.SHRINE_HOUSE, BuildingType.HEALER, BuildingType.BARD_COLLEGE, BuildingType.MUSIC_HALL,
+            BuildingType.ENCHANTER, BuildingType.HOUSE
+        )
+        DistrictType.THIEVES_QUARTER -> listOf(
+            BuildingType.HOUSE, BuildingType.TENEMENT, BuildingType.HOUSE, BuildingType.SMUGGLERS_DEN,
+            BuildingType.BLACK_MARKET, BuildingType.GAMBLING_DEN, BuildingType.TAVERN, BuildingType.PLEASURE_HOUSE,
+            BuildingType.ABANDONED_HOUSE, BuildingType.LOCKSMITH, BuildingType.FIGHTING_PIT, BuildingType.HUT
+        )
+        DistrictType.MERCHANT_QUARTER -> listOf(
+            BuildingType.RICH_HOUSE, BuildingType.RICH_HOUSE, BuildingType.TALL_HOUSE, BuildingType.WAREHOUSE,
+            BuildingType.BANK_HOUSE, BuildingType.GUILD_HOUSE, BuildingType.MANOR, BuildingType.SPICE_SHOP,
+            BuildingType.INN_HOUSE, BuildingType.CUSTOMS, BuildingType.JEWELLER, BuildingType.TREASURY
+        )
+        DistrictType.FISHER_QUARTER -> listOf(
+            BuildingType.HUT, BuildingType.HUT, BuildingType.HOUSE, BuildingType.FISH_MARKET,
+            BuildingType.DOCK_HOUSE, BuildingType.TAVERN, BuildingType.SHACK_ROW, BuildingType.SMUGGLERS_DEN,
+            BuildingType.SHIPYARD_HOUSE, BuildingType.SHRINE_HOUSE
+        )
+        DistrictType.CANAL_QUARTER -> listOf(
+            BuildingType.TALL_HOUSE, BuildingType.TALL_HOUSE, BuildingType.HOUSE, BuildingType.SHOP,
+            BuildingType.WAREHOUSE, BuildingType.RICH_HOUSE, BuildingType.BANK_HOUSE, BuildingType.GLASSBLOWER,
+            BuildingType.TAVERN, BuildingType.WATER_GATE_HOUSE
+        )
+        DistrictType.CURSED_QUARTER -> listOf(
+            BuildingType.HAUNTED_HOUSE, BuildingType.ABANDONED_HOUSE, BuildingType.VAMPIRE_MANOR,
+            BuildingType.CRYPT_HOUSE, BuildingType.PLAGUE_HOUSE, BuildingType.WITCH_HOUSE,
+            BuildingType.RUINED_HOUSE, BuildingType.DEATH_TEMPLE, BuildingType.BURNT_HOUSE
+        )
+        DistrictType.RUINED_QUARTER -> listOf(
+            BuildingType.RUINED_HOUSE, BuildingType.BURNT_HOUSE, BuildingType.ABANDONED_HOUSE,
+            BuildingType.RUINED_HOUSE, BuildingType.RUINED_TOWER, BuildingType.HUT, BuildingType.PLAGUE_HOUSE
+        )
+        DistrictType.SUBURB -> listOf(
+            BuildingType.HOUSE, BuildingType.HOUSE, BuildingType.FARMSTEAD_HOUSE, BuildingType.HUT,
+            BuildingType.GRANARY, BuildingType.STABLE, BuildingType.TAVERN, BuildingType.MILL_HOUSE,
+            BuildingType.CHAPEL, BuildingType.DOVECOTE
+        )
+        DistrictType.SKY_QUARTER -> listOf(
+            BuildingType.AIRSHIP_DOCK, BuildingType.GRIFFON_AERIE, BuildingType.WAREHOUSE, BuildingType.TALL_HOUSE,
+            BuildingType.HOUSE, BuildingType.SIGNAL_TOWER, BuildingType.TAVERN, BuildingType.CARTOGRAPHER,
+            BuildingType.DRAGON_ROOST, BuildingType.GOLEM_WORKSHOP
         )
     }
 }

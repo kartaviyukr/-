@@ -1,9 +1,12 @@
 package com.fantasymap.creator.model
 
 import kotlinx.serialization.Serializable
+import kotlin.math.PI
 import kotlin.math.abs
+import kotlin.math.cos
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.math.sin
 import kotlin.math.sqrt
 
 /** Точка/вектор в мировых координатах карты. */
@@ -233,6 +236,38 @@ object Geometry {
     }
 
     /** Сглаживание Чайкина для замкнутого контура. */
+    /**
+     * Правильная фигура, растянутая пальцем от угла [start] до угла [end].
+     * Квадрат, круг и многоугольники — в квадрате со стороной по большей стороне рамки.
+     */
+    fun areaShape(shape: AreaShape, start: Vec, end: Vec): List<Vec> {
+        var dx = end.x - start.x
+        var dy = end.y - start.y
+        if (shape == AreaShape.SQUARE || shape == AreaShape.CIRCLE ||
+            shape == AreaShape.HEXAGON || shape == AreaShape.OCTAGON
+        ) {
+            val side = max(abs(dx), abs(dy))
+            dx = if (dx < 0f) -side else side
+            dy = if (dy < 0f) -side else side
+        }
+        val cx = start.x + dx / 2f
+        val cy = start.y + dy / 2f
+        val rx = abs(dx) / 2f
+        val ry = abs(dy) / 2f
+        fun ring(count: Int, turn: Float): List<Vec> = List(count) { i ->
+            val a = turn + i * 2f * PI.toFloat() / count
+            Vec(cx + cos(a) * rx, cy + sin(a) * ry)
+        }
+        return when (shape) {
+            AreaShape.FREE, AreaShape.RECT, AreaShape.SQUARE -> listOf(
+                Vec(cx - rx, cy - ry), Vec(cx + rx, cy - ry), Vec(cx + rx, cy + ry), Vec(cx - rx, cy + ry)
+            )
+            AreaShape.CIRCLE, AreaShape.ELLIPSE -> ring(64, 0f)
+            AreaShape.HEXAGON -> ring(6, 0f)
+            AreaShape.OCTAGON -> ring(8, PI.toFloat() / 8f)
+        }
+    }
+
     fun smoothClosed(points: List<Vec>, iterations: Int = 2): List<Vec> {
         if (points.size < 4 || iterations <= 0) return points
         var current = points

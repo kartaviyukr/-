@@ -28,6 +28,7 @@ import com.fantasymap.creator.model.LineFeature
 import com.fantasymap.creator.model.LineFeatureType
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.model.Marker
+import com.fantasymap.creator.model.Road
 import com.fantasymap.creator.model.MarkerGroup
 import com.fantasymap.creator.model.MarkerType
 import com.fantasymap.creator.model.Selection
@@ -78,6 +79,7 @@ class MapRenderer {
     private val glyphs = Glyphs()
     private val path = Path()
     private val path2 = Path()
+    private val roofs = RoofPainter { builtinTexture(it) }
     private val rectF = RectF()
 
     private val fill = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.FILL }
@@ -505,6 +507,12 @@ class MapRenderer {
     // ---------------------------------------------------------------- линии
 
     private fun drawLines(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
+        // Стены рисуются вместе, слоями: сначала все контуры, потом тела, потом башни, —
+        // так стыки разных стен сливаются, а не перечёркиваются контуром.
+        val walls = project.lines.filter {
+            it.points.size >= 2 && !it.type.battle && wallLook(it.type) != null &&
+                Geometry.bounds(it.points).expand(it.effectiveWidth * 3f).intersects(visible)
+        }
         for (feature in project.lines) {
             if (feature.points.size < 2) continue
             if (!Geometry.bounds(feature.points).intersects(visible)) continue
@@ -512,7 +520,8 @@ class MapRenderer {
                 drawBattleLine(canvas, feature, cam, project.style.seed)
                 continue
             }
-            when (feature.type) {
+            val isWall = wallLook(feature.type) != null
+            if (!isWall) when (feature.type) {
                 LineFeatureType.RIVER, LineFeatureType.BIG_RIVER,
                 LineFeatureType.STREAM, LineFeatureType.CANAL -> drawRiver(canvas, feature, cam, u)
                 LineFeatureType.MOUNTAIN_RANGE -> drawRidge(canvas, feature, cam, u, project.style.seed, true)
@@ -542,24 +551,29 @@ class MapRenderer {
                 LineFeatureType.RUINED_WALL,
                 LineFeatureType.WOODEN_WALL,
                 LineFeatureType.CITY_AQUEDUCT -> drawWallLine(canvas, feature, cam, u)
-                LineFeatureType.DRY_MOAT,
-                LineFeatureType.SPIKE_DITCH -> drawCanyon(canvas, feature, cam, u)
+                LineFeatureType.DRY_MOAT -> drawDitch(canvas, feature, cam, u, false)
+                LineFeatureType.SPIKE_DITCH -> drawDitch(canvas, feature, cam, u, true)
                 LineFeatureType.HEDGE_WALL -> drawForestBelt(canvas, feature, cam, u, project.style.seed)
-                LineFeatureType.MAGIC_WARD -> drawDots(canvas, feature, cam, u)
+                LineFeatureType.MAGIC_WARD -> drawMagicWard(canvas, feature, cam, u, project.style.seed)
                 else -> drawWallLine(canvas, feature, cam, u)
             }
-            if (feature.name.isNotBlank()) {
-                val size = 13f * u * cam.scale.coerceIn(0.7f, 1.8f)
-                val color = darken(feature.type.color, 0.35f)
-                if (!drawTextAlongPath(canvas, feature.name, feature.points, cam, size, color, true)) {
-                    val mid = feature.points[feature.points.size / 2]
-                    drawMapText(
-                        canvas, feature.name,
-                        cam.screenX(mid.x), cam.screenY(mid.y) - 8f * u,
-                        size, color, true
-                    )
-                }
-            }
+            if (!isWall) drawLineName(canvas, feature, cam, u)
+        }
+        drawWalls(canvas, walls, cam, u)
+        for (feature in walls) drawLineName(canvas, feature, cam, u)
+    }
+
+    private fun drawLineName(canvas: Canvas, feature: LineFeature, cam: Camera, u: Float) {
+        if (feature.name.isBlank()) return
+        val size = 13f * u * cam.scale.coerceIn(0.7f, 1.8f)
+        val color = darken(feature.type.color, 0.35f)
+        if (!drawTextAlongPath(canvas, feature.name, feature.points, cam, size, color, true)) {
+            val mid = feature.points[feature.points.size / 2]
+            drawMapText(
+                canvas, feature.name,
+                cam.screenX(mid.x), cam.screenY(mid.y) - 8f * u,
+                size, color, true
+            )
         }
     }
 
@@ -688,7 +702,9 @@ class MapRenderer {
         val crenels: Boolean = true,
         val wood: Boolean = false,
         val ruined: Boolean = false,
-        val double: Boolean = false
+        val double: Boolean = false,
+        /** Частокол: заострённые брёвна без башен. */
+        val stakes: Boolean = false
     )
 
     private fun wallLook(type: LineFeatureType): WallLook? = when (type) {
@@ -698,45 +714,243 @@ class MapRenderer {
         LineFeatureType.INNER_WALL -> WallLook(1.2f, TowerStyle.SQUARE, 13f, 1.05f)
         LineFeatureType.DOUBLE_WALL -> WallLook(1.0f, TowerStyle.ROUND, 7f, 1.5f, double = true)
         LineFeatureType.RUINED_WALL -> WallLook(1.3f, TowerStyle.SQUARE, 9f, ruined = true)
-        LineFeatureType.PALISADE -> WallLook(1.3f, TowerStyle.WOOD, 12f, 1.1f, crenels = false, wood = true)
+        LineFeatureType.PALISADE -> WallLook(1.3f, TowerStyle.NONE, 12f, 1.1f, crenels = false, wood = true, stakes = true)
         LineFeatureType.WOODEN_WALL -> WallLook(1.3f, TowerStyle.WOOD, 9f, 1.2f, crenels = false, wood = true)
         LineFeatureType.GREAT_WALL -> WallLook(1.2f, TowerStyle.SQUARE, 10f, 1.4f)
         LineFeatureType.ICE_WALL -> WallLook(1.2f, TowerStyle.SQUARE, 10f, 1.35f)
         else -> null
     }
 
-    /**
-     * Крепостная стена сверху: тёмный контур, каменное тело, дорожка по гребню,
-     * зубцы с наружной стороны и башни на углах и через равные промежутки.
-     */
+    /** Линия без облика крепостной стены — акведук; сами стены рисует [drawWalls]. */
     private fun drawWallLine(canvas: Canvas, feature: LineFeature, cam: Camera, u: Float) {
-        val look = wallLook(feature.type)
-        if (look == null) {
-            drawAqueduct(canvas, feature, cam, u)
-            return
+        if (wallLook(feature.type) == null) drawAqueduct(canvas, feature, cam, u)
+    }
+
+    /**
+     * Ров: тёмное дно между двумя откосами. У рва с кольями по обоим
+     * берегам торчат заострённые колья, наклонённые наружу.
+     */
+    private fun drawDitch(canvas: Canvas, feature: LineFeature, cam: Camera, u: Float, stakes: Boolean) {
+        val w = if (urbanScale) max(3f, feature.effectiveWidth * cam.scale) else max(3f, feature.effectiveWidth * 0.6f * u)
+        val screen = feature.points.map { Vec(cam.screenX(it.x), cam.screenY(it.y)) }
+        val color = feature.type.color
+        screenPath(screen, false, path)
+        stroke.pathEffect = null
+        stroke.strokeJoin = Paint.Join.ROUND
+        stroke.strokeCap = Paint.Cap.ROUND
+        // Откосы и дно
+        stroke.color = darken(color, 0.35f)
+        stroke.strokeWidth = w * 1.15f
+        canvas.drawPath(path, stroke)
+        stroke.color = lighten(color, 0.1f)
+        stroke.strokeWidth = w
+        canvas.drawPath(path, stroke)
+        stroke.color = darken(color, 0.28f)
+        stroke.strokeWidth = w * 0.42f
+        canvas.drawPath(path, stroke)
+        if (!stakes) return
+        val step = max(3f, w * 0.42f)
+        val pts = Geometry.resample(screen, step)
+        if (pts.size < 2) return
+        fill.color = 0xFF8A6A42.toInt()
+        thin.color = darken(0xFF5A4028.toInt(), 0.2f)
+        thin.strokeWidth = max(0.7f, w * 0.05f)
+        for (i in pts.indices) {
+            val a = pts[max(0, i - 1)]
+            val b = pts[min(pts.size - 1, i + 1)]
+            val dx = b.x - a.x
+            val dy = b.y - a.y
+            val len = max(0.001f, kotlin.math.sqrt(dx * dx + dy * dy))
+            val tx = dx / len
+            val ty = dy / len
+            for (side in intArrayOf(-1, 1)) {
+                val nx = -ty * side
+                val ny = tx * side
+                val shift = if (i % 2 == 0) 0.2f else -0.2f
+                val baseX = pts[i].x + nx * w * 0.3f + tx * w * shift * 0.5f
+                val baseY = pts[i].y + ny * w * 0.3f + ty * w * shift * 0.5f
+                val tipX = baseX + nx * w * 0.55f + tx * w * 0.12f
+                val tipY = baseY + ny * w * 0.55f + ty * w * 0.12f
+                val half = w * 0.08f
+                path2.reset()
+                path2.moveTo(baseX - tx * half, baseY - ty * half)
+                path2.lineTo(tipX, tipY)
+                path2.lineTo(baseX + tx * half, baseY + ty * half)
+                path2.close()
+                canvas.drawPath(path2, fill)
+                canvas.drawPath(path2, thin)
+            }
         }
-        val points = feature.points
-        if (points.size < 2) return
-        val w = if (urbanScale) {
+    }
+
+    /**
+     * Магический барьер: мерцающая завеса — широкое свечение, светлая
+     * сердцевина, а вдоль неё вращающиеся руны и искры.
+     */
+    private fun drawMagicWard(canvas: Canvas, feature: LineFeature, cam: Camera, u: Float, seed: Int) {
+        val w = if (urbanScale) max(3f, feature.effectiveWidth * cam.scale) else max(3f, feature.effectiveWidth * 0.6f * u)
+        val screen = feature.points.map { Vec(cam.screenX(it.x), cam.screenY(it.y)) }
+        val color = feature.type.color
+        val closed = feature.type.closedLoop ||
+            (screen.size > 3 && screen.first().distanceTo(screen.last()) < w * 2.5f)
+        screenPath(screen, closed, path)
+        stroke.pathEffect = null
+        stroke.strokeJoin = Paint.Join.ROUND
+        stroke.strokeCap = Paint.Cap.ROUND
+        stroke.color = withAlpha(lighten(color, 0.2f), 45)
+        stroke.strokeWidth = w * 2.6f
+        canvas.drawPath(path, stroke)
+        stroke.color = withAlpha(color, 90)
+        stroke.strokeWidth = w * 1.4f
+        canvas.drawPath(path, stroke)
+        // Переливы завесы — две волнистые нити по бокам.
+        stroke.strokeWidth = max(0.8f, w * 0.12f)
+        stroke.color = withAlpha(lighten(color, 0.45f), 200)
+        for (side in intArrayOf(-1, 1)) {
+            screenPath(offsetPolyline(screen, side * w * 0.5f, closed), closed, path2)
+            stroke.pathEffect = DashPathEffect(floatArrayOf(w * 1.6f, w * 0.7f), side * w * 0.8f)
+            canvas.drawPath(path2, stroke)
+        }
+        stroke.pathEffect = null
+        stroke.color = withAlpha(0xFFFFFFFF.toInt(), 230)
+        stroke.strokeWidth = max(1f, w * 0.22f)
+        canvas.drawPath(path, stroke)
+        // Руны: ромбы со знаком внутри, между ними искры.
+        val pts = Geometry.resample(screen, max(10f, w * 3.2f))
+        thin.color = darken(color, 0.25f)
+        thin.strokeWidth = max(0.8f, w * 0.1f)
+        for ((i, p) in pts.withIndex()) {
+            val r = w * 0.55f
+            if (i % 2 == 0) {
+                fill.color = withAlpha(lighten(color, 0.55f), 235)
+                path2.reset()
+                path2.moveTo(p.x, p.y - r)
+                path2.lineTo(p.x + r * 0.7f, p.y)
+                path2.lineTo(p.x, p.y + r)
+                path2.lineTo(p.x - r * 0.7f, p.y)
+                path2.close()
+                canvas.drawPath(path2, fill)
+                canvas.drawPath(path2, thin)
+                val k = ((i * 7 + seed) and 3)
+                when (k) {
+                    0 -> canvas.drawLine(p.x, p.y - r * 0.5f, p.x, p.y + r * 0.5f, thin)
+                    1 -> {
+                        canvas.drawLine(p.x - r * 0.3f, p.y - r * 0.3f, p.x + r * 0.3f, p.y + r * 0.3f, thin)
+                        canvas.drawLine(p.x + r * 0.3f, p.y - r * 0.3f, p.x - r * 0.3f, p.y + r * 0.3f, thin)
+                    }
+                    2 -> canvas.drawCircle(p.x, p.y, r * 0.25f, thin)
+                    else -> {
+                        canvas.drawLine(p.x, p.y - r * 0.5f, p.x, p.y + r * 0.5f, thin)
+                        canvas.drawLine(p.x, p.y - r * 0.1f, p.x + r * 0.3f, p.y - r * 0.4f, thin)
+                    }
+                }
+            } else {
+                fill.color = withAlpha(0xFFFFFFFF.toInt(), 220)
+                val s = w * 0.35f
+                path2.reset()
+                path2.moveTo(p.x, p.y - s)
+                path2.lineTo(p.x + s * 0.25f, p.y - s * 0.25f)
+                path2.lineTo(p.x + s, p.y)
+                path2.lineTo(p.x + s * 0.25f, p.y + s * 0.25f)
+                path2.lineTo(p.x, p.y + s)
+                path2.lineTo(p.x - s * 0.25f, p.y + s * 0.25f)
+                path2.lineTo(p.x - s, p.y)
+                path2.lineTo(p.x - s * 0.25f, p.y - s * 0.25f)
+                path2.close()
+                canvas.drawPath(path2, fill)
+            }
+        }
+    }
+
+    /** Стена в экранных координатах, готовая к рисованию слоями. */
+    private class WallDraft(
+        val look: WallLook,
+        val bodies: List<Pair<List<Vec>, Float>>,
+        val closed: Boolean,
+        val color: Int,
+        val towerLine: List<Vec>,
+        val towerWidth: Float
+    )
+
+    private fun wallWidth(feature: LineFeature, look: WallLook, cam: Camera, u: Float): Float =
+        if (urbanScale) {
             max(2f, feature.effectiveWidth * look.thickness * cam.scale)
         } else {
             max(2.5f, feature.effectiveWidth * 0.55f * look.thickness * u)
         }
-        val screen = points.map { Vec(cam.screenX(it.x), cam.screenY(it.y)) }
-        val closed = feature.type.closedLoop ||
-            (screen.size > 3 && screen.first().distanceTo(screen.last()) < w * 2.5f)
-        val color = feature.type.color
 
-        if (look.double) {
-            val outer = offsetPolyline(screen, w * 1.05f, closed)
-            val inner = offsetPolyline(screen, -w * 1.05f, closed)
-            drawWallBody(canvas, inner, closed, w * 0.8f, color, look)
-            drawWallBody(canvas, outer, closed, w, color, look)
-            drawTowers(canvas, outer, closed, w, color, look, u)
-        } else {
-            drawWallBody(canvas, screen, closed, w, color, look)
-            drawTowers(canvas, screen, closed, w, color, look, u)
+    /**
+     * Крепостные стены сверху: тёмный контур, каменное тело, дорожка по гребню,
+     * зубцы с наружной стороны и башни на углах и через равные промежутки.
+     * Оборванный конец стены, подошедший к другой стене, дотягивается до неё.
+     */
+    private fun drawWalls(canvas: Canvas, walls: List<LineFeature>, cam: Camera, u: Float) {
+        if (walls.isEmpty()) return
+        val screens = walls.map { f -> f.points.map { Vec(cam.screenX(it.x), cam.screenY(it.y)) } }
+        val drafts = ArrayList<WallDraft>()
+        for ((index, feature) in walls.withIndex()) {
+            val look = wallLook(feature.type) ?: continue
+            val w = wallWidth(feature, look, cam, u)
+            var screen = screens[index]
+            val closed = feature.type.closedLoop ||
+                (screen.size > 3 && screen.first().distanceTo(screen.last()) < w * 2.5f)
+            if (!closed) screen = snapWallEnds(screen, screens, index, w)
+            val color = feature.type.color
+            val bodies = if (look.double) {
+                listOf(
+                    offsetPolyline(screen, -w * 1.05f, closed) to w * 0.8f,
+                    offsetPolyline(screen, w * 1.05f, closed) to w
+                )
+            } else {
+                listOf(screen to w)
+            }
+            val towerLine = if (look.double) bodies[1].first else screen
+            drafts.add(WallDraft(look, bodies, closed, color, towerLine, w))
         }
+        for (draft in drafts) {
+            for ((points, w) in draft.bodies) drawWallOutline(canvas, points, draft.closed, w, draft.color, draft.look)
+        }
+        for (draft in drafts) {
+            for ((points, w) in draft.bodies) drawWallBody(canvas, points, draft.closed, w, draft.color, draft.look)
+        }
+        for (draft in drafts) {
+            drawTowers(canvas, draft.towerLine, draft.closed, draft.towerWidth, draft.color, draft.look, u)
+        }
+    }
+
+    /** Дотянуть свободные концы стены до соседней стены, если они совсем рядом. */
+    private fun snapWallEnds(points: List<Vec>, screens: List<List<Vec>>, self: Int, w: Float): List<Vec> {
+        if (points.size < 2) return points
+        val reach = max(10f, w * 2.2f)
+        fun snap(end: Vec): Vec? {
+            var best: Vec? = null
+            var bestDistance = reach
+            for ((index, other) in screens.withIndex()) {
+                if (index == self || other.size < 2) continue
+                for (k in 0 until other.size - 1) {
+                    val q = closestPoint(end, other[k], other[k + 1])
+                    val d = end.distanceTo(q)
+                    if (d < bestDistance) {
+                        bestDistance = d
+                        best = q
+                    }
+                }
+            }
+            return best
+        }
+        val result = points.toMutableList()
+        snap(points.first())?.let { if (it.distanceTo(points.first()) > 0.5f) result.add(0, it) }
+        snap(points.last())?.let { if (it.distanceTo(points.last()) > 0.5f) result.add(it) }
+        return result
+    }
+
+    private fun closestPoint(p: Vec, a: Vec, b: Vec): Vec {
+        val dx = b.x - a.x
+        val dy = b.y - a.y
+        val lengthSq = dx * dx + dy * dy
+        if (lengthSq < 0.0001f) return a
+        val t = (((p.x - a.x) * dx + (p.y - a.y) * dy) / lengthSq).coerceIn(0f, 1f)
+        return Vec(a.x + dx * t, a.y + dy * t)
     }
 
     private fun screenPath(points: List<Vec>, closed: Boolean, out: Path): Path {
@@ -783,6 +997,27 @@ class MapRenderer {
         }
     }
 
+    private fun wallStroke(points: List<Vec>, closed: Boolean, w: Float, look: WallLook) {
+        screenPath(points, closed, path)
+        stroke.strokeJoin = Paint.Join.ROUND
+        stroke.strokeCap = if (closed) Paint.Cap.BUTT else Paint.Cap.SQUARE
+        stroke.pathEffect = if (look.ruined) {
+            DashPathEffect(floatArrayOf(w * 7f, w * 2.2f, w * 3f, w * 1.6f), 0f)
+        } else {
+            null
+        }
+    }
+
+    private fun drawWallOutline(canvas: Canvas, points: List<Vec>, closed: Boolean, w: Float, color: Int, look: WallLook) {
+        wallStroke(points, closed, w, look)
+        stroke.color = darken(color, 0.5f)
+        stroke.strokeWidth = w * 1.3f
+        canvas.drawPath(path, stroke)
+        stroke.pathEffect = null
+        stroke.strokeJoin = Paint.Join.ROUND
+        stroke.strokeCap = Paint.Cap.ROUND
+    }
+
     private fun drawWallBody(
         canvas: Canvas,
         points: List<Vec>,
@@ -791,19 +1026,9 @@ class MapRenderer {
         color: Int,
         look: WallLook
     ) {
-        screenPath(points, closed, path)
-        stroke.strokeJoin = Paint.Join.MITER
-        stroke.strokeCap = if (closed) Paint.Cap.BUTT else Paint.Cap.SQUARE
-        stroke.pathEffect = if (look.ruined) {
-            DashPathEffect(floatArrayOf(w * 7f, w * 2.2f, w * 3f, w * 1.6f), 0f)
-        } else {
-            null
-        }
+        wallStroke(points, closed, w, look)
 
-        // Тёмный контур и тело стены
-        stroke.color = darken(color, 0.5f)
-        stroke.strokeWidth = w * 1.3f
-        canvas.drawPath(path, stroke)
+        // Тело стены (тёмный контур всех стен нарисован раньше)
         stroke.color = color
         stroke.strokeWidth = w
         canvas.drawPath(path, stroke)
@@ -812,6 +1037,29 @@ class MapRenderer {
             // Частокол сверху — торцы брёвен.
             stroke.pathEffect = null
             val logs = Geometry.resample(points, max(2f, w * 0.75f))
+            if (look.stakes && logs.size >= 2) {
+                // Заострённые верхушки брёвен наружу — частокол, а не деревянная стена.
+                fill.color = lighten(color, 0.1f)
+                thin.color = darken(color, 0.45f)
+                thin.strokeWidth = max(0.8f, w * 0.1f)
+                for (i in logs.indices) {
+                    val a = logs[max(0, i - 1)]
+                    val b = logs[min(logs.size - 1, i + 1)]
+                    val dx = b.x - a.x
+                    val dy = b.y - a.y
+                    val len = max(0.001f, kotlin.math.sqrt(dx * dx + dy * dy))
+                    val nx = dy / len
+                    val ny = -dx / len
+                    val p = logs[i]
+                    path2.reset()
+                    path2.moveTo(p.x - dx / len * w * 0.36f, p.y - dy / len * w * 0.36f)
+                    path2.lineTo(p.x + nx * w * 0.85f, p.y + ny * w * 0.85f)
+                    path2.lineTo(p.x + dx / len * w * 0.36f, p.y + dy / len * w * 0.36f)
+                    path2.close()
+                    canvas.drawPath(path2, fill)
+                    canvas.drawPath(path2, thin)
+                }
+            }
             for (p in logs) {
                 fill.color = lighten(color, 0.18f)
                 canvas.drawCircle(p.x, p.y, w * 0.42f, fill)
@@ -1050,31 +1298,13 @@ class MapRenderer {
                 continue
             }
 
-            fill.color = building.type.color
-            canvas.drawPath(path, fill)
+            // Крыша: своя текстура, форма и деталь у каждого вида постройки.
+            val screen = points.map { Vec(cam.screenX(it.x), cam.screenY(it.y)) }
+            roofs.draw(canvas, path, screen, building.type, inkColor, u)
             stroke.color = inkColor
             stroke.strokeWidth = max(0.7f, 1.05f * u)
             stroke.pathEffect = null
             canvas.drawPath(path, stroke)
-
-            // Конёк крыши — вдоль длинной стороны дома.
-            if (points.size == 4 && screenSize > 6f) {
-                val first = middle(points[0], points[1])
-                val second = middle(points[2], points[3])
-                val third = middle(points[1], points[2])
-                val fourth = middle(points[3], points[0])
-                val along = if (first.distanceTo(second) >= third.distanceTo(fourth)) {
-                    first to second
-                } else {
-                    third to fourth
-                }
-                stroke.color = darken(building.type.color, 0.32f)
-                stroke.strokeWidth = max(0.7f, 1.1f * u)
-                canvas.drawLine(
-                    cam.screenX(along.first.x), cam.screenY(along.first.y),
-                    cam.screenX(along.second.x), cam.screenY(along.second.y), stroke
-                )
-            }
 
             val mark = building.type.mark
             if (mark != null && screenSize > 13f) {
@@ -1105,40 +1335,68 @@ class MapRenderer {
 
     // ---------------------------------------------------------------- дороги
 
+    /**
+     * Дороги и улицы слоями: сначала светлая обочина всех улиц одним полупрозрачным
+     * слоем, потом тёмные края, потом полотно — от узких к широким. Так перекрёстки
+     * сливаются в одну сеть, а не перечёркивают друг друга.
+     */
     private fun drawRoads(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
-        for (road in project.roads) {
-            if (road.points.size < 2) continue
-            if (!Geometry.bounds(road.points).intersects(visible)) continue
-            buildPath(road.points, cam, false, path)
-            // На карте города улицы в единицах карты — растут вместе с домами.
-            val width = if (project.kind == MapKind.WORLD) {
-                max(1f, road.type.width * u * cam.scale.coerceIn(0.4f, 2f))
-            } else {
-                max(1f, road.type.width * cam.scale)
+        val roads = project.roads.filter {
+            it.points.size >= 2 && Geometry.bounds(it.points).intersects(visible)
+        }
+        if (roads.isEmpty()) return
+        val city = project.kind != MapKind.WORLD
+        // На карте города улицы в единицах карты — растут вместе с домами.
+        fun widthOf(road: Road): Float = if (!city) {
+            max(1f, road.type.width * u * cam.scale.coerceIn(0.4f, 2f))
+        } else {
+            max(1f, road.type.width * cam.scale)
+        }
+        val paths = roads.map { buildPath(it.points, cam, false, Path()) }
+        val solid = roads.indices.filter { !roads[it].type.dashed }.sortedBy { roads[it].type.width }
+        stroke.pathEffect = null
+        stroke.strokeCap = Paint.Cap.ROUND
+        stroke.strokeJoin = Paint.Join.ROUND
+
+        if (solid.isNotEmpty()) {
+            val layer = canvas.saveLayerAlpha(null, 160)
+            stroke.color = 0xFFF2E6C8.toInt()
+            for (i in solid) {
+                stroke.strokeWidth = widthOf(roads[i]) * 2.1f
+                canvas.drawPath(paths[i], stroke)
             }
-            if (!road.type.dashed) {
-                stroke.color = withAlpha(0xFFF2E6C8.toInt(), 160)
-                stroke.strokeWidth = width * 2.1f
-                stroke.pathEffect = null
-                canvas.drawPath(path, stroke)
+            canvas.restoreToCount(layer)
+            if (city) {
+                for (i in solid) {
+                    stroke.color = darken(roads[i].type.color, 0.3f)
+                    stroke.strokeWidth = widthOf(roads[i]) * 1.22f
+                    canvas.drawPath(paths[i], stroke)
+                }
             }
+            for (i in solid) {
+                stroke.color = roads[i].type.color
+                stroke.strokeWidth = widthOf(roads[i])
+                canvas.drawPath(paths[i], stroke)
+            }
+        }
+        for (i in roads.indices) {
+            val road = roads[i]
+            if (!road.type.dashed) continue
+            val width = widthOf(road)
             stroke.color = road.type.color
             stroke.strokeWidth = width
-            stroke.pathEffect = if (road.type.dashed) {
-                DashPathEffect(floatArrayOf(width * 2.6f, width * 2.2f), 0f)
-            } else {
-                null
-            }
-            canvas.drawPath(path, stroke)
-            stroke.pathEffect = null
-            if (road.name.isNotBlank()) {
-                val mid = road.points[road.points.size / 2]
-                drawMapText(
-                    canvas, road.name,
-                    cam.screenX(mid.x), cam.screenY(mid.y) - 6f * u,
-                    12f * u, darken(road.type.color, 0.3f), true
-                )
-            }
+            stroke.pathEffect = DashPathEffect(floatArrayOf(width * 2.6f, width * 2.2f), 0f)
+            canvas.drawPath(paths[i], stroke)
+        }
+        stroke.pathEffect = null
+        for (road in roads) {
+            if (road.name.isBlank()) continue
+            val mid = road.points[road.points.size / 2]
+            drawMapText(
+                canvas, road.name,
+                cam.screenX(mid.x), cam.screenY(mid.y) - 6f * u,
+                12f * u, darken(road.type.color, 0.3f), true
+            )
         }
     }
 

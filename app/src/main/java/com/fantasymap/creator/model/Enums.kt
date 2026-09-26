@@ -1187,6 +1187,17 @@ fun stageFor(kind: MapKind, number: Int): MapStage = when (kind) {
 }
 
 /** Инструмент рисования. */
+/** Как рисуется область: от руки или правильной фигурой по диагонали. */
+enum class AreaShape(val title: String, val icon: String) {
+    FREE("От руки", "✎"),
+    RECT("Прямоугольник", "▭"),
+    SQUARE("Квадрат", "□"),
+    CIRCLE("Круг", "○"),
+    ELLIPSE("Овал", "⬭"),
+    HEXAGON("Шестиугольник", "⬡"),
+    OCTAGON("Восьмиугольник", "⯃")
+}
+
 enum class Tool(val title: String, val icon: String) {
     PAN("Перемещение", "✋"),
     SELECT("Выбрать", "☝"),
@@ -1445,5 +1456,15 @@ enum class DistrictType(val title: String, val color: Int) {
     GUILD_QUARTER("Квартал гильдий", 0xFFC2A67E.toInt()),
     FARM_QUARTER("Огороды и хозяйства", 0xFFB7C08E.toInt()),
     GRAVE_QUARTER("Кладбище", 0xFF9EA396.toInt()),
-    PARK_QUARTER("Парк и сады", 0xFFA4C08C.toInt())
+    PARK_QUARTER("Парк и сады", 0xFFA4C08C.toInt()),
+    DWARF_QUARTER("Гномий квартал", 0xFFA89A8A.toInt()),
+    ELVEN_QUARTER("Эльфийский квартал", 0xFF9CC096.toInt()),
+    THIEVES_QUARTER("Воровской квартал", 0xFF8E8478.toInt()),
+    MERCHANT_QUARTER("Купеческий квартал", 0xFFD6BE84.toInt()),
+    FISHER_QUARTER("Рыбацкая слобода", 0xFF9EB4B0.toInt()),
+    CANAL_QUARTER("Квартал каналов", 0xFF9DB8C8.toInt()),
+    CURSED_QUARTER("Проклятый квартал", 0xFF8A7E8E.toInt()),
+    RUINED_QUARTER("Разорённый квартал", 0xFF9A9082.toInt()),
+    SUBURB("Слобода", 0xFFBDBF94.toInt()),
+    SKY_QUARTER("Квартал воздухоплавателей", 0xFFA6B4CC.toInt())
 }

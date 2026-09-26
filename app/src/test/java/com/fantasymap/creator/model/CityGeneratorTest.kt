@@ -117,8 +117,9 @@ class CityDensityAndLinksTest {
         val left = District(id = "test-district", type = DistrictType.NEW_TOWN, points = rect(100f, 100f, 420f, 420f))
         val right = District(id = "test-district", type = DistrictType.CRAFT_QUARTER, points = rect(520f, 100f, 420f, 420f))
         var state = project.copy(districts = listOf(left, right))
+        // Кварталы застроены порознь — каждый ничего не знает об улицах соседа.
         for (district in listOf(left, right)) {
-            val fill = CityGenerator.fillDistrict(state, district, 0.5f, 11)
+            val fill = CityGenerator.fillDistrict(project.copy(districts = listOf(left, right)), district, 0.5f, 11)
             state = state.copy(buildings = state.buildings + fill.buildings, roads = state.roads + fill.roads)
         }
         val links = CityGenerator.connectStreets(state)
@@ -128,4 +129,13 @@ class CityDensityAndLinksTest {
             assertTrue(after.points.size - before.points.size <= 2)
         }
     }
+
+    @Test
+    fun `старый город застроен густо`() {
+        val fill = CityGenerator.fillDistrict(
+            project, District(id = "test-district", type = DistrictType.OLD_TOWN, points = rect(100f, 100f, 420f, 420f)), 0.5f, 5
+        )
+        assertTrue("домов: ${fill.buildings.size}", fill.buildings.size >= 60)
+    }
+
 }

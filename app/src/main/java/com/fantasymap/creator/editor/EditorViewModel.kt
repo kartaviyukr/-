@@ -25,6 +25,7 @@ import com.fantasymap.creator.model.BiomeRegion
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
+import com.fantasymap.creator.model.AreaShape
 import com.fantasymap.creator.model.BattleStage
 import com.fantasymap.creator.model.CityStage
 import com.fantasymap.creator.model.Condition
@@ -105,6 +106,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var roadType by mutableStateOf(RoadType.ROAD)
     var labelStyle by mutableStateOf(LabelStyle.REGION)
     var waterKind by mutableStateOf(WaterKind.LAKE)
+    var areaShape by mutableStateOf(AreaShape.FREE)
     var buildingType by mutableStateOf(BuildingType.HOUSE)
     var buildingGroup by mutableStateOf(BuildingGroup.HOME)
     var districtType by mutableStateOf(DistrictType.OLD_TOWN)
@@ -157,6 +159,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         private set
 
     private var fragmentStart: Vec? = null
+    private var shapeStart: Vec? = null
 
     var canUndo by mutableStateOf(false)
         private set
@@ -705,6 +708,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         if (!toolDrawsArea() && !toolDrawsLine()) return
         draft.clear()
         draft.add(world)
+        if (toolDrawsArea() && areaShape != AreaShape.FREE) shapeStart = world
     }
 
     fun extendStroke(world: Vec) {
@@ -720,6 +724,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             draft.add(first)
             draft.add(world)
             rulerText = measure(first, world)
+            return
+        }
+        val shapeFrom = shapeStart
+        if (shapeFrom != null) {
+            draft.clear()
+            draft.addAll(Geometry.areaShape(areaShape, shapeFrom, world))
             return
         }
         val start = fragmentStart
@@ -781,6 +791,17 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             fragmentRect = bounds
             return
         }
+        if (shapeStart != null) {
+            shapeStart = null
+            val points = draft.toList()
+            draft.clear()
+            if (points.size < 3 || Geometry.area(points) < 40f) {
+                message = "Протяните фигуру пальцем по диагонали побольше"
+                return
+            }
+            commitArea(points)
+            return
+        }
         if (draft.isEmpty()) return
         val points = draft.toList()
         draft.clear()
@@ -792,6 +813,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         rulerText = null
         draggingSelection = null
         fragmentStart = null
+        shapeStart = null
     }
 
     /** Отменить выделение фрагмента. */
@@ -885,6 +907,36 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         openProject(target)
     }
 
+    /** Добавить нарисованную область на карту текущим инструментом. */
+    private fun commitArea(smooth: List<Vec>) {
+        when (tool) {
+            Tool.LAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.CONTINENT, points = smooth)) }
+            Tool.ISLAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.ISLAND, points = smooth)) }
+            Tool.WATER -> {
+                // Кратерное озеро бывает только круглым или овальным.
+                val shape = if (waterKind == WaterKind.CRATER_LAKE) ovalAround(smooth) else smooth
+                edit { it.copy(waters = it.waters + WaterBody(kind = waterKind, points = shape)) }
+            }
+            Tool.BIOME -> edit {
+                val asset = customZone
+                it.copy(
+                    biomes = it.biomes + BiomeRegion(
+                        biome = biome,
+                        name = if (asset != null) asset.title else "",
+                        points = smooth,
+                        assetId = asset?.id
+                    )
+                )
+            }
+            Tool.COUNTRY -> addCountryArea(smooth)
+            Tool.DISTRICT -> edit {
+                it.copy(districts = it.districts + District(type = districtType, points = smooth))
+            }
+            Tool.FOG -> edit { it.copy(fog = it.fog + FogArea(points = smooth)) }
+            else -> Unit
+        }
+    }
+
     private fun commitStroke(rawPoints: List<Vec>) {
         project ?: return
         val tolerance = max(1.5f, 2.5f / camera.scale)
@@ -901,32 +953,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 message = "Область слишком мала"
                 return
             }
-            when (tool) {
-                Tool.LAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.CONTINENT, points = smooth)) }
-                Tool.ISLAND -> edit { it.copy(landmasses = it.landmasses + Landmass(kind = LandKind.ISLAND, points = smooth)) }
-                Tool.WATER -> {
-                    // Кратерное озеро бывает только круглым или овальным.
-                    val shape = if (waterKind == WaterKind.CRATER_LAKE) ovalAround(smooth) else smooth
-                    edit { it.copy(waters = it.waters + WaterBody(kind = waterKind, points = shape)) }
-                }
-                Tool.BIOME -> edit {
-                    val asset = customZone
-                    it.copy(
-                        biomes = it.biomes + BiomeRegion(
-                            biome = biome,
-                            name = if (asset != null) asset.title else "",
-                            points = smooth,
-                            assetId = asset?.id
-                        )
-                    )
-                }
-                Tool.COUNTRY -> addCountryArea(smooth)
-                Tool.DISTRICT -> edit {
-                    it.copy(districts = it.districts + District(type = districtType, points = smooth))
-                }
-                Tool.FOG -> edit { it.copy(fog = it.fog + FogArea(points = smooth)) }
-                else -> Unit
-            }
+            commitArea(smooth)
             return
         }
 
@@ -1629,6 +1656,51 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         return back to result
     }
 
+    /** Превратить выбранную область в ровную фигуру того же размера и на том же месте. */
+    fun reshapeSelection(shape: AreaShape) {
+        val current = project ?: return
+        val sel = selection ?: return
+        val points = when (sel) {
+            is Selection.Biome -> current.biomes.firstOrNull { it.id == sel.id }?.points
+            is Selection.DistrictSel -> current.districts.firstOrNull { it.id == sel.id }?.points
+            is Selection.Land -> current.landmasses.firstOrNull { it.id == sel.id }?.points
+            is Selection.Water -> current.waters.firstOrNull { it.id == sel.id }?.points
+            is Selection.FogSel -> current.fog.firstOrNull { it.id == sel.id }?.points
+            else -> null
+        } ?: return
+        if (points.size < 3) return
+        val box = Geometry.bounds(points)
+        val cx = (box.minX + box.maxX) / 2f
+        val cy = (box.minY + box.maxY) / 2f
+        val even = shape == AreaShape.SQUARE || shape == AreaShape.CIRCLE ||
+            shape == AreaShape.HEXAGON || shape == AreaShape.OCTAGON
+        val half = (box.width + box.height) / 4f
+        val hx = if (even) half else box.width / 2f
+        val hy = if (even) half else box.height / 2f
+        val ring = Geometry.areaShape(shape, Vec(cx - hx, cy - hy), Vec(cx + hx, cy + hy))
+        edit { state ->
+            when (sel) {
+                is Selection.Biome -> state.copy(biomes = state.biomes.map {
+                    if (it.id == sel.id) it.copy(points = ring, extraContours = emptyList()) else it
+                })
+                is Selection.DistrictSel -> state.copy(districts = state.districts.map {
+                    if (it.id == sel.id) it.copy(points = ring, extraContours = emptyList()) else it
+                })
+                is Selection.Land -> state.copy(landmasses = state.landmasses.map {
+                    if (it.id == sel.id) it.copy(points = ring) else it
+                })
+                is Selection.Water -> state.copy(waters = state.waters.map {
+                    if (it.id == sel.id) it.copy(points = ring) else it
+                })
+                is Selection.FogSel -> state.copy(fog = state.fog.map {
+                    if (it.id == sel.id) it.copy(points = ring) else it
+                })
+                else -> state
+            }
+        }
+        message = "Область стала фигурой: ${shape.title.lowercase()}"
+    }
+
     /**
      * Поднять выбранную зону наверх: при выравнивании границ побеждает та,
      * что нанесена последней, поэтому наверху зона затирает все остальные.
@@ -1765,6 +1837,15 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                         biomes = fill.gardens + state.biomes
                     )
                 }
+                // Улицы всех кварталов — одна сеть: стыки на границах сводятся сразу.
+                if (streets && streetCount > 0) {
+                    val links = CityGenerator.connectStreets(state)
+                    state = state.copy(
+                        roads = links.roads,
+                        buildings = state.buildings.filterNot { it.id in links.removedBuildings }
+                    )
+                    houses -= links.removedBuildings.size
+                }
                 Triple(state, houses, streetCount)
             }
             busy = false
@@ -1796,7 +1877,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             val result = withContext(Dispatchers.Default) { CityGenerator.connectStreets(current) }
             busy = false
             if (result.links == 0) {
-                message = "Нечего соединять: у границ кварталов нет оборванных улиц"
+                message = "Улицы уже сведены в одну сеть"
                 return@launch
             }
             edit { state ->
@@ -1806,7 +1887,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 )
             }
             message = buildString {
-                append("Соединено улиц: ${result.links}")
+                append("Улицы сведены в одну сеть, изменено улиц: ${result.links}")
                 if (result.removedBuildings.isNotEmpty()) append(", снесено домов на пути: ${result.removedBuildings.size}")
             }
         }
