@@ -56,6 +56,12 @@ WANTED = {
     "aerial_grass": ([["aerial", "grass"], ["aerial", "ground"], ["grass", "field"], ["meadow"], ["grass"]], ["rock", "path"]),
     "aerial_rocks": ([["aerial", "rocks"], ["aerial", "rock"]], []),
     "aerial_sand": ([["aerial", "sand"], ["aerial", "beach"]], []),
+    # кровли для городских построек
+    "roof_clay": ([["clay", "roof"], ["terracotta"], ["red", "roof"], ["roof", "tiles"]], ["grey", "gray", "thatch"]),
+    "roof_slate": ([["slate", "roof"], ["roof", "slates"], ["slate"]], ["floor"]),
+    "roof_shingle": ([["wood", "shingles"], ["shingles"], ["shingle"]], []),
+    "roof_copper": ([["copper"], ["patina"], ["green", "metal"]], []),
+    "roof_tin": ([["corrugated"], ["rusty", "metal"], ["metal", "roof"]], []),
 }
 
 
@@ -159,6 +165,50 @@ def veins(size, seed, sharp=12.0):
     return np.exp(-sharp * np.abs(base - 0.5))
 
 
+def tiles(size, width, height, shape, palette, seed, stagger=True):
+    """Бесшовная кровля рядами: shape(u, v) -> яркость 0..1 внутри одной плитки."""
+    rng = np.random.default_rng(seed)
+    y, x = np.mgrid[0:size, 0:size]
+    row = y // height
+    shift = np.where(row % 2 == 1, width // 2, 0) if stagger else 0
+    xs = (x + shift) % size
+    col = xs // width
+    u = (xs % width) / width
+    v = (y % height) / height
+    rows = size // height
+    cols = size // width
+    tone = rng.uniform(-0.12, 0.12, size=(rows + 1, cols + 1))[row, col]
+    value = np.clip(shape(u, v) + tone + periodic_noise(size, 4, seed + 1) * 0.15 - 0.07, 0, 1)
+    return colorize(value, palette)
+
+
+def roof_recipes(n):
+    """Кровли, которых может не быть на Poly Haven: рисуются рядами плиток."""
+    return {
+        "roof_clay_generated": lambda: tiles(
+            n, 32, 32, lambda u, v: (0.35 + 0.55 * np.sin(np.pi * u)) * (1 - 0.45 * v) + (v < 0.08) * -0.3,
+            [(0, (70, 26, 16)), (0.45, (150, 62, 34)), (0.75, (196, 96, 52)), (1, (232, 150, 96))], 301),
+        "roof_slate_generated": lambda: tiles(
+            n, 40, 20, lambda u, v: 0.55 + 0.25 * (1 - v) - (u < 0.05) * 0.35 - (v > 0.9) * 0.35,
+            [(0, (28, 32, 40)), (0.5, (66, 74, 88)), (1, (118, 128, 142))], 311),
+        "roof_shingle_generated": lambda: tiles(
+            n, 20, 16, lambda u, v: 0.5 + 0.3 * (1 - v) - (u < 0.08) * 0.4 - (v > 0.88) * 0.3,
+            [(0, (50, 34, 22)), (0.5, (112, 80, 52)), (1, (170, 132, 92))], 321),
+        "roof_copper_generated": lambda: colorize(
+            np.clip(periodic_noise(n, 6, 331) * 0.7 + veins(n, 332, 14) * 0.35, 0, 1),
+            [(0, (60, 96, 80)), (0.45, (92, 150, 124)), (0.8, (140, 190, 160)), (1, (190, 150, 90))]),
+        "roof_tin_generated": lambda: tiles(
+            n, 20, n, lambda u, v: 0.5 + 0.35 * np.sin(2 * np.pi * u),
+            [(0, (70, 72, 74)), (0.5, (120, 122, 124)), (1, (180, 176, 168))], 341, stagger=False),
+        "roof_gold": lambda: tiles(
+            n, 32, 32, lambda u, v: (0.4 + 0.5 * np.sin(np.pi * u)) * (1 - 0.4 * v),
+            [(0, (110, 72, 18)), (0.5, (200, 150, 50)), (0.85, (240, 205, 100)), (1, (255, 240, 180))], 351),
+        "roof_glass": lambda: tiles(
+            n, 40, 40, lambda u, v: 0.65 + 0.3 * (u + v < 0.6) - ((u < 0.07) | (v < 0.07)) * 0.6,
+            [(0, (48, 58, 60)), (0.5, (120, 170, 180)), (1, (215, 240, 245))], 361, stagger=False),
+    }
+
+
 def generated(credits):
     n = SIZE
     recipes = {
@@ -216,6 +266,7 @@ def generated(credits):
             [(0, (70, 62, 50)), (0.5, (120, 110, 92)), (0.8, (200, 190, 165)),
              (1, (235, 228, 205))]),
     }
+    recipes.update(roof_recipes(n))
     for key, recipe in recipes.items():
         if key.endswith("_generated"):
             key = key[: -len("_generated")]
