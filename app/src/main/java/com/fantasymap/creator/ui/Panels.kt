@@ -53,6 +53,7 @@ import com.fantasymap.creator.model.LineFeatureType
 import com.fantasymap.creator.model.RoadType
 import com.fantasymap.creator.model.Stage
 import com.fantasymap.creator.model.AreaShape
+import com.fantasymap.creator.model.RoomTemplate
 import com.fantasymap.creator.model.Tool
 import com.fantasymap.creator.model.WaterKind
 
@@ -107,7 +108,7 @@ fun EditorBottomPanel(
                 if (viewModel.stage == Stage.CONTINENTS || viewModel.stage == com.fantasymap.creator.model.CityStage.GROUND) {
                     LandBaseRow(viewModel)
                 }
-                if (viewModel.toolDrawsArea()) AreaShapeRow(viewModel)
+                if (viewModel.toolDrawsArea() || viewModel.tool == Tool.LINE) AreaShapeRow(viewModel)
                 ContextPicker(viewModel, onOpenCountries, onOpenAssets, onBattleDialog)
                 // Пустое место под последней строкой: до неё легко дотянуться,
                 // и она не прячется за системной панелью навигации.
@@ -209,6 +210,7 @@ private fun ContextPicker(
             }
         }
 
+        viewModel.tool == Tool.TEMPLATE -> TemplatePicker(viewModel)
         viewModel.tool == Tool.BUILDING -> BuildingPicker(viewModel, onOpenAssets)
         viewModel.tool == Tool.DISTRICT -> DistrictPicker(viewModel)
         viewModel.tool == Tool.BIOME -> BiomePicker(viewModel, onOpenAssets)
@@ -441,17 +443,51 @@ private fun MarkerPicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
 
 @Composable
 private fun LinePicker(viewModel: EditorViewModel) {
-    LazyRow(
-        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(6.dp)
-    ) {
-        items(viewModel.lineTypes()) { item ->
-            FilterChip(
-                selected = viewModel.lineType == item,
-                onClick = { viewModel.lineType = item },
-                label = { Text(item.title) },
-                leadingIcon = { ColorDot(Color(item.color)) }
-            )
+    Column {
+        TextButton(
+            onClick = { viewModel.joinWalls() },
+            contentPadding = PaddingValues(horizontal = 14.dp, vertical = 0.dp)
+        ) {
+            Text("🔗 Соединить стены в единые сооружения")
+        }
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(viewModel.lineTypes()) { item ->
+                FilterChip(
+                    selected = viewModel.lineType == item,
+                    onClick = { viewModel.lineType = item },
+                    label = { Text(item.title) },
+                    leadingIcon = { ColorDot(Color(item.color)) }
+                )
+            }
+        }
+    }
+}
+
+/** Готовые здания для боевой локации. */
+@Composable
+private fun TemplatePicker(viewModel: EditorViewModel) {
+    Column {
+        Text(
+            "Коснитесь карты — здание встанет в натуральную величину. Протяните рамку — " +
+                "растянется по ней. Свои стены ровной формы: инструмент 〰 и фигура в строке форм.",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 2.dp)
+        )
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(RoomTemplate.entries.toList()) { item ->
+                FilterChip(
+                    selected = viewModel.roomTemplate == item,
+                    onClick = { viewModel.roomTemplate = item },
+                    label = { Text("${item.icon} ${item.title}") }
+                )
+            }
         }
     }
 }

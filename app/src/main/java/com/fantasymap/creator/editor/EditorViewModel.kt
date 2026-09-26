@@ -26,6 +26,9 @@ import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
 import com.fantasymap.creator.model.AreaShape
+import com.fantasymap.creator.model.BattleTemplates
+import com.fantasymap.creator.model.RoomTemplate
+import com.fantasymap.creator.geom.WallJoiner
 import com.fantasymap.creator.model.BattleStage
 import com.fantasymap.creator.model.CityStage
 import com.fantasymap.creator.model.Condition
@@ -107,6 +110,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var labelStyle by mutableStateOf(LabelStyle.REGION)
     var waterKind by mutableStateOf(WaterKind.LAKE)
     var areaShape by mutableStateOf(AreaShape.FREE)
+    var roomTemplate by mutableStateOf(RoomTemplate.TAVERN)
     var buildingType by mutableStateOf(BuildingType.HOUSE)
     var buildingGroup by mutableStateOf(BuildingGroup.HOME)
     var districtType by mutableStateOf(DistrictType.OLD_TOWN)
@@ -576,7 +580,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
 
     private fun battleToolsFor(currentStage: BattleStage): List<Tool> = when (currentStage) {
         BattleStage.GROUND -> listOf(Tool.PAN, Tool.BIOME, Tool.SELECT, Tool.ERASER, Tool.RULER, Tool.FRAGMENT)
-        BattleStage.WALLS -> listOf(Tool.PAN, Tool.LINE, Tool.MARKER, Tool.SELECT, Tool.ERASER, Tool.RULER)
+        BattleStage.WALLS -> listOf(Tool.PAN, Tool.TEMPLATE, Tool.LINE, Tool.MARKER, Tool.SELECT, Tool.ERASER, Tool.RULER)
         BattleStage.PROPS -> listOf(Tool.PAN, Tool.MARKER, Tool.SELECT, Tool.ERASER, Tool.RULER)
         BattleStage.TRAPS -> listOf(Tool.PAN, Tool.MARKER, Tool.SELECT, Tool.ERASER)
         BattleStage.ENEMIES -> listOf(Tool.PAN, Tool.TOKEN, Tool.SELECT, Tool.ERASER, Tool.RULER)
@@ -699,7 +703,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             if (draggingSelection != null) pushHistoryForDrag()
             return
         }
-        if (tool == Tool.FRAGMENT || tool == Tool.BUILDING) {
+        if (tool == Tool.FRAGMENT || tool == Tool.BUILDING || tool == Tool.TEMPLATE) {
             fragmentStart = world
             draft.clear()
             draft.add(world)
@@ -708,7 +712,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         if (!toolDrawsArea() && !toolDrawsLine()) return
         draft.clear()
         draft.add(world)
-        if (toolDrawsArea() && areaShape != AreaShape.FREE) shapeStart = world
+        if ((toolDrawsArea() || tool == Tool.LINE) && areaShape != AreaShape.FREE) shapeStart = world
     }
 
     fun extendStroke(world: Vec) {
@@ -729,7 +733,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val shapeFrom = shapeStart
         if (shapeFrom != null) {
             draft.clear()
-            draft.addAll(Geometry.areaShape(areaShape, shapeFrom, world))
+            draft.addAll(shapeOutline(shapeFrom, world))
             return
         }
         val start = fragmentStart
@@ -766,6 +770,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             val corners = draft.toList()
             fragmentStart = null
             draft.clear()
+            if (tool == Tool.TEMPLATE) {
+                placeTemplate(start, corners)
+                return
+            }
             if (tool == Tool.BUILDING) {
                 if (corners.size >= 4) {
                     val bounds = Geometry.bounds(corners)
@@ -799,7 +807,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 message = "Протяните фигуру пальцем по диагонали побольше"
                 return
             }
-            commitArea(points)
+            if (tool == Tool.LINE) commitWallShape(points) else commitArea(points)
             return
         }
         if (draft.isEmpty()) return
@@ -907,6 +915,85 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         openProject(target)
     }
 
+    /**
+     * Контур фигуры по диагонали. У стены боевой локации углы рамки
+     * ложатся на сетку, а линия замыкается в кольцо.
+     */
+    private fun shapeOutline(from: Vec, to: Vec): List<Vec> {
+        if (tool != Tool.LINE) return Geometry.areaShape(areaShape, from, to)
+        val battle = lineType.battle
+        val a = if (battle) snapCorner(from) else from
+        val b = if (battle) snapCorner(to) else to
+        val ring = Geometry.areaShape(areaShape, a, b)
+        return ring + ring.first()
+    }
+
+    /** Стена ровной фигурой: замкнутая линия выбранного вида. */
+    private fun commitWallShape(points: List<Vec>) {
+        if (points.size < 4) return
+        edit { joinedWalls(it.copy(lines = it.lines + LineFeature(type = lineType, points = points))) }
+        message = "Стена-${areaShape.title.lowercase()} готова"
+    }
+
+    /** Двери, ворота, окна и бойницы: их проёмы в стенах не заращиваются. */
+    private fun openings(state: MapProject): List<Vec> = state.markers.filter {
+        it.type.group == MarkerGroup.BATTLE_DOORS || it.type.name.contains("GATE") ||
+            it.type.name.contains("DOOR") || it.type.name.contains("WINDOW") || it.type.name.contains("SLIT")
+    }.map { it.pos }
+
+    private fun wallTolerance(state: MapProject): Float = if (state.kind == MapKind.BATTLE) {
+        state.gridCell * 0.55f
+    } else {
+        max(state.worldWidth, state.worldHeight) * 0.015f
+    }
+
+    /** Та же сварка стен, что и по кнопке, — сразу после постройки. */
+    private fun joinedWalls(state: MapProject): MapProject {
+        if (state.kind != MapKind.BATTLE) return state
+        val result = WallJoiner.join(state.lines, wallTolerance(state), openings(state))
+        return if (result.joins > 0) state.copy(lines = result.lines) else state
+    }
+
+    /** Поставить шаблон здания: касанием — в натуральную величину, рамкой — по её размеру. */
+    private fun placeTemplate(start: Vec, corners: List<Vec>) {
+        val current = project ?: return
+        val cell = current.gridCell.takeIf { it > 0f } ?: 50f
+        val bounds = if (corners.size >= 4) Geometry.bounds(corners) else null
+        val placed = if (bounds != null && bounds.width > cell * 2f && bounds.height > cell * 2f) {
+            val origin = Vec(kotlin.math.round(bounds.minX / cell) * cell, kotlin.math.round(bounds.minY / cell) * cell)
+            BattleTemplates.place(roomTemplate, origin, cell, bounds.width, bounds.height)
+        } else {
+            val plan = BattleTemplates.plan(roomTemplate)
+            val origin = Vec(
+                kotlin.math.round((start.x - plan.cols * cell / 2f) / cell) * cell,
+                kotlin.math.round((start.y - plan.rows * cell / 2f) / cell) * cell
+            )
+            BattleTemplates.place(roomTemplate, origin, cell)
+        }
+        edit {
+            joinedWalls(
+                it.copy(
+                    biomes = it.biomes + placed.biomes,
+                    lines = it.lines + placed.lines,
+                    markers = it.markers + placed.markers
+                )
+            )
+        }
+        message = "${roomTemplate.title}: стен ${placed.lines.size}, предметов ${placed.markers.size}"
+    }
+
+    /** Свести стены: близкие концы сливаются, стены замыкаются и упираются друг в друга. */
+    fun joinWalls() {
+        val current = project ?: return
+        val result = WallJoiner.join(current.lines, wallTolerance(current), openings(current))
+        if (result.joins == 0) {
+            message = "Стены уже соединены: рядом нет свободных концов"
+            return
+        }
+        edit { it.copy(lines = result.lines) }
+        message = "Стены сведены в единые сооружения, стыков: ${result.joins}"
+    }
+
     /** Добавить нарисованную область на карту текущим инструментом. */
     private fun commitArea(smooth: List<Vec>) {
         when (tool) {
@@ -969,7 +1056,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 Tool.LINE -> edit {
                     // Стены боевой локации — ровные отрезки по узлам сетки.
                     val points = if (lineType.battle) wallPoints(rawPoints) else smooth
-                    if (points.size < 2) it else it.copy(lines = it.lines + LineFeature(type = lineType, points = points))
+                    if (points.size < 2) it else joinedWalls(it.copy(lines = it.lines + LineFeature(type = lineType, points = points)))
                 }
                 Tool.ROAD -> edit { it.copy(roads = it.roads + Road(type = roadType, points = smooth)) }
                 Tool.LABEL -> {

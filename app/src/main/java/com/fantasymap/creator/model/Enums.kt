@@ -1216,7 +1216,8 @@ enum class Tool(val title: String, val icon: String) {
     DISTRICT("Квартал", "▦"),
     TOKEN("Фишка", "♟"),
     FOG("Туман войны", "🌫"),
-    RULER("Линейка", "📏")
+    RULER("Линейка", "📏"),
+    TEMPLATE("Шаблон здания", "🏰")
 }
 
 /** Каким по форме рисуется дом. */

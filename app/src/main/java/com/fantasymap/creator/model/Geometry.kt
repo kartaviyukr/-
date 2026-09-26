@@ -93,6 +93,16 @@ object Geometry {
         return p.distanceTo(Vec(a.x + t * dx, a.y + t * dy))
     }
 
+    /** Ближайшая к p точка отрезка ab. */
+    fun closestOnSegment(p: Vec, a: Vec, b: Vec): Vec {
+        val dx = b.x - a.x
+        val dy = b.y - a.y
+        val lengthSq = dx * dx + dy * dy
+        if (lengthSq < 0.000001f) return a
+        val t = (((p.x - a.x) * dx + (p.y - a.y) * dy) / lengthSq).coerceIn(0f, 1f)
+        return Vec(a.x + dx * t, a.y + dy * t)
+    }
+
     fun distanceToPolyline(p: Vec, points: List<Vec>): Float {
         if (points.isEmpty()) return Float.MAX_VALUE
         if (points.size == 1) return p.distanceTo(points[0])
