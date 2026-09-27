@@ -835,14 +835,14 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
      * Создать отдельную карту из выделенного фрагмента.
      * Исходная карта не меняется — фрагмент именно копируется.
      */
-    fun createMapFromFragment(name: String, targetLongSide: Float, placeLink: Boolean) {
+    fun createMapFromFragment(name: String, targetLongSide: Float, placeLink: Boolean, kind: MapKind) {
         val current = project ?: return
         val rect = fragmentRect ?: return
         fragmentRect = null
         viewModelScope.launch {
             busy = true
             val fragment = withContext(Dispatchers.Default) {
-                FragmentCopy.create(current, rect, name, targetLongSide)
+                FragmentCopy.create(current, rect, name, targetLongSide, kind)
             }
             // На исходной карте можно оставить метку, ведущую на новую карту.
             val source = if (placeLink) {
@@ -865,7 +865,12 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             busy = false
             refreshProjects()
             openProject(fragment)
-            message = "Карта «${fragment.name}» создана из фрагмента"
+            message = when {
+                kind == current.kind -> "Карта «${fragment.name}» создана из фрагмента"
+                kind == MapKind.CITY -> "Фрагмент стал картой города «${fragment.name}»"
+                kind == MapKind.BATTLE -> "Фрагмент стал боевой локацией «${fragment.name}»"
+                else -> "Фрагмент стал обычной картой «${fragment.name}»"
+            }
         }
     }
 

@@ -8,6 +8,7 @@ import com.fantasymap.creator.model.Geometry
 import com.fantasymap.creator.model.Landmass
 import com.fantasymap.creator.model.LineFeature
 import com.fantasymap.creator.model.MapLabel
+import com.fantasymap.creator.model.MapKind
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.model.Marker
 import com.fantasymap.creator.model.Road
@@ -87,6 +88,14 @@ object FragmentCopy {
     }
 
     fun create(
+        source: MapProject,
+        rect: BBox,
+        name: String,
+        targetLongSide: Float,
+        kind: MapKind = source.kind
+    ): MapProject = MapConvert.convert(copy(source, rect, name, targetLongSide), kind)
+
+    private fun copy(
         source: MapProject,
         rect: BBox,
         name: String,

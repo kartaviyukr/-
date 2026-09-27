@@ -64,6 +64,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.material3.FilledTonalButton
 import com.fantasymap.creator.model.Condition
 import com.fantasymap.creator.model.GridKind
+import com.fantasymap.creator.model.MapKind
 import com.fantasymap.creator.model.Token
 import com.fantasymap.creator.model.TokenFaction
 import com.fantasymap.creator.model.TokenGroup
@@ -745,10 +746,11 @@ fun AreaDialog(
     if (mode == 1) {
         FragmentDialog(
             sourceName = sourceName,
+            sourceKind = viewModel.mapKind,
             fragmentWidth = fragmentWidth,
             fragmentHeight = fragmentHeight,
-            onCreate = { name, longSide, placeLink ->
-                viewModel.createMapFromFragment(name, longSide, placeLink)
+            onCreate = { name, longSide, placeLink, kind ->
+                viewModel.createMapFromFragment(name, longSide, placeLink, kind)
             },
             onDismiss = onDismiss
         )
@@ -887,12 +889,14 @@ fun AreaDialog(
 @Composable
 fun FragmentDialog(
     sourceName: String,
+    sourceKind: MapKind,
     fragmentWidth: Float,
     fragmentHeight: Float,
-    onCreate: (String, Float, Boolean) -> Unit,
+    onCreate: (String, Float, Boolean, MapKind) -> Unit,
     onDismiss: () -> Unit
 ) {
     var name by remember { mutableStateOf("$sourceName — фрагмент") }
+    var kind by remember { mutableStateOf(sourceKind) }
     var longSide by remember { mutableFloatStateOf(2400f) }
     var placeLink by remember { mutableStateOf(true) }
     val currentLongSide = maxOf(fragmentWidth, fragmentHeight, 1f)
@@ -920,6 +924,34 @@ fun FragmentDialog(
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
+                Spacer(Modifier.height(8.dp))
+                Text("Во что превратить фрагмент", style = MaterialTheme.typography.labelLarge)
+                for ((option, hint) in listOf(
+                    MapKind.WORLD to "суша, зоны, реки, дороги и объекты мира",
+                    MapKind.CITY to "города и деревни станут кварталами, дороги — улицами",
+                    MapKind.BATTLE to "сетка клеток; дома станут полом и стенами, улицы — мостовой"
+                )) {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .clickable { kind = option }
+                            .padding(vertical = 2.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(selected = kind == option, onClick = { kind = option })
+                        Column {
+                            Text(
+                                when (option) {
+                                    MapKind.WORLD -> "Обычная карта"
+                                    MapKind.CITY -> "Карта города"
+                                    MapKind.BATTLE -> "Боевая локация"
+                                } + if (option == sourceKind) " (как эта)" else "",
+                                style = MaterialTheme.typography.bodyMedium
+                            )
+                            Text(hint, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        }
+                    }
+                }
                 Spacer(Modifier.height(8.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f)) {
@@ -961,7 +993,7 @@ fun FragmentDialog(
             }
         },
         confirmButton = {
-            TextButton(onClick = { onCreate(name.trim(), longSide, placeLink) }) {
+            TextButton(onClick = { onCreate(name.trim(), longSide, placeLink, kind) }) {
                 Text("Создать карту")
             }
         },
