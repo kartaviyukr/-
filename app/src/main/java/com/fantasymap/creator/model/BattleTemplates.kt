@@ -238,9 +238,9 @@ object BattleTemplates {
         }
 
         /** Пещера: неровный пол и стена по краю; входы — углы в градусах (0 — восток, 90 — юг). */
-        fun cave(floor: BiomeType, wall: LineFeatureType, cx: Float, cy: Float, rx: Float, ry: Float, vararg entrances: Float) {
+        fun cave(ground: BiomeType, wall: LineFeatureType, cx: Float, cy: Float, rx: Float, ry: Float, vararg entrances: Float) {
             val outlinePts = blob(cx, cy, rx, ry, 18)
-            floors.add(floor to outlinePts)
+            floors.add(ground to outlinePts)
             val gaps = entrances.map {
                 val a = it * PI.toFloat() / 180f
                 Gap(cx + cos(a) * rx * 0.9f, cy + sin(a) * ry * 0.9f, null, 1.8f)
@@ -250,11 +250,11 @@ object BattleTemplates {
 
         /** Дом: пол, стены и дверь посередине стороны N, S, W или E. */
         fun house(
-            wall: LineFeatureType, floor: BiomeType,
+            wall: LineFeatureType, ground: BiomeType,
             x0: Float, y0: Float, x1: Float, y1: Float,
             side: Char = 'S', door: MarkerType = MarkerType.B_DOOR
         ) {
-            floor(floor, x0, y0, x1, y1)
+            floor(ground, x0, y0, x1, y1)
             val g = when (side) {
                 'N' -> Gap((x0 + x1) / 2f, y0, door)
                 'W' -> Gap(x0, (y0 + y1) / 2f, door)
