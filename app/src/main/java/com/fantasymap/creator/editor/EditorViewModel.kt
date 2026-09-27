@@ -305,7 +305,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         height: Float,
         kind: MapKind = MapKind.WORLD,
         ground: BiomeType? = null,
-        landBase: Boolean = false
+        landBase: Boolean = false,
+        infinite: Boolean = false
     ) {
         val base = MapProject(
             name = name.ifBlank {
@@ -318,7 +319,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             worldWidth = width,
             worldHeight = height,
             kind = kind,
-            landBase = landBase && kind != MapKind.BATTLE
+            landBase = landBase && kind != MapKind.BATTLE,
+            infinite = infinite && kind == MapKind.WORLD
         )
         // Боевая локация: тёмный стол, основа-пол, фото-текстуры, без компаса и рамки.
         val fresh = if (kind == MapKind.BATTLE) {
@@ -677,6 +679,34 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val current = project ?: return
         if (width <= 0f || height <= 0f) return
         camera = Camera.fit(current.worldWidth, current.worldHeight, width, height)
+    }
+
+    /**
+     * Вернуться в центр карты. У бесконечной карты — к середине начальной
+     * области, не меняя приближения (если оно не слишком мелкое).
+     */
+    fun goToCenter() {
+        val current = project ?: return
+        if (viewWidth <= 0f || viewHeight <= 0f) return
+        val home = Camera.fit(current.worldWidth, current.worldHeight, viewWidth, viewHeight)
+        val scale = if (current.boundless) max(camera.scale, home.scale) else home.scale
+        camera = Camera(
+            scale = scale,
+            tx = viewWidth / 2f - current.worldWidth / 2f * scale,
+            ty = viewHeight / 2f - current.worldHeight / 2f * scale
+        )
+    }
+
+    /** Сделать карту мира бесконечной или вернуть ей края. */
+    fun setInfinite(on: Boolean) {
+        val current = project ?: return
+        if (current.kind != MapKind.WORLD) return
+        edit { it.copy(infinite = on) }
+        message = if (on) {
+            "Карта без краёв: рисуйте где угодно, ⌂ вернёт в центр"
+        } else {
+            "У карты снова есть края"
+        }
     }
 
     fun pan(dx: Float, dy: Float) {

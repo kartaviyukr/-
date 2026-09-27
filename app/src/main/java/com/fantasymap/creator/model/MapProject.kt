@@ -419,8 +419,42 @@ data class MapProject(
     val groundBiome: BiomeType? = null,
     /** Вся карта — суша: моря и озёра рисуются поверх водой, а не наоборот. */
     val landBase: Boolean = false,
-    val scene: SceneInfo = SceneInfo()
+    val scene: SceneInfo = SceneInfo(),
+    /** Бесконечная карта мира: без краёв, рисовать можно где угодно. */
+    val infinite: Boolean = false
 ) {
+    /** Карта без краёв — только у карты мира. */
+    val boundless: Boolean get() = infinite && kind == MapKind.WORLD
+
+    /**
+     * Где на карте что-то есть: начальная область плюс всё нарисованное
+     * за её пределами, с небольшим полем. Для бесконечной карты — область печати.
+     */
+    fun contentBounds(): BBox {
+        var minX = 0f
+        var minY = 0f
+        var maxX = worldWidth
+        var maxY = worldHeight
+        fun add(p: Vec) {
+            if (p.x < minX) minX = p.x
+            if (p.y < minY) minY = p.y
+            if (p.x > maxX) maxX = p.x
+            if (p.y > maxY) maxY = p.y
+        }
+        landmasses.forEach { it.points.forEach(::add) }
+        waters.forEach { it.points.forEach(::add) }
+        biomes.forEach { r -> r.contours().forEach { c -> c.forEach(::add) } }
+        lines.forEach { it.points.forEach(::add) }
+        roads.forEach { it.points.forEach(::add) }
+        markers.forEach { add(it.pos) }
+        labels.forEach { add(it.pos); it.path.forEach(::add) }
+        countries.forEach { c -> c.areas.forEach { a -> a.forEach(::add) } }
+        districts.forEach { it.points.forEach(::add) }
+        buildings.forEach { it.points.forEach(::add) }
+        val margin = maxOf(maxX - minX, maxY - minY) * 0.03f
+        return BBox(minX - margin, minY - margin, maxX + margin, maxY + margin)
+    }
+
     fun countryById(id: String?): Country? =
         if (id == null) null else countries.firstOrNull { it.id == id }
 

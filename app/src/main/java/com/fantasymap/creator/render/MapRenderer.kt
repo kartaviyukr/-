@@ -79,6 +79,8 @@ class MapRenderer {
     private val glyphs = Glyphs()
     private val path = Path()
     private val path2 = Path()
+    /** Видимая часть карты: весь мир или, у бесконечной карты, экран. */
+    private var area = BBox(0f, 0f, 1f, 1f)
     private val roofs = RoofPainter { builtinTexture(it) }
     private val rectF = RectF()
 
@@ -133,11 +135,17 @@ class MapRenderer {
 
         canvas.drawColor(if (options.deskColor != 0) options.deskColor else style.deskColor)
 
-        // Океан — прямоугольник мира
-        val x0 = cam.screenX(0f)
-        val y0 = cam.screenY(0f)
-        val x1 = cam.screenX(project.worldWidth)
-        val y1 = cam.screenY(project.worldHeight)
+        // Океан — прямоугольник мира; у бесконечной карты — весь экран.
+        val boundless = project.boundless
+        area = if (boundless) {
+            cam.visibleWorld(viewWidth, viewHeight)
+        } else {
+            BBox(0f, 0f, project.worldWidth, project.worldHeight)
+        }
+        val x0 = cam.screenX(area.minX)
+        val y0 = cam.screenY(area.minY)
+        val x1 = cam.screenX(area.maxX)
+        val y1 = cam.screenY(area.maxY)
         fill.color = if (project.landBase && project.kind != MapKind.BATTLE) style.landColor else style.oceanColor
         canvas.drawRect(x0, y0, x1, y1, fill)
 
@@ -175,7 +183,7 @@ class MapRenderer {
 
         canvas.restore()
 
-        if (style.showFrame) drawFrame(canvas, x0, y0, x1, y1, u)
+        if (style.showFrame && !boundless) drawFrame(canvas, x0, y0, x1, y1, u)
     }
 
     // ---------------------------------------------------------------- океан
@@ -194,7 +202,7 @@ class MapRenderer {
             while (wx < visible.maxX && guard < 4000) {
                 guard++
                 val n = Geometry.hashNoise((wx / step).toInt(), (wy / step).toInt(), project.style.seed)
-                if (n > 0.55f && wx >= 0f && wy >= 0f && wx <= project.worldWidth && wy <= project.worldHeight) {
+                if (n > 0.55f && wx >= area.minX && wy >= area.minY && wx <= area.maxX && wy <= area.maxY) {
                     glyphs.drawPattern(
                         canvas, BiomePattern.WAVES,
                         cam.screenX(wx + n * step * 0.4f), cam.screenY(wy + n * step * 0.3f),
@@ -212,14 +220,14 @@ class MapRenderer {
         thin.strokeWidth = 1f * u
         var step = 200f
         while (step * cam.scale < 40f) step *= 2f
-        var x = 0f
-        while (x <= project.worldWidth) {
-            canvas.drawLine(cam.screenX(x), cam.screenY(0f), cam.screenX(x), cam.screenY(project.worldHeight), thin)
+        var x = (Math.ceil((area.minX / step).toDouble()) * step).toFloat()
+        while (x <= area.maxX) {
+            canvas.drawLine(cam.screenX(x), cam.screenY(area.minY), cam.screenX(x), cam.screenY(area.maxY), thin)
             x += step
         }
-        var y = 0f
-        while (y <= project.worldHeight) {
-            canvas.drawLine(cam.screenX(0f), cam.screenY(y), cam.screenX(project.worldWidth), cam.screenY(y), thin)
+        var y = (Math.ceil((area.minY / step).toDouble()) * step).toFloat()
+        while (y <= area.maxY) {
+            canvas.drawLine(cam.screenX(area.minX), cam.screenY(y), cam.screenX(area.maxX), cam.screenY(y), thin)
             y += step
         }
     }
@@ -1732,8 +1740,8 @@ class MapRenderer {
 
     private fun drawCompass(canvas: Canvas, project: MapProject, cam: Camera, u: Float) {
         val r = 30f * u
-        val cx = cam.screenX(project.worldWidth) - r * 1.9f
-        val cy = cam.screenY(0f) + r * 1.9f
+        val cx = cam.screenX(area.maxX) - r * 1.9f
+        val cy = cam.screenY(area.minY) + r * 1.9f
         fill.color = withAlpha(0xFFFFF6DF.toInt(), 200)
         canvas.drawCircle(cx, cy, r, fill)
         stroke.pathEffect = null
@@ -1763,8 +1771,8 @@ class MapRenderer {
         guard = 0
         while (units * cam.scale > 260f && guard++ < 40) units /= 2f
         val length = units * cam.scale
-        val x = cam.screenX(0f) + 24f * u
-        val y = cam.screenY(project.worldHeight) - 24f * u
+        val x = cam.screenX(area.minX) + 24f * u
+        val y = cam.screenY(area.maxY) - 24f * u
         fill.color = withAlpha(0xFFFFF6DF.toInt(), 190)
         canvas.drawRect(x - 8f * u, y - 20f * u, x + length + 8f * u, y + 8f * u, fill)
         stroke.pathEffect = null

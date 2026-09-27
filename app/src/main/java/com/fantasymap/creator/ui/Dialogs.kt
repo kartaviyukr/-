@@ -596,6 +596,11 @@ fun StyleDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
                     style = initial
                 }) { Text("↺ Вернуть как было") }
                 HorizontalDivider(Modifier.padding(vertical = 6.dp))
+                if (viewModel.mapKind == MapKind.WORLD) {
+                    ToggleRow("Бесконечная карта, без краёв", viewModel.project?.infinite == true) {
+                        viewModel.setInfinite(it)
+                    }
+                }
                 ToggleRow("Природные зоны", style.showBiomes) { apply(style.copy(showBiomes = it)) }
                 ToggleRow("Текстуры ландшафта", style.showPatterns) { apply(style.copy(showPatterns = it)) }
                 ToggleRow("Дороги", style.showRoads) { apply(style.copy(showRoads = it)) }

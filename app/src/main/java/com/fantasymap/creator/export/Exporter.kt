@@ -6,6 +6,7 @@ import android.graphics.Canvas
 import android.graphics.pdf.PdfDocument
 import android.net.Uri
 import com.fantasymap.creator.data.AssetStore
+import com.fantasymap.creator.model.BBox
 import com.fantasymap.creator.model.MapProject
 import com.fantasymap.creator.render.Camera
 import com.fantasymap.creator.render.MapRenderer
@@ -19,12 +20,23 @@ class Exporter(private val context: Context) {
     /** Авторские картинки нужны и при сохранении карты в файл. */
     private val textures by lazy { AssetStore(context) }
 
+    /** Что печатать: весь мир или, у бесконечной карты, всё нарисованное. */
+    private fun printArea(project: MapProject): BBox =
+        if (project.boundless) project.contentBounds() else BBox(0f, 0f, project.worldWidth, project.worldHeight)
+
+    /** Камера, вписывающая область печати, со сдвигом к её левому верхнему углу. */
+    private fun fitArea(area: BBox, width: Float, height: Float, padding: Float): Camera {
+        val base = Camera.fit(area.width, area.height, width, height, padding)
+        return base.copy(tx = base.tx - area.minX * base.scale, ty = base.ty - area.minY * base.scale)
+    }
+
     fun exportPng(project: MapProject, uri: Uri, longSide: Int, withLegend: Boolean): Boolean =
         runCatching {
-            val ratio = project.worldHeight / project.worldWidth
+            val area = printArea(project)
+            val ratio = area.height / area.width
             val width: Int
             val mapHeight: Int
-            if (project.worldWidth >= project.worldHeight) {
+            if (area.width >= area.height) {
                 width = longSide
                 mapHeight = (longSide * ratio).toInt().coerceAtLeast(64)
             } else {
@@ -47,10 +59,7 @@ class Exporter(private val context: Context) {
                 Bitmap.Config.ARGB_8888
             )
             val canvas = Canvas(bitmap)
-            val camera = Camera.fit(
-                project.worldWidth, project.worldHeight,
-                width.toFloat(), mapHeight.toFloat(), padding
-            )
+            val camera = fitArea(area, width.toFloat(), mapHeight.toFloat(), padding)
             canvas.save()
             canvas.clipRect(0f, 0f, width.toFloat(), mapHeight.toFloat())
             renderer.render(
@@ -80,7 +89,8 @@ class Exporter(private val context: Context) {
         runCatching {
             val renderer = MapRenderer().apply { textures = this@Exporter.textures }
             val document = PdfDocument()
-            val landscape = project.worldWidth >= project.worldHeight
+            val area = printArea(project)
+            val landscape = area.width >= area.height
             val pageWidth = if (landscape) A4_LONG else A4_SHORT
             val pageHeight = if (landscape) A4_SHORT else A4_LONG
             val usableWidth = pageWidth - MARGIN * 2f
@@ -99,7 +109,7 @@ class Exporter(private val context: Context) {
                     PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNumber++).create()
                 )
                 val canvas = page.canvas
-                val camera = Camera.fit(project.worldWidth, project.worldHeight, usableWidth, mapHeight, 0f)
+                val camera = fitArea(area, usableWidth, mapHeight, 0f)
                 canvas.save()
                 canvas.translate(MARGIN, MARGIN)
                 canvas.clipRect(0f, 0f, usableWidth, mapHeight)
@@ -121,10 +131,10 @@ class Exporter(private val context: Context) {
                 document.finishPage(page)
             } else {
                 val columns = tilesAcross.coerceIn(2, 8)
-                val tileWorldWidth = project.worldWidth / columns
+                val tileWorldWidth = area.width / columns
                 val scale = usableWidth / tileWorldWidth
                 val tileWorldHeight = usableHeight / scale
-                val rows = ceil(project.worldHeight / tileWorldHeight).toInt().coerceAtLeast(1)
+                val rows = ceil(area.height / tileWorldHeight).toInt().coerceAtLeast(1)
 
                 for (row in 0 until rows) {
                     for (column in 0 until columns) {
@@ -134,8 +144,8 @@ class Exporter(private val context: Context) {
                         val canvas = page.canvas
                         val camera = Camera(
                             scale = scale,
-                            tx = -column * tileWorldWidth * scale,
-                            ty = -row * tileWorldHeight * scale
+                            tx = -(area.minX + column * tileWorldWidth) * scale,
+                            ty = -(area.minY + row * tileWorldHeight) * scale
                         )
                         canvas.save()
                         canvas.translate(MARGIN, MARGIN)

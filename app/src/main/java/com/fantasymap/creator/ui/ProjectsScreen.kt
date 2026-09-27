@@ -138,9 +138,9 @@ fun ProjectsScreen(viewModel: EditorViewModel) {
     if (showCreate) {
         CreateProjectDialog(
             onDismiss = { showCreate = false },
-            onCreate = { name, width, height, kind, ground, landBase ->
+            onCreate = { name, width, height, kind, ground, landBase, infinite ->
                 showCreate = false
-                viewModel.createProject(name, width, height, kind, ground, landBase)
+                viewModel.createProject(name, width, height, kind, ground, landBase, infinite)
             }
         )
     }
@@ -244,9 +244,10 @@ private fun ProjectCard(
 @Composable
 private fun CreateProjectDialog(
     onDismiss: () -> Unit,
-    onCreate: (String, Float, Float, MapKind, BiomeType?, Boolean) -> Unit
+    onCreate: (String, Float, Float, MapKind, BiomeType?, Boolean, Boolean) -> Unit
 ) {
     var landBase by remember { mutableStateOf(false) }
+    var infinite by remember { mutableStateOf(true) }
     var name by remember { mutableStateOf("") }
     var kind by remember { mutableStateOf(MapKind.WORLD) }
     var selected by remember { mutableStateOf(MapProject.PRESETS.firstOrNull { it.title == "Один континент" } ?: MapProject.PRESETS.first()) }
@@ -302,6 +303,20 @@ private fun CreateProjectDialog(
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(Modifier.height(10.dp))
+
+                if (kind == MapKind.WORLD) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            Text("Бесконечная карта", style = MaterialTheme.typography.labelLarge)
+                            Text(
+                                "Без краёв: мир можно дорисовывать в любую сторону, кнопка ⌂ вернёт в центр",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        Switch(checked = infinite, onCheckedChange = { infinite = it })
+                    }
+                }
 
                 if (kind != MapKind.BATTLE) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -382,9 +397,9 @@ private fun CreateProjectDialog(
             TextButton(onClick = {
                 if (custom) {
                     val ground = if (kind == MapKind.BATTLE) BiomeType.STONE_FLOOR else null
-                    onCreate(name.trim(), customWidth, customHeight, kind, ground, landBase)
+                    onCreate(name.trim(), customWidth, customHeight, kind, ground, landBase, infinite)
                 } else {
-                    onCreate(name.trim(), selected.width, selected.height, kind, selected.ground, landBase)
+                    onCreate(name.trim(), selected.width, selected.height, kind, selected.ground, landBase, infinite)
                 }
             }) { Text("Создать") }
         },

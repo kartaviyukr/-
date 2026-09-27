@@ -251,6 +251,9 @@ fun EditorScreen(viewModel: EditorViewModel) {
                 MapControlButton("＋") { viewModel.zoomBy(1.35f) }
                 MapControlButton("－") { viewModel.zoomBy(1f / 1.35f) }
                 MapControlButton("⤢") { viewModel.fitToView() }
+                if (viewModel.project?.boundless == true) {
+                    MapControlButton("⌂") { viewModel.goToCenter() }
+                }
             }
 
             if (viewModel.busy) {
