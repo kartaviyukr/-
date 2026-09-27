@@ -78,6 +78,45 @@ class BattleTemplatesTest {
     }
 
     @Test
+    fun `новая стена, подведённая к концу старой, сливается с ней`() {
+        val old = LineFeature(type = LineFeatureType.CITY_WALL, points = listOf(Vec(0f, 0f), Vec(100f, 0f)))
+        val added = LineFeature(type = LineFeatureType.CITY_WALL, points = listOf(Vec(106f, 3f), Vec(200f, 50f)))
+        val result = WallJoiner.attach(listOf(old), added, 10f)
+        assertEquals(1, result.lines.size)
+        val pts = result.lines[0].points
+        assertEquals(listOf(Vec(0f, 0f), Vec(100f, 0f), Vec(200f, 50f)), pts)
+    }
+
+    @Test
+    fun `старая стена не сдвигается, стены разного вида сходятся в точку`() {
+        val old = LineFeature(type = LineFeatureType.CITY_WALL, points = listOf(Vec(0f, 0f), Vec(100f, 0f)))
+        val added = LineFeature(type = LineFeatureType.PALISADE, points = listOf(Vec(104f, 2f), Vec(150f, 80f)))
+        val result = WallJoiner.attach(listOf(old), added, 10f)
+        assertEquals(2, result.lines.size)
+        assertEquals(old.points, result.lines[0].points)
+        assertEquals(Vec(100f, 0f), result.lines[1].points.first())
+    }
+
+    @Test
+    fun `конец у своего начала замыкает стену`() {
+        val added = LineFeature(
+            type = LineFeatureType.CITY_WALL,
+            points = listOf(Vec(0f, 0f), Vec(100f, 0f), Vec(100f, 100f), Vec(3f, 4f))
+        )
+        val pts = WallJoiner.attach(emptyList(), added, 10f).lines[0].points
+        assertEquals(pts.first(), pts.last())
+    }
+
+    @Test
+    fun `далёкие концы не трогаются`() {
+        val old = LineFeature(type = LineFeatureType.CITY_WALL, points = listOf(Vec(0f, 0f), Vec(100f, 0f)))
+        val added = LineFeature(type = LineFeatureType.CITY_WALL, points = listOf(Vec(160f, 0f), Vec(260f, 0f)))
+        val result = WallJoiner.attach(listOf(old), added, 10f)
+        assertEquals(2, result.lines.size)
+        assertEquals(0, result.joins)
+    }
+
+    @Test
     fun `реки не трогаются`() {
         val a = LineFeature(type = LineFeatureType.RIVER, points = listOf(Vec(0f, 0f), Vec(100f, 0f)))
         val b = LineFeature(type = LineFeatureType.RIVER, points = listOf(Vec(102f, 0f), Vec(200f, 0f)))

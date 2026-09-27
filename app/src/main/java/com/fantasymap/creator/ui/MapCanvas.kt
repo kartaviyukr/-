@@ -133,7 +133,8 @@ fun MapCanvas(
                     draftColor = viewModel.draftColor(),
                     activeCountryId = viewModel.activeCountryId,
                     rulerText = viewModel.rulerText,
-                    activeTokenId = viewModel.activeTokenId()
+                    activeTokenId = viewModel.activeTokenId(),
+                    snapPoint = viewModel.snapHint
                 )
             )
         }

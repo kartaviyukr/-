@@ -444,11 +444,18 @@ private fun MarkerPicker(viewModel: EditorViewModel, onOpenAssets: () -> Unit) {
 @Composable
 private fun LinePicker(viewModel: EditorViewModel) {
     Column {
+        Text(
+            "Стены: подведите конец к концу другой стены — зелёное кольцо покажет, " +
+                "куда он прилипнет, и стены станут одной. Конец у начала замыкает стену.",
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(horizontal = 14.dp, vertical = 2.dp)
+        )
         TextButton(
             onClick = { viewModel.joinWalls() },
             contentPadding = PaddingValues(horizontal = 14.dp, vertical = 0.dp)
         ) {
-            Text("🔗 Соединить стены в единые сооружения")
+            Text("🔗 Соединить близкие концы уже нарисованных стен")
         }
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),

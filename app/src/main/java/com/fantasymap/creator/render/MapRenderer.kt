@@ -54,7 +54,9 @@ data class RenderOptions(
     /** Подпись линейки у конца штриха: «30 фт · 6 клеток». */
     val rulerText: String? = null,
     /** Чей сейчас ход — фишка подсвечивается. */
-    val activeTokenId: String? = null
+    val activeTokenId: String? = null,
+    /** Куда прилипнет конец рисуемой стены. */
+    val snapPoint: Vec? = null
 )
 
 /** Откуда рисовальщик берёт авторские картинки. */
@@ -1697,6 +1699,20 @@ class MapRenderer {
     }
 
     private fun drawDraft(canvas: Canvas, cam: Camera, u: Float, options: RenderOptions) {
+        // Зелёное кольцо: сюда прилипнет конец стены.
+        val snap = options.snapPoint
+        if (snap != null) {
+            val sx = cam.screenX(snap.x)
+            val sy = cam.screenY(snap.y)
+            fill.color = 0x5533CC66
+            canvas.drawCircle(sx, sy, 16f * u, fill)
+            stroke.pathEffect = null
+            stroke.color = 0xFF1E9E4A.toInt()
+            stroke.strokeWidth = 2.5f * u
+            canvas.drawCircle(sx, sy, 16f * u, stroke)
+            fill.color = 0xFF1E9E4A.toInt()
+            canvas.drawCircle(sx, sy, 4f * u, fill)
+        }
         val draft = options.draft
         if (draft.size < 2) return
         buildPath(draft, cam, options.draftClosed, path)

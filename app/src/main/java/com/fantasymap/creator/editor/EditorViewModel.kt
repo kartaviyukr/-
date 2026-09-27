@@ -111,6 +111,8 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var waterKind by mutableStateOf(WaterKind.LAKE)
     var areaShape by mutableStateOf(AreaShape.FREE)
     var roomTemplate by mutableStateOf(RoomTemplate.TAVERN)
+    /** Куда прилипнет конец рисуемой стены — показывается кольцом. */
+    var snapHint by mutableStateOf<Vec?>(null)
     var buildingType by mutableStateOf(BuildingType.HOUSE)
     var buildingGroup by mutableStateOf(BuildingGroup.HOME)
     var districtType by mutableStateOf(DistrictType.OLD_TOWN)
@@ -742,6 +744,11 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         if (!toolDrawsArea() && !toolDrawsLine()) return
         draft.clear()
         draft.add(world)
+        snapHint = if (tool == Tool.LINE && areaShape == AreaShape.FREE && lineType in WallJoiner.walls) {
+            WallJoiner.snapTarget(project?.lines.orEmpty(), world, snapRadius())
+        } else {
+            null
+        }
         if ((toolDrawsArea() || tool == Tool.LINE) && areaShape != AreaShape.FREE) shapeStart = world
     }
 
@@ -778,9 +785,21 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         if (draft.isEmpty()) return
         val minDistance = max(1.5f, 3.5f / camera.scale)
         if (draft.last().distanceTo(world) >= minDistance) draft.add(world)
+        if (drawingWall()) {
+            val own = if (draft.size > 6) draft.first() else null
+            snapHint = WallJoiner.snapTarget(project?.lines.orEmpty(), world, snapRadius(), own)
+        }
     }
 
+    /** Рисуется ли сейчас стена от руки. */
+    private fun drawingWall(): Boolean =
+        tool == Tool.LINE && shapeStart == null && lineType in WallJoiner.walls
+
+    /** Радиус прилипания концов стен — «на палец» на экране. */
+    private fun snapRadius(): Float = 36f / max(camera.scale, 0.01f)
+
     fun finishStroke() {
+        snapHint = null
         val dragged = draggingSelection
         if (dragged != null) {
             if (dragged is Selection.TokenSel) snapToken(dragged.id)
@@ -847,6 +866,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     }
 
     fun cancelStroke() {
+        snapHint = null
         draft.clear()
         rulerText = null
         draggingSelection = null
@@ -1020,13 +1040,14 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     /** Свести стены: близкие концы сливаются, стены замыкаются и упираются друг в друга. */
     fun joinWalls() {
         val current = project ?: return
-        val result = WallJoiner.join(current.lines, wallTolerance(current), openings(current))
+        val radius = if (current.kind == MapKind.BATTLE) max(snapRadius(), current.gridCell * 0.55f) else snapRadius()
+        val result = WallJoiner.join(current.lines, radius, openings(current), tJunctions = false)
         if (result.joins == 0) {
-            message = "Стены уже соединены: рядом нет свободных концов"
+            message = "Близких концов нет: подведите конец стены к концу другой (на палец) — они соединятся сами"
             return
         }
         edit { it.copy(lines = result.lines) }
-        message = "Стены сведены в единые сооружения, стыков: ${result.joins}"
+        message = "Соединено концов стен: ${result.joins}"
     }
 
     /** Добавить нарисованную область на карту текущим инструментом. */
@@ -1091,7 +1112,15 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
                 Tool.LINE -> edit {
                     // Стены боевой локации — ровные отрезки по узлам сетки.
                     val points = if (lineType.battle) wallPoints(rawPoints) else smooth
-                    if (points.size < 2) it else joinedWalls(it.copy(lines = it.lines + LineFeature(type = lineType, points = points)))
+                    when {
+                        points.size < 2 -> it
+                        // Стена: концы у концов других стен прилипают, стены сливаются.
+                        lineType in WallJoiner.walls -> {
+                            val radius = if (lineType.battle) max(snapRadius(), it.gridCell * 0.55f) else snapRadius()
+                            it.copy(lines = WallJoiner.attach(it.lines, LineFeature(type = lineType, points = points), radius).lines)
+                        }
+                        else -> it.copy(lines = it.lines + LineFeature(type = lineType, points = points))
+                    }
                 }
                 Tool.ROAD -> edit { it.copy(roads = it.roads + Road(type = roadType, points = smooth)) }
                 Tool.LABEL -> {

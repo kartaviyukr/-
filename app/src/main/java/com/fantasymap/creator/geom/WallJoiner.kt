@@ -34,7 +34,12 @@ object WallJoiner {
     /**
      * @param keepOpen двери, ворота, окна: проём с ними не заращивается
      */
-    fun join(lines: List<LineFeature>, tolerance: Float, keepOpen: List<Vec> = emptyList()): Result {
+    fun join(
+        lines: List<LineFeature>,
+        tolerance: Float,
+        keepOpen: List<Vec> = emptyList(),
+        tJunctions: Boolean = true
+    ): Result {
         val work = lines.toMutableList()
         var joins = 0
         fun doorway(p: Vec, q: Vec): Boolean {
@@ -99,7 +104,7 @@ object WallJoiner {
                             otherEnd = j to other.second
                         }
                     }
-                    if (otherEnd?.first == j) continue
+                    if (otherEnd?.first == j || !tJunctions) continue
                     for (k in 0 until b.points.size - 1) {
                         val q = StreetNetwork.closest(end, b.points[k], b.points[k + 1])
                         val d = end.distanceTo(q)
@@ -124,6 +129,83 @@ object WallJoiner {
             work[i] = work[i].copy(points = pts)
         }
         return Result(work, joins)
+    }
+
+    /**
+     * Куда прилипнет точка: к ближайшему свободному концу стены, к началу
+     * рисуемой стены (замкнуть), иначе к ближайшей точке стены (стык Т).
+     */
+    fun snapTarget(lines: List<LineFeature>, p: Vec, tolerance: Float, ownStart: Vec? = null): Vec? {
+        var best: Vec? = null
+        var bestDistance = tolerance
+        for (f in lines) {
+            if (f.type !in walls || f.points.size < 2 || closed(f.points)) continue
+            for (end in listOf(f.points.first(), f.points.last())) {
+                val d = p.distanceTo(end)
+                if (d <= bestDistance) {
+                    bestDistance = d
+                    best = end
+                }
+            }
+        }
+        if (best != null) return best
+        if (ownStart != null && p.distanceTo(ownStart) <= tolerance) return ownStart
+        for (f in lines) {
+            if (f.type !in walls || f.points.size < 2) continue
+            for (k in 0 until f.points.size - 1) {
+                val q = StreetNetwork.closest(p, f.points[k], f.points[k + 1])
+                val d = p.distanceTo(q)
+                if (d <= bestDistance) {
+                    bestDistance = d
+                    best = q
+                }
+            }
+        }
+        return best
+    }
+
+    /**
+     * Пристроить только что нарисованную стену: её концы, подведённые к концам
+     * других стен, прилипают к ним, и стены одного вида сливаются в одну;
+     * конец у самого начала стены замыкает её в кольцо; конец у середины
+     * другой стены упирается в неё. Старые стены не сдвигаются.
+     */
+    fun attach(lines: List<LineFeature>, added: LineFeature, tolerance: Float): Result {
+        if (added.type !in walls || added.points.size < 2) return Result(lines + added, 0)
+        val pts = added.points.toMutableList()
+        var joins = 0
+        // Конец у собственного начала — замкнуть.
+        if (pts.size > 2 && pts.first().distanceTo(pts.last()) <= tolerance) {
+            pts[pts.size - 1] = pts.first()
+            return Result(lines + added.copy(points = pts), 1)
+        }
+        val others = lines.filter { it.type in walls }
+        snapTarget(others, pts.first(), tolerance)?.let { pts[0] = it; joins++ }
+        snapTarget(others, pts.last(), tolerance)?.let { pts[pts.size - 1] = it; joins++ }
+
+        // Слить со стенами того же вида, к концам которых прилипли.
+        val work = lines.toMutableList()
+        var current = pts.toList()
+        var merged = true
+        while (merged) {
+            merged = false
+            for (i in work.indices) {
+                val b = work[i]
+                if (b.type != added.type || b.points.size < 2 || closed(b.points)) continue
+                val ends = listOf(b.points.first(), b.points.last())
+                if (ends.none { it == current.first() || it == current.last() }) continue
+                val joined = mergeEnds(b.points, current, 0.001f) { _, _ -> false } ?: continue
+                current = joined
+                work.removeAt(i)
+                merged = true
+                break
+            }
+        }
+        // Оба конца прилипли к одной стене — получилось кольцо.
+        if (current.size > 3 && current.first().distanceTo(current.last()) < 0.001f) {
+            current = current.dropLast(1) + current.first()
+        }
+        return Result(work + added.copy(points = current), joins)
     }
 
     /** Слить две ломаные, если какие-то их концы рядом; иначе null. */
