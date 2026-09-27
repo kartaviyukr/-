@@ -28,6 +28,7 @@ import com.fantasymap.creator.model.BuildingType
 import com.fantasymap.creator.model.AreaShape
 import com.fantasymap.creator.model.BattleTemplates
 import com.fantasymap.creator.model.RoomTemplate
+import com.fantasymap.creator.model.TemplateGroup
 import com.fantasymap.creator.geom.WallJoiner
 import com.fantasymap.creator.model.BattleStage
 import com.fantasymap.creator.model.CityStage
@@ -111,6 +112,7 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     var waterKind by mutableStateOf(WaterKind.LAKE)
     var areaShape by mutableStateOf(AreaShape.FREE)
     var roomTemplate by mutableStateOf(RoomTemplate.TAVERN)
+    var templateGroup by mutableStateOf(TemplateGroup.TOWN)
     /** Куда прилипнет конец рисуемой стены — показывается кольцом. */
     var snapHint by mutableStateOf<Vec?>(null)
     var buildingType by mutableStateOf(BuildingType.HOUSE)

@@ -73,8 +73,10 @@ class BattleTemplatesTest {
     }
 
     @Test
-    fun `шаблонов не меньше тридцати`() {
-        assertTrue(RoomTemplate.entries.size >= 30)
+    fun `шаблонов не меньше сотни, названия не повторяются`() {
+        assertTrue(RoomTemplate.entries.size >= 100)
+        assertEquals(RoomTemplate.entries.size, RoomTemplate.entries.map { it.title }.toSet().size)
+        assertEquals(RoomTemplate.entries.size, TemplateGroup.entries.sumOf { it.templates.size })
     }
 
     @Test

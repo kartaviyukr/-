@@ -54,6 +54,7 @@ import com.fantasymap.creator.model.RoadType
 import com.fantasymap.creator.model.Stage
 import com.fantasymap.creator.model.AreaShape
 import com.fantasymap.creator.model.RoomTemplate
+import com.fantasymap.creator.model.TemplateGroup
 import com.fantasymap.creator.model.Tool
 import com.fantasymap.creator.model.WaterKind
 
@@ -485,10 +486,22 @@ private fun TemplatePicker(viewModel: EditorViewModel) {
             modifier = Modifier.padding(horizontal = 14.dp, vertical = 2.dp)
         )
         LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 2.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            items(TemplateGroup.entries.toList()) { group ->
+                FilterChip(
+                    selected = viewModel.templateGroup == group,
+                    onClick = { viewModel.templateGroup = group },
+                    label = { Text("${group.title} · ${group.templates.size}") }
+                )
+            }
+        }
+        LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            items(RoomTemplate.entries.toList()) { item ->
+            items(viewModel.templateGroup.templates) { item ->
                 FilterChip(
                     selected = viewModel.roomTemplate == item,
                     onClick = { viewModel.roomTemplate = item },
