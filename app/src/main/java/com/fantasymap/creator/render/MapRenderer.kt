@@ -131,13 +131,15 @@ class MapRenderer {
 
     fun render(
         canvas: Canvas,
-        source: MapProject,
+        project: MapProject,
         cam: Camera,
         viewWidth: Float,
         viewHeight: Float,
         options: RenderOptions = RenderOptions()
     ) {
         // Экран игроков: спрятанное мастером не рисуется вовсе.
+        val source = project
+        @Suppress("NAME_SHADOWING")
         val project = if (source.kind == MapKind.BATTLE && source.style.playerView) {
             source.copy(
                 markers = source.markers.filter { !it.secret.hidden },
