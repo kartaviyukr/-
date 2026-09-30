@@ -596,6 +596,9 @@ fun StyleDialog(viewModel: EditorViewModel, onDismiss: () -> Unit) {
                     style = initial
                 }) { Text("↺ Вернуть как было") }
                 HorizontalDivider(Modifier.padding(vertical = 6.dp))
+                if (viewModel.mapKind == MapKind.CITY) {
+                    ToggleRow("Реалистичный вид города", style.realisticCity) { apply(style.copy(realisticCity = it)) }
+                }
                 if (viewModel.mapKind == MapKind.WORLD) {
                     ToggleRow("Бесконечная карта, без краёв", viewModel.project?.infinite == true) {
                         viewModel.setInfinite(it)

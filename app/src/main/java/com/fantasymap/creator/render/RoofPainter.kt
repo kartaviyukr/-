@@ -77,8 +77,14 @@ class RoofPainter(private val texture: (String) -> Bitmap?) {
     /**
      * Нарисовать крышу. [area] — контур постройки на экране, [screen] — его вершины.
      */
-    fun draw(canvas: Canvas, area: Path, screen: List<Vec>, type: BuildingType, ink: Int, u: Float) {
+    fun draw(canvas: Canvas, area: Path, screen: List<Vec>, type: BuildingType, ink: Int, u: Float, shade: Float = 0f) {
         val look = BuildingLook.of(type)
+        // Небольшой разброс оттенка: соседние дома одного вида не сливаются в одно пятно.
+        val tone = when {
+            shade > 0f -> MapRenderer.lighten(type.color, shade)
+            shade < 0f -> MapRenderer.darken(type.color, -shade)
+            else -> type.color
+        }
         val f = frameOf(screen)
         val size = min(f.l, f.w)
 
@@ -98,10 +104,10 @@ class RoofPainter(private val texture: (String) -> Bitmap?) {
             tex.shader = shader
             canvas.drawPath(area, tex)
             tex.shader = null
-            fill.color = MapRenderer.withAlpha(type.color, 105)
+            fill.color = MapRenderer.withAlpha(tone, 105)
             canvas.drawPath(area, fill)
         } else {
-            fill.color = type.color
+            fill.color = tone
             canvas.drawPath(area, fill)
         }
         if (size < 2f) return

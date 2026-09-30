@@ -235,7 +235,9 @@ data class MapStyle(
     /** Фишки встают ровно по клеткам. */
     val snapToGrid: Boolean = true,
     /** Насколько заметна сетка боевой локации: 0..1. */
-    val gridOpacity: Float = 0.45f
+    val gridOpacity: Float = 0.45f,
+    /** Город как с высоты: тени домов, мощёные улицы, земля кварталов вместо схемы. */
+    val realisticCity: Boolean = true
 )
 
 /** Слой карты — строка в списке слоёв. */

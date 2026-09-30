@@ -15,6 +15,8 @@ import android.graphics.Shader
 import android.graphics.Typeface
 import com.fantasymap.creator.geom.Visibility
 import com.fantasymap.creator.model.Dnd
+import com.fantasymap.creator.model.DistrictType
+import com.fantasymap.creator.model.RoadType
 import com.fantasymap.creator.model.BBox
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.CustomAsset
@@ -83,6 +85,11 @@ class MapRenderer {
     private val glyphs = Glyphs()
     private val path = Path()
     private val path2 = Path()
+    private val roadPaint = Paint(Paint.ANTI_ALIAS_FLAG or Paint.FILTER_BITMAP_FLAG).apply {
+        style = Paint.Style.STROKE
+        strokeCap = Paint.Cap.ROUND
+        strokeJoin = Paint.Join.ROUND
+    }
     /** Видимая часть карты: весь мир или, у бесконечной карты, экран. */
     private var area = BBox(0f, 0f, 1f, 1f)
     private val roofs = RoofPainter { builtinTexture(it) }
@@ -1267,13 +1274,24 @@ class MapRenderer {
             val contours = district.contours()
             if (!Geometry.bounds(contours.flatten()).intersects(visible)) continue
             buildContoursPath(contours, cam, path)
-            fill.color = withAlpha(district.type.color, 90)
-            canvas.drawPath(path, fill)
-            stroke.color = withAlpha(darken(district.type.color, 0.35f), 210)
-            stroke.strokeWidth = 1.6f * u
-            stroke.pathEffect = DashPathEffect(floatArrayOf(7f * u, 5f * u), 0f)
-            canvas.drawPath(path, stroke)
-            stroke.pathEffect = null
+            val ground = if (project.style.realisticCity) builtinTexture(districtGround(district.type)) else null
+            if (ground != null) {
+                // Земля квартала — утоптанная, мощёная или травяная, как с высоты.
+                fillWithTile(canvas, path, ground, 140f, cam, 150)
+                fill.color = withAlpha(district.type.color, 45)
+                canvas.drawPath(path, fill)
+                stroke.color = withAlpha(darken(district.type.color, 0.35f), 70)
+                stroke.strokeWidth = 1.2f * u
+                canvas.drawPath(path, stroke)
+            } else {
+                fill.color = withAlpha(district.type.color, 90)
+                canvas.drawPath(path, fill)
+                stroke.color = withAlpha(darken(district.type.color, 0.35f), 210)
+                stroke.strokeWidth = 1.6f * u
+                stroke.pathEffect = DashPathEffect(floatArrayOf(7f * u, 5f * u), 0f)
+                canvas.drawPath(path, stroke)
+                stroke.pathEffect = null
+            }
 
             val title = district.name.ifBlank { district.type.title }
             val center = Geometry.centroid(district.points)
@@ -1286,7 +1304,45 @@ class MapRenderer {
         }
     }
 
+    private fun roadSurface(type: RoadType): String = when (type) {
+        RoadType.MAIN_STREET, RoadType.STREET -> "cobblestone"
+        RoadType.WATERFRONT -> "stone_tiles"
+        RoadType.LANE, RoadType.ALLEY, RoadType.STAIRS_WAY -> "dirt"
+        RoadType.HIGHWAY, RoadType.ROYAL_ROAD -> "flagstone"
+        else -> "gravel"
+    }
+
+    /** Чем покрыта земля квартала в реалистичном виде города. */
+    private fun districtGround(type: DistrictType): String = when (type) {
+        DistrictType.PARK_QUARTER, DistrictType.FARM_QUARTER, DistrictType.ELVEN_QUARTER,
+        DistrictType.GRAVE_QUARTER, DistrictType.SUBURB -> "aerial_grass"
+        DistrictType.SLUMS, DistrictType.FISHER_QUARTER, DistrictType.RUINED_QUARTER,
+        DistrictType.CURSED_QUARTER, DistrictType.POOR_QUARTER -> "dirt"
+        DistrictType.PALACE_QUARTER, DistrictType.TEMPLE_QUARTER, DistrictType.NOBLE_QUARTER,
+        DistrictType.SCHOLAR_QUARTER, DistrictType.MERCHANT_QUARTER -> "stone_tiles"
+        else -> "gravel"
+    }
+
     private fun drawBuildings(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
+        val realistic = project.kind == MapKind.CITY && project.style.realisticCity
+        if (realistic) {
+            // Тени: солнце с северо-запада, все тени одним слоем, чтобы не темнели внахлёст.
+            val layer = canvas.saveLayerAlpha(null, 90)
+            fill.color = 0xFF1E1A14.toInt()
+            for (building in project.buildings) {
+                val points = building.points
+                if (points.size < 3) continue
+                val bounds = Geometry.bounds(points)
+                if (!bounds.intersects(visible)) continue
+                val lift = min(bounds.width, bounds.height) * if (building.type.big) 0.3f else 0.2f
+                path.reset()
+                path.moveTo(cam.screenX(points[0].x + lift), cam.screenY(points[0].y + lift))
+                for (i in 1 until points.size) path.lineTo(cam.screenX(points[i].x + lift), cam.screenY(points[i].y + lift))
+                path.close()
+                canvas.drawPath(path, fill)
+            }
+            canvas.restoreToCount(layer)
+        }
         for (building in project.buildings) {
             val points = building.points
             if (points.size < 3) continue
@@ -1325,7 +1381,8 @@ class MapRenderer {
 
             // Крыша: своя текстура, форма и деталь у каждого вида постройки.
             val screen = points.map { Vec(cam.screenX(it.x), cam.screenY(it.y)) }
-            roofs.draw(canvas, path, screen, building.type, inkColor, u)
+            val shade = if (realistic) ((building.id.hashCode() and 0xFF) / 255f - 0.5f) * 0.22f else 0f
+            roofs.draw(canvas, path, screen, building.type, inkColor, u, shade)
             stroke.color = inkColor
             stroke.strokeWidth = max(0.7f, 1.05f * u)
             stroke.pathEffect = null
@@ -1398,10 +1455,29 @@ class MapRenderer {
                     canvas.drawPath(paths[i], stroke)
                 }
             }
+            val realistic = city && project.style.realisticCity
             for (i in solid) {
                 stroke.color = roads[i].type.color
                 stroke.strokeWidth = widthOf(roads[i])
                 canvas.drawPath(paths[i], stroke)
+                // Мостовая: булыжник на улицах, утоптанная земля в переулках.
+                val paving = if (realistic) builtinTexture(roadSurface(roads[i].type)) else null
+                if (paving != null) {
+                    val shader = shaders.getOrPut(paving) {
+                        BitmapShader(paving, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT)
+                    }
+                    val k = 40f * cam.scale / max(1, paving.width)
+                    textureMatrix.reset()
+                    textureMatrix.setScale(k, k)
+                    textureMatrix.postTranslate(cam.screenX(0f), cam.screenY(0f))
+                    shader.setLocalMatrix(textureMatrix)
+                    roadPaint.shader = shader
+                    roadPaint.strokeWidth = widthOf(roads[i]) * 0.94f
+                    canvas.drawPath(paths[i], roadPaint)
+                    roadPaint.shader = null
+                    stroke.color = withAlpha(roads[i].type.color, 70)
+                    canvas.drawPath(paths[i], stroke)
+                }
             }
         }
         for (i in roads.indices) {
