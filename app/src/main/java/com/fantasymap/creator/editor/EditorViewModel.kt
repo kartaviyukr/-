@@ -26,6 +26,13 @@ import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.BuildingGroup
 import com.fantasymap.creator.model.BuildingType
 import com.fantasymap.creator.model.AreaShape
+import com.fantasymap.creator.geom.Visibility
+import com.fantasymap.creator.model.CharacterSheet
+import com.fantasymap.creator.model.Secret
+import com.fantasymap.creator.model.Ability
+import com.fantasymap.creator.model.CheckSkill
+import com.fantasymap.creator.model.Attack
+import com.fantasymap.creator.model.Dnd
 import com.fantasymap.creator.model.BattleTemplates
 import com.fantasymap.creator.model.RoomTemplate
 import com.fantasymap.creator.model.TemplateGroup
@@ -178,6 +185,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     private val redoStack = ArrayDeque<MapProject>()
     private var saveJob: Job? = null
     private var draggingSelection: Selection? = null
+    /** Откуда фишку начали двигать в режиме игры — для подсчёта футов. */
+    private var dragFrom: Vec? = null
+    /** Режим игры на боевой карте: двигать фишки, бить, проверять, открывать тайное. */
+    var playMode by mutableStateOf(false)
 
     /** Подпись, только что нарисованная вдоль кривой: её карточку надо открыть. */
     var pendingLabelEdit by mutableStateOf<String?>(null)
@@ -728,6 +739,10 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
     // ------------------------------------------------------------- рисование
 
     fun startStroke(world: Vec) {
+        if (playMode) {
+            playTouch(world)
+            return
+        }
         if (tool == Tool.SELECT) {
             val hit = hitTest(world)
             selection = hit
@@ -806,6 +821,17 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         if (dragged != null) {
             if (dragged is Selection.TokenSel) snapToken(dragged.id)
             draggingSelection = null
+            if (playMode) {
+                val moved = rulerText
+                draft.clear()
+                rulerText = null
+                dragFrom = null
+                if (dragged is Selection.TokenSel && moved != null) {
+                    val name = project?.tokens?.firstOrNull { it.id == dragged.id }?.title ?: ""
+                    addLog("$name идёт: $moved")
+                }
+                updateExplored()
+            }
             scheduleSave()
             return
         }
@@ -1209,8 +1235,25 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
             is Selection.LabelSel -> editQuiet { state ->
                 state.copy(labels = state.labels.map { if (it.id == target.id) it.copy(pos = world) else it })
             }
-            is Selection.TokenSel -> editQuiet { state ->
-                state.copy(tokens = state.tokens.map { if (it.id == target.id) it.copy(pos = world) else it })
+            is Selection.TokenSel -> {
+                editQuiet { state ->
+                    state.copy(tokens = state.tokens.map { if (it.id == target.id) it.copy(pos = world) else it })
+                }
+                val from = dragFrom
+                if (playMode && from != null) {
+                    // Путь фишки: сколько футов прошла и сколько ещё может.
+                    draft.clear()
+                    draft.add(from)
+                    draft.add(world)
+                    val current = project
+                    val token = current?.tokens?.firstOrNull { it.id == target.id }
+                    if (current != null && token != null) {
+                        val cells = kotlin.math.round(from.distanceTo(world) / current.gridCell).toInt()
+                        val feet = cells * current.feetPerCell
+                        val left = Dnd.sheetOf(token).speed - feet
+                        rulerText = if (left >= 0) "$feet фт · осталось $left" else "$feet фт · больше скорости на ${-left}"
+                    }
+                }
             }
             else -> Unit
         }
@@ -1616,6 +1659,204 @@ class EditorViewModel(application: Application) : AndroidViewModel(application) 
         val active = order[turn]
         selection = Selection.TokenSel(active.id)
         message = "Раунд $round · ходит ${active.title}"
+    }
+
+    // ------------------------------------------------------------- режим игры
+
+    fun enterPlayMode() {
+        if (project?.kind != MapKind.BATTLE) return
+        cancelStroke()
+        playMode = true
+        selection = null
+        updateExplored()
+        message = "Режим игры: двигайте фишки, касание двери открывает её"
+    }
+
+    fun exitPlayMode() {
+        cancelStroke()
+        playMode = false
+        message = "Режим редактирования"
+    }
+
+    /** Касание в режиме игры: фишку — взять и вести, дверь — открыть или закрыть. */
+    private fun playTouch(world: Vec) {
+        val current = project ?: return
+        val hit = hitTest(world)
+        if (hit is Selection.MarkerSel) {
+            val marker = current.markers.firstOrNull { it.id == hit.id }
+            if (marker != null && marker.type in Visibility.doors && !marker.secret.hidden) {
+                toggleDoor(marker.id)
+                return
+            }
+        }
+        selection = hit
+        if (hit is Selection.TokenSel) {
+            val token = current.tokens.firstOrNull { it.id == hit.id } ?: return
+            draggingSelection = hit
+            dragFrom = token.pos
+            pushHistoryForDrag()
+        }
+    }
+
+    fun toggleDoor(id: String) {
+        val marker = project?.markers?.firstOrNull { it.id == id } ?: return
+        if (marker.type == MarkerType.B_LOCKED_DOOR && !marker.open) {
+            message = "Заперто. Проверка «Воровские инструменты» или Атлетика — откроете в окне проверки"
+        }
+        edit { state ->
+            state.copy(markers = state.markers.map { if (it.id == id) it.copy(open = !it.open) else it })
+        }
+        addLog("${marker.name.ifBlank { marker.type.title }}: ${if (marker.open) "закрыта" else "открыта"}")
+        updateExplored()
+    }
+
+    fun addLog(text: String) {
+        editQuiet { state -> state.copy(scene = state.scene.copy(log = (listOf(text) + state.scene.log).take(300))) }
+        scheduleSave()
+    }
+
+    fun clearLog() {
+        edit { it.copy(scene = it.scene.copy(log = emptyList())) }
+    }
+
+    /** Зрение героев: стены закрывают обзор, игроки видят только то, что видят герои. */
+    fun toggleVision() {
+        edit { it.copy(scene = it.scene.copy(vision = !it.scene.vision)) }
+        updateExplored()
+        message = if (project?.scene?.vision == true) {
+            "Зрение героев включено: на экране игроков видно только то, что видят герои"
+        } else {
+            "Зрение героев выключено"
+        }
+    }
+
+    fun forgetExplored() {
+        edit { it.copy(scene = it.scene.copy(explored = emptyList())) }
+        updateExplored()
+    }
+
+    /** Запомнить клетки, которые сейчас видят герои. */
+    fun updateExplored() {
+        val current = project ?: return
+        if (!current.scene.vision) return
+        val seen = Visibility.visibleCells(current, Visibility.heroViews(current))
+        val known = current.scene.explored.toHashSet()
+        if (known.containsAll(seen)) return
+        known.addAll(seen)
+        editQuiet { it.copy(scene = it.scene.copy(explored = known.toList())) }
+        scheduleSave()
+    }
+
+    fun sheetOf(token: Token): CharacterSheet = Dnd.sheetOf(token)
+
+    fun updateSheet(tokenId: String, sheet: CharacterSheet) {
+        edit { state -> state.copy(tokens = state.tokens.map { if (it.id == tokenId) it.copy(sheet = sheet) else it }) }
+    }
+
+    private val playRandom = kotlin.random.Random(System.nanoTime())
+
+    /** Атака по правилам: бросок против КД цели, урон сразу снимается с хитов. */
+    fun attack(attackerId: String, attack: Attack, targetId: String, advantage: Int, applyDamage: Boolean): Dnd.AttackResult? {
+        val current = project ?: return null
+        val attacker = current.tokens.firstOrNull { it.id == attackerId } ?: return null
+        val target = current.tokens.firstOrNull { it.id == targetId } ?: return null
+        val result = Dnd.attack(attacker.title, attack, target.title, target.ac, playRandom, advantage)
+        var text = result.text
+        if (result.hit && applyDamage && result.damage > 0) {
+            val left = (target.hp - result.damage).coerceAtLeast(0)
+            edit { state ->
+                state.copy(tokens = state.tokens.map { if (it.id == targetId) it.copy(hp = left) else it })
+            }
+            text += " · ${target.title}: ${left}/${target.maxHp} хитов" + if (left == 0) " — повержен!" else ""
+        }
+        addLog(text)
+        message = text
+        return result.copy(text = text)
+    }
+
+    /** Проверка навыка или спасбросок существа. save != null — спасбросок этой характеристики. */
+    fun rollCheck(tokenId: String?, skill: CheckSkill, save: Ability?, advantage: Int, extraBonus: Int): Dnd.CheckResult {
+        val token = project?.tokens?.firstOrNull { it.id == tokenId }
+        val sheet = token?.let { Dnd.sheetOf(it) }
+        val bonus = extraBonus + when {
+            sheet == null -> 0
+            save != null -> sheet.saveBonus(save)
+            skill == CheckSkill.ANY -> 0
+            else -> sheet.skillBonus(skill)
+        }
+        val what = if (save != null) "спасбросок ${save.title}" else skill.title
+        val result = Dnd.check(token?.title ?: "Бросок", what, bonus, playRandom, advantage)
+        addLog(result.text)
+        return result
+    }
+
+    /** Что на карте спрятано: для окна проверки. */
+    data class HiddenThing(val ref: Selection, val title: String, val secret: Secret, val pos: Vec)
+
+    fun hiddenThings(): List<HiddenThing> {
+        val current = project ?: return emptyList()
+        val out = ArrayList<HiddenThing>()
+        current.markers.filter { it.secret.hidden }.forEach {
+            out.add(HiddenThing(Selection.MarkerSel(it.id), it.name.ifBlank { it.type.title }, it.secret, it.pos))
+        }
+        current.tokens.filter { it.hidden }.forEach {
+            out.add(HiddenThing(Selection.TokenSel(it.id), it.title, Secret(true, it.stealthDc.takeIf { d -> d > 0 } ?: 12, CheckSkill.PERCEPTION), it.pos))
+        }
+        current.lines.filter { it.secret.hidden && it.points.isNotEmpty() }.forEach {
+            out.add(HiddenThing(Selection.Line(it.id), it.name.ifBlank { it.type.title }, it.secret, it.points[it.points.size / 2]))
+        }
+        current.biomes.filter { it.secret.hidden && it.points.isNotEmpty() }.forEach {
+            out.add(HiddenThing(Selection.Biome(it.id), it.name.ifBlank { it.biome.title }, it.secret, Geometry.centroid(it.points)))
+        }
+        return out
+    }
+
+    /** Открыть найденное игрокам. */
+    fun reveal(refs: List<Selection>) {
+        if (refs.isEmpty()) return
+        val things = hiddenThings().filter { it.ref in refs }
+        val ids = refs.map { it.id }.toSet()
+        edit { state ->
+            state.copy(
+                markers = state.markers.map { if (it.id in ids) it.copy(secret = it.secret.copy(hidden = false)) else it },
+                tokens = state.tokens.map { if (it.id in ids) it.copy(hidden = false) else it },
+                lines = state.lines.map { if (it.id in ids) it.copy(secret = it.secret.copy(hidden = false)) else it },
+                biomes = state.biomes.map { if (it.id in ids) it.copy(secret = it.secret.copy(hidden = false)) else it }
+            )
+        }
+        for (thing in things) {
+            addLog("Найдено: ${thing.title}" + if (thing.secret.reveal.isNotBlank()) " — ${thing.secret.reveal}" else "")
+        }
+        message = "Открыто игрокам: ${things.joinToString { it.title }}"
+        updateExplored()
+    }
+
+    /** Спрятать выбранное или изменить тайну. */
+    fun setSecret(ref: Selection, secret: Secret) {
+        edit { state ->
+            when (ref) {
+                is Selection.MarkerSel -> state.copy(markers = state.markers.map { if (it.id == ref.id) it.copy(secret = secret) else it })
+                is Selection.Line -> state.copy(lines = state.lines.map { if (it.id == ref.id) it.copy(secret = secret) else it })
+                is Selection.Biome -> state.copy(biomes = state.biomes.map { if (it.id == ref.id) it.copy(secret = secret) else it })
+                is Selection.TokenSel -> state.copy(tokens = state.tokens.map {
+                    if (it.id == ref.id) it.copy(hidden = secret.hidden, stealthDc = secret.dc) else it
+                })
+                else -> state
+            }
+        }
+    }
+
+    fun secretOf(ref: Selection): Secret? {
+        val current = project ?: return null
+        return when (ref) {
+            is Selection.MarkerSel -> current.markers.firstOrNull { it.id == ref.id }?.secret
+            is Selection.Line -> current.lines.firstOrNull { it.id == ref.id }?.secret
+            is Selection.Biome -> current.biomes.firstOrNull { it.id == ref.id }?.secret
+            is Selection.TokenSel -> current.tokens.firstOrNull { it.id == ref.id }?.let {
+                Secret(it.hidden, it.stealthDc.takeIf { d -> d > 0 } ?: 12, CheckSkill.PERCEPTION)
+            }
+            else -> null
+        }
     }
 
     fun endCombat() {

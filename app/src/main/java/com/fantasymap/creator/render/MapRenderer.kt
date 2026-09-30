@@ -13,6 +13,8 @@ import android.graphics.RadialGradient
 import android.graphics.RectF
 import android.graphics.Shader
 import android.graphics.Typeface
+import com.fantasymap.creator.geom.Visibility
+import com.fantasymap.creator.model.Dnd
 import com.fantasymap.creator.model.BBox
 import com.fantasymap.creator.model.BiomeType
 import com.fantasymap.creator.model.CustomAsset
@@ -122,12 +124,22 @@ class MapRenderer {
 
     fun render(
         canvas: Canvas,
-        project: MapProject,
+        source: MapProject,
         cam: Camera,
         viewWidth: Float,
         viewHeight: Float,
         options: RenderOptions = RenderOptions()
     ) {
+        // Экран игроков: спрятанное мастером не рисуется вовсе.
+        val project = if (source.kind == MapKind.BATTLE && source.style.playerView) {
+            source.copy(
+                markers = source.markers.filter { !it.secret.hidden },
+                lines = source.lines.filter { !it.secret.hidden },
+                biomes = source.biomes.filter { !it.secret.hidden }
+            )
+        } else {
+            source
+        }
         val style = project.style
         val u = options.uiScale
         inkColor = style.inkColor
@@ -173,7 +185,10 @@ class MapRenderer {
         if (style.showBuildings) drawBuildings(canvas, project, cam, visible, u)
         if (style.showBorders) drawCountries(canvas, project, cam, u, options)
         if (style.showMarkers) drawMarkers(canvas, project, cam, visible, u)
+        views = if (battle && project.scene.vision) heroViews(source) else emptyList()
+        if (battle && !style.playerView) drawSecrets(canvas, project, cam, u)
         if (battle && style.showTokens) drawTokens(canvas, project, cam, visible, u, options)
+        if (battle && project.scene.vision) drawVision(canvas, project, cam, u)
         if (style.showLabels) drawLabels(canvas, project, cam, u)
         if (battle && style.showFog) drawFog(canvas, project, cam, u)
 
@@ -1447,6 +1462,100 @@ class MapRenderer {
 
     // ---------------------------------------------------------------- объекты
 
+    // ---------------------------------------------------------------- игра
+
+    /** Зрение героев, пересчитывается только когда что-то сдвинулось. */
+    private var views: List<List<Vec>> = emptyList()
+    private var viewsKey: List<Any?> = emptyList()
+
+    private fun heroViews(project: MapProject): List<List<Vec>> {
+        val key = listOf(project.tokens, project.lines, project.markers, project.gridCell, project.feetPerCell)
+        if (key == viewsKey) return views
+        viewsKey = key
+        return Visibility.heroViews(project)
+    }
+
+    /**
+     * Мастеру тайники видны: пунктир и знак вопроса. Игрокам (на их экране)
+     * тайников просто нет.
+     */
+    private fun drawSecrets(canvas: Canvas, project: MapProject, cam: Camera, u: Float) {
+        val color = 0xFFB03AE0.toInt()
+        stroke.color = color
+        stroke.strokeWidth = max(1.2f, 2f * u)
+        stroke.pathEffect = DashPathEffect(floatArrayOf(6f * u, 4f * u), 0f)
+        for (region in project.biomes) {
+            if (!region.secret.hidden) continue
+            buildContoursPath(region.contours().filter { it.size >= 3 }, cam, path)
+            canvas.drawPath(path, stroke)
+        }
+        for (line in project.lines) {
+            if (!line.secret.hidden || line.points.size < 2) continue
+            buildPath(line.points, cam, false, path)
+            canvas.drawPath(path, stroke)
+        }
+        stroke.pathEffect = null
+        val badges = project.markers.filter { it.secret.hidden }.map { it.pos to it.secret.dc } +
+            project.biomes.filter { it.secret.hidden && it.points.isNotEmpty() }.map { Geometry.centroid(it.points) to it.secret.dc } +
+            project.lines.filter { it.secret.hidden && it.points.isNotEmpty() }.map { it.points[it.points.size / 2] to it.secret.dc }
+        for ((pos, dc) in badges) {
+            val sx = cam.screenX(pos.x)
+            val sy = cam.screenY(pos.y)
+            val r = max(9f * u, project.gridCell * cam.scale * 0.5f)
+            stroke.color = color
+            stroke.pathEffect = DashPathEffect(floatArrayOf(5f * u, 4f * u), 0f)
+            canvas.drawCircle(sx, sy, r, stroke)
+            stroke.pathEffect = null
+            fill.color = color
+            canvas.drawCircle(sx + r * 0.75f, sy - r * 0.75f, 8f * u, fill)
+            drawMapText(canvas, "$dc", sx + r * 0.75f, sy - r * 0.75f + 3.5f * u, 9f * u, 0xFFFFFFFF.toInt(), false, bold = true)
+        }
+    }
+
+    /**
+     * Зрение героев. На экране игроков всё, чего герои не видят, в темноте,
+     * а уже изученное — в полутьме. Мастер видит только границы обзора.
+     */
+    private fun drawVision(canvas: Canvas, project: MapProject, cam: Camera, u: Float) {
+        if (!project.style.playerView) {
+            stroke.color = 0xAAFFD54A.toInt()
+            stroke.strokeWidth = max(1f, 1.5f * u)
+            stroke.pathEffect = DashPathEffect(floatArrayOf(4f * u, 4f * u), 0f)
+            for (view in views) {
+                if (view.size < 3) continue
+                buildPath(view, cam, true, path)
+                canvas.drawPath(path, stroke)
+            }
+            stroke.pathEffect = null
+            return
+        }
+        val x0 = cam.screenX(area.minX)
+        val y0 = cam.screenY(area.minY)
+        val x1 = cam.screenX(area.maxX)
+        val y1 = cam.screenY(area.maxY)
+        val layer = canvas.saveLayer(x0, y0, x1, y1, null)
+        fill.color = 0xFF0B0A0C.toInt()
+        canvas.drawRect(x0, y0, x1, y1, fill)
+        visionPaint.xfermode = android.graphics.PorterDuffXfermode(android.graphics.PorterDuff.Mode.DST_OUT)
+        val cell = project.gridCell
+        visionPaint.alpha = 150
+        for (key in project.scene.explored) {
+            val cx = Dnd.cellX(key) * cell
+            val cy = Dnd.cellY(key) * cell
+            canvas.drawRect(cam.screenX(cx), cam.screenY(cy), cam.screenX(cx + cell), cam.screenY(cy + cell), visionPaint)
+        }
+        visionPaint.alpha = 255
+        for (view in views) {
+            if (view.size < 3) continue
+            buildPath(view, cam, true, path)
+            canvas.drawPath(path, visionPaint)
+        }
+        visionPaint.xfermode = null
+        canvas.restoreToCount(layer)
+    }
+
+    private val visionPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply { style = Paint.Style.FILL; color = 0xFF000000.toInt() }
+
     private fun drawMarkers(canvas: Canvas, project: MapProject, cam: Camera, visible: BBox, u: Float) {
         val sorted = project.markers.sortedBy { it.pos.y }
         // На боевой локации значки растут вместе с сеткой.
@@ -1455,7 +1564,14 @@ class MapRenderer {
             if (!visible.contains(marker.pos)) continue
             if (project.style.playerView && marker.type == MarkerType.B_GM_NOTE) continue
             val country = project.countryById(marker.countryId)
-            drawMarker(canvas, marker, cam, u, country, cell)
+            // Открытая дверь бледнее закрытой.
+            if (marker.open && marker.type in Visibility.doors) {
+                val layer = canvas.saveLayerAlpha(null, 110)
+                drawMarker(canvas, marker, cam, u, country, cell)
+                canvas.restoreToCount(layer)
+            } else {
+                drawMarker(canvas, marker, cam, u, country, cell)
+            }
         }
     }
 
@@ -2098,8 +2214,13 @@ class MapRenderer {
     ) {
         val playerView = project.style.playerView
         // Крупные — снизу, мелкие поверх.
+        val blind = playerView && project.scene.vision
         for (token in project.tokens.sortedByDescending { it.size.cells }) {
             if (playerView && token.hidden) continue
+            // Кого герои не видят — того нет на экране игроков.
+            if (blind && token.faction != TokenFaction.HERO && token.faction != TokenFaction.ALLY &&
+                views.none { Visibility.sees(it, token.pos) }
+            ) continue
             val radiusWorld = tokenRadius(project, token)
             if (!visible.expand(radiusWorld * 2f).contains(token.pos)) continue
             val sx = cam.screenX(token.pos.x)

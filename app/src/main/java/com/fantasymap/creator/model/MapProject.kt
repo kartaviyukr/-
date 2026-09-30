@@ -37,7 +37,9 @@ data class BiomeRegion(
     val points: List<Vec> = emptyList(),
     val extraContours: List<List<Vec>> = emptyList(),
     /** Авторская заготовка: область замащивается своей картинкой. */
-    val assetId: String? = null
+    val assetId: String? = null,
+    /** Тайник на боевой карте: скрытая яма, ловушка, тайная зона. */
+    val secret: Secret = Secret()
 ) {
     /** Все контуры области: основной и дополнительные. */
     fun contours(): List<List<Vec>> =
@@ -55,7 +57,9 @@ data class LineFeature(
     val type: LineFeatureType = LineFeatureType.RIVER,
     val name: String = "",
     val points: List<Vec> = emptyList(),
-    val width: Float = 0f
+    val width: Float = 0f,
+    /** Тайная стена, проход или мост — не видна игрокам, пока не найдут. */
+    val secret: Secret = Secret()
 ) {
     val effectiveWidth: Float get() = if (width > 0f) width else type.defaultWidth
 }
@@ -85,7 +89,11 @@ data class Marker(
     /** Карта, на которую ведёт этот объект: тапнул — перешёл к подробной карте. */
     val linkedProjectId: String? = null,
     /** Авторская заготовка: вместо знака рисуется своя картинка. */
-    val assetId: String? = null
+    val assetId: String? = null,
+    /** Спрятанный предмет, ловушка или дверь: игроки не видят, пока не найдут. */
+    val secret: Secret = Secret(),
+    /** Дверь открыта: не загораживает обзор. */
+    val open: Boolean = false
 )
 
 /**

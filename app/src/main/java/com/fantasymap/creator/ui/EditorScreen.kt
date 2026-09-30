@@ -68,6 +68,8 @@ fun EditorScreen(viewModel: EditorViewModel) {
     var showObjectDialog by remember { mutableStateOf(false) }
     var showAssets by remember { mutableStateOf(false) }
     var battleDialog by remember { mutableStateOf<BattleDialog?>(null) }
+    var playDialog by remember { mutableStateOf<PlayDialog?>(null) }
+    var secretTarget by remember { mutableStateOf<Selection?>(null) }
     var pendingImage by remember { mutableStateOf<Uri?>(null) }
     var renameTarget by remember { mutableStateOf<Selection?>(null) }
     var pngSize by remember { mutableIntStateOf(2048) }
@@ -138,6 +140,13 @@ fun EditorScreen(viewModel: EditorViewModel) {
                     }
                 },
                 actions = {
+                    if (project.kind == MapKind.BATTLE) {
+                        TextButton(onClick = {
+                            if (viewModel.playMode) viewModel.exitPlayMode() else viewModel.enterPlayMode()
+                        }) {
+                            Text(if (viewModel.playMode) "✎ Правка" else "▶ Играть", fontWeight = FontWeight.Bold)
+                        }
+                    }
                     IconButton(onClick = { viewModel.undo() }, enabled = viewModel.canUndo) {
                         Text("↶", style = MaterialTheme.typography.titleLarge)
                     }
@@ -223,12 +232,16 @@ fun EditorScreen(viewModel: EditorViewModel) {
             )
         },
         bottomBar = {
-            EditorBottomPanel(
-                viewModel = viewModel,
-                onOpenCountries = { showCountries = true },
-                onOpenAssets = { showAssets = true },
-                onBattleDialog = { battleDialog = it }
-            )
+            if (viewModel.playMode) {
+                PlayPanel(viewModel) { playDialog = it }
+            } else {
+                EditorBottomPanel(
+                    viewModel = viewModel,
+                    onOpenCountries = { showCountries = true },
+                    onOpenAssets = { showAssets = true },
+                    onBattleDialog = { battleDialog = it }
+                )
+            }
         }
     ) { padding ->
         Box(
@@ -261,10 +274,11 @@ fun EditorScreen(viewModel: EditorViewModel) {
             }
 
             val selection = viewModel.selection
-            if (selection != null) {
+            if (selection != null && !viewModel.playMode) {
                 SelectionCard(
                     viewModel = viewModel,
                     selection = selection,
+                    onSecret = { secretTarget = selection },
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .padding(10.dp),
@@ -317,6 +331,19 @@ fun EditorScreen(viewModel: EditorViewModel) {
             TokenEditDialog(viewModel, token) { showObjectDialog = false }
         }
     }
+    when (playDialog) {
+        PlayDialog.ATTACK -> AttackDialog(viewModel) { playDialog = null }
+        PlayDialog.CHECK -> CheckDialog(viewModel) { playDialog = null }
+        PlayDialog.LOG -> LogDialog(viewModel) { playDialog = null }
+        PlayDialog.SHEET -> SheetDialog(viewModel) { playDialog = null }
+        PlayDialog.INITIATIVE -> InitiativeDialog(viewModel) { playDialog = null }
+        PlayDialog.DICE -> DiceDialog(viewModel) { playDialog = null }
+        null -> Unit
+    }
+    secretTarget?.let { target ->
+        SecretDialog(viewModel, target) { secretTarget = null }
+    }
+
     when (battleDialog) {
         BattleDialog.INITIATIVE -> InitiativeDialog(viewModel) { battleDialog = null }
         BattleDialog.DICE -> DiceDialog(viewModel) { battleDialog = null }
@@ -456,6 +483,7 @@ private fun SelectionCard(
     viewModel: EditorViewModel,
     selection: Selection,
     modifier: Modifier = Modifier,
+    onSecret: () -> Unit = {},
     onEdit: () -> Unit
 ) {
     val project = viewModel.project ?: return
@@ -560,6 +588,17 @@ private fun SelectionCard(
                     onClick = { viewModel.changeHp(selection.id, 1) },
                     contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
                 ) { Text("+1") }
+            }
+            if (project.kind == MapKind.BATTLE && (
+                    selection is Selection.MarkerSel || selection is Selection.TokenSel ||
+                        selection is Selection.Line || selection is Selection.Biome
+                    )
+            ) {
+                val secret = viewModel.secretOf(selection)
+                TextButton(
+                    onClick = onSecret,
+                    contentPadding = PaddingValues(horizontal = 6.dp, vertical = 0.dp)
+                ) { Text(if (secret?.hidden == true) "🙈 КС ${secret.dc}" else "🙈") }
             }
             if (selection is Selection.Biome || selection is Selection.DistrictSel ||
                 selection is Selection.Land || selection is Selection.Water || selection is Selection.FogSel

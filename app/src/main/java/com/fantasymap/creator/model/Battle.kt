@@ -280,7 +280,11 @@ data class Token(
     /** Спрятана от игроков: видна только мастеру. */
     val hidden: Boolean = false,
     /** Своя картинка вместо значка — портрет героя или врага. */
-    val assetId: String? = null
+    val assetId: String? = null,
+    /** Лист персонажа: характеристики, навыки, атаки; null — по виду существа. */
+    val sheet: CharacterSheet? = null,
+    /** Сложность заметить спрятанную фишку (Внимательность). */
+    val stealthDc: Int = 0
 ) {
     val dead: Boolean get() = maxHp > 0 && hp <= 0
     val title: String get() = name.ifBlank { type.title }
@@ -309,7 +313,13 @@ data class SceneInfo(
     val notes: String = "",
     val round: Int = 1,
     /** Чей ход по списку инициативы. */
-    val turn: Int = 0
+    val turn: Int = 0,
+    /** Журнал игры: броски, атаки, находки. Новое — первым. */
+    val log: List<String> = emptyList(),
+    /** Зрение героев: стены закрывают обзор, игроки видят только то, что видят их герои. */
+    val vision: Boolean = false,
+    /** Клетки, которые герои уже видели: на экране игроков они в полутьме. */
+    val explored: List<Long> = emptyList()
 )
 
 /** Шаги работы над боевой локацией. */
