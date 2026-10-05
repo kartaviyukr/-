@@ -18,7 +18,8 @@
 | Общие задачи | Тип «Обоим» — квест закрывается, когда отметились оба |
 | Награда и наказание | Свободным текстом + игровые XP/золото/HP; долги копятся во вкладке «Долги» |
 | RPG-персонажи | 5 классов, уровни, опыт, здоровье, золото, характеристики |
-| Сюжет от нейросети | Главы пишет бесплатная LLM по итогам реально закрытых квестов |
+| Сюжет от нейросети | Главы пишет DeepSeek по итогам реально закрытых квестов |
+| Календарь целей | Месячная сетка: цели себе, партнёру или общие, плюс дедлайны квестов |
 | Синхронизация | Realtime между Android и iPhone через Supabase |
 | Уведомления | Локальные (точки, дедлайны) + push от партнёра |
 
@@ -48,6 +49,8 @@
 2. Откройте **SQL Editor** → **New query**, вставьте целиком содержимое файла
    [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) и нажмите **Run**.
    Это создаст таблицы, права доступа и включит realtime.
+   Затем так же выполните [`supabase/migrations/0002_goals_and_llm.sql`](supabase/migrations/0002_goals_and_llm.sql)
+   — он добавляет цели в календаре и настройки нейросети.
 3. Откройте **Project Settings → API** и скопируйте два значения:
    - `Project URL`
    - `anon public` ключ
@@ -63,7 +66,7 @@
    и войдите. Встроенный отправитель Supabase на бесплатном тарифе шлёт лишь
    несколько писем в час.
 
-### Edge-функции (сюжет и push)
+### Edge-функция для push-уведомлений
 
 Ставится один раз с компьютера:
 
@@ -72,32 +75,30 @@ npm install -g supabase
 supabase login
 supabase link --project-ref <ref-вашего-проекта>
 
-# Ключ бесплатной LLM — см. следующий раздел
-supabase secrets set LLM_PROVIDER=groq
-supabase secrets set LLM_API_KEY=<ваш-ключ>
-
-supabase functions deploy generate-story
 supabase functions deploy notify-partner
 ```
 
-Без этого шага приложение полностью работает — не будет только автоматического
-сюжета и пушей партнёру.
+Нужно только для push-уведомлений от партнёра при закрытом приложении.
+Всё остальное, включая сюжет, работает и без этого шага.
 
 ---
 
-## Шаг 2. Бесплатная LLM для сюжета
+## Шаг 2. Нейросеть для сюжета
 
-Поддерживаются три провайдера, у всех есть бесплатный тариф. Достаточно любого одного:
+Ключ вводится **прямо в приложении**: вкладка «Герой» → карточка «Нейросеть».
+Хранится он у пары, так что вставить достаточно один раз — второй телефон
+подхватит.
 
-| Провайдер | Где взять ключ | `LLM_PROVIDER` | Модель по умолчанию |
-|---|---|---|---|
-| **Groq** (быстрее всего) | [console.groq.com/keys](https://console.groq.com/keys) | `groq` | `llama-3.3-70b-versatile` |
-| **OpenRouter** | [openrouter.ai/keys](https://openrouter.ai/keys) | `openrouter` | `meta-llama/llama-3.3-70b-instruct:free` |
-| **Google Gemini** | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) | `gemini` | `gemini-2.0-flash` |
+| Сервис | Где взять ключ | Модель по умолчанию |
+|---|---|---|
+| **DeepSeek** (по умолчанию) | [platform.deepseek.com/api_keys](https://platform.deepseek.com/api_keys) | `deepseek-chat` |
+| **OpenRouter** | [openrouter.ai/keys](https://openrouter.ai/keys) | `deepseek/deepseek-chat-v3-0324:free` |
+| **Groq** | [console.groq.com/keys](https://console.groq.com/keys) | `llama-3.3-70b-versatile` |
 
-Модель можно переопределить: `supabase secrets set LLM_MODEL=<имя>`.
-
----
+Запрос уходит с устройства напрямую, поэтому разворачивать что-либо на сервере
+не нужно. Оговорка: **в веб-версии браузер такой запрос не выпустит** (у API нет
+CORS-заголовков). Генерируйте главу на телефоне с установленным приложением —
+она сохранится в базу и появится у обоих.
 
 ## Шаг 3. Получить APK для Android
 
@@ -204,7 +205,6 @@ duoquest/
 └── supabase/
     ├── migrations/           схема БД и политики доступа
     └── functions/
-        ├── generate-story/   сюжет через LLM
         └── notify-partner/   push через Expo Push Service
 ```
 
@@ -220,6 +220,6 @@ duoquest/
 ## Стоимость
 
 Всё перечисленное укладывается в бесплатные тарифы: Supabase (база, авторизация,
-realtime, edge-функции), Groq или OpenRouter (LLM), Expo Push Service (уведомления),
+realtime, edge-функции), Expo Push Service (уведомления),
 GitHub Actions (сборка APK). Платить придётся только за публикацию в App Store —
 $99/год, и только если захотите ставить приложение на айфон без Expo Go.

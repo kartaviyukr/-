@@ -13,12 +13,10 @@ export default function StoryScreen() {
     setBusy(true);
     try {
       const chapter = await generateStory();
-      if (!chapter) {
-        Alert.alert(
-          'Глава не пришла',
-          'Проверьте, что edge-функция generate-story развёрнута и в ней задан ключ LLM (переменная LLM_API_KEY).',
-        );
-      }
+      // null означает, что главу успел записать второй телефон — это не ошибка.
+      if (!chapter) Alert.alert('Глава уже есть', 'Партнёр только что её сгенерировал — потяните список вниз.');
+    } catch (e: any) {
+      Alert.alert('Глава не написалась', e?.message ?? 'Неизвестная ошибка.');
     } finally {
       setBusy(false);
     }

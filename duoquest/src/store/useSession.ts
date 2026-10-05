@@ -26,6 +26,7 @@ interface SessionState {
   createCharacter: (name: string, heroClass: HeroClass, emoji: string) => Promise<void>;
   updateProfile: (patch: Partial<Pick<Profile, 'display_name' | 'avatar_emoji'>>) => Promise<void>;
   patchCharacter: (patch: Partial<Character>) => Promise<void>;
+  updateLlmSettings: (patch: Partial<Pick<Couple, 'llm_provider' | 'llm_api_key' | 'llm_model'>>) => Promise<void>;
 }
 
 export const useSession = create<SessionState>((set, get) => ({
@@ -220,5 +221,13 @@ export const useSession = create<SessionState>((set, get) => ({
     const { error } = await supabase.from('characters').update(patch).eq('id', character.id);
     if (error) throw error;
     set({ character: { ...character, ...patch } });
+  },
+
+  updateLlmSettings: async (patch) => {
+    const couple = get().couple;
+    if (!couple) throw new Error('Сначала создайте пару');
+    const { error } = await supabase.from('couples').update(patch).eq('id', couple.id);
+    if (error) throw error;
+    set({ couple: { ...couple, ...patch } });
   },
 }));

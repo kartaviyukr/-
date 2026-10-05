@@ -17,6 +17,26 @@ export interface Couple {
   invite_code: string;
   created_by: string | null;
   created_at: string;
+  /** Настройки нейросети, которая пишет сюжет. Ключ вводится в приложении. */
+  llm_provider: string;
+  llm_api_key: string | null;
+  llm_model: string | null;
+}
+
+/** Намерение на конкретный день: легче квеста, без наград и проверки. */
+export interface Goal {
+  id: string;
+  couple_id: string;
+  created_by: string;
+  /** Чья цель. null — общая на двоих. */
+  user_id: string | null;
+  title: string;
+  note: string | null;
+  /** Дата в формате YYYY-MM-DD. */
+  goal_date: string;
+  done_at: string | null;
+  created_at: string;
+  updated_at: string;
 }
 
 export interface Character {

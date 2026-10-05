@@ -2,8 +2,25 @@ import { create } from 'zustand';
 import { supabase } from '@/lib/supabase';
 import { syncAllReminders, syncTaskReminders } from '@/lib/notifications';
 import { applyPenalty, applyReward, rewardFor } from '@/lib/game';
+import { LlmError, writeChapter, writeQuestFlavor, type LlmProvider, type LlmSettings } from '@/lib/llm';
 import { useSession } from '@/store/useSession';
-import type { Checkpoint, LedgerEntry, StoryChapter, Task, TaskStatus } from '@/types';
+import type { Character, Checkpoint, LedgerEntry, StoryChapter, Task, TaskStatus } from '@/types';
+
+/** Настройки нейросети, введённые в приложении. */
+function llmSettings(): LlmSettings {
+  const couple = useSession.getState().couple;
+  return {
+    provider: (couple?.llm_provider as LlmProvider) || 'deepseek',
+    apiKey: couple?.llm_api_key ?? null,
+    model: couple?.llm_model ?? null,
+  };
+}
+
+/** Персонажи пары — нейросети нужны их имена и классы для сюжета. */
+function knownCharacters(): Character[] {
+  const { character, partnerCharacter } = useSession.getState();
+  return [character, partnerCharacter].filter((c): c is Character => Boolean(c));
+}
 
 export interface NewCheckpointDraft {
   title: string;
@@ -166,10 +183,24 @@ export const useQuests = create<QuestState>((set, get) => ({
       );
     }
 
-    // Флавор-текст в духе RPG — не критично, если LLM недоступна.
-    void supabase.functions
-      .invoke('generate-story', { body: { mode: 'quest_flavor', task_id: task.id, couple_id: couple.id } })
-      .catch(() => undefined);
+    // Флавор-текст в духе RPG — приятное дополнение, без него квест полноценен.
+    void (async () => {
+      const settings = llmSettings();
+      if (!settings.apiKey) return;
+      try {
+        const flavor = await writeQuestFlavor(settings, {
+          characters: knownCharacters(),
+          task: { title: task.title, description: task.description, difficulty: task.difficulty },
+        });
+        await supabase
+          .from('tasks')
+          .update({ quest_title: flavor.quest_title, quest_intro: flavor.quest_intro })
+          .eq('id', task.id);
+        await get().loadAll();
+      } catch {
+        /* нейросеть недоступна — молчим, это не мешает пользоваться квестом */
+      }
+    })();
 
     void supabase.functions
       .invoke('notify-partner', {
@@ -316,7 +347,8 @@ export const useQuests = create<QuestState>((set, get) => ({
     }
 
     await useSession.getState().refresh();
-    void get().generateStory(task);
+    // Глава пишется в фоне: закрытие квеста не должно падать из-за нейросети.
+    void get().generateStory(task).catch(() => undefined);
     await get().loadAll();
   },
 
@@ -368,20 +400,51 @@ export const useQuests = create<QuestState>((set, get) => ({
     await get().loadAll();
   },
 
-  /** Просит edge-функцию сочинить следующую главу. Молча ничего не делает, если LLM не настроена. */
+  /**
+   * Пишет следующую главу через нейросеть и сохраняет её в базу.
+   *
+   * Запрос уходит прямо с устройства ключом, который введён в настройках, —
+   * разворачивать edge-функцию для этого не нужно. Достаточно, чтобы глава
+   * сгенерировалась на одном телефоне: в базе её увидят оба.
+   */
   generateStory: async (task) => {
     const couple = useSession.getState().couple;
     if (!couple) return null;
-    try {
-      const { data, error } = await supabase.functions.invoke('generate-story', {
-        body: { mode: 'chapter', couple_id: couple.id, task_id: task?.id ?? null },
-      });
-      if (error) throw error;
-      await get().loadAll();
-      return (data?.chapter as StoryChapter) ?? null;
-    } catch (e) {
-      console.warn('[DuoQuest] Сюжет сгенерировать не удалось:', e);
-      return null;
+
+    const settings = llmSettings();
+    if (!settings.apiKey) {
+      throw new LlmError('Ключ нейросети не задан. Откройте «Герой» → «Нейросеть» и вставьте его.');
     }
+
+    const chapterNo = (get().story[0]?.chapter_no ?? 0) + 1;
+    const draft = await writeChapter(settings, {
+      characters: knownCharacters(),
+      tasks: get().tasks.slice(0, 12),
+      previous: get().story.slice(0, 3),
+      chapterNo,
+    });
+
+    const { data: chapter, error } = await supabase
+      .from('story_chapters')
+      .insert({
+        couple_id: couple.id,
+        chapter_no: chapterNo,
+        title: draft.title,
+        body: draft.body,
+        cliffhanger: draft.cliffhanger,
+        triggered_by: task?.id ?? null,
+      })
+      .select()
+      .single();
+
+    // Два устройства могли попросить главу одновременно — номер занят, не беда.
+    if (error) {
+      await get().loadAll();
+      if (error.code === '23505') return null;
+      throw error;
+    }
+
+    await get().loadAll();
+    return chapter as StoryChapter;
   },
 }));

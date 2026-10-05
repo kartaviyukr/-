@@ -3,6 +3,7 @@ import { Alert, RefreshControl, ScrollView, Share, StyleSheet, Text, View } from
 import { colors, radius, spacing } from '@/theme';
 import { Button, Card, Row, Subtitle, Title } from '@/components/ui';
 import { HeroCard } from '@/components/HeroCard';
+import { LlmSettingsCard } from '@/components/LlmSettingsCard';
 import { useSession } from '@/store/useSession';
 import { useQuests } from '@/store/useQuests';
 
@@ -68,6 +69,8 @@ export default function ProfileScreen() {
           }
         />
       </Card>
+
+      <LlmSettingsCard />
 
       <Card>
         <Title style={{ fontSize: 17 }}>Аккаунт</Title>
