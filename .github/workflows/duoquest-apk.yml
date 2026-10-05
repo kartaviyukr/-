@@ -38,6 +38,11 @@ jobs:
 
       - name: Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          # По умолчанию действие ставит пакет 'tools', которого в SDK больше нет,
+          # и падает на нём. Нужные платформу и build-tools дотянет сам Gradle,
+          # а в образе раннера они и так есть.
+          packages: ''
 
       - name: Установить зависимости
         run: npm install --legacy-peer-deps
