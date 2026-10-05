@@ -11,6 +11,11 @@ on:
 permissions:
   contents: write
 
+# Одновременно идёт только одна сборка: иначе два запуска спорят за релиз.
+concurrency:
+  group: skipetr-apk
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -26,6 +31,10 @@ jobs:
           java-version: '17'
 
       - uses: android-actions/setup-android@v3
+        with:
+          # По умолчанию действие ставит пакет 'tools', которого в SDK больше нет,
+          # и падает на нём. Платформу и build-tools дотянет сам Gradle.
+          packages: ''
 
       - uses: gradle/actions/setup-gradle@v4
         with:
@@ -57,11 +66,11 @@ jobs:
           path: planner/Skipetr.apk
 
       - name: Publish release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: skipetr-v1.0-${{ github.run_number }}
-          name: Скипетр 1.0 (сборка ${{ github.run_number }})
-          body: |
-            👑 Скипетр — королевский личный планер.
-            Скачайте файл Skipetr.apk на телефон и установите его.
-          files: planner/Skipetr.apk
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete skipetr-latest --yes --cleanup-tag || true
+          gh release create skipetr-latest Skipetr.apk \
+            --target "${{ github.sha }}" \
+            --title "Скипетр — последняя сборка" \
+            --notes "👑 Королевский личный планер: день, неделя, месяц, год. Скачайте Skipetr.apk на телефон и откройте файл, чтобы установить. Сборка ${{ github.run_number }}."
