@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="royal_bg">#0E0A1F</color>
+    <color name="royal_gold">#D9B45A</color>
+    <style name="Theme.Skipetr" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/royal_bg</item>
+        <item name="android:statusBarColor">@color/royal_bg</item>
+        <item name="android:navigationBarColor">@color/royal_bg</item>
+        <item name="android:colorAccent">@color/royal_gold</item>
+        <item name="android:colorPrimary">@color/royal_bg</item>
+    </style>
+</resources>
