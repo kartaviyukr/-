@@ -1,0 +1,112 @@
+name: Мнемо — APK и веб-версия
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'mnemo/**'
+      - '.github/workflows/mnemo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    name: Собрать APK
+    runs-on: ubuntu-latest
+    # Одновременно идёт только одна сборка: иначе два запуска спорят за релиз.
+    concurrency:
+      group: mnemo-apk
+      cancel-in-progress: true
+    defaults:
+      run:
+        working-directory: mnemo
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Проверить синтаксис JS
+        run: |
+          for f in app/src/main/assets/www/*.js; do node --check "$f"; done
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+        with:
+          # По умолчанию действие ставит пакет 'tools', которого в SDK больше нет,
+          # и падает на нём. Платформу и build-tools дотянет сам Gradle.
+          packages: ''
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
+
+      - name: Собрать APK
+        run: gradle assembleRelease --no-daemon --stacktrace
+
+      - name: Переименовать файл
+        run: cp app/build/outputs/apk/release/app-release.apk Mnemo.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Mnemo-apk
+          path: mnemo/Mnemo.apk
+
+      - name: Опубликовать в релизе
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete mnemo-latest --yes --cleanup-tag || true
+          gh release create mnemo-latest Mnemo.apk \
+            --target "${{ github.sha }}" \
+            --title "Мнемо — последняя сборка" \
+            --notes "🧠 Карточки, уроки, тесты и игры для запоминания слов. Скачайте Mnemo.apk на телефон и откройте файл, чтобы установить. Для iPhone: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/mnemo/ (открыть в Safari → Поделиться → На экран «Домой»). Сборка ${{ github.run_number }}."
+
+  web:
+    name: Опубликовать веб-версию (iPhone)
+    runs-on: ubuntu-latest
+    # Публикация в gh-pages одна на репозиторий: параллельные пуши конфликтуют.
+    concurrency:
+      group: gh-pages-publish
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Взять текущую ветку gh-pages
+        run: |
+          git fetch origin gh-pages:gh-pages || true
+          if git show-ref --verify --quiet refs/heads/gh-pages; then
+            git worktree add _site gh-pages
+          else
+            git worktree add --orphan -b gh-pages _site
+          fi
+
+      # Кладём приложение в подпапку mnemo/, не трогая остальное содержимое ветки
+      # (там живут и другие веб-приложения репозитория).
+      - name: Разложить файлы
+        run: |
+          rm -rf _site/mnemo
+          mkdir -p _site/mnemo
+          cp -r mnemo/app/src/main/assets/www/* _site/mnemo/
+          # Без .nojekyll Pages прогонит сайт через Jekyll.
+          touch _site/.nojekyll
+          ls -la _site _site/mnemo
+
+      - name: Запушить gh-pages
+        working-directory: _site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Без изменений"; exit 0; fi
+          git commit -q -m "Веб-версия Мнемо, сборка ${{ github.run_number }} (${GITHUB_SHA::7})"
+          git push origin gh-pages
+
+      - name: Адрес приложения
+        run: |
+          echo "### Веб-версия Мнемо опубликована" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/mnemo/" >> "$GITHUB_STEP_SUMMARY"

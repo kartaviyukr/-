@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.mnemo.cards'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.mnemo.cards'
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+    }
+
+    // Ключ лежит в репозитории намеренно: так каждая сборка подписана одинаково
+    // и новая версия APK ставится поверх старой без потери данных.
+    signingConfigs {
+        release {
+            storeFile file('mnemo.jks')
+            storePassword 'mnemo2026'
+            keyAlias 'mnemo'
+            keyPassword 'mnemo2026'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

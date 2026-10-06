@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="mnemo_bg">#14122B</color>
+    <color name="mnemo_accent">#8B6CFF</color>
+    <color name="ic_bg">#8B6CFF</color>
+    <style name="Theme.Mnemo" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/mnemo_bg</item>
+        <item name="android:statusBarColor">@color/mnemo_bg</item>
+        <item name="android:navigationBarColor">@color/mnemo_bg</item>
+        <item name="android:colorAccent">@color/mnemo_accent</item>
+        <item name="android:colorPrimary">@color/mnemo_bg</item>
+    </style>
+</resources>
