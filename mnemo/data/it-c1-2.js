@@ -29,7 +29,6 @@ l'inerzia|инерция|L'inerzia della politica.
 le infrastrutture|инфраструктура|Investire nelle infrastrutture.
 la giurisdizione|юрисдикция|Fuori dalla nostra giurisdizione.
 la leva|рычаг|Usare la leva fiscale.
-la portata|масштаб, значимость|La portata del problema.
 il mandato|мандат, полномочия|Un mandato chiaro.
 la pietra miliare|веха|Una pietra miliare nella storia.
 l'equivoco|недоразумение|Un equivoco spiacevole.
