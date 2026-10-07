@@ -91,7 +91,6 @@ l'alluvione|наводнение|L'alluvione ha distrutto case.|Наводнен
 la siccità|засуха|Una lunga siccità.|Долгая засуха.
 il terremoto|землетрясение|Un forte terremoto.|Сильное землетрясение.
 l'uragano|ураган|Arriva un uragano.|Приближается ураган.
-il vulcano|вулкан|L'Etna è un vulcano attivo.|Этна — действующий вулкан.
 l'alba|рассвет|Ci alziamo all'alba.|Встаём на рассвете.
 il tramonto|закат|Un tramonto romantico.|Романтичный закат.
 l'arcobaleno|радуга|Guarda, l'arcobaleno!|Смотри, радуга!
