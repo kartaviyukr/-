@@ -5,9 +5,9 @@
  * id карточки строится из id набора и термина, поэтому новые слова можно
  * добавлять в любое место — прогресс по старым словам не потеряется.
  */
-window.MNEMO_DECKS = [
+(window.MNEMO_DECKS = window.MNEMO_DECKS || []).push(
 {
-  id: 'en-verbs', emoji: '🏃', title: 'Самые нужные глаголы', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-verbs', emoji: '🏃', title: 'Самые нужные глаголы', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: '60 глаголов, на которых держится половина любой беседы.',
   cards: `
 be|быть|I want to be a doctor.|Я хочу быть врачом.
@@ -77,7 +77,7 @@ drink|пить|Drink more water.|Пей больше воды.
 love|любить|I love you.|Я тебя люблю.
 `},
 {
-  id: 'en-adj', emoji: '🎨', title: 'Прилагательные-пары', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-adj', emoji: '🎨', title: 'Прилагательные-пары', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: 'Противоположности запоминаются парами — учите их вместе.',
   cards: `
 big|большой|It's a big house.|Это большой дом.
@@ -131,7 +131,7 @@ tired|уставший|I'm so tired.|Я так устал.
 hungry|голодный|Are you hungry?|Ты голоден?
 `},
 {
-  id: 'en-food', emoji: '🍎', title: 'Еда и напитки', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-food', emoji: '🍎', title: 'Еда и напитки', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: 'Продукты, блюда и всё, что пригодится в магазине и кафе.',
   cards: `
 bread|хлеб|Fresh bread smells great.|Свежий хлеб отлично пахнет.
@@ -186,7 +186,7 @@ sour|кислый|Sour cream.|Сметана.
 bitter|горький|Bitter chocolate.|Горький шоколад.
 `},
 {
-  id: 'en-cafe', emoji: '☕', title: 'В кафе и ресторане', level: 'A2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-cafe', emoji: '☕', title: 'В кафе и ресторане', level: 'A2', front: 'en-US', back: 'ru-RU',
   desc: 'Готовые фразы: заказать, уточнить, попросить счёт.',
   cards: `
 a table for two, please|столик на двоих, пожалуйста|A table for two, please, by the window.|Столик на двоих, пожалуйста, у окна.
@@ -213,7 +213,7 @@ Could I have some more…?|Можно ещё немного…?|Could I have som
 It was delicious|Было очень вкусно|Thank you, it was delicious.|Спасибо, было очень вкусно.
 `},
 {
-  id: 'en-home', emoji: '🏠', title: 'Дом и быт', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-home', emoji: '🏠', title: 'Дом и быт', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: 'Комнаты, мебель, бытовые дела.',
   cards: `
 house|дом|They live in a big house.|Они живут в большом доме.
@@ -257,7 +257,7 @@ tidy up|прибираться|Tidy up your room.|Прибери в своей �
 take out the rubbish|выносить мусор|Can you take out the rubbish?|Можешь вынести мусор?
 `},
 {
-  id: 'en-people', emoji: '👨‍👩‍👧', title: 'Семья и люди', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-people', emoji: '👨‍👩‍👧', title: 'Семья и люди', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: 'Родственники, внешность, отношения.',
   cards: `
 family|семья|A big family.|Большая семья.
@@ -298,7 +298,7 @@ get on with|ладить с|I get on well with my sister.|Я хорошо лаж
 grow up|вырастать|I grew up in a village.|Я вырос в деревне.
 `},
 {
-  id: 'en-body', emoji: '🩺', title: 'Тело и здоровье', level: 'A2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-body', emoji: '🩺', title: 'Тело и здоровье', level: 'A2', front: 'en-US', back: 'ru-RU',
   desc: 'Части тела, симптомы, разговор с врачом.',
   cards: `
 head|голова|My head hurts.|У меня болит голова.
@@ -324,7 +324,7 @@ skin|кожа|Dry skin.|Сухая кожа.
 headache|головная боль|I have a terrible headache.|У меня ужасно болит голова.
 fever|жар, температура|He has a fever.|У него температура.
 cough|кашель|A bad cough.|Сильный кашель.
-cold|простуда|I've caught a cold.|Я простудился.
+a cold|простуда|I've caught a cold.|Я простудился.
 sore throat|боль в горле|I have a sore throat.|У меня болит горло.
 pain|боль|Where is the pain?|Где болит?
 hurt|болеть, ранить|It hurts here.|Здесь болит.
@@ -339,7 +339,7 @@ ambulance|скорая помощь|Call an ambulance!|Вызовите скор
 get better|выздоравливать|Get better soon!|Скорее поправляйся!
 `},
 {
-  id: 'en-travel', emoji: '✈️', title: 'Путешествия', level: 'A2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-travel', emoji: '✈️', title: 'Путешествия', level: 'A2', front: 'en-US', back: 'ru-RU',
   desc: 'Аэропорт, отель, транспорт, дорога.',
   cards: `
 trip|поездка|A business trip.|Командировка.
@@ -379,7 +379,7 @@ How far is it?|Как далеко это?|How far is it to the beach?|Дале�
 I'm lost|Я заблудился|Excuse me, I'm lost.|Простите, я заблудился.
 `},
 {
-  id: 'en-city', emoji: '🏙️', title: 'Город и направления', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-city', emoji: '🏙️', title: 'Город и направления', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: 'Места в городе и как спросить дорогу.',
   cards: `
 street|улица|A busy street.|Оживлённая улица.
@@ -416,7 +416,7 @@ far|далеко|It's not far.|Это недалеко.
 Excuse me, where is…?|Простите, где находится…?|Excuse me, where is the museum?|Простите, где музей?
 `},
 {
-  id: 'en-work', emoji: '💼', title: 'Работа и офис', level: 'B1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-work', emoji: '💼', title: 'Работа и офис', level: 'B1', front: 'en-US', back: 'ru-RU',
   desc: 'Должности, задачи, деловое общение.',
   cards: `
 job|работа (должность)|I got a new job.|Я получил новую работу.
@@ -457,7 +457,7 @@ Could you send me…?|Не могли бы вы прислать мне…?|Coul
 I'm looking forward to…|С нетерпением жду…|I'm looking forward to your reply.|С нетерпением жду вашего ответа.
 `},
 {
-  id: 'en-time', emoji: '⏰', title: 'Время и календарь', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-time', emoji: '⏰', title: 'Время и календарь', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: 'Дни, месяцы, частота и время суток.',
   cards: `
 Monday|понедельник|See you on Monday.|Увидимся в понедельник.
@@ -501,7 +501,7 @@ quarter to|без четверти|It's a quarter to nine.|Без четверт
 o'clock|ровно (о часах)|At five o'clock.|Ровно в пять.
 `},
 {
-  id: 'en-nature', emoji: '🌦️', title: 'Природа и погода', level: 'A2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-nature', emoji: '🌦️', title: 'Природа и погода', level: 'A2', front: 'en-US', back: 'ru-RU',
   desc: 'Погода, времена года, животные и пейзажи.',
   cards: `
 weather|погода|What's the weather like?|Какая погода?
@@ -544,7 +544,7 @@ wolf|волк|A grey wolf.|Серый волк.
 fox|лиса|A clever fox.|Хитрая лиса.
 `},
 {
-  id: 'en-clothes', emoji: '👗', title: 'Одежда и покупки', level: 'A2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-clothes', emoji: '👗', title: 'Одежда и покупки', level: 'A2', front: 'en-US', back: 'ru-RU',
   desc: 'Гардероб, размеры, примерка, оплата.',
   cards: `
 clothes|одежда|Warm clothes.|Тёплая одежда.
@@ -577,14 +577,14 @@ discount|скидка|Is there a discount?|Есть скидка?
 sale|распродажа|Everything is on sale.|Всё по распродаже.
 receipt|чек|Keep the receipt.|Сохраните чек.
 cash|наличные|I'll pay in cash.|Я заплачу наличными.
-change|сдача|Here's your change.|Вот ваша сдача.
+change (money)|сдача|Here's your change.|Вот ваша сдача.
 refund|возврат денег|Can I get a refund?|Можно вернуть деньги?
 wear|носить (одежду)|She always wears black.|Она всегда носит чёрное.
 put on|надевать|Put on your coat.|Надень пальто.
 take off|снимать|Take off your shoes.|Сними обувь.
 `},
 {
-  id: 'en-feelings', emoji: '💛', title: 'Эмоции и характер', level: 'B1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-feelings', emoji: '💛', title: 'Эмоции и характер', level: 'B1', front: 'en-US', back: 'ru-RU',
   desc: 'Как описать чувства и людей.',
   cards: `
 angry|злой, сердитый|Don't be angry with me.|Не злись на меня.
@@ -623,7 +623,7 @@ calm down|успокоиться|Calm down, please.|Успокойся, пожа
 cheer up|взбодриться, не унывать|Cheer up!|Не грусти!
 `},
 {
-  id: 'en-phrases', emoji: '💬', title: 'Фразы для общения', level: 'A1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-phrases', emoji: '💬', title: 'Фразы для общения', level: 'A1', front: 'en-US', back: 'ru-RU',
   desc: 'Готовые выражения на каждый день — учите целиком.',
   cards: `
 How are you?|Как дела?|— How are you? — Fine, thanks.|— Как дела? — Хорошо, спасибо.
@@ -658,7 +658,7 @@ I agree|Я согласен|I agree with you completely.|Я полностью �
 Have a nice day!|Хорошего дня!|Thanks, have a nice day!|Спасибо, хорошего дня!
 `},
 {
-  id: 'en-irregular', emoji: '🔁', title: 'Неправильные глаголы', level: 'A2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-irregular', emoji: '🔁', title: 'Неправильные глаголы', level: 'A2', front: 'en-US', back: 'ru-RU',
   desc: 'Три формы самых частых неправильных глаголов. Проговаривайте вслух ритмом.',
   cards: `
 be — was/were — been|быть|I have been to London.|Я бывал в Лондоне.
@@ -715,7 +715,7 @@ win — won — won|побеждать|We won!|Мы победили!
 write — wrote — written|писать|He wrote a letter.|Он написал письмо.
 `},
 {
-  id: 'en-phrasal', emoji: '🧩', title: 'Фразовые глаголы', level: 'B1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-phrasal', emoji: '🧩', title: 'Фразовые глаголы', level: 'B1', front: 'en-US', back: 'ru-RU',
   desc: 'Самые частые фразовые глаголы разговорной речи.',
   cards: `
 get up|вставать|I get up at seven.|Я встаю в семь.
@@ -736,13 +736,10 @@ go out|выходить, гулять|Let's go out tonight.|Пойдём куд�
 set up|устраивать, настраивать|Set up a meeting.|Назначь встречу.
 run out of|заканчиваться (о запасе)|We've run out of milk.|У нас закончилось молоко.
 break down|ломаться|My car broke down.|Моя машина сломалась.
-check in|регистрироваться|Check in online.|Зарегистрируйся онлайн.
 fill in|заполнять (бланк)|Fill in this form.|Заполните эту форму.
 make up|выдумывать; мириться|They argued and made up.|Они поссорились и помирились.
 work out|тренироваться; получаться|It worked out well.|Всё получилось хорошо.
 figure out|разобраться, понять|I can't figure it out.|Не могу в этом разобраться.
-put on|надевать|Put on a jacket.|Надень куртку.
-take off|снимать; взлетать|The plane took off.|Самолёт взлетел.
 get on|садиться (в транспорт); ладить|Get on the bus.|Садись в автобус.
 get off|выходить (из транспорта)|Get off at the next stop.|Выйди на следующей остановке.
 hang out|тусоваться, проводить время|We hang out on weekends.|Мы проводим время вместе по выходным.
@@ -752,7 +749,7 @@ come up with|придумывать|She came up with a plan.|Она придум
 get rid of|избавляться|Get rid of old clothes.|Избавься от старой одежды.
 `},
 {
-  id: 'en-links', emoji: '🔗', title: 'Связки и предлоги', level: 'B1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-links', emoji: '🔗', title: 'Связки и предлоги', level: 'B1', front: 'en-US', back: 'ru-RU',
   desc: 'Слова-связки делают речь плавной и логичной.',
   cards: `
 and|и|Tea and coffee.|Чай и кофе.
@@ -787,7 +784,7 @@ either … or|либо … либо|Either now or never.|Сейчас или н�
 neither … nor|ни … ни|Neither he nor she knows.|Ни он, ни она не знают.
 `},
 {
-  id: 'en-tech', emoji: '💻', title: 'Технологии и интернет', level: 'B1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-tech', emoji: '💻', title: 'Технологии и интернет', level: 'B1', front: 'en-US', back: 'ru-RU',
   desc: 'Гаджеты, приложения и всё цифровое.',
   cards: `
 device|устройство|A mobile device.|Мобильное устройство.
@@ -822,7 +819,7 @@ log in|войти в систему|Log in to your account.|Войдите в с
 log out|выйти из системы|Don't forget to log out.|Не забудьте выйти.
 `},
 {
-  id: 'en-hobby', emoji: '⚽', title: 'Спорт и хобби', level: 'A2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-hobby', emoji: '⚽', title: 'Спорт и хобби', level: 'A2', front: 'en-US', back: 'ru-RU',
   desc: 'Чем заняться в свободное время.',
   cards: `
 hobby|хобби|What's your hobby?|Какое у тебя хобби?
@@ -855,7 +852,7 @@ be good at|хорошо уметь|She's good at chess.|Она хорошо иг
 take up|начать заниматься|I took up tennis.|Я начал заниматься теннисом.
 `},
 {
-  id: 'en-money', emoji: '💳', title: 'Деньги и банк', level: 'B1', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-money', emoji: '💳', title: 'Деньги и банк', level: 'B1', front: 'en-US', back: 'ru-RU',
   desc: 'Финансы в быту: оплата, счета, накопления.',
   cards: `
 money|деньги|Time is money.|Время — деньги.
@@ -870,9 +867,7 @@ loan|заём, кредит|Take out a loan.|Взять кредит.
 debt|долг|I'm in debt.|Я в долгах.
 borrow|брать в долг|Can I borrow ten dollars?|Можно занять десять долларов?
 lend|давать в долг|Lend me your pen.|Одолжи мне ручку.
-save|копить|Save money for a trip.|Копить на поездку.
 savings|сбережения|All my savings.|Все мои сбережения.
-spend|тратить|Don't spend too much.|Не трать слишком много.
 afford|позволить себе|I can't afford it.|Я не могу себе это позволить.
 budget|бюджет|A tight budget.|Скромный бюджет.
 bill|счёт к оплате|Pay the bills.|Оплатить счета.
@@ -883,7 +878,7 @@ worth|стоящий|It's worth the money.|Оно того стоит.
 fee|плата, сбор|An entrance fee.|Плата за вход.
 `},
 {
-  id: 'en-idioms', emoji: '🎭', title: 'Идиомы', level: 'B2', front: 'en-US', back: 'ru-RU',
+  lang: 'en', id: 'en-idioms', emoji: '🎭', title: 'Идиомы', level: 'B2', front: 'en-US', back: 'ru-RU',
   desc: 'Популярные идиомы — для живой, естественной речи.',
   cards: `
 a piece of cake|проще простого|The test was a piece of cake.|Тест был проще простого.
@@ -909,7 +904,7 @@ bite off more than you can chew|взвалить на себя слишком м
 keep an eye on|присматривать за|Keep an eye on the kids.|Присмотри за детьми.
 no pain, no gain|без труда не вытащишь и рыбку из пруда|Keep training — no pain, no gain.|Тренируйся — без труда ничего не добьёшься.
 `}
-];
+);
 
 /* Короткие советы — показываются на главном экране по одному в день. */
 window.MNEMO_TIPS = [

@@ -25,53 +25,125 @@ const nWords = n => `${n} ${plural(n, 'слово', 'слова', 'слов')}`;
 const nCards = n => `${n} ${plural(n, 'карточка', 'карточки', 'карточек')}`;
 const isAndroid = !!window.Android;
 
-/* ───────────────────────── Хранилище ───────────────────────── */
+/* ───────────────────────── Языки и уровни ───────────────────────── */
+const LANGS = {
+  en: { name: 'Английский', flag: '🇬🇧', front: 'en-US' },
+  it: { name: 'Итальянский', flag: '🇮🇹', front: 'it-IT' },
+  uk: { name: 'Украинский', flag: '🇺🇦', front: 'uk-UA' },
+  xx: { name: 'Другие', flag: '🌐', front: 'en-US' },
+};
+const LEVEL_ORDER = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2', ''];
+const LEVEL_NAMES = { A0: 'Стартовый', A1: 'Начальный', A2: 'Элементарный', B1: 'Средний', B2: 'Выше среднего', C1: 'Продвинутый', C2: 'Свободный', '': 'Без уровня' };
+const levelRank = l => { const i = LEVEL_ORDER.indexOf(l || ''); return i < 0 ? 99 : i; };
+const langOfCode = code => { const p = String(code || '').slice(0, 2).toLowerCase(); return LANGS[p] && p !== 'xx' ? p : 'xx'; };
+
+/* ───────────────────────── Хранилище ─────────────────────────
+ * Встроенные наборы (тысячи слов) не копируются в localStorage — он маленький.
+ * Храним только то, что изменил пользователь: правки карточек (cedit),
+ * удалённые карточки (removed), скрытые наборы (hidden), переименования и
+ * добавленные в встроенный набор карточки (bdeck), а также свои наборы (decks).
+ */
 const KEY = 'mnemo.v1';
 const DEF_SETTINGS = {
   theme: 'dark', goal: 50, autoplay: false, rate: 0.9, dir: 'td', lessonSize: 6,
-  newPerDay: 10, typos: true, sound: true, activeDeck: 'en-verbs',
+  newPerDay: 10, typos: true, sound: true, lang: 'en',
 };
 let db;
+let BUILTIN = [];
+let srcIdx = new Map();
+
+function buildBuiltin() {
+  BUILTIN = []; srcIdx = new Map();
+  for (const b of window.MNEMO_DECKS || []) {
+    const lang = b.lang || 'en';
+    const cards = [];
+    for (const line of String(b.cards).split('\n')) {
+      if (!line.trim()) continue;
+      const [t, d, ex, exT] = line.split('|').map(s => (s || '').trim());
+      if (!t || !d) continue;
+      const id = `${lang}:${t}`;
+      if (srcIdx.has(id)) continue; // одно слово — одна карточка на язык
+      const c = { id, t, d, ex: ex || '', exT: exT || '', note: '' };
+      srcIdx.set(id, c);
+      cards.push(c);
+    }
+    if (!cards.length) continue;
+    BUILTIN.push({ id: b.id, lang, level: b.level || '', title: b.title, emoji: b.emoji, desc: b.desc || '',
+      front: b.front || LANGS[lang].front, back: b.back || 'ru-RU', builtin: true, cards });
+  }
+  // стабильная сортировка по уровню, внутри уровня — порядок файлов
+  BUILTIN = BUILTIN.map((d, i) => [d, i]).sort((a, b) => levelRank(a[0].level) - levelRank(b[0].level) || a[1] - b[1]).map(x => x[0]);
+}
 
 function load() {
   try { db = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { db = null; }
   if (!db || !Array.isArray(db.decks)) db = { decks: [], created: now() };
   db.settings = { ...DEF_SETTINGS, ...(db.settings || {}) };
-  for (const k of ['prog', 'lessons', 'days', 'best', 'removed', 'flags']) db[k] = db[k] || {};
-  db.seeded = db.seeded || [];
-  seed();
-  reindex();
+  for (const k of ['prog', 'lessons', 'days', 'best', 'removed', 'flags', 'bdeck', 'cedit', 'hidden']) db[k] = db[k] || {};
+  if (!db.settings.active || typeof db.settings.active !== 'object') db.settings.active = {};
+  if (!db.settings.open || typeof db.settings.open !== 'object') db.settings.open = {};
+  if (db.settings.activeDeck) { db.settings.active.en = db.settings.active.en || db.settings.activeDeck; delete db.settings.activeDeck; }
+  if (db.seeded || db.decks.some(d => d.builtin)) migrateV1();
+  if (!LANGS[db.settings.lang]) db.settings.lang = 'en';
+  rebuild();
 }
 
-function parseBuiltin(b) {
-  const seen = new Set();
-  const out = [];
-  for (const line of b.cards.split('\n')) {
-    if (!line.trim()) continue;
-    const [t, d, ex, exT] = line.split('|').map(s => (s || '').trim());
-    if (!t || !d) continue;
-    const id = `${b.id}:${t}`;
-    if (seen.has(id)) continue;
-    seen.add(id);
-    out.push({ id, t, d, ex: ex || '', exT: exT || '', note: '' });
+// Первая версия копировала встроенные наборы целиком и называла карточки «набор:слово».
+function migrateV1() {
+  const remap = id => { const m = /^en-[a-z]+:(.*)$/.exec(id); return m ? 'en:' + m[1] : id; };
+  const np = {};
+  for (const [k, v] of Object.entries(db.prog)) { const nk = remap(k); if (!np[nk] || (v.last || 0) > (np[nk].last || 0)) np[nk] = v; }
+  db.prog = np;
+  for (const dk of Object.keys(db.lessons)) {
+    const o = {};
+    for (const [k, v] of Object.entries(db.lessons[dk])) o[k.replace(/^(\w+):en-[a-z]+:/, '$1:en:')] = v;
+    db.lessons[dk] = o;
   }
-  return out;
-}
-
-function seed() {
-  for (const b of window.MNEMO_DECKS || []) {
-    const cards = parseBuiltin(b);
-    if (!db.seeded.includes(b.id)) {
-      db.decks.push({ id: b.id, title: b.title, emoji: b.emoji, desc: b.desc, level: b.level, front: b.front, back: b.back, builtin: true, created: now(), cards });
-      db.seeded.push(b.id);
-    } else {
-      // Новые слова из обновлённого приложения дописываются в уже скопированный набор.
-      const d = db.decks.find(x => x.id === b.id);
-      if (!d) continue;
-      const have = new Set(d.cards.map(c => c.id));
-      for (const c of cards) if (!have.has(c.id) && !db.removed[c.id]) d.cards.push(c);
+  const nr = {};
+  for (const k of Object.keys(db.removed)) nr[remap(k)] = 1;
+  db.removed = nr;
+  const b0 = new Map(BUILTIN.map(b => [b.id, b]));
+  const owner = new Map();
+  for (const b of BUILTIN) for (const c of b.cards) owner.set(c.id, b.id);
+  for (const d of db.decks.filter(x => x.builtin)) {
+    const src = b0.get(d.id);
+    const o = {};
+    if (src) for (const f of ['title', 'emoji', 'desc', 'front', 'back']) if (d[f] && d[f] !== src[f]) o[f] = d[f];
+    for (const c of d.cards) {
+      if (/^c/.test(c.id)) { (o.extra = o.extra || []).push(c); continue; }
+      const nid = remap(c.id), s = srcIdx.get(nid);
+      // слово могло быть в двух наборах — переносим правки только из «своего»
+      if (!s || owner.get(nid) !== d.id) continue;
+      const e = {};
+      for (const f of ['t', 'd', 'ex', 'exT']) if ((c[f] || '') !== (s[f] || '')) e[f] = c[f];
+      if (c.note) e.note = c.note;
+      if (c.star) e.star = true;
+      if (Object.keys(e).length) db.cedit[nid] = e;
     }
+    if (Object.keys(o).length) db.bdeck[d.id] = o;
   }
+  for (const id of db.seeded || []) if (!db.decks.some(d => d.id === id)) db.hidden[id] = 1;
+  db.decks = db.decks.filter(d => !d.builtin);
+  delete db.seeded;
+}
+
+let DECKS = [];
+function rebuild() {
+  DECKS = [];
+  for (const b of BUILTIN) {
+    if (db.hidden[b.id]) continue;
+    const o = db.bdeck[b.id] || {};
+    const cards = [];
+    for (const s of b.cards) {
+      if (db.removed[s.id]) continue;
+      const e = db.cedit[s.id];
+      cards.push(e ? { ...s, ...e } : { ...s });
+    }
+    if (o.extra) cards.push(...o.extra);
+    DECKS.push({ ...b, title: o.title || b.title, emoji: o.emoji || b.emoji, desc: o.desc ?? b.desc, front: o.front || b.front, back: o.back || b.back, cards });
+  }
+  for (const d of db.decks) { d.lang = d.lang || langOfCode(d.front); DECKS.push(d); }
+  reindex();
 }
 
 let saveT = 0;
@@ -85,12 +157,48 @@ window.addEventListener('pagehide', save);
 document.addEventListener('visibilitychange', () => { if (document.hidden) save(); });
 
 let cardIdx = new Map();
+let byLang = {};
 function reindex() {
-  cardIdx = new Map();
-  for (const d of db.decks) for (const c of d.cards) cardIdx.set(c.id, { c, d });
+  cardIdx = new Map(); byLang = {};
+  for (const d of DECKS) {
+    const L = byLang[d.lang] || (byLang[d.lang] = []);
+    for (const c of d.cards) { if (cardIdx.has(c.id)) continue; cardIdx.set(c.id, { c, d }); L.push(c); }
+  }
 }
-const deckById = id => db.decks.find(d => d.id === id);
-const allCards = () => [...cardIdx.values()].map(x => x.c);
+const curLang = () => db.settings.lang;
+const deckById = id => DECKS.find(d => d.id === id);
+const langDecks = (l = curLang()) => DECKS.filter(d => d.lang === l);
+const langList = () => Object.keys(LANGS).filter(l => l !== 'xx' || DECKS.some(d => d.lang === 'xx'));
+const allCards = () => byLang[curLang()] || [];
+const everyCard = () => [...cardIdx.values()].map(x => x.c);
+
+// Изменения карточек и наборов: для встроенных записываем только разницу.
+function editCard(c, f) {
+  Object.assign(c, f);
+  if (srcIdx.has(c.id)) db.cedit[c.id] = { ...(db.cedit[c.id] || {}), ...f };
+  saveSoon();
+}
+function addCard(d, c, noIndex) {
+  d.cards.push(c);
+  if (d.builtin) { const o = db.bdeck[d.id] || (db.bdeck[d.id] = {}); (o.extra = o.extra || []).push(c); }
+  if (!noIndex) reindex();
+  saveSoon();
+}
+function removeCard(d, c) {
+  d.cards = d.cards.filter(x => x !== c);
+  if (d.builtin) {
+    if (srcIdx.has(c.id)) db.removed[c.id] = 1;
+    else { const o = db.bdeck[d.id]; if (o && o.extra) o.extra = o.extra.filter(x => x !== c); }
+  }
+  delete db.prog[c.id];
+  reindex();
+  saveSoon();
+}
+function editDeck(d, f) {
+  Object.assign(d, f);
+  if (d.builtin) db.bdeck[d.id] = { ...(db.bdeck[d.id] || {}), ...f };
+  saveSoon();
+}
 
 const SMART = {
   '@all': { title: 'Все слова', emoji: '📚', desc: 'Все карточки из всех наборов вперемешку.' },
@@ -219,7 +327,8 @@ function norm(s) {
   return String(s || '').toLowerCase().replace(/ё/g, 'е').replace(/[’`]/g, "'")
     .replace(/\([^)]*\)/g, ' ').replace(/[.,!?;:"«»…\-—–/]/g, ' ').replace(/\s+/g, ' ').trim();
 }
-function stripArticles(s) { return s.replace(/^(to|a|an|the) /, ''); }
+// Английские и итальянские артикли не обязательны в ответе.
+function stripArticles(s) { return s.replace(/^(to|a|an|the|il|lo|la|i|gli|le|un|uno|una) /, '').replace(/^(l|un)'/, ''); }
 function variants(answer) {
   const set = new Set();
   const add = s => { const n = norm(s); if (n) { set.add(n); set.add(stripArticles(n)); } };
@@ -239,15 +348,19 @@ function lev(a, b) {
   }
   return prev[n];
 }
+// Без диакритики: è→e, ї→і, й→и. Совпадение без неё засчитываем как опечатку.
+const loose = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ʼ/g, "'");
 function checkAnswer(input, answer) {
   const n = stripArticles(norm(input));
   if (!n) return { ok: false };
   const v = variants(answer);
   if (v.includes(n) || v.includes(norm(input))) return { ok: true };
+  const ln = loose(n);
+  if (v.some(x => loose(x) === ln)) return { ok: true, typo: true };
   if (db.settings.typos) {
     for (const x of v) {
       const allowed = x.length >= 8 ? 2 : x.length >= 4 ? 1 : 0;
-      if (allowed && lev(n, x) <= allowed) return { ok: true, typo: true };
+      if (allowed && lev(ln, loose(x)) <= allowed) return { ok: true, typo: true };
     }
   }
   return { ok: false };
@@ -417,9 +530,18 @@ function wordOfDay() {
   return all[hashStr(dayKey(now())) % all.length];
 }
 function activeDeck() {
-  const d = deckById(db.settings.activeDeck);
-  return d && d.cards.length >= 3 ? d : db.decks.find(x => x.cards.length >= 3) || null;
+  const d = deckById(db.settings.active[curLang()]);
+  return d && d.lang === curLang() && d.cards.length >= 3 ? d : langDecks().find(x => x.cards.length >= 3) || null;
 }
+function setActive(id) { const d = deckById(id); if (d) { db.settings.active[d.lang] = id; saveSoon(); } }
+const deckDone = d => lessonNodes(d).every(n => nodeDone(d, n));
+function nextDeckAfter(d) {
+  const list = langDecks().filter(x => x.cards.length >= 3);
+  const i = list.indexOf(d);
+  return list.slice(i + 1).find(x => !deckDone(x)) || list.find(x => x !== d && !deckDone(x)) || null;
+}
+// Набор для «Продолжить курс»: текущий, а если он пройден — следующий непройденный.
+function courseDeck() { const d = activeDeck(); return d && deckDone(d) ? nextDeckAfter(d) || d : d; }
 function nextDue() {
   let min = Infinity;
   for (const c of allCards()) { const p = db.prog[c.id]; if (p && p.seen && p.due > now()) min = Math.min(min, p.due); }
@@ -429,7 +551,7 @@ function nextDue() {
 screens.home = () => {
   const st = streak(), d = dayRec(), goal = db.settings.goal;
   const due = dueCards().length;
-  const ad = activeDeck();
+  const ad = courseDeck();
   let lessonCard = '';
   if (ad) {
     const nodes = lessonNodes(ad);
@@ -456,6 +578,7 @@ screens.home = () => {
       <div><div class="hello">${greet()}!</div><div class="logo">Мнемо</div></div>
       <div class="streak ${d.xp > 0 ? 'on' : ''}" title="Серия дней">🔥<b>${st}</b></div>
     </div>
+    ${langBar()}
     <div class="card goal">
       <div class="goal-ring">${ring(d.xp / goal, 72, 8)}<span>${Math.min(100, Math.round(d.xp / goal * 100))}%</span></div>
       <div><div class="cta-t">Цель дня</div><div class="cta-s">${d.xp} из ${goal} XP · ${d.ok + d.bad} ответов сегодня</div>
@@ -499,21 +622,56 @@ function deckRow(d) {
     ${due ? `<span class="badge">${due}</span>` : ''}
   </button>`;
 }
+function langBar() {
+  const L = curLang();
+  return `<div class="langbar">${langList().map(l => `<button class="lb ${l === L ? 'on' : ''}" data-act="lang" data-l="${l}"><b>${LANGS[l].flag}</b><span>${LANGS[l].name}</span></button>`).join('')}</div>`;
+}
+function byLevel(decks) {
+  const m = new Map();
+  for (const d of decks) { const k = d.level || ''; if (!m.has(k)) m.set(k, []); m.get(k).push(d); }
+  return [...m.entries()].sort((a, b) => levelRank(a[0]) - levelRank(b[0]));
+}
+function levelOpen(lv) {
+  const v = db.settings.open[curLang() + ':' + lv];
+  if (v !== undefined) return v;
+  const ad = activeDeck();
+  return !!ad && (ad.level || '') === lv;
+}
+function levelHead(lv, list, act = 'lvl-toggle', open = levelOpen(lv)) {
+  const cards = list.flatMap(d => d.cards);
+  const known = cards.filter(c => level(c.id) >= 2).length;
+  return `<button class="lvl-h ${open ? 'open' : ''}" data-act="${act}" data-l="${esc(lv)}">
+    <span class="lvl-b">${esc(lv || '—')}</span>
+    <span class="lvl-t"><b>${LEVEL_NAMES[lv] || esc(lv)}</b><small>${list.length} ${plural(list.length, 'набор', 'набора', 'наборов')} · ${nWords(cards.length)} · знаю ${known}</small>${masteryBar(cards)}</span>${I.chev}</button>`;
+}
+function decksHtml(q) {
+  const ds = langDecks();
+  if (q) {
+    const list = ds.filter(d => d.title.toLowerCase().includes(q));
+    return (list.map(deckRow).join('') || '') + wordSearch(q) || '<p class="empty">Ничего не найдено</p>';
+  }
+  const mine = ds.filter(d => !d.builtin);
+  let h = mine.length ? `<h2 class="sec">Мои наборы</h2>${mine.map(deckRow).join('')}` : '';
+  for (const [lv, list] of byLevel(ds.filter(d => d.builtin))) {
+    const open = levelOpen(lv);
+    h += levelHead(lv, list, 'lvl-toggle', open) + (open ? `<div class="lvl-list">${list.map(deckRow).join('')}</div>` : '');
+  }
+  return h || `<p class="empty">Для этого языка пока нет наборов. Создайте свой или импортируйте список слов.</p>`;
+}
 screens.decks = c => {
   const q = (c.q || '').toLowerCase();
-  const list = db.decks.filter(d => !q || d.title.toLowerCase().includes(q) || d.cards.some(x => x.t.toLowerCase().includes(q) || x.d.toLowerCase().includes(q)));
   const smart = Object.keys(SMART).map(id => `<button class="chip big" data-act="open-deck" data-id="${id}">${SMART[id].emoji} ${SMART[id].title} <small>${smartCards(id).length}</small></button>`).join('');
   return `${hdr('Наборы', { root: true, right: `<button class="ib" data-act="deck-add" aria-label="Добавить">${I.plus}</button>` })}
   <div class="pad">
+    ${langBar()}
     <label class="search">${I.search}<input type="search" placeholder="Поиск по наборам и словам" value="${esc(c.q || '')}" data-in="dsearch"></label>
     <div class="chips scroll">${smart}</div>
-    <div id="dlist">${list.map(deckRow).join('') || '<p class="empty">Ничего не найдено</p>'}</div>
-    ${q ? wordSearch(q) : ''}
+    <div id="dlist">${decksHtml(q)}</div>
     <button class="btn ghost wide" data-act="deck-add">＋ Новый набор или импорт</button>
   </div>`;
 };
 function wordSearch(q) {
-  const hits = allCards().filter(x => x.t.toLowerCase().includes(q) || x.d.toLowerCase().includes(q)).slice(0, 30);
+  const hits = allCards().filter(x => x.t.toLowerCase().includes(q) || x.d.toLowerCase().includes(q)).slice(0, 40);
   if (!hits.length) return '';
   return `<h2 class="sec">Слова</h2>${hits.map(cardRow).join('')}`;
 }
@@ -570,10 +728,10 @@ screens.deck = c => {
   </div>`;
 };
 
-const LANGS = [['en-US', 'Английский (США)'], ['en-GB', 'Английский (Брит.)'], ['ru-RU', 'Русский'], ['de-DE', 'Немецкий'], ['fr-FR', 'Французский'], ['es-ES', 'Испанский'], ['it-IT', 'Итальянский'], ['pt-BR', 'Португальский'], ['tr-TR', 'Турецкий'], ['pl-PL', 'Польский'], ['uk-UA', 'Украинский'], ['zh-CN', 'Китайский'], ['ja-JP', 'Японский'], ['ko-KR', 'Корейский'], ['ar-SA', 'Арабский'], ['he-IL', 'Иврит'], ['sr-RS', 'Сербский'], ['cs-CZ', 'Чешский'], ['fi-FI', 'Финский'], ['el-GR', 'Греческий']];
-const langSel = (name, v) => `<select name="${name}">${LANGS.map(([k, l]) => `<option value="${k}" ${k === v ? 'selected' : ''}>${l}</option>`).join('')}</select>`;
+const VOICE_LANGS = [['en-US', 'Английский (США)'], ['en-GB', 'Английский (Брит.)'], ['ru-RU', 'Русский'], ['de-DE', 'Немецкий'], ['fr-FR', 'Французский'], ['es-ES', 'Испанский'], ['it-IT', 'Итальянский'], ['pt-BR', 'Португальский'], ['tr-TR', 'Турецкий'], ['pl-PL', 'Польский'], ['uk-UA', 'Украинский'], ['zh-CN', 'Китайский'], ['ja-JP', 'Японский'], ['ko-KR', 'Корейский'], ['ar-SA', 'Арабский'], ['he-IL', 'Иврит'], ['sr-RS', 'Сербский'], ['cs-CZ', 'Чешский'], ['fi-FI', 'Финский'], ['el-GR', 'Греческий']];
+const langSel = (name, v) => `<select name="${name}">${VOICE_LANGS.map(([k, l]) => `<option value="${k}" ${k === v ? 'selected' : ''}>${l}</option>`).join('')}</select>`;
 function deckForm(d) {
-  d = d || { title: '', emoji: '📘', desc: '', front: 'en-US', back: 'ru-RU' };
+  d = d || { title: '', emoji: '📘', desc: '', front: LANGS[curLang()].front, back: 'ru-RU' };
   openModal(`<h3>${d.id ? 'Набор' : 'Новый набор'}</h3>
     <form class="form" data-form="deck" data-id="${esc(d.id || '')}">
       <div class="row-e"><input name="emoji" value="${esc(d.emoji || '📘')}" maxlength="4" class="emoji-in"><input name="title" placeholder="Название" value="${esc(d.title)}" required ${d.id ? '' : 'autofocus'}></div>
@@ -640,7 +798,7 @@ screens.import = c => {
     <div class="lbl">Разделитель</div>
     <div class="chips">${SEPS.map(([k, l]) => `<button class="chip ${(c.sep || 'auto') === k ? 'on' : ''}" data-act="imp-sep" data-v="${k}">${l}</button>`).join('')}</div>
     <label class="tgl"><input type="checkbox" id="imp-swap" ${c.swap ? 'checked' : ''}> Поменять стороны местами</label>
-    ${d ? '' : `<div class="row2"><label>Язык слов${langSel('imp-front', c.front || 'en-US')}</label><label>Язык перевода${langSel('imp-back', c.back || 'ru-RU')}</label></div>`}
+    ${d ? '' : `<div class="row2"><label>Язык слов${langSel('imp-front', c.front || LANGS[curLang()].front)}</label><label>Язык перевода${langSel('imp-back', c.back || 'ru-RU')}</label></div>`}
     <div id="imp-prev" class="imp-prev"></div>
     <button class="btn wide" data-act="imp-do">Импортировать</button>
   </div>`;
@@ -723,8 +881,7 @@ const nodeStars = (deck, n) => (db.lessons[deck.id] || {})[nodeKey(n)] || 0;
 
 screens.lessons = () => {
   const deck = activeDeck();
-  const chips = db.decks.filter(d => d.cards.length >= 3).map(d => `<button class="chip ${deck && d.id === deck.id ? 'on' : ''}" data-act="set-active" data-id="${esc(d.id)}">${esc(d.emoji || '📘')} ${esc(d.title)}</button>`).join('');
-  if (!deck) return `${hdr('Уроки', { root: true })}<div class="pad"><p class="empty">Добавьте набор хотя бы из 3 слов — и из него соберутся уроки.</p></div>`;
+  if (!deck) return `${hdr('Уроки', { root: true })}<div class="pad">${langBar()}<p class="empty">Добавьте набор хотя бы из 3 слов — и из него соберутся уроки.</p></div>`;
   const nodes = lessonNodes(deck);
   const firstOpen = nodes.findIndex(n => !nodeDone(deck, n));
   let html = '', lastUnit = 0;
@@ -746,15 +903,30 @@ screens.lessons = () => {
     </div>`;
   });
   const doneN = nodes.filter(n => nodeDone(deck, n)).length;
+  const nx = doneN === nodes.length ? nextDeckAfter(deck) : null;
+  const pos = langDecks().filter(x => x.cards.length >= 3);
   return `${hdr('Уроки', { root: true })}
   <div class="pad">
-    <div class="chips scroll">${chips}</div>
-    <div class="card path-head"><div class="cta-ico">${esc(deck.emoji || '📘')}</div><div class="cta-body"><div class="cta-t">${esc(deck.title)}</div>
-      <div class="cta-s">${doneN} из ${nodes.length} уроков · ${nWords(deck.cards.length)}</div><div class="pbar sm"><i style="width:${doneN / nodes.length * 100}%"></i></div></div></div>
-    <p class="hint">Каждый урок знакомит с ${db.settings.lessonSize} словами и закрепляет их 7 видами упражнений. Уроки можно проходить и не по порядку.</p>
+    ${langBar()}
+    <button class="card path-head" data-act="pick-deck"><div class="cta-ico">${esc(deck.emoji || '📘')}</div><div class="cta-body"><div class="cta-t">${deck.level ? `<span class="lvl-tag">${esc(deck.level)}</span> ` : ''}${esc(deck.title)}</div>
+      <div class="cta-s">${doneN} из ${nodes.length} уроков · ${nWords(deck.cards.length)} · набор ${pos.indexOf(deck) + 1} из ${pos.length}</div><div class="pbar sm"><i style="width:${doneN / nodes.length * 100}%"></i></div></div><span class="lnk">Сменить</span></button>
+    <p class="hint">Курс идёт от A0 к C1: пройдите уроки набора — и переходите к следующему. Каждый урок знакомит с ${db.settings.lessonSize} словами и закрепляет их 7 видами упражнений.</p>
     <div class="path">${html}</div>
+    ${nx ? `<div class="card cta"><div class="cta-ico">${esc(nx.emoji || '📘')}</div><div class="cta-body"><div class="cta-t">Набор пройден! Дальше:</div><div class="cta-s">${esc(nx.level)} · ${esc(nx.title)}</div></div><button class="btn" data-act="set-active" data-id="${esc(nx.id)}">Перейти</button></div>` : ''}
   </div>`;
 };
+function deckPicker() {
+  const ad = activeDeck();
+  let h = '';
+  for (const [lv, list] of byLevel(langDecks().filter(d => d.cards.length >= 3))) {
+    h += `<div class="pick-lv">${esc(lv || 'Мои')} · ${LEVEL_NAMES[lv] || ''}</div>` + list.map(d => {
+      const nodes = lessonNodes(d), dn = nodes.filter(n => nodeDone(d, n)).length;
+      return `<button class="mrow ${ad && d.id === ad.id ? 'on' : ''}" data-act="set-active" data-id="${esc(d.id)}"><b>${esc(d.emoji || '📘')}</b><span>${esc(d.title)}<small>${nWords(d.cards.length)} · уроков ${dn}/${nodes.length}${dn === nodes.length ? ' ✓' : ''}</small></span></button>`;
+    }).join('');
+  }
+  openModal(`<h3>Выберите набор для уроков</h3>${h}`);
+  const on = $('#modal .mrow.on'); if (on) on.scrollIntoView({ block: 'center' });
+}
 function nodeSheet(deck, i) {
   const n = lessonNodes(deck)[i];
   if (!n) return;
@@ -1112,7 +1284,7 @@ function sessionCards(deckId) {
 function startMode(mode, deckId, cardsOverride) {
   const d = getDeck(deckId) || { id: deckId, title: 'Тренировка', cards: [] };
   let cards = cardsOverride || d.cards;
-  if (mode === 'lessons') { db.settings.activeDeck = deckId; saveSoon(); tab('lessons'); return; }
+  if (mode === 'lessons') { setActive(deckId); tab('lessons'); return; }
   if (mode === 'review') return startReview(deckId);
   if (!cards.length) { toast('В наборе нет карточек'); return; }
   const again = () => startMode(mode, deckId, cardsOverride);
@@ -1199,7 +1371,7 @@ function startLesson(deckId, n) {
   const nodes = lessonNodes(deck);
   const node = nodes[n];
   if (!node) return;
-  db.settings.activeDeck = deckId;
+  setActive(deckId);
   closeModal();
   const queue = buildLesson(node);
   let pos = 0;
@@ -1658,7 +1830,7 @@ function achievements() {
     ['⚡', 'Молния', '300 очков в спринте', (db.best.sprintMax || 0) >= 300],
     ['⏱️', 'Скорострел', 'Подбор быстрее 20 с', (db.best.matchMin || 99) < 20],
     ['🏆', 'Отличник', 'Тест из 10+ вопросов на 100%', !!db.flags.perfectTest],
-    ['✍️', 'Автор', 'Создать свой набор', db.decks.some(d => !d.builtin)],
+    ['✍️', 'Автор', 'Создать свой набор', db.decks.length > 0],
   ];
 }
 screens.stats = () => {
@@ -1683,7 +1855,12 @@ screens.stats = () => {
   const maxW = Math.max(goal, ...week.map(w => w.xp));
   const hard = smartCards('@hard').slice(0, 8);
   const ach = achievements();
+  const lvRows = byLevel(langDecks().filter(d => d.builtin)).map(([lv, list]) => {
+    const cs = list.flatMap(d => d.cards), k = cs.filter(c => level(c.id) >= 2).length;
+    return `<div class="lv-row"><span><b class="lvl-tag">${esc(lv)}</b></span><div class="lv-bar"><i class="l3" style="width:${cs.length ? k / cs.length * 100 : 0}%"></i></div><b>${k}/${cs.length}</b></div>`;
+  }).join('');
   return `${hdr('Прогресс', { root: true })}<div class="pad">
+    ${langBar()}
     <div class="stats3">
       <div><b>🔥 ${streak()}</b><span>серия дней</span></div>
       <div><b>${bestStreak()}</b><span>рекорд серии</span></div>
@@ -1694,6 +1871,7 @@ screens.stats = () => {
       <div><b>${dueCards().length}</b><span>к повторению</span></div>
       <div><b>${ok + bad ? Math.round(ok / (ok + bad) * 100) : 0}%</b><span>точность</span></div>
     </div>
+    ${lvRows ? `<h2 class="sec">${LANGS[curLang()].flag} Путь к C1</h2><div class="card">${lvRows}<p class="hint">Сколько слов каждого уровня вы уже знаете (интервал повторения от 2 дней).</p></div>` : ''}
     <h2 class="sec">Неделя</h2>
     <div class="card week">${week.map(w => `<div class="wk"><div class="wk-bar"><i style="height:${w.xp / maxW * 100}%" class="${w.xp >= goal ? 'full' : ''}"></i></div><small>${w.l}</small><small class="wk-x">${w.xp || ''}</small></div>`).join('')}
       <div class="wk-goal" style="bottom:calc(${goal / maxW * 100}% * 0.72 + 34px)"></div></div>
@@ -1715,7 +1893,7 @@ screens.more = () => `${hdr('Ещё', { root: true })}<div class="pad">
   <button class="mrow" data-act="go" data-to="import"><b>📥</b><span>Импорт слов<small>Из Quizlet, Excel, заметок или файла</small></span>${I.chev}</button>
   <button class="mrow" data-act="go" data-to="backup"><b>💾</b><span>Резервная копия<small>Сохранить и перенести прогресс</small></span>${I.chev}</button>
   <button class="mrow" data-act="go" data-to="install"><b>📱</b><span>Установка на телефон<small>Android и iPhone</small></span>${I.chev}</button>
-  <div class="about"><div class="logo">Мнемо</div><p class="hint center">Карточки · Заучивание · Тест · Подбор · Письмо · Диктант · Собери слово · Спринт · Интервальные повторения · Уроки<br>${nWords(allCards().length)} в ${db.decks.length} наборах. Все данные хранятся только на этом устройстве.</p></div>
+  <div class="about"><div class="logo">Мнемо</div><p class="hint center">Карточки · Заучивание · Тест · Подбор · Письмо · Диктант · Собери слово · Спринт · Интервальные повторения · Уроки<br>${nWords(cardIdx.size)} в ${DECKS.length} наборах на ${langList().length} языках. Все данные хранятся только на этом устройстве.</p></div>
 </div>`;
 screens.guide = () => `${hdr('Как запоминать')}<div class="pad">
   <p class="desc">Короткие статьи о том, как работает память, и как этим пользоваться.</p>
@@ -1808,8 +1986,7 @@ const A = {
   star: el => {
     const c = cardIdx.get(el.dataset.id)?.c;
     if (!c) return;
-    c.star = !c.star;
-    saveSoon();
+    editCard(c, { star: !c.star });
     if ($('#modal').hidden) render(true);
   },
   set: el => {
@@ -1822,7 +1999,10 @@ const A = {
     if (F && k === 'dir') F.qa = F.cards.map(c => qa(c, v));
     render(true);
   },
-  'set-active': el => { db.settings.activeDeck = el.dataset.id; saveSoon(); render(); },
+  'set-active': el => { setActive(el.dataset.id); closeModal(); render(); },
+  lang: el => { db.settings.lang = el.dataset.l; saveSoon(); render(); },
+  'lvl-toggle': el => { const k = curLang() + ':' + el.dataset.l; db.settings.open[k] = !levelOpen(el.dataset.l); saveSoon(); render(true); },
+  'pick-deck': () => deckPicker(),
   'open-deck': el => go('deck', { id: el.dataset.id }),
   'deck-filter': el => { cur().f = el.dataset.f; render(true); },
   mode: el => startMode(el.dataset.mode, el.dataset.deck),
@@ -1834,11 +2014,9 @@ const A = {
   'imp-open': () => { closeModal(); go('import', {}); },
   'restore-builtin': () => {
     closeModal();
-    const before = db.decks.length;
-    db.seeded = db.seeded.filter(id => db.decks.some(d => d.id === id));
-    db.removed = {};
-    seed(); reindex(); save(); render();
-    toast(db.decks.length > before ? 'Наборы восстановлены' : 'Все встроенные наборы на месте');
+    db.hidden = {}; db.removed = {};
+    rebuild(); save(); render();
+    toast('Встроенные наборы и слова восстановлены');
   },
   'deck-menu': el => {
     const d = deckById(el.dataset.id);
@@ -1857,9 +2035,9 @@ const A = {
   'deck-swap': el => {
     const d = deckById(el.dataset.id);
     confirmBox('Поменять местами слово и перевод во всех карточках набора?', 'Поменять', () => {
-      d.cards.forEach(c => { [c.t, c.d] = [c.d, c.t]; });
-      [d.front, d.back] = [d.back, d.front];
-      saveSoon(); render(true);
+      d.cards.forEach(c => editCard(c, { t: c.d, d: c.t }));
+      editDeck(d, { front: d.back, back: d.front });
+      render(true);
     }, false);
   },
   'deck-reset': el => {
@@ -1873,10 +2051,11 @@ const A = {
   'deck-del': el => {
     const d = deckById(el.dataset.id);
     confirmBox(`Удалить набор «${esc(d.title)}» и все его карточки?`, 'Удалить', () => {
-      db.decks = db.decks.filter(x => x !== d);
+      if (d.builtin) db.hidden[d.id] = 1;
+      else db.decks = db.decks.filter(x => x !== d);
       d.cards.forEach(c => { delete db.prog[c.id]; });
       delete db.lessons[d.id];
-      reindex(); saveSoon();
+      rebuild(); saveSoon();
       back(true);
     });
   },
@@ -1886,10 +2065,8 @@ const A = {
     const x = cardIdx.get(el.dataset.id);
     if (!x) return;
     confirmBox(`Удалить карточку «${esc(x.c.t)}»?`, 'Удалить', () => {
-      x.d.cards = x.d.cards.filter(c => c !== x.c);
-      if (x.d.builtin) db.removed[x.c.id] = 1;
-      delete db.prog[x.c.id];
-      reindex(); saveSoon(); render(true);
+      removeCard(x.d, x.c);
+      closeModal(); render(true);
     });
   },
   'imp-sep': el => { const c = cur(); readImportForm(c); c.sep = el.dataset.v; render(true); },
@@ -1900,10 +2077,13 @@ const A = {
     if (!items.length) { toast('Не удалось распознать ни одной карточки'); return; }
     let d = c.deck ? deckById(c.deck) : null;
     if (!d) {
-      d = { id: 'u' + uid(), title: (c.title || '').trim() || 'Мой набор', emoji: '📘', desc: '', front: c.front || 'en-US', back: c.back || 'ru-RU', created: now(), cards: [] };
+      const front = c.front || LANGS[curLang()].front;
+      d = { id: 'u' + uid(), title: (c.title || '').trim() || 'Мой набор', emoji: '📘', desc: '', front, back: c.back || 'ru-RU', lang: langOfCode(front), created: now(), cards: [] };
       db.decks.unshift(d);
+      rebuild();
+      d = deckById(d.id);
     }
-    items.forEach(x => d.cards.push({ id: 'c' + uid(), ...x }));
+    items.forEach(x => addCard(d, { id: 'c' + uid(), ...x }, true));
     reindex(); save();
     toast(`Добавлено: ${nCards(items.length)}`);
     stack.pop();
@@ -2054,8 +2234,7 @@ document.addEventListener('input', e => {
   if (k === 'dsearch') {
     const c = cur(); c.q = el.value;
     const q = c.q.toLowerCase();
-    const list = db.decks.filter(d => !q || d.title.toLowerCase().includes(q) || d.cards.some(x => x.t.toLowerCase().includes(q) || x.d.toLowerCase().includes(q)));
-    $('#dlist').innerHTML = (list.map(deckRow).join('') || '<p class="empty">Ничего не найдено</p>') + (q ? wordSearch(q) : '');
+    $('#dlist').innerHTML = decksHtml(q);
   } else if (k === 't-n') { cur().n = Number(el.value); $('#t-n').textContent = el.value; }
   else if (k === 't-wr') { T.ans[Number(el.dataset.q)] = el.value; }
   else if (k === 'rate') { db.settings.rate = Number(el.value); $('#rate-v').textContent = Number(el.value).toFixed(1); saveSoon(); }
@@ -2099,24 +2278,25 @@ document.addEventListener('submit', e => {
   if (f.dataset.form === 'deck') {
     let d = f.dataset.id && deckById(f.dataset.id);
     const isNew = !d;
-    if (!d) { d = { id: 'u' + uid(), created: now(), cards: [] }; db.decks.unshift(d); }
-    Object.assign(d, { title: v('title') || 'Мой набор', emoji: v('emoji') || '📘', desc: v('desc'), front: v('front'), back: v('back') });
-    reindex(); saveSoon(); closeModal();
+    const fields = { title: v('title') || 'Мой набор', emoji: v('emoji') || '📘', desc: v('desc'), front: v('front'), back: v('back') };
+    if (!d) { d = { id: 'u' + uid(), created: now(), cards: [], ...fields, lang: langOfCode(fields.front) }; db.decks.unshift(d); }
+    else { if (!d.builtin) fields.lang = langOfCode(fields.front); editDeck(d, fields); }
+    if (d.lang !== curLang()) db.settings.lang = d.lang;
+    rebuild(); saveSoon(); closeModal();
     if (isNew) { go('deck', { id: d.id }); cardForm(null, d.id); } else render(true);
   } else if (f.dataset.form === 'card') {
     const t = v('t'), d = v('d');
     if (!t || !d) return;
     const fields = { t, d, ex: v('ex'), exT: v('exT'), note: v('note') };
     if (f.dataset.id) {
-      Object.assign(cardIdx.get(f.dataset.id).c, fields);
-      saveSoon(); closeModal();
+      editCard(cardIdx.get(f.dataset.id).c, fields);
+      closeModal();
       if (S && S.cur && S.cur.c && S.cur.c.id === f.dataset.id) S.cur.c = cardIdx.get(f.dataset.id).c;
       render(true);
     } else {
       const deck = deckById(f.dataset.deck);
       if (!deck) return;
-      deck.cards.push({ id: 'c' + uid(), ...fields });
-      reindex(); saveSoon();
+      addCard(deck, { id: 'c' + uid(), ...fields });
       toast(`Добавлено: ${t}`);
       f.reset();
       f.elements.t.focus();
@@ -2150,6 +2330,7 @@ document.addEventListener('keydown', e => {
 });
 
 /* ───────────────────────── Старт ───────────────────────── */
+buildBuiltin();
 load();
 applyTheme();
 render();
@@ -2157,5 +2338,5 @@ save();
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
-window.__mnemo = { get db() { return db; }, get S() { return S; }, get R() { return R; }, checkAnswer, parseImport, lessonNodes, buildLesson, clozeOf, nextState };
+window.__mnemo = { get db() { return db; }, get decks() { return DECKS; }, get S() { return S; }, get R() { return R; }, checkAnswer, parseImport, lessonNodes, buildLesson, clozeOf, nextState };
 })();

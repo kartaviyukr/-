@@ -25,9 +25,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Проверить синтаксис JS
+      - name: Проверить синтаксис JS и словари
         run: |
-          for f in app/src/main/assets/www/*.js; do node --check "$f"; done
+          for f in app/src/main/assets/www/*.js app/src/main/assets/www/data/*.js; do node --check "$f"; done
+          node tools/data.mjs
 
       - uses: actions/setup-java@v4
         with:
