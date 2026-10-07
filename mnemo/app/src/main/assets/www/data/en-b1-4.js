@@ -128,7 +128,6 @@ heavy rain|сильный дождь|Heavy rain all day.|Сильный дожд
 lightning|молния|Thunder and lightning.|Гром и молния.
 hail|град|Hail damaged the cars.|Град повредил машины.
 frost|мороз, иней|Frost on the windows.|Иней на окнах.
-ice|лёд|Ice on the roads.|Гололёд на дорогах.
 humid|влажный|Hot and humid.|Жарко и влажно.
 freezing|морозный, ледяной|It's freezing outside.|На улице мороз.
 mild|мягкий (о климате)|A mild winter.|Мягкая зима.
