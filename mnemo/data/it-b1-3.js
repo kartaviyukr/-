@@ -137,7 +137,6 @@ eppure|и всё же|Eppure si muove.|И всё-таки она вертитс�
 fare attenzione|быть внимательным|Fai attenzione!|Будь внимателен!
 fare una domanda|задать вопрос|Posso fare una domanda?|Можно задать вопрос?
 fare finta|притворяться|Fa finta di dormire.|Он притворяется, что спит.
-fare un giro|прогуляться, прокатиться|Facciamo un giro in centro.|Давай прогуляемся по центру.
 fare la fila|стоять в очереди|Odio fare la fila.|Ненавижу стоять в очереди.
 fare il pieno|заправиться (полный бак)|Devo fare il pieno.|Мне нужно заправиться.
 fare schifo|быть отвратительным|Questo caffè fa schifo.|Этот кофе отвратителен.

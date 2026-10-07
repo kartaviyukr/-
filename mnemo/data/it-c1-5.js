@@ -67,7 +67,6 @@ il coro|хор|Il coro della chiesa.
 la sinfonia|симфония|Una sinfonia di Beethoven.
 il concerto per pianoforte|фортепианный концерт|Un concerto per pianoforte.
 il ritornello|припев|Cantiamo il ritornello.
-la strofa|куплет|La prima strofa.
 strumentale|инструментальный|Un brano strumentale.
 acustico|акустический|Una chitarra acustica.
 il bis|бис|Il pubblico chiedeva il bis.

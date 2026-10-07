@@ -8,7 +8,6 @@ la contraddizione|противоречие|Cadere in contraddizione.
 la deduzione|вывод|Una deduzione logica.
 il discorso|речь, дискурс|Il discorso politico.
 il dogma|догма|Un dogma religioso.
-approfondire|углублять, подробно рассматривать|Vorrei approfondire questo punto.
 fallace|ошибочный|Un ragionamento fallace.
 l'inferenza|умозаключение|Trarre un'inferenza.
 inconfutabile|неопровержимый|Una prova inconfutabile.
