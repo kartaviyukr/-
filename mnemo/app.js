@@ -1888,7 +1888,7 @@ screens.stats = () => {
 
 /* ───────────────────────── Ещё: справочник, настройки, копия ───────────────────────── */
 screens.more = () => `${hdr('Ещё', { root: true })}<div class="pad">
-  <button class="mrow" data-act="go" data-to="guide"><b>🧠</b><span>Как запоминать<small>14 статей о методиках запоминания в приложении</small></span>${I.chev}</button>
+  <button class="mrow" data-act="go" data-to="guide"><b>🧠</b><span>Как запоминать<small>17 статей: методики, уровни, особенности языков в приложении</small></span>${I.chev}</button>
   <button class="mrow" data-act="go" data-to="settings"><b>⚙️</b><span>Настройки<small>Тема, цель дня, озвучка, уроки</small></span>${I.chev}</button>
   <button class="mrow" data-act="go" data-to="import"><b>📥</b><span>Импорт слов<small>Из Quizlet, Excel, заметок или файла</small></span>${I.chev}</button>
   <button class="mrow" data-act="go" data-to="backup"><b>💾</b><span>Резервная копия<small>Сохранить и перенести прогресс</small></span>${I.chev}</button>
