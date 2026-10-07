@@ -1,4 +1,4 @@
-name: Скипетр APK
+name: Планёр APK
 
 on:
   push:
@@ -13,7 +13,7 @@ permissions:
 
 # Одновременно идёт только одна сборка: иначе два запуска спорят за релиз.
 concurrency:
-  group: skipetr-apk
+  group: planer-apk
   cancel-in-progress: true
 
 jobs:
@@ -58,19 +58,22 @@ jobs:
         run: gradle assembleRelease --no-daemon --stacktrace
 
       - name: Rename APK
-        run: cp app/build/outputs/apk/release/app-release.apk Skipetr.apk
+        run: cp app/build/outputs/apk/release/app-release.apk Planer.apk
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Skipetr-apk
-          path: planner/Skipetr.apk
+          name: Planer-apk
+          path: planner/Planer.apk
 
       - name: Publish release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Приложение переименовано из «Скипетр»: убираем старый релиз.
           gh release delete skipetr-latest --yes --cleanup-tag || true
-          gh release create skipetr-latest Skipetr.apk \
+
+          gh release delete planer-latest --yes --cleanup-tag || true
+          gh release create planer-latest Planer.apk \
             --target "${{ github.sha }}" \
-            --title "Скипетр — последняя сборка" \
-            --notes "👑 Королевский личный планер: день, неделя, месяц, год. Скачайте Skipetr.apk на телефон и откройте файл, чтобы установить. Сборка ${{ github.run_number }}."
+            --title "Планёр — последняя сборка" \
+            --notes "👑 Королевский личный планер: день, неделя, месяц, год и финансы. Скачайте Planer.apk на телефон и откройте файл, чтобы установить. Сборка ${{ github.run_number }}."

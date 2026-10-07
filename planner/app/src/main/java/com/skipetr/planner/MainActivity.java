@@ -125,7 +125,7 @@ public class MainActivity extends Activity {
             runOnUiThread(() -> {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_SUBJECT, "Скипетр — резервная копия");
+                i.putExtra(Intent.EXTRA_SUBJECT, "Планёр — резервная копия");
                 i.putExtra(Intent.EXTRA_TEXT, text);
                 startActivity(Intent.createChooser(i, "Сохранить копию"));
             });

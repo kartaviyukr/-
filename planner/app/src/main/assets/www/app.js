@@ -1,5 +1,5 @@
 'use strict';
-/* Скипетр — королевский личный планер.
+/* Планёр — королевский личный планер.
    Все данные хранятся локально (localStorage) в объекте S. */
 
 const KEY = 'skipetr.v1';
@@ -89,6 +89,7 @@ function fresh() {
     inbox: [], matrix: { q1: [], q2: [], q3: [], q4: [] },
     settings: { name: '', theme: 'midnight', dayStart: 6, dayEnd: 23 },
     pomo: { mode: 'focus', running: false, endAt: 0, remain: 25 * 60 },
+    fin: FIN_DEF(),
   };
 }
 // Fill missing keys of obj from defaults (deep for plain objects).
@@ -216,7 +217,7 @@ function ring(v, size = 100, color = 'var(--gold)') {
 /* ---------------- Header ---------------- */
 function header() {
   const d = pd(U.cur);
-  let title = 'Скипетр', sub = '', nav = '';
+  let title = 'Планёр', sub = '', nav = '';
   const arrows = isToday => `<button class="ib" data-act="shift" data-n="-1">‹</button>${isToday ? '' : '<button class="chip" data-act="today">Сегодня</button>'}<button class="ib" data-act="shift" data-n="1">›</button>`;
   if (U.tab === 'day') {
     title = WDL[wdi(d)];
@@ -235,6 +236,12 @@ function header() {
     title = `${d.getFullYear()} год`;
     sub = 'Королевский замысел';
     nav = arrows(d.getFullYear() === new Date().getFullYear());
+  } else if (U.tab === 'fin') {
+    const fs = U.fsec || 'budget';
+    title = 'Казна';
+    if (fs === 'fyear') { sub = `${d.getFullYear()} · финансы года`; nav = arrows(d.getFullYear() === new Date().getFullYear()); }
+    else if (fs === 'budget' || fs === 'bills') { sub = `${MONTHS[d.getMonth()]} ${d.getFullYear()}`; nav = arrows(monthKey(d) === monthKey(new Date())); }
+    else sub = fs === 'goals' ? 'Копилки и подушка' : 'Свобода от долгов';
   } else {
     const subs = { matrix: 'Матрица Эйзенхауэра', inbox: 'Входящие', pomo: 'Помодоро', habits: 'Привычки', roles: 'Роли', guide: 'Методики', settings: 'Настройки' };
     title = U.sub ? subs[U.sub] : 'Сокровищница';
@@ -300,6 +307,8 @@ function viewDay() {
   h += card('Помодоро', '🍅',
     `<div class="row"><div style="flex:1;font-size:20px;letter-spacing:2px">${d.pomos ? '🍅'.repeat(Math.min(d.pomos, 12)) + (d.pomos > 12 ? ' ×' + d.pomos : '') : '<span class="hint" style="margin:0;letter-spacing:0">Сегодня ещё нет помидоров</span>'}</div>
      <button class="btn sm" data-act="open" data-s="pomo">Фокус 25 мин</button></div>`);
+
+  h += finDayCard(k);
 
   h += card('Вечерняя рефлексия', '🌙',
     `<div class="lbl">Я благодарен(на) за…</div>${d.grat.map((g, i) => `<div class="row" style="margin-bottom:6px"><span style="color:var(--gold)">${i + 1}.</span>${inp(`${P}.grat.${i}`, g, 'Благодарность')}</div>`).join('')}
@@ -580,9 +589,15 @@ const SUBS = {
       ['⚔️', '12-недельный год', 'Брайан Моран', 'Год слишком длинный — мы расслабляемся. Думай кварталами: 12 недель — достаточно, чтобы достичь многого, и достаточно мало, чтобы не терять темп.'],
       ['🎨', 'Год в пикселях', 'Дневник настроения', 'Каждый день окрашивается своим настроением. В конце года — живая картина твоей жизни и подсказки, что делает тебя счастливее.'],
       ['🌙', 'Вечерняя рефлексия', 'Дневник благодарности', 'Три благодарности, победы дня и один урок. 5 минут вечером повышают осознанность и настроение.'],
+      ['⚖️', 'Правило 50/30/20', 'Элизабет Уоррен', 'Доход делится на три части: <b>50%</b> — нужды, <b>30%</b> — желания, <b>20%</b> — накопления и досрочное погашение долгов. Простой ориентир для здорового бюджета.'],
+      ['💎', 'Заплати сначала себе', 'Джордж Клейсон', 'В день получения дохода сразу откладывай 10–20% — до всех трат. Живёшь на остаток, а капитал растёт сам собой.'],
+      ['✉️', 'Метод конвертов', 'Бюджет по категориям', 'У каждой категории расходов — свой лимит на месяц. Конверт опустел — траты в этой категории до конца месяца закончились.'],
+      ['🛡️', 'Подушка безопасности', 'Финансовая устойчивость', 'Запас на 3–6 месяцев обязательных расходов. Первый финансовый приоритет — до инвестиций и крупных покупок.'],
+      ['☃️', 'Снежный ком и лавина', 'Погашение долгов', '<b>Снежный ком</b> (Дэйв Рэмси): гаси сначала самый маленький долг — ради быстрых побед. <b>Лавина</b>: сначала долг с самой высокой ставкой — так выгоднее всего.'],
+      ['⏳', 'Правило 30 дней', 'Против импульсивных покупок', 'Захотелось купить — запиши в список желаний и подожди 30 дней. Если желание не прошло, заведи под него копилку.'],
     ];
     return `<div class="card guide">${G.map(([i, t, s, p]) => `<details><summary><span style="font-size:22px">${i}</span><div>${t}<small>${s}</small></div></summary><p>${p}</p></details>`).join('')}</div>
-      ${card('Как строится система', '🧭', `<p class="hint" style="margin:0;line-height:1.55">Год → <b>Слово, колесо баланса, OKR</b><br>Квартал → <b>12-недельный фокус</b><br>Месяц → <b>тема и цели месяца</b><br>Неделя → <b>роли, большие камни, обзор</b><br>День → <b>лягушка, 1-3-5, тайм-блоки, привычки, рефлексия</b></p>`)}`;
+      ${card('Как строится система', '🧭', `<p class="hint" style="margin:0;line-height:1.55">Казна → <b>бюджет 50/30/20, конверты, копилки, подушка, долги, платежи</b><br>Год → <b>Слово, колесо баланса, OKR</b><br>Квартал → <b>12-недельный фокус</b><br>Месяц → <b>тема и цели месяца</b><br>Неделя → <b>роли, большие камни, обзор</b><br>День → <b>лягушка, 1-3-5, тайм-блоки, привычки, рефлексия</b></p>`)}`;
   },
   settings() {
     const st = S.settings;
@@ -600,7 +615,7 @@ const SUBS = {
          <textarea class="ta" id="impTa" placeholder="Вставь сюда текст копии"></textarea>
          <button class="btn ghost wide" data-act="import">Восстановить</button>
          <button class="btn danger wide" data-act="reset">Стереть все данные</button>`) +
-      '<div class="divider">❖ ❖ ❖</div><p class="hint" style="text-align:center">Скипетр 1.0 · личный королевский планер</p>';
+      '<div class="divider">❖ ❖ ❖</div><p class="hint" style="text-align:center">Планёр 1.1 · личный королевский планер</p>';
   },
 };
 
@@ -675,7 +690,7 @@ function applyTheme() {
 }
 
 /* ---------------- Render ---------------- */
-const VIEWS = { day: viewDay, week: viewWeek, month: viewMonth, year: viewYear, more: viewMore };
+const VIEWS = { day: viewDay, week: viewWeek, month: viewMonth, year: viewYear, fin: viewFin, more: viewMore };
 function render(resetScroll = false) {
   const v = $('#view'), st = v.scrollTop;
   header();
@@ -704,7 +719,7 @@ const A = {
     let x;
     if (U.tab === 'day') x = addD(d, n);
     else if (U.tab === 'week') x = addD(d, 7 * n);
-    else if (U.tab === 'month') x = new Date(d.getFullYear(), d.getMonth() + n, 1);
+    else if (U.tab === 'month' || (U.tab === 'fin' && U.fsec !== 'fyear')) x = new Date(d.getFullYear(), d.getMonth() + n, 1);
     else x = new Date(d.getFullYear() + n, 0, 1);
     go({ cur: ymd(x) });
   },
@@ -792,7 +807,7 @@ const A = {
   async import() {
     let data;
     try { data = JSON.parse($('#impTa').value.trim()); } catch (e) { toast('Не получилось прочитать копию'); return; }
-    if (!data || !data.v || !data.days) { toast('Это не копия Скипетра'); return; }
+    if (!data || !data.v || !data.days) { toast('Это не копия Планёра'); return; }
     if (!(await ask('Восстановить?', 'Текущие данные будут заменены данными из копии.', 'Восстановить'))) return;
     S = def(data, fresh()); flush(); applyTheme(); toast('Данные восстановлены 👑'); go({ tab: 'day', sub: null, cur: today() });
   },
@@ -813,7 +828,8 @@ document.addEventListener('input', e => {
   const el = e.target, p = el.dataset.bind;
   if (!p) return;
   let v = el.value;
-  if (el.type === 'range' || el.dataset.num) v = +v;
+  if (el.type === 'range') v = +v;
+  else if (el.dataset.num) v = num(v);
   setP(p, v);
   save();
   if (el.dataset.live === 'wheel') {
@@ -825,7 +841,9 @@ document.addEventListener('input', e => {
 });
 document.addEventListener('change', e => {
   const el = e.target;
-  if (el.dataset.live === 'pct' || el.dataset.rerender || el.tagName === 'SELECT') render();
+  if (el.dataset.live === 'pct' || (el.tagName === 'SELECT' && el.dataset.bind)) render();
+  // Re-render totals only once the user has left all fields, so focus is not lost.
+  else if (el.dataset.rerender) setTimeout(() => { const a = document.activeElement; if (!a || !/INPUT|TEXTAREA|SELECT/.test(a.tagName)) render(); }, 80);
 });
 document.addEventListener('keydown', e => {
   if (e.key !== 'Enter') return;
@@ -833,6 +851,7 @@ document.addEventListener('keydown', e => {
   if (el.classList.contains('add-in')) {
     e.preventDefault();
     if (el.dataset.addp === '__habit') A.habAdd();
+    else if (el.dataset.addp === '__fin') A[el.dataset.fact]({}, el);
     else if (el.dataset.addp === '__role') A.roleAdd();
     else A.add({ p: el.dataset.addp }, el);
   } else if (el.tagName === 'INPUT') {
@@ -844,6 +863,7 @@ document.addEventListener('keydown', e => {
 window.appBack = () => {
   if (!$('#modal').hidden) { $('#modal').hidden = true; return true; }
   if (U.tab === 'more' && U.sub) { go({ sub: null }); return true; }
+  if (U.tab === 'fin' && U.fsec && U.fsec !== 'budget') { go({ fsec: 'budget' }); return true; }
   if (U.tab !== 'day' || U.cur !== today()) { go({ tab: 'day', sub: null, cur: today() }); return true; }
   return false;
 };
@@ -855,5 +875,6 @@ setInterval(() => {
   if (t !== lastToday) { if (U.cur === lastToday) U.cur = t; lastToday = t; if (!document.activeElement || document.activeElement === document.body) render(); }
 }, 60000);
 
+Object.assign(A, FA);
 applyTheme();
 render(true);
