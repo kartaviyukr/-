@@ -22,7 +22,6 @@ contemplare|созерцать; предусматривать|La legge non lo c
 sostenere (affermare)|утверждать|Sostiene di essere innocente.
 avvalorare|подтверждать|Le prove avvalorano la tesi.
 ridimensionare|сокращать, умерять|Ridimensionare le spese.
-smentire|опровергать|Il ministro ha smentito la notizia.
 ritenere|считать, полагать|Lo ritengo inutile.
 esaurire (risorse)|истощать|Esaurire le risorse.
 dissuadere|отговаривать|Dissuadere i ladri.
@@ -36,7 +35,6 @@ suscitare|вызывать (чувства)|Suscitare emozioni.
 intraprendere (imbarcarsi)|пускаться в|Imbarcarsi in un'avventura.
 racchiudere|заключать в себе|Il libro racchiude molte storie.
 avallare|одобрять, поддерживать|Avallare una decisione.
-comportare|влечь за собой|Il lavoro comporta molti viaggi.
 prospettare|намечать, представлять|Prospettare una soluzione.
 sradicare|искоренять|Sradicare la povertà.
 evocare|вызывать (образы)|Questa musica evoca ricordi.
@@ -51,7 +49,6 @@ dare retta|прислушиваться|Dammi retta!
 `},
 { lang: 'it', id: 'it-c1-verbs2', level: 'C1', emoji: '🏹', title: 'Глаголы C1 (2)', desc: 'Продолжение продвинутых глаголов.', cards: `
 intralciare|мешать, затруднять|Il maltempo ha intralciato i soccorsi.
-dedurre|делать вывод|Cosa possiamo dedurre?
 violare (infrangere)|нарушать|Infrangere le regole.
 istigare|подстрекать|Istigare alla violenza.
 compromettere|ставить под угрозу|Compromettere la carriera.
@@ -65,7 +62,6 @@ perpetuare|увековечивать|Perpetuare un mito.
 perseverare|упорствовать|Perseverare nonostante le difficoltà.
 precipitare|резко падать|I prezzi sono precipitati.
 ponderare|обдумывать, взвешивать|Ponderare bene la decisione.
-prevalere|преобладать|La giustizia prevarrà.
 proclamare|провозглашать|Proclamare l'indipendenza.
 procurare|доставать, добывать|Procurare i documenti.
 prosperare|процветать|Il paese prospera.
@@ -90,11 +86,7 @@ trascendere|выходить за пределы|La musica trascende i confini.
 tutelare|охранять, защищать|Tutelare i diritti.
 scagionare|оправдывать (снимать обвинение)|È stato scagionato.
 esonerare|освобождать (от обязанности)|Esonerare dal pagamento.
-avvalersi|пользоваться (правом)|Avvalersi della facoltà di non rispondere.
-attenersi|придерживаться|Attenersi alle istruzioni.
 ovviare|устранять (проблему)|Ovviare a un inconveniente.
-sottovalutare|недооценивать|Non sottovalutare il problema.
-sopravvalutare|переоценивать|Sopravvalutare le proprie forze.
 `},
 { lang: 'it', id: 'it-c1-adj', level: 'C1', emoji: '💎', title: 'Прилагательные C1', desc: 'Точные и выразительные прилагательные.', cards: `
 irremovibile|непреклонный|È stato irremovibile.
@@ -116,7 +108,6 @@ ingombrante|громоздкий|Un mobile ingombrante.
 scoraggiante|обескураживающий|Un compito scoraggiante.
 dannoso|вредный|Dannoso per la salute.
 diligente|прилежный|Uno studente diligente.
-discreto|сдержанный; неплохой|Una persona discreta.
 eloquente|красноречивый|Un discorso eloquente.
 sfuggente|неуловимый|Uno sguardo sfuggente.
 incostante|непостоянный|Un tempo incostante.
@@ -132,26 +123,21 @@ imminente|неминуемый|Un pericolo imminente.
 implicito|подразумеваемый|Una critica implicita.
 incessante|непрерывный|Una pioggia incessante.
 indifferente|безразличный|Mi è indifferente.
-indispensabile|незаменимый|Un aiuto indispensabile.
 intrinseco|присущий|Il valore intrinseco.
 innato|врождённый|Un talento innato.
 intricato|запутанный|Una trama intricata.
 redditizio|прибыльный|Un'attività redditizia.
 meticoloso|дотошный|Un lavoro meticoloso.
-banale|банальный|Una domanda banale.
-trascurabile|ничтожный|Una differenza trascurabile.
 obsoleto|устаревший|Una tecnologia obsoleta.
 inquietante|тревожный, зловещий|Un silenzio inquietante.
 fondamentale|основополагающий|Un ruolo fondamentale.
 pragmatico|прагматичный|Un approccio pragmatico.
-precario|шаткий, временный|Un lavoro precario.
 diffuso|распространённый|Un'opinione diffusa.
 prolifico|плодовитый|Uno scrittore prolifico.
 prudente|осторожный|Una scelta prudente.
 rigoroso|строгий|Un'analisi rigorosa.
 scrupoloso|добросовестный|Un medico scrupoloso.
 scettico|скептичный|Sono scettico.
-superficiale|поверхностный|Un'analisi superficiale.
 tangibile|ощутимый|Risultati tangibili.
 noioso (tedioso)|нудный|Un lavoro tedioso.
 provvisorio|временный|Un accordo provvisorio.

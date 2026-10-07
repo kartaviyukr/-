@@ -43,7 +43,6 @@ acuto|острый|Un dolore acuto.
 benigno|доброкачественный|Un tumore benigno.
 catartico|очищающий|Un'esperienza catartica.
 clandestino|подпольный, нелегальный|Un incontro clandestino.
-esauriente|исчерпывающий|Una guida esauriente.
 copioso|обильный|Appunti copiosi.
 debilitante|изнурительный|Una malattia debilitante.
 abile|ловкий|Movimenti abili.

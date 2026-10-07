@@ -171,6 +171,5 @@ avere la nausea|чувствовать тошноту|Ho la nausea.|Меня т�
 mi gira la testa|у меня кружится голова|Mi gira la testa.|У меня кружится голова.
 riposare|отдыхать|Deve riposare.|Вам нужно отдыхать.
 stare meglio|чувствовать себя лучше|Sto meglio, grazie.|Мне лучше, спасибо.
-stare male|плохо себя чувствовать|Sto male.|Мне плохо.
 `}
 );
