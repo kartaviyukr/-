@@ -5,7 +5,6 @@ la posizione|должность, позиция|Una posizione importante.|Важ
 la qualifica|квалификация|Una qualifica professionale.|Профессиональная квалификация.
 il candidato|кандидат|Il candidato ideale.|Идеальный кандидат.
 esperto|опытный; эксперт|Un medico esperto.|Опытный врач.
-il reparto|отдел|Il reparto vendite.|Отдел продаж.
 la sede|головной офис; местонахождение|La sede centrale.|Главный офис.
 la filiale|филиал|Una filiale a Roma.|Филиал в Риме.
 il fornitore|поставщик|Un fornitore affidabile.|Надёжный поставщик.
