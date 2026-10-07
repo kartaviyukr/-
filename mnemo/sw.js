@@ -4,13 +4,22 @@
  * так обновления подхватываются сразу, а без интернета всё продолжает работать.
  * Внутри APK service worker не регистрируется (страница открыта с file://).
  */
-const CACHE = 'mnemo-v1';
-const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'data.js', 'guide.js', 'manifest.json',
-  'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
+const CACHE = 'mnemo-v2';
+const SHELL = ['./', 'index.html', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
+
+// Всё, что подключает index.html (скрипты со словарями, стили), кэшируется
+// при установке — список берётся из самой страницы, чтобы не вести его вручную.
+async function precache() {
+  const cache = await caches.open(CACHE);
+  await cache.addAll(SHELL);
+  const html = await (await fetch('index.html', { cache: 'no-store' })).text();
+  const refs = [...html.matchAll(/(?:src|href)="([^"#:]+)"/g)].map(m => m[1]);
+  await cache.addAll([...new Set(refs)]);
+}
 
 self.addEventListener('install', event => {
   self.skipWaiting();
-  event.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).catch(() => {}));
+  event.waitUntil(precache().catch(() => {}));
 });
 
 self.addEventListener('activate', event => {
