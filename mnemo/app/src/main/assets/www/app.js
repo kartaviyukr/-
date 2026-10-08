@@ -616,8 +616,8 @@ function deckRow(d) {
   const known = cards.filter(c => level(c.id) >= 2).length;
   return `<button class="deck" data-act="open-deck" data-id="${esc(d.id)}">
     <span class="deck-e">${esc(d.emoji || '📘')}</span>
-    <span class="deck-b"><span class="deck-t">${esc(d.title)}</span>
-      <span class="deck-s">${nWords(cards.length)}${d.level ? ' · ' + esc(d.level) : ''} · знаю ${known}</span>
+    <span class="deck-b"><span class="deck-t">${!d.builtin && d.level ? `<span class="lvl-tag">${esc(d.level)}</span> ` : ''}${esc(d.title)}</span>
+      <span class="deck-s">${nWords(cards.length)}${d.level && d.builtin ? ' · ' + esc(d.level) : ''} · знаю ${known}</span>
       ${masteryBar(cards)}</span>
     ${due ? `<span class="badge">${due}</span>` : ''}
   </button>`;
@@ -650,7 +650,7 @@ function decksHtml(q) {
     const list = ds.filter(d => d.title.toLowerCase().includes(q));
     return (list.map(deckRow).join('') || '') + wordSearch(q) || '<p class="empty">Ничего не найдено</p>';
   }
-  const mine = ds.filter(d => !d.builtin);
+  const mine = ds.filter(d => !d.builtin).map((d, i) => [d, i]).sort((a, b) => levelRank(a[0].level) - levelRank(b[0].level) || a[1] - b[1]).map(x => x[0]);
   let h = mine.length ? `<h2 class="sec">Мои наборы</h2>${mine.map(deckRow).join('')}` : '';
   for (const [lv, list] of byLevel(ds.filter(d => d.builtin))) {
     const open = levelOpen(lv);
@@ -683,14 +683,29 @@ const MODES = [
   ['test', '📝', 'Тест', 'Проверка с оценкой'],
   ['match', '🧩', 'Подбор', 'Найдите пары на время'],
   ['write', '✍️', 'Письмо', 'Пишите перевод сами'],
-  ['listen', '🎧', 'Диктант', 'Слушайте и записывайте'],
+  ['listen', '👂', 'Диктант', 'Слушайте и записывайте'],
   ['scramble', '🔤', 'Собери слово', 'Слово из букв'],
   ['sprint', '⚡', 'Спринт', 'Верно или нет за 60 с'],
+  ['cloze', '🧷', 'Пропуски', 'Слово в контексте фразы'],
+  ['gravity', '🌠', 'Гравитация', 'Успейте ответить, пока слово падает'],
+  ['audio', '🎧', 'Аудиоплеер', 'Слушайте слова без рук — в дороге'],
   ['lessons', '🗺️', 'Уроки', 'Пошаговый курс по набору'],
 ];
-const DIRS = [['td', 'Слово → перевод'], ['dt', 'Перевод → слово'], ['mix', 'Вперемешку']];
-function dirSeg() {
-  return `<div class="seg">${DIRS.map(([k, l]) => `<button class="${db.settings.dir === k ? 'on' : ''}" data-act="set" data-k="dir" data-v="${k}">${l}</button>`).join('')}</div>`;
+// Направление: td — показываем иностранное слово, отвечаем по-русски; dt — наоборот.
+const DIR_ORDER = ['td', 'dt', 'mix'];
+function dirLabels(lang) {
+  const L = LANGS[lang] || LANGS[curLang()] || LANGS.xx;
+  const from = L === LANGS.xx ? 'С иностранного' : 'С ' + L.name.toLowerCase().replace(/ий$/, 'ого');
+  return { td: [`${L.flag} → 🇷🇺`, from], dt: [`🇷🇺 → ${L.flag}`, 'С русского'], mix: ['🔀', 'Вперемешку'] };
+}
+function dirSeg(lang) {
+  const L = dirLabels(lang);
+  return `<div class="seg dirseg">${DIR_ORDER.map(k => `<button class="${db.settings.dir === k ? 'on' : ''}" data-act="set" data-k="dir" data-v="${k}"><b>${L[k][0]}</b><small>${L[k][1]}</small></button>`).join('')}</div>`;
+}
+// Быстрый переключатель прямо в карточках и повторении.
+function dirChip(lang) {
+  const L = dirLabels(lang)[db.settings.dir] || dirLabels(lang).td;
+  return `<button class="chip dirchip" data-act="dir-cycle" data-l="${esc(lang || '')}">⇄ ${L[0]}</button>`;
 }
 function cardRow(c) {
   const { fl } = langsOf(c);
@@ -720,7 +735,7 @@ screens.deck = c => {
     </div>
     ${masteryBar(cards)}
     <div class="legend">${LEVELS.map((l, i) => `<span><i class="lvl-dot l${i}"></i>${l} ${cnt[i]}</span>`).join('')}</div>
-    ${cards.length ? `${dirSeg()}
+    ${cards.length ? `<div class="lbl">Как спрашивать</div>${dirSeg(d.lang)}
     <div class="modes">${modes.map(([k, e, t, s]) => `<button class="mode" data-act="mode" data-mode="${k}" data-deck="${esc(d.id)}"><b>${e}</b><span>${t}</span><small>${s}</small></button>`).join('')}</div>` : `<p class="empty">${d.smart ? 'Здесь пока пусто.' : 'В наборе пока нет карточек.'}</p>`}
     <div class="list-h"><h2 class="sec">Карточки</h2>${d.smart ? '' : `<button class="btn sm" data-act="card-new" data-deck="${esc(d.id)}">＋ Карточка</button>`}</div>
     <div class="chips">${[['all', 'Все'], ['star', '⭐'], ['new', 'Новые'], ['learn', 'Изучаю'], ['known', 'Знаю']].map(([k, l]) => `<button class="chip ${f === k ? 'on' : ''}" data-act="deck-filter" data-f="${k}">${l}</button>`).join('')}</div>
@@ -730,12 +745,14 @@ screens.deck = c => {
 
 const VOICE_LANGS = [['en-US', 'Английский (США)'], ['en-GB', 'Английский (Брит.)'], ['ru-RU', 'Русский'], ['de-DE', 'Немецкий'], ['fr-FR', 'Французский'], ['es-ES', 'Испанский'], ['it-IT', 'Итальянский'], ['pt-BR', 'Португальский'], ['tr-TR', 'Турецкий'], ['pl-PL', 'Польский'], ['uk-UA', 'Украинский'], ['zh-CN', 'Китайский'], ['ja-JP', 'Японский'], ['ko-KR', 'Корейский'], ['ar-SA', 'Арабский'], ['he-IL', 'Иврит'], ['sr-RS', 'Сербский'], ['cs-CZ', 'Чешский'], ['fi-FI', 'Финский'], ['el-GR', 'Греческий']];
 const langSel = (name, v) => `<select name="${name}">${VOICE_LANGS.map(([k, l]) => `<option value="${k}" ${k === v ? 'selected' : ''}>${l}</option>`).join('')}</select>`;
+const levelSel = (name, v) => `<select name="${name}">${LEVEL_ORDER.map(l => `<option value="${l}" ${l === v ? 'selected' : ''}>${l ? `${l} — ${LEVEL_NAMES[l]}` : 'Без уровня'}</option>`).join('')}</select>`;
 function deckForm(d) {
   d = d || { title: '', emoji: '📘', desc: '', front: LANGS[curLang()].front, back: 'ru-RU' };
   openModal(`<h3>${d.id ? 'Набор' : 'Новый набор'}</h3>
     <form class="form" data-form="deck" data-id="${esc(d.id || '')}">
       <div class="row-e"><input name="emoji" value="${esc(d.emoji || '📘')}" maxlength="4" class="emoji-in"><input name="title" placeholder="Название" value="${esc(d.title)}" required ${d.id ? '' : 'autofocus'}></div>
       <textarea name="desc" rows="2" placeholder="Описание (необязательно)">${esc(d.desc || '')}</textarea>
+      ${d.builtin ? '' : `<label>Уровень${levelSel('level', d.level || '')}</label>`}
       <label>Язык слов (лицевая сторона)${langSel('front', d.front)}</label>
       <label>Язык перевода (оборот)${langSel('back', d.back)}</label>
       <div class="row2"><button type="button" class="btn ghost" data-act="modal-close">Отмена</button><button class="btn">${d.id ? 'Сохранить' : 'Создать'}</button></div>
@@ -798,7 +815,8 @@ screens.import = c => {
     <div class="lbl">Разделитель</div>
     <div class="chips">${SEPS.map(([k, l]) => `<button class="chip ${(c.sep || 'auto') === k ? 'on' : ''}" data-act="imp-sep" data-v="${k}">${l}</button>`).join('')}</div>
     <label class="tgl"><input type="checkbox" id="imp-swap" ${c.swap ? 'checked' : ''}> Поменять стороны местами</label>
-    ${d ? '' : `<div class="row2"><label>Язык слов${langSel('imp-front', c.front || LANGS[curLang()].front)}</label><label>Язык перевода${langSel('imp-back', c.back || 'ru-RU')}</label></div>`}
+    ${d ? '' : `<div class="row2"><label>Язык слов${langSel('imp-front', c.front || LANGS[curLang()].front)}</label><label>Язык перевода${langSel('imp-back', c.back || 'ru-RU')}</label></div>
+    <label>Уровень набора${levelSel('imp-level', c.level || '')}</label>`}
     <div id="imp-prev" class="imp-prev"></div>
     <button class="btn wide" data-act="imp-do">Импортировать</button>
   </div>`;
@@ -811,6 +829,8 @@ function readImportForm(c) {
   const f = $('select[name="imp-front"]'), b = $('select[name="imp-back"]');
   if (f) c.front = f.value;
   if (b) c.back = b.value;
+  const lv = $('select[name="imp-level"]');
+  if (lv) c.level = lv.value;
 }
 function updateImportPreview(c) {
   readImportForm(c);
@@ -1301,6 +1321,13 @@ function startMode(mode, deckId, cardsOverride) {
     case 'test': return go('testsetup', { deck: deckId, ids: cardsOverride ? cards.map(c => c.id) : null });
     case 'match': return startMatchGame(d, cards);
     case 'sprint': return startSprint(d, cards);
+    case 'cloze': {
+      const ok = cards.filter(c => clozeOf(c));
+      if (!ok.length) { toast('В этом наборе нет примеров с пропуском слова'); return; }
+      return startQueueMode(d, ok, 'cloze', 'Пропуски', again);
+    }
+    case 'gravity': return startGravity(d, cards);
+    case 'audio': return startAudio(d, cards);
   }
 }
 
@@ -1361,7 +1388,7 @@ function startQueueMode(d, cards, type, title, again) {
     onOverride(ex) { const i = retry.lastIndexOf(ex.c); if (i >= 0) retry.splice(i, 1); done++; },
     progress() { return done / total; },
     counter() { return `${done}/${total}`; },
-    finish() { return { title: `${title}: готово!`, emoji: type === 'dict' ? '🎧' : type === 'scramble' ? '🔤' : '✍️' }; },
+    finish() { return { title: `${title}: готово!`, emoji: type === 'dict' ? '👂' : type === 'scramble' ? '🔤' : type === 'cloze' ? '🧷' : '✍️' }; },
   });
 }
 
@@ -1433,6 +1460,7 @@ screens.review = () => {
     <div class="run-top"><button class="ib" data-act="back" aria-label="Выйти">${I.close}</button>
       <div class="pbar"><i style="width:${R.done / (R.done + R.queue.length) * 100}%"></i></div><div class="run-cnt">${R.queue.length}</div></div>
     <div class="ex">
+      <div class="fl-tools">${dirChip(cardIdx.get(id)?.d.lang)}</div>
       <div class="ex-lbl">${R.fresh.has(id) ? '🆕 Новое слово' : `Повторение · ${LEVELS[level(id)]}`}</div>
       <div class="rv card ${R.shown ? 'open' : ''}">
         <div class="ex-q">${esc(x.q)} ${spkBtn(x.q, x.ql)}</div>
@@ -1494,6 +1522,7 @@ screens.flash = () => {
     <div class="fl-tools">
       <button class="chip ${F.shuffled ? 'on' : ''}" data-act="fl-shuffle">${I.shuffle} Перемешать</button>
       <button class="chip ${F.auto ? 'on' : ''}" data-act="fl-auto">${F.auto ? I.pause : I.play} Авто</button>
+      ${dirChip(getDeck(F.deckId)?.lang)}
     </div>
     <div class="fc-wrap"><div class="fc ${F.flip ? 'flip' : ''}" id="fc" data-act="fl-flip">
       <div class="fc-face fc-front">
@@ -1698,6 +1727,172 @@ function spAnswer(v) {
   spNext();
   render(true);
   setTimeout(() => { if (SP) SP.flash = ''; const el = $('.sprint'); if (el) el.classList.remove('fl-ok', 'fl-no'); }, 250);
+}
+
+/* ───────────────────────── Гравитация ─────────────────────────
+ * Слово падает сверху. Нужно успеть написать ответ, пока оно не коснулось земли.
+ * С каждым верным ответом слова падают быстрее. Три жизни. */
+let GV = null;
+function startGravity(d, cards) {
+  if (cards.length < 2) { toast('Нужно хотя бы 2 карточки'); return; }
+  GV = { deckId: d.id, cards: shuffle(cards), k: 0, lives: 3, score: 0, ok: 0, mist: [], fall: 15000, over: false, miss: false };
+  gvNext();
+  go('gravity');
+}
+function gvNext() {
+  if (GV.k >= GV.cards.length) { GV.cards = shuffle(GV.cards); GV.k = 0; }
+  const c = GV.cards[GV.k++];
+  GV.cur = { c, ...qa(c, db.settings.dir), t0: now(), dur: GV.fall };
+  GV.miss = false;
+}
+screens.gravity = () => {
+  if (!GV) return '';
+  const best = db.best['gravity:' + GV.deckId] || 0;
+  if (GV.over) {
+    return `${hdr('Гравитация')}<div class="pad done"><div class="big-emoji pop">🌠</div><h1 class="center">${GV.score} очков</h1>
+      <p class="center desc">${GV.newBest ? '🏅 Новый рекорд!' : best ? `Рекорд: ${best}` : ''}</p>
+      <div class="stats3"><div><b class="good-t">${GV.ok}</b><span>верно</span></div><div><b class="bad-t">${GV.mist.length}</b><span>упало</span></div><div><b>${(GV.fall / 1000).toFixed(1)} с</b><span>скорость</span></div></div>
+      ${GV.mist.length ? `<h2 class="sec">Повторите</h2>${[...new Set(GV.mist)].map(c => cardRow(c)).join('')}` : ''}
+      <div class="done-btns"><button class="btn wide" data-act="gv-again">Ещё раз</button><button class="btn ghost wide" data-act="back">Готово</button></div></div>`;
+  }
+  const x = GV.cur;
+  return `<div class="run gv">
+    <div class="run-top"><button class="ib" data-act="back" aria-label="Выйти">${I.close}</button>
+      <div class="gv-lives">${'❤️'.repeat(GV.lives)}${'🤍'.repeat(3 - GV.lives)}</div><div class="run-cnt">${GV.score}</div></div>
+    <div class="gv-sky">
+      ${GV.miss ? `<div class="gv-miss card pop"><div class="hint">Слово упало. Правильно:</div><div class="ex-q">${esc(x.q)}</div><div class="ex-q alt">${esc(x.a)}</div></div>`
+        : `<div class="gv-word" id="gv-word">${esc(x.q)}</div>`}
+    </div>
+    <div class="gv-in"><input class="ans" id="gv-ans" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${x.dir === 'td' ? 'Перевод' : 'Слово'}" data-enter="gv-check" ${GV.miss ? 'disabled' : ''}><button class="btn" data-act="gv-check">OK</button></div>
+  </div>`;
+};
+after.gravity = () => {
+  if (!GV || GV.over || GV.miss) return;
+  const inp = $('#gv-ans');
+  if (inp) inp.focus();
+  const w = $('#gv-word');
+  const tick = () => {
+    if (!GV || GV.over || GV.miss || cur().name !== 'gravity') return;
+    const p = Math.min(1, (now() - GV.cur.t0) / GV.cur.dur);
+    if (w) { w.style.top = `calc(${(p * 100).toFixed(2)}% - ${(p * 64).toFixed(1)}px)`; w.classList.toggle('low', p > 0.75); }
+    if (p >= 1) gvMiss();
+  };
+  tick();
+  setTick(tick, 40);
+};
+function gvMiss() {
+  clearInterval(tickT);
+  const x = GV.cur;
+  GV.lives--; GV.mist.push(x.c); GV.miss = true;
+  practice(x.c.id, false);
+  beep(false); vibrate(60);
+  speak(x.c.t, langsOf(x.c).fl);
+  render(true);
+  setTimeout(() => {
+    if (!GV || GV.cur !== x || cur().name !== 'gravity') return;
+    if (GV.lives <= 0) gvOver(); else { gvNext(); render(true); }
+  }, 2400);
+}
+function gvOver() {
+  GV.over = true;
+  clearInterval(tickT);
+  const k = 'gravity:' + GV.deckId;
+  if (GV.score > (db.best[k] || 0)) { GV.newBest = !!db.best[k]; db.best[k] = GV.score; }
+  saveSoon();
+  render();
+}
+function gvCheck() {
+  if (!GV || GV.over || GV.miss) return;
+  const inp = $('#gv-ans');
+  const v = inp ? inp.value : '';
+  if (!v.trim()) return;
+  const x = GV.cur;
+  if (checkAnswer(v, x.a).ok) {
+    const left = 1 - (now() - x.t0) / x.dur;
+    GV.ok++;
+    GV.score += 10 + Math.max(0, Math.round(10 * left));
+    GV.fall = Math.max(5000, GV.fall - 450);
+    practice(x.c.id, true);
+    addXp(3);
+    beep(true);
+    gvNext();
+    render(true);
+  } else {
+    beep(false);
+    inp.value = '';
+    inp.classList.add('bad');
+    setTimeout(() => inp.classList.remove('bad'), 350);
+  }
+}
+
+/* ───────────────────────── Аудиоплеер ─────────────────────────
+ * Пассивное повторение: слово → пауза, чтобы вспомнить → перевод → слово ещё раз → пример. */
+let AU = null;
+function startAudio(d, cards) {
+  AU = { deckId: d.id, title: d.title, cards: shuffle(cards), i: 0, step: 0, play: true, ex: true, tok: 0 };
+  go('audio');
+  auRun();
+}
+const auDur = t => 700 + speechText(t).length * 80 / db.settings.rate;
+function auSteps(c) {
+  const { fl, bl } = langsOf(c);
+  const rev = db.settings.dir === 'dt';
+  const st = rev ? [[c.d, bl, 2400], [c.t, fl, 700], [c.t, fl, 900]] : [[c.t, fl, 2400], [c.d, bl, 700], [c.t, fl, 900]];
+  if (AU.ex && c.ex) st.push([c.ex, fl, 900]);
+  return st;
+}
+function auRun() {
+  if (!AU) return;
+  const tok = ++AU.tok;
+  const run = () => {
+    if (!AU || AU.tok !== tok || !AU.play) return;
+    if (cur().name !== 'audio') { AU.play = false; return; }
+    const c = AU.cards[AU.i];
+    const steps = auSteps(c);
+    if (AU.step >= steps.length) {
+      AU.i = (AU.i + 1) % AU.cards.length;
+      AU.step = 0;
+      render(true);
+      setTimeout(run, 600);
+      return;
+    }
+    const [text, lang, pause] = steps[AU.step++];
+    speak(text, lang);
+    render(true);
+    setTimeout(run, auDur(text) + pause);
+  };
+  run();
+}
+screens.audio = () => {
+  if (!AU) return '';
+  const c = AU.cards[AU.i];
+  const x = qa(c, db.settings.dir === 'dt' ? 'dt' : 'td');
+  const shown = AU.step >= 2;
+  return `<div class="run au">
+    <div class="run-top"><button class="ib" data-act="back" aria-label="Выйти">${I.close}</button>
+      <div class="pbar"><i style="width:${(AU.i + 1) / AU.cards.length * 100}%"></i></div><div class="run-cnt">${AU.i + 1}/${AU.cards.length}</div></div>
+    <div class="fl-tools">${dirChip(getDeck(AU.deckId)?.lang)}<button class="chip ${AU.ex ? 'on' : ''}" data-act="au-ex">Примеры</button></div>
+    <div class="ex">
+      <div class="card au-card">
+        <button class="ib star ${c.star ? 'on' : ''}" data-act="star" data-id="${esc(c.id)}" aria-label="Избранное">${I.star}</button>
+        <div class="ex-q">${esc(x.q)}</div>
+        <div class="ex-q alt ${shown ? '' : 'au-hide'}">${shown ? esc(x.a) : '…'}</div>
+        ${shown && AU.ex && c.ex ? `<div class="ex-line">${esc(c.ex)}<br><span>${esc(c.exT)}</span></div>` : ''}
+      </div>
+      <p class="hint center">Попробуйте вспомнить перевод в паузе, пока он не прозвучал. Не выключайте экран — иначе телефон остановит озвучку.</p>
+    </div>
+    <div class="au-ctl">
+      <button class="ib" data-act="au-prev" aria-label="Назад">⏮</button>
+      <button class="au-play" data-act="au-toggle" aria-label="${AU.play ? 'Пауза' : 'Играть'}">${AU.play ? I.pause : I.play}</button>
+      <button class="ib" data-act="au-next" aria-label="Дальше">⏭</button>
+    </div>
+  </div>`;
+};
+function auJump(n) {
+  AU.i = (AU.i + n + AU.cards.length) % AU.cards.length;
+  AU.step = 0;
+  if (window.speechSynthesis) try { speechSynthesis.cancel(); } catch (e) {}
+  if (AU.play) auRun(); else render(true);
 }
 
 /* ───────────────────────── Тест ───────────────────────── */
@@ -1996,7 +2191,18 @@ const A = {
     db.settings[k] = v;
     saveSoon();
     if (k === 'theme') applyTheme();
-    if (F && k === 'dir') F.qa = F.cards.map(c => qa(c, v));
+    if (F && k === 'dir') { F.dir = v; F.qa = F.cards.map(c => qa(c, v)); }
+    render(true);
+  },
+  'dir-cycle': el => {
+    const v = DIR_ORDER[(DIR_ORDER.indexOf(db.settings.dir) + 1) % DIR_ORDER.length];
+    db.settings.dir = v;
+    saveSoon();
+    const name = cur().name;
+    if (name === 'flash' && F) { F.dir = v; F.qa = F.cards.map(c => qa(c, v)); F.flip = false; }
+    if (name === 'audio' && AU) AU.step = 0;
+    if (name === 'review' && R && R.queue.length) { R.dir = v; R.qa = qa(cardIdx.get(R.queue[0]).c, v); R.shown = false; }
+    toast(dirLabels(el.dataset.l || undefined)[v][1]);
     render(true);
   },
   'set-active': el => { setActive(el.dataset.id); closeModal(); render(); },
@@ -2078,7 +2284,7 @@ const A = {
     let d = c.deck ? deckById(c.deck) : null;
     if (!d) {
       const front = c.front || LANGS[curLang()].front;
-      d = { id: 'u' + uid(), title: (c.title || '').trim() || 'Мой набор', emoji: '📘', desc: '', front, back: c.back || 'ru-RU', lang: langOfCode(front), created: now(), cards: [] };
+      d = { id: 'u' + uid(), title: (c.title || '').trim() || 'Мой набор', emoji: '📘', desc: '', level: c.level || '', front, back: c.back || 'ru-RU', lang: langOfCode(front), created: now(), cards: [] };
       db.decks.unshift(d);
       rebuild();
       d = deckById(d.id);
@@ -2190,6 +2396,12 @@ const A = {
   'mg-tap': el => mgTap(Number(el.dataset.i)),
   'mg-again': () => { const d = getDeck(MG.deckId) || { id: MG.deckId, cards: MG.cards }; const cards = MG.cards; stack.pop(); startMatchGame(d, cards); },
   'sp-ans': el => spAnswer(el.dataset.v === '1'),
+  'gv-check': () => gvCheck(),
+  'gv-again': () => { const d = getDeck(GV.deckId) || { id: GV.deckId }; const cards = GV.cards; stack.pop(); startGravity(d, cards); },
+  'au-toggle': () => { AU.play = !AU.play; if (AU.play) { if (AU.step >= auSteps(AU.cards[AU.i]).length) AU.step = 0; auRun(); } else { AU.tok++; if (window.speechSynthesis) try { speechSynthesis.cancel(); } catch (e) {} render(true); } },
+  'au-next': () => auJump(1),
+  'au-prev': () => auJump(-1),
+  'au-ex': () => { AU.ex = !AU.ex; render(true); },
   'sp-again': () => { const d = getDeck(SP.deckId) || { id: SP.deckId }; const cards = SP.cards; stack.pop(); startSprint(d, cards); },
   // тест
   't-start': () => buildTest(cur()),
@@ -2279,6 +2491,7 @@ document.addEventListener('submit', e => {
     let d = f.dataset.id && deckById(f.dataset.id);
     const isNew = !d;
     const fields = { title: v('title') || 'Мой набор', emoji: v('emoji') || '📘', desc: v('desc'), front: v('front'), back: v('back') };
+    if (f.elements.level) fields.level = v('level');
     if (!d) { d = { id: 'u' + uid(), created: now(), cards: [], ...fields, lang: langOfCode(fields.front) }; db.decks.unshift(d); }
     else { if (!d.builtin) fields.lang = langOfCode(fields.front); editDeck(d, fields); }
     if (d.lang !== curLang()) db.settings.lang = d.lang;
@@ -2338,5 +2551,5 @@ save();
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
-window.__mnemo = { get db() { return db; }, get decks() { return DECKS; }, get S() { return S; }, get R() { return R; }, checkAnswer, parseImport, lessonNodes, buildLesson, clozeOf, nextState };
+window.__mnemo = { get db() { return db; }, get decks() { return DECKS; }, get S() { return S; }, get R() { return R; }, get GV() { return GV; }, get AU() { return AU; }, checkAnswer, parseImport, lessonNodes, buildLesson, clozeOf, nextState };
 })();

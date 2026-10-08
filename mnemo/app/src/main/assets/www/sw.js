@@ -4,7 +4,7 @@
  * так обновления подхватываются сразу, а без интернета всё продолжает работать.
  * Внутри APK service worker не регистрируется (страница открыта с file://).
  */
-const CACHE = 'mnemo-v2';
+const CACHE = 'mnemo-v3';
 const SHELL = ['./', 'index.html', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 
 // Всё, что подключает index.html (скрипты со словарями, стили), кэшируется

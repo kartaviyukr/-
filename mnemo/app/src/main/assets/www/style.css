@@ -439,3 +439,27 @@ kbd { display: none; }
 .pick-lv { color: var(--tx3); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: .5px; margin: 14px 2px 8px; }
 .mrow.on { border: 2px solid var(--ac); }
 button.path-head { width: 100%; text-align: left; }
+
+/* Направление */
+.dirseg button { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 7px 4px; }
+.dirseg button b { font-size: 16px; letter-spacing: 1px; }
+.dirseg button small { font-size: 11.5px; font-weight: 700; }
+.dirchip { font-weight: 800; }
+
+/* Гравитация */
+.gv-lives { flex: 1; text-align: center; font-size: 18px; letter-spacing: 2px; }
+.gv-sky { flex: 1; position: relative; min-height: 220px; margin: 0 16px; border-bottom: 3px dashed var(--line); overflow: hidden; }
+.gv-word { position: absolute; left: 50%; top: 0; transform: translateX(-50%); max-width: 92%; background: var(--card); border: 2px solid var(--ac); color: var(--tx); border-radius: 16px; padding: 12px 18px; font-size: 21px; font-weight: 800; text-align: center; box-shadow: var(--sh); transition: border-color .3s; }
+.gv-word.low { border-color: var(--bad); }
+.gv-miss { position: absolute; left: 0; right: 0; top: 20%; text-align: center; padding: 18px; }
+.gv-in { display: flex; gap: 8px; padding: 12px 16px 18px; }
+.gv-in .ans { flex: 1; margin: 0; }
+
+/* Аудиоплеер */
+.au-card { position: relative; text-align: center; padding: 34px 16px; margin-top: 10px; }
+.au-card .star { position: absolute; top: 8px; right: 8px; }
+.au-hide { color: var(--tx3); }
+.au-ctl { display: flex; justify-content: center; align-items: center; gap: 28px; padding: 14px 0 26px; }
+.au-ctl .ib { font-size: 24px; }
+.au-play { width: 72px; height: 72px; border-radius: 50%; background: var(--ac); color: #fff; display: grid; place-items: center; box-shadow: var(--sh); }
+.au-play svg { width: 30px; height: 30px; }
