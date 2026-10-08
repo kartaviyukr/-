@@ -2,6 +2,43 @@
 /* Казна — финансовое планирование Планёра.
    Подключается до app.js; функции используют общие помощники из app.js во время вызова. */
 
+// Шаблон автораспределения дохода (в %), собран по правилу 50/30/20.
+const DEF_PCT = {
+  c_home: 25, c_food: 13, c_trans: 5, c_health: 3, c_comm: 2, c_debt: 2,
+  c_cafe: 7, c_fun: 6, c_cloth: 6, c_gift: 3, c_travel: 5, c_other: 3,
+  c_save: 20,
+};
+// Встроенный словарь для автоопределения категории по комментарию.
+const AUTO_KW = [
+  ['c_food', ['пятёрочк', 'пятерочк', 'магнит', 'перекрёст', 'перекрест', 'вкусвил', 'лента', 'ашан', 'дикси', 'метро кэш', 'окей', 'спар', 'азбука вкуса', 'самокат', 'продукт', 'супермаркет', 'рынок', 'хлеб', 'молоко', 'мясо', 'овощ', 'фрукт', 'бакалея', 'светофор', 'fix price', 'фикс прайс']],
+  ['c_cafe', ['кафе', 'ресторан', 'кофе', 'кофейн', 'бар', 'пицц', 'суши', 'роллы', 'макдон', 'вкусно и точка', 'kfc', 'ростикс', 'бургер', 'шаурм', 'столов', 'обед', 'ужин', 'завтрак', 'доставка еды', 'яндекс еда', 'delivery']],
+  ['c_trans', ['такси', 'яндекс go', 'uber', 'метро', 'автобус', 'трамва', 'троллейб', 'электрич', 'проезд', 'транспорт', 'бензин', 'азс', 'заправк', 'лукойл', 'газпромнефть', 'роснефть', 'парковк', 'каршеринг', 'делимобиль', 'ситидрайв', 'тройка', 'мойка']],
+  ['c_health', ['аптек', 'лекарств', 'врач', 'клиник', 'стоматол', 'анализ', 'больниц', 'витамин', 'массаж', 'медицин', 'здоров']],
+  ['c_comm', ['мтс', 'билайн', 'мегафон', 'теле2', 'tele2', 'йота', 'yota', 'связь', 'интернет', 'ростелеком', 'мобильн', 'телефон счет']],
+  ['c_home', ['аренда', 'квартплат', 'жкх', 'коммунал', 'свет', 'электроэнерг', 'газ ', 'вода', 'ипотек', 'ремонт', 'хозтовар', 'леруа', 'икеа', 'ikea', 'мебел', 'управляющ']],
+  ['c_fun', ['кино', 'театр', 'концерт', 'музей', 'выставк', 'игр', 'steam', 'боулинг', 'квест', 'книг', 'подписк', 'кинопоиск', 'иви', 'okko', 'netflix', 'spotify', 'музык', 'хобби', 'фитнес', 'спортзал', 'бассейн']],
+  ['c_cloth', ['одежд', 'обувь', 'кроссовк', 'куртк', 'джинс', 'плать', 'zara', 'h&m', 'uniqlo', 'спортмастер', 'lamoda', 'ламода', 'gloria', 'глория']],
+  ['c_gift', ['подарок', 'подарк', 'цвет', 'букет', 'день рожд', 'сувенир']],
+  ['c_travel', ['отель', 'гостиниц', 'авиабилет', 'билет на самол', 'поезд', 'ржд', 'аэрофлот', 'путешеств', 'отпуск', 'тур ', 'booking', 'airbnb', 'туту']],
+  ['c_debt', ['кредит', 'займ', 'долг', 'рассрочк', 'кредитк']],
+  ['c_other', ['wildberries', 'вайлдберриз', 'озон', 'ozon', 'маркетплейс', 'aliexpress', 'алиэкспресс']],
+];
+const normNote = t => ' ' + String(t || '').toLowerCase().replace(/ё/g, 'е').replace(/[^a-zа-я0-9&\s]/g, ' ').replace(/\s+/g, ' ').trim() + ' ';
+const ruleKey = t => normNote(t).trim().split(' ')[0] || '';
+// Угадывает категорию: сначала по выученным правилам, затем по словарю.
+function guessCat(note) {
+  const n = normNote(note);
+  if (n.trim().length < 3) return null;
+  const has = id => F().cats.some(c => c.id === id);
+  const rules = F().rules || {};
+  for (const w of n.trim().split(' ')) if (rules[w] && has(rules[w])) return rules[w];
+  for (const [id, kws] of AUTO_KW) {
+    if (!has(id)) continue;
+    for (const k of kws) if (n.includes(k.replace(/ё/g, 'е'))) return id;
+  }
+  return null;
+}
+
 const FIN_DEF = () => ({
   currency: '₽',
   payself: 10,
@@ -28,6 +65,9 @@ const FIN_DEF = () => ({
   debts: [],
   bills: [],
   wishes: [],
+  autoSplit: true,
+  pct: { ...DEF_PCT },
+  rules: {},
 });
 
 const BUCKETS = {
@@ -47,7 +87,16 @@ const money = (n, sign = false) => {
 };
 const catOf = id => F().cats.find(c => c.id === id) || { id, icon: '❔', name: 'Без категории', bucket: 'want', limit: 0 };
 const saveCat = () => F().cats.find(c => c.id === 'c_save') || F().cats.find(c => c.bucket === 'save');
-const fmonth = mk => def(F().months[mk] || (F().months[mk] = {}), { income: [], paid: {} });
+const fmonth = mk => def(F().months[mk] || (F().months[mk] = {}), { income: [], paid: {}, plan: {} });
+const monthIncome = mk => { const m = F().months[mk]; return m ? m.income.reduce((s, x) => s + num(x.a), 0) : 0; };
+// Сумма, выделенная категории в месяце: ручная правка, иначе доля дохода по шаблону, иначе старый лимит.
+function planOf(mk, c) {
+  const m = F().months[mk];
+  if (m && m.plan && m.plan[c.id] != null && m.plan[c.id] !== '') return num(m.plan[c.id]);
+  if (F().autoSplit) return Math.round(monthIncome(mk) * num(F().pct[c.id]) / 100);
+  return num(c.limit);
+}
+const isManual = (mk, id) => { const m = F().months[mk]; return !!(m && m.plan && m.plan[id] != null && m.plan[id] !== ''); };
 const prevMk = mk => { const d = pd(mk + '-01'); return monthKey(new Date(d.getFullYear(), d.getMonth() - 1, 1)); };
 const moneyIn = (p, v, ph = '0', cls = '') =>
   `<input class="in ${cls}" inputmode="decimal" data-bind="${p}" data-num="1" data-rerender="1" value="${num(v) ? esc(v) : ''}" placeholder="${ph}" autocomplete="off">`;
@@ -98,6 +147,67 @@ function bars(rows) {
 }
 const fprog = (v, over = false) => `<div class="prog ${over ? 'over' : ''}"><i style="width:${Math.min(100, Math.round((v || 0) * 100))}%"></i></div>`;
 
+/* ---------------- Budget allocation ---------------- */
+function allocCard(mk, st) {
+  const fz = F(), inc = st.income, P = `fin.months.${mk}.plan`;
+  const cats = fz.cats;
+  const plans = Object.fromEntries(cats.map(c => [c.id, planOf(mk, c)]));
+  const alloc = cats.reduce((s, c) => s + plans[c.id], 0);
+  const free = inc - alloc;
+  const pctSum = cats.reduce((s, c) => s + num(fz.pct[c.id]), 0);
+  const groups = Object.entries(BUCKETS).map(([k, b]) => {
+    const cs = cats.filter(c => c.bucket === k);
+    if (!cs.length) return '';
+    const sum = cs.reduce((s, c) => s + plans[c.id], 0), target = inc * b.pct / 100;
+    return `<div class="ag"><div class="ag-h"><span><i style="background:${b.color}"></i>${b.name}</span><b>${money(sum)} <small>${inc ? Math.round(sum / inc * 100) + '% · цель ' + b.pct + '%' : ''}</small></b></div>
+      ${cs.map(c => {
+        const pl = plans[c.id], sp = st.byCat[c.id] || 0, man = isManual(mk, c.id);
+        const tag = man ? '✎ вручную' : fz.autoSplit && num(fz.pct[c.id]) ? `⚡ ${num(fz.pct[c.id])}%` : '';
+        return `<div class="arow"><span class="txi">${esc(c.icon)}</span>
+          <div class="txn">${esc(c.name)}<small>${tag}${tag && sp ? ' · ' : ''}${sp ? 'потрачено ' + money(sp) : ''}</small></div>
+          <input class="in famt ${man ? 'man' : ''}" inputmode="decimal" data-bind="${P}.${c.id}" data-num="1" data-rerender="1" value="${pl ? pl : ''}" placeholder="0" autocomplete="off">
+          ${man ? `<button class="x" data-act="planAuto" data-c="${c.id}" title="Вернуть авто">↺</button>` : '<span class="x"></span>'}</div>`;
+      }).join('')}</div>`;
+  }).join('');
+  const prevPlan = fz.months[prevMk(mk)];
+  return card('Распределение бюджета', '🧮',
+    `<p class="hint">Каждому рублю — своя задача: распредели доход месяца по категориям, пока «Свободно» не станет нулём. Суммы сразу становятся лимитами конвертов.</p>
+     <div class="fstats">
+       <div><span>Доход</span><b>${money(inc)}</b></div>
+       <div><span>Распределено</span><b>${money(alloc)}</b></div>
+       <div class="${free < 0 ? 'bad' : free > 0 ? 'free' : 'zero'}"><span>${free < 0 ? 'Перебор' : 'Свободно'}</span><b>${money(Math.abs(free))}</b></div>
+     </div>
+     ${fprog(inc ? alloc / inc : 0, free < 0)}
+     <button class="switch ${fz.autoSplit ? 'on' : ''}" data-act="autoSplit"><i></i><span><b>Автораспределение дохода</b><small>${fz.autoSplit ? 'Каждый доход сам делится по шаблону процентов' : 'Выключено — суммы задаются вручную'}</small></span></button>
+     <div class="achips">
+       <button class="mini" data-act="planTpl">⚡ По шаблону</button>
+       <button class="mini" data-act="planHist">📊 По прошлым тратам</button>
+       ${prevPlan ? '<button class="mini" data-act="planPrev">↺ Как в прошлом месяце</button>' : ''}
+       ${free > 0 && inc ? '<button class="mini" data-act="planRest">💰 Свободное → в накопления</button>' : ''}
+       <button class="mini" data-act="planZero">🧹 Обнулить</button>
+     </div>
+     ${inc ? '' : '<div class="empty-note">Добавь доходы месяца — и бюджет распределится автоматически</div>'}
+     ${groups}
+     <details class="fdet" ${U.pctOpen ? 'open' : ''}><summary data-act="pctOpen">Шаблон процентов</summary>
+       <p class="hint" style="margin-top:8px">Какую долю каждого дохода отдавать категории. Сумма должна быть 100%.</p>
+       ${cats.map(c => `<div class="arow"><span class="txi">${esc(c.icon)}</span><div class="txn">${esc(c.name)}</div><input class="in famt" inputmode="decimal" data-bind="fin.pct.${c.id}" data-num="1" data-rerender="1" value="${num(fz.pct[c.id]) || ''}" placeholder="0" autocomplete="off"><span class="pctsign">%</span></div>`).join('')}
+       <div class="pcttot ${Math.round(pctSum) === 100 ? 'ok' : 'bad'}">Итого: ${Math.round(pctSum * 10) / 10}% ${Math.round(pctSum) === 100 ? '✓' : pctSum > 100 ? '— больше 100%' : '— не распределено ' + Math.round((100 - pctSum) * 10) / 10 + '%'}</div>
+       <div class="achips"><button class="mini" data-act="pctDef">Шаблон 50/30/20</button><button class="mini" data-act="pctHist">По прошлым тратам</button></div>
+     </details>`, inc ? `${Math.round(alloc / inc * 100)}%` : '');
+}
+
+// Shares of spending per category over the 3 months before mk.
+function histShares(mk) {
+  const sums = {}; let total = 0;
+  let k = mk;
+  for (let i = 0; i < 3; i++) {
+    k = prevMk(k);
+    const st = finStats(k);
+    for (const [id, v] of Object.entries(st.byCat)) { sums[id] = (sums[id] || 0) + v; total += v; }
+  }
+  return total ? Object.fromEntries(Object.entries(sums).map(([id, v]) => [id, v / total])) : null;
+}
+
 /* ---------------- Views ---------------- */
 function viewFin() {
   const sec = U.fsec || 'budget';
@@ -127,7 +237,8 @@ const FIN_VIEWS = {
     h += card('Записать расход', '🪙',
       `<input class="in fin-amt add-in" id="fAmt" data-addp="__fin" data-fact="fAdd" inputmode="decimal" placeholder="0 ${esc(F().currency)}" autocomplete="off">
        <div class="fcats">${F().cats.map(c => `<button class="fc ${c.id === sel ? 'on' : ''}" data-act="fcat" data-c="${c.id}">${esc(c.icon)}<span>${esc(c.name)}</span></button>`).join('')}</div>
-       <div class="row" style="margin-top:8px"><input class="in" id="fNote" placeholder="Комментарий" autocomplete="off"><input class="in" id="fDate" type="date" value="${defDate}" style="flex:none;width:150px"></div>
+       <div class="row" style="margin-top:8px"><input class="in" id="fNote" placeholder="Комментарий: «Пятёрочка», «такси»…" autocomplete="off"><input class="in" id="fDate" type="date" value="${defDate}" style="flex:none;width:150px"></div>
+       <div id="fGuess" class="fguess"></div>
        <button class="btn wide" data-act="fAdd">Записать</button>`);
 
     // Income
@@ -137,6 +248,9 @@ const FIN_VIEWS = {
        <div class="addrow"><input class="in" id="iSrc" placeholder="Зарплата, фриланс…" autocomplete="off"><input class="in" id="iAmt" inputmode="decimal" placeholder="Сумма" style="flex:none;width:110px" autocomplete="off"><button class="btn" data-act="incAdd">＋</button></div>
        ${!fm.income.length && prev && prev.income.length ? '<button class="btn ghost wide" data-act="incCopy">Как в прошлом месяце</button>' : ''}`,
       money(st.income));
+
+    // Allocation (zero-based budget)
+    h += allocCard(mk, st);
 
     // 50/30/20
     h += card('Правило 50 / 30 / 20', '⚖️',
@@ -157,20 +271,24 @@ const FIN_VIEWS = {
        ${target > st.saved ? `<button class="btn ghost wide" data-act="fPayDo" data-v="${Math.round((target - st.saved) * 100) / 100}">Отложить ${money(target - st.saved)}</button>` : st.income ? '<div class="empty-note">👑 Себе заплачено. Так держать!</div>' : ''}`);
 
     // Envelopes
-    const env = F().cats.filter(c => c.bucket !== 'save' && (num(c.limit) > 0 || st.byCat[c.id]));
+    const env = F().cats.filter(c => c.bucket !== 'save' && (planOf(mk, c) > 0 || st.byCat[c.id]));
     h += card('Конверты', '✉️',
-      `<p class="hint">Метод конвертов: у каждой категории свой лимит на месяц. Конверт пуст — траты в нём заканчиваются.</p>
+      `<p class="hint">Метод конвертов: в каждом конверте — сумма из распределения бюджета. Конверт пуст — траты в нём заканчиваются.</p>
        ${env.map(c => {
-         const sp = st.byCat[c.id] || 0, lim = num(c.limit), over = lim > 0 && sp > lim;
+         const sp = st.byCat[c.id] || 0, lim = planOf(mk, c), over = lim > 0 && sp > lim;
          return `<div class="bk"><div class="bk-t"><span>${esc(c.icon)} ${esc(c.name)}</span><b class="${over ? 'neg' : ''}">${money(sp)}${lim ? ` <small>из ${money(lim)}</small>` : ''}</b></div>
            ${lim ? fprog(sp / lim, over) + `<div class="bk-n">${over ? 'Перерасход ' + money(sp - lim) : 'Осталось ' + money(lim - sp)}</div>` : '<div class="bk-n">Лимит не задан</div>'}</div>`;
-       }).join('') || '<div class="empty-note">Задай лимиты категорий ниже</div>'}
-       <details class="fdet" ${U.catOpen ? 'open' : ''}><summary data-act="catOpen">Настроить категории и лимиты</summary>
+       }).join('') || '<div class="empty-note">Распредели бюджет по категориям выше</div>'}
+       <details class="fdet" ${U.catOpen ? 'open' : ''}><summary data-act="catOpen">Настроить категории</summary>
          ${F().cats.map((c, i) => `<div class="catrow"><input class="in ci-in" data-bind="fin.cats.${i}.icon" value="${esc(c.icon)}">${inp(`fin.cats.${i}.name`, c.name, '', 'flat')}
            <select class="in" data-bind="fin.cats.${i}.bucket">${Object.entries(BUCKETS).map(([k, b]) => `<option value="${k}" ${c.bucket === k ? 'selected' : ''}>${b.name}</option>`).join('')}</select>
-           ${c.bucket === 'save' ? '<span></span>' : moneyIn(`fin.cats.${i}.limit`, c.limit, 'лимит', 'famt')}
            <button class="x" data-act="catDel" data-i="${i}">×</button></div>`).join('')}
          <div class="addrow"><input class="in" id="cIcon" style="width:56px;flex:none;text-align:center" placeholder="🏷️"><input class="in" id="cName" placeholder="Новая категория" autocomplete="off"><button class="btn" data-act="catAdd">＋</button></div>
+       </details>
+       <details class="fdet" ${U.rulesOpen ? 'open' : ''}><summary data-act="rulesOpen">Автокатегории 🪄</summary>
+         <p class="hint" style="margin-top:8px">Категория расхода выбирается сама по комментарию: «Пятёрочка» → Продукты, «такси» → Транспорт. Встроено более ${Math.floor(AUTO_KW.reduce((s, x) => s + x[1].length, 0) / 10) * 10} слов, а твои выборы Планёр запоминает.</p>
+         ${Object.entries(F().rules).map(([w, id]) => `<div class="tx"><span class="txi">${esc(catOf(id).icon)}</span><div class="txn">«${esc(w)}»<small>→ ${esc(catOf(id).name)}</small></div><button class="x" data-act="ruleDel" data-w="${esc(w)}">×</button></div>`).join('') || '<div class="empty-note">Своих правил пока нет — они появятся сами</div>'}
+         <div class="row" style="margin-top:8px"><input class="in" id="rWord" placeholder="Слово: «лента», «спортзал»" autocomplete="off"><select class="in" id="rCat" style="flex:none;width:130px">${F().cats.map(c => `<option value="${c.id}">${esc(c.icon)} ${esc(c.name)}</option>`).join('')}</select><button class="btn" data-act="ruleAdd">＋</button></div>
        </details>`);
 
     // Structure donut
@@ -356,14 +474,80 @@ const FA = {
   catOpen: () => { U.catOpen = !U.catOpen; },
   fQuick: () => go({ tab: 'fin', fsec: 'budget', cur: today() }),
   fGoMonth: ds => go({ fsec: 'budget', cur: ds.k + '-01' }),
+  pctOpen: () => { U.pctOpen = !U.pctOpen; },
+  rulesOpen: () => { U.rulesOpen = !U.rulesOpen; },
+  autoSplit() { F().autoSplit = !F().autoSplit; render(); },
+  planAuto(ds) { const m = fmonth(monthKey(pd(U.cur))); delete m.plan[ds.c]; render(); },
+  planTpl() { fmonth(monthKey(pd(U.cur))).plan = {}; F().autoSplit = true; toast('⚡ Доход распределён по шаблону'); render(); },
+  planHist() {
+    const mk = monthKey(pd(U.cur)), sh = histShares(mk), inc = monthIncome(mk);
+    if (!sh) { toast('Нет трат за прошлые 3 месяца'); return; }
+    if (!inc) { toast('Сначала добавь доходы месяца'); return; }
+    // Savings keep their template share; the rest follows past spending.
+    const plan = {}, savePct = F().cats.filter(c => c.bucket === 'save').reduce((s, c) => s + num(F().pct[c.id]), 0);
+    const spendShare = Object.entries(sh).filter(([id]) => catOf(id).bucket !== 'save').reduce((s, [, v]) => s + v, 0) || 1;
+    const rest = inc * (1 - Math.min(100, savePct) / 100);
+    for (const c of F().cats) plan[c.id] = c.bucket === 'save' ? Math.round(inc * num(F().pct[c.id]) / 100) : Math.round(rest * (sh[c.id] || 0) / spendShare);
+    fmonth(mk).plan = plan; toast('📊 Распределено по прошлым тратам'); render();
+  },
+  planPrev() {
+    const mk = monthKey(pd(U.cur)), pk = prevMk(mk), plan = {};
+    for (const c of F().cats) plan[c.id] = planOf(pk, c);
+    fmonth(mk).plan = plan; toast('Распределение как в прошлом месяце'); render();
+  },
+  planRest() {
+    const mk = monthKey(pd(U.cur)), c = saveCat(); if (!c) return;
+    const free = monthIncome(mk) - F().cats.reduce((s, x) => s + planOf(mk, x), 0);
+    if (free <= 0) return;
+    fmonth(mk).plan[c.id] = planOf(mk, c) + Math.round(free);
+    toast(`💰 В накопления: +${money(free)}`); render();
+  },
+  async planZero() {
+    if (!(await ask('Обнулить распределение?', 'Все суммы этого месяца станут нулевыми, чтобы распределить заново вручную.', 'Обнулить'))) return;
+    const plan = {}; for (const c of F().cats) plan[c.id] = 0;
+    fmonth(monthKey(pd(U.cur))).plan = plan; render();
+  },
+  pctDef() {
+    const p = {};
+    for (const c of F().cats) p[c.id] = DEF_PCT[c.id] || 0;
+    F().pct = p; toast('Шаблон 50/30/20'); render();
+  },
+  pctHist() {
+    const sh = histShares(monthKey(pd(U.cur)));
+    if (!sh) { toast('Нет трат за прошлые 3 месяца'); return; }
+    // Spending shares fill 80%; 20% stays reserved for savings.
+    const p = {}, sc = saveCat();
+    for (const c of F().cats) p[c.id] = c.bucket === 'save' ? 0 : Math.round((sh[c.id] || 0) * 800) / 10;
+    if (sc) p[sc.id] = 20;
+    F().pct = p; toast('Шаблон по прошлым тратам'); render();
+  },
+  ruleAdd() {
+    const w = ruleKey(val('#rWord')); if (w.length < 2) return;
+    F().rules[w] = val('#rCat'); render();
+  },
+  ruleDel(ds) { delete F().rules[ds.w]; render(); },
+  fGuess() {
+    const g = guessCat(val('#fNote')), box = $('#fGuess');
+    if (U.fcatManual || !g) { if (box && !U.fcatManual) box.textContent = ''; return; }
+    U.fcat = g; U.fcatAuto = true;
+    document.querySelectorAll('.fc').forEach(b => b.classList.toggle('on', b.dataset.c === g));
+    if (box) box.textContent = `🪄 Категория определена автоматически: ${catOf(g).icon} ${catOf(g).name}`;
+  },
   fcat(ds) {
+    U.fcatManual = true; U.fcatAuto = false;
+    const box = $('#fGuess'); if (box) box.textContent = '';
     U.fcat = ds.c;
     document.querySelectorAll('.fc').forEach(b => b.classList.toggle('on', b.dataset.c === ds.c));
   },
   fAdd() {
     const t = addTx(val('#fAmt'), U.fcat || 'c_food', val('#fNote'), val('#fDate') || today());
     if (!t) { toast('Введите сумму'); $('#fAmt').focus(); return; }
-    vibrate(20); toast(`Записано: ${money(t.amt)} · ${catOf(t.cat).name}`); render();
+    // Learn: a manually chosen category for this word wins next time.
+    const w = ruleKey(t.note);
+    if (w.length >= 3 && U.fcatManual && guessCat(t.note) !== t.cat) F().rules[w] = t.cat;
+    const auto = U.fcatAuto;
+    U.fcatManual = false; U.fcatAuto = false;
+    vibrate(20); toast(`${auto ? '🪄 ' : ''}Записано: ${money(t.amt)} · ${catOf(t.cat).name}`); render();
   },
   txDel(ds) {
     const fz = F(), i = fz.tx.findIndex(t => t.id === ds.id);
@@ -475,3 +659,5 @@ const FA = {
     F().bills.splice(+ds.i, 1); render();
   },
 };
+
+document.addEventListener('input', e => { if (e.target.id === 'fNote') FA.fGuess(); });
