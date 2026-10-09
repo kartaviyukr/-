@@ -22,6 +22,10 @@ var territories: Array[Dictionary] = []
 var edges: Array[Dictionary] = []
 var landmarks: Array[Dictionary] = []
 var errors: PackedStringArray = []
+## landmark_id -> entry of the optional landmarks.json (school mana, guardians, effects).
+var landmark_rules: Dictionary[String, Dictionary] = {}
+## Optional drawing hints from map.json: size, border, river, schematic.
+var view_hints: Dictionary = {}
 
 var _territory_index: Dictionary[String, int] = {}
 var _landmark_index: Dictionary[String, int] = {}
@@ -34,6 +38,11 @@ static func load_from_dir(dir: String) -> MapPack:
 	if pack_json is Dictionary and map_json is Dictionary:
 		pack._parse(pack_json, map_json)
 		pack._validate()
+	var lm_path: String = dir.path_join("landmarks.json")
+	if FileAccess.file_exists(lm_path):
+		var lm_json: Variant = _read_json(lm_path, pack.errors)
+		if lm_json is Dictionary:
+			pack._parse_landmark_rules(lm_json)
 	return pack
 
 
@@ -66,7 +75,36 @@ func neighbors(territory_id: String, edge_types: PackedStringArray = GROUND_EDGE
 	return result
 
 
+## Landmark id of a territory, or "" when it holds none.
+func landmark_in(territory_id: String) -> String:
+	for l: Dictionary in landmarks:
+		if l.territory == territory_id:
+			return str(l.id)
+	return ""
+
+
+func edge_type(a: String, b: String, edge_types: PackedStringArray = EDGE_TYPES) -> String:
+	for e: Dictionary in edges:
+		if edge_types.has(e.type) and ((e.a == a and e.b == b) or (e.a == b and e.b == a)):
+			return str(e.type)
+	return ""
+
+
+func _parse_landmark_rules(lm_json: Dictionary) -> void:
+	for entry: Variant in lm_json.get("landmarks", []):
+		if not entry is Dictionary:
+			continue
+		var lid: String = str(entry.get("id", ""))
+		if not _landmark_index.has(lid):
+			errors.append("landmarks.json: unknown landmark '%s'" % lid)
+			continue
+		landmark_rules[lid] = entry
+
+
 func _parse(pack_json: Dictionary, map_json: Dictionary) -> void:
+	for key: String in ["size", "border", "river", "schematic"]:
+		if map_json.has(key):
+			view_hints[key] = map_json[key]
 	for doc: Dictionary in [pack_json, map_json]:
 		if int(doc.get("format_version", -1)) != FORMAT_VERSION:
 			errors.append("unsupported format_version %s" % str(doc.get("format_version")))
