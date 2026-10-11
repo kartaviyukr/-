@@ -4,7 +4,8 @@
  * так обновления подхватываются сразу, а без интернета всё продолжает работать.
  * Внутри APK service worker не регистрируется (страница открыта с file://).
  */
-const CACHE = 'mnemo-v3';
+const CACHE = 'mnemo-v4';
+const PHOTOS = 'mnemo-photos';
 const SHELL = ['./', 'index.html', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 
 // Всё, что подключает index.html (скрипты со словарями, стили), кэшируется
@@ -25,13 +26,25 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil((async () => {
     const names = await caches.keys();
-    await Promise.all(names.filter(n => n !== CACHE).map(n => caches.delete(n)));
+    await Promise.all(names.filter(n => n !== CACHE && n !== PHOTOS).map(n => caches.delete(n)));
     await self.clients.claim();
   })());
 });
 
 self.addEventListener('fetch', event => {
   const { request } = event;
+  // Фото городов из Википедии: один раз скачали — дальше показываем из кэша, в том числе без сети.
+  if (request.method === 'GET' && request.destination === 'image' && /(^|\.)wiki(media|pedia)\.org$/.test(new URL(request.url).hostname)) {
+    event.respondWith((async () => {
+      const cache = await caches.open(PHOTOS);
+      const hit = await cache.match(request);
+      if (hit) return hit;
+      const response = await fetch(request);
+      if (response && (response.ok || response.type === 'opaque')) cache.put(request, response.clone());
+      return response;
+    })());
+    return;
+  }
   if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) return;
   event.respondWith((async () => {
     try {
