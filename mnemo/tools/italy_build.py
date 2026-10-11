@@ -70,7 +70,7 @@ for geo in t['objects']['comuni']['geometries']:
 
 # Если город попал в несколько списков, оставляем самую дальнюю (более «знаменитую») позицию.
 raw = []
-for name in ['tier-1', 'tier-1b', 'tier-2', 'tier-2b', 'tier-3', 'tier-4']:
+for name in ['tier-1', 'tier-1b', 'tier-2', 'tier-2b', 'tier-2c', 'tier-3', 'tier-4']:
     f = BASE / f'cities/{name}.json'
     if f.exists(): raw += [c for c in json.load(open(f)) if not (c['n'] == 'Roma' and name != 'tier-4')]
 last = {}
