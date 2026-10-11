@@ -175,7 +175,6 @@ I think so|Думаю, да|— Is it open? — I think so.|— Открыто? 
 I don't think so|Не думаю|— Will it rain? — I don't think so.|— Будет дождь? — Не думаю.
 It depends|Зависит от обстоятельств|— Are you coming? — It depends.|— Ты придёшь? — Смотря как.
 What's the matter?|Что случилось?|You look sad. What's the matter?|Ты грустный. Что случилось?
-What a pity!|Как жаль!|You can't come? What a pity!|Ты не сможешь? Как жаль!
 That's a good idea|Хорошая идея|Pizza tonight? That's a good idea!|Пицца сегодня? Хорошая идея!
 Hurry up!|Поторопись!|Hurry up, we're late!|Поторопись, мы опаздываем!
 Watch out!|Осторожно!|Watch out! A car!|Осторожно! Машина!
