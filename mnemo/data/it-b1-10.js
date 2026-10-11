@@ -1,6 +1,5 @@
 (window.MNEMO_DECKS = window.MNEMO_DECKS || []).push(
 { lang: 'it', id: 'it-b1-kids', level: 'B1', emoji: '🛝', title: 'Дети: игры, школа, подростки', desc: 'Детская жизнь глазами родителей.', cards: `
-il bimbo|малыш|Il bimbo dorme finalmente.|Малыш наконец спит.
 il fratellino|младший братик|Ho un fratellino di due anni.|У меня есть двухлетний братик.
 la sorellina|младшая сестрёнка|La mia sorellina va all'asilo.|Моя сестрёнка ходит в садик.
 il primogenito|первенец|Il primogenito si chiama Marco.|Первенца зовут Марко.
@@ -108,17 +107,14 @@ la foresta|лес (большой)|Una foresta di abeti.|Еловый лес.
 il ruscello|ручей|Beviamo l'acqua del ruscello.|Мы пьём воду из ручья.
 la sorgente|родник, источник|Acqua fresca di sorgente.|Свежая родниковая вода.
 il ponte di legno|деревянный мост|Attraversiamo il ponte di legno.|Перейдём по деревянному мосту.
-il campo di grano|пшеничное поле|I campi di grano in estate.|Пшеничные поля летом.
 il fiore di campo|полевой цветок|Un mazzo di fiori di campo.|Букет полевых цветов.
 il papavero|мак|I papaveri rossi nei campi.|Красные маки в полях.
 raccogliere funghi|собирать грибы|In autunno raccogliamo funghi.|Осенью мы собираем грибы.
 le more|ежевика|Le more selvatiche sono dolci.|Дикая ежевика сладкая.
 fare un picnic|устроить пикник|Facciamo un picnic sul prato.|Устроим пикник на лугу.
 il fango|грязь|Le scarpe sono piene di fango.|Ботинки все в грязи.
-il sasso|камень (небольшой)|Ha tirato un sasso nel lago.|Он бросил камень в озеро.
 la lucertola|ящерица|Una lucertola al sole.|Ящерица на солнце.
 il cinghiale|кабан|Nel bosco ci sono cinghiali.|В лесу водятся кабаны.
-l'insetto|насекомое|Ci sono tanti insetti.|Здесь много насекомых.
 selvaggio|дикий|Un luogo selvaggio e bellissimo.|Дикое и прекрасное место.
 il parco nazionale|национальный парк|Il Parco Nazionale d'Abruzzo.|Национальный парк Абруццо.
 la riserva naturale|природный заповедник|È vietato campeggiare nella riserva naturale.|В заповеднике запрещено ставить палатки.
@@ -139,11 +135,9 @@ la museruola|намордник|Sul treno il cane deve avere la museruola.|В п
 la ciotola dell'acqua|миска для воды|Riempi la ciotola dell'acqua.|Наполни миску водой.
 il cibo per gatti|корм для кошек|Compra il cibo per gatti.|Купи корм для кошек.
 dare da mangiare al gatto|покормить кошку|Chi dà da mangiare al gatto?|Кто покормит кошку?
-nutrire|кормить|Bisogna nutrire bene il cucciolo.|Щенка нужно хорошо кормить.
 il tiragraffi|когтеточка|Abbiamo comprato un tiragraffi.|Мы купили когтеточку.
 la pallina|мячик|Il cane gioca con la pallina.|Собака играет с мячиком.
 lanciare la pallina|бросить мячик|Lanciagli la pallina!|Брось ему мячик!
-dai la zampa|дай лапу|Bravo, dai la zampa!|Молодец, дай лапу!
 coccolare|ласкать, нежить|Mi piace coccolare il gatto.|Я люблю ласкать кошку.
 le coccole|ласки, нежности|Il mio gatto vuole sempre le coccole.|Мой кот всегда хочет ласки.
 scodinzolare|вилять хвостом|Il cane scodinzola felice.|Собака радостно виляет хвостом.
@@ -168,11 +162,9 @@ le pulci|блохи|Il cane ha le pulci.|У собаки блохи.
 l'antipulci|средство от блох|Metti l'antipulci al gatto.|Обработай кота от блох.
 perdere il pelo|линять|In primavera il gatto perde il pelo.|Весной кот линяет.
 spazzolare|расчёсывать щёткой|Spazzolo il cane ogni giorno.|Я каждый день вычёсываю собаку.
-lavare il cane|помыть собаку|Domenica laviamo il cane.|В воскресенье мы моем собаку.
 fare i bisogni|справлять нужду|Il cane deve fare i bisogni.|Собаке нужно погулять (справить нужду).
 raccogliere i bisogni|убирать за собакой|Raccogli i bisogni del tuo cane!|Убирайте за своей собакой!
 l'area cani|площадка для выгула собак|Al parco c'è un'area cani.|В парке есть площадка для собак.
-vietato ai cani|с собаками нельзя|Spiaggia vietata ai cani.|Пляж, куда нельзя с собаками.
 cavalcare|ездить верхом|Mia figlia impara a cavalcare.|Моя дочь учится ездить верхом.
 `}
 );
