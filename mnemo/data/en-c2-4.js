@@ -99,8 +99,8 @@ asyndeton|асиндетон, бессоюзие|I came, I saw, I conquered: asy
 sarcasm|сарказм|Biting sarcasm.
 understatement|преуменьшение|A masterpiece of understatement.
 pathos|пафос, чувство сострадания|A scene full of pathos.
-ethos (rhetoric)|этос, авторитет оратора|The speaker's ethos.
-logos (rhetoric)|логос, логическая аргументация|An appeal to logos.
+prosopopoeia|прозопопея, олицетворение|Prosopopoeia gives voice to the dead.
+antimetabole|антиметабола, зеркальный повтор|Eat to live, not live to eat: antimetabole.
 tricolon|триада, правило трёх|Veni, vidi, vici is a tricolon.
 anacoluthon|анаколуф, нарушение синтаксиса|The sentence ends in anacoluthon.
 ellipsis (rhetoric)|эллипсис, пропуск слова|Ellipsis makes the line punchy.
@@ -119,16 +119,16 @@ curb|ограничивать; ограничение|Curbs on immigration.
 probe|расследование; расследовать|Police probe death.
 quiz (headline)|допрашивать|Police quiz suspect.
 rap (headline)|порицать; выговор|Judge raps police.
-row (headline)|скандал, ссора|Row over pay deal.
+furore|шумиха, возмущение|A furore over the new law.
 slam|раскритиковать|Critics slam new film.
 hike (price)|резкое повышение (цен)|Fuel price hike angers drivers.
 vow|клятва; поклясться|PM vows action on crime.
 woe|беды, проблемы|Transport woes continue.
 slash|резко сокращать|Firm slashes prices.
 storm (headline)|буря возмущения|Storm over new tax.
-quit (headline)|уходить в отставку|Minister quits.
+spat|перепалка, ссора|Diplomatic spat over visas.
 mull|обдумывать|Government mulls tax rise.
-eye (headline)|присматриваться, рассматривать|Firm eyes takeover.
+flak|резкая критика|Minister takes flak over cuts.
 brand (headline)|клеймить, называть|Critics brand plan a disaster.
 nab|сцапать, задержать|Police nab burglar.
 back (headline)|поддерживать|Unions back strike.
@@ -137,15 +137,15 @@ spree|разгул, серия (преступлений)|A shooting spree.
 sleaze|коррупция, грязные делишки|Government hit by sleaze claims.
 rock (headline)|потрясти|Scandal rocks government.
 soundbite|броская цитата|A catchy soundbite.
-exclusive (noun)|эксклюзивный материал|A front-page exclusive.
-clash (headline)|столкновение; спорить|Leaders clash over budget.
-pledge (headline)|обещать; обещание|PM pledges more cash for schools.
+lurid|кричащий, сенсационный|Lurid tabloid headlines.
+gaffe|оплошность, ляп|PM's gaffe sparks fury.
+dash (hopes)|разрушить (надежды)|Hopes of peace dashed.
 red-top|бульварная газета|The red-tops loved the scandal.
 kiss-and-tell|откровения бывшего любовника|A kiss-and-tell story.
 silly season|мёртвый сезон в новостях|Typical silly season news.
 toll (headline)|число жертв|Quake death toll rises.
 doorstep (journalism)|подкарауливать у дома|Reporters doorstepped the minister.
-talks (headline)|переговоры|Peace talks collapse.
+U-turn|резкий разворот политики|Government U-turn on taxes.
 media circus|шумиха в прессе|The trial became a media circus.
 `}
 );

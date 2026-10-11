@@ -8,23 +8,23 @@ dolour|скорбь, печаль|A life of dolour.
 rue|сожалеть, раскаиваться|You'll rue the day.
 chagrin|досада, огорчение|Much to her chagrin, he won.
 pique|досада, обида; задеть|He left in a fit of pique.
-umbrage|обида|She took great umbrage.
+mortification|унижение, досада|To his mortification, he failed.
 rapture|восторг, упоение|Listening in rapture.
 exultation|ликование|Shouts of exultation.
-elated|в приподнятом настроении, окрылённый|Elated by the news.
+lovelorn|тоскующий от любви|A lovelorn teenager.
 felicity|блаженство; удачность выражения|Domestic felicity.
-bliss|блаженство|Wedded bliss.
+beatific|блаженный|A beatific smile.
 reverie|мечтательность, грёзы|Lost in reverie.
 torpor|апатия, оцепенение|A state of torpor.
 listlessness|вялость, безразличие|The listlessness of summer.
 pining|тоска, томление|Pining for home.
 compunction|угрызения совести|He felt no compunction.
-qualm|сомнение, угрызение|She had no qualms about lying.
+scruple|угрызения совести, щепетильность|He had no scruples about lying.
 foreboding|дурное предчувствие|A sense of foreboding.
 disquiet|беспокойство, тревога|Growing public disquiet.
 consternation|смятение, ужас|To the consternation of his family.
 perturbation|волнение, смятение|Mental perturbation.
-dudgeon|негодование|In high dudgeon, he walked out.
+wistfulness|грусть, задумчивая тоска|A note of wistfulness.
 spleen|злоба, раздражение|Venting his spleen.
 rancorous|злобный, злопамятный|A rancorous dispute.
 woebegone|удручённый, горестный|A woebegone expression.
@@ -37,11 +37,11 @@ discomfited|смущённый, растерянный|Visibly discomfited.
 chastened|присмиревший, наученный опытом|A chastened government.
 `},
 { lang: 'en', id: 'en-c2-movement', level: 'C2', emoji: '🐾', title: 'Оттенки движения', desc: 'Глаголы движения с тонкими значениями.', cards: `
-amble|идти неспешно, прогуливаться|They ambled along the beach.
+mooch|слоняться, болтаться без дела|Mooching around the shops.
 mosey|брести, неспешно идти|Mosey on down to the bar.
 traipse|таскаться, тащиться|Traipsing round the shops.
-trudge|тащиться, брести с трудом|Trudge through the snow.
-plod|тяжело ступать; корпеть|He plodded home.
+tarry|медлить, задерживаться|Do not tarry.
+stomp|топать|He stomped out angrily.
 lumber|двигаться неуклюже|A bear lumbered past.
 shamble|волочить ноги|He shambled to the door.
 shuffle|шаркать|Shuffle along in slippers.
@@ -50,14 +50,14 @@ teeter|покачиваться, балансировать|Teeter on the brink.
 lurch|крениться, пошатываться|The bus lurched forward.
 careen|нестись, кренясь|The car careened down the hill.
 hurtle|мчаться, нестись|Rocks hurtled down.
-scurry|семенить, суетливо бежать|Mice scurried away.
+clamber|карабкаться|Clamber over the rocks.
 scuttle|юркнуть, удирать|Crabs scuttled across the sand.
 skulk|красться, прятаться|Skulking in the shadows.
 slink|красться, улизнуть|He slunk out of the room.
 sidle|подкрадываться бочком|She sidled up to him.
 prowl|рыскать, бродить|Prowling the streets.
 flounce|выскочить, демонстративно уйти|She flounced out of the room.
-mince|семенить, жеманно идти|He minced across the stage.
+mince (walk)|семенить, жеманно идти|He minced across the stage.
 sashay|идти, покачивая бёдрами|She sashayed into the room.
 strut|важно расхаживать|Strutting like a peacock.
 swagger|ходить с важным видом|He swaggered in.
@@ -67,7 +67,7 @@ gambol|резвиться, скакать|Lambs gambolling in the field.
 frolic|резвиться|Children frolicking in the waves.
 cavort|скакать, резвиться|Cavorting on the lawn.
 caper|скакать, прыгать; проделка|Capering about the garden.
-meander (walk)|бродить без цели|We meandered through the old town.
+stalk (walk)|шествовать, уходить с гордым видом|She stalked out of the meeting.
 peregrinate|странствовать|Peregrinating across Europe.
 perambulate|прогуливаться, обходить|Perambulate the park.
 wend|направлять (путь)|Wend your way home.
@@ -83,7 +83,7 @@ crepuscular|сумеречный|Crepuscular light.
 penumbra|полутень|In the penumbra of the lamp.
 gloaming|сумерки|In the gloaming.
 coruscate|сверкать, искриться|Coruscating wit.
-effulgent|лучезарный|An effulgent smile.
+aureate|золотистый; цветистый (о стиле)|Aureate prose.
 lambent|мерцающий, мягко сияющий|Lambent flames.
 sepulchral|могильный, замогильный|A sepulchral voice.
 mellifluous|сладкозвучный|A mellifluous voice.
@@ -121,7 +121,7 @@ theocracy|теократия|An Islamic theocracy.
 junta|хунта|A military junta.
 cabal|клика, заговорщики|A secret cabal.
 fiefdom|вотчина, удел|A personal fiefdom.
-demagogue|демагог|A populist demagogue.
+tyranny of the majority|тирания большинства|Fear of the tyranny of the majority.
 apparatchik|аппаратчик|A party apparatchik.
 satrap|сатрап, наместник|The dictator's satraps.
 interregnum|междуцарствие|A brief interregnum.
@@ -131,8 +131,8 @@ insurrection|восстание|An armed insurrection.
 putsch|путч|A failed putsch.
 fifth column|пятая колонна|A fifth column of spies.
 realpolitik|реальная политика|Cold realpolitik.
-brinkmanship|балансирование на грани|Nuclear brinkmanship.
-détente|разрядка|A period of détente.
+praetorian guard|преторианская гвардия, личная охрана|The leader's praetorian guard.
+sabre-rattling|бряцание оружием|Empty sabre-rattling.
 hegemon|гегемон|A regional hegemon.
 irredentism|ирредентизм|Russian irredentism.
 plebiscite|плебисцит|A plebiscite on independence.
@@ -144,7 +144,7 @@ lame duck|уходящий политик|A lame duck president.
 eminent domain|право принудительного отчуждения|Seized by eminent domain.
 body politic|государство, общество|The health of the body politic.
 the commonweal|общее благо|For the commonweal.
-the establishment|истеблишмент|Rebel against the establishment.
+nomenklatura|номенклатура|The Soviet nomenklatura.
 grandee|вельможа, влиятельный деятель|A Tory grandee.
 mandarin|высокопоставленный чиновник|Whitehall mandarins.
 chief whip|главный парламентский организатор|The government chief whip.

@@ -1,6 +1,6 @@
 (window.MNEMO_DECKS = window.MNEMO_DECKS || []).push(
 { lang: 'en', id: 'en-c2-verbs1', level: 'C2', emoji: '⚡', title: 'Глаголы C2 (1)', desc: 'Редкие и выразительные глаголы.', cards: `
-abrogate (a right)|отменять, упразднять|Abrogate a basic right.
+abase|унижать|He refused to abase himself.
 accede|соглашаться; вступать (в должность)|She acceded to their demands.
 adulterate|фальсифицировать, разбавлять|Adulterated milk.
 allay|успокаивать, рассеивать (страхи)|Allay public fears.

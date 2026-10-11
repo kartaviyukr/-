@@ -12,7 +12,7 @@ quite good (British)|так себе, неплохо|The film was quite good.
 I hear what you say|я вас услышал (= не согласен)|I hear what you say, but no.
 a slight misunderstanding|недоразумение (= серьёзный конфликт)|There was a slight misunderstanding with the police.
 I'm sure it's my fault|уверен, это моя вина (= ваша)|I'm sure it's my fault, but you're late.
-rather (British emphasis)|весьма, довольно-таки|It was rather a disaster.
+a spot of bother|небольшая неприятность (часто преуменьш.)|We had a spot of bother with the car.
 a tad|чуточку, капельку|It's a tad expensive.
 if it's not too much trouble|если вас не затруднит (= сделайте немедленно)|If it's not too much trouble, move your car.
 mildly put|мягко говоря|That was, mildly put, unwise.
@@ -40,9 +40,9 @@ mustn't grumble|грех жаловаться|How are you? Mustn't grumble.
 obfuscate|затемнять, запутывать|Jargon obfuscates the meaning.
 deracinate|вырывать с корнем, лишать корней|Deracinated by exile.
 aggrandise|возвеличивать, раздувать значение|He aggrandises his role.
-promulgate (an idea)|распространять, пропагандировать|Promulgate new ideas.
+disabuse|выводить из заблуждения|Let me disabuse you of that notion.
 proscribe|запрещать|Practices proscribed by law.
-prescribe (formal)|предписывать|Rules prescribed by the board.
+ordain|предписывать; посвящать в сан|He was ordained a priest.
 accrue|накапливаться, нарастать|Interest accrues daily.
 adumbrate|обрисовывать в общих чертах; предвещать|The report adumbrates future reforms.
 peruse|внимательно читать, изучать|He perused the menu.
