@@ -54,7 +54,6 @@ Nice to see you.|Рад тебя видеть.|Nice to see you again!|Рад с�
 How do you do?|Здравствуйте (при знакомстве, офиц.)|How do you do? I'm John Smith.|Здравствуйте, я Джон Смит.
 What do you do?|Кем вы работаете?|What do you do? — I'm a nurse.|Кем ты работаешь? — Я медсестра.
 How was your weekend?|Как прошли выходные?|How was your weekend? — Great!|Как выходные? — Отлично!
-Have a nice day!|Хорошего дня!|Bye! Have a nice day!|Пока! Хорошего дня!
 You too.|И тебе тоже.|Have a good weekend! — You too.|Хороших выходных! — И тебе.
 Same to you.|И вам того же.|Happy New Year! — Same to you!|С Новым годом! — И вас также!
 Have a good weekend!|Хороших выходных!|See you Monday. Have a good weekend!|До понедельника. Хороших выходных!
@@ -65,7 +64,6 @@ Have a good trip!|Хорошей поездки!|Have a good trip and call me!|�
 Get well soon!|Выздоравливай!|Sorry you're ill. Get well soon!|Жаль, что ты заболел. Выздоравливай!
 Enjoy your meal!|Приятного аппетита!|Here's your pasta. Enjoy your meal!|Вот ваша паста. Приятного аппетита!
 Bless you!|Будь здоров! (при чихании)|Atchoo! — Bless you!|Апчхи! — Будь здоров!
-Good luck!|Удачи!|Good luck with your exam!|Удачи на экзамене!
 Well done!|Молодец! Отлично!|You passed? Well done!|Ты сдал? Молодец!
 Me too.|Я тоже.|I'm hungry. — Me too.|Я голоден. — Я тоже.
 Same here.|У меня тоже.|I'm tired. — Same here.|Я устал. — Я тоже.
