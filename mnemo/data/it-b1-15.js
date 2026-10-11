@@ -19,12 +19,10 @@ al verde|без гроша, на мели|Sono al verde fino a venerdì.|Я на
 spendere troppo|тратить слишком много|A Natale spendo sempre troppo.|На Рождество я всегда трачу слишком много.
 lo spendaccione|транжира|Mio fratello è uno spendaccione.|Мой брат — транжира.
 avaro|скупой, жадный|Non essere avaro!|Не будь жадным!
-conveniente|выгодный|Questa offerta è molto conveniente.|Это предложение очень выгодное.
 a buon mercato|дёшево, по низкой цене|Al mercato si compra a buon mercato.|На рынке можно купить дёшево.
 valere|стоить, иметь ценность|Quanto vale questo anello?|Сколько стоит это кольцо?
 valere la pena|стоить того|Vale la pena spendere di più.|Стоит потратить побольше.
 il rincaro|подорожание|Un nuovo rincaro della benzina.|Новое подорожание бензина.
-il pagamento|оплата, платёж|Il pagamento è online.|Оплата онлайн.
 in rosso|в минусе (о счёте)|Il mio conto è in rosso.|Мой счёт в минусе.
 chiedere un prestito|взять кредит, попросить взаймы|Abbiamo chiesto un prestito alla banca.|Мы взяли кредит в банке.
 indebitarsi|влезать в долги|Non voglio indebitarmi per una vacanza.|Я не хочу влезать в долги ради отпуска.
@@ -33,11 +31,10 @@ il tasso di interesse|процентная ставка|Il tasso di interesse è
 la quota|доля, взнос|La quota d'iscrizione è di cinquanta euro.|Вступительный взнос — пятьдесят евро.
 la somma|сумма|Una bella somma di denaro.|Приличная сумма денег.
 il costo|стоимость, затраты|Il costo del viaggio è alto.|Стоимость поездки высокая.
-il rimborso|возмещение, возврат денег|Ho chiesto il rimborso del biglietto.|Я попросил вернуть деньги за билет.
-rimborsare|возмещать, возвращать деньги|Vi rimborseremo entro dieci giorni.|Мы вернём вам деньги в течение десяти дней.
 l'anticipo|аванс, предоплата|Ho pagato un anticipo del trenta per cento.|Я внёс предоплату тридцать процентов.
 il potere d'acquisto|покупательная способность|Il potere d'acquisto delle famiglie è calato.|Покупательная способность семей снизилась.
-fare un affare|совершить выгодную покупку|Con questa macchina ho fatto un affare.|С этой машиной я выгодно купил.
+la cifra|сумма, цифра|Hanno speso una cifra enorme.|Они потратили огромную сумму.
+economizzare|экономить|Economizziamo sulla luce.|Экономим на электричестве.
 il risparmiatore|вкладчик, тот, кто копит|I piccoli risparmiatori sono preoccupati.|Мелкие вкладчики обеспокоены.
 `},
 { lang: 'it', id: 'it-b1-papers', level: 'B1', emoji: '📋', title: 'Документы и бюрократия', desc: 'Анкеты, справки и госучреждения.', cards: `
