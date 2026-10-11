@@ -68,15 +68,17 @@ for geo in t['objects']['comuni']['geometries']:
     pr = geo['properties']
     comuni[(key(pr['name']), pr['prov_acr'])] = (lon, lat, pr['reg_name'].split('/')[0])
 
-cities, seen = [], set()
-for n in range(1, 5):
-    f = BASE / f'cities/tier-{n}.json'
-    if not f.exists(): continue
-    for c in json.load(open(f)):
+# Если город попал в несколько списков, оставляем самую дальнюю (более «знаменитую») позицию.
+raw = []
+for name in ['tier-1', 'tier-1b', 'tier-2', 'tier-2b', 'tier-3', 'tier-4']:
+    f = BASE / f'cities/{name}.json'
+    if f.exists(): raw += [c for c in json.load(open(f)) if not (c['n'] == 'Roma' and name != 'tier-4')]
+last = {}
+for i, c in enumerate(raw): last[(key(c['n']), c['p'])] = i
+cities = []
+for i, c in enumerate(raw):
         k = (key(c['n']), c['p'])
-        if k in seen or k not in comuni: continue
-        if n < 4 and c['n'] == 'Roma': continue
-        seen.add(k)
+        if last[k] != i or k not in comuni: continue
         lon, lat, reg = comuni[k]
         x, y = P(lon, lat)
         item = {'n': c.get('t') or c['n'], 'r': reg, 'x': round(x, 1), 'y': round(y, 1), 'w': c['w'], 'it': c['it'], 'ru': c['ru']}
