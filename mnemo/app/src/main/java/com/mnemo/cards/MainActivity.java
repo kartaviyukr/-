@@ -111,7 +111,23 @@ public class MainActivity extends Activity {
         web.addJavascriptInterface(new Bridge(), "Android");
         web.loadUrl("file:///android_asset/www/index.html");
 
-        tts = new TextToSpeech(this, status -> ttsReady = status == TextToSpeech.SUCCESS);
+        initTts();
+    }
+
+    // Голосовой движок Google знает украинский, итальянский, английский и русский.
+    // На многих телефонах (например, Samsung) по умолчанию стоит другой движок без украинского,
+    // поэтому берём Google, если он установлен.
+    private static final String GOOGLE_TTS = "com.google.android.tts";
+
+    private void initTts() {
+        boolean hasGoogle = false;
+        try {
+            getPackageManager().getPackageInfo(GOOGLE_TTS, 0);
+            hasGoogle = true;
+        } catch (Exception ignored) {
+        }
+        TextToSpeech.OnInitListener l = status -> ttsReady = status == TextToSpeech.SUCCESS;
+        tts = hasGoogle ? new TextToSpeech(this, l, GOOGLE_TTS) : new TextToSpeech(this, l);
     }
 
     @Override
@@ -190,6 +206,52 @@ public class MainActivity extends Activity {
             }
             tts.setSpeechRate(rate > 0 ? rate : 1f);
             tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, "mnemo");
+        }
+
+        /** 2 — голос есть, 1 — язык поддерживается, но данные не скачаны, 0 — не поддерживается, -1 — озвучка не готова. */
+        @JavascriptInterface
+        public int voiceStatus(String lang) {
+            if (tts == null || !ttsReady) return -1;
+            try {
+                int r = tts.isLanguageAvailable(Locale.forLanguageTag(lang));
+                if (r == TextToSpeech.LANG_MISSING_DATA) return 1;
+                if (r == TextToSpeech.LANG_NOT_SUPPORTED) return 0;
+                return 2;
+            } catch (Exception e) {
+                return 0;
+            }
+        }
+
+        @JavascriptInterface
+        public String ttsEngine() {
+            return tts == null ? "" : String.valueOf(tts.getDefaultEngine());
+        }
+
+        /** Открывает установку голосов (или настройки синтеза речи, если установщика нет). */
+        @JavascriptInterface
+        public void installVoices() {
+            runOnUiThread(() -> {
+                Intent i = new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+                try {
+                    if (isGoogle()) i.setPackage(GOOGLE_TTS);
+                    startActivity(i);
+                    return;
+                } catch (Exception ignored) {
+                }
+                try {
+                    startActivity(new Intent("com.android.settings.TTS_SETTINGS"));
+                } catch (Exception ignored) {
+                }
+            });
+        }
+
+        private boolean isGoogle() {
+            try {
+                getPackageManager().getPackageInfo(GOOGLE_TTS, 0);
+                return true;
+            } catch (Exception e) {
+                return false;
+            }
         }
 
         @JavascriptInterface

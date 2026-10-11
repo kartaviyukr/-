@@ -463,3 +463,7 @@ button.path-head { width: 100%; text-align: left; }
 .au-ctl .ib { font-size: 24px; }
 .au-play { width: 72px; height: 72px; border-radius: 50%; background: var(--ac); color: #fff; display: grid; place-items: center; box-shadow: var(--sh); }
 .au-play svg { width: 30px; height: 30px; }
+.vrow { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.vrow b { font-size: 22px; }
+.vrow span { flex: 1; font-weight: 700; font-size: 14px; }
+.vrow small { font-weight: 600; }

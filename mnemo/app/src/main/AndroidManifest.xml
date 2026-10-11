@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Фото городов (Википедия) и запасная онлайн-озвучка, если в телефоне нет нужного голоса. -->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <!-- Озвучка: на Android 11+ без этого приложение не видит системный движок TTS. -->
     <queries>

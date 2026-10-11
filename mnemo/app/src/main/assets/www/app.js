@@ -46,7 +46,7 @@ const langOfCode = code => { const p = String(code || '').slice(0, 2).toLowerCas
 const KEY = 'mnemo.v1';
 const DEF_SETTINGS = {
   theme: 'dark', goal: 50, autoplay: false, rate: 0.9, dir: 'td', lessonSize: 6,
-  newPerDay: 10, typos: true, sound: true, lang: 'en',
+  newPerDay: 10, typos: true, sound: true, lang: 'en', onlineVoice: true,
 };
 let db;
 let BUILTIN = [];
@@ -371,10 +371,43 @@ function speechText(t) { return String(t).replace(/\s[—–-]\s/g, ', ').replac
 let voices = [];
 function loadVoices() { try { voices = window.speechSynthesis ? speechSynthesis.getVoices() : []; } catch (e) { voices = []; } }
 if (window.speechSynthesis) { loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }
+// Есть ли в устройстве голос для языка: true / false / null (пока неизвестно).
+function hasVoice(lang) {
+  if (window.Android && Android.voiceStatus) {
+    try { const r = Android.voiceStatus(lang); return r < 0 ? null : r === 2; } catch (e) { return null; }
+  }
+  if (!window.speechSynthesis) return false;
+  if (!voices.length) return null;
+  const base = lang.slice(0, 2);
+  return voices.some(v => v.lang.replace('_', '-').slice(0, 2) === base);
+}
+// Запасная онлайн-озвучка — если голоса нет (часто так с украинским).
+let onlineAudio = null;
+function stopOnline() { if (onlineAudio) { try { onlineAudio.pause(); } catch (e) {} onlineAudio = null; } }
+function speakOnline(t, lang, rate, fallback) {
+  stopOnline();
+  const a = new Audio(`https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=${lang.slice(0, 2)}&q=${encodeURIComponent(t.slice(0, 200))}`);
+  a.playbackRate = clamp(rate, 0.5, 2);
+  onlineAudio = a;
+  a.play().catch(() => { onlineAudio = null; fallback(); });
+}
+let voiceWarned = {};
 function speak(text, lang = 'en-US', slow = false) {
   if (!text) return;
   const rate = db.settings.rate * (slow ? 0.6 : 1);
   const t = speechText(text);
+  const local = () => speakLocal(t, lang, rate);
+  if (db.settings.onlineVoice !== false && hasVoice(lang) === false && navigator.onLine !== false) {
+    speakOnline(t, lang, rate, () => {
+      if (!voiceWarned[lang]) { voiceWarned[lang] = 1; toast('Нет голоса для этого языка — см. Настройки → Голоса'); }
+      local();
+    });
+    return;
+  }
+  stopOnline();
+  local();
+}
+function speakLocal(t, lang, rate) {
   if (window.Android && Android.speak) { try { Android.speak(t, lang, rate); } catch (e) {} return; }
   if (!window.speechSynthesis) { toast('Озвучка недоступна на этом устройстве'); return; }
   try {
@@ -479,7 +512,7 @@ let stack = [{ name: 'home' }];
 let timers = [];
 const cur = () => stack[stack.length - 1];
 let tickT = 0;
-function stopTimers() { timers.forEach(t => clearInterval(t)); timers = []; clearInterval(tickT); if (window.speechSynthesis) try { speechSynthesis.cancel(); } catch (e) {} }
+function stopTimers() { timers.forEach(t => clearInterval(t)); timers = []; clearInterval(tickT); stopOnline(); if (window.speechSynthesis) try { speechSynthesis.cancel(); } catch (e) {} }
 // Один повторяющийся таймер экрана: повторный рендер не плодит новые интервалы.
 function setTick(fn, ms) { clearInterval(tickT); tickT = setInterval(fn, ms); }
 
@@ -2109,6 +2142,18 @@ function seg(k, opts) {
 function tgl(k, label, sub) {
   return `<label class="tgl row"><span>${label}${sub ? `<small>${sub}</small>` : ''}</span><input type="checkbox" class="sw" data-ch="set-bool" data-k="${k}" ${db.settings[k] ? 'checked' : ''}></label>`;
 }
+const VOICE_TEST = [['it-IT', '🇮🇹', 'Ciao! Impariamo nuove parole.'], ['uk-UA', '🇺🇦', 'Привіт! Вивчаймо нові слова.'], ['en-US', '🇬🇧', "Hello! Let's learn some new words."], ['ru-RU', '🇷🇺', 'Привет! Учим новые слова.']];
+function voiceRows() {
+  const rows = VOICE_TEST.map(([lang, flag, text]) => {
+    const h = hasVoice(lang);
+    const st = h === true ? '<small class="good-t">голос есть</small>' : h === false ? `<small class="bad-t">голоса нет${db.settings.onlineVoice !== false ? ' — читаем онлайн' : ''}</small>` : '<small>—</small>';
+    return `<div class="vrow"><b>${flag}</b><span>${lang}<br>${st}</span><button class="btn sm ghost" data-act="speak" data-text="${esc(text)}" data-lang="${lang}">🔊</button></div>`;
+  }).join('');
+  const fix = window.Android && Android.installVoices
+    ? '<button class="btn ghost" data-act="install-voices">⬇️ Установить голоса (украинский и др.)</button><p class="hint">Откроются настройки синтеза речи Google: «Установить голосовые данные» → Українська. После установки перезапустите приложение.</p>'
+    : '<p class="hint">iPhone: Настройки → Универсальный доступ → Устный контент → Голоса → Украинский — скачайте голос «Леся».</p>';
+  return rows + fix;
+}
 screens.settings = () => `${hdr('Настройки')}<div class="pad form">
   <div class="lbl">Оформление</div>${seg('theme', [['dark', '🌙 Тёмная'], ['light', '☀️ Светлая'], ['sepia', '📜 Сепия']])}
   <div class="lbl">Цель дня (XP)</div>${seg('goal', [[20, '20'], [50, '50'], [100, '100'], [200, '200'], [400, '400']])}
@@ -2117,7 +2162,9 @@ screens.settings = () => `${hdr('Настройки')}<div class="pad form">
   <div class="lbl">Новых слов в день в «Повторении»</div>${seg('newPerDay', [[0, '0'], [5, '5'], [10, '10'], [20, '20'], [50, '50']])}
   <div class="lbl">Скорость речи: <b id="rate-v">${db.settings.rate.toFixed(1)}</b></div>
   <input type="range" min="0.5" max="1.3" step="0.1" value="${db.settings.rate}" data-in="rate">
-  <button class="btn ghost" data-act="speak" data-text="Hello! Let's learn some new words." data-lang="en-US">🔊 Проверить озвучку</button>
+  <div class="lbl">Голоса</div>
+  ${voiceRows()}
+  ${tgl('onlineVoice', 'Онлайн-озвучка, если голоса нет', 'Если в телефоне не установлен голос (часто украинский), слова читаются через интернет')}
   ${tgl('autoplay', 'Автоозвучка', 'Произносить вопрос автоматически')}
   ${tgl('sound', 'Звуки и вибрация', 'Сигнал при верном и неверном ответе')}
   ${tgl('typos', 'Прощать опечатки', 'Засчитывать ответ с 1–2 ошибками в букве')}
@@ -2175,6 +2222,7 @@ const A = {
   go: el => go(el.dataset.to, { id: el.dataset.id }),
   'art-next': el => replace('article', { id: el.dataset.id }),
   'modal-close': () => closeModal(),
+  'install-voices': () => { try { Android.installVoices(); } catch (e) {} },
   'modal-ok': () => { const cb = modalCb; closeModal(); cb && cb(); },
   speak: el => speak(el.dataset.text, el.dataset.lang),
   'speak-slow': el => speak(el.dataset.text, el.dataset.lang, true),
