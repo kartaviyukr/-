@@ -9,7 +9,7 @@ decorate the tree|наряжать ёлку|The kids helped decorate the tree.|�
 Christmas card|рождественская открытка|I still send Christmas cards.|Я до сих пор отправляю рождественские открытки.
 Christmas dinner|рождественский ужин|We have Christmas dinner at my parents'.|Рождественский ужин у нас у родителей.
 turkey|индейка|My mum cooks a turkey every year.|Мама каждый год готовит индейку.
-stuffing|начинка (для птицы)|The stuffing is my favourite part.|Начинка — моё любимое.
+advent calendar|адвент-календарь|The kids open the advent calendar every morning.|Дети каждое утро открывают адвент-календарь.
 mince pie|сладкий пирожок с сухофруктами|Have a mince pie with your tea.|Возьми пирожок к чаю.
 Christmas pudding|рождественский пудинг|Christmas pudding is very rich.|Рождественский пудинг очень сытный.
 cracker|хлопушка (рождественская)|We pulled crackers at dinner.|За ужином мы взрывали хлопушки.
@@ -27,18 +27,18 @@ Good Friday|Страстная пятница|Good Friday is a bank holiday in t
 Easter Sunday|Пасхальное воскресенье|The family meets on Easter Sunday.|Семья собирается в пасхальное воскресенье.
 Easter egg|пасхальное яйцо (часто шоколадное)|The kids had an Easter egg hunt.|Дети искали пасхальные яйца.
 pancake day|Масленица, день блинов|We eat pancakes on pancake day.|На Масленицу мы едим блины.
-Halloween|Хэллоуин|What are you wearing for Halloween?|В чём ты будешь на Хэллоуин?
-trick or treat|сладость или гадость|The kids went trick or treating.|Дети ходили по домам за сладостями.
+Christmas lights|рождественская иллюминация, гирлянды|The Christmas lights in town are beautiful.|Рождественская иллюминация в городе прекрасна.
+mistletoe|омела|They kissed under the mistletoe.|Они поцеловались под омелой.
 carve a pumpkin|вырезать тыкву|We carved a pumpkin for Halloween.|Мы вырезали тыкву на Хэллоуин.
 dress up as|нарядиться кем-то|He dressed up as a pirate.|Он нарядился пиратом.
-costume|костюм (маскарадный)|She made her own costume.|Она сама сшила себе костюм.
+fancy dress|маскарадный костюм|Everyone came in fancy dress.|Все пришли в маскарадных костюмах.
 Bonfire Night|Ночь костров (5 ноября)|We watch fireworks on Bonfire Night.|В Ночь костров мы смотрим фейерверки.
 bonfire|костёр|They built a huge bonfire.|Они развели огромный костёр.
-Thanksgiving|День благодарения|Americans eat turkey at Thanksgiving.|На День благодарения американцы едят индейку.
+hot cross bun|пасхальная булочка с крестом|We eat hot cross buns at Easter.|На Пасху мы едим булочки с крестом.
 St Patrick's Day|День святого Патрика|Everyone wears green on St Patrick's Day.|В День святого Патрика все носят зелёное.
 Valentine's Day|День святого Валентина|He sent her roses on Valentine's Day.|На День святого Валентина он прислал ей розы.
 Mother's Day|День матери|I bought my mum flowers for Mother's Day.|Я купил маме цветы на День матери.
-parade|парад, шествие|There's a parade in the city centre.|В центре города шествие.
+fireworks display|салют, фейерверк (представление)|We watched the fireworks display from the hill.|Мы смотрели салют с холма.
 national holiday|государственный праздник|Is it a national holiday tomorrow?|Завтра государственный праздник?
 `},
 { lang: 'en', id: 'en-b1-religion', level: 'B1', emoji: '🕊️', title: 'Религия и вера', desc: 'Основные слова о религиях, вере и обрядах.', cards: `
