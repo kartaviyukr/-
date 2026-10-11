@@ -2301,7 +2301,7 @@ screens.stats = () => {
       <div><b>${dueCards().length}</b><span>к повторению</span></div>
       <div><b>${ok + bad ? Math.round(ok / (ok + bad) * 100) : 0}%</b><span>точность</span></div>
     </div>
-    ${lvRows ? `<h2 class="sec">${LANGS[curLang()].flag} Путь к C1</h2><div class="card">${lvRows}<p class="hint">Сколько слов каждого уровня вы уже знаете (интервал повторения от 2 дней).</p></div>` : ''}
+    ${lvRows ? `<h2 class="sec">${LANGS[curLang()].flag} Путь к C2</h2><div class="card">${lvRows}<p class="hint">Сколько слов каждого уровня вы уже знаете (интервал повторения от 2 дней).</p></div>` : ''}
     <h2 class="sec">Неделя</h2>
     <div class="card week">${week.map(w => `<div class="wk"><div class="wk-bar"><i style="height:${w.xp / maxW * 100}%" class="${w.xp >= goal ? 'full' : ''}"></i></div><small>${w.l}</small><small class="wk-x">${w.xp || ''}</small></div>`).join('')}
       <div class="wk-goal" style="bottom:calc(${goal / maxW * 100}% * 0.72 + 34px)"></div></div>
