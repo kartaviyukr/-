@@ -152,10 +152,8 @@ la fiction|телесериал (итальянский)|Mia nonna guarda tutte 
 la soap opera|мыльная опера|È una soap opera con mille puntate.|Это мыльная опера в тысячу серий.
 il reality|реалити-шоу|Non sopporto i reality.|Терпеть не могу реалити-шоу.
 il sequel|сиквел, продолжение|Il sequel è meglio del primo.|Продолжение лучше первого фильма.
-la saga|сага, серия фильмов|Ho visto tutta la saga.|Я посмотрел всю серию фильмов.
 andare in onda|выходить в эфир|La serie va in onda il lunedì.|Сериал выходит в эфир по понедельникам.
 la replica|повтор (передачи)|Stasera c'è solo una replica.|Сегодня вечером только повтор.
 cambiare canale|переключить канал|Cambia canale, è noioso!|Переключи канал, это скучно!
-lo zapping|переключение каналов|Faccio zapping senza trovare niente.|Я щёлкаю каналы и ничего не нахожу.
 `}
 );

@@ -3,13 +3,13 @@
 la macchina non parte|машина не заводится|Stamattina la macchina non parte.|Сегодня утром машина не заводится.
 rimanere a piedi|остаться без транспорта|Siamo rimasti a piedi in autostrada.|Мы застряли на трассе без машины.
 il soccorso stradale|техпомощь на дороге|Ho chiamato il soccorso stradale.|Я вызвал техпомощь.
-il carro attrezzi|эвакуатор|Il carro attrezzi ha portato via la macchina.|Эвакуатор увёз машину.
-l'officina|автомастерская|La macchina è in officina.|Машина в мастерской.
+il cambio manuale|механическая коробка передач|Preferisco il cambio manuale.|Я предпочитаю механическую коробку.
+il libretto di circolazione|техпаспорт автомобиля|Mi mostri il libretto di circolazione.|Покажите техпаспорт.
 portare la macchina dal meccanico|отвезти машину к механику|Domani porto la macchina dal meccanico.|Завтра я отвезу машину к механику.
 riparare la macchina|отремонтировать машину|Quanto costa riparare la macchina?|Сколько стоит отремонтировать машину?
 i pezzi di ricambio|запчасти|Mancano i pezzi di ricambio.|Нет запчастей.
 fa un rumore strano|издаёт странный звук|Il motore fa un rumore strano.|Двигатель издаёт странный звук.
-il motore|двигатель|Il motore si è spento.|Двигатель заглох.
+la marmitta|глушитель|La marmitta fa troppo rumore.|Глушитель слишком шумит.
 il guasto al motore|поломка двигателя|Un guasto al motore ci ha fermati.|Нас остановила поломка двигателя.
 surriscaldarsi|перегреваться|Il motore si surriscalda in salita.|Двигатель перегревается на подъёме.
 il radiatore|радиатор|Il radiatore perde acqua.|Радиатор течёт.
@@ -22,21 +22,21 @@ cambiare la gomma|поменять колесо|Sai cambiare la gomma?|Ты ум
 la ruota di scorta|запасное колесо|La ruota di scorta è nel bagagliaio.|Запаска в багажнике.
 il cric|домкрат|Passami il cric.|Подай мне домкрат.
 i freni|тормоза|I freni non funzionano bene.|Тормоза плохо работают.
-la frizione|сцепление|Bisogna cambiare la frizione.|Нужно поменять сцепление.
-il cambio automatico|автоматическая коробка передач|Una macchina con il cambio automatico.|Машина с автоматической коробкой.
+le catene da neve|цепи противоскольжения|In montagna servono le catene da neve.|В горах нужны цепи на колёса.
+il climatizzatore|кондиционер (в машине)|Il climatizzatore non rinfresca.|Кондиционер не охлаждает.
 cambiare l'olio|поменять масло|Devo cambiare l'olio.|Мне нужно поменять масло.
 il tagliando|плановое ТО|Ho fatto il tagliando a ventimila chilometri.|Я прошёл ТО на двадцати тысячах километров.
 la revisione|техосмотр|La revisione si fa ogni due anni.|Техосмотр проходят раз в два года.
 il contachilometri|одометр, спидометр|Il contachilometri segna centomila.|Пробег — сто тысяч.
-il serbatoio|бак|Il serbatoio è quasi vuoto.|Бак почти пустой.
-il gasolio|дизельное топливо|La mia macchina va a gasolio.|Моя машина на дизеле.
+la pressione delle gomme|давление в шинах|Controlla la pressione delle gomme.|Проверь давление в шинах.
+mettere la freccia|включить поворотник|Metti la freccia prima di girare.|Включи поворотник перед поворотом.
 il parabrezza|лобовое стекло|Si è crepato il parabrezza.|Лобовое стекло треснуло.
-il tergicristallo|дворник (стеклоочиститель)|Il tergicristallo non pulisce bene.|Дворник плохо чистит.
-i fari|фары|Accendi i fari, è buio.|Включи фары, темно.
+le gomme invernali|зимние шины|A novembre metto le gomme invernali.|В ноябре я ставлю зимнюю резину.
+il bollo auto|транспортный налог|Ho pagato il bollo auto.|Я заплатил транспортный налог.
 lo specchietto retrovisore|зеркало заднего вида|Guarda nello specchietto retrovisore.|Посмотри в зеркало заднего вида.
 il paraurti|бампер|Il paraurti è ammaccato.|Бампер помят.
-il cofano|капот|Apri il cofano.|Открой капот.
-il bagagliaio|багажник|Metti le valigie nel bagagliaio.|Положи чемоданы в багажник.
+suonare il clacson|сигналить|Non suonare il clacson di notte.|Не сигналь ночью.
+la portiera|дверь автомобиля|La portiera non si chiude.|Дверь машины не закрывается.
 la carrozzeria|кузов; кузовной ремонт|La carrozzeria è tutta graffiata.|Кузов весь поцарапан.
 il carrozziere|мастер по кузовному ремонту|Il carrozziere sistema l'ammaccatura.|Кузовщик выправит вмятину.
 l'ammaccatura|вмятина|Una piccola ammaccatura sulla portiera.|Небольшая вмятина на двери.
@@ -113,7 +113,7 @@ fare il punto della situazione|обсудить положение дел|Faccia
 il feedback|обратная связь|Il capo mi ha dato un feedback positivo.|Начальник дал мне положительный отзыв.
 lamentarsi del capo|жаловаться на начальника|Tutti si lamentano del capo.|Все жалуются на начальника.
 chiedere un aumento|попросить прибавку|Ho chiesto un aumento di stipendio.|Я попросил прибавку к зарплате.
-essere promosso|получить повышение|È stata promossa a direttrice.|Её повысили до директора.
+il premio di produzione|премия за результаты|Quest'anno c'è il premio di produzione.|В этом году будет премия.
 licenziarsi|уволиться|Si è licenziato dopo dieci anni.|Он уволился через десять лет.
 dare le dimissioni|подать в отставку, уволиться|Ha dato le dimissioni ieri.|Вчера она подала заявление об уходе.
 la cena aziendale|корпоративный ужин|Venerdì c'è la cena aziendale.|В пятницу корпоративный ужин.

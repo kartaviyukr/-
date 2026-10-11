@@ -52,7 +52,7 @@ Respiri profondamente.|Дышите глубоко.|Respiri profondamente, per f
 la gola arrossata|красное горло|Ha la gola arrossata.|У вас красное горло.
 spogliarsi|раздеваться|Si spogli, per favore.|Разденьтесь, пожалуйста.
 sdraiarsi|ложиться|Si sdrai sul lettino.|Ложитесь на кушетку.
-il lettino|кушетка; детская кроватка|Si stenda sul lettino.|Ложитесь на кушетку.
+il lettino (medico)|кушетка (в кабинете врача)|Si stenda sul lettino.|Ложитесь на кушетку.
 lo stetoscopio|стетоскоп|Il medico usa lo stetoscopio.|Врач слушает стетоскопом.
 le analisi del sangue|анализ крови|Domani faccio le analisi del sangue.|Завтра я сдаю анализ крови.
 il prelievo di sangue|забор крови|Il prelievo di sangue è a digiuno.|Кровь сдают натощак.

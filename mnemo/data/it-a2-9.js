@@ -23,7 +23,7 @@ stupirsi|изумляться|Non mi stupisco più di niente.|Меня уже н
 spaventarsi|пугаться|Il bambino si è spaventato.|Ребёнок испугался.
 tranquillizzarsi|успокаиваться|Tranquillizzati, va tutto bene.|Успокойся, всё в порядке.
 innervosirsi|нервничать, раздражаться|Mi innervosisco nel traffico.|Я нервничаю в пробках.
-emozionarsi|волноваться (от чувств)|Mi emoziono sempre ai matrimoni.|Я всегда растрогана на свадьбах.
+emozionarsi|волноваться (от чувств)|Mi emoziono sempre ai matrimoni.|На свадьбах я всегда волнуюсь до слёз.
 commuoversi|растрогаться|Si è commosso alla fine del film.|Он растрогался в конце фильма.
 godersi|наслаждаться|Goditi la vacanza!|Наслаждайся отпуском!
 accomodarsi|располагаться, садиться|Prego, si accomodi!|Прошу, садитесь!
@@ -58,7 +58,6 @@ Altro che!|Ещё бы!|Ti è piaciuto? Altro che!|Тебе понравилос
 Peccato!|Жаль!|Non vieni? Peccato!|Не придёшь? Жаль!
 Senti!|Слушай!|Senti, hai tempo domani?|Слушай, у тебя есть время завтра?
 Guarda!|Смотри!; Слушай...|Guarda, non lo so proprio.|Слушай, я правда не знаю.
-Sai com'è...|Сам знаешь, как бывает...|Sai com'è, il lunedì...|Сам знаешь, как бывает в понедельник...
 come dire|как бы сказать|È, come dire, strano.|Он, как бы сказать, странный.
 diciamo|скажем так|Diciamo che non è il mio tipo.|Скажем так, он не в моём вкусе.
 voglio dire|я имею в виду|Voglio dire, è caro!|Я имею в виду, это дорого!

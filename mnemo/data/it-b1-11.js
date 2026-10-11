@@ -27,7 +27,7 @@ diluviare|лить как из ведра|Fuori diluvia.|На улице льё�
 piovigginare|моросить|Pioviggina da stamattina.|С утра моросит.
 nebbioso|туманный|Una mattina fredda e nebbiosa.|Холодное туманное утро.
 la pozzanghera|лужа|Il bambino salta nelle pozzanghere.|Ребёнок прыгает по лужам.
-bagnarsi|промокнуть|Mi sono bagnato tutto.|Я промок насквозь.
+uggioso|хмурый, унылый (о погоде)|Una giornata grigia e uggiosa.|Серый и хмурый день.
 coprirsi bene|тепло одеться|Copriti bene, fa freddo.|Оденься потеплее, холодно.
 la temperatura massima|максимальная температура|La temperatura massima sarà di trenta gradi.|Максимальная температура — тридцать градусов.
 la temperatura minima|минимальная температура|La minima scende a meno cinque.|Минимальная температура опустится до минус пяти.
