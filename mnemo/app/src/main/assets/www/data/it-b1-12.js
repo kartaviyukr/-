@@ -9,7 +9,6 @@ portare la macchina dal meccanico|отвезти машину к механик�
 riparare la macchina|отремонтировать машину|Quanto costa riparare la macchina?|Сколько стоит отремонтировать машину?
 i pezzi di ricambio|запчасти|Mancano i pezzi di ricambio.|Нет запчастей.
 fa un rumore strano|издаёт странный звук|Il motore fa un rumore strano.|Двигатель издаёт странный звук.
-la marmitta|глушитель|La marmitta fa troppo rumore.|Глушитель слишком шумит.
 il guasto al motore|поломка двигателя|Un guasto al motore ci ha fermati.|Нас остановила поломка двигателя.
 surriscaldarsi|перегреваться|Il motore si surriscalda in salita.|Двигатель перегревается на подъёме.
 il radiatore|радиатор|Il radiatore perde acqua.|Радиатор течёт.
@@ -28,17 +27,14 @@ cambiare l'olio|поменять масло|Devo cambiare l'olio.|Мне нуж�
 il tagliando|плановое ТО|Ho fatto il tagliando a ventimila chilometri.|Я прошёл ТО на двадцати тысячах километров.
 la revisione|техосмотр|La revisione si fa ogni due anni.|Техосмотр проходят раз в два года.
 il contachilometri|одометр, спидометр|Il contachilometri segna centomila.|Пробег — сто тысяч.
-la pressione delle gomme|давление в шинах|Controlla la pressione delle gomme.|Проверь давление в шинах.
 mettere la freccia|включить поворотник|Metti la freccia prima di girare.|Включи поворотник перед поворотом.
 il parabrezza|лобовое стекло|Si è crepato il parabrezza.|Лобовое стекло треснуло.
 le gomme invernali|зимние шины|A novembre metto le gomme invernali.|В ноябре я ставлю зимнюю резину.
-il bollo auto|транспортный налог|Ho pagato il bollo auto.|Я заплатил транспортный налог.
 lo specchietto retrovisore|зеркало заднего вида|Guarda nello specchietto retrovisore.|Посмотри в зеркало заднего вида.
 il paraurti|бампер|Il paraurti è ammaccato.|Бампер помят.
 suonare il clacson|сигналить|Non suonare il clacson di notte.|Не сигналь ночью.
 la portiera|дверь автомобиля|La portiera non si chiude.|Дверь машины не закрывается.
 la carrozzeria|кузов; кузовной ремонт|La carrozzeria è tutta graffiata.|Кузов весь поцарапан.
-il carrozziere|мастер по кузовному ремонту|Il carrozziere sistema l'ammaccatura.|Кузовщик выправит вмятину.
 l'ammaccatura|вмятина|Una piccola ammaccatura sulla portiera.|Небольшая вмятина на двери.
 il tamponamento|столкновение сзади|Un tamponamento al semaforo.|Столкновение на светофоре.
 tamponare|врезаться сзади|Mi ha tamponato un camion.|В меня сзади врезался грузовик.
@@ -150,7 +146,6 @@ presentarsi|представиться|Si presenti brevemente.|Представ�
 fare buona impressione|произвести хорошее впечатление|Voglio fare buona impressione.|Я хочу произвести хорошее впечатление.
 i punti di forza|сильные стороны|Quali sono i suoi punti di forza?|Каковы ваши сильные стороны?
 il punto debole|слабое место|Il mio punto debole è la pazienza.|Моё слабое место — терпение.
-il pregio|достоинство|Ha molti pregi.|У него много достоинств.
 motivato|мотивированный|Cerchiamo persone motivate.|Мы ищем мотивированных людей.
 dinamico|энергичный, активный|Un ambiente giovane e dinamico.|Молодой и динамичный коллектив.
 intraprendente|предприимчивый, инициативный|È una persona intraprendente.|Это инициативный человек.
@@ -159,7 +154,6 @@ lavorare sotto pressione|работать в условиях стресса|Sa 
 disponibile da subito|готов приступить сразу|Sono disponibile da subito.|Я могу приступить сразу.
 la disponibilità a viaggiare|готовность к командировкам|È richiesta la disponibilità a viaggiare.|Требуется готовность к командировкам.
 le aspettative|ожидания|Quali sono le sue aspettative economiche?|Каковы ваши ожидания по зарплате?
-lordo|брутто, до вычета налогов|Trentamila euro lordi all'anno.|Тридцать тысяч евро брутто в год.
 lo stipendio netto|зарплата на руки|Lo stipendio netto è di 1500 euro.|Зарплата на руки — 1500 евро.
 i benefit|льготы, бонусы|Tra i benefit c'è l'auto aziendale.|Среди бонусов есть служебная машина.
 le referenze|рекомендации|Può darci delle referenze?|Можете дать нам рекомендации?
