@@ -467,3 +467,46 @@ button.path-head { width: 100%; text-align: left; }
 .vrow b { font-size: 22px; }
 .vrow span { flex: 1; font-weight: 700; font-size: 14px; }
 .vrow small { font-weight: 600; }
+
+/* Путешествие в Рим */
+.jstrip { display: flex; gap: 10px; align-items: stretch; width: 100%; text-align: left; padding: 12px 12px 12px 16px; margin-bottom: 12px; overflow: hidden; }
+.js-b { flex: 1; display: flex; flex-direction: column; gap: 4px; justify-content: center; min-width: 0; }
+.js-t { font-weight: 900; font-size: 15px; }
+.js-c { font-weight: 800; font-size: 17px; color: var(--ac); }
+.js-c small { display: block; color: var(--tx3); font-size: 12px; font-weight: 700; }
+.js-s { color: var(--tx2); font-size: 13px; font-weight: 600; }
+.js-map { width: 108px; flex: none; }
+.italy { width: 100%; height: auto; display: block; }
+.italy .reg { fill: var(--card2); stroke: var(--line); stroke-width: .7; }
+.italy.big .reg { stroke-width: .5; }
+.jroute { fill: none; stroke: var(--good); stroke-width: 1.4; stroke-dasharray: 3 2.5; opacity: .75; }
+.jd.todo { fill: var(--tx3); opacity: .35; }
+.jd.won { fill: var(--good); stroke: var(--bg); stroke-width: .8; }
+.jd.cur { fill: var(--ac); stroke: #fff; stroke-width: 1.2; }
+.jd-pulse { fill: var(--ac); opacity: .4; transform-box: fill-box; transform-origin: center; animation: jpulse 1.6s ease-out infinite; }
+@keyframes jpulse { from { transform: scale(.6); opacity: .55; } to { transform: scale(2.4); opacity: 0; } }
+.rome circle { fill: #e8b923; stroke: #fff; stroke-width: 1; }
+.rome text { font-size: 9px; fill: #6b4e00; font-weight: 900; }
+.rome.won circle { fill: var(--good); }
+.italy.big [data-act] { cursor: pointer; }
+.jmap { margin: 4px auto 6px; max-width: 460px; }
+.lvl-dot.jcur { background: var(--ac); }
+.pcs { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+.pc { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; text-align: left; padding: 0 0 8px; }
+.pc b, .pc small { display: block; padding: 0 10px; }
+.pc b { margin-top: 7px; font-size: 14px; }
+.pc small { color: var(--tx3); font-size: 12px; }
+.pc-img, .pc-photo { display: block; background: linear-gradient(135deg, #2f6b4f, #c9a227 55%, #b5452b) center / cover no-repeat; }
+.pc-img { aspect-ratio: 4 / 3; }
+.pc-img.none, .pc-photo.none { background: linear-gradient(135deg, #2f6b4f, #c9a227 55%, #b5452b); }
+.pc-modal { padding-top: 0 !important; }
+.postcard { text-align: center; }
+.pc-photo { position: relative; aspect-ratio: 3 / 2; border-radius: 14px; margin: 14px 0 10px; box-shadow: var(--sh); }
+.pc-stamp { position: absolute; right: 8px; top: 8px; background: rgba(255,255,255,.9); border-radius: 8px; padding: 3px 6px; font-size: 20px; }
+.pc-fact { font-size: 17px; line-height: 1.45; font-weight: 600; font-style: italic; margin: 10px 0; }
+.pc-ru { color: var(--tx2); margin-bottom: 10px; }
+.pc-ru summary { color: var(--ac); font-weight: 700; cursor: pointer; margin-bottom: 4px; }
+.won-card { text-align: center; margin: 14px 0; border: 2px solid var(--good); }
+.won-card h2 { margin: 4px 0; }
+.jstrip .pbar { flex: none; margin-top: 4px; }
+.jchip { margin: 2px 0 10px; white-space: normal; text-align: left; } .jchip.won { border-color: var(--good); color: var(--good); }
