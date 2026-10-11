@@ -20,16 +20,16 @@ la conferma d'ordine|подтверждение заказа|Non ho ricevuto la 
 annullare l'ordine|отменить заказ|Posso ancora annullare l'ordine?|Я ещё могу отменить заказ?
 il pagamento|оплата|Il pagamento non è andato a buon fine.|Оплата не прошла.
 pagare alla consegna|платить при получении|Preferisco pagare alla consegna.|Я предпочитаю платить при получении.
-la spedizione|доставка, отправка|La spedizione richiede tre giorni.|Доставка занимает три дня.
+la truffa online|интернет-мошенничество|Attenzione alle truffe online!|Осторожно, интернет-мошенники!
 le spese di spedizione|стоимость доставки|Le spese di spedizione sono care.|Доставка дорогая.
 la spedizione gratuita|бесплатная доставка|Spedizione gratuita sopra i 30 euro.|Бесплатная доставка от 30 евро.
 i tempi di consegna|сроки доставки|Quali sono i tempi di consegna?|Какие сроки доставки?
-il corriere|курьер, курьерская служба|Il corriere è passato, ma non c'ero.|Курьер приходил, но меня не было.
+la consegna a domicilio|доставка на дом|La consegna a domicilio è gratuita.|Доставка на дом бесплатная.
 il numero di tracciamento|трек-номер|Mi mandi il numero di tracciamento?|Пришлёте мне трек-номер?
 tracciare il pacco|отслеживать посылку|Puoi tracciare il pacco online.|Посылку можно отследить онлайн.
 il ritardo nella consegna|задержка доставки|Mi scuso per il ritardo nella consegna.|Извините за задержку доставки.
 il punto di ritiro|пункт выдачи|Ritiro il pacco al punto di ritiro.|Я заберу посылку в пункте выдачи.
-ritirare un pacco|забрать посылку|Devo ritirare un pacco in posta.|Мне нужно забрать посылку на почте.
+le spese di reso|стоимость возврата|Le spese di reso sono a carico del cliente.|Расходы на возврат оплачивает покупатель.
 danneggiato|повреждённый|Il pacco è arrivato danneggiato.|Посылка пришла повреждённой.
 in garanzia|на гарантии|Il telefono è ancora in garanzia.|Телефон ещё на гарантии.
 il reso|возврат товара|Il reso è gratuito entro trenta giorni.|Возврат бесплатный в течение тридцати дней.
@@ -116,51 +116,52 @@ i lacci|шнурки|Hai i lacci slacciati.|У тебя развязались �
 allacciare|завязать, застегнуть|Allacciati le scarpe!|Завяжи шнурки!
 abbottonare|застегнуть на пуговицы|Abbottona il cappotto.|Застегни пальто.
 cambiarsi|переодеться|Vado a cambiarmi per la cena.|Пойду переоденусь к ужину.
-spogliarsi|раздеться|Si è spogliato e ha fatto la doccia.|Он разделся и принял душ.
+sbottonare|расстегнуть|Sbottona la giacca, fa caldo.|Расстегни пиджак, жарко.
 gli orecchini|серьги|Degli orecchini d'oro.|Золотые серьги.
 la collana|ожерелье, цепочка|Una collana di perle.|Жемчужное ожерелье.
 il braccialetto|браслет|Un braccialetto d'argento.|Серебряный браслет.
 l'anello|кольцо|Un anello con un diamante.|Кольцо с бриллиантом.
 `},
-{ lang: 'it', id: 'it-b1-symptoms', level: 'B1', emoji: '🤒', title: 'Симптомы и недомогания', desc: 'Как рассказать, что болит.', cards: `
-sentirsi male|плохо себя чувствовать|Mi sento male da stamattina.|Мне плохо с самого утра.
+{ lang: 'it', id: 'it-b1-symptoms', level: 'B1', emoji: '🤒', title: 'Здоровье: симптомы и лечение', desc: 'Как рассказать, что болит, и как лечиться.', cards: `
 sentirsi debole|чувствовать слабость|Dopo l'influenza mi sento debole.|После гриппа я чувствую слабость.
 stanco morto|смертельно уставший|Stasera sono stanco morto.|Сегодня вечером я смертельно устал.
 fare male|болеть, причинять боль|Mi fa male la schiena.|У меня болит спина.
 il mal di schiena|боль в спине|Soffro di mal di schiena.|Я страдаю от болей в спине.
-il mal di denti|зубная боль|Ho un terribile mal di denti.|У меня ужасно болит зуб.
 il mal d'orecchi|боль в ухе|Il bambino ha il mal d'orecchi.|У ребёнка болит ухо.
 avere la febbre|иметь температуру|Ho la febbre a trentotto.|У меня температура тридцать восемь.
 prendere il raffreddore|простудиться|Ho preso il raffreddore al mare.|Я простудился на море.
 raffreddarsi|простыть|Copriti, sennò ti raffreddi.|Оденься, а то простынешь.
-il naso chiuso|заложенный нос|Ho il naso chiuso e non dormo.|У меня заложен нос, и я не сплю.
 il naso che cola|насморк, текущий нос|Ho il naso che cola.|У меня течёт из носа.
 soffiarsi il naso|высморкаться|Soffiati il naso!|Высморкайся!
 lo starnuto|чих|Un forte starnuto.|Громкий чих.
-la nausea|тошнота|In macchina ho la nausea.|В машине меня тошнит.
-vomitare|рвать, тошнить|Ha vomitato tutta la notte.|Его рвало всю ночь.
-la diarrea|диарея, понос|Ha la diarrea da due giorni.|У него диарея уже два дня.
-il bruciore di stomaco|изжога|Il caffè mi dà bruciore di stomaco.|От кофе у меня изжога.
 avere le vertigini|испытывать головокружение|Quando mi alzo ho le vertigini.|Когда я встаю, у меня кружится голова.
-svenire|упасть в обморок|È svenuta per il caldo.|Она потеряла сознание от жары.
 avere il fiatone|задыхаться, запыхаться|Dopo le scale ho il fiatone.|После лестницы я запыхался.
 la pressione alta|высокое давление|Mio padre ha la pressione alta.|У моего отца высокое давление.
-dormire male|плохо спать|Ultimamente dormo male.|В последнее время я плохо сплю.
-il prurito|зуд|Ho un prurito fastidioso.|У меня неприятный зуд.
-prudere|чесаться|Mi prude il braccio.|У меня чешется рука.
 la puntura d'insetto|укус насекомого|Una puntura d'insetto sulla gamba.|Укус насекомого на ноге.
-il polline|пыльца|Sono allergico al polline.|У меня аллергия на пыльцу.
 gonfio|опухший|Ho la caviglia gonfia.|У меня опухла лодыжка.
 il livido|синяк|Ho un livido sul ginocchio.|У меня синяк на колене.
 il graffio|царапина|È solo un graffio.|Это всего лишь царапина.
-tagliarsi|порезаться|Mi sono tagliato con il coltello.|Я порезался ножом.
-sanguinare|кровоточить|Il dito sanguina.|Палец кровоточит.
-bruciarsi|обжечься|Mi sono bruciata con il forno.|Я обожглась о духовку.
-la scottatura|ожог (в т.ч. солнечный)|Ho una scottatura sulle spalle.|У меня солнечный ожог на плечах.
 slogarsi la caviglia|подвернуть лодыжку|Mi sono slogato la caviglia correndo.|Я подвернул лодыжку на пробежке.
 rompersi una gamba|сломать ногу|Si è rotto una gamba sciando.|Он сломал ногу на лыжах.
-la frattura|перелом|Una frattura al polso.|Перелом запястья.
 zoppicare|хромать|Perché zoppichi?|Почему ты хромаешь?
 ammalarsi|заболеть|Mi ammalo ogni inverno.|Я болею каждую зиму.
+fissare un appuntamento|записаться на приём|Ho fissato un appuntamento dal medico.|Я записался к врачу.
+fare un controllo|пройти обследование, проверку|Faccio un controllo ogni anno.|Я прохожу обследование каждый год.
+gli effetti collaterali|побочные эффекты|Ci sono effetti collaterali?|Есть побочные эффекты?
+fare una puntura|сделать укол|L'infermiere mi ha fatto una puntura.|Медбрат сделал мне укол.
+vaccinarsi|сделать прививку|Mi sono vaccinato contro l'influenza.|Я сделал прививку от гриппа.
+disinfettare|дезинфицировать, обработать|Disinfetta la ferita con l'alcol.|Обработай рану спиртом.
+mettere il ghiaccio|приложить лёд|Metti il ghiaccio sulla caviglia.|Приложи лёд к лодыжке.
+i punti (di sutura)|швы|Mi hanno dato tre punti.|Мне наложили три шва.
+il gesso (medico)|гипс|Ha il braccio nel gesso.|У него рука в гипсе.
+la fisioterapia|физиотерапия, лечебная физкультура|Faccio fisioterapia per il ginocchio.|Я делаю лечебную физкультуру для колена.
+l'operazione (chirurgica)|операция|L'operazione è andata bene.|Операция прошла хорошо.
+operare|оперировать|Lo operano domani.|Его прооперируют завтра.
+ricoverare|госпитализировать|L'hanno ricoverata in ospedale.|Её госпитализировали.
+stare a riposo|соблюдать покой|Il medico dice di stare a riposo.|Врач говорит соблюдать покой.
+mettersi in malattia|взять больничный|Mi sono messo in malattia per tre giorni.|Я взял больничный на три дня.
+rimettersi|поправиться|Si è rimesso in pochi giorni.|Он поправился за несколько дней.
+la carie|кариес|Ho una carie al dente.|У меня кариес на зубе.
+l'otturazione|пломба|Il dentista mi ha fatto un'otturazione.|Стоматолог поставил мне пломбу.
 `}
 );

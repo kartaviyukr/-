@@ -7,7 +7,6 @@ cattolico|католический, католик|L'Italia è un paese cattolic
 ortodosso|православный|Il Natale ortodosso è il 7 gennaio.|Православное Рождество — 7 января.
 protestante|протестантский, протестант|Una chiesa protestante.|Протестантская церковь.
 musulmano|мусульманский, мусульманин|La comunità musulmana della città.|Мусульманская община города.
-ebreo|еврейский, еврей|Il quartiere ebreo di Roma.|Еврейский квартал Рима.
 spirituale|духовный|Una persona molto spirituale.|Очень духовный человек.
 sacro|священный|Un luogo sacro.|Священное место.
 la messa|месса, церковная служба|La messa comincia alle dieci.|Месса начинается в десять.
@@ -41,7 +40,6 @@ il giorno dei morti|День поминовения усопших (2 ноябр
 il giorno festivo|праздничный, выходной день|Domenica è un giorno festivo.|Воскресенье — выходной день.
 il giorno feriale|рабочий день, будний день|L'orario dei giorni feriali.|Расписание по будним дням.
 Babbo Natale|Дед Мороз, Санта-Клаус|Babbo Natale porta i regali.|Дед Мороз приносит подарки.
-il Ramadan|Рамадан|Durante il Ramadan digiunano di giorno.|Во время Рамадана постятся днём.
 `},
 { lang: 'it', id: 'it-b1-geo', level: 'B1', emoji: '🗺️', title: 'Регионы и география Италии', desc: 'Север и юг, горы, моря и города.', cards: `
 settentrionale|северный|L'Italia settentrionale è molto industriale.|Северная Италия очень промышленная.
@@ -125,7 +123,6 @@ la fondazione|основание|La fondazione della città.|Основание 
 liberare|освобождать|Hanno liberato la città nel 1945.|Город освободили в 1945 году.
 l'emigrazione|эмиграция|L'emigrazione verso l'America.|Эмиграция в Америку.
 emigrare|эмигрировать|Molti italiani sono emigrati in Argentina.|Многие итальянцы эмигрировали в Аргентину.
-la lapide|мемориальная доска, надгробная плита|Una lapide ricorda i caduti.|Мемориальная доска напоминает о павших.
 `},
 { lang: 'it', id: 'it-b1-opinions', level: 'B1', emoji: '💬', title: 'Мнение и спор', desc: 'Как выразить мнение, согласие и несогласие.', cards: `
 secondo me|по-моему|Secondo me hai ragione.|По-моему, ты прав.
@@ -138,7 +135,6 @@ ritengo che|я считаю, что|Ritengo che sia una scelta sbagliata.|Я с�
 sono convinto che|я убеждён, что|Sono convinto che andrà bene.|Я убеждён, что всё будет хорошо.
 sono d'accordo|я согласен|Sono d'accordo con te.|Я согласен с тобой.
 non sono d'accordo|я не согласен|Non sono d'accordo per niente.|Я совсем не согласен.
-hai ragione|ты прав|Hai ragione, scusa.|Ты прав, извини.
 hai torto|ты неправ|Questa volta hai torto.|На этот раз ты неправ.
 non è vero|это неправда|Non è vero, non l'ho detto!|Неправда, я этого не говорил!
 proprio così|именно так|— Era lui? — Proprio così.|— Это был он? — Именно так.
@@ -162,7 +158,6 @@ insomma|в общем, короче|Insomma, cosa vuoi fare?|Короче, чт�
 per esempio|например|Prendi la frutta, per esempio le mele.|Возьми фрукты, например яблоки.
 innanzitutto|прежде всего|Innanzitutto, grazie a tutti.|Прежде всего спасибо всем.
 in conclusione|в заключение|In conclusione, la proposta è buona.|В заключение: предложение хорошее.
-chissà|кто знает|Chissà se verrà.|Кто знает, придёт ли он.
 senz'altro|непременно, безусловно|Verrò senz'altro.|Я непременно приду.
 è chiaro|ясно, понятно|È chiaro che non vuole venire.|Ясно, что он не хочет приходить.
 non ha senso|это не имеет смысла|Non ha senso aspettare.|Нет смысла ждать.

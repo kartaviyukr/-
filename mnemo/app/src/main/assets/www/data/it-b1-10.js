@@ -1,48 +1,46 @@
 (window.MNEMO_DECKS = window.MNEMO_DECKS || []).push(
-{ lang: 'it', id: 'it-b1-treatment', level: 'B1', emoji: '💊', title: 'Лечение и обследования', desc: 'Врачи, анализы, лекарства и выздоровление.', cards: `
-fissare un appuntamento|записаться на приём|Ho fissato un appuntamento dal medico.|Я записался к врачу.
-la visita medica|медицинский осмотр|Domani ho la visita medica.|Завтра у меня медосмотр.
-fare un controllo|пройти обследование, проверку|Faccio un controllo ogni anno.|Я прохожу обследование каждый год.
-lo specialista|врач-специалист|Il medico mi ha mandato dallo specialista.|Врач направил меня к специалисту.
-l'oculista|окулист|Devo andare dall'oculista.|Мне нужно к окулисту.
-le analisi del sangue|анализ крови|Le analisi del sangue sono a posto.|Анализ крови в порядке.
-la radiografia|рентген|Mi hanno fatto una radiografia al braccio.|Мне сделали рентген руки.
-l'ecografia|УЗИ|L'ecografia è andata bene.|УЗИ прошло хорошо.
-misurare la pressione|измерить давление|L'infermiera mi misura la pressione.|Медсестра измеряет мне давление.
-il battito|пульс, сердцебиение|Il battito è regolare.|Пульс ровный.
-il termometro|градусник|Dov'è il termometro?|Где градусник?
-curare|лечить|Questa malattia si cura facilmente.|Эту болезнь легко вылечить.
-la pillola|таблетка|Prendi una pillola dopo cena.|Прими таблетку после ужина.
-la compressa|таблетка (офиц.)|Una compressa due volte al giorno.|Одна таблетка два раза в день.
-due volte al giorno|два раза в день|Prendo lo sciroppo due volte al giorno.|Я пью сироп два раза в день.
-a stomaco vuoto|натощак|Da prendere a stomaco vuoto.|Принимать натощак.
-il foglietto illustrativo|инструкция к лекарству|Leggi il foglietto illustrativo.|Прочитай инструкцию к лекарству.
-gli effetti collaterali|побочные эффекты|Ci sono effetti collaterali?|Есть побочные эффекты?
-l'aspirina|аспирин|Ho preso un'aspirina.|Я выпил аспирин.
-il paracetamolo|парацетамол|Il paracetamolo abbassa la febbre.|Парацетамол сбивает температуру.
-la pomata|мазь|Metti la pomata due volte al giorno.|Наноси мазь два раза в день.
-le gocce|капли|Le gocce per gli occhi.|Глазные капли.
-lo spray nasale|спрей для носа|Uso lo spray nasale per il raffreddore.|При насморке я пользуюсь спреем для носа.
-la farmacia di turno|дежурная аптека|Di notte c'è la farmacia di turno.|Ночью работает дежурная аптека.
-fare una puntura|сделать укол|L'infermiere mi ha fatto una puntura.|Медбрат сделал мне укол.
-vaccinarsi|сделать прививку|Mi sono vaccinato contro l'influenza.|Я сделал прививку от гриппа.
-disinfettare|дезинфицировать, обработать|Disinfetta la ferita con l'alcol.|Обработай рану спиртом.
-la garza|марля, бинт|Copri la ferita con una garza.|Закрой рану марлей.
-mettere il ghiaccio|приложить лёд|Metti il ghiaccio sulla caviglia.|Приложи лёд к лодыжке.
-i punti (di sutura)|швы|Mi hanno dato tre punti.|Мне наложили три шва.
-il gesso (medico)|гипс|Ha il braccio nel gesso.|У него рука в гипсе.
-le stampelle|костыли|Cammina con le stampelle.|Он ходит на костылях.
-la fisioterapia|физиотерапия, лечебная физкультура|Faccio fisioterapia per il ginocchio.|Я делаю лечебную физкультуру для колена.
-l'operazione (chirurgica)|операция|L'operazione è andata bene.|Операция прошла хорошо.
-operare|оперировать|Lo operano domani.|Его прооперируют завтра.
-ricoverare|госпитализировать|L'hanno ricoverata in ospedale.|Её госпитализировали.
-stare a riposo|соблюдать покой|Il medico dice di stare a riposo.|Врач говорит соблюдать покой.
-mettersi in malattia|взять больничный|Mi sono messo in malattia per tre giorni.|Я взял больничный на три дня.
-il certificato medico|медицинская справка|Serve il certificato medico per la palestra.|Для спортзала нужна медицинская справка.
-sentirsi meglio|чувствовать себя лучше|Oggi mi sento meglio.|Сегодня я чувствую себя лучше.
-rimettersi|поправиться|Si è rimesso in pochi giorni.|Он поправился за несколько дней.
-la carie|кариес|Ho una carie al dente.|У меня кариес на зубе.
-l'otturazione|пломба|Il dentista mi ha fatto un'otturazione.|Стоматолог поставил мне пломбу.
+{ lang: 'it', id: 'it-b1-kids', level: 'B1', emoji: '🛝', title: 'Дети: игры, школа, подростки', desc: 'Детская жизнь глазами родителей.', cards: `
+il bimbo|малыш|Il bimbo dorme finalmente.|Малыш наконец спит.
+il fratellino|младший братик|Ho un fratellino di due anni.|У меня есть двухлетний братик.
+la sorellina|младшая сестрёнка|La mia sorellina va all'asilo.|Моя сестрёнка ходит в садик.
+il primogenito|первенец|Il primogenito si chiama Marco.|Первенца зовут Марко.
+badare ai bambini|присматривать за детьми|Mia madre bada ai bambini il martedì.|По вторникам за детьми присматривает моя мама.
+il seggiolino auto|детское автокресло|Il bambino viaggia nel seggiolino auto.|Ребёнок ездит в автокресле.
+il secondogenito|второй ребёнок|Il secondogenito è più tranquillo.|Второй ребёнок спокойнее.
+la bambola|кукла|La bambina gioca con la bambola.|Девочка играет с куклой.
+le macchinine|игрушечные машинки|Colleziona macchinine.|Он собирает игрушечные машинки.
+la cameretta|детская комната|Metti in ordine la cameretta!|Убери в детской!
+il compagno di giochi|друг по играм|È il suo compagno di giochi preferito.|Это его любимый товарищ по играм.
+il peluche|мягкая игрушка|Dorme con il suo peluche.|Он спит со своей мягкой игрушкой.
+le costruzioni|конструктор|Giochiamo con le costruzioni.|Давай поиграем в конструктор.
+il vasino|детский горшок|Ha imparato a usare il vasino.|Он научился ходить на горшок.
+i primi passi|первые шаги|Ha fatto i primi passi a un anno.|Он сделал первые шаги в год.
+colorare|раскрашивать|Ai bambini piace colorare.|Детям нравится раскрашивать.
+i pastelli|цветные карандаши|Una scatola di pastelli.|Коробка цветных карандашей.
+i cartoni animati|мультфильмы|Guarda i cartoni animati la mattina.|Он смотрит мультики по утрам.
+la ludoteca|игровая комната, детский клуб|Lo porto in ludoteca il sabato.|По субботам я вожу его в детский клуб.
+le prime parole|первые слова|Le sue prime parole sono state «papà».|Его первые слова были «папа».
+il doposcuola|продлёнка|Dopo pranzo va al doposcuola.|После обеда он идёт на продлёнку.
+il centro estivo|летний лагерь (дневной)|D'estate va al centro estivo.|Летом он ходит в летний лагерь.
+il diario scolastico|школьный дневник|Scrivi i compiti sul diario scolastico.|Запиши задание в дневник.
+la recita scolastica|школьный спектакль|Mia figlia fa l'albero nella recita scolastica.|Моя дочь играет дерево в школьном спектакле.
+i colloqui con i genitori|родительские встречи с учителями|Domani ci sono i colloqui con i genitori.|Завтра встреча родителей с учителями.
+il rappresentante di classe|представитель класса (от родителей)|Sono il rappresentante di classe.|Я представитель родителей класса.
+il bullismo|травля, буллинг|La scuola lotta contro il bullismo.|Школа борется с травлей.
+il bullo|задира, хулиган|Un bullo lo prende in giro.|Один задира над ним издевается.
+la gelosia tra fratelli|ревность между братьями и сёстрами|La gelosia tra fratelli è normale.|Ревность между детьми — это нормально.
+la timidezza|застенчивость|Ha superato la timidezza.|Он преодолел застенчивость.
+diventare grande|вырасти, повзрослеть|Quando divento grande faccio il pilota.|Когда вырасту, стану пилотом.
+la pubertà|половое созревание|È entrato nella pubertà.|У него начался переходный возраст.
+l'adolescenza|подростковый возраст|L'adolescenza è un periodo difficile.|Подростковый возраст — трудный период.
+uscire con gli amici|гулять с друзьями|Il sabato esce con gli amici.|По субботам он гуляет с друзьями.
+l'ora di rientro|время возвращения домой|L'ora di rientro è mezzanotte.|Вернуться домой нужно к полуночи.
+rientrare a casa|возвращаться домой|A che ora rientri a casa?|Во сколько ты вернёшься домой?
+il coprifuoco|комендантский час (для подростка)|Ho il coprifuoco alle undici.|Мне нужно быть дома к одиннадцати.
+la punizione|наказание|Per punizione niente telefono.|В наказание — никакого телефона.
+il tempo davanti agli schermi|время перед экраном|Limitiamo il tempo davanti agli schermi.|Мы ограничиваем время перед экраном.
+la dipendenza dal telefono|зависимость от телефона|Ha la dipendenza dal telefono.|У него зависимость от телефона.
+dare l'esempio|подавать пример|I genitori devono dare l'esempio.|Родители должны подавать пример.
 `},
 { lang: 'it', id: 'it-b1-fitness', level: 'B1', emoji: '🏋️', title: 'Спорт и фитнес', desc: 'Тренировки, форма, соревнования.', cards: `
 fare palestra|ходить в спортзал|Faccio palestra tre volte a settimana.|Я хожу в спортзал три раза в неделю.
@@ -76,7 +74,7 @@ perdere peso|похудеть|Ha perso cinque chili di peso.|Он похудел
 i muscoli|мышцы|Mi fanno male i muscoli.|У меня болят мышцы.
 muscoloso|мускулистый|È alto e muscoloso.|Он высокий и мускулистый.
 il sudore|пот|Era coperto di sudore.|Он был весь в поту.
-stancarsi|уставать|Mi stanco subito in salita.|Я быстро устаю на подъёме.
+fare flessioni|отжиматься|Ogni mattina faccio venti flessioni.|Каждое утро я отжимаюсь двадцать раз.
 l'infortunio|спортивная травма|Ha avuto un infortunio al ginocchio.|У него травма колена.
 infortunarsi|получить травму|Si è infortunato durante la partita.|Он травмировался во время матча.
 lo strappo muscolare|растяжение мышцы|Ho uno strappo muscolare.|У меня растяжение мышцы.

@@ -34,12 +34,9 @@ pentirsi|раскаиваться, жалеть|Mi sono pentito di averlo detto.
 innamorato|влюблённый|È innamorato di lei.|Он влюблён в неё.
 l'affetto|привязанность, нежность|Le voglio bene, provo molto affetto.|Я её люблю, испытываю к ней большую привязанность.
 la tenerezza|нежность|Guarda il bambino con tenerezza.|Он смотрит на ребёнка с нежностью.
-l'odio|ненависть|L'odio non risolve niente.|Ненависть ничего не решает.
 non sopportare|не выносить|Non sopporto la gente maleducata.|Терпеть не могу невоспитанных людей.
-il fastidio|раздражение, неудобство|Questo rumore mi dà fastidio.|Этот шум меня раздражает.
 infastidito|раздражённый, недовольный|Mi sembri infastidito.|Ты, кажется, недоволен.
 la risata|смех|Abbiamo fatto una bella risata.|Мы от души посмеялись.
-il pianto|плач|È scoppiata in pianto.|Она расплакалась.
 sfogarsi|выговориться, дать выход чувствам|Ho bisogno di sfogarmi con qualcuno.|Мне нужно кому-нибудь выговориться.
 consolare|утешать|Ho cercato di consolarla.|Я пытался её утешить.
 avere il cuore spezzato|иметь разбитое сердце|Dopo la separazione ha il cuore spezzato.|После расставания у него разбито сердце.
@@ -63,7 +60,6 @@ le guance|щёки|Il bambino ha le guance rosse.|У ребёнка красны
 la fossetta|ямочка|Quando sorride ha le fossette.|Когда она улыбается, у неё ямочки.
 il naso a punta|острый нос|Un signore con il naso a punta.|Господин с острым носом.
 le orecchie a sventola|оттопыренные уши|Da piccolo avevo le orecchie a sventola.|В детстве у меня были оттопыренные уши.
-il doppio mento|двойной подбородок|Ha un po' di doppio mento.|У него небольшой двойной подбородок.
 la carnagione|цвет лица, кожи|Ha la carnagione chiara.|У неё светлая кожа.
 abbronzato|загорелый|Torni dal mare tutto abbronzato!|Ты вернулся с моря весь загорелый!
 pallido|бледный|Sei pallido, stai bene?|Ты бледный, ты в порядке?
@@ -107,8 +103,6 @@ sperduto|затерянный, отдалённый|Un paesino sperduto tra i mo
 isolato|изолированный, уединённый|Una casa isolata in campagna.|Уединённый дом в деревне.
 raggiungibile|доступный (по транспорту)|Il paese è raggiungibile in autobus.|До городка можно доехать на автобусе.
 periferico|окраинный|Un quartiere periferico.|Окраинный район.
-soleggiato|солнечный|Una terrazza soleggiata.|Солнечная терраса.
-ventoso|ветреный|Una città molto ventosa.|Очень ветреный город.
 all'ombra|в тени|Sediamoci all'ombra.|Сядем в тени.
 il vicolo|переулок|Ci siamo persi nei vicoli.|Мы заблудились в переулках.
 la stradina|улочка|Una stradina stretta e in salita.|Узкая улочка, идущая в гору.
@@ -116,6 +110,9 @@ il viale|бульвар, проспект|Un viale alberato.|Бульвар, о�
 la piazzetta|маленькая площадь|Ci vediamo nella piazzetta.|Встретимся на маленькой площади.
 il lungomare|набережная (у моря)|Passeggiamo sul lungomare.|Гуляем по набережной.
 il belvedere|смотровая площадка|Dal belvedere si vede tutta la città.|Со смотровой площадки виден весь город.
+i portici|аркады, портики (галереи вдоль улиц)|A Bologna si cammina sotto i portici.|В Болонье ходят под аркадами.
+la scalinata|широкая лестница (на улице)|Ci sediamo sulla scalinata della chiesa.|Мы садимся на ступени церкви.
+il porticciolo|маленький порт, гавань|Le barche nel porticciolo.|Лодки в маленькой гавани.
 con vista mare|с видом на море|Una camera con vista mare.|Номер с видом на море.
 immerso nel verde|утопающий в зелени|Un agriturismo immerso nel verde.|Агротуризм, утопающий в зелени.
 circondato da|окружённый|Un lago circondato da montagne.|Озеро, окружённое горами.
@@ -141,7 +138,6 @@ piuttosto che|скорее чем, вместо|Piuttosto che uscire, preferisco
 al posto di|вместо|Vado io al posto tuo.|Я пойду вместо тебя.
 addirittura|даже, прямо-таки|Ha addirittura pianto.|Он даже заплакал.
 persino|даже|Persino il nonno balla.|Даже дедушка танцует.
-almeno|по крайней мере, хотя бы|Chiamami almeno una volta.|Позвони мне хотя бы раз.
 specialmente|особенно|Mi piace l'estate, specialmente agosto.|Я люблю лето, особенно август.
 in pratica|на практике, по сути|In pratica, non è cambiato niente.|По сути, ничего не изменилось.
 in genere|обычно, как правило|In genere mi alzo alle sette.|Обычно я встаю в семь.
@@ -164,10 +160,7 @@ attualmente|в настоящее время|Attualmente lavoro a Bologna.|В н
 oggigiorno|в наше время|Oggigiorno tutti hanno uno smartphone.|В наше время у всех есть смартфон.
 in futuro|в будущем|In futuro vorrei vivere al mare.|В будущем я хотел бы жить у моря.
 a breve|в ближайшее время|Le risponderemo a breve.|Мы ответим вам в ближайшее время.
-contemporaneamente|одновременно|Non posso fare due cose contemporaneamente.|Я не могу делать два дела одновременно.
-nel giro di|в течение, за (срок)|Nel giro di un anno è cambiato tutto.|За год всё изменилось.
 man mano|постепенно, по мере|Man mano imparo le parole nuove.|Постепенно я учу новые слова.
 pian piano|потихоньку, постепенно|Pian piano mi sto abituando.|Потихоньку я привыкаю.
-sempre meno|всё меньше|Ho sempre meno tempo libero.|У меня всё меньше свободного времени.
 `}
 );

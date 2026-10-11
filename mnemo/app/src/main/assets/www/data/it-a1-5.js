@@ -140,8 +140,8 @@ Ci sentiamo!|Созвонимся!, На связи!|Ci sentiamo domani!|Соз�
 Davvero?|Правда?|Davvero? Non lo sapevo.|Правда? Я не знал.
 Anch'io.|Я тоже.|Amo il mare. Anch'io!|Я люблю море. Я тоже!
 Neanch'io.|И я нет; я тоже нет.|Non ho fame. Neanch'io.|Я не голоден. И я нет.
-Che fai di bello?|Что хорошего делаешь?|Che fai di bello stasera?|Чем займёшься сегодня вечером?
-Hai programmi per il weekend?|Есть планы на выходные?|Hai programmi per il weekend?|Есть планы на выходные?
+Che fai di bello?|Чем занимаешься?, Какие планы?|Che fai di bello stasera?|Чем займёшься сегодня вечером?
+Hai programmi per il weekend?|Есть планы на выходные?|Allora, hai programmi per il weekend?|Ну что, есть планы на выходные?
 Da quanto tempo!|Сколько лет, сколько зим!|Ciao Luca! Da quanto tempo!|Привет, Лука! Сто лет не виделись!
 Alla prossima!|До следующего раза!|Ciao a tutti, alla prossima!|Всем пока, до следующего раза!
 Buon viaggio!|Счастливого пути!|Parti domani? Buon viaggio!|Уезжаешь завтра? Счастливого пути!

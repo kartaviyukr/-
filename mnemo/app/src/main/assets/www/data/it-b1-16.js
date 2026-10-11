@@ -40,8 +40,6 @@ citare|цитировать|Mi piace citare i proverbi.|Мне нравится 
 la dedica|посвящение, дарственная надпись|Il libro ha una dedica alla madre.|В книге посвящение матери.
 la fiera del libro|книжная ярмарка|Alla fiera del libro c'è tanta gente.|На книжной ярмарке много людей.
 il riassunto|краткое содержание, конспект|Fai un riassunto del capitolo.|Сделай краткое содержание главы.
-l'indice|оглавление, указатель|Guarda l'indice alla fine.|Посмотри оглавление в конце.
-la prefazione|предисловие|La prefazione è dell'autore.|Предисловие написал автор.
 `},
 { lang: 'it', id: 'it-b1-music', level: 'B1', emoji: '🎸', title: 'Музыка и концерты', desc: 'Инструменты, жанры и живые выступления.', cards: `
 il cantante|певец|Il cantante ha una voce bellissima.|У певца прекрасный голос.
@@ -84,7 +82,6 @@ la playlist|плейлист|Ho fatto una playlist per il viaggio.|Я сдела
 alzare il volume|прибавить громкость|Alza il volume, mi piace!|Сделай погромче, мне нравится!
 il karaoke|караоке|Venerdì andiamo al karaoke.|В пятницу идём в караоке.
 la registrazione|запись|La registrazione del disco è durata un mese.|Запись диска заняла месяц.
-la serenata|серенада|Le ha fatto una serenata sotto la finestra.|Он спел ей серенаду под окном.
 `},
 { lang: 'it', id: 'it-b1-museum', level: 'B1', emoji: '🖼️', title: 'Искусство и музеи', desc: 'Выставки, картины и архитектура.', cards: `
 l'arte|искусство|Mi interesso di arte.|Я интересуюсь искусством.
@@ -142,7 +139,6 @@ le stelle filanti|серпантин|Coriandoli e stelle filanti dappertutto.|П
 il carro allegorico|карнавальная платформа|I carri allegorici di Viareggio.|Карнавальные платформы Виареджо.
 sfilare|шествовать, проходить парадом|I carri sfilano sul lungomare.|Платформы проходят по набережной.
 le chiacchiere|хворост (карнавальное печенье)|A Carnevale mangiamo le chiacchiere.|На Карнавал мы едим хворост.
-le frittelle|пончики, оладьи (сладкие)|Le frittelle di Carnevale.|Карнавальные пончики.
 il palio|палио, старинные скачки|Il Palio di Siena si corre a luglio.|Палио в Сиене проходит в июле.
 la rievocazione storica|историческая реконструкция|Una rievocazione storica medievale.|Средневековая историческая реконструкция.
 il folclore|фольклор|Musica e folclore locale.|Музыка и местный фольклор.
