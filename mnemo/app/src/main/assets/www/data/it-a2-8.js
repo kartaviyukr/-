@@ -76,7 +76,7 @@ dormire male|плохо спать|Ultimamente dormo male.|В последнее
 sentirsi meglio|чувствовать себя лучше|Oggi mi sento meglio.|Сегодня мне лучше.
 sentirsi male|плохо себя чувствовать|Mi sento male, vado a casa.|Мне плохо, я иду домой.
 Sto male.|Мне плохо.|Dottore, sto male da tre giorni.|Доктор, мне плохо уже три дня.
-il gesso|гипс|Ho il braccio nel gesso.|У меня рука в гипсе.
+la guardia medica|дежурная врачебная служба (ночью и в выходные)|Di notte chiamo la guardia medica.|Ночью я звоню в дежурную врачебную службу.
 le stampelle|костыли|Cammino con le stampelle.|Я хожу на костылях.
 la frattura|перелом|Una frattura alla gamba.|Перелом ноги.
 slogarsi|вывихнуть|Mi sono slogato il polso.|Я вывихнул запястье.
