@@ -146,7 +146,6 @@ work of art|произведение искусства|This vase is a real work
 oil painting|картина маслом|It's an oil painting from 1850.|Это картина маслом 1850 года.
 watercolour|акварель|She paints in watercolour.|Она рисует акварелью.
 landscape painting|пейзаж (картина)|I prefer landscape paintings.|Я предпочитаю пейзажи.
-still life|натюрморт|There's a still life with fruit.|Там натюрморт с фруктами.
 sketch|набросок, эскиз|These are sketches for a bigger painting.|Это эскизы к большой картине.
 frame|рама|The painting has a gold frame.|У картины золотая рама.
 painter|художник|Who is your favourite painter?|Кто твой любимый художник?
