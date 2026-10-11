@@ -15,7 +15,7 @@ cynosure|центр внимания|The cynosure of all eyes.
 debacle|разгром, полный провал|The election was a debacle.
 desuetude|неупотребительность|Laws fallen into desuetude.
 detritus|обломки, мусор|The detritus of the party.
-dissonance (cognitive)|диссонанс, противоречие|Cognitive dissonance.
+nonentity|ничтожество, пустое место|A political nonentity.
 egress|выход|A means of egress.
 ennui|скука, тоска|The ennui of suburban life.
 epiphany|прозрение, озарение|She had an epiphany.

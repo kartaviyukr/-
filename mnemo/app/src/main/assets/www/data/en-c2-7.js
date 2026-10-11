@@ -123,7 +123,7 @@ salience|значимость, выпуклость|The salience of the issue.
 problematise|проблематизировать|Problematise the concept of race.
 interrogate (a text)|критически анализировать|Interrogate assumptions.
 foreground|выдвигать на первый план|The study foregrounds gender.
-elide (a distinction)|стирать (различие)|This view elides important differences.
+valorise|придавать ценность, превозносить|The text valorises rural life.
 ex hypothesi|по предположению, по условию|Ex hypothesi, the model is correct.
 adduce|приводить (доводы, доказательства)|Evidence adduced in support.
 explicate|разъяснять, толковать|Explicate a theory.
