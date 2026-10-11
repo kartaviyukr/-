@@ -475,18 +475,19 @@ button.path-head { width: 100%; text-align: left; }
 .js-c { font-weight: 800; font-size: 17px; color: var(--ac); }
 .js-c small { display: block; color: var(--tx3); font-size: 12px; font-weight: 700; }
 .js-s { color: var(--tx2); font-size: 13px; font-weight: 600; }
-.js-map { width: 108px; flex: none; }
+.js-map { width: 108px; flex: none; align-self: center; }
+.js-map.en { width: 140px; }
 .italy { width: 100%; height: auto; display: block; }
-.italy .reg { fill: var(--card2); stroke: var(--line); stroke-width: .7; }
-.italy.big .reg { stroke-width: .5; }
-.jroute { fill: none; stroke: var(--good); stroke-width: 1.4; stroke-dasharray: 3 2.5; opacity: .75; }
+.italy .reg { fill: var(--card2); stroke: var(--line); stroke-width: calc(.7px * var(--s, 1)); }
+.italy.big .reg { stroke-width: calc(.5px * var(--s, 1)); }
+.jroute { fill: none; stroke: var(--good); stroke-width: calc(1.4px * var(--s, 1)); stroke-dasharray: calc(3px * var(--s, 1)) calc(2.5px * var(--s, 1)); opacity: .75; }
 .jd.todo { fill: var(--tx3); opacity: .35; }
-.jd.won { fill: var(--good); stroke: var(--bg); stroke-width: .8; }
-.jd.cur { fill: var(--ac); stroke: #fff; stroke-width: 1.2; }
+.jd.won { fill: var(--good); stroke: var(--bg); stroke-width: calc(.8px * var(--s, 1)); }
+.jd.cur { fill: var(--ac); stroke: #fff; stroke-width: calc(1.2px * var(--s, 1)); }
 .jd-pulse { fill: var(--ac); opacity: .4; transform-box: fill-box; transform-origin: center; animation: jpulse 1.6s ease-out infinite; }
 @keyframes jpulse { from { transform: scale(.6); opacity: .55; } to { transform: scale(2.4); opacity: 0; } }
 .rome circle { fill: #e8b923; stroke: #fff; stroke-width: 1; }
-.rome text { font-size: 9px; fill: #6b4e00; font-weight: 900; }
+.rome text { fill: #6b4e00; font-weight: 900; }
 .rome.won circle { fill: var(--good); }
 .italy.big [data-act] { cursor: pointer; }
 .jmap { margin: 4px auto 6px; max-width: 460px; }

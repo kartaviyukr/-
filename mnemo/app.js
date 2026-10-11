@@ -650,7 +650,7 @@ function deckRow(d) {
   return `<button class="deck" data-act="open-deck" data-id="${esc(d.id)}">
     <span class="deck-e">${esc(d.emoji || '📘')}</span>
     <span class="deck-b"><span class="deck-t">${!d.builtin && d.level ? `<span class="lvl-tag">${esc(d.level)}</span> ` : ''}${esc(d.title)}</span>
-      <span class="deck-s">${d.lang === 'it' && ITALY && d.builtin && cityOf(d) ? `${db.won[d.id] ? '🏰' : '📍'} ${esc(cityOf(d).n)} · ` : ''}${nWords(cards.length)}${d.level && d.builtin ? ' · ' + esc(d.level) : ''} · знаю ${known}</span>
+      <span class="deck-s">${d.builtin && jour(d.lang) && cityOf(d) ? `${db.won[d.id] ? '🏰' : '📍'} ${esc(cityOf(d).n)} · ` : ''}${nWords(cards.length)}${d.level && d.builtin ? ' · ' + esc(d.level) : ''} · знаю ${known}</span>
       ${masteryBar(cards)}</span>
     ${due ? `<span class="badge">${due}</span>` : ''}
   </button>`;
@@ -970,107 +970,116 @@ screens.lessons = () => {
     ${nx ? `<div class="card cta"><div class="cta-ico">${esc(nx.emoji || '📘')}</div><div class="cta-body"><div class="cta-t">Набор пройден! Дальше:</div><div class="cta-s">${esc(nx.level)} · ${esc(nx.title)}</div></div><button class="btn" data-act="set-active" data-id="${esc(nx.id)}">Перейти</button></div>` : ''}
   </div>`;
 };
-/* ───────────────────────── Путешествие в Рим ─────────────────────────
- * Итальянский курс — это путешествие: каждый встроенный набор — город Италии.
- * Города идут от малоизвестных к самым красивым, последний набор — Рим.
+/* ───────────────────────── Путешествия ─────────────────────────
+ * Курс языка — это путешествие по стране: каждый встроенный набор — город.
+ * Итальянский: от малоизвестных борго до Рима. Английский: по США до Вашингтона.
+ * Города идут от малоизвестных к самым красивым, последний набор — столица.
  * Набор «покорён», когда пройдены все его уроки и экзамен; тогда открывается
- * открытка: фото города (из Википедии) и интересный факт на итальянском. */
-const ITALY = window.MNEMO_ITALY || null;
-const journeyOn = () => !!ITALY && curLang() === 'it';
-let jIdx = { decks: null, list: [], pos: new Map(), byName: new Map() };
-function journeyList() {
-  if (jIdx.decks !== DECKS) {
-    const list = DECKS.filter(d => d.lang === 'it' && d.builtin && d.cards.length >= 3);
-    jIdx = { decks: DECKS, list, pos: new Map(list.map((d, i) => [d.id, i])), byName: jIdx.byName };
-    if (!jIdx.byName.size && ITALY) ITALY.cities.forEach((c, i) => jIdx.byName.set(c.n, i));
+ * открытка: фото города (из Википедии) и интересный факт на языке курса. */
+const JOURNEYS = {
+  it: { data: window.MNEMO_ITALY, flag: '🇮🇹', title: 'Путешествие в Рим', goal: 'Рим', goalTo: 'Рима', wiki: 'it', voice: 'it-IT', thanks: 'Grazie!', bravo: 'Complimenti!', what: 'по Италии' },
+  en: { data: window.MNEMO_USA, flag: '🇺🇸', title: 'Дорога в Вашингтон', goal: 'Вашингтон', goalTo: 'Вашингтона', wiki: 'en', voice: 'en-US', thanks: 'Thank you!', bravo: 'Congratulations!', what: 'по США' },
+};
+const jour = lang => { const J = JOURNEYS[lang]; return J && J.data && J.data.cities.length ? J : null; };
+const journeyOn = () => !!jour(curLang());
+const factOf = c => c.it || c.en || c.f || '';
+const jIdx = {};
+function journeyList(lang) {
+  const J = jour(lang);
+  if (!J) return [];
+  let x = jIdx[lang];
+  if (!x || x.decks !== DECKS) {
+    const list = DECKS.filter(d => d.lang === lang && d.builtin && d.cards.length >= 3);
+    const byName = x ? x.byName : new Map(J.data.cities.map((c, i) => [c.n, i]));
+    x = jIdx[lang] = { decks: DECKS, list, pos: new Map(list.map((d, i) => [d.id, i])), byName };
   }
-  return jIdx.list;
+  return x.list;
 }
 // Номер города для набора: покорённый набор хранит свой город, остальные
-// распределяются равномерно от первого города списка до Рима.
+// распределяются равномерно от первого города списка до столицы.
 function cityIdx(d) {
-  if (!ITALY || !d) return -1;
-  const list = journeyList();
+  const J = d && jour(d.lang);
+  if (!J) return -1;
+  const list = journeyList(d.lang), x = jIdx[d.lang];
   const w = db.won[d.id];
-  if (w && jIdx.byName.has(w.c)) return jIdx.byName.get(w.c);
-  const i = jIdx.pos.get(d.id);
+  if (w && x.byName.has(w.c)) return x.byName.get(w.c);
+  const i = x.pos.get(d.id);
   if (i === undefined) return -1;
-  const M = ITALY.cities.length, n = list.length;
+  const M = J.data.cities.length, n = list.length;
   return n <= 1 ? M - 1 : Math.min(M - 1, Math.round(i * (M - 1) / (n - 1)));
 }
-const cityOf = d => { const i = cityIdx(d); return i < 0 ? null : ITALY.cities[i]; };
+const cityOf = d => { const i = cityIdx(d); return i < 0 ? null : jour(d.lang).data.cities[i]; };
 // Отмечаем покорённые наборы (в том числе пройденные до появления путешествия).
-function syncWon() {
-  if (!ITALY) return [];
-  const fresh = [];
-  for (const d of journeyList()) {
+function syncWon(lang) {
+  if (!jour(lang)) return;
+  let changed = false;
+  for (const d of journeyList(lang)) {
     if (db.won[d.id] || !deckDone(d)) continue;
-    const c = cityOf(d);
-    db.won[d.id] = { c: c.n, at: now() };
-    fresh.push(d);
+    db.won[d.id] = { c: cityOf(d).n, at: now() };
+    changed = true;
   }
-  if (fresh.length) saveSoon();
-  return fresh;
+  if (changed) saveSoon();
 }
-function journeyState() {
-  syncWon();
-  const list = journeyList();
-  const won = Object.entries(db.won).filter(([id]) => jIdx.pos.has(id)).sort((a, b) => a[1].at - b[1].at);
+function journeyState(lang) {
+  syncWon(lang);
+  const list = journeyList(lang), pos = jIdx[lang].pos;
+  const won = Object.entries(db.won).filter(([id]) => pos.has(id)).sort((a, b) => a[1].at - b[1].at);
   const wonIdx = won.map(([id]) => cityIdx(deckById(id)));
   const ad = activeDeck();
-  const curDeck = ad && ad.lang === 'it' && jIdx.pos.has(ad.id) && !db.won[ad.id] ? ad : list.find(d => !db.won[d.id]) || null;
-  return { list, won, wonIdx, wonSet: new Set(wonIdx), curDeck, cur: curDeck ? cityIdx(curDeck) : -1 };
+  const curDeck = ad && ad.lang === lang && pos.has(ad.id) && !db.won[ad.id] ? ad : list.find(d => !db.won[d.id]) || null;
+  return { lang, J: jour(lang), list, won, wonIdx, wonSet: new Set(wonIdx), curDeck, cur: curDeck ? cityIdx(curDeck) : -1 };
 }
-function italyMap(st, big) {
-  const C = ITALY.cities, rome = C.length - 1;
+function journeyMap(st, big) {
+  const D = st.J.data, C = D.cities, fin = C.length - 1;
   const route = [...st.wonIdx, ...(st.cur >= 0 ? [st.cur] : [])].map(i => `${C[i].x},${C[i].y}`).join(' ');
+  const s = D.w / 360; // размер точек относительно ширины карты
   const dots = C.map((c, i) => {
-    if (i === rome) return '';
-    const s = st.wonSet.has(i) ? 'won' : i === st.cur ? '' : 'todo';
-    if (!s) return '';
-    return `<circle class="jd ${s}" cx="${c.x}" cy="${c.y}" r="${s === 'won' ? 3.4 : 2}"${big && s === 'won' ? ` data-act="postcard" data-i="${i}"` : ''}/>`;
+    if (i === fin) return '';
+    const k = st.wonSet.has(i) ? 'won' : i === st.cur ? '' : 'todo';
+    if (!k) return '';
+    return `<circle class="jd ${k}" cx="${c.x}" cy="${c.y}" r="${((k === 'won' ? 3.4 : 2) * s).toFixed(1)}"${big && k === 'won' ? ` data-act="postcard" data-l="${st.lang}" data-i="${i}"` : ''}/>`;
   }).join('');
-  const cur = st.cur >= 0 && st.cur !== rome ? `<circle class="jd-pulse" cx="${C[st.cur].x}" cy="${C[st.cur].y}" r="6"/><circle class="jd cur" cx="${C[st.cur].x}" cy="${C[st.cur].y}" r="4.5"${big ? ` data-act="postcard" data-i="${st.cur}"` : ''}/>` : '';
-  const R = C[rome];
-  const romeCls = st.wonSet.has(rome) ? 'won' : st.cur === rome ? 'cur' : '';
-  return `<svg class="italy ${big ? 'big' : ''}" viewBox="0 0 ${ITALY.w} ${ITALY.h}" role="img" aria-label="Карта Италии">
-    ${ITALY.regions.map(([n, d]) => `<path class="reg" d="${d}"><title>${esc(n)}</title></path>`).join('')}
+  const cur = st.cur >= 0 && st.cur !== fin ? `<circle class="jd-pulse" cx="${C[st.cur].x}" cy="${C[st.cur].y}" r="${(6 * s).toFixed(1)}"/><circle class="jd cur" cx="${C[st.cur].x}" cy="${C[st.cur].y}" r="${(4.5 * s).toFixed(1)}"${big ? ` data-act="postcard" data-l="${st.lang}" data-i="${st.cur}"` : ''}/>` : '';
+  const F = C[fin];
+  const finCls = st.wonSet.has(fin) ? 'won' : st.cur === fin ? 'cur' : '';
+  return `<svg class="italy ${big ? 'big' : ''}" viewBox="0 0 ${D.w} ${D.h}" role="img" aria-label="Карта ${st.J.what}" style="--s:${s.toFixed(2)}">
+    ${D.regions.map(([n, d]) => `<path class="reg" d="${d}"><title>${esc(n)}</title></path>`).join('')}
     ${route.includes(' ') ? `<polyline class="jroute" points="${route}"/>` : ''}
     ${dots}${cur}
-    <g class="rome ${romeCls}"${big ? ` data-act="postcard" data-i="${rome}"` : ''}><circle cx="${R.x}" cy="${R.y}" r="7"/><text x="${R.x}" y="${R.y + 3.6}" text-anchor="middle">★</text></g>
+    <g class="rome ${finCls}"${big ? ` data-act="postcard" data-l="${st.lang}" data-i="${fin}"` : ''}><circle cx="${F.x}" cy="${F.y}" r="${(7 * s).toFixed(1)}"/><text x="${F.x}" y="${(F.y + 3.6 * s).toFixed(1)}" text-anchor="middle" font-size="${(9 * s).toFixed(1)}">★</text></g>
   </svg>`;
 }
 function journeyStrip() {
   if (!journeyOn()) return '';
-  const st = journeyState();
-  const C = ITALY.cities, n = st.list.length, w = st.won.length;
+  const st = journeyState(curLang());
+  const C = st.J.data.cities, n = st.list.length, w = st.won.length;
   const c = st.cur >= 0 ? C[st.cur] : null;
   return `<button class="card jstrip" data-act="journey">
-    <div class="js-b"><div class="js-t">🇮🇹 Путешествие в Рим</div>
-      ${c ? `<div class="js-c">📍 ${esc(c.n)}<small>${esc(c.r)}</small></div>` : '<div class="js-c">🏛 Рим покорён!</div>'}
+    <div class="js-b"><div class="js-t">${st.J.flag} ${st.J.title}</div>
+      ${c ? `<div class="js-c">📍 ${esc(c.n)}<small>${esc(c.r)}</small></div>` : `<div class="js-c">🏛 ${st.J.goal} покорён!</div>`}
       <div class="js-s">Покорено ${w} из ${n} городов</div>
       <div class="pbar sm"><i style="width:${n ? w / n * 100 : 0}%"></i></div></div>
-    <div class="js-map">${italyMap(st, false)}</div>
+    <div class="js-map ${st.lang}">${journeyMap(st, false)}</div>
   </button>`;
 }
-screens.journey = () => {
-  if (!ITALY) return hdr('Путешествие') + '<p class="empty">Карта недоступна</p>';
-  const st = journeyState();
-  const C = ITALY.cities, n = st.list.length, w = st.won.length;
+screens.journey = c0 => {
+  const lang = c0.lang || curLang();
+  if (!jour(lang)) return hdr('Путешествие') + '<p class="empty">Карта недоступна</p>';
+  const st = journeyState(lang), J = st.J;
+  const C = J.data.cities, n = st.list.length, w = st.won.length;
   const c = st.cur >= 0 ? C[st.cur] : null;
-  const left = n - w;
   const cards = [...st.won].reverse().map(([id]) => {
     const i = cityIdx(deckById(id));
-    return `<button class="pc" data-act="postcard" data-i="${i}"><span class="pc-img" data-photo="${esc(C[i].w + '|' + C[i].n)}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
+    return `<button class="pc" data-act="postcard" data-l="${lang}" data-i="${i}"><span class="pc-img" data-photo="${esc(J.wiki + '|' + C[i].w + '|' + C[i].n)}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
   }).join('');
-  return `${hdr('Путешествие в Рим')}<div class="pad">
-    <div class="jmap">${italyMap(st, true)}</div>
-    <div class="legend center"><span><i class="lvl-dot l4"></i>покорено ${w}</span><span><i class="lvl-dot jcur"></i>сейчас</span><span><i class="lvl-dot l0"></i>впереди ${left}</span><span>★ Рим</span></div>
+  return `${hdr(J.title)}<div class="pad">
+    <div class="jmap">${journeyMap(st, true)}</div>
+    <div class="legend center"><span><i class="lvl-dot l4"></i>покорено ${w}</span><span><i class="lvl-dot jcur"></i>сейчас</span><span><i class="lvl-dot l0"></i>впереди ${n - w}</span><span>★ ${J.goal}</span></div>
     <div class="pbar"><i style="width:${n ? w / n * 100 : 0}%"></i></div>
     ${c ? `<div class="card cta"><div class="cta-ico">📍</div><div class="cta-body"><div class="cta-t">${esc(c.n)} · ${esc(c.r)}</div>
       <div class="cta-s">Набор «${esc(st.curDeck.title)}» (${esc(st.curDeck.level)}). Пройдите все уроки и экзамен — и город покорён.</div></div>
-      <button class="btn" data-act="journey-go" data-id="${esc(st.curDeck.id)}">Вперёд</button></div>` : '<div class="card cta"><div class="cta-ico">🏛</div><div class="cta-body"><div class="cta-t">Вы дошли до Рима!</div><div class="cta-s">Все города покорены. Complimenti!</div></div></div>'}
-    <p class="hint">Каждый набор итальянского курса — город. Путь начинается в малоизвестных городках и ведёт ко всё более красивым местам, а финиш — Рим. За каждый покорённый город вы получаете открытку: фото и интересный факт на итальянском.</p>
+      <button class="btn" data-act="journey-go" data-id="${esc(st.curDeck.id)}">Вперёд</button></div>` : `<div class="card cta"><div class="cta-ico">🏛</div><div class="cta-body"><div class="cta-t">Вы дошли до ${J.goalTo}!</div><div class="cta-s">Все города покорены. ${J.bravo}</div></div></div>`}
+    <p class="hint">Каждый набор курса — город. Путь начинается в малоизвестных городках и ведёт ко всё более красивым местам, а финиш — ${J.goal}. За каждый покорённый город вы получаете открытку: фото и интересный факт на изучаемом языке.</p>
     <h2 class="sec">Открытки ${w ? `(${w})` : ''}</h2>
     ${cards ? `<div class="pcs">${cards}</div>` : '<p class="empty">Пока нет открыток. Покорите первый город!</p>'}
   </div>`;
@@ -1085,26 +1094,26 @@ function photoStore() {
   return photoMap;
 }
 const photoWait = {};
-// Если заголовок статьи неточен, пробуем название города и «Город (Italia)».
+// key = «вики|статья|город». Если заголовок статьи неточен, пробуем название города.
 function cityPhoto(key) {
-  const [w, n] = key.split('|');
-  const tries = [...new Set([w, n, n && n + ' (Italia)'].filter(Boolean))];
+  const [wiki, w, n] = key.split('|');
+  const tries = [...new Set([w, n, n && wiki === 'it' ? n + ' (Italia)' : ''].filter(Boolean))];
   const st = photoStore();
   if (st[key]) return Promise.resolve(st[key]);
   if (photoWait[key]) return photoWait[key];
   const save = url => { if (url) { st[key] = url; try { localStorage.setItem(PHOTO_KEY, JSON.stringify(st)); } catch (e) {} } return url; };
   let chain = Promise.resolve(null);
-  for (const t of tries) chain = chain.then(u => u || photoFor(t));
+  for (const t of tries) chain = chain.then(u => u || photoFor(wiki, t));
   return (photoWait[key] = chain.then(save).finally(() => { delete photoWait[key]; }));
 }
-function photoFor(title) {
-  const viaWikidata = () => fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&sites=itwiki&titles=${encodeURIComponent(title)}&props=claims&format=json&origin=*`)
+function photoFor(wiki, title) {
+  const viaWikidata = () => fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&sites=${wiki}wiki&titles=${encodeURIComponent(title)}&props=claims&format=json&origin=*`)
     .then(r => r.json()).then(j => {
       const e = Object.values(j.entities || {})[0];
       const file = e && e.claims && e.claims.P18 && e.claims.P18[0].mainsnak.datavalue.value;
       return file ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=800` : null;
     });
-  const viaSummary = () => fetch(`https://it.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`)
+  const viaSummary = () => fetch(`https://${wiki}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`)
     .then(r => r.json()).then(j => (j.thumbnail && j.thumbnail.source || '').replace(/\/\d+px-/, '/800px-') || null);
   return viaWikidata().catch(() => null).then(u => u || viaSummary()).catch(() => null);
 }
@@ -1123,11 +1132,12 @@ function loadPhotos() {
     });
   }
 }
-function postcard(i) {
-  const c = ITALY.cities[i];
+function postcard(i, lang) {
+  const J = jour(lang);
+  const c = J && J.data.cities[i];
   if (!c) return;
-  syncWon();
-  const deck = journeyList().find(d => cityIdx(d) === i);
+  syncWon(lang);
+  const deck = journeyList(lang).find(d => cityIdx(d) === i);
   const won = deck && db.won[deck.id];
   if (!won) {
     openModal(`<h3>📍 ${esc(c.n)}</h3><p class="desc">${esc(c.r)}</p>
@@ -1135,39 +1145,41 @@ function postcard(i) {
       <div class="row2"><button class="btn ghost" data-act="modal-close">Закрыть</button>${deck ? `<button class="btn" data-act="journey-go" data-id="${esc(deck.id)}">К урокам</button>` : ''}</div>`);
     return;
   }
+  const f = factOf(c);
   openModal(`<div class="postcard">
-    <div class="pc-photo" data-photo="${esc(c.w + '|' + c.n)}"><span class="pc-stamp">${i === ITALY.cities.length - 1 ? '🏛' : '✉️'}</span></div>
+    <div class="pc-photo" data-photo="${esc(J.wiki + '|' + c.w + '|' + c.n)}"><span class="pc-stamp">${i === J.data.cities.length - 1 ? '🏛' : '✉️'}</span></div>
     <h3>${esc(c.n)}</h3><p class="desc">${esc(c.r)} · набор «${esc(deck.title)}»</p>
-    <div class="pc-fact">${esc(c.it)} ${spkBtn(c.it, 'it-IT')}</div>
+    <div class="pc-fact">${esc(f)} ${spkBtn(f, J.voice)}</div>
     <details class="pc-ru"><summary>Перевод</summary>${esc(c.ru)}</details>
     <p class="hint">Фото: Wikimedia Commons</p>
-    <button class="btn wide" data-act="modal-close">Grazie!</button></div>`, 'pc-modal');
+    <button class="btn wide" data-act="modal-close">${J.thanks}</button></div>`, 'pc-modal');
   loadPhotos();
 }
 // Проверка после урока: если набор только что покорён — возвращаем его город.
 function checkWon(deck) {
-  if (!ITALY || deck.lang !== 'it' || !deck.builtin || db.won[deck.id] || !deckDone(deck)) return null;
+  if (!jour(deck.lang) || !deck.builtin || db.won[deck.id] || !deckDone(deck)) return null;
   const i = cityIdx(deck);
-  db.won[deck.id] = { c: ITALY.cities[i].n, at: now() };
+  if (i < 0) return null;
+  db.won[deck.id] = { c: jour(deck.lang).data.cities[i].n, at: now() };
   saveSoon();
   return i;
 }
-function wonHtml(i) {
-  const c = ITALY.cities[i];
-  const last = i === ITALY.cities.length - 1;
+function wonHtml(i, lang) {
+  const J = jour(lang), c = J.data.cities[i];
+  const last = i === J.data.cities.length - 1;
   return `<div class="card won-card pop"><div class="big-emoji">${last ? '🏛' : '🏰'}</div>
-    <h2>${last ? 'Вы дошли до Рима!' : 'Город покорён!'}</h2><p class="desc">${esc(c.n)} · ${esc(c.r)}</p>
-    <button class="btn wide" data-act="postcard" data-i="${i}">✉️ Открыть открытку</button></div>`;
+    <h2>${last ? `Вы дошли до ${J.goalTo}!` : 'Город покорён!'}</h2><p class="desc">${esc(c.n)} · ${esc(c.r)}</p>
+    <button class="btn wide" data-act="postcard" data-l="${lang}" data-i="${i}">✉️ Открыть открытку</button></div>`;
 }
 
 function deckCity(d) {
-  if (!ITALY || d.lang !== 'it' || !d.builtin) return '';
+  if (!jour(d.lang) || !d.builtin) return '';
   const i = cityIdx(d);
   if (i < 0) return '';
-  const c = ITALY.cities[i];
-  if (db.won[d.id] || deckDone(d)) return `<button class="chip big jchip won" data-act="postcard" data-i="${i}">🏰 ${esc(c.n)} покорён · ✉️ открытка</button>`;
+  const c = jour(d.lang).data.cities[i];
+  if (db.won[d.id] || deckDone(d)) return `<button class="chip big jchip won" data-act="postcard" data-l="${d.lang}" data-i="${i}">🏰 ${esc(c.n)} покорён · ✉️ открытка</button>`;
   const nodes = lessonNodes(d), dn = nodes.filter(n => nodeDone(d, n)).length;
-  return `<button class="chip big jchip" data-act="postcard" data-i="${i}">📍 ${esc(c.n)} · уроки ${dn}/${nodes.length} — пройдите все и экзамен</button>`;
+  return `<button class="chip big jchip" data-act="postcard" data-l="${d.lang}" data-i="${i}">📍 ${esc(c.n)} · уроки ${dn}/${nodes.length} — пройдите все и экзамен</button>`;
 }
 function deckPicker() {
   const ad = activeDeck();
@@ -1660,7 +1672,7 @@ function startLesson(deckId, n) {
       addXp(bonus);
       saveSoon();
       const city = checkWon(deck);
-      return { title: node.kind === 'exam' ? 'Экзамен сдан!' : 'Урок пройден!', emoji: node.kind === 'exam' ? '🏆' : pick(['🎉', '🌟', '🥳', '🎯']), stars, bonus, next: nodes[n + 1] ? () => startLesson(deckId, n + 1) : null, extra: city !== null ? wonHtml(city) : '' };
+      return { title: node.kind === 'exam' ? 'Экзамен сдан!' : 'Урок пройден!', emoji: node.kind === 'exam' ? '🏆' : pick(['🎉', '🌟', '🥳', '🎯']), stars, bonus, next: nodes[n + 1] ? () => startLesson(deckId, n + 1) : null, extra: city !== null ? wonHtml(city, deck.lang) : '' };
     },
   });
 }
@@ -2424,8 +2436,8 @@ const A = {
   go: el => go(el.dataset.to, { id: el.dataset.id }),
   'art-next': el => replace('article', { id: el.dataset.id }),
   'modal-close': () => closeModal(),
-  journey: () => go('journey'),
-  postcard: el => postcard(Number(el.dataset.i)),
+  journey: () => go('journey', { lang: curLang() }),
+  postcard: el => postcard(Number(el.dataset.i), el.dataset.l || curLang()),
   'journey-go': el => { closeModal(); setActive(el.dataset.id); tab('lessons'); },
   'install-voices': () => { try { Android.installVoices(); } catch (e) {} },
   'modal-ok': () => { const cb = modalCb; closeModal(); cb && cb(); },
