@@ -23,7 +23,6 @@ smuggle|провозить контрабандой|People were smuggled across 
 integration|интеграция|Successful integration.
 homeland|родина|They miss their homeland.
 native|уроженец; родной|A native of Ireland.
-settle (country)|поселиться, обосноваться|They settled in Toronto.
 newcomer|новичок, приезжий|Help for newcomers.
 diaspora|диаспора|The Russian diaspora.
 multicultural|мультикультурный|A multicultural society.
@@ -70,6 +69,14 @@ activist|активист|A climate activist.
 raise awareness|повышать осведомлённость|Raise awareness of the problem.
 inclusion|инклюзия, включённость|Social inclusion.
 exclusion|исключение, отчуждение|Social exclusion.
+social issue|социальная проблема|Crime is a big social issue.
+social mobility|социальная мобильность|Education improves social mobility.
+low-income|малообеспеченный|Low-income families.
+living conditions|условия жизни|Poor living conditions.
+sleep rough|ночевать на улице|Thousands sleep rough every night.
+equal opportunities|равные возможности|Equal opportunities for all.
+gender equality|гендерное равенство|Progress on gender equality.
+peer pressure|давление сверстников|Teenagers face peer pressure.
 `},
 { lang: 'en', id: 'en-b2-college', level: 'B2', emoji: '🎓', title: 'Колледж и университет', desc: 'Американская и британская учёба: GPA, специальность, кампус.', cards: `
 college|колледж, университет|She's in college.
@@ -112,21 +119,46 @@ community college|муниципальный колледж|Two years at communi
 extracurricular|внеклассный|Extracurricular activities.
 transcript|выписка оценок|Send your transcript.
 `},
-{ lang: 'en', id: 'en-b2-research', level: 'B2', emoji: '🔬', title: 'Исследования', desc: 'Как проводят и описывают исследования.', cards: `
-researcher|исследователь|A team of researchers.
-survey (research)|опрос|A survey of 1,000 adults.
-conclusion|вывод|Draw a conclusion.
-evidence (research)|данные, доказательства|Scientific evidence.
-participant|участник|Participants were paid.
-questionnaire|анкета|Fill in a questionnaire.
-control group|контрольная группа|Compare with the control group.
-journal|научный журнал|A medical journal.
-cite|цитировать, ссылаться|Cite the author.
-reference|ссылка, источник|A list of references.
-disprove|опровергать|The data disproved it.
-lab|лаборатория|A research lab.
-case study|пример, кейс|A case study of one school.
-funding (research)|финансирование|Research funding was cut.
-draw conclusions|делать выводы|Don't draw conclusions too quickly.
+{ lang: 'en', id: 'en-b2-school', level: 'B2', emoji: '🏫', title: 'Школьная система', desc: 'Школа в США и Британии: классы, оценки, правила.', cards: `
+kindergarten|детский сад; подготовительный класс|My son starts kindergarten in September.
+nursery school|детский сад|She goes to nursery school.
+elementary school|начальная школа (амер.)|An elementary school in Boston.
+middle school|средняя школа (амер., 6–8 класс)|Middle school was hard for me.
+high school|старшая школа|We met in high school.
+state school|государственная школа|He went to a state school.
+private school|частная школа|Private schools are expensive.
+public school|государственная школа (амер.); частная элитная (брит.)|A public school in Chicago.
+grade (US)|класс (амер.); оценка|She's in fifth grade.
+year (school)|класс, год обучения|My daughter is in Year 7.
+principal|директор школы (амер.)|Go to the principal's office.
+head teacher|директор школы (брит.)|The head teacher called my parents.
+school uniform|школьная форма|We had to wear a school uniform.
+recess|перемена (амер.)|Kids play outside at recess.
+report card|табель успеваемости|A good report card.
+detention|оставление после уроков|He got detention for being late.
+expel (school)|исключить из школы|He was expelled for fighting.
+truant|прогульщик|Play truant.
+skip class|прогуливать урок|Don't skip class.
+attendance|посещаемость|Attendance is compulsory.
+optional|необязательный, по выбору|Art is optional.
+homeschooling|домашнее обучение|They chose homeschooling.
+SAT|SAT (экзамен для поступления в колледж в США)|She scored well on the SAT.
+GCSEs|GCSE (школьные экзамены в Британии в 16 лет)|He took ten GCSEs.
+A levels|A-levels (выпускные экзамены в Британии)|What A levels are you doing?
+mock exam|пробный экзамен|Mock exams in January.
+resit|пересдавать; пересдача|I have to resit maths.
+gifted|одарённый|Gifted children.
+special needs|особые потребности|Pupils with special needs.
+teaching assistant|помощник учителя|She works as a teaching assistant.
+parents' evening|родительское собрание|See you at parents' evening.
+field trip|экскурсия (школьная)|A field trip to the museum.
+school run|отвозить детей в школу|I do the school run every morning.
+yearbook|школьный альбом выпускников|A photo in the yearbook.
+prom|выпускной бал|Who are you taking to prom?
+valedictorian|лучший выпускник (произносит речь)|She was valedictorian.
+spelling bee|конкурс по правописанию|He won the spelling bee.
+locker|шкафчик|My locker is on the second floor.
+cafeteria|столовая|Lunch in the cafeteria.
+tutoring|репетиторство|She offers maths tutoring.
 `}
 );
