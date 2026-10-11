@@ -1061,7 +1061,7 @@ screens.journey = () => {
   const left = n - w;
   const cards = [...st.won].reverse().map(([id]) => {
     const i = cityIdx(deckById(id));
-    return `<button class="pc" data-act="postcard" data-i="${i}"><span class="pc-img" data-photo="${esc(C[i].w)}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
+    return `<button class="pc" data-act="postcard" data-i="${i}"><span class="pc-img" data-photo="${esc(C[i].w + '|' + C[i].n)}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
   }).join('');
   return `${hdr('Путешествие в Рим')}<div class="pad">
     <div class="jmap">${italyMap(st, true)}</div>
@@ -1085,11 +1085,19 @@ function photoStore() {
   return photoMap;
 }
 const photoWait = {};
-function cityPhoto(title) {
+// Если заголовок статьи неточен, пробуем название города и «Город (Italia)».
+function cityPhoto(key) {
+  const [w, n] = key.split('|');
+  const tries = [...new Set([w, n, n && n + ' (Italia)'].filter(Boolean))];
   const st = photoStore();
-  if (st[title]) return Promise.resolve(st[title]);
-  if (photoWait[title]) return photoWait[title];
-  const save = url => { if (url) { st[title] = url; try { localStorage.setItem(PHOTO_KEY, JSON.stringify(st)); } catch (e) {} } return url; };
+  if (st[key]) return Promise.resolve(st[key]);
+  if (photoWait[key]) return photoWait[key];
+  const save = url => { if (url) { st[key] = url; try { localStorage.setItem(PHOTO_KEY, JSON.stringify(st)); } catch (e) {} } return url; };
+  let chain = Promise.resolve(null);
+  for (const t of tries) chain = chain.then(u => u || photoFor(t));
+  return (photoWait[key] = chain.then(save).finally(() => { delete photoWait[key]; }));
+}
+function photoFor(title) {
   const viaWikidata = () => fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&sites=itwiki&titles=${encodeURIComponent(title)}&props=claims&format=json&origin=*`)
     .then(r => r.json()).then(j => {
       const e = Object.values(j.entities || {})[0];
@@ -1098,7 +1106,7 @@ function cityPhoto(title) {
     });
   const viaSummary = () => fetch(`https://it.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`)
     .then(r => r.json()).then(j => (j.thumbnail && j.thumbnail.source || '').replace(/\/\d+px-/, '/800px-') || null);
-  return (photoWait[title] = viaWikidata().catch(() => null).then(u => u || viaSummary()).catch(() => null).then(save).finally(() => { delete photoWait[title]; }));
+  return viaWikidata().catch(() => null).then(u => u || viaSummary()).catch(() => null);
 }
 function loadPhotos() {
   for (const el of $$('[data-photo]')) {
@@ -1128,7 +1136,7 @@ function postcard(i) {
     return;
   }
   openModal(`<div class="postcard">
-    <div class="pc-photo" data-photo="${esc(c.w)}"><span class="pc-stamp">${i === ITALY.cities.length - 1 ? '🏛' : '✉️'}</span></div>
+    <div class="pc-photo" data-photo="${esc(c.w + '|' + c.n)}"><span class="pc-stamp">${i === ITALY.cities.length - 1 ? '🏛' : '✉️'}</span></div>
     <h3>${esc(c.n)}</h3><p class="desc">${esc(c.r)} · набор «${esc(deck.title)}»</p>
     <div class="pc-fact">${esc(c.it)} ${spkBtn(c.it, 'it-IT')}</div>
     <details class="pc-ru"><summary>Перевод</summary>${esc(c.ru)}</details>
