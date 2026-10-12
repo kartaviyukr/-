@@ -46,7 +46,7 @@ raw = []
 for name in ['tier-1', 'tier-1b', 'tier-2', 'tier-2b', 'tier-3', 'tier-4']:
     f = BASE / f'uacities/{name}.json'
     if f.exists(): raw += [c for c in json.load(open(f)) if not (c['n'] == 'Київ' and name != 'tier-4')]
-key = lambda c: (c.get('t') or c['n']).lower()
+key = lambda c: c['n'].lower()  # один город — одна открытка
 last = {}
 for i, c in enumerate(raw): last[key(c)] = i
 cities = []
