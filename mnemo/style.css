@@ -511,3 +511,4 @@ button.path-head { width: 100%; text-align: left; }
 .won-card h2 { margin: 4px 0; }
 .jstrip .pbar { flex: none; margin-top: 4px; }
 .jchip { margin: 2px 0 10px; white-space: normal; text-align: left; } .jchip.won { border-color: var(--good); color: var(--good); }
+.js-map.uk { width: 130px; }

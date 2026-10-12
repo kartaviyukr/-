@@ -973,16 +973,18 @@ screens.lessons = () => {
 /* ───────────────────────── Путешествия ─────────────────────────
  * Курс языка — это путешествие по стране: каждый встроенный набор — город.
  * Итальянский: от малоизвестных борго до Рима. Английский: по США до Вашингтона.
+ * Украинский: по городам и сёлам Украины до Киева.
  * Города идут от малоизвестных к самым красивым, последний набор — столица.
  * Набор «покорён», когда пройдены все его уроки и экзамен; тогда открывается
  * открытка: фото города (из Википедии) и интересный факт на языке курса. */
 const JOURNEYS = {
   it: { data: window.MNEMO_ITALY, flag: '🇮🇹', title: 'Путешествие в Рим', goal: 'Рим', goalTo: 'Рима', wiki: 'it', voice: 'it-IT', thanks: 'Grazie!', bravo: 'Complimenti!', what: 'по Италии' },
+  uk: { data: window.MNEMO_UKRAINE, flag: '🇺🇦', title: 'Дорога в Киев', goal: 'Киев', goalTo: 'Киева', wiki: 'uk', voice: 'uk-UA', thanks: 'Дякую!', bravo: 'Вітаю!', what: 'по Украине' },
   en: { data: window.MNEMO_USA, flag: '🇺🇸', title: 'Дорога в Вашингтон', goal: 'Вашингтон', goalTo: 'Вашингтона', wiki: 'en', voice: 'en-US', thanks: 'Thank you!', bravo: 'Congratulations!', what: 'по США' },
 };
 const jour = lang => { const J = JOURNEYS[lang]; return J && J.data && J.data.cities.length ? J : null; };
 const journeyOn = () => !!jour(curLang());
-const factOf = c => c.it || c.en || c.f || '';
+const factOf = c => c.it || c.en || c.uk || c.f || '';
 const jIdx = {};
 function journeyList(lang) {
   const J = jour(lang);
