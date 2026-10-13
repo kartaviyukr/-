@@ -127,6 +127,26 @@ function migrateV1() {
   delete db.seeded;
 }
 
+// Словари языков грузятся по требованию: при запуске — только текущий язык.
+const packLoaded = l => !LANGS[l] || l === 'xx' || !!(window.MNEMO_LOADED || {})[l];
+const packWait = {};
+function ensureLang(l) {
+  if (packLoaded(l)) return Promise.resolve();
+  return packWait[l] || (packWait[l] = new Promise((ok, fail) => {
+    const sc = document.createElement('script');
+    sc.src = `data/pack-${l}.js`;
+    sc.onload = () => { buildBuiltin(); rebuild(); ok(); };
+    sc.onerror = () => { delete packWait[l]; fail(new Error('pack ' + l)); };
+    document.head.appendChild(sc);
+  }));
+}
+function switchLang(l) {
+  db.settings.lang = l; saveSoon();
+  if (packLoaded(l)) { render(); return; }
+  view.innerHTML = '<div class="pad"><p class="empty">Загружаю словарь…</p></div>';
+  ensureLang(l).then(() => render(), () => { toast('Не удалось загрузить словарь'); render(); });
+}
+
 let DECKS = [];
 function rebuild() {
   DECKS = [];
@@ -2509,9 +2529,13 @@ function restoreBackup(text) {
   if (!data || !Array.isArray(data.decks)) { toast('В файле нет данных Мнемо'); return; }
   confirmBox(`Восстановить копию? ${data.decks.length} наборов заменят текущие данные.`, 'Восстановить', () => {
     localStorage.setItem(KEY, JSON.stringify(data));
-    load(); applyTheme(); save();
-    toast('Копия восстановлена');
-    tab('home');
+    const l = data.settings && data.settings.lang;
+    const needEn = data.seeded || data.decks.some(d => d.builtin);
+    Promise.all([l && ensureLang(l), needEn && ensureLang('en')]).catch(() => {}).then(() => {
+      load(); applyTheme(); save();
+      toast('Копия восстановлена');
+      tab('home');
+    });
   });
 }
 
@@ -2567,7 +2591,7 @@ const A = {
     render(true);
   },
   'set-active': el => { setActive(el.dataset.id); closeModal(); render(); },
-  lang: el => { db.settings.lang = el.dataset.l; saveSoon(); render(); },
+  lang: el => switchLang(el.dataset.l),
   'lvl-toggle': el => { const k = curLang() + ':' + el.dataset.l; db.settings.open[k] = !levelOpen(el.dataset.l); saveSoon(); render(true); },
   'pick-deck': () => deckPicker(),
   'open-deck': el => go('deck', { id: el.dataset.id }),
@@ -2855,7 +2879,7 @@ document.addEventListener('submit', e => {
     if (f.elements.level) fields.level = v('level');
     if (!d) { d = { id: 'u' + uid(), created: now(), cards: [], ...fields, lang: langOfCode(fields.front) }; db.decks.unshift(d); }
     else { if (!d.builtin) fields.lang = langOfCode(fields.front); editDeck(d, fields); }
-    if (d.lang !== curLang()) db.settings.lang = d.lang;
+    if (d.lang !== curLang()) { db.settings.lang = d.lang; ensureLang(d.lang).then(() => render(true)); }
     rebuild(); saveSoon(); closeModal();
     if (isNew) { go('deck', { id: d.id }); cardForm(null, d.id); } else render(true);
   } else if (f.dataset.form === 'card') {
