@@ -1033,9 +1033,13 @@ function journeyState(lang) {
 }
 function journeyMap(st, big) {
   const D = st.J.data, C = D.cities, fin = C.length - 1;
-  const route = [...st.wonIdx, ...(st.cur >= 0 ? [st.cur] : [])].map(i => `${C[i].x},${C[i].y}`).join(' ');
+  // линия маршрута — только последние переезды, иначе она перечёркивает всю карту
+  const route = [...st.wonIdx.slice(-6), ...(st.cur >= 0 ? [st.cur] : [])].map(i => `${C[i].x},${C[i].y}`).join(' ');
   const s = D.w / 360; // размер точек относительно ширины карты
-  const dots = C.map((c, i) => {
+  // сначала «впереди», поверх — покорённые, чтобы их было легко нажать
+  const order = [...C.keys()].sort((a, b) => st.wonSet.has(a) - st.wonSet.has(b));
+  const dots = order.map(i => {
+    const c = C[i];
     if (i === fin) return '';
     const k = st.wonSet.has(i) ? 'won' : i === st.cur ? '' : 'todo';
     if (!k) return '';
@@ -1048,6 +1052,7 @@ function journeyMap(st, big) {
     ${D.regions.map(([n, d]) => `<path class="reg" d="${d}"><title>${esc(n)}</title></path>`).join('')}
     ${route.includes(' ') ? `<polyline class="jroute" points="${route}"/>` : ''}
     ${dots}${cur}
+    ${big ? `<g class="jlbls">${[...st.wonSet, st.cur].filter(i => i >= 0 && i !== fin).map(i => `<text class="jlbl" x="${C[i].x}" y="${C[i].y}" data-fs="${(5 * s).toFixed(1)}">${esc(C[i].n)}</text>`).join('')}</g>` : ''}
     <g class="rome ${finCls}"${big ? ` data-act="postcard" data-l="${st.lang}" data-i="${fin}"` : ''}><circle cx="${F.x}" cy="${F.y}" r="${(7 * s).toFixed(1)}"/><text x="${F.x}" y="${(F.y + 3.6 * s).toFixed(1)}" text-anchor="middle" font-size="${(9 * s).toFixed(1)}">★</text></g>
   </svg>`;
 }
@@ -1075,7 +1080,9 @@ screens.journey = c0 => {
     return `<button class="pc" data-act="postcard" data-l="${lang}" data-i="${i}"><span class="pc-img" data-photo="${esc(J.wiki + '|' + C[i].w + '|' + C[i].n)}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
   }).join('');
   return `${hdr(J.title)}<div class="pad">
-    <div class="jmap">${journeyMap(st, true)}</div>
+    <div class="jmap" id="jmap">${journeyMap(st, true)}
+      <div class="jzoom"><button class="ib" data-z="in" aria-label="Приблизить">＋</button><button class="ib" data-z="out" aria-label="Отдалить">−</button><button class="ib" data-z="reset" aria-label="Вся карта">⟲</button></div>
+      <div class="jhint">Двумя пальцами — приблизить</div></div>
     <div class="legend center"><span><i class="lvl-dot l4"></i>покорено ${w}</span><span><i class="lvl-dot jcur"></i>сейчас</span><span><i class="lvl-dot l0"></i>впереди ${n - w}</span><span>★ ${J.goal}</span></div>
     <div class="pbar"><i style="width:${n ? w / n * 100 : 0}%"></i></div>
     ${c ? `<div class="card cta"><div class="cta-ico">📍</div><div class="cta-body"><div class="cta-t">${esc(c.n)} · ${esc(c.r)}</div>
@@ -1086,7 +1093,94 @@ screens.journey = c0 => {
     ${cards ? `<div class="pcs">${cards}</div>` : '<p class="empty">Пока нет открыток. Покорите первый город!</p>'}
   </div>`;
 };
-after.journey = () => loadPhotos();
+after.journey = () => { loadPhotos(); mapZoom($('#jmap')); };
+
+// Приближение карты: щипок, колёсико, двойной тап, кнопки; при приближении карту можно двигать.
+function mapZoom(box) {
+  const svg = box && box.querySelector('svg');
+  if (!svg) return;
+  const [, , W, H] = svg.getAttribute('viewBox').split(' ').map(Number);
+  let v = { x: 0, y: 0, w: W, h: H };
+  const dots = [...svg.querySelectorAll('circle')].map(c => [c, +c.getAttribute('r')]);
+  const lbls = [...svg.querySelectorAll('.jlbl')];
+  const star = svg.querySelector('.rome text'), starFs = star ? +star.getAttribute('font-size') : 0;
+  let raf = 0;
+  const apply = () => {
+    raf = 0;
+    const z = W / v.w;
+    svg.setAttribute('viewBox', `${v.x.toFixed(2)} ${v.y.toFixed(2)} ${v.w.toFixed(2)} ${v.h.toFixed(2)}`);
+    const k = 1 / Math.pow(z, 0.9); // точки почти не растут при приближении
+    for (const [c, r] of dots) c.setAttribute('r', (r * k).toFixed(2));
+    if (star) star.setAttribute('font-size', (starFs * k).toFixed(2));
+    for (const t of lbls) { t.setAttribute('font-size', (+t.dataset.fs / z * 1.6).toFixed(2)); t.setAttribute('dy', (-6 * k * W / 360).toFixed(2)); }
+    svg.classList.toggle('zoomed', z > 1.6);
+    box.classList.toggle('zin', z > 1.05);
+  };
+  const set = (nx, ny, nw) => {
+    nw = clamp(nw, W / 8, W);
+    const nh = nw * H / W;
+    v = { x: clamp(nx, 0, W - nw), y: clamp(ny, 0, H - nh), w: nw, h: nh };
+    if (!raf) raf = requestAnimationFrame(apply);
+  };
+  // точка экрана → координаты карты
+  const toMap = (cx, cy) => { const r = svg.getBoundingClientRect(); return [v.x + (cx - r.left) / r.width * v.w, v.y + (cy - r.top) / r.height * v.h]; };
+  const zoomAt = (cx, cy, f) => { const [mx, my] = toMap(cx, cy); const nw = clamp(v.w / f, W / 8, W); set(mx - (mx - v.x) * nw / v.w, my - (my - v.y) * nw / v.w, nw); };
+  const center = () => { const r = svg.getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2]; };
+  box.querySelector('.jzoom').addEventListener('click', e => {
+    const b = e.target.closest('[data-z]'); if (!b) return;
+    e.stopPropagation();
+    if (b.dataset.z === 'reset') set(0, 0, W); else zoomAt(...center(), b.dataset.z === 'in' ? 1.8 : 1 / 1.8);
+  });
+  svg.addEventListener('wheel', e => { e.preventDefault(); zoomAt(e.clientX, e.clientY, Math.exp(-e.deltaY * 0.0025)); }, { passive: false });
+  const pts = new Map();
+  let start = null, moved = false, lastTap = 0;
+  const snap = () => {
+    const p = [...pts.values()];
+    if (p.length >= 2) {
+      const [a, b] = p;
+      start = { v: { ...v }, d: Math.hypot(a.x - b.x, a.y - b.y), m: toMap((a.x + b.x) / 2, (a.y + b.y) / 2), c: [(a.x + b.x) / 2, (a.y + b.y) / 2] };
+    } else if (p.length === 1) start = { v: { ...v }, p: { ...p[0] } };
+  };
+  svg.addEventListener('pointerdown', e => { pts.set(e.pointerId, { x: e.clientX, y: e.clientY }); if (pts.size === 1) moved = false; snap(); });
+  svg.addEventListener('pointermove', e => {
+    if (!pts.has(e.pointerId) || !start) return;
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    const r = svg.getBoundingClientRect(), p = [...pts.values()];
+    if (p.length >= 2 && start.d) {
+      const [a, b] = p;
+      const f = Math.hypot(a.x - b.x, a.y - b.y) / start.d;
+      const nw = clamp(start.v.w / f, W / 8, W);
+      const cx = (a.x + b.x) / 2, cy = (a.y + b.y) / 2;
+      set(start.m[0] - (cx - r.left) / r.width * nw, start.m[1] - (cy - r.top) / r.height * nw * H / W, nw);
+      moved = true;
+    } else if (p.length === 1 && start.p) {
+      const dx = p[0].x - start.p.x, dy = p[0].y - start.p.y;
+      if (Math.abs(dx) + Math.abs(dy) > 6) moved = true;
+      if (moved && start.v.w < W) set(start.v.x - dx / r.width * start.v.w, start.v.y - dy / r.height * start.v.h, start.v.w);
+    }
+  });
+  const up = e => {
+    pts.delete(e.pointerId); snap();
+    if (e.type === 'pointerup' && !moved && pts.size === 0) {
+      const t = now();
+      if (t - lastTap < 300) { zoomAt(e.clientX, e.clientY, v.w < W / 4 ? 1 / 3 : 2); lastTap = 0; } else lastTap = t;
+    }
+  };
+  svg.addEventListener('pointerup', up);
+  svg.addEventListener('pointercancel', up);
+  // после перетаскивания не открываем открытку
+  svg.addEventListener('click', e => {
+    if (moved) { e.stopPropagation(); e.preventDefault(); moved = false; return; }
+    if (e.target.closest('[data-act]')) return;
+    // промах мимо маленькой точки — открываем ближайший покорённый город
+    let best = null, bd = 22;
+    for (const el of svg.querySelectorAll('[data-act=postcard]')) {
+      const r = el.getBoundingClientRect(), d = Math.hypot(r.left + r.width / 2 - e.clientX, r.top + r.height / 2 - e.clientY);
+      if (d < bd) { bd = d; best = el; }
+    }
+    if (best) { e.stopPropagation(); postcard(Number(best.dataset.i), best.dataset.l); }
+  }, true);
+}
 
 // Фото: главное изображение города из Викиданных (P18), запасной вариант — картинка статьи Википедии.
 const PHOTO_KEY = 'mnemo.photos';
