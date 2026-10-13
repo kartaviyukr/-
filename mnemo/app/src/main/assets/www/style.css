@@ -512,3 +512,20 @@ button.path-head { width: 100%; text-align: left; }
 .jstrip .pbar { flex: none; margin-top: 4px; }
 .jchip { margin: 2px 0 10px; white-space: normal; text-align: left; } .jchip.won { border-color: var(--good); color: var(--good); }
 .js-map.uk { width: 130px; }
+
+/* Приближение карты */
+.jmap { position: relative; overflow: hidden; border-radius: 16px; touch-action: none; }
+.jmap svg { touch-action: none; user-select: none; -webkit-user-select: none; }
+.jzoom { position: absolute; right: 6px; top: 6px; display: flex; flex-direction: column; gap: 6px; }
+.jzoom .ib { width: 36px; height: 36px; border-radius: 10px; background: var(--card); border: 1px solid var(--line); font-size: 20px; font-weight: 800; color: var(--tx); box-shadow: var(--sh); }
+.jhint { position: absolute; left: 8px; bottom: 6px; font-size: 11px; color: var(--tx3); pointer-events: none; transition: opacity .3s; }
+.jmap.zin .jhint { opacity: 0; }
+.jlbl { fill: var(--tx); font-weight: 800; text-anchor: middle; paint-order: stroke; stroke: var(--bg); stroke-width: .25px; opacity: 0; pointer-events: none; transition: opacity .25s; }
+.italy.zoomed .jlbl { opacity: .95; }
+.italy .reg, .jroute, .jd, .rome circle { vector-effect: non-scaling-stroke; }
+.italy.big .reg { stroke-width: .6px; }
+.italy .reg { stroke-width: .6px; }
+.jroute { stroke-width: 1.6px; stroke-dasharray: 4 3; }
+.jd.todo { stroke: none; }
+.jd.won { stroke-width: 1px; }
+.jd.cur { stroke-width: 1.5px; }
