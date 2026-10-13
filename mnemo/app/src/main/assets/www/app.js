@@ -1097,7 +1097,7 @@ screens.journey = c0 => {
   const c = st.cur >= 0 ? C[st.cur] : null;
   const cards = [...st.won].reverse().map(([id]) => {
     const i = cityIdx(deckById(id));
-    return `<button class="pc" data-act="postcard" data-l="${lang}" data-i="${i}"><span class="pc-img" data-photo="${esc(J.wiki + '|' + C[i].w + '|' + C[i].n)}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
+    return `<button class="pc" data-act="postcard" data-l="${lang}" data-i="${i}"><span class="pc-img" data-photo="${esc([J.wiki, C[i].w, C[i].n, C[i].r].join('|'))}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
   }).join('');
   return `${hdr(J.title)}<div class="pad">
     <div class="jmap" id="jmap">${journeyMap(st, true)}
@@ -1203,35 +1203,95 @@ function mapZoom(box) {
 }
 
 // Фото: главное изображение города из Викиданных (P18), запасной вариант — картинка статьи Википедии.
-const PHOTO_KEY = 'mnemo.photos';
+const PHOTO_KEY = 'mnemo.photos2'; // v2: новые правила поиска фото
 let photoMap = null;
 function photoStore() {
   if (!photoMap) { try { photoMap = JSON.parse(localStorage.getItem(PHOTO_KEY) || '{}'); } catch (e) { photoMap = {}; } }
   return photoMap;
 }
 const photoWait = {};
-// key = «вики|статья|город». Если заголовок статьи неточен, пробуем название города.
+// Не больше трёх запросов к Википедии одновременно — иначе на странице открыток она начинает отказывать.
+let netBusy = 0;
+const netQueue = [];
+function getJSON(url) {
+  return new Promise((ok, fail) => {
+    const run = () => {
+      netBusy++;
+      fetch(url).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(ok, fail)
+        .finally(() => { netBusy--; const next = netQueue.shift(); if (next) next(); });
+    };
+    netBusy < 3 ? run() : netQueue.push(run);
+  });
+}
+const COUNTRY = { it: ['Q38', 'Italia'], en: ['Q30', 'United States'], uk: ['Q212', 'Україна'] };
+// Отбрасываем гербы, флаги, карты и логотипы — нужен снимок города.
+const notPhoto = u => {
+  if (!u) return true;
+  let f = u; try { f = decodeURIComponent(u); } catch (e) {}
+  return /\.svg\b/i.test(f) || /coat[_ ]of[_ ]arms|герб|прапор|(^|[\s_/(-])(flag|logo|locator|map)([\s_.)-]|$)|location[_ ]map|карта/i.test(f);
+};
+// key = «вики|статья|город|регион». Порядок поиска:
+// 1) статья из данных (Викиданные → картинка статьи); 2) то же по названию города;
+// 3) поиск по Википедии «город регион»; 4) поиск по Викиданным с проверкой страны.
 function cityPhoto(key) {
-  const [wiki, w, n] = key.split('|');
-  const tries = [...new Set([w, n, n && wiki === 'it' ? n + ' (Italia)' : ''].filter(Boolean))];
+  const [wiki, w, n, r] = key.split('|');
   const st = photoStore();
   if (st[key]) return Promise.resolve(st[key]);
   if (photoWait[key]) return photoWait[key];
   const save = url => { if (url) { st[key] = url; try { localStorage.setItem(PHOTO_KEY, JSON.stringify(st)); } catch (e) {} } return url; };
+  const region = (r || '').replace(/ область$/, '');
+  const steps = [
+    () => photoFor(wiki, w),
+    () => n && n !== w ? photoFor(wiki, n) : null,
+    () => searchPhoto(wiki, `${n} ${region}`.trim()),
+    () => wikidataSearch(wiki, n),
+    () => wiki !== 'en' ? searchPhoto('en', `${n} ${COUNTRY[wiki] ? COUNTRY[wiki][1] : ''}`.trim()) : null,
+  ];
   let chain = Promise.resolve(null);
-  for (const t of tries) chain = chain.then(u => u || photoFor(wiki, t));
+  for (const f of steps) chain = chain.then(u => u || Promise.resolve().then(f).catch(() => null));
   return (photoWait[key] = chain.then(save).finally(() => { delete photoWait[key]; }));
 }
+const filePath = file => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=800`;
 function photoFor(wiki, title) {
-  const viaWikidata = () => fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&sites=${wiki}wiki&titles=${encodeURIComponent(title)}&props=claims&format=json&origin=*`)
-    .then(r => r.json()).then(j => {
+  if (!title) return Promise.resolve(null);
+  const viaWikidata = () => getJSON(`https://www.wikidata.org/w/api.php?action=wbgetentities&sites=${wiki}wiki&titles=${encodeURIComponent(title)}&props=claims&format=json&origin=*`)
+    .then(j => {
       const e = Object.values(j.entities || {})[0];
       const file = e && e.claims && e.claims.P18 && e.claims.P18[0].mainsnak.datavalue.value;
-      return file ? `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=800` : null;
+      return file && !notPhoto(file) ? filePath(file) : null;
     });
-  const viaSummary = () => fetch(`https://${wiki}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`)
-    .then(r => r.json()).then(j => (j.thumbnail && j.thumbnail.source || '').replace(/\/\d+px-/, '/800px-') || null);
+  const viaSummary = () => getJSON(`https://${wiki}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title.replace(/ /g, '_'))}`)
+    .then(j => { const u = (j.originalimage && j.originalimage.source) || (j.thumbnail && j.thumbnail.source) || ''; return notPhoto(u) ? null : (j.thumbnail ? j.thumbnail.source.replace(/\/\d+px-/, '/800px-') : u); });
   return viaWikidata().catch(() => null).then(u => u || viaSummary()).catch(() => null);
+}
+// Поиск статьи по тексту и её главной картинки (pageimages).
+function searchPhoto(wiki, q) {
+  if (!q) return Promise.resolve(null);
+  return getJSON(`https://${wiki}.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=3&prop=pageimages&piprop=thumbnail&pithumbsize=800&format=json&origin=*`)
+    .then(j => {
+      const pages = Object.values((j.query && j.query.pages) || {}).sort((a, b) => a.index - b.index);
+      for (const p of pages) if (p.thumbnail && !notPhoto(p.thumbnail.source)) return p.thumbnail.source;
+      return null;
+    });
+}
+// Поиск объекта в Викиданных по названию: берём первый из нужной страны с фотографией.
+function wikidataSearch(wiki, name) {
+  if (!name || !COUNTRY[wiki]) return Promise.resolve(null);
+  const lang = wiki === 'uk' ? 'uk' : wiki === 'it' ? 'it' : 'en';
+  return getJSON(`https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(name)}&language=${lang}&type=item&limit=7&format=json&origin=*`)
+    .then(j => {
+      const ids = (j.search || []).map(x => x.id);
+      if (!ids.length) return null;
+      return getJSON(`https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${ids.join('|')}&props=claims&format=json&origin=*`).then(e => {
+        for (const id of ids) {
+          const c = (e.entities[id] || {}).claims || {};
+          const country = c.P17 && c.P17.some(x => x.mainsnak.datavalue && x.mainsnak.datavalue.value.id === COUNTRY[wiki][0]);
+          const file = c.P18 && c.P18[0].mainsnak.datavalue && c.P18[0].mainsnak.datavalue.value;
+          if (country && file && !notPhoto(file)) return filePath(file);
+        }
+        return null;
+      });
+    });
 }
 function loadPhotos() {
   for (const el of $$('[data-photo]')) {
@@ -1263,7 +1323,7 @@ function postcard(i, lang) {
   }
   const f = factOf(c);
   openModal(`<div class="postcard">
-    <div class="pc-photo" data-photo="${esc(J.wiki + '|' + c.w + '|' + c.n)}"><span class="pc-stamp">${i === J.data.cities.length - 1 ? '🏛' : '✉️'}</span></div>
+    <div class="pc-photo" data-photo="${esc([J.wiki, c.w, c.n, c.r].join('|'))}"><span class="pc-stamp">${i === J.data.cities.length - 1 ? '🏛' : '✉️'}</span></div>
     <h3>${esc(c.n)}</h3><p class="desc">${esc(c.r)} · набор «${esc(deck.title)}»</p>
     <div class="pc-fact">${esc(f)} ${spkBtn(f, J.voice)}</div>
     <details class="pc-ru"><summary>Перевод</summary>${esc(c.ru)}</details>
