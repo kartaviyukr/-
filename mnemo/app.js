@@ -1097,7 +1097,7 @@ screens.journey = c0 => {
   const c = st.cur >= 0 ? C[st.cur] : null;
   const cards = [...st.won].reverse().map(([id]) => {
     const i = cityIdx(deckById(id));
-    return `<button class="pc" data-act="postcard" data-l="${lang}" data-i="${i}"><span class="pc-img" data-photo="${esc([J.wiki, C[i].w, C[i].n, C[i].r].join('|'))}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
+    return `<button class="pc" data-act="postcard" data-l="${lang}" data-i="${i}"><span class="pc-img" data-photo="${esc([J.wiki, C[i].w, C[i].n, C[i].r, C[i].p || ''].join('|'))}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
   }).join('');
   return `${hdr(J.title)}<div class="pad">
     <div class="jmap" id="jmap">${journeyMap(st, true)}
@@ -1230,26 +1230,55 @@ const notPhoto = u => {
   let f = u; try { f = decodeURIComponent(u); } catch (e) {}
   return /\.svg\b/i.test(f) || /coat[_ ]of[_ ]arms|герб|прапор|(^|[\s_/(-])(flag|logo|locator|map)([\s_.)-]|$)|location[_ ]map|карта/i.test(f);
 };
-// key = «вики|статья|город|регион». Порядок поиска:
-// 1) статья из данных (Викиданные → картинка статьи); 2) то же по названию города;
-// 3) поиск по Википедии «город регион»; 4) поиск по Викиданным с проверкой страны.
+// Латиница для украинских названий — так подписаны многие снимки на Commons (Глодоси → Hlodosy).
+const UK_LAT = { а: 'a', б: 'b', в: 'v', г: 'h', ґ: 'g', д: 'd', е: 'e', є: 'ie', ж: 'zh', з: 'z', и: 'y', і: 'i', ї: 'i', й: 'i', к: 'k', л: 'l', м: 'm', н: 'n', о: 'o', п: 'p', р: 'r', с: 's', т: 't', у: 'u', ф: 'f', х: 'kh', ц: 'ts', ч: 'ch', ш: 'sh', щ: 'shch', ь: '', ю: 'iu', я: 'ia', "'": '', 'ʼ': '' };
+const ukLatin = t => t.toLowerCase().split('').map(ch => UK_LAT[ch] ?? ch).join('').replace(/(^|\s|-)(\S)/g, (m, a, b) => a + b.toUpperCase());
+// key = «вики|статья|город|регион|статья для фото». Порядок поиска:
+// 1) статья из данных; 2) название города; 3) статья о достопримечательности из факта;
+// 4) поиск по Википедии «город регион»; 5) снимки на Wikimedia Commons;
+// 6) поиск по Викиданным с проверкой страны; 7) английская Википедия;
+// 8) другой источник — Openverse (свободные фото с Flickr и др.).
+// Каждый шаг возвращает список ссылок; для открытки берём первую, кнопка «Другое фото» листает все.
+function photoSteps(key) {
+  const [wiki, w, n, r, alt] = key.split('|');
+  const region = (r || '').replace(/ область$/, '');
+  const regShort = region.replace(/(ська|цька|зька)$/, '').replace(/^Автономна Республіка /, '');
+  const latin = wiki === 'uk' ? ukLatin(n) : n;
+  const country = COUNTRY[wiki] ? (wiki === 'uk' ? 'Ukraine' : COUNTRY[wiki][1]) : '';
+  const one = pr => pr.then(u => (u ? [u] : []));
+  return [
+    () => one(photoFor(wiki, w)),
+    () => n && n !== w ? one(photoFor(wiki, n)) : [],
+    () => alt ? one(photoFor(wiki, alt)) : [],
+    () => searchPhotos(wiki, `${n} ${region}`.trim()),
+    () => commonsPhotos(`"${n}" ${wiki === 'uk' ? '' : regShort}`.trim()),
+    () => wiki === 'uk' ? commonsPhotos(`"${latin}"`) : [],
+    () => one(wikidataSearch(wiki, n)),
+    () => wiki !== 'en' ? searchPhotos('en', `${latin} ${country}`.trim()) : [],
+    () => openversePhotos(`${latin} ${wiki === 'en' ? region : country}`.trim()),
+    () => openversePhotos(latin),
+  ];
+}
 function cityPhoto(key) {
-  const [wiki, w, n, r] = key.split('|');
   const st = photoStore();
   if (st[key]) return Promise.resolve(st[key]);
   if (photoWait[key]) return photoWait[key];
   const save = url => { if (url) { st[key] = url; try { localStorage.setItem(PHOTO_KEY, JSON.stringify(st)); } catch (e) {} } return url; };
-  const region = (r || '').replace(/ область$/, '');
-  const steps = [
-    () => photoFor(wiki, w),
-    () => n && n !== w ? photoFor(wiki, n) : null,
-    () => searchPhoto(wiki, `${n} ${region}`.trim()),
-    () => wikidataSearch(wiki, n),
-    () => wiki !== 'en' ? searchPhoto('en', `${n} ${COUNTRY[wiki] ? COUNTRY[wiki][1] : ''}`.trim()) : null,
-  ];
   let chain = Promise.resolve(null);
-  for (const f of steps) chain = chain.then(u => u || Promise.resolve().then(f).catch(() => null));
+  for (const f of photoSteps(key)) chain = chain.then(u => u || Promise.resolve().then(f).then(l => (l && l[0]) || null).catch(() => null));
   return (photoWait[key] = chain.then(save).finally(() => { delete photoWait[key]; }));
+}
+// Все найденные варианты — для кнопки «Другое фото».
+const photoAll = {};
+function cityPhotos(key) {
+  if (photoAll[key]) return photoAll[key];
+  return (photoAll[key] = Promise.all(photoSteps(key).map(f => Promise.resolve().then(f).catch(() => [])))
+    .then(ls => [...new Set(ls.flat().filter(Boolean))]));
+}
+function setCityPhoto(key, url) {
+  const st = photoStore();
+  if (url) st[key] = url; else delete st[key];
+  try { localStorage.setItem(PHOTO_KEY, JSON.stringify(st)); } catch (e) {}
 }
 const filePath = file => `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file)}?width=800`;
 function photoFor(wiki, title) {
@@ -1265,14 +1294,35 @@ function photoFor(wiki, title) {
   return viaWikidata().catch(() => null).then(u => u || viaSummary()).catch(() => null);
 }
 // Поиск статьи по тексту и её главной картинки (pageimages).
-function searchPhoto(wiki, q) {
-  if (!q) return Promise.resolve(null);
+function searchPhotos(wiki, q) {
+  if (!q) return Promise.resolve([]);
   return getJSON(`https://${wiki}.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=${encodeURIComponent(q)}&gsrlimit=3&prop=pageimages&piprop=thumbnail&pithumbsize=800&format=json&origin=*`)
     .then(j => {
       const pages = Object.values((j.query && j.query.pages) || {}).sort((a, b) => a.index - b.index);
-      for (const p of pages) if (p.thumbnail && !notPhoto(p.thumbnail.source)) return p.thumbnail.source;
-      return null;
+      return pages.filter(p => p.thumbnail && !notPhoto(p.thumbnail.source)).map(p => p.thumbnail.source);
     });
+}
+// Поиск снимков на Wikimedia Commons по названию (только растровые фото).
+function commonsPhotos(q) {
+  if (!q || q === '""') return Promise.resolve([]);
+  return getJSON(`https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrsearch=${encodeURIComponent(q + ' filetype:bitmap')}&gsrlimit=8&prop=imageinfo&iiprop=url|size&iiurlwidth=800&format=json&origin=*`)
+    .then(j => {
+      const pages = Object.values((j.query && j.query.pages) || {}).sort((a, b) => a.index - b.index);
+      const out = [];
+      for (const p of pages) {
+        const ii = p.imageinfo && p.imageinfo[0];
+        if (!ii || notPhoto(p.title) || /\.(tiff?|pdf|djvu)$/i.test(p.title) || ii.width < 400 || ii.width < ii.height * 0.6) continue;
+        out.push(ii.thumburl || ii.url);
+      }
+      return out;
+    });
+}
+// Другой источник — Openverse: открытый поиск свободных фотографий (Flickr и др.), без ключа.
+function openversePhotos(q) {
+  if (!q) return Promise.resolve([]);
+  return getJSON(`https://api.openverse.org/v1/images/?q=${encodeURIComponent(q)}&page_size=12&mature=false`)
+    .then(j => (j.results || []).filter(x => !notPhoto(x.title || '') && (!x.width || (x.width >= 400 && x.width >= x.height * 0.6)))
+      .map(x => (x.width && x.width > 2400) || !x.url ? x.thumbnail : x.url).filter(Boolean));
 }
 // Поиск объекта в Викиданных по названию: берём первый из нужной страны с фотографией.
 function wikidataSearch(wiki, name) {
@@ -1323,13 +1373,65 @@ function postcard(i, lang) {
   }
   const f = factOf(c);
   openModal(`<div class="postcard">
-    <div class="pc-photo" data-photo="${esc([J.wiki, c.w, c.n, c.r].join('|'))}"><span class="pc-stamp">${i === J.data.cities.length - 1 ? '🏛' : '✉️'}</span></div>
+    <div class="pc-photo" data-photo="${esc(photoKeyOf(J, c))}"><span class="pc-stamp">${i === J.data.cities.length - 1 ? '🏛' : '✉️'}</span></div>
     <h3>${esc(c.n)}</h3><p class="desc">${esc(c.r)} · набор «${esc(deck.title)}»</p>
     <div class="pc-fact">${esc(f)} ${spkBtn(f, J.voice)}</div>
     <details class="pc-ru"><summary>Перевод</summary>${esc(c.ru)}</details>
-    <p class="hint">Фото: Wikimedia Commons</p>
+    <div class="pc-src"><span class="hint">Фото: Wikimedia / Openverse</span><button class="lnk" data-act="pc-photo" data-l="${lang}" data-i="${i}">📷 Другое фото</button></div>
     <button class="btn wide" data-act="modal-close">${J.thanks}</button></div>`, 'pc-modal');
   loadPhotos();
+}
+const photoKeyOf = (J, c) => [J.wiki, c.w, c.n, c.r, c.p || ''].join('|');
+// Смена фото: следующий найденный вариант, поиск в Google/Яндекс Картинках, своя ссылка.
+function photoSheet(i, lang) {
+  const J = jour(lang), c = J.data.cities[i], key = photoKeyOf(J, c);
+  const q = encodeURIComponent(`${c.n} ${c.r}`);
+  openModal(`<h3>📷 Фото: ${esc(c.n)}</h3>
+    <div class="pc-photo" data-photo="${esc(key)}"></div>
+    <div class="form">
+      <button class="btn wide" data-act="ph-next" data-l="${lang}" data-i="${i}">↻ Следующее найденное фото</button>
+      <div class="row2"><button class="btn ghost" data-act="ph-ext" data-u="https://www.google.com/search?tbm=isch&q=${q}">Google Картинки</button>
+      <button class="btn ghost" data-act="ph-ext" data-u="https://yandex.ru/images/search?text=${q}">Яндекс Картинки</button></div>
+      <p class="hint">Найдите снимок, нажмите на него и удерживайте → «Копировать адрес изображения», затем вставьте ссылку сюда:</p>
+      <input id="ph-url" type="url" placeholder="https://…/photo.jpg" autocomplete="off" autocapitalize="off" spellcheck="false">
+      <div class="row2"><button class="btn ghost" data-act="ph-reset" data-l="${lang}" data-i="${i}">Сбросить</button><button class="btn" data-act="ph-save" data-l="${lang}" data-i="${i}">Сохранить ссылку</button></div>
+    </div>`);
+  loadPhotos();
+}
+function openExternal(url) {
+  if (window.Android && Android.openUrl) { try { Android.openUrl(url); return; } catch (e) {} }
+  window.open(url, '_blank', 'noopener');
+}
+function photoActions() {
+  const keyFor = el => { const J = jour(el.dataset.l); return [J, J.data.cities[Number(el.dataset.i)]]; };
+  const reopen = el => { closeModal(); postcard(Number(el.dataset.i), el.dataset.l); };
+  return {
+    'pc-photo': el => photoSheet(Number(el.dataset.i), el.dataset.l),
+    'ph-ext': el => openExternal(el.dataset.u),
+    'ph-next': el => {
+      const [J, c] = keyFor(el), key = photoKeyOf(J, c);
+      el.disabled = true; el.textContent = 'Ищу…';
+      cityPhotos(key).then(list => {
+        const curUrl = photoStore()[key];
+        if (!list.length) { toast('Других фото не нашлось — попробуйте Google или Яндекс'); el.disabled = false; el.textContent = '↻ Следующее найденное фото'; return; }
+        const next = list[(list.indexOf(curUrl) + 1) % list.length];
+        setCityPhoto(key, next);
+        const box = $('#modal .pc-photo');
+        if (box) { delete box.dataset.done; box.style.backgroundImage = ''; box.classList.remove('ok', 'none'); loadPhotos(); }
+        el.disabled = false; el.textContent = `↻ Следующее найденное фото (${list.indexOf(next) + 1}/${list.length})`;
+      });
+    },
+    'ph-save': el => {
+      const url = ($('#ph-url')?.value || '').trim();
+      if (!/^https?:\/\/\S+$/i.test(url)) { toast('Вставьте ссылку на картинку (начинается с https://)'); return; }
+      const img = new Image();
+      img.referrerPolicy = 'no-referrer';
+      img.onload = () => { const [J, c] = keyFor(el); setCityPhoto(photoKeyOf(J, c), url); toast('Фото сохранено'); reopen(el); };
+      img.onerror = () => toast('По этой ссылке не открывается картинка — скопируйте именно «адрес изображения»');
+      img.src = url;
+    },
+    'ph-reset': el => { const [J, c] = keyFor(el); const key = photoKeyOf(J, c); setCityPhoto(key, null); delete photoAll[key]; reopen(el); },
+  };
 }
 // Проверка после урока: если набор только что покорён — возвращаем его город.
 function checkWon(deck) {
@@ -1486,15 +1588,18 @@ function prep(ex) {
       ex.slots = chars.map((ch, i) => /[\p{L}\p{N}]/u.test(ch) ? i : -1).filter(i => i >= 0);
       let order = shuffle(ex.slots);
       for (let k = 0; k < 5 && ex.slots.length > 1 && order.every((v, i) => chars[v].toLowerCase() === chars[ex.slots[i]].toLowerCase()); k++) order = shuffle(ex.slots);
-      ex.tiles = order.map(i => chars[i]);
+      ex.tiles = order.map(i => chars[i].toLowerCase()); // без заглавной — иначе видно первую букву
       ex.fill = [];
       break;
     }
     case 'cloze': {
       const z = clozeOf(c);
       if (!z) { ex.type = 'mcRev'; ex.ready = false; return prep(ex); }
-      Object.assign(ex, qa(c, 'dt'), { z, a: z.word });
-      ex.opts = shuffle([z.word, ...distractors(c, 3, 't', pool)]);
+      // слово в начале фразы пишется с большой буквы — в вариантах приводим к общему виду,
+      // иначе правильный ответ выделяется заглавной буквой
+      const low = w => (c.t[0] === c.t[0].toLowerCase() ? w.charAt(0).toLowerCase() + w.slice(1) : w);
+      Object.assign(ex, qa(c, 'dt'), { z, a: low(z.word) });
+      ex.opts = shuffle([ex.a, ...distractors(c, 3, 't', pool).map(low)]);
       break;
     }
     case 'match': {
@@ -2617,6 +2722,7 @@ const A = {
   'art-next': el => replace('article', { id: el.dataset.id }),
   'modal-close': () => closeModal(),
   journey: () => go('journey', { lang: curLang() }),
+  ...photoActions(),
   postcard: el => postcard(Number(el.dataset.i), el.dataset.l || curLang()),
   'journey-go': el => { closeModal(); setActive(el.dataset.id); tab('lessons'); },
   'install-voices': () => { try { Android.installVoices(); } catch (e) {} },

@@ -4,7 +4,7 @@
  * так обновления подхватываются сразу, а без интернета всё продолжает работать.
  * Внутри APK service worker не регистрируется (страница открыта с file://).
  */
-const CACHE = 'mnemo-v6';
+const CACHE = 'mnemo-v7';
 const PHOTOS = 'mnemo-photos';
 const SHELL = ['./', 'index.html', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'];
 
@@ -33,8 +33,8 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
   const { request } = event;
-  // Фото городов из Википедии: один раз скачали — дальше показываем из кэша, в том числе без сети.
-  if (request.method === 'GET' && request.destination === 'image' && /(^|\.)wiki(media|pedia)\.org$/.test(new URL(request.url).hostname)) {
+  // Фото городов (Википедия, Openverse, свои ссылки): один раз скачали — дальше показываем из кэша, в том числе без сети.
+  if (request.method === 'GET' && request.destination === 'image' && new URL(request.url).origin !== self.location.origin) {
     event.respondWith((async () => {
       const cache = await caches.open(PHOTOS);
       const hit = await cache.match(request);
