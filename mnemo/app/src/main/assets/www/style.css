@@ -529,3 +529,5 @@ button.path-head { width: 100%; text-align: left; }
 .jd.todo { stroke: none; }
 .jd.won { stroke-width: 1px; }
 .jd.cur { stroke-width: 1.5px; }
+.pc-src { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin: 4px 0 10px; }
+.pc-src .hint { margin: 0; }

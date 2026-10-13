@@ -85,6 +85,7 @@ for i, c in enumerate(raw):
     if last[k] != i or k not in db: continue
     x, y = P(*db[k], c['s'])
     cities.append({'n': c.get('t') or c['n'], 'r': ABBR.get(c['s'], c['s']), 'x': round(x, 1), 'y': round(y, 1), 'w': c['w'], 'en': c['en'], 'ru': c['ru']})
+    if c.get('photo'): cities[-1]['p'] = c['photo']  # статья для фото
 cities.sort(key=lambda c: c['r'] == 'District of Columbia')
 
 xs = [float(v) for _, d in regions for pt in d.replace('M', 'L').replace('Z', '').split('L') if pt for v in pt.split(',')[:1]]

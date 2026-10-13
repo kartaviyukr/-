@@ -82,6 +82,7 @@ for i, c in enumerate(raw):
         lon, lat, reg = comuni[k]
         x, y = P(lon, lat)
         item = {'n': c.get('t') or c['n'], 'r': reg, 'x': round(x, 1), 'y': round(y, 1), 'w': c['w'], 'it': c['it'], 'ru': c['ru']}
+        if c.get('photo'): item['p'] = c['photo']  # статья для фото (в данных Италии 'p' — это провинция)
         cities.append(item)
 # Рим — всегда в конце
 cities.sort(key=lambda c: c['n'] == 'Roma')

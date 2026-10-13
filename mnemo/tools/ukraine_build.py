@@ -56,6 +56,7 @@ for i, c in enumerate(raw):
     o = c['o'].strip()
     reg = 'Крим' if 'Крим' in o else o if o.endswith('область') else o + ' область'
     cities.append({'n': c.get('t') or c['n'], 'r': reg, 'x': round(x, 1), 'y': round(y, 1), 'w': c['w'], 'uk': c['uk'], 'ru': c['ru']})
+    if c.get('photo'): cities[-1]['p'] = c['photo']  # статья для фото
 cities.sort(key=lambda c: c['n'] == 'Київ')
 W = round((40.4 - LON0) * C * K); H = round((LAT0 - 44.2) * K)
 data = {'w': W, 'h': H, 'regions': regions, 'cities': cities}

@@ -254,6 +254,17 @@ public class MainActivity extends Activity {
             }
         }
 
+        /** Открывает ссылку во внешнем браузере (поиск фото в Google/Яндекс Картинках). */
+        @JavascriptInterface
+        public void openUrl(String url) {
+            runOnUiThread(() -> {
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                } catch (Exception ignored) {
+                }
+            });
+        }
+
         @JavascriptInterface
         public void stop() {
             if (tts != null) tts.stop();
