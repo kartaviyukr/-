@@ -1,4 +1,5 @@
-"""Сборка www/extras.js — культурные заметки к открыткам, песни (на каждую 10-ю тему) и книги (на каждый уровень).
+"""Сборка www/extras.js — культурные заметки к открыткам, песни (на каждую 10-ю тему), книги (на каждый уровень)
+и «Карта истории» — 50 станций истории страны (<папка>/history/{язык}.json).
 
 Вход: <папка>/extras/{it,en,uk}.json вида {"culture": [{"x", "ru"}], "songs": [{"t", "a", "y", "ru"}]}.
 Книги заданы ниже вручную. Запуск: python3 extras_build.py <папка>
@@ -43,7 +44,9 @@ for lang in ['it', 'en', 'uk']:
     culture = [{'x': c['x'], 'ru': c['ru']} for c in src.get('culture', []) if c.get('x') and c.get('ru')]
     songs = [{'t': s['t'], 'a': s['a'], 'y': s.get('y') or 0, 'ru': s.get('ru', '')} for s in src.get('songs', []) if s.get('t') and s.get('a')]
     books = {lv: {'t': b[0], 'a': b[1], 'y': b[2], 'ru': b[3]} for lv, b in BOOKS[lang].items()}
-    data[lang] = {'culture': culture, 'songs': songs, 'books': books}
-    print(f'{lang}: культура {len(culture)}, песни {len(songs)}, книги {len(books)}')
+    hf = BASE / f'history/{lang}.json'
+    history = [{'e': h.get('e', '📜'), 'y': h['y'], 't': h['t'], 'x': h['x'], 'ru': h['ru']} for h in (json.load(open(hf)) if hf.exists() else []) if h.get('x')]
+    data[lang] = {'culture': culture, 'songs': songs, 'books': books, 'history': history}
+    print(f'{lang}: культура {len(culture)}, песни {len(songs)}, книги {len(books)}, история {len(history)}')
 OUT.write_text('/* Сгенерировано mnemo/tools/extras_build.py — культура, песни и книги для курсов. */\n'
                'window.MNEMO_EXTRAS = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n', encoding='utf-8')
