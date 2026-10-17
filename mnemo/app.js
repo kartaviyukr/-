@@ -782,6 +782,7 @@ screens.deck = c => {
   <div class="pad">
     ${d.desc ? `<p class="desc">${esc(d.desc)}</p>` : ''}
     ${deckCity(d)}
+    ${deckExtras(d)}
     <div class="stats3">
       <div><b>${cards.length}</b><span>${plural(cards.length, 'слово', 'слова', 'слов')}</span></div>
       <div><b>${cnt[3] + cnt[4]}</b><span>знаю</span></div>
@@ -1021,6 +1022,31 @@ const RANKS = {
     ['Генеральний писар', 'генеральный писарь'], ['Генеральний суддя', 'генеральный судья'], ['Кошовий отаман', 'кошевой атаман'], ['Гетьман', 'гетман'], ['Князь', 'князь'],
     ['Великий князь київський', 'великий князь киевский']],
 };
+// Картинка звания: эмодзи (работает без интернета) и статья английской Википедии для иллюстрации.
+const RANK_ART = {
+  it: [['🥣', 'Begging'], ['🎒', 'Vagrancy'], ['🧺', 'Errand boy'], ['🌾', 'Peasant'], ['🐑', 'Shepherd'], ['🎣', 'Fisherman'], ['🔨', 'Apprenticeship'],
+    ['🏺', 'Artisan'], ['🧀', 'Shopkeeper'], ['⚖️', 'Merchant'], ['🏦', 'Banker'], ['📜', 'Notary'], ['🛡️', 'Squire'], ['⚔️', 'Knight'], ['🐎', 'Condottieri'],
+    ['🏛️', 'Podestà'], ['🚩', 'Gonfaloniere'], ['🏰', 'Signoria'], ['🎖️', 'Baron'], ['🦅', 'Viscount'], ['🍷', 'Count'], ['🎩', 'Marquess'], ['🦁', 'Duke'],
+    ['💎', 'Grand duke'], ['⛵', 'Doge of Venice'], ['🤴', 'Prince'], ['👑', 'King'], ['🌿', 'Caesar (title)'], ['🏛', 'Roman emperor']],
+  en: [['🎒', 'Hobo'], ['🚶', 'Drifter (person)'], ['🍽️', 'Dishwasher (occupation)'], ['🌽', 'Farmworker'], ['🤠', 'Cowboy'], ['⛏️', 'Prospecting'], ['🚚', 'Truck driver'],
+    ['🏪', 'Shopkeeper'], ['⭐', 'Deputy sheriff'], ['🌟', 'Sheriffs in the United States'], ['🏘️', 'Mayor'], ['🛢️', 'Business magnate'], ['💰', 'Millionaire'], ['🗳️', 'City council'],
+    ['🏙️', 'Mayor'], ['📜', 'State legislature (United States)'], ['🏛️', 'United States House of Representatives'], ['🏢', 'Governor (United States)'], ['🦅', 'United States Senate'],
+    ['🔨', 'Speaker of the United States House of Representatives'], ['🌐', 'United States Secretary of State'], ['🎖️', 'Vice President of the United States'], ['🇺🇸', 'President of the United States']],
+  uk: [['🥣', 'Begging'], ['🎒', 'Vagrancy'], ['🌾', 'Day labourer'], ['🧑‍🌾', 'Peasant'], ['🐂', 'Chumaks'], ['🔨', 'Artisan'], ['🧺', 'Merchant'], ['🐎', 'Zaporozhian Cossacks'],
+    ['🛡️', 'Dzhura'], ['🔟', 'Cossack ranks'], ['🏕️', 'Kurin'], ['📯', 'Yesaul'], ['⚔️', 'Sotnik'], ['🚩', 'Khorunzhy'], ['🎖️', 'Polkovnyk'], ['✒️', 'General Military Chancellery'],
+    ['⚖️', 'Cossack Hetmanate'], ['🏹', 'Kosh otaman'], ['🏵️', 'Hetman'], ['👑', 'Kniaz'], ['🔱', 'Grand Prince of Kiev']],
+};
+const rankTier = (k, of) => (k >= of - 1 ? 'top' : k / of < 0.25 ? 'bronze' : k / of < 0.5 ? 'silver' : k / of < 0.75 ? 'gold' : 'royal');
+// Значок звания; big — с иллюстрацией из Википедии поверх эмодзи (если загрузится).
+function rankBadge(r, lang, big) {
+  const a = (RANK_ART[lang] || [])[r.k] || ['🎖', ''];
+  return `<span class="rbadge ${rankTier(r.k, r.of)} ${big ? 'big' : ''}"${big && a[1] ? ` data-photo="${esc(['en', a[1], a[1], '', ''].join('|'))}"` : ''}><i>${a[0]}</i></span>`;
+}
+// Лестница всех званий курса.
+function rankLadder(lang, cur) {
+  const L = RANKS[lang] || [];
+  return `<div class="rladder">${L.map(([t, ru], k) => { const r = { k, of: L.length }; return `<div class="rstep ${cur && k <= cur.k ? 'got' : ''} ${cur && k === cur.k ? 'now' : ''}">${rankBadge(r, lang)}<b>${esc(t)}</b><small>${esc(ru.toLowerCase() === t.toLowerCase() ? '' : ru)}</small></div>`; }).join('')}</div>`;
+}
 // Звание за город с номером i; пишется на языке курса: «Conte di Lucca», «Sheriff of Regent», «Сотник · Глодоси».
 function rankOf(i, lang) {
   const J = jour(lang), L = RANKS[lang];
@@ -1126,7 +1152,7 @@ function journeyStrip() {
     <div class="js-b"><div class="js-t">${st.J.flag} ${st.J.title}</div>
       ${c ? `<div class="js-c">📍 ${esc(c.n)}<small>${esc(c.r)}</small></div>` : `<div class="js-c">🏛 ${st.J.goal} покорён!</div>`}
       <div class="js-s">Покорено ${w} из ${n} городов</div>
-      ${(() => { const r = topRank(st); return r ? `<div class="js-r">🎖 ${esc(r.t)}${r.ru ? ` <small>${esc(r.ru)}</small>` : ''}</div>` : ''; })()}
+      ${(() => { const r = topRank(st); return r ? `<div class="js-r">${rankBadge(r, st.lang)} ${esc(r.t)}${r.ru ? ` <small>${esc(r.ru)}</small>` : ''}</div>` : ''; })()}
       <div class="pbar sm"><i style="width:${n ? w / n * 100 : 0}%"></i></div></div>
     <div class="js-map ${st.lang}">${journeyMap(st, false)}</div>
   </button>`;
@@ -1148,18 +1174,21 @@ screens.journey = c0 => {
     <div class="legend center"><span><i class="lvl-dot l4"></i>покорено ${w}</span><span><i class="lvl-dot jcur"></i>сейчас</span><span><i class="lvl-dot l0"></i>впереди ${n - w}</span><span>★ ${J.goal}</span></div>
     <div class="pbar"><i style="width:${n ? w / n * 100 : 0}%"></i></div>
     ${(() => { const r = topRank(st), nx = c ? rankOf(st.cur, lang) : null;
-      return `<div class="card rank-card"><div class="rk-e">🎖</div><div class="rk-b"><div class="rk-l">Ваше звание</div>
+      return `<div class="card rank-card">${r ? rankBadge(r, lang, true) : '<div class="rk-e">🎖</div>'}<div class="rk-b"><div class="rk-l">Ваше звание</div>
         <div class="rk-t">${r ? esc(r.full) : 'Пока без звания'}</div><div class="rk-s">${r ? `${r.ru ? esc(r.ru) + ' · ' : ''}ступень ${r.k + 1} из ${r.of}` : 'Покорите первый город — и получите первое звание'}</div>
-        ${nx && (!r || nx.k > r.k) ? `<div class="rk-n">Следующее: ${esc(nx.t)}${nx.ru ? ` (${esc(nx.ru)})` : ''} — за ${esc(c.n)}</div>` : ''}</div></div>`; })()}
+        ${nx && (!r || nx.k > r.k) ? `<div class="rk-n">Следующее: ${esc(nx.t)}${nx.ru ? ` (${esc(nx.ru)})` : ''} — за ${esc(c.n)}</div>` : ''}</div></div>
+        <details class="rk-all"><summary>Все звания (${RANKS[lang].length})</summary>${rankLadder(lang, r)}</details>`; })()}
     ${c ? `<div class="card cta"><div class="cta-ico">📍</div><div class="cta-body"><div class="cta-t">${esc(c.n)} · ${esc(c.r)}</div>
       <div class="cta-s">Набор «${esc(st.curDeck.title)}» (${esc(st.curDeck.level)}). Пройдите все уроки и экзамен — и город покорён.</div></div>
       <button class="btn" data-act="journey-go" data-id="${esc(st.curDeck.id)}">Вперёд</button></div>` : `<div class="card cta"><div class="cta-ico">🏛</div><div class="cta-body"><div class="cta-t">Вы дошли до ${J.goalTo}!</div><div class="cta-s">Все города покорены. ${J.bravo}</div></div></div>`}
     <p class="hint">Каждый набор курса — город. Путь начинается в малоизвестных городках и ведёт ко всё более красивым местам, а финиш — ${J.goal}. За каждый покорённый город вы получаете открытку: фото и интересный факт на изучаемом языке.</p>
     <h2 class="sec">Открытки ${w ? `(${w})` : ''}</h2>
     ${cards ? `<div class="pcs">${cards}</div>` : '<p class="empty">Пока нет открыток. Покорите первый город!</p>'}
+    ${extrasList(st)}
   </div>`;
 };
 after.journey = () => { loadPhotos(); mapZoom($('#jmap')); };
+after.done = () => loadPhotos();
 
 // Приближение карты: щипок, колёсико, двойной тап, кнопки; при приближении карту можно двигать.
 function mapZoom(box) {
@@ -1423,9 +1452,11 @@ function postcard(i, lang) {
   openModal(`<div class="postcard">
     <div class="pc-photo" data-photo="${esc(photoKeyOf(J, c))}"><span class="pc-stamp">${i === J.data.cities.length - 1 ? '🏛' : '✉️'}</span></div>
     <h3>${esc(c.n)}</h3><p class="desc">${esc(c.r)} · набор «${esc(deck.title)}»</p>
-    ${(() => { const r = rankOf(i, lang); return r ? `<div class="pc-rank">🎖 ${esc(r.full)}${r.ru ? ` <small>— ${esc(r.ru)}</small>` : ''} ${spkBtn(r.full, J.voice)}</div>` : ''; })()}
+    ${(() => { const r = rankOf(i, lang); return r ? `<div class="pc-rank">${rankBadge(r, lang, true)}<span>${esc(r.full)}${r.ru ? ` <small>— ${esc(r.ru)}</small>` : ''} ${spkBtn(r.full, J.voice)}</span></div>` : ''; })()}
     <div class="pc-fact">${esc(f)} ${spkBtn(f, J.voice)}</div>
     <button class="btn ghost wide pc-map" data-act="ph-ext" data-u="${esc(mapsUrl(c, lang))}">🗺 Показать на Google Картах</button>
+    ${(() => { const k = cultureOf(i, lang); return k ? `<div class="pc-cult"><div class="x-l">🏛 Культура страны</div><div>${esc(k.x)} ${spkBtn(k.x, J.voice)}</div><details class="pc-ru"><summary>Перевод</summary>${esc(k.ru)}</details></div>` : ''; })()}
+    ${deckExtras(deck)}
     <details class="pc-ru"><summary>Перевод</summary>${esc(c.ru)}</details>
     <div class="pc-src"><span class="hint">Фото: Wikimedia / Openverse</span><button class="lnk" data-act="pc-photo" data-l="${lang}" data-i="${i}">📷 Другое фото</button></div>
     <button class="btn wide" data-act="modal-close">${J.thanks}</button></div>`, 'pc-modal');
@@ -1497,8 +1528,71 @@ function wonHtml(i, lang) {
   const last = i === J.data.cities.length - 1;
   return `<div class="card won-card pop"><div class="big-emoji">${last ? '🏛' : '🏰'}</div>
     <h2>${last ? `Вы дошли до ${J.goalTo}!` : 'Город покорён!'}</h2><p class="desc">${esc(c.n)} · ${esc(c.r)}</p>
-    ${(() => { const r = rankOf(i, lang); return r ? `<div class="pc-rank">🎖 Новое звание: <b>${esc(r.full)}</b>${r.ru ? ` <small>— ${esc(r.ru)}</small>` : ''}</div>` : ''; })()}
+    ${(() => { const r = rankOf(i, lang); return r ? `<div class="pc-rank">${rankBadge(r, lang, true)}<span>Новое звание: <b>${esc(r.full)}</b>${r.ru ? ` <small>— ${esc(r.ru)}</small>` : ''}</span></div>` : ''; })()}
     <button class="btn wide" data-act="postcard" data-l="${lang}" data-i="${i}">✉️ Открыть открытку</button></div>`;
+}
+
+/* ───────── Культура, песни, книги ─────────
+ * К каждой открытке — заметка о культуре страны; на каждую 10-ю тему курса — песня;
+ * на последнем наборе каждого уровня — книга, которую уже можно прочитать. */
+const EXTRAS = window.MNEMO_EXTRAS || {};
+const LYRICS = { it: 'testo', en: 'lyrics', uk: 'текст пісні' };
+function cultureOf(i, lang) { const E = EXTRAS[lang]; return E && E.culture.length && i >= 0 ? E.culture[i % E.culture.length] : null; }
+function songOfDeck(d) {
+  const E = EXTRAS[d.lang];
+  if (!E || !E.songs.length || !d.builtin || !jour(d.lang)) return null;
+  journeyList(d.lang);
+  const pos = jIdx[d.lang].pos.get(d.id);
+  if (pos === undefined || (pos + 1) % 10) return null;
+  const k = (pos + 1) / 10 - 1;
+  return E.songs[k] ? { s: E.songs[k], n: k + 1 } : null;
+}
+function bookOfDeck(d) {
+  const E = EXTRAS[d.lang];
+  if (!E || !d.builtin || !E.books[d.level] || !jour(d.lang)) return null;
+  const same = journeyList(d.lang).filter(x => x.level === d.level);
+  return same[same.length - 1] === d ? E.books[d.level] : null;
+}
+const extBtn = (label, url, cls = 'sm') => `<button class="btn ${cls}" data-act="ph-ext" data-u="${esc(url)}">${label}</button>`;
+function songCard(x, lang) {
+  const s = x.s, q = `${s.t} ${s.a}`;
+  return `<div class="card xcard"><div class="x-ico">🎵</div><div class="x-b"><div class="x-l">Песня этапа ${x.n}</div>
+    <div class="x-t">«${esc(s.t)}» — ${esc(s.a)}${s.y ? ` (${s.y})` : ''}</div><div class="x-s">${esc(s.ru)}</div>
+    <div class="x-btns">${extBtn('▶ YouTube', `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`)}${extBtn('📝 Текст', `https://www.google.com/search?q=${encodeURIComponent(q + ' ' + (LYRICS[lang] || 'lyrics'))}`, 'sm ghost')}</div></div></div>`;
+}
+function bookCard(b, level) {
+  return `<div class="card xcard book"><div class="x-ico">📚</div><div class="x-b"><div class="x-l">Книга уровня ${esc(level)}</div>
+    <div class="x-t">«${esc(b.t)}» — ${esc(b.a)}${b.y ? ` (${b.y})` : ''}</div><div class="x-s">${esc(b.ru)}</div>
+    <div class="x-btns">${extBtn('🔎 Найти книгу', `https://www.google.com/search?q=${encodeURIComponent(`«${b.t}» ${b.a}`)}`)}</div></div></div>`;
+}
+function deckExtras(d) {
+  const so = songOfDeck(d), bo = bookOfDeck(d);
+  return (so ? songCard(so, d.lang) : '') + (bo ? `<p class="hint">Это последний набор уровня ${esc(d.level)} — после него вы готовы к книге:</p>` + bookCard(bo, d.level) : '');
+}
+// Награды за покорённый набор — для экрана «Урок пройден».
+function extrasWonHtml(d) {
+  const so = songOfDeck(d), bo = bookOfDeck(d);
+  return (so ? `<h2 class="sec">🎵 Новая песня</h2>${songCard(so, d.lang)}` : '') + (bo ? `<h2 class="sec">📚 Уровень ${esc(d.level)} пройден!</h2>${bookCard(bo, d.level)}` : '');
+}
+// Все песни и книги пути — для экрана путешествия.
+function extrasList(st) {
+  const E = EXTRAS[st.lang];
+  if (!E) return '';
+  const rows = [];
+  E.songs.forEach((s, k) => {
+    const d = st.list[(k + 1) * 10 - 1];
+    if (!d) return;
+    const ok = !!db.won[d.id];
+    rows.push(`<div class="xrow ${ok ? 'ok' : ''}"><b>${ok ? '🎵' : '🔒'}</b><span>«${esc(s.t)}» — ${esc(s.a)}<small>${ok ? esc(s.ru) : `откроется за набор ${(k + 1) * 10}: «${esc(d.title)}»`}</small></span>
+      ${ok ? extBtn('▶', `https://www.youtube.com/results?search_query=${encodeURIComponent(s.t + ' ' + s.a)}`, 'sm ghost') : ''}</div>`);
+  });
+  const levels = [...new Set(st.list.map(d => d.level))].filter(lv => E.books[lv]);
+  const books = levels.map(lv => {
+    const same = st.list.filter(d => d.level === lv), last = same[same.length - 1], ok = same.every(d => db.won[d.id]), b = E.books[lv];
+    return `<div class="xrow ${ok ? 'ok' : ''}"><b>${ok ? '📚' : '🔒'}</b><span>${esc(lv)} · «${esc(b.t)}» — ${esc(b.a)}<small>${ok ? esc(b.ru) : `после уровня ${esc(lv)} (последний набор — «${esc(last.title)}»)`}</small></span>
+      ${extBtn('🔎', `https://www.google.com/search?q=${encodeURIComponent(`«${b.t}» ${b.a}`)}`, 'sm ghost')}</div>`;
+  }).join('');
+  return `<h2 class="sec">📚 Книги по уровням</h2>${books}<h2 class="sec">🎵 Песни пути — каждая 10-я тема</h2>${rows.join('')}`;
 }
 
 function deckCity(d) {
@@ -2004,7 +2098,7 @@ function startLesson(deckId, n) {
       addXp(bonus);
       saveSoon();
       const city = checkWon(deck);
-      return { title: node.kind === 'exam' ? 'Экзамен сдан!' : 'Урок пройден!', emoji: node.kind === 'exam' ? '🏆' : pick(['🎉', '🌟', '🥳', '🎯']), stars, bonus, next: nodes[n + 1] ? () => startLesson(deckId, n + 1) : null, extra: city !== null ? wonHtml(city, deck.lang) : '' };
+      return { title: node.kind === 'exam' ? 'Экзамен сдан!' : 'Урок пройден!', emoji: node.kind === 'exam' ? '🏆' : pick(['🎉', '🌟', '🥳', '🎯']), stars, bonus, next: nodes[n + 1] ? () => startLesson(deckId, n + 1) : null, extra: city !== null ? wonHtml(city, deck.lang) + extrasWonHtml(deck) : '' };
     },
   });
 }
