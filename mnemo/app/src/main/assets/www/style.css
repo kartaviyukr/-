@@ -544,3 +544,40 @@ button.path-head { width: 100%; text-align: left; }
 .pc-rank { margin: 8px 0; font-weight: 800; color: #c9a227; }
 .pc-rank small { color: var(--tx2); font-weight: 600; }
 .pc-map { margin: 4px 0 8px; }
+/* Песни, книги, культура */
+.xcard { display: flex; gap: 12px; align-items: flex-start; margin: 10px 0; text-align: left; }
+.xcard.book { border: 1px solid #c9a22755; }
+.x-ico { font-size: 30px; line-height: 1; }
+.x-b { flex: 1; min-width: 0; }
+.x-l { font-size: 12px; color: var(--tx3); font-weight: 800; text-transform: uppercase; letter-spacing: .5px; }
+.x-t { font-weight: 800; font-size: 16px; margin: 3px 0; }
+.x-s { font-size: 13.5px; color: var(--tx2); }
+.x-btns { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+.pc-cult { text-align: left; background: var(--card2); border-radius: 12px; padding: 10px 12px; margin: 8px 0; font-size: 14.5px; }
+.xrow { display: flex; gap: 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--line); color: var(--tx3); }
+.xrow.ok { color: var(--tx); }
+.xrow b { font-size: 20px; }
+.xrow span { flex: 1; font-weight: 700; font-size: 14.5px; }
+.xrow small { display: block; font-weight: 500; font-size: 12.5px; color: var(--tx3); }
+/* Значки званий */
+.rbadge { --c: #b87333; position: relative; display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--card2) center / cover no-repeat; border: 2px solid var(--c); vertical-align: middle; flex: none; box-shadow: 0 0 0 1px #0003; }
+.rbadge i { font-style: normal; font-size: 14px; line-height: 1; }
+.rbadge.big { width: 60px; height: 60px; border-width: 3px; }
+.rbadge.big i { font-size: 30px; }
+.rbadge.ok i { position: absolute; right: -6px; bottom: -6px; font-size: 18px; background: var(--card); border-radius: 50%; padding: 2px; }
+.rbadge.bronze { --c: #b87333; } .rbadge.silver { --c: #b8c2cc; } .rbadge.gold { --c: #e3b23c; }
+.rbadge.royal { --c: #9b59ff; box-shadow: 0 0 10px #9b59ff66; }
+.rbadge.top { --c: #ffd54a; box-shadow: 0 0 14px #ffd54a99; background-color: #6b1d2a; }
+.pc-rank { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.pc-rank > span { text-align: left; }
+.rank-card .rbadge.big { width: 64px; height: 64px; }
+.rk-all { margin: 0 0 10px; }
+.rk-all summary { color: var(--ac); font-weight: 700; cursor: pointer; padding: 4px 0; }
+.rladder { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; margin-top: 6px; }
+.rstep { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; padding: 8px 4px; border-radius: 12px; background: var(--card); opacity: .45; }
+.rstep.got { opacity: 1; }
+.rstep.now { outline: 2px solid var(--ac); }
+.rstep b { font-size: 12.5px; line-height: 1.15; }
+.rstep small { font-size: 11px; color: var(--tx3); line-height: 1.1; }
+.rstep .rbadge { width: 40px; height: 40px; }
+.rstep .rbadge i { font-size: 20px; }
