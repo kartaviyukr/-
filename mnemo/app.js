@@ -1002,6 +1002,47 @@ const JOURNEYS = {
   uk: { data: window.MNEMO_UKRAINE, flag: '🇺🇦', title: 'Дорога в Киев', goal: 'Киев', goalTo: 'Киева', wiki: 'uk', voice: 'uk-UA', thanks: 'Дякую!', bravo: 'Вітаю!', what: 'по Украине' },
   en: { data: window.MNEMO_USA, flag: '🇺🇸', title: 'Дорога в Вашингтон', goal: 'Вашингтон', goalTo: 'Вашингтона', wiki: 'en', voice: 'en-US', thanks: 'Thank you!', bravo: 'Congratulations!', what: 'по США' },
 };
+// Звания: за каждый покорённый город — звание; чем дальше по пути, тем выше. [звание, перевод]
+const RANKS = {
+  it: [['Mendicante', 'нищий'], ['Vagabondo', 'бродяга'], ['Garzone', 'мальчик на побегушках'], ['Contadino', 'крестьянин'], ['Pastore', 'пастух'],
+    ['Pescatore', 'рыбак'], ['Apprendista', 'подмастерье'], ['Artigiano', 'ремесленник'], ['Bottegaio', 'лавочник'], ['Mercante', 'купец'],
+    ['Banchiere', 'банкир'], ['Notaio', 'нотариус'], ['Scudiero', 'оруженосец'], ['Cavaliere', 'рыцарь'], ['Condottiero', 'кондотьер'],
+    ['Podestà', 'подеста, градоначальник'], ['Gonfaloniere', 'гонфалоньер'], ['Signore', 'синьор, правитель города'], ['Barone', 'барон'], ['Visconte', 'виконт'],
+    ['Conte', 'граф'], ['Marchese', 'маркиз'], ['Duca', 'герцог'], ['Granduca', 'великий герцог'], ['Doge', 'дож'],
+    ['Principe', 'князь'], ['Re', 'король'], ['Cesare', 'Цезарь'], ['Imperatore', 'император']],
+  en: [['Hobo', 'бродяга'], ['Drifter', 'скиталец'], ['Dishwasher', 'посудомойщик'], ['Farmhand', 'батрак'], ['Cowboy', 'ковбой'],
+    ['Gold Prospector', 'золотоискатель'], ['Trucker', 'дальнобойщик'], ['Shopkeeper', 'лавочник'], ['Deputy Sheriff', 'помощник шерифа'], ['Sheriff', 'шериф'],
+    ['Small-Town Mayor', 'мэр городка'], ['Tycoon', 'магнат'], ['Millionaire', 'миллионер'], ['City Council Member', 'член городского совета'], ['Mayor', 'мэр'],
+    ['State Senator', 'сенатор штата'], ['Congressman', 'конгрессмен'], ['Governor', 'губернатор'], ['U.S. Senator', 'сенатор США'], ['Speaker of the House', 'спикер Палаты представителей'],
+    ['Secretary of State', 'госсекретарь'], ['Vice President', 'вице-президент'], ['President', 'президент']],
+  uk: [['Жебрак', 'нищий'], ['Волоцюга', 'бродяга'], ['Наймит', 'батрак'], ['Селянин', 'крестьянин'], ['Чумак', 'чумак'],
+    ['Ремісник', 'ремесленник'], ['Купець', 'купец'], ['Козак', 'казак'], ['Джура', 'джура, оруженосец'], ['Десятник', 'десятник'],
+    ['Курінний отаман', 'куренной атаман'], ['Осавул', 'есаул'], ['Сотник', 'сотник'], ['Хорунжий', 'хорунжий'], ['Полковник', 'полковник'],
+    ['Генеральний писар', 'генеральный писарь'], ['Генеральний суддя', 'генеральный судья'], ['Кошовий отаман', 'кошевой атаман'], ['Гетьман', 'гетман'], ['Князь', 'князь'],
+    ['Великий князь київський', 'великий князь киевский']],
+};
+// Звание за город с номером i; пишется на языке курса: «Conte di Lucca», «Sheriff of Regent», «Сотник · Глодоси».
+function rankOf(i, lang) {
+  const J = jour(lang), L = RANKS[lang];
+  if (!J || !L || i < 0) return null;
+  const M = J.data.cities.length, c = J.data.cities[i];
+  const k = i >= M - 1 ? L.length - 1 : Math.min(L.length - 2, Math.floor(i * (L.length - 1) / Math.max(1, M - 1)));
+  const [t, ru0] = L[k];
+  const ru = ru0.toLowerCase() === t.toLowerCase() ? '' : ru0; // «Сотник — сотник» не повторяем
+  let full;
+  if (lang === 'it') full = `${t} ${/^[aeiouAEIOU]/.test(c.n) ? "d'" : 'di '}${c.n}`;
+  else if (lang === 'en') full = i >= M - 1 ? 'President of the United States' : `${t} ${k < 9 ? 'from' : 'of'} ${c.n}`; // «Hobo from…», но «Sheriff of…»
+  else full = i >= M - 1 ? 'Великий князь київський' : `${t} · ${c.n}`;
+  return { t, ru, full, k, of: L.length };
+}
+// Высшее звание из покорённых городов.
+function topRank(st) {
+  const best = st.wonIdx.length ? Math.max(...st.wonIdx) : -1;
+  return best < 0 ? null : rankOf(best, st.lang);
+}
+// Ссылка на город в Google Картах.
+const MAP_COUNTRY = { it: 'Italia', en: 'USA', uk: 'Україна' };
+const mapsUrl = (c, lang) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${c.n}, ${c.r}, ${MAP_COUNTRY[lang] || ''}`)}`;
 const jour = lang => { const J = JOURNEYS[lang]; return J && J.data && J.data.cities.length ? J : null; };
 const journeyOn = () => !!jour(curLang());
 const factOf = c => c.it || c.en || c.uk || c.f || '';
@@ -1085,6 +1126,7 @@ function journeyStrip() {
     <div class="js-b"><div class="js-t">${st.J.flag} ${st.J.title}</div>
       ${c ? `<div class="js-c">📍 ${esc(c.n)}<small>${esc(c.r)}</small></div>` : `<div class="js-c">🏛 ${st.J.goal} покорён!</div>`}
       <div class="js-s">Покорено ${w} из ${n} городов</div>
+      ${(() => { const r = topRank(st); return r ? `<div class="js-r">🎖 ${esc(r.t)}${r.ru ? ` <small>${esc(r.ru)}</small>` : ''}</div>` : ''; })()}
       <div class="pbar sm"><i style="width:${n ? w / n * 100 : 0}%"></i></div></div>
     <div class="js-map ${st.lang}">${journeyMap(st, false)}</div>
   </button>`;
@@ -1105,6 +1147,10 @@ screens.journey = c0 => {
       <div class="jhint">Двумя пальцами — приблизить</div></div>
     <div class="legend center"><span><i class="lvl-dot l4"></i>покорено ${w}</span><span><i class="lvl-dot jcur"></i>сейчас</span><span><i class="lvl-dot l0"></i>впереди ${n - w}</span><span>★ ${J.goal}</span></div>
     <div class="pbar"><i style="width:${n ? w / n * 100 : 0}%"></i></div>
+    ${(() => { const r = topRank(st), nx = c ? rankOf(st.cur, lang) : null;
+      return `<div class="card rank-card"><div class="rk-e">🎖</div><div class="rk-b"><div class="rk-l">Ваше звание</div>
+        <div class="rk-t">${r ? esc(r.full) : 'Пока без звания'}</div><div class="rk-s">${r ? `${r.ru ? esc(r.ru) + ' · ' : ''}ступень ${r.k + 1} из ${r.of}` : 'Покорите первый город — и получите первое звание'}</div>
+        ${nx && (!r || nx.k > r.k) ? `<div class="rk-n">Следующее: ${esc(nx.t)}${nx.ru ? ` (${esc(nx.ru)})` : ''} — за ${esc(c.n)}</div>` : ''}</div></div>`; })()}
     ${c ? `<div class="card cta"><div class="cta-ico">📍</div><div class="cta-body"><div class="cta-t">${esc(c.n)} · ${esc(c.r)}</div>
       <div class="cta-s">Набор «${esc(st.curDeck.title)}» (${esc(st.curDeck.level)}). Пройдите все уроки и экзамен — и город покорён.</div></div>
       <button class="btn" data-act="journey-go" data-id="${esc(st.curDeck.id)}">Вперёд</button></div>` : `<div class="card cta"><div class="cta-ico">🏛</div><div class="cta-body"><div class="cta-t">Вы дошли до ${J.goalTo}!</div><div class="cta-s">Все города покорены. ${J.bravo}</div></div></div>`}
@@ -1368,6 +1414,8 @@ function postcard(i, lang) {
   if (!won) {
     openModal(`<h3>📍 ${esc(c.n)}</h3><p class="desc">${esc(c.r)}</p>
       <p>${deck ? `Чтобы покорить этот город и открыть открытку, пройдите все уроки и экзамен набора <b>«${esc(deck.title)}»</b>.` : 'Этот город ещё впереди.'}</p>
+      ${(() => { const r = rankOf(i, lang); return r ? `<p class="hint">🎖 Награда: ${esc(r.full)}${r.ru ? ` — ${esc(r.ru)}` : ''}</p>` : ''; })()}
+      <button class="btn ghost wide" data-act="ph-ext" data-u="${esc(mapsUrl(c, lang))}">🗺 Показать на Google Картах</button>
       <div class="row2"><button class="btn ghost" data-act="modal-close">Закрыть</button>${deck ? `<button class="btn" data-act="journey-go" data-id="${esc(deck.id)}">К урокам</button>` : ''}</div>`);
     return;
   }
@@ -1375,7 +1423,9 @@ function postcard(i, lang) {
   openModal(`<div class="postcard">
     <div class="pc-photo" data-photo="${esc(photoKeyOf(J, c))}"><span class="pc-stamp">${i === J.data.cities.length - 1 ? '🏛' : '✉️'}</span></div>
     <h3>${esc(c.n)}</h3><p class="desc">${esc(c.r)} · набор «${esc(deck.title)}»</p>
+    ${(() => { const r = rankOf(i, lang); return r ? `<div class="pc-rank">🎖 ${esc(r.full)}${r.ru ? ` <small>— ${esc(r.ru)}</small>` : ''} ${spkBtn(r.full, J.voice)}</div>` : ''; })()}
     <div class="pc-fact">${esc(f)} ${spkBtn(f, J.voice)}</div>
+    <button class="btn ghost wide pc-map" data-act="ph-ext" data-u="${esc(mapsUrl(c, lang))}">🗺 Показать на Google Картах</button>
     <details class="pc-ru"><summary>Перевод</summary>${esc(c.ru)}</details>
     <div class="pc-src"><span class="hint">Фото: Wikimedia / Openverse</span><button class="lnk" data-act="pc-photo" data-l="${lang}" data-i="${i}">📷 Другое фото</button></div>
     <button class="btn wide" data-act="modal-close">${J.thanks}</button></div>`, 'pc-modal');
@@ -1447,6 +1497,7 @@ function wonHtml(i, lang) {
   const last = i === J.data.cities.length - 1;
   return `<div class="card won-card pop"><div class="big-emoji">${last ? '🏛' : '🏰'}</div>
     <h2>${last ? `Вы дошли до ${J.goalTo}!` : 'Город покорён!'}</h2><p class="desc">${esc(c.n)} · ${esc(c.r)}</p>
+    ${(() => { const r = rankOf(i, lang); return r ? `<div class="pc-rank">🎖 Новое звание: <b>${esc(r.full)}</b>${r.ru ? ` <small>— ${esc(r.ru)}</small>` : ''}</div>` : ''; })()}
     <button class="btn wide" data-act="postcard" data-l="${lang}" data-i="${i}">✉️ Открыть открытку</button></div>`;
 }
 
