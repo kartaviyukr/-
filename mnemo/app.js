@@ -984,6 +984,7 @@ screens.lessons = () => {
   <div class="pad">
     ${langBar()}
     ${journeyStrip()}
+    ${journeyOn() && histOf(curLang()).length ? `<button class="chip big hchip" data-act="history" data-l="${curLang()}">📜 Карта истории · ${histOpen(curLang())}/${histOf(curLang()).length}</button>` : ''}
     <button class="card path-head" data-act="pick-deck"><div class="cta-ico">${esc(deck.emoji || '📘')}</div><div class="cta-body"><div class="cta-t">${deck.level ? `<span class="lvl-tag">${esc(deck.level)}</span> ` : ''}${esc(deck.title)}</div>
       <div class="cta-s">${journeyOn() && cityOf(deck) ? `📍 ${esc(cityOf(deck).n)} · ` : ''}${doneN} из ${nodes.length} уроков · ${nWords(deck.cards.length)} · набор ${pos.indexOf(deck) + 1} из ${pos.length}</div><div class="pbar sm"><i style="width:${doneN / nodes.length * 100}%"></i></div></div><span class="lnk">Сменить</span></button>
     <p class="hint">Курс идёт от A0 к C2: пройдите уроки набора — и переходите к следующему. Каждый урок знакомит с ${db.settings.lessonSize} словами и закрепляет их 7 видами упражнений.</p>
@@ -1168,6 +1169,7 @@ screens.journey = c0 => {
     return `<button class="pc" data-act="postcard" data-l="${lang}" data-i="${i}"><span class="pc-img" data-photo="${esc([J.wiki, C[i].w, C[i].n, C[i].r, C[i].p || ''].join('|'))}"></span><b>${esc(C[i].n)}</b><small>${esc(C[i].r)}</small></button>`;
   }).join('');
   return `${hdr(J.title)}<div class="pad">
+    ${histOf(lang).length ? `<button class="btn ghost wide hbtn" data-act="history" data-l="${lang}">📜 Карта истории · открыто ${histOpen(lang)} из ${histOf(lang).length}</button>` : ''}
     <div class="jmap" id="jmap">${journeyMap(st, true)}
       <div class="jzoom"><button class="ib" data-z="in" aria-label="Приблизить">＋</button><button class="ib" data-z="out" aria-label="Отдалить">−</button><button class="ib" data-z="reset" aria-label="Вся карта">⟲</button></div>
       <div class="jhint">Двумя пальцами — приблизить</div></div>
@@ -1593,6 +1595,99 @@ function extrasList(st) {
       ${extBtn('🔎', `https://www.google.com/search?q=${encodeURIComponent(`«${b.t}» ${b.a}`)}`, 'sm ghost')}</div>`;
   }).join('');
   return `<h2 class="sec">📚 Книги по уровням</h2>${books}<h2 class="sec">🎵 Песни пути — каждая 10-я тема</h2>${rows.join('')}`;
+}
+
+/* ───────── Карта истории ─────────
+ * 50 станций истории страны по хронологии. Станции открываются по мере покорения городов,
+ * тексты усложняются от A2 к C1. Слова из словаря подсвечены: выученные, изучаемые и новые (с переводом по нажатию). */
+const HIST_N = 50;
+const histOf = lang => (EXTRAS[lang] && EXTRAS[lang].history) || [];
+function histOpen(lang) {
+  const H = histOf(lang);
+  if (!H.length || !jour(lang)) return 0;
+  const st = journeyState(lang), N = Math.max(1, st.list.length);
+  return Math.min(H.length, 1 + Math.floor(st.won.length * H.length / N));
+}
+// сколько покорённых городов нужно для станции k
+const histNeed = (lang, k) => { const N = journeyList(lang).length, H = histOf(lang).length || HIST_N; return Math.ceil(k * N / H); };
+// Словарь языка для подсветки: точное совпадение или общая основа (для склонений и спряжений).
+const ARTICLES = /^(il|lo|la|i|gli|le|un|uno|una|the|a|an|to)\s+|^(l|un|dell|dall|nell|sull)'/i;
+let histDict = { lang: null, decks: null };
+function histDictionary(lang) {
+  if (histDict.lang === lang && histDict.decks === DECKS) return histDict;
+  const exact = new Map(), pre = new Map();
+  for (const c of byLang[lang] || []) {
+    const t = c.t.toLowerCase().replace(/\([^)]*\)/g, '').replace(ARTICLES, '').trim();
+    if (!t || /\s/.test(t) || t.length < 2) continue;
+    if (!exact.has(t)) exact.set(t, c);
+    if (t.length >= 4) { const k = t.slice(0, 4); if (!pre.has(k)) pre.set(k, []); pre.get(k).push([t, c]); }
+  }
+  return (histDict = { lang, decks: DECKS, exact, pre });
+}
+function histMatch(D, w) {
+  const t = w.toLowerCase();
+  if (D.exact.has(t)) return D.exact.get(t);
+  if (t.length < 4) return null;
+  let best = null, bl = 0;
+  for (const [term, c] of D.pre.get(t.slice(0, 4)) || []) {
+    let l = 0; while (l < term.length && l < t.length && term[l] === t[l]) l++;
+    if (l >= Math.max(4, Math.min(term.length, t.length) - 3) && l / term.length >= 0.6 && l > bl) { bl = l; best = c; }
+  }
+  return best;
+}
+function histText(lang, text) {
+  const D = histDictionary(lang), seen = new Map();
+  const html = text.split(/([\p{L}\p{M}'’ʼ-]+)/u).map((part, i) => {
+    if (i % 2 === 0) return esc(part);
+    const c = histMatch(D, part.replace(/^['’ʼ]+|['’ʼ]+$/g, ''));
+    if (!c) return esc(part);
+    const lv = level(c.id), cls = lv >= 2 ? 'hk' : lv === 1 ? 'hl' : 'hn';
+    seen.set(c.id, lv);
+    return `<span class="hw ${cls}" data-act="hist-word" data-id="${esc(c.id)}">${esc(part)}</span>`;
+  }).join('');
+  const vals = [...seen.values()];
+  return { html, total: vals.length, known: vals.filter(v => v >= 2).length, learning: vals.filter(v => v === 1).length };
+}
+screens.history = c0 => {
+  const lang = c0.lang || curLang(), H = histOf(lang), J = jour(lang);
+  if (!H.length || !J) return hdr('Карта истории') + '<p class="empty">История пока недоступна</p>';
+  const open = histOpen(lang), won = journeyState(lang).won.length;
+  return `${hdr(`📜 История ${J.what.replace('по ', '')}`)}<div class="pad">
+    <p class="desc">50 станций истории — от древности до наших дней. Новые станции открываются, пока вы покоряете города; тексты становятся сложнее вместе с вами.</p>
+    <div class="pbar"><i style="width:${open / H.length * 100}%"></i></div><p class="hint center">Открыто ${open} из ${H.length}</p>
+    <div class="htl">${H.map((h, k) => k < open
+      ? `<button class="hst" data-act="hist-open" data-l="${lang}" data-k="${k}"><span class="hdot">${h.e}</span><span class="hb"><small>${esc(h.y)}</small><b>${esc(h.t)}</b></span></button>`
+      : `<div class="hst lock"><span class="hdot">🔒</span><span class="hb"><small>${esc(h.y)}</small><b>${k === open ? esc(h.t) : '· · ·'}</b><small>откроется после ${histNeed(lang, k)} покорённых городов (сейчас ${won})</small></span></div>`).join('')}</div>
+  </div>`;
+};
+screens.station = c0 => {
+  const lang = c0.lang, k = c0.k, H = histOf(lang), h = H[k], J = jour(lang);
+  if (!h || k >= histOpen(lang)) return hdr('Станция') + '<p class="empty">Станция ещё закрыта</p>';
+  const r = histText(lang, h.x);
+  const pct = r.total ? Math.round(r.known / r.total * 100) : 0;
+  return `${hdr(`${h.e} ${esc(h.y)}`)}<div class="pad">
+    <div class="hnum">Станция ${k + 1} из ${H.length}</div>
+    <h1 class="htitle">${esc(h.t)} ${spkBtn(h.t, J.voice)}</h1>
+    <div class="card htext">${r.html}</div>
+    <div class="row2"><button class="btn ghost" data-act="speak" data-text="${esc(h.x)}" data-lang="${J.voice}">🔊 Слушать</button><button class="btn ghost" data-act="speak-slow" data-text="${esc(h.x)}" data-lang="${J.voice}">🐢 Медленно</button></div>
+    <div class="hstat"><div class="pbar"><i style="width:${pct}%"></i></div>
+      Вы знаете <b>${r.known}</b> из ${r.total} слов словаря в этом тексте${r.learning ? ` · изучаете ещё ${r.learning}` : ''}</div>
+    <div class="legend"><span><i class="hw hk">слово</i> выучено</span><span><i class="hw hl">слово</i> изучаю</span><span><i class="hw hn">слово</i> новое — нажмите</span></div>
+    <details class="pc-ru"><summary>Перевод</summary>${esc(h.ru)}</details>
+    <div class="row2">${k > 0 ? `<button class="btn ghost" data-act="hist-open" data-l="${lang}" data-k="${k - 1}" data-replace="1">← Раньше</button>` : '<span></span>'}
+      ${k + 1 < histOpen(lang) ? `<button class="btn" data-act="hist-open" data-l="${lang}" data-k="${k + 1}" data-replace="1">Дальше →</button>` : '<span></span>'}</div>
+  </div>`;
+};
+// Новая станция истории открылась при покорении набора?
+function histNewHtml(d) {
+  const H = histOf(d.lang);
+  if (!H.length || !jour(d.lang)) return '';
+  const st = journeyState(d.lang), N = Math.max(1, st.list.length), w = st.won.length;
+  const now = Math.min(H.length, 1 + Math.floor(w * H.length / N)), before = Math.min(H.length, 1 + Math.floor((w - 1) * H.length / N));
+  if (now <= before) return '';
+  const h = H[now - 1];
+  return `<div class="card xcard"><div class="x-ico">📜</div><div class="x-b"><div class="x-l">Открыта станция истории ${now}</div><div class="x-t">${h.e} ${esc(h.y)} · ${esc(h.t)}</div>
+    <div class="x-btns"><button class="btn sm" data-act="hist-open" data-l="${d.lang}" data-k="${now - 1}">Читать</button></div></div></div>`;
 }
 
 function deckCity(d) {
@@ -2098,7 +2193,7 @@ function startLesson(deckId, n) {
       addXp(bonus);
       saveSoon();
       const city = checkWon(deck);
-      return { title: node.kind === 'exam' ? 'Экзамен сдан!' : 'Урок пройден!', emoji: node.kind === 'exam' ? '🏆' : pick(['🎉', '🌟', '🥳', '🎯']), stars, bonus, next: nodes[n + 1] ? () => startLesson(deckId, n + 1) : null, extra: city !== null ? wonHtml(city, deck.lang) + extrasWonHtml(deck) : '' };
+      return { title: node.kind === 'exam' ? 'Экзамен сдан!' : 'Урок пройден!', emoji: node.kind === 'exam' ? '🏆' : pick(['🎉', '🌟', '🥳', '🎯']), stars, bonus, next: nodes[n + 1] ? () => startLesson(deckId, n + 1) : null, extra: city !== null ? wonHtml(city, deck.lang) + extrasWonHtml(deck) + histNewHtml(deck) : '' };
     },
   });
 }
@@ -2867,6 +2962,15 @@ const A = {
   'art-next': el => replace('article', { id: el.dataset.id }),
   'modal-close': () => closeModal(),
   journey: () => go('journey', { lang: curLang() }),
+  history: el => go('history', { lang: el.dataset.l || curLang() }),
+  'hist-open': el => { closeModal(); const p = { lang: el.dataset.l, k: Number(el.dataset.k) }; el.dataset.replace ? replace('station', p) : go('station', p); },
+  'hist-word': el => {
+    const x = cardIdx.get(el.dataset.id); if (!x) return;
+    const c = x.c, { fl } = langsOf(c);
+    openModal(`<h3>${esc(c.t)} ${spkBtn(c.t, fl)}</h3><p class="desc">${esc(c.d)}</p>${c.ex ? `<div class="ex-line">${esc(c.ex)}${c.exT ? `<br><span>${esc(c.exT)}</span>` : ''}</div>` : ''}
+      <p class="hint">${['Новое слово', 'Изучаете', 'Знакомое', 'Знаете', 'Выучено'][level(c.id)]} · набор «${esc(x.d.title)}»</p>
+      <div class="row2"><button class="btn ghost" data-act="star" data-id="${esc(c.id)}">${c.star ? '★ В избранном' : '☆ В избранное'}</button><button class="btn" data-act="modal-close">OK</button></div>`);
+  },
   ...photoActions(),
   postcard: el => postcard(Number(el.dataset.i), el.dataset.l || curLang()),
   'journey-go': el => { closeModal(); setActive(el.dataset.id); tab('lessons'); },

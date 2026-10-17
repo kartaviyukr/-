@@ -581,3 +581,24 @@ button.path-head { width: 100%; text-align: left; }
 .rstep small { font-size: 11px; color: var(--tx3); line-height: 1.1; }
 .rstep .rbadge { width: 40px; height: 40px; }
 .rstep .rbadge i { font-size: 20px; }
+/* Карта истории */
+.hbtn { margin: 4px 0 10px; }
+.hchip { width: 100%; justify-content: center; margin: -4px 0 12px; }
+.htl { position: relative; padding-left: 8px; margin-top: 8px; }
+.htl::before { content: ''; position: absolute; left: 25px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+.hst { position: relative; display: flex; gap: 12px; align-items: center; width: 100%; text-align: left; padding: 8px 0; }
+.hdot { position: relative; z-index: 1; display: grid; place-items: center; width: 36px; height: 36px; flex: none; border-radius: 50%; background: var(--card); border: 2px solid var(--ac); font-size: 18px; }
+.hst.lock { opacity: .5; }
+.hst.lock .hdot { border-color: var(--line); font-size: 14px; }
+.hb { display: flex; flex-direction: column; min-width: 0; }
+.hb b { font-size: 15px; }
+.hb small { color: var(--tx3); font-size: 12px; font-weight: 700; }
+.hnum { color: var(--tx3); font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; }
+.htitle { font-size: 22px; margin: 4px 0 10px; }
+.htext { font-size: 18px; line-height: 1.6; }
+.hw { border-radius: 4px; padding: 0 1px; cursor: pointer; font-style: normal; }
+.hw.hk { background: #2ecc7133; box-shadow: inset 0 -2px 0 #2ecc71; }
+.hw.hl { background: #f1c40f33; box-shadow: inset 0 -2px 0 #f1c40f; }
+.hw.hn { box-shadow: inset 0 -1px 0 var(--tx3); }
+.hstat { margin: 12px 0; font-size: 14px; color: var(--tx2); }
+.hstat .pbar { margin-bottom: 6px; }
