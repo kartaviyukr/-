@@ -46,7 +46,7 @@ const langOfCode = code => { const p = String(code || '').slice(0, 2).toLowerCas
 const KEY = 'mnemo.v1';
 const DEF_SETTINGS = {
   theme: 'dark', goal: 50, autoplay: false, rate: 0.9, dir: 'td', lessonSize: 6,
-  newPerDay: 10, typos: true, sound: true, lang: 'en', onlineVoice: true,
+  newPerDay: 10, typos: true, sound: true, lang: 'en', onlineVoice: true, track: 'words',
 };
 let db;
 let BUILTIN = [];
@@ -79,7 +79,7 @@ function load() {
   try { db = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { db = null; }
   if (!db || !Array.isArray(db.decks)) db = { decks: [], created: now() };
   db.settings = { ...DEF_SETTINGS, ...(db.settings || {}) };
-  for (const k of ['prog', 'lessons', 'days', 'best', 'removed', 'flags', 'bdeck', 'cedit', 'hidden', 'won']) db[k] = db[k] || {};
+  for (const k of ['prog', 'lessons', 'days', 'best', 'removed', 'flags', 'bdeck', 'cedit', 'hidden', 'won', 'gram', 'exams', 'marathon']) db[k] = db[k] || {};
   if (!db.settings.active || typeof db.settings.active !== 'object') db.settings.active = {};
   if (!db.settings.open || typeof db.settings.open !== 'object') db.settings.open = {};
   if (db.settings.activeDeck) { db.settings.active.en = db.settings.active.en || db.settings.activeDeck; delete db.settings.activeDeck; }
@@ -135,6 +135,12 @@ function ensureLang(l) {
   return packWait[l] || (packWait[l] = new Promise((ok, fail) => {
     const sc = document.createElement('script');
     sc.src = `data/pack-${l}.js`;
+    if (!(window.MNEMO_GRAMMAR || {})[l]) { // грамматика — отдельным файлом, без неё словарь тоже работает
+      const g = document.createElement('script');
+      g.src = `data/grammar-${l}.js`;
+      g.onload = () => { if (db.settings.lang === l && view) render(true); };
+      document.head.appendChild(g);
+    }
     sc.onload = () => { buildBuiltin(); rebuild(); ok(); };
     sc.onerror = () => { delete packWait[l]; fail(new Error('pack ' + l)); };
     document.head.appendChild(sc);
@@ -543,6 +549,7 @@ function render(keep = false) {
   const isTab = TABS.includes(c.name);
   document.body.classList.toggle('no-tabs', !isTab);
   document.body.dataset.screen = c.name;
+  document.body.dataset.lang = db.settings.lang; // фон страны
   $$('#tabs button').forEach(b => b.classList.toggle('on', isTab && b.dataset.tab === c.name));
   view.scrollTop = st;
   if (after[c.name]) after[c.name](c, keep);
@@ -707,7 +714,7 @@ function decksHtml(q) {
   let h = mine.length ? `<h2 class="sec">Мои наборы</h2>${mine.map(deckRow).join('')}` : '';
   for (const [lv, list] of byLevel(ds.filter(d => d.builtin))) {
     const open = levelOpen(lv);
-    h += levelHead(lv, list, 'lvl-toggle', open) + (open ? `<div class="lvl-list">${list.map(deckRow).join('')}</div>` : '');
+    h += levelHead(lv, list, 'lvl-toggle', open) + (open ? `<div class="lvl-list">${list.map(deckRow).join('')}<button class="gexam sm ${db.exams[examKey(curLang(), lv)]?.passed ? 'ok' : ''}" data-act="exam" data-lv="${lv}"><b>${examBadge(curLang(), lv)}</b><span>Экзамен уровня ${lv}</span></button></div>` : '');
   }
   return h || `<p class="empty">Для этого языка пока нет наборов. Создайте свой или импортируйте список слов.</p>`;
 }
@@ -954,9 +961,10 @@ const nodeKey = n => `${n.kind}:${n.cards[0]?.id}:${n.cards.length}`;
 const nodeDone = (deck, n) => !!(db.lessons[deck.id] || {})[nodeKey(n)];
 const nodeStars = (deck, n) => (db.lessons[deck.id] || {})[nodeKey(n)] || 0;
 
-screens.lessons = () => {
+screens.lessons = () => (db.settings.track === 'gram' ? lessonsGram() : lessonsWords());
+function lessonsWords() {
   const deck = activeDeck();
-  if (!deck) return `${hdr('Уроки', { root: true })}<div class="pad">${langBar()}<p class="empty">Добавьте набор хотя бы из 3 слов — и из него соберутся уроки.</p></div>`;
+  if (!deck) return `${hdr('Уроки', { root: true })}<div class="pad">${langBar()}${trackSeg()}<p class="empty">Добавьте набор хотя бы из 3 слов — и из него соберутся уроки.</p></div>`;
   const nodes = lessonNodes(deck);
   const firstOpen = nodes.findIndex(n => !nodeDone(deck, n));
   let html = '', lastUnit = 0;
@@ -982,7 +990,7 @@ screens.lessons = () => {
   const pos = langDecks().filter(x => x.cards.length >= 3);
   return `${hdr('Уроки', { root: true })}
   <div class="pad">
-    ${langBar()}
+    ${langBar()}${trackSeg()}
     ${journeyStrip()}
     ${journeyOn() && histOf(curLang()).length ? `<button class="chip big hchip" data-act="history" data-l="${curLang()}">📜 Карта истории · ${histOpen(curLang())}/${histOf(curLang()).length}</button>` : ''}
     <button class="card path-head" data-act="pick-deck"><div class="cta-ico">${esc(deck.emoji || '📘')}</div><div class="cta-body"><div class="cta-t">${deck.level ? `<span class="lvl-tag">${esc(deck.level)}</span> ` : ''}${esc(deck.title)}</div>
@@ -1699,6 +1707,194 @@ function deckCity(d) {
   const nodes = lessonNodes(d), dn = nodes.filter(n => nodeDone(d, n)).length;
   return `<button class="chip big jchip" data-act="postcard" data-l="${d.lang}" data-i="${i}">📍 ${esc(c.n)} · уроки ${dn}/${nodes.length} — пройдите все и экзамен</button>`;
 }
+/* ───────────────────────── Грамматика и экзамены уровней ─────────────────────────
+ * Параллельная ветка уроков: на каждом уровне темы как в учебнике (теория + 12 упражнений).
+ * В конце уровня — экзамен: слова (нужно ≥ 90%), правила и предложения (≥ 80%).
+ * Отдельно — «марафон»: все слова уровня с сохранением прогресса. */
+const LVS = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+const gramOf = lang => (window.MNEMO_GRAMMAR || {})[lang] || [];
+const gnorm = s => String(s || '').toLowerCase().replace(/[’`ʼ]/g, "'").replace(/[.,!?;:"«»…¿¡()–—]/g, ' ').replace(/\s+/g, ' ').trim();
+const gramCheck = (input, acc) => { const n = gnorm(input); return !!n && acc.some(a => gnorm(a) === n); };
+// Теория: **жирный**, строки «- » — список, строки «| … |» — таблица (первая строка — заголовок).
+function mdLite(x) {
+  const inline = t => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+  const out = [];
+  let list = null, table = null, para = [];
+  const flush = () => {
+    if (para.length) { out.push(`<p>${para.map(inline).join('<br>')}</p>`); para = []; }
+    if (list) { out.push(`<ul>${list.map(l => `<li>${inline(l)}</li>`).join('')}</ul>`); list = null; }
+    if (table) {
+      const rows = table.filter(r => !/^\|?\s*:?-{2,}/.test(r)).map(r => r.replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
+      out.push(`<div class="gtable"><table>${rows.map((r, i) => `<tr>${r.map(c => i ? `<td>${inline(c)}</td>` : `<th>${inline(c)}</th>`).join('')}</tr>`).join('')}</table></div>`);
+      table = null;
+    }
+  };
+  for (const raw of String(x).split('\n')) {
+    const l = raw.trim();
+    if (!l) { flush(); continue; }
+    if (l.startsWith('|')) { if (!table) { flush(); table = []; } table.push(l); continue; }
+    if (/^[-•]\s+/.test(l)) { if (!list) { flush(); list = []; } list.push(l.replace(/^[-•]\s+/, '')); continue; }
+    if (list || table) flush();
+    para.push(l);
+  }
+  flush();
+  return out.join('');
+}
+const gramEx = q => ({ type: { mc: 'gmc', type: 'gtype', order: 'gorder', tr: 'gtr' }[q.k], q });
+function trackSeg() {
+  const t = db.settings.track === 'gram' ? 'gram' : 'words';
+  return `<div class="seg track"><button class="${t === 'words' ? 'on' : ''}" data-act="set" data-k="track" data-v="words">📗 Слова и города</button><button class="${t === 'gram' ? 'on' : ''}" data-act="set" data-k="track" data-v="gram">📐 Грамматика</button></div>`;
+}
+const examKey = (lang, lv) => `${lang}:${lv}`;
+function examBadge(lang, lv) {
+  const e = db.exams[examKey(lang, lv)];
+  return e && e.passed ? '✅' : '🎓';
+}
+function lessonsGram() {
+  const lang = curLang(), T = gramOf(lang);
+  let h = '';
+  for (const lv of LVS) {
+    const ts = T.filter(t => t.lv === lv);
+    const hasWords = langDecks(lang).some(d => d.builtin && d.level === lv);
+    if (!ts.length && !hasWords) continue;
+    const done = ts.filter(t => db.gram[t.id]).length;
+    h += `<div class="unit"><b>${lv} · ${LEVEL_NAMES[lv]}</b><span>${done}/${ts.length}</span></div>`;
+    h += ts.map(t => { const st = db.gram[t.id] || 0; return `<button class="gtop ${st ? 'done' : ''}" data-act="gtopic" data-id="${esc(t.id)}"><b>${t.e || '📘'}</b><span>${esc(t.t)}<small>${st ? '★'.repeat(st) + '☆'.repeat(3 - st) : `${t.q.length} упражнений`}</small></span></button>`; }).join('');
+    const e = db.exams[examKey(lang, lv)];
+    h += `<button class="gexam ${e && e.passed ? 'ok' : ''}" data-act="exam" data-lv="${lv}"><b>${examBadge(lang, lv)}</b><span>Экзамен уровня ${lv}<small>${e ? `лучший результат: слова ${e.w}% · правила ${e.g ?? '—'}% · предложения ${e.s ?? '—'}%${e.all ? ' · 🏅 все слова' : ''}` : 'слова ≥ 90% · правила и предложения ≥ 80%'}</small></span></button>`;
+  }
+  return `${hdr('Уроки', { root: true })}<div class="pad">${langBar()}${trackSeg()}
+    <p class="hint">Грамматика идёт параллельно словам: на каждом уровне — темы как в учебнике и экзамен в конце.</p>
+    ${T.length ? h : '<p class="empty">Грамматика для этого языка загружается…</p>'}</div>`;
+}
+screens.gtopic = c => {
+  const t = gramOf(curLang()).find(x => x.id === c.id) || Object.values(window.MNEMO_GRAMMAR || {}).flat().find(x => x.id === c.id);
+  if (!t) return hdr('Тема') + '<p class="empty">Тема не найдена</p>';
+  const st = db.gram[t.id] || 0;
+  return `${hdr(`${t.e || '📘'} ${esc(t.lv)}`)}<div class="pad">
+    <h1 class="htitle">${esc(t.t)}</h1>
+    <div class="card gtheory">${mdLite(t.x)}</div>
+    ${st ? `<p class="center big-stars sm">${'★'.repeat(st)}<span>${'★'.repeat(3 - st)}</span></p>` : ''}
+    <button class="btn wide" data-act="gstart" data-id="${esc(t.id)}">✍️ Упражнения (${t.q.length})</button>
+  </div>`;
+};
+function startGramTopic(id) {
+  const all = Object.values(window.MNEMO_GRAMMAR || {}).flat();
+  const t = all.find(x => x.id === id);
+  if (!t) return;
+  let queue = shuffle(t.q).map(gramEx), retry = [], done = 0;
+  const total = queue.length;
+  startRun({
+    kind: 'gram', deckId: null, pool: [], again: () => startGramTopic(id),
+    nextEx() {
+      if (queue.length) return queue.shift();
+      if (retry.length) { queue = retry.map(q => gramEx(q)); retry = []; return { type: 'round', title: 'Работа над ошибками', sub: 'Повторим задания с ошибками.', emoji: '🎯', noGrade: true }; }
+      return null;
+    },
+    onAnswer(ex, ok) { if (!ex.g) return; ok ? done++ : retry.push(ex.g); },
+    onOverride(ex) { const i = retry.lastIndexOf(ex.g); if (i >= 0) retry.splice(i, 1); done++; },
+    progress() { return done / total; },
+    counter() { return `${done}/${total}`; },
+    finish() {
+      const acc = S.ok + S.bad ? S.ok / (S.ok + S.bad) : 1;
+      const stars = acc >= 0.95 ? 3 : acc >= 0.8 ? 2 : 1;
+      db.gram[id] = Math.max(db.gram[id] || 0, stars);
+      addXp(30); saveSoon();
+      const same = all.filter(x => x.lv === t.lv && x.id.split('-')[0] === t.id.split('-')[0]);
+      const nx = same[same.indexOf(t) + 1];
+      return { title: 'Тема пройдена!', emoji: '📐', stars, bonus: 30, next: nx ? () => { replace('gtopic', { id: nx.id }); } : null };
+    },
+  });
+}
+// Детерминированное перемешивание — для марафона, который можно продолжать в другой день.
+function seededShuffle(a, seed) {
+  a = [...a];
+  let s = seed >>> 0;
+  const r = () => { s = (s + 0x6D2B79F5) >>> 0; let t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+const levelCards = (lang, lv) => langDecks(lang).filter(d => d.builtin && d.level === lv).flatMap(d => d.cards);
+screens.exam = c => {
+  const lang = curLang(), lv = c.lv, key = examKey(lang, lv), e = db.exams[key];
+  const words = levelCards(lang, lv), T = gramOf(lang).filter(t => t.lv === lv);
+  const gq = T.flatMap(t => t.q.filter(q => q.k !== 'tr')).length, sq = T.flatMap(t => t.q.filter(q => q.k === 'tr')).length;
+  const m = db.marathon[key];
+  return `${hdr(`🎓 Экзамен ${lv}`)}<div class="pad">
+    <p class="desc">Итоговый экзамен уровня ${lv} (${LEVEL_NAMES[lv]}). Три части:</p>
+    <div class="card"><ol class="exparts">
+      <li><b>Слова</b> — напишите на ${LANGS[lang].name.toLowerCase().replace(/ий$/, 'ом')} ${Math.min(100, words.length)} слов уровня по переводу. Нужно <b>≥ 90%</b>.</li>
+      ${gq ? `<li><b>Правила</b> — ${Math.min(20, gq)} заданий по грамматике уровня. Нужно <b>≥ 80%</b>.</li>` : ''}
+      ${sq ? `<li><b>Предложения</b> — переведите ${Math.min(10, sq)} предложений. Нужно <b>≥ 80%</b>.</li>` : ''}
+    </ol></div>
+    ${e ? `<p class="center">${e.passed ? '✅ Уровень подтверждён' : '❌ Пока не сдан'} · лучший: слова ${e.w}% · правила ${e.g ?? '—'}% · предложения ${e.s ?? '—'}%</p>` : ''}
+    <button class="btn wide" data-act="exam-start" data-lv="${lv}">Начать экзамен</button>
+    <h2 class="sec">📝 Марафон: все ${words.length} слов уровня</h2>
+    <p class="hint">Напишите все слова уровня ${lv} — можно в несколько подходов, прогресс сохраняется. Если верно ≥ 90%, получите медаль 🏅.</p>
+    ${m ? `<div class="pbar"><i style="width:${m.i / words.length * 100}%"></i></div><p class="hint center">Пройдено ${m.i} из ${words.length} · верно ${m.i ? Math.round(m.ok / m.i * 100) : 0}%</p>` : ''}
+    <button class="btn ghost wide" data-act="marathon" data-lv="${lv}">${m && m.i ? (m.i >= words.length ? 'Пройти заново' : 'Продолжить марафон') : 'Начать марафон'}</button>
+    ${e && e.all ? '<p class="center">🏅 Марафон пройден</p>' : ''}
+  </div>`;
+};
+function startExam(lv) {
+  const lang = curLang(), key = examKey(lang, lv);
+  const words = shuffle(levelCards(lang, lv)).slice(0, 100);
+  const T = gramOf(lang).filter(t => t.lv === lv);
+  const gram = shuffle(T.flatMap(t => t.q.filter(q => q.k !== 'tr'))).slice(0, 20);
+  const sent = shuffle(T.flatMap(t => t.q.filter(q => q.k === 'tr'))).slice(0, 10);
+  if (!words.length) { toast('На этом уровне пока нет слов'); return; }
+  const queue = [
+    { type: 'round', title: `Часть 1 · Слова (${words.length})`, sub: 'Напишите слово на изучаемом языке. Нужно ≥ 90%.', emoji: '✍️', noGrade: true },
+    ...words.map(c => ({ type: 'type', c, dir: 'dt', part: 'w' })),
+    ...(gram.length ? [{ type: 'round', title: `Часть 2 · Правила (${gram.length})`, sub: 'Задания по грамматике уровня. Нужно ≥ 80%.', emoji: '📐', noGrade: true }, ...gram.map(q => ({ ...gramEx(q), part: 'g' }))] : []),
+    ...(sent.length ? [{ type: 'round', title: `Часть 3 · Предложения (${sent.length})`, sub: 'Переведите предложения. Нужно ≥ 80%.', emoji: '🗣', noGrade: true }, ...sent.map(q => ({ ...gramEx(q), part: 's' }))] : []),
+  ];
+  const res = { w: [0, 0], g: [0, 0], s: [0, 0] };
+  let pos = 0;
+  startRun({
+    kind: 'exam', deckId: null, pool: words, again: () => startExam(lv),
+    nextEx() { return queue[pos++] || null; },
+    onAnswer(ex, ok) { if (ex.part) res[ex.part][ok ? 0 : 1]++; },
+    onOverride(ex) { if (ex.part) { res[ex.part][0]++; res[ex.part][1]--; } },
+    progress() { return (pos - 1) / queue.length; },
+    counter() { return `${Math.max(0, pos - 1)}/${queue.length}`; },
+    finish() {
+      const pc = p => (res[p][0] + res[p][1] ? Math.round(res[p][0] / (res[p][0] + res[p][1]) * 100) : null);
+      const w = pc('w'), g = pc('g'), s = pc('s');
+      const passed = w >= 90 && (g === null || g >= 80) && (s === null || s >= 80);
+      const prev = db.exams[key] || {};
+      db.exams[key] = { ...prev, w: Math.max(prev.w || 0, w), g: g === null ? prev.g : Math.max(prev.g || 0, g), s: s === null ? prev.s : Math.max(prev.s || 0, s), passed: !!(prev.passed || passed), at: now() };
+      if (passed) addXp(300);
+      saveSoon();
+      const row = (n, v, need) => v === null ? '' : `<div class="xrow ${v >= need ? 'ok' : ''}"><b>${v >= need ? '✅' : '❌'}</b><span>${n}<small>нужно ${need}%</small></span><b>${v}%</b></div>`;
+      return { title: passed ? `Уровень ${lv} сдан!` : `Экзамен ${lv} не сдан`, emoji: passed ? '🎓' : '📚', bonus: passed ? 300 : 0,
+        extra: `<div class="card">${row('Слова', w, 90)}${row('Правила', g, 80)}${row('Предложения', s, 80)}</div>${passed ? '' : '<p class="hint center">Повторите слова и темы уровня — и попробуйте снова.</p>'}` };
+    },
+  });
+}
+function startMarathon(lv) {
+  const lang = curLang(), key = examKey(lang, lv);
+  const all = levelCards(lang, lv);
+  if (!all.length) return;
+  let m = db.marathon[key];
+  if (!m || m.i >= all.length || m.n !== all.length) m = db.marathon[key] = { seed: (Math.random() * 2 ** 31) | 0, i: 0, ok: 0, n: all.length };
+  const order = seededShuffle(all, m.seed);
+  startRun({
+    kind: 'marathon', deckId: null, pool: all, again: () => startMarathon(lv),
+    nextEx() { return m.i < order.length ? { type: 'type', c: order[m.i], dir: 'dt' } : null; },
+    onAnswer(ex, ok) { if (!ex.c) return; m.i++; if (ok) m.ok++; saveSoon(); },
+    onOverride() { m.ok++; saveSoon(); },
+    progress() { return m.i / order.length; },
+    counter() { return `${m.i}/${order.length}`; },
+    finish() {
+      const pct = Math.round(m.ok / order.length * 100);
+      if (pct >= 90) { db.exams[key] = { ...(db.exams[key] || { w: 0 }), all: true }; addXp(500); }
+      saveSoon();
+      return { title: pct >= 90 ? '🏅 Марафон пройден!' : 'Марафон завершён', emoji: pct >= 90 ? '🏅' : '📝', extra: `<p class="center">Верно ${pct}% из ${order.length} слов${pct >= 90 ? '' : ' — нужно 90%'}</p>` };
+    },
+  });
+}
+
 function deckPicker() {
   const ad = activeDeck();
   let h = '';
@@ -1801,6 +1997,14 @@ function prep(ex) {
   const c = ex.c;
   const pool = S.pool;
   const dir = ex.dir || S.dir || db.settings.dir;
+  if (ex.q && ex.type[0] === 'g' && typeof ex.q === 'object') {
+    const q = ex.q;
+    ex.g = q; ex.q = q.s || q.ru || '';
+    if (ex.type === 'gmc') { ex.a = q.o[q.a]; ex.opts = shuffle([...q.o]); }
+    else { ex.acc = q.a; ex.a = q.a[0]; }
+    if (ex.type === 'gorder') { ex.tiles = shuffle([...q.w]); ex.fill = []; }
+    return ex;
+  }
   switch (ex.type) {
     case 'mc': case 'mcRev': {
       Object.assign(ex, qa(c, ex.type === 'mcRev' ? 'dt' : dir));
@@ -1887,7 +2091,7 @@ function answer(ok, extra = {}) {
   S.onAnswer && S.onAnswer(ex, ok);
   render(true);
   if (!ok && ex.c && ex.type !== 'tf') setTimeout(() => speak(ex.c.t, langsOf(ex.c).fl), 200);
-  if (ok && ['mc', 'mcRev', 'listen', 'tf', 'cloze', 'match'].includes(ex.type) && !extra.stay) {
+  if (ok && ['mc', 'mcRev', 'listen', 'tf', 'cloze', 'match', 'gmc', 'gorder'].includes(ex.type) && !extra.stay) {
     const tok = S.tok;
     setTimeout(() => { if (S && S.tok === tok && S.fb) nextEx(); }, 850);
   }
@@ -1993,6 +2197,35 @@ const EX = {
     }).join('');
     return `<div class="ex-lbl">Соедините пары</div><div class="mgrid"><div>${col(ex.left, 'L')}</div><div>${col(ex.right, 'R')}</div></div>`;
   },
+  gmc(ex) {
+    const g = ex.g, blank = S.fb ? `<b class="${S.fb.ok ? 'good-t' : 'bad-t'}">${esc(ex.a)}</b>` : '<span class="blank">___</span>';
+    return `<div class="ex-lbl">Выберите верный вариант</div>
+      <div class="cloze card"><div class="cloze-s">${esc(g.s).split('___').join(blank)}</div>${g.ru ? `<div class="hint">${esc(g.ru)}</div>` : ''}</div>
+      ${optBtns(ex, 'ex-opt')}
+      ${S.fb ? '' : '<div class="ex-foot"><button class="lnk" data-act="ex-dunno">Не знаю</button></div>'}`;
+  },
+  gtype(ex) {
+    const g = ex.g;
+    return `<div class="ex-lbl">Вставьте пропущенную форму</div>
+      <div class="cloze card"><div class="cloze-s">${esc(g.s).replace('___', S.fb ? `<b class="${S.fb.ok ? 'good-t' : 'bad-t'}">${esc(S.fb.ok ? ex.typed : ex.a)}</b>` : '<span class="blank">___</span>')}</div>${g.ru ? `<div class="hint">${esc(g.ru)}</div>` : ''}</div>
+      <input class="ans ${S.fb ? (S.fb.ok ? 'good' : 'bad') : ''}" id="ans" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Пропущенное слово" value="${esc(ex.typed || '')}" ${S.fb ? 'readonly' : 'autofocus'} data-enter="ex-check">
+      ${S.fb ? '' : '<div class="ex-foot"><button class="lnk" data-act="ex-dunno">Не знаю</button><button class="btn" data-act="ex-check">Проверить</button></div>'}`;
+  },
+  gtr(ex) {
+    return `<div class="ex-lbl">Переведите предложение</div>
+      <div class="ex-q long">${esc(ex.g.ru)}</div>
+      <textarea class="ans ${S.fb ? (S.fb.ok ? 'good' : 'bad') : ''}" id="ans" rows="2" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Перевод" ${S.fb ? 'readonly' : 'autofocus'} data-enter="ex-check">${esc(ex.typed || '')}</textarea>
+      ${S.fb ? '' : '<div class="ex-foot"><button class="lnk" data-act="ex-dunno">Не знаю</button><button class="btn" data-act="ex-check">Проверить</button></div>'}`;
+  },
+  gorder(ex) {
+    const built = ex.fill.map((ti, k) => `<button class="wtile in" data-act="go-del" data-k="${k}" ${S.fb ? 'disabled' : ''}>${esc(ex.tiles[ti])}</button>`).join('');
+    const tiles = ex.tiles.map((w, i) => `<button class="wtile ${ex.fill.includes(i) ? 'used' : ''}" data-act="go-add" data-i="${i}" ${ex.fill.includes(i) || S.fb ? 'disabled' : ''}>${esc(w)}</button>`).join('');
+    return `<div class="ex-lbl">Составьте предложение</div>
+      ${ex.g.ru ? `<div class="ex-q long">${esc(ex.g.ru)}</div>` : ''}
+      <div class="wline ${S.fb ? (S.fb.ok ? 'good' : 'bad') : ''}">${built || '<span class="hint">Нажимайте на слова по порядку</span>'}</div>
+      <div class="wtiles">${tiles}</div>
+      ${S.fb ? '' : '<div class="ex-foot"><button class="lnk" data-act="scr-clear">Стереть</button><button class="lnk" data-act="ex-dunno">Не знаю</button></div>'}`;
+  },
   round(ex) {
     return `<div class="round card">
       <div class="big-emoji">${ex.emoji || '💪'}</div><h2>${esc(ex.title)}</h2><p class="desc">${esc(ex.sub || '')}</p>
@@ -2008,10 +2241,12 @@ function fbHtml() {
   if (fb.ok) {
     body = `<b>${fb.over ? 'Засчитано' : pick(['Верно!', 'Отлично!', 'Так держать!', 'Правильно!', 'Супер!'])}</b>${fb.typo ? `<div>Опечатка — правильно: <b>${esc(ex.a)}</b></div>` : ''}`;
   } else {
-    body = `<b>${fb.dunno ? 'Запомните:' : 'Правильный ответ:'}</b><div class="fb-a">${esc(ex.type === 'match' ? 'ошибок: ' + ex.errors : ex.a)}</div>
+    const alt = ex.acc && ex.acc.length > 1 ? `<div class="fb-ex">Также верно: ${ex.acc.slice(1, 4).map(esc).join(' · ')}</div>` : '';
+    const full = ex.g && ex.g.s && ex.type !== 'gtr' ? `<div class="fb-ex">${esc(ex.g.s.replace('___', ex.a))}</div>` : '';
+    body = `<b>${fb.dunno ? 'Запомните:' : 'Правильный ответ:'}</b><div class="fb-a">${esc(ex.type === 'match' ? 'ошибок: ' + ex.errors : ex.a)}</div>${full}${alt}
       ${c && c.ex && ex.type !== 'cloze' ? `<div class="fb-ex">${esc(c.ex)}</div>` : ''}${c ? hintFor(c) : ''}`;
   }
-  const canOver = !fb.ok && !fb.dunno && (ex.type === 'type' || ex.type === 'dict') && ex.typed;
+  const canOver = !fb.ok && !fb.dunno && ['type', 'dict', 'gtype', 'gtr'].includes(ex.type) && ex.typed;
   return `<div class="fb ${fb.ok ? 'ok' : 'no'}"><div class="fb-b">${body}</div>
     <div class="fb-btns">${canOver ? '<button class="lnk" data-act="ex-over">Я был прав</button>' : ''}
     <button class="btn" data-act="ex-next" id="fb-next">Дальше</button></div></div>`;
@@ -3111,10 +3346,23 @@ const A = {
     const v = $('#ans')?.value || '';
     if (!v.trim()) { toast('Введите ответ или нажмите «Не знаю»'); return; }
     ex.typed = v;
+    if (ex.acc) { answer(gramCheck(v, ex.acc)); return; }
     const r = checkAnswer(v, ex.a);
     answer(r.ok, { typo: r.typo });
   },
   'ex-over': () => overrideAnswer(),
+  'go-add': el => {
+    const ex = S.cur;
+    if (S.fb) return;
+    ex.fill.push(Number(el.dataset.i));
+    if (ex.fill.length === ex.tiles.length) { ex.typed = ex.fill.map(i => ex.tiles[i]).join(' '); answer(gramCheck(ex.typed, ex.acc)); } else render(true);
+  },
+  'go-del': el => { const ex = S.cur; if (S.fb) return; ex.fill.splice(Number(el.dataset.k), 1); render(true); },
+  gtopic: el => go('gtopic', { id: el.dataset.id }),
+  gstart: el => startGramTopic(el.dataset.id),
+  exam: el => go('exam', { lv: el.dataset.lv }),
+  'exam-start': el => startExam(el.dataset.lv),
+  marathon: el => startMarathon(el.dataset.lv),
   'scr-add': el => {
     const ex = S.cur;
     ex.fill.push(Number(el.dataset.i));
@@ -3351,5 +3599,5 @@ save();
 if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
 }
-window.__mnemo = { get db() { return db; }, get decks() { return DECKS; }, get S() { return S; }, get R() { return R; }, get GV() { return GV; }, get AU() { return AU; }, checkAnswer, parseImport, lessonNodes, buildLesson, clozeOf, nextState };
+window.__mnemo = { get db() { return db; }, get decks() { return DECKS; }, get S() { return S; }, get R() { return R; }, get GV() { return GV; }, get AU() { return AU; }, checkAnswer, parseImport, lessonNodes, buildLesson, clozeOf, nextState, answer, nextEx, go, gramCheck, mdLite };
 })();

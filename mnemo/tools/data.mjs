@@ -69,8 +69,40 @@ for (const f of files) {
   (packs[lang] ||= []).push(`/* ${f} */\n${text.trim()}\n`);
 }
 
-// Пакеты по языкам
+// Грамматика: app/src/main/grammar/{язык}.json → www/data/grammar-{язык}.js
+const GRAM = join(MAIN, 'grammar');
+const gramLangs = [];
+const LV_OK = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 if (!existsSync(OUT)) mkdirSync(OUT);
+for (const f of existsSync(GRAM) ? readdirSync(GRAM).filter(f => /^[a-z]+\.json$/.test(f)) : []) {
+  const l = f.slice(0, -5);
+  let topics;
+  try { topics = JSON.parse(readFileSync(join(GRAM, f), 'utf8')); } catch (e) { console.log(`✗ grammar/${f}: ${e.message}`); errors++; continue; }
+  const ids = new Set();
+  let qn = 0;
+  for (const t of topics) {
+    if (!t.id || !LV_OK.includes(t.lv) || !t.t || !t.x || !Array.isArray(t.q)) { console.log(`✗ grammar/${f}: тема без id/lv/t/x/q`, t.id); errors++; continue; }
+    if (ids.has(t.id)) { console.log(`✗ grammar/${f}: повтор id ${t.id}`); errors++; }
+    ids.add(t.id);
+    for (const q of t.q) {
+      qn++;
+      const bad = q.k === 'mc' ? !(Array.isArray(q.o) && Number.isInteger(q.a) && q.o[q.a] !== undefined && q.s)
+        : q.k === 'type' ? !(q.s && /___/.test(q.s) && Array.isArray(q.a) && q.a.length)
+        : q.k === 'order' ? !(Array.isArray(q.w) && Array.isArray(q.a) && q.a.length)
+        : q.k === 'tr' ? !(q.ru && Array.isArray(q.a) && q.a.length) : true;
+      if (bad) { console.log(`✗ grammar/${f} [${t.id}]: плохое упражнение`, JSON.stringify(q).slice(0, 120)); errors++; }
+    }
+  }
+  const body = `/* Сгенерировано mnemo/tools/data.mjs из app/src/main/grammar/${f} — не редактируйте вручную. */\n(window.MNEMO_GRAMMAR = window.MNEMO_GRAMMAR || {}).${l} = ${JSON.stringify(topics)};\n`;
+  const p = join(OUT, `grammar-${l}.js`);
+  if ((existsSync(p) ? readFileSync(p, 'utf8') : '') !== body) {
+    if (fix) { writeFileSync(p, body); console.log(`data/grammar-${l}.js собран: ${topics.length} тем, ${qn} упражнений`); }
+    else { console.log(`✗ data/grammar-${l}.js устарел (запустите с --fix)`); errors++; }
+  }
+  gramLangs.push(l);
+}
+
+// Пакеты по языкам
 const langs = Object.keys(packs).sort((a, b) => LANG_ORDER.indexOf(a) - LANG_ORDER.indexOf(b));
 for (const l of langs) {
   const body = `/* Сгенерировано mnemo/tools/data.mjs из app/src/main/vocab/${l}-*.js — не редактируйте вручную. */\n` +
@@ -83,7 +115,9 @@ for (const l of langs) {
   }
 }
 for (const f of readdirSync(OUT)) {
-  if (!/^pack-[a-z]+\.js$/.test(f) || !langs.includes(f.slice(5, -3))) { console.log(`✗ лишний файл www/data/${f}`); errors++; }
+  const okPack = /^pack-[a-z]+\.js$/.test(f) && langs.includes(f.slice(5, -3));
+  const okGram = /^grammar-[a-z]+\.js$/.test(f) && gramLangs.includes(f.slice(8, -3));
+  if (!okPack && !okGram) { console.log(`✗ лишний файл www/data/${f}`); errors++; }
 }
 
 // index.html: загрузчик пакета текущего языка + prefetch, чтобы service worker закэшировал все пакеты.
@@ -91,7 +125,7 @@ for (const f of readdirSync(OUT)) {
 const loader = `<script>
 /* Грузим словарь только текущего языка (остальные — при переключении вкладки). */
 (function () {
-  var all = ${JSON.stringify(langs)}, lang = 'en', need = [];
+  var all = ${JSON.stringify(langs)}, gram = ${JSON.stringify(gramLangs)}, lang = 'en', need = [];
   try {
     var s = JSON.parse(localStorage.getItem('mnemo.v1') || 'null');
     if (s && s.settings && s.settings.lang) lang = s.settings.lang;
@@ -99,10 +133,13 @@ const loader = `<script>
   } catch (e) {}
   if (all.indexOf(lang) >= 0) need.unshift(lang);
   if (!need.length) need.push('en');
-  for (var i = 0; i < need.length; i++) if (need.indexOf(need[i]) === i) document.write('<script src=' + '"data/pack-' + need[i] + '.js"><\\/script>');
+  for (var i = 0; i < need.length; i++) if (need.indexOf(need[i]) === i) {
+    document.write('<script src=' + '"data/pack-' + need[i] + '.js"><\\/script>');
+    if (gram.indexOf(need[i]) >= 0) document.write('<script src=' + '"data/grammar-' + need[i] + '.js"><\\/script>');
+  }
 })();
 </script>
-${langs.map(l => `<link rel="prefetch" href="data/pack-${l}.js">`).join('\n')}`;
+${langs.map(l => `<link rel="prefetch" href="data/pack-${l}.js">`).concat(gramLangs.map(l => `<link rel="prefetch" href="data/grammar-${l}.js">`)).join('\n')}`;
 const idxPath = join(WWW, 'index.html');
 let html = readFileSync(idxPath, 'utf8');
 const re = /<!-- data:start -->[\s\S]*?<!-- data:end -->/;

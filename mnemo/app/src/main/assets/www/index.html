@@ -33,7 +33,7 @@
 <script>
 /* Грузим словарь только текущего языка (остальные — при переключении вкладки). */
 (function () {
-  var all = ["en","it","uk"], lang = 'en', need = [];
+  var all = ["en","it","uk"], gram = [], lang = 'en', need = [];
   try {
     var s = JSON.parse(localStorage.getItem('mnemo.v1') || 'null');
     if (s && s.settings && s.settings.lang) lang = s.settings.lang;
@@ -41,7 +41,10 @@
   } catch (e) {}
   if (all.indexOf(lang) >= 0) need.unshift(lang);
   if (!need.length) need.push('en');
-  for (var i = 0; i < need.length; i++) if (need.indexOf(need[i]) === i) document.write('<script src=' + '"data/pack-' + need[i] + '.js"><\/script>');
+  for (var i = 0; i < need.length; i++) if (need.indexOf(need[i]) === i) {
+    document.write('<script src=' + '"data/pack-' + need[i] + '.js"><\/script>');
+    if (gram.indexOf(need[i]) >= 0) document.write('<script src=' + '"data/grammar-' + need[i] + '.js"><\/script>');
+  }
 })();
 </script>
 <link rel="prefetch" href="data/pack-en.js">
