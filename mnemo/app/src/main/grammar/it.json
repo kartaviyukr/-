@@ -4643,5 +4643,860 @@
     ]
    }
   ]
+ },
+ {
+  "id": "it-c2-dislocazioni-ordine",
+  "lv": "C2",
+  "e": "🔄",
+  "t": "Порядок слов и дислокации (dislocazioni, frase scissa)",
+  "x": "Базовый порядок слов в итальянском — SVO, но для выделения темы и фокуса используются особые конструкции. Они типичны для живой речи и современной прозы.\n\n**Dislocazione a sinistra** — дополнение выносится в начало, а в предложении его **обязательно** повторяет местоимение:\n- **Il libro l'**ho già letto. — Книгу я уже прочитал.\n- **Le chiavi le** ho lasciate in macchina.\n- **Di questo ne** parliamo domani. **A Roma ci** vado ogni estate.\n\n**Dislocazione a destra** — местоимение впереди, само дополнение в конце (разговорный стиль):\n- **L'**hai visto, **il film**? — Ты посмотрел фильм-то?\n- **Li** hai comprati, **i biglietti**?\n\n**Frase scissa** (расщеплённое предложение) выделяет фокус: «это … (кто/что)…»\n- **È Marco che** ha rotto il vaso. — Это Марко разбил вазу.\n- **È stata Laura a** trovare la soluzione. (essere + a + infinito)\nГлагол essere согласуется с выделенным словом: **Sono stato io** a chiamarti (не *è stato io*).\n\n**Инверсия подлежащего** для новой информации: Ha telefonato **Marco**. È arrivato **il treno**.\n\n**Контрастный фокус** без местоимения: QUESTO voglio, non quello!\n\n| конструкция | пример |\n| нейтрально | Mia nonna ha fatto la torta. |\n| тема слева | La torta l'ha fatta mia nonna. |\n| фокус | È stata mia nonna a fare la torta. |\n\n**Типичные ошибки русскоговорящих:** в русском порядок слов свободный и без местоимений, поэтому говорят *la pasta mangio spesso* вместо **la pasta la mangio spesso**; забывают согласовать participio с вынесенным дополнением (*le chiavi le ho lasciato*).",
+  "q": [
+   {
+    "k": "mc",
+    "s": "La torta ___ ha fatta mia nonna.",
+    "o": [
+     "l'",
+     "gli",
+     "ne"
+    ],
+    "a": 0,
+    "ru": "Торт испекла моя бабушка."
+   },
+   {
+    "k": "mc",
+    "s": "Di questo problema ___ parliamo domani.",
+    "o": [
+     "ne",
+     "ci",
+     "lo"
+    ],
+    "a": 0,
+    "ru": "Об этой проблеме поговорим завтра."
+   },
+   {
+    "k": "mc",
+    "s": "È stata Laura ___ trovare la soluzione.",
+    "o": [
+     "a",
+     "che",
+     "di"
+    ],
+    "a": 0,
+    "ru": "Это Лаура нашла решение."
+   },
+   {
+    "k": "mc",
+    "s": "___ hai già comprati, i biglietti?",
+    "o": [
+     "Li",
+     "Le",
+     "Ne"
+    ],
+    "a": 0,
+    "ru": "Билеты-то ты уже купил?"
+   },
+   {
+    "k": "type",
+    "s": "Le chiavi ___ (pronome) ho lasciate in macchina.",
+    "a": [
+     "le"
+    ],
+    "ru": "Ключи я оставил в машине."
+   },
+   {
+    "k": "type",
+    "s": "A Roma ___ (pronome) vado ogni estate.",
+    "a": [
+     "ci"
+    ],
+    "ru": "В Рим я езжу каждое лето."
+   },
+   {
+    "k": "type",
+    "s": "Non è stato Paolo, ___ (essere, passato prossimo) io a chiamarti.",
+    "a": [
+     "sono stato",
+     "sono stata"
+    ],
+    "ru": "Это не Паоло, это я тебе звонил."
+   },
+   {
+    "k": "type",
+    "s": "Questi libri non ___ (pronome) voglio più.",
+    "a": [
+     "li"
+    ],
+    "ru": "Эти книги я больше не хочу."
+   },
+   {
+    "k": "order",
+    "w": [
+     "macchina",
+     "La",
+     "presa",
+     "l'ha",
+     "Luca"
+    ],
+    "a": [
+     "La macchina l'ha presa Luca"
+    ],
+    "ru": "Машину взял Лука."
+   },
+   {
+    "k": "order",
+    "w": [
+     "Marco",
+     "È",
+     "ha",
+     "che",
+     "il",
+     "rotto",
+     "vaso"
+    ],
+    "a": [
+     "È Marco che ha rotto il vaso"
+    ],
+    "ru": "Это Марко разбил вазу."
+   },
+   {
+    "k": "tr",
+    "ru": "Этот фильм я уже видел.",
+    "a": [
+     "Questo film l'ho già visto",
+     "Quel film l'ho già visto",
+     "L'ho già visto questo film",
+     "L'ho già visto quel film",
+     "Questo film lo ho già visto"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Это Анна мне сказала.",
+    "a": [
+     "È stata Anna a dirmelo",
+     "È stata Anna a dirmi",
+     "È stata Anna che me l'ha detto",
+     "È Anna che me l'ha detto",
+     "Me l'ha detto Anna",
+     "È stata Anna a dirmi questo",
+     "È stata Anna che mi ha detto",
+     "È Anna che mi ha detto"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-c2-infinito-sostantivato-participio-assoluto",
+  "lv": "C2",
+  "e": "🎓",
+  "t": "Субстантивированный инфинитив и participio assoluto",
+  "x": "**Infinito sostantivato** — инфинитив, употреблённый как существительное мужского рода, обычно с артиклем. Он называет действие как процесс и часто звучит книжно или выразительно:\n- **Il viaggiare** apre la mente. — Путешествия расширяют кругозор.\n- **Il** suo continuo **lamentarsi** mi irrita. — Его постоянные жалобы меня раздражают.\n- **Il bere** troppo fa male. — Пить слишком много вредно.\nТакой инфинитив может иметь прилагательное, дополнения и даже возвратную частицу. Некоторые инфинитивы стали обычными существительными и имеют **множественное число**: il dovere → **i doveri**, il piacere → **i piaceri**, il potere → **i poteri**, il parere → **i pareri**.\n\n**Participio assoluto** — оборот с participio passato, у которого **может быть своё подлежащее**, отличное от главного предложения (в отличие от gerundio):\n- **Partiti gli ospiti**, abbiamo riordinato la casa. — Когда гости ушли, мы прибрались.\n- **Arrivata la primavera**, gli alberi fiorirono.\n- **Detto questo**, il presidente lasciò la sala. — Сказав это, президент покинул зал.\n- **Una volta finite** le vacanze, si torna al lavoro.\n\n**Согласование:** participio согласуется с подлежащим оборота (глаголы с essere) или с прямым дополнением (глаголы с avere): **Chiuse** le porte, il treno partì. Местоимения присоединяются: **Salutatolo**, uscì (книжный стиль).\n\n| оборот | эквивалент |\n| Finita la cena, … | Dopo che la cena era finita, … |\n| Considerato che … | Visto che … |\n\n**Типичные ошибки:** отсутствие согласования (*chiuso le porte*), русская калька «курение» → *il fumare* там, где обычнее **il fumo**; путаница *il dovere* / *i doveri*.",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Il continuo ___ di Marco mi irrita.",
+    "o": [
+     "lamentarsi",
+     "lamentato",
+     "lamenta"
+    ],
+    "a": 0,
+    "ru": "Постоянные жалобы Марко меня раздражают."
+   },
+   {
+    "k": "mc",
+    "s": "___ la cena, gli ospiti se ne andarono.",
+    "o": [
+     "Terminata",
+     "Terminato",
+     "Terminati"
+    ],
+    "a": 0,
+    "ru": "Когда ужин закончился, гости ушли."
+   },
+   {
+    "k": "mc",
+    "s": "Ho molti ___ verso la mia famiglia.",
+    "o": [
+     "doveri",
+     "dovere",
+     "dover"
+    ],
+    "a": 0,
+    "ru": "У меня много обязанностей перед семьёй."
+   },
+   {
+    "k": "mc",
+    "s": "___ i bambini, la casa tornò silenziosa.",
+    "o": [
+     "Partiti",
+     "Partito",
+     "Partite"
+    ],
+    "a": 0,
+    "ru": "Когда дети уехали, в доме снова стало тихо."
+   },
+   {
+    "k": "type",
+    "s": "Il ___ (viaggiare) apre la mente.",
+    "a": [
+     "viaggiare"
+    ],
+    "ru": "Путешествия расширяют кругозор."
+   },
+   {
+    "k": "type",
+    "s": "___ (dire) questo, il presidente lasciò la sala.",
+    "a": [
+     "Detto"
+    ],
+    "ru": "Сказав это, президент покинул зал."
+   },
+   {
+    "k": "type",
+    "s": "___ (chiudere) le porte, il treno partì.",
+    "a": [
+     "Chiuse"
+    ],
+    "ru": "Когда двери закрылись, поезд тронулся."
+   },
+   {
+    "k": "type",
+    "s": "Una volta ___ (finire) le vacanze, si torna al lavoro.",
+    "a": [
+     "finite"
+    ],
+    "ru": "Как только каникулы закончились, возвращаются на работу."
+   },
+   {
+    "k": "order",
+    "w": [
+     "bere",
+     "Il",
+     "fa",
+     "troppo",
+     "male"
+    ],
+    "a": [
+     "Il bere troppo fa male"
+    ],
+    "ru": "Пить слишком много вредно."
+   },
+   {
+    "k": "order",
+    "w": [
+     "la",
+     "Arrivata",
+     "primavera",
+     "alberi",
+     "gli",
+     "fiorirono"
+    ],
+    "a": [
+     "Arrivata la primavera gli alberi fiorirono",
+     "Gli alberi fiorirono arrivata la primavera"
+    ],
+    "ru": "С приходом весны деревья расцвели."
+   },
+   {
+    "k": "tr",
+    "ru": "Курение вредит здоровью.",
+    "a": [
+     "Il fumo nuoce alla salute",
+     "Il fumo fa male alla salute",
+     "Il fumo danneggia la salute",
+     "Il fumo è dannoso per la salute",
+     "Fumare nuoce alla salute",
+     "Fumare fa male alla salute",
+     "Fumare danneggia la salute",
+     "Fumare è dannoso per la salute",
+     "Il fumare nuoce alla salute",
+     "Il fumare fa male alla salute",
+     "Il fumare danneggia la salute",
+     "Il fumare è dannoso per la salute"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Когда гости ушли, мы легли спать.",
+    "a": [
+     "Partiti gli ospiti siamo andati a letto",
+     "Partiti gli ospiti siamo andati a dormire",
+     "Partiti gli ospiti andammo a letto",
+     "Partiti gli ospiti andammo a dormire",
+     "Partiti gli ospiti noi siamo andati a letto",
+     "Partiti gli ospiti noi siamo andati a dormire",
+     "Partiti gli ospiti noi andammo a letto",
+     "Partiti gli ospiti noi andammo a dormire",
+     "Andati via gli ospiti siamo andati a letto",
+     "Andati via gli ospiti siamo andati a dormire",
+     "Andati via gli ospiti andammo a letto",
+     "Andati via gli ospiti andammo a dormire",
+     "Andati via gli ospiti noi siamo andati a letto",
+     "Andati via gli ospiti noi siamo andati a dormire",
+     "Andati via gli ospiti noi andammo a letto",
+     "Andati via gli ospiti noi andammo a dormire",
+     "Una volta partiti gli ospiti siamo andati a letto",
+     "Una volta partiti gli ospiti siamo andati a dormire",
+     "Una volta partiti gli ospiti andammo a letto",
+     "Una volta partiti gli ospiti andammo a dormire",
+     "Una volta partiti gli ospiti noi siamo andati a letto",
+     "Una volta partiti gli ospiti noi siamo andati a dormire",
+     "Una volta partiti gli ospiti noi andammo a letto",
+     "Una volta partiti gli ospiti noi andammo a dormire",
+     "Usciti gli ospiti siamo andati a letto",
+     "Usciti gli ospiti siamo andati a dormire",
+     "Usciti gli ospiti andammo a letto",
+     "Usciti gli ospiti andammo a dormire",
+     "Usciti gli ospiti noi siamo andati a letto",
+     "Usciti gli ospiti noi siamo andati a dormire",
+     "Usciti gli ospiti noi andammo a letto",
+     "Usciti gli ospiti noi andammo a dormire",
+     "Quando gli ospiti se ne sono andati siamo andati a letto",
+     "Quando gli ospiti se ne sono andati siamo andati a dormire",
+     "Quando gli ospiti se ne sono andati andammo a letto",
+     "Quando gli ospiti se ne sono andati andammo a dormire",
+     "Quando gli ospiti se ne sono andati noi siamo andati a letto",
+     "Quando gli ospiti se ne sono andati noi siamo andati a dormire",
+     "Quando gli ospiti se ne sono andati noi andammo a letto",
+     "Quando gli ospiti se ne sono andati noi andammo a dormire",
+     "Quando gli ospiti sono andati via siamo andati a letto",
+     "Quando gli ospiti sono andati via siamo andati a dormire",
+     "Quando gli ospiti sono andati via andammo a letto",
+     "Quando gli ospiti sono andati via andammo a dormire",
+     "Quando gli ospiti sono andati via noi siamo andati a letto",
+     "Quando gli ospiti sono andati via noi siamo andati a dormire",
+     "Quando gli ospiti sono andati via noi andammo a letto",
+     "Quando gli ospiti sono andati via noi andammo a dormire",
+     "Quando gli ospiti sono partiti siamo andati a letto",
+     "Quando gli ospiti sono partiti siamo andati a dormire",
+     "Quando gli ospiti sono partiti andammo a letto",
+     "Quando gli ospiti sono partiti andammo a dormire",
+     "Quando gli ospiti sono partiti noi siamo andati a letto",
+     "Quando gli ospiti sono partiti noi siamo andati a dormire",
+     "Quando gli ospiti sono partiti noi andammo a letto",
+     "Quando gli ospiti sono partiti noi andammo a dormire",
+     "Quando gli ospiti se ne furono andati siamo andati a letto",
+     "Quando gli ospiti se ne furono andati siamo andati a dormire",
+     "Quando gli ospiti se ne furono andati andammo a letto",
+     "Quando gli ospiti se ne furono andati andammo a dormire",
+     "Quando gli ospiti se ne furono andati noi siamo andati a letto",
+     "Quando gli ospiti se ne furono andati noi siamo andati a dormire",
+     "Quando gli ospiti se ne furono andati noi andammo a letto",
+     "Quando gli ospiti se ne furono andati noi andammo a dormire",
+     "Dopo che gli ospiti se ne sono andati siamo andati a letto",
+     "Dopo che gli ospiti se ne sono andati siamo andati a dormire",
+     "Dopo che gli ospiti se ne sono andati andammo a letto",
+     "Dopo che gli ospiti se ne sono andati andammo a dormire",
+     "Dopo che gli ospiti se ne sono andati noi siamo andati a letto",
+     "Dopo che gli ospiti se ne sono andati noi siamo andati a dormire",
+     "Dopo che gli ospiti se ne sono andati noi andammo a letto",
+     "Dopo che gli ospiti se ne sono andati noi andammo a dormire"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-c2-uso-letterario-tempi",
+  "lv": "C2",
+  "e": "🖋️",
+  "t": "Литературное употребление времён: passato remoto vs passato prossimo",
+  "x": "**Норма.** **Passato prossimo** — прошлое, связанное с настоящим (сегодня, в этом году, результат важен сейчас): Stamattina **ho bevuto** un caffè. **Passato remoto** — завершённое прошлое без связи с настоящим, основное время повествования: Il vecchio **aprì** la porta e **uscì** nella notte.\n\n**Региональные различия в устной речи:**\n| регион | употребление |\n| Север | почти только passato prossimo, даже для далёкого прошлого: Mio nonno è nato nel 1900. |\n| Тоскана, Центр | ближе всего к норме: оба времени |\n| Юг, Сицилия | passato remoto даже для недавнего: Stamattina mi alzai presto. |\n\n**Литературные приёмы:**\n- **Passato remoto + imperfetto**: события на фоне описания: Pioveva quando **arrivò**.\n- **Trapassato remoto** (ebbi finito, fu partito) — только после **quando, dopo che, appena, non appena** при главном в passato remoto: Appena **ebbero finito** di cenare, uscirono.\n- **Imperfetto narrativo** (журналистика, история): Il 2 giugno 1946 l'Italia **sceglieva** la Repubblica. — придаёт тексту «кинематографичность».\n- **Presente storico**: Nel 1492 Colombo **arriva** in America.\n\n**Типичные ошибки русскоговорящих:** в русском одно прошедшее время, поэтому passato remoto либо полностью игнорируют, либо, выучив, переносят в разговор о сегодняшнем дне (*stamattina andai*), что звучит как южный диалект или архаично. Trapassato remoto употребляют вместо trapassato prossimo в независимых предложениях — это ошибка.",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Quando ___ la lettera, Lucia scoppiò a piangere.",
+    "o": [
+     "ebbe letto",
+     "ha letto",
+     "avrà letto"
+    ],
+    "a": 0,
+    "ru": "Когда Лючия прочла письмо, она расплакалась."
+   },
+   {
+    "k": "mc",
+    "s": "(Conversazione, italiano standard) Stamattina ___ presto.",
+    "o": [
+     "mi sono svegliato",
+     "mi svegliai",
+     "mi svegliassi"
+    ],
+    "a": 0,
+    "ru": "Сегодня утром я проснулся рано."
+   },
+   {
+    "k": "mc",
+    "s": "In un romanzo: «Il vecchio ___ la porta e uscì nella notte.»",
+    "o": [
+     "aprì",
+     "ha aperto",
+     "apriva"
+    ],
+    "a": 0,
+    "ru": "В романе: «Старик открыл дверь и вышел в ночь»."
+   },
+   {
+    "k": "mc",
+    "s": "Imperfetto narrativo: «Il 2 giugno 1946 l'Italia ___ la Repubblica.»",
+    "o": [
+     "sceglieva",
+     "scegliesse",
+     "sceglierebbe"
+    ],
+    "a": 0,
+    "ru": "2 июня 1946 года Италия выбрала республику."
+   },
+   {
+    "k": "type",
+    "s": "Appena ___ (avere, trapassato remoto) finito di cenare, uscirono.",
+    "a": [
+     "ebbero"
+    ],
+    "ru": "Как только они закончили ужинать, они вышли."
+   },
+   {
+    "k": "type",
+    "s": "Mio nonno ___ (nascere, passato remoto) a Palermo nel 1920.",
+    "a": [
+     "nacque"
+    ],
+    "ru": "Мой дед родился в Палермо в 1920 году."
+   },
+   {
+    "k": "type",
+    "s": "Guarda, ___ (io, comprare, passato prossimo) una giacca nuova!",
+    "a": [
+     "ho comprato"
+    ],
+    "ru": "Смотри, я купил новую куртку!"
+   },
+   {
+    "k": "type",
+    "s": "Dopo che l'___ (avere, trapassato remoto) salutata, se ne andò.",
+    "a": [
+     "ebbe"
+    ],
+    "ru": "Попрощавшись с ней, он ушёл."
+   },
+   {
+    "k": "order",
+    "w": [
+     "ebbe",
+     "Quando",
+     "si",
+     "finito",
+     "alzò"
+    ],
+    "a": [
+     "Quando ebbe finito si alzò",
+     "Si alzò quando ebbe finito"
+    ],
+    "ru": "Когда он закончил, он встал."
+   },
+   {
+    "k": "order",
+    "w": [
+     "ho",
+     "Quest'anno",
+     "molti",
+     "letto",
+     "libri"
+    ],
+    "a": [
+     "Quest'anno ho letto molti libri",
+     "Ho letto molti libri quest'anno"
+    ],
+    "ru": "В этом году я прочитал много книг."
+   },
+   {
+    "k": "tr",
+    "ru": "Данте умер в 1321 году.",
+    "a": [
+     "Dante morì nel 1321",
+     "Dante è morto nel 1321",
+     "Nel 1321 morì Dante",
+     "Nel 1321 Dante morì"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Сегодня утром я выпил кофе.",
+    "a": [
+     "Stamattina ho bevuto un caffè",
+     "Stamattina ho preso un caffè",
+     "Stamattina ho bevuto il caffè",
+     "Stamattina ho preso il caffè",
+     "Stamattina io ho bevuto un caffè",
+     "Stamattina io ho preso un caffè",
+     "Stamattina io ho bevuto il caffè",
+     "Stamattina io ho preso il caffè",
+     "Stamani ho bevuto un caffè",
+     "Stamani ho preso un caffè",
+     "Stamani ho bevuto il caffè",
+     "Stamani ho preso il caffè",
+     "Stamani io ho bevuto un caffè",
+     "Stamani io ho preso un caffè",
+     "Stamani io ho bevuto il caffè",
+     "Stamani io ho preso il caffè",
+     "Questa mattina ho bevuto un caffè",
+     "Questa mattina ho preso un caffè",
+     "Questa mattina ho bevuto il caffè",
+     "Questa mattina ho preso il caffè",
+     "Questa mattina io ho bevuto un caffè",
+     "Questa mattina io ho preso un caffè",
+     "Questa mattina io ho bevuto il caffè",
+     "Questa mattina io ho preso il caffè"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-c2-concessive-avversative",
+  "lv": "C2",
+  "e": "⚖️",
+  "t": "Продвинутые уступительные и противительные конструкции",
+  "x": "**Уступительные конструкции (concessive)** — «хотя, несмотря на, как бы ни».\n\n| конструкция | наклонение | пример |\n| benché, sebbene, nonostante, malgrado | congiuntivo | Sebbene fosse malato, andò al lavoro. |\n| anche se | indicativo | Anche se è tardi, ti accompagno. |\n| per quanto | congiuntivo | Per quanto mi sforzi, non ci riesco. |\n| per + прил. + che | congiuntivo | Per bravo che sia, non vincerà da solo. |\n| pur + gerundio | — | Pur sapendo la verità, tacque. |\n| quand'anche | cong. imperfetto | Quand'anche avessi ragione, non cambierei idea. |\n| che … o no | congiuntivo | Che tu lo voglia o no, partiremo. |\n| qualunque / chiunque / comunque | congiuntivo | Qualunque cosa tu decida, ti sosterrò. |\n\n**Anche se** + congiuntivo imperfetto имеет гипотетический смысл: Anche se **fosse** vero, … — Даже если бы это было правдой…\n\n**Противительные связки (avversative):**\n- **ma, però** — нейтральные «но»;\n- **tuttavia, ciononostante** — книжное «однако, тем не менее»;\n- **eppure** — «и всё же» (удивление);\n- **bensì** — «а» после отрицания: Non è italiano, **bensì** spagnolo;\n- **anzi** — «наоборот, более того»;\n- **mentre** — противопоставление: Lui lavora, **mentre** lei studia;\n- **senonché** — «но тут, однако» (литературно).\n\n**Типичные ошибки русскоговорящих:** *anche se sia* (после anche se — indicativo), *benché era* (после benché — congiuntivo), *non… ma* в книжном стиле вместо **bensì**, смешение русских «как бы ни» и «как будто» (**per quanto** ≠ **come se**).",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Non è italiano, ___ spagnolo.",
+    "o": [
+     "bensì",
+     "tuttavia",
+     "eppure"
+    ],
+    "a": 0,
+    "ru": "Он не итальянец, а испанец."
+   },
+   {
+    "k": "mc",
+    "s": "Per quanto ___, non riesco a capirlo.",
+    "o": [
+     "mi sforzi",
+     "mi sforzerò",
+     "mi sforzassi"
+    ],
+    "a": 0,
+    "ru": "Как я ни стараюсь, не могу его понять."
+   },
+   {
+    "k": "mc",
+    "s": "Anche se ___ tardi, ti accompagno.",
+    "o": [
+     "è",
+     "sia",
+     "essendo"
+    ],
+    "a": 0,
+    "ru": "Хотя уже поздно, я тебя провожу."
+   },
+   {
+    "k": "mc",
+    "s": "Qualunque cosa tu ___, ti sosterrò.",
+    "o": [
+     "decida",
+     "decideresti",
+     "decidessi"
+    ],
+    "a": 0,
+    "ru": "Что бы ты ни решил, я тебя поддержу."
+   },
+   {
+    "k": "type",
+    "s": "Pur ___ (sapere, gerundio) la verità, tacque.",
+    "a": [
+     "sapendo"
+    ],
+    "ru": "Хотя он знал правду, он промолчал."
+   },
+   {
+    "k": "type",
+    "s": "Per bravo che ___ (essere), non può vincere da solo.",
+    "a": [
+     "sia"
+    ],
+    "ru": "Каким бы хорошим он ни был, он не может победить в одиночку."
+   },
+   {
+    "k": "type",
+    "s": "Quand'anche tu ___ (avere) ragione, non cambierei idea.",
+    "a": [
+     "avessi"
+    ],
+    "ru": "Даже если бы ты был прав, я бы не передумал."
+   },
+   {
+    "k": "type",
+    "s": "Che tu lo ___ (volere) o no, partiremo domani.",
+    "a": [
+     "voglia"
+    ],
+    "ru": "Хочешь ты этого или нет, мы уезжаем завтра."
+   },
+   {
+    "k": "order",
+    "w": [
+     "fosse",
+     "Sebbene",
+     "malato",
+     "al",
+     "andò",
+     "lavoro"
+    ],
+    "a": [
+     "Sebbene fosse malato andò al lavoro",
+     "Andò al lavoro sebbene fosse malato"
+    ],
+    "ru": "Хотя он был болен, он пошёл на работу."
+   },
+   {
+    "k": "order",
+    "w": [
+     "l'ho",
+     "Non",
+     "per",
+     "fatto",
+     "me",
+     "per",
+     "bensì",
+     "te"
+    ],
+    "a": [
+     "Non l'ho fatto per me bensì per te"
+    ],
+    "ru": "Я сделал это не для себя, а для тебя."
+   },
+   {
+    "k": "tr",
+    "ru": "Как бы я ни старался, у меня не получается.",
+    "a": [
+     "Per quanto mi sforzi non ci riesco",
+     "Per quanto ci provi non ci riesco",
+     "Per quanto mi impegni non ci riesco",
+     "Per quanto io mi sforzi non ci riesco",
+     "Per quanto io ci provi non ci riesco",
+     "Per quanto io mi impegni non ci riesco",
+     "Nonostante i miei sforzi non ci riesco"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Хотя было холодно, мы пошли гулять.",
+    "a": [
+     "Benché facesse freddo siamo andati a passeggiare",
+     "Benché facesse freddo siamo andati a fare una passeggiata",
+     "Benché facesse freddo siamo usciti a passeggiare",
+     "Benché facesse freddo siamo usciti a fare una passeggiata",
+     "Benché facesse freddo andammo a passeggiare",
+     "Benché facesse freddo andammo a fare una passeggiata",
+     "Benché facesse freddo siamo andati a fare un giro",
+     "Benché facesse freddo noi siamo andati a passeggiare",
+     "Benché facesse freddo noi siamo andati a fare una passeggiata",
+     "Benché facesse freddo noi siamo usciti a passeggiare",
+     "Benché facesse freddo noi siamo usciti a fare una passeggiata",
+     "Benché facesse freddo noi andammo a passeggiare",
+     "Benché facesse freddo noi andammo a fare una passeggiata",
+     "Benché facesse freddo noi siamo andati a fare un giro",
+     "Sebbene facesse freddo siamo andati a passeggiare",
+     "Sebbene facesse freddo siamo andati a fare una passeggiata",
+     "Sebbene facesse freddo siamo usciti a passeggiare",
+     "Sebbene facesse freddo siamo usciti a fare una passeggiata",
+     "Sebbene facesse freddo andammo a passeggiare",
+     "Sebbene facesse freddo andammo a fare una passeggiata",
+     "Sebbene facesse freddo siamo andati a fare un giro",
+     "Sebbene facesse freddo noi siamo andati a passeggiare",
+     "Sebbene facesse freddo noi siamo andati a fare una passeggiata",
+     "Sebbene facesse freddo noi siamo usciti a passeggiare",
+     "Sebbene facesse freddo noi siamo usciti a fare una passeggiata",
+     "Sebbene facesse freddo noi andammo a passeggiare",
+     "Sebbene facesse freddo noi andammo a fare una passeggiata",
+     "Sebbene facesse freddo noi siamo andati a fare un giro",
+     "Nonostante facesse freddo siamo andati a passeggiare",
+     "Nonostante facesse freddo siamo andati a fare una passeggiata",
+     "Nonostante facesse freddo siamo usciti a passeggiare",
+     "Nonostante facesse freddo siamo usciti a fare una passeggiata",
+     "Nonostante facesse freddo andammo a passeggiare",
+     "Nonostante facesse freddo andammo a fare una passeggiata",
+     "Nonostante facesse freddo siamo andati a fare un giro",
+     "Nonostante facesse freddo noi siamo andati a passeggiare",
+     "Nonostante facesse freddo noi siamo andati a fare una passeggiata",
+     "Nonostante facesse freddo noi siamo usciti a passeggiare",
+     "Nonostante facesse freddo noi siamo usciti a fare una passeggiata",
+     "Nonostante facesse freddo noi andammo a passeggiare",
+     "Nonostante facesse freddo noi andammo a fare una passeggiata",
+     "Nonostante facesse freddo noi siamo andati a fare un giro",
+     "Malgrado facesse freddo siamo andati a passeggiare",
+     "Malgrado facesse freddo siamo andati a fare una passeggiata",
+     "Malgrado facesse freddo siamo usciti a passeggiare",
+     "Malgrado facesse freddo siamo usciti a fare una passeggiata",
+     "Malgrado facesse freddo andammo a passeggiare",
+     "Malgrado facesse freddo andammo a fare una passeggiata",
+     "Malgrado facesse freddo siamo andati a fare un giro",
+     "Malgrado facesse freddo noi siamo andati a passeggiare",
+     "Malgrado facesse freddo noi siamo andati a fare una passeggiata",
+     "Malgrado facesse freddo noi siamo usciti a passeggiare",
+     "Malgrado facesse freddo noi siamo usciti a fare una passeggiata",
+     "Malgrado facesse freddo noi andammo a passeggiare",
+     "Malgrado facesse freddo noi andammo a fare una passeggiata",
+     "Malgrado facesse freddo noi siamo andati a fare un giro",
+     "Anche se faceva freddo siamo andati a passeggiare",
+     "Anche se faceva freddo siamo andati a fare una passeggiata",
+     "Anche se faceva freddo siamo usciti a passeggiare",
+     "Anche se faceva freddo siamo usciti a fare una passeggiata",
+     "Anche se faceva freddo andammo a passeggiare",
+     "Anche se faceva freddo andammo a fare una passeggiata",
+     "Anche se faceva freddo siamo andati a fare un giro",
+     "Anche se faceva freddo noi siamo andati a passeggiare",
+     "Anche se faceva freddo noi siamo andati a fare una passeggiata",
+     "Anche se faceva freddo noi siamo usciti a passeggiare",
+     "Anche se faceva freddo noi siamo usciti a fare una passeggiata",
+     "Anche se faceva freddo noi andammo a passeggiare",
+     "Anche se faceva freddo noi andammo a fare una passeggiata",
+     "Anche se faceva freddo noi siamo andati a fare un giro"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-c2-sfumature-modalita",
+  "lv": "C2",
+  "e": "🤔",
+  "t": "Оттенки модальности: dovere/potere в condizionale, эпистемическое будущее",
+  "x": "**Модальные глаголы в condizionale** смягчают высказывание и выражают совет, упрёк, вежливость или предположение.\n\n| форма | значение | пример |\n| dovresti | совет («тебе следует») | Dovresti andare dal medico. |\n| avresti dovuto | упрёк («следовало бы») | Avresti dovuto dirmelo! |\n| potresti | вежливая просьба | Potresti chiudere la finestra? |\n| avresti potuto | упущенная возможность | Avresti potuto avvertirmi. |\n| dovrebbe | ожидание («должен, по идее») | Il treno dovrebbe arrivare alle cinque. |\n\n**Futuro epistemico** — будущее время для **предположения о настоящем**:\n- Che ore sono? — **Saranno** le otto. — Наверное, около восьми.\n- Non è ancora arrivato? **Ci sarà** traffico. — Наверное, пробки.\n\n**Futuro anteriore epistemico** — предположение о **прошлом**:\n- **Avrà perso** il treno. — Наверное, он опоздал на поезд.\n- Il treno è in ritardo: **ci sarà stato** un guasto. — Видимо, была поломка.\n\nДругие способы: **deve essere** stanco (должно быть, устал), **può darsi che** + congiuntivo, **forse / probabilmente** + indicativo.\n\n**Вспомогательный глагол:** модальный глагол в сложных временах обычно берёт вспомогательный глагол инфинитива: **sono dovuto** partire (partire → essere), **ho dovuto** lavorare. В разговоре допустимо и avere: *ho dovuto partire*.\n\n**Типичные ошибки русскоговорящих:** «должен был» переводят всегда как *dovevo*, хотя для упрёка нужно **avrei dovuto**; не узнают futuro epistemico и понимают *sarà a casa* как «будет дома»; для предположения используют condizionale (*sarebbe le otto*).",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Non ti vedo bene: ___ andare dal medico.",
+    "o": [
+     "dovresti",
+     "dovessi",
+     "avresti"
+    ],
+    "a": 0,
+    "ru": "Ты плохо выглядишь: тебе следует сходить к врачу."
+   },
+   {
+    "k": "mc",
+    "s": "Il treno è in ritardo: ___ un guasto.",
+    "o": [
+     "ci sarà stato",
+     "ci fu",
+     "ci sia stato"
+    ],
+    "a": 0,
+    "ru": "Поезд опаздывает: наверное, была поломка."
+   },
+   {
+    "k": "mc",
+    "s": "Non è ancora arrivato? ___ traffico.",
+    "o": [
+     "Ci sarà",
+     "Ci fosse",
+     "Ci sia"
+    ],
+    "a": 0,
+    "ru": "Он ещё не приехал? Наверное, пробки."
+   },
+   {
+    "k": "mc",
+    "s": "Perché non me l'hai detto? Me l'___ dire!",
+    "o": [
+     "avresti dovuto",
+     "dovresti avuto",
+     "dovessi"
+    ],
+    "a": 0,
+    "ru": "Почему ты мне не сказал? Тебе следовало мне сказать!"
+   },
+   {
+    "k": "type",
+    "s": "Dove sono le chiavi? Le ___ (lasciare, io, futuro anteriore) in ufficio.",
+    "a": [
+     "avrò lasciate",
+     "avrò lasciato"
+    ],
+    "ru": "Где ключи? Наверное, я оставил их в офисе."
+   },
+   {
+    "k": "type",
+    "s": "Che ore sono? ___ (essere, futuro epistemico) le otto.",
+    "a": [
+     "Saranno"
+    ],
+    "ru": "Который час? Наверное, восемь."
+   },
+   {
+    "k": "type",
+    "s": "___ (potere, tu, condizionale) chiudere la finestra, per favore?",
+    "a": [
+     "Potresti"
+    ],
+    "ru": "Не мог бы ты закрыть окно, пожалуйста?"
+   },
+   {
+    "k": "type",
+    "s": "Ieri io ___ (dovere, passato prossimo, ausiliare essere) partire presto.",
+    "a": [
+     "sono dovuto",
+     "sono dovuta"
+    ],
+    "ru": "Вчера мне пришлось уехать рано."
+   },
+   {
+    "k": "order",
+    "w": [
+     "potuto",
+     "Avresti",
+     "avvertirmi"
+    ],
+    "a": [
+     "Avresti potuto avvertirmi"
+    ],
+    "ru": "Ты мог бы меня предупредить."
+   },
+   {
+    "k": "order",
+    "w": [
+     "già",
+     "Sarà",
+     "partito"
+    ],
+    "a": [
+     "Sarà già partito"
+    ],
+    "ru": "Наверное, он уже уехал."
+   },
+   {
+    "k": "tr",
+    "ru": "Тебе следовало мне позвонить.",
+    "a": [
+     "Avresti dovuto chiamarmi",
+     "Avresti dovuto telefonarmi",
+     "Dovevi chiamarmi",
+     "Dovevi telefonarmi",
+     "Mi avresti dovuto chiamare",
+     "Mi avresti dovuto telefonare",
+     "Mi dovevi chiamare",
+     "Mi dovevi telefonare"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Наверное, он устал.",
+    "a": [
+     "Sarà stanco",
+     "Deve essere stanco",
+     "Dev'essere stanco",
+     "Probabilmente è stanco",
+     "Forse è stanco",
+     "Sarà stanco lui",
+     "Lui sarà stanco",
+     "Lui deve essere stanco",
+     "Lui dev'essere stanco",
+     "Probabilmente lui è stanco"
+    ]
+   }
+  ]
  }
 ]
