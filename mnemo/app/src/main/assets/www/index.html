@@ -33,7 +33,7 @@
 <script>
 /* Грузим словарь только текущего языка (остальные — при переключении вкладки). */
 (function () {
-  var all = ["en","it","uk"], gram = [], lang = 'en', need = [];
+  var all = ["en","it","uk"], gram = ["en","it","uk"], lang = 'en', need = [];
   try {
     var s = JSON.parse(localStorage.getItem('mnemo.v1') || 'null');
     if (s && s.settings && s.settings.lang) lang = s.settings.lang;
@@ -50,6 +50,9 @@
 <link rel="prefetch" href="data/pack-en.js">
 <link rel="prefetch" href="data/pack-it.js">
 <link rel="prefetch" href="data/pack-uk.js">
+<link rel="prefetch" href="data/grammar-en.js">
+<link rel="prefetch" href="data/grammar-it.js">
+<link rel="prefetch" href="data/grammar-uk.js">
 <!-- data:end -->
 <script src="guide.js"></script>
 <script src="italy.js"></script>
