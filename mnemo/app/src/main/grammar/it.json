@@ -167,6 +167,18 @@
    {
     "k": "order",
     "w": [
+     "siamo",
+     "Noi",
+     "stanchi"
+    ],
+    "a": [
+     "Noi siamo stanchi"
+    ],
+    "ru": "Мы устали."
+   },
+   {
+    "k": "order",
+    "w": [
      "anni",
      "Anna",
      "trenta",
@@ -2509,6 +2521,1071 @@
      "È molto caro",
      "Questo è carissimo",
      "Questo è molto caro"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-pronomi-indiretti-combinati",
+  "lv": "B1",
+  "e": "🔗",
+  "t": "Косвенные и сдвоенные местоимения",
+  "x": "**Косвенные местоимения** (pronomi indiretti) заменяют дополнение с предлогом **a** (кому?):\n| | Ед. ч. | Мн. ч. |\n| 1-е | mi — мне | ci — нам |\n| 2-е | ti — тебе | vi — вам |\n| 3-е | gli — ему, le — ей, Le — Вам | gli (loro) — им |\n\n- **Telefono a Maria → Le telefono.** — Я ей звоню.\n- **Scrivo a Paolo → Gli scrivo.** — Я ему пишу.\n\nУправление часто совпадает с русским «кому»: **telefonare a**, **rispondere a**, **piacere a** (**Mi piace** — мне нравится).\n\n**Сдвоенные местоимения** (pronomi combinati) — когда в предложении есть и «кому», и «что». Косвенное стоит первым, **i** меняется на **e**:\n| | lo | la | li | le |\n| mi | me lo | me la | me li | me le |\n| ti | te lo | te la | te li | te le |\n| gli / le | glielo | gliela | glieli | gliele |\n| ci | ce lo | ce la | ce li | ce le |\n| vi | ve lo | ve la | ve li | ve le |\n\n**Gli** и **le** сливаются с прямым местоимением в одно слово: **glielo, gliela** — и для «ему», и для «ей», и для «им».\n- **Mi presti la penna? — Sì, te la presto.**\n- **Hai dato il libro a Luca? — Sì, gliel'ho dato.**\n\nВ passato prossimo причастие согласуется с прямым местоимением: **Le foto? Te le ho mandate.**\n\n**Типичные ошибки русскоговорящих:**\n- использовать прямое вместо косвенного: ~~La telefono~~ → **Le telefono**;\n- оставлять ~~mi lo, ti la~~ вместо **me lo, te la**;\n- писать раздельно ~~gli lo~~ → **glielo**.",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Telefoni a Maria? — Sì, ___ telefono stasera.",
+    "o": [
+     "la",
+     "gli",
+     "le"
+    ],
+    "a": 2,
+    "ru": "Ты позвонишь Марии? — Да, позвоню ей сегодня вечером."
+   },
+   {
+    "k": "mc",
+    "s": "Hai scritto a Paolo? — Sì, ___ ho scritto.",
+    "o": [
+     "lo",
+     "le",
+     "gli"
+    ],
+    "a": 2,
+    "ru": "Ты написал Паоло? — Да, я ему написал."
+   },
+   {
+    "k": "mc",
+    "s": "Mi presti la penna? — Sì, ___ presto.",
+    "o": [
+     "ti la",
+     "me la",
+     "te la"
+    ],
+    "a": 2,
+    "ru": "Одолжишь мне ручку? — Да, одолжу."
+   },
+   {
+    "k": "mc",
+    "s": "Hai dato il libro a Luca? — Sì, ___ dato.",
+    "o": [
+     "gliel'ho",
+     "lo gli ho",
+     "gli l'ho"
+    ],
+    "a": 0,
+    "ru": "Ты отдал книгу Луке? — Да, отдал."
+   },
+   {
+    "k": "type",
+    "s": "Regali i fiori alla mamma? — Sì, ___ (их ей) regalo.",
+    "a": [
+     "glieli"
+    ],
+    "ru": "Ты даришь цветы маме? — Да, дарю."
+   },
+   {
+    "k": "type",
+    "s": "Ci mandi la foto? — Sì, ___ (её вам) mando.",
+    "a": [
+     "ve la"
+    ],
+    "ru": "Пришлёшь нам фото? — Да, пришлю."
+   },
+   {
+    "k": "type",
+    "s": "Mi dici il nome? — Sì, ___ (его тебе) dico.",
+    "a": [
+     "te lo"
+    ],
+    "ru": "Скажешь мне имя? — Да, скажу."
+   },
+   {
+    "k": "type",
+    "s": "Che cosa regali ai tuoi genitori? — ___ (им) regalo un viaggio.",
+    "a": [
+     "Gli"
+    ],
+    "ru": "Что ты подаришь родителям? — Я подарю им поездку."
+   },
+   {
+    "k": "order",
+    "w": [
+     "lo",
+     "Te",
+     "domani",
+     "do"
+    ],
+    "a": [
+     "Te lo do domani",
+     "Domani te lo do"
+    ],
+    "ru": "Я отдам тебе это завтра."
+   },
+   {
+    "k": "order",
+    "w": [
+     "gliel'ho",
+     "Non",
+     "detto"
+    ],
+    "a": [
+     "Non gliel'ho detto"
+    ],
+    "ru": "Я ему этого не сказал."
+   },
+   {
+    "k": "tr",
+    "ru": "Я ему звоню.",
+    "a": [
+     "Gli telefono",
+     "Io gli telefono"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Я дам тебе это завтра.",
+    "a": [
+     "Te lo do domani",
+     "Domani te lo do",
+     "Te lo darò domani",
+     "Domani te lo darò"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-ci-ne",
+  "lv": "B1",
+  "e": "📌",
+  "t": "Частицы ci и ne",
+  "x": "**Ci** и **ne** — маленькие слова, которые заменяют целые обстоятельства и дополнения. В русском у них нет точного аналога.\n\n**Ci** заменяет:\n- место (там, туда): **Vai a Roma? — Sì, ci vado domani.** — Да, еду туда завтра;\n- дополнение с **a** / **su** после глаголов **pensare a, credere a, contare su, riuscire a**: **Pensi all'esame? — Sì, ci penso sempre.** — Да, всё время об этом думаю. **Non ci credo!** — Не верю (в это)!\n\nВыражения: **c'è / ci sono**, **volerci** (требоваться: **Ci vuole un'ora** — Нужен час), **metterci** (тратить время: **Ci metto dieci minuti**).\n\n**Ne** заменяет:\n- количество (из них, этого): **Quante mele vuoi? — Ne voglio tre.** — Хочу три (яблока). Число остаётся, существительное заменяется на **ne**;\n- дополнение с **di**: **parlare di, pensare di** (мнение), **avere bisogno di**: **Che ne pensi?** — Что ты об этом думаешь? **Ne abbiamo parlato.** — Мы об этом поговорили;\n- «оттуда»: **Sono entrato al bar e ne sono uscito subito.**\n\n**Место:** как у других местоимений — перед спрягаемым глаголом или в конце инфинитива: **Devo andarci** = **Ci devo andare**.\n\n**Ne в passato prossimo:** причастие согласуется с тем, что заменено: **Quante pizze hai mangiato? — Ne ho mangiate due.**\n\n**Типичные ошибки русскоговорящих:**\n- пропускать **ne** при количестве: ~~Ho tre~~ → **Ne ho tre** (у меня их три);\n- пропускать **ci** с глаголом идти: ~~Sì, vado domani~~ — правильно **Sì, ci vado domani**;\n- путать **ci penso** (думаю об этом) и **ne penso** (какого я мнения: **Che ne pensi?**).",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Vai spesso a Roma? — Sì, ___ vado ogni mese.",
+    "o": [
+     "ne",
+     "ci",
+     "lo"
+    ],
+    "a": 1,
+    "ru": "Ты часто ездишь в Рим? — Да, езжу туда каждый месяц."
+   },
+   {
+    "k": "mc",
+    "s": "Quante mele vuoi? — ___ voglio tre.",
+    "o": [
+     "Ci",
+     "Le",
+     "Ne"
+    ],
+    "a": 2,
+    "ru": "Сколько яблок ты хочешь? — Хочу три."
+   },
+   {
+    "k": "mc",
+    "s": "Pensi all'esame? — Sì, ___ penso sempre.",
+    "o": [
+     "ci",
+     "gli",
+     "ne"
+    ],
+    "a": 0,
+    "ru": "Думаешь об экзамене? — Да, всё время о нём думаю."
+   },
+   {
+    "k": "mc",
+    "s": "Quanti caffè hai bevuto? — ___ ho bevuti due.",
+    "o": [
+     "Li",
+     "Ci",
+     "Ne"
+    ],
+    "a": 2,
+    "ru": "Сколько кофе ты выпил? — Две чашки."
+   },
+   {
+    "k": "type",
+    "s": "Hai dei fratelli? — Sì, ___ (ci / ne) ho due.",
+    "a": [
+     "ne"
+    ],
+    "ru": "У тебя есть братья? — Да, двое."
+   },
+   {
+    "k": "type",
+    "s": "Quando vai in Spagna? — ___ (туда) vado a luglio.",
+    "a": [
+     "Ci"
+    ],
+    "ru": "Когда ты едешь в Испанию? — Еду туда в июле."
+   },
+   {
+    "k": "type",
+    "s": "Conosci questa storia? — No, non ___ (об этом) so niente.",
+    "a": [
+     "ne"
+    ],
+    "ru": "Ты знаешь эту историю? — Нет, ничего об этом не знаю."
+   },
+   {
+    "k": "type",
+    "s": "Sei mai stato a Venezia? — Sì, ___ (там) sono stato l'anno scorso.",
+    "a": [
+     "ci"
+    ],
+    "ru": "Ты бывал в Венеции? — Да, был там в прошлом году."
+   },
+   {
+    "k": "order",
+    "w": [
+     "parliamo",
+     "Ne",
+     "domani"
+    ],
+    "a": [
+     "Ne parliamo domani",
+     "Domani ne parliamo"
+    ],
+    "ru": "Поговорим об этом завтра."
+   },
+   {
+    "k": "order",
+    "w": [
+     "ci",
+     "Non",
+     "credo"
+    ],
+    "a": [
+     "Non ci credo"
+    ],
+    "ru": "Я в это не верю."
+   },
+   {
+    "k": "tr",
+    "ru": "Я иду туда завтра.",
+    "a": [
+     "Ci vado domani",
+     "Domani ci vado",
+     "Io ci vado domani",
+     "Domani io ci vado"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "У меня их три.",
+    "a": [
+     "Ne ho tre",
+     "Io ne ho tre"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-condizionale",
+  "lv": "B1",
+  "e": "🤔",
+  "t": "Условное наклонение: condizionale presente",
+  "x": "**Condizionale presente** соответствует русскому «бы»: **Vorrei** — я бы хотел, **Andrei** — я бы пошёл.\n\n**Образование:** та же основа, что у futuro semplice (**parler-, prender-, partir-**), + окончания **-ei, -esti, -ebbe, -emmo, -este, -ebbero**.\n| | parlare | prendere | partire |\n| io | parlerei | prenderei | partirei |\n| tu | parleresti | prenderesti | partiresti |\n| lui/lei | parlerebbe | prenderebbe | partirebbe |\n| noi | parleremmo | prenderemmo | partiremmo |\n| voi | parlereste | prendereste | partireste |\n| loro | parlerebbero | prenderebbero | partirebbero |\n\n**Неправильные основы** — те же, что в будущем времени: **sarei, avrei, farei, andrei, potrei, dovrei, vorrei, verrei, vedrei, saprei, berrei, rimarrei**. Сохраняются и орфографические правила: **pagherei, mangerei**.\n\n**Употребление:**\n- вежливая просьба: **Vorrei un caffè.** — Я бы хотел кофе. **Potrebbe aiutarmi?** — Не могли бы Вы мне помочь?\n- желание: **Mi piacerebbe vivere in Italia.** — Мне хотелось бы жить в Италии;\n- совет: **Dovresti dormire di più.** — Тебе стоило бы больше спать;\n- предположение, неподтверждённая информация: **Secondo i giornali, il ministro sarebbe malato.** — По данным газет, министр якобы болен.\n\n**Типичные ошибки русскоговорящих:**\n- путать **-emmo** и **-emo**: **andremmo** (мы бы пошли) ≠ **andremo** (мы пойдём);\n- в просьбе использовать **voglio**, что звучит грубо: в магазине и баре говорят **vorrei**;\n- образовывать условное от инфинитива без изменений: ~~volerei, poterei~~ → **vorrei, potrei**.",
+  "q": [
+   {
+    "k": "mc",
+    "s": "___ un caffè, per favore.",
+    "o": [
+     "Voglierei",
+     "Volerei",
+     "Vorrei"
+    ],
+    "a": 2,
+    "ru": "Я бы хотел кофе, пожалуйста."
+   },
+   {
+    "k": "mc",
+    "s": "Al tuo posto, io non lo ___.",
+    "o": [
+     "fari",
+     "farei",
+     "facerei"
+    ],
+    "a": 1,
+    "ru": "На твоём месте я бы этого не делал."
+   },
+   {
+    "k": "mc",
+    "s": "Noi ___ volentieri in Italia.",
+    "o": [
+     "anderemmo",
+     "andremmo",
+     "andrebbero"
+    ],
+    "a": 1,
+    "ru": "Мы бы с удовольствием поехали в Италию."
+   },
+   {
+    "k": "mc",
+    "s": "Mi ___ aiutare? (tu)",
+    "o": [
+     "potresti",
+     "potrebbi",
+     "poteresti"
+    ],
+    "a": 0,
+    "ru": "Ты не мог бы мне помочь?"
+   },
+   {
+    "k": "type",
+    "s": "Tu ___ (dovere) studiare di più. (condizionale)",
+    "a": [
+     "dovresti"
+    ],
+    "ru": "Тебе следовало бы больше заниматься."
+   },
+   {
+    "k": "type",
+    "s": "Loro ___ (comprare) una casa al mare. (condizionale)",
+    "a": [
+     "comprerebbero"
+    ],
+    "ru": "Они бы купили дом на море."
+   },
+   {
+    "k": "type",
+    "s": "Io ___ (essere) felice di aiutarti. (condizionale)",
+    "a": [
+     "sarei"
+    ],
+    "ru": "Я был бы рад тебе помочь."
+   },
+   {
+    "k": "type",
+    "s": "Voi ___ (venire) con noi? (condizionale)",
+    "a": [
+     "verreste"
+    ],
+    "ru": "Вы бы пошли с нами?"
+   },
+   {
+    "k": "order",
+    "w": [
+     "bicchiere",
+     "Vorrei",
+     "d'acqua",
+     "un"
+    ],
+    "a": [
+     "Vorrei un bicchiere d'acqua"
+    ],
+    "ru": "Я бы хотел стакан воды."
+   },
+   {
+    "k": "order",
+    "w": [
+     "mi",
+     "Potrebbe",
+     "aiutare"
+    ],
+    "a": [
+     "Mi potrebbe aiutare"
+    ],
+    "ru": "Не могли бы Вы мне помочь?"
+   },
+   {
+    "k": "tr",
+    "ru": "Я бы хотел поехать в Италию.",
+    "a": [
+     "Vorrei andare in Italia",
+     "Io vorrei andare in Italia",
+     "Mi piacerebbe andare in Italia"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Тебе стоило бы отдохнуть.",
+    "a": [
+     "Dovresti riposare",
+     "Dovresti riposarti",
+     "Ti dovresti riposare",
+     "Tu dovresti riposare",
+     "Tu dovresti riposarti",
+     "Tu ti dovresti riposare"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-imperativo",
+  "lv": "B1",
+  "e": "📣",
+  "t": "Повелительное наклонение: imperativo",
+  "x": "**Imperativo** используется для просьб, советов, приказов и инструкций.\n\n**Формы для tu, noi, voi:**\n| | parlare | prendere | sentire | finire |\n| tu | parla! | prendi! | senti! | finisci! |\n| noi | parliamo! | prendiamo! | sentiamo! | finiamo! |\n| voi | parlate! | prendete! | sentite! | finite! |\n\nТолько у глаголов на **-are** форма tu отличается от presente (**parla**, а не parli). Формы noi и voi совпадают с presente.\n\n**Отрицание для tu:** **non + инфинитив**: **Non parlare!** — Не говори! **Non preoccuparti!** Для noi и voi — просто **non**: **Non parlate!**\n\n**Неправильные формы tu:** andare → **va'/vai**, fare → **fa'/fai**, dare → **da'/dai**, stare → **sta'/stai**, dire → **di'**, essere → **sii**, avere → **abbi**.\n\n**Местоимения** присоединяются к концу формы: **Prendilo!** (возьми его), **Alzati!** (вставай), **Diteglielo!** (скажите ему это). После односложных форм **va', fa', da', di', sta'** согласная местоимения удваивается: **Dimmi!** (скажи мне), **Fallo!** (сделай это), **Dammi** (дай мне). Исключение — **gli**: **Digli**.\n\nПри отрицании местоимение стоит перед инфинитивом или присоединяется к нему: **Non ti preoccupare!** = **Non preoccuparti!**\n\n**Вежливая форма (Lei)** совпадает с congiuntivo: **Prenda!**, **Scusi!**, **Venga!** — местоимение ставится перед глаголом: **Si accomodi!**\n\n**Типичные ошибки русскоговорящих:**\n- отрицание ~~Non parla!~~ вместо **Non parlare!**;\n- ~~Parli!~~ вместо **Parla!** при обращении на «ты»;\n- ~~Dimi~~ без удвоения → **Dimmi**.",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Marco, ___ la porta, per favore!",
+    "o": [
+     "chiudi",
+     "chiudere",
+     "chiude"
+    ],
+    "a": 0,
+    "ru": "Марко, закрой дверь, пожалуйста!"
+   },
+   {
+    "k": "mc",
+    "s": "Non ___, Anna!",
+    "o": [
+     "parla",
+     "parlare",
+     "parlate"
+    ],
+    "a": 1,
+    "ru": "Не разговаривай, Анна!"
+   },
+   {
+    "k": "mc",
+    "s": "Ragazzi, ___ attenzione!",
+    "o": [
+     "fare",
+     "fate",
+     "fai"
+    ],
+    "a": 1,
+    "ru": "Ребята, будьте внимательны!"
+   },
+   {
+    "k": "mc",
+    "s": "Marco, ___ la verità! (dire)",
+    "o": [
+     "di'",
+     "dire",
+     "dici"
+    ],
+    "a": 0,
+    "ru": "Марко, скажи правду!"
+   },
+   {
+    "k": "type",
+    "s": "___ (mangiare, tu) la verdura!",
+    "a": [
+     "Mangia"
+    ],
+    "ru": "Ешь овощи!"
+   },
+   {
+    "k": "type",
+    "s": "Non ___ (preoccuparsi, tu)!",
+    "a": [
+     "ti preoccupare",
+     "preoccuparti"
+    ],
+    "ru": "Не волнуйся!"
+   },
+   {
+    "k": "type",
+    "s": "Ragazzi, ___ (aprire, voi) i libri!",
+    "a": [
+     "aprite"
+    ],
+    "ru": "Ребята, откройте книги!"
+   },
+   {
+    "k": "type",
+    "s": "___ (alzarsi, tu) subito!",
+    "a": [
+     "Alzati"
+    ],
+    "ru": "Вставай сейчас же!"
+   },
+   {
+    "k": "order",
+    "w": [
+     "la",
+     "Dammi",
+     "penna"
+    ],
+    "a": [
+     "Dammi la penna"
+    ],
+    "ru": "Дай мне ручку."
+   },
+   {
+    "k": "order",
+    "w": [
+     "presto",
+     "Torna",
+     "a",
+     "casa"
+    ],
+    "a": [
+     "Torna a casa presto",
+     "Torna presto a casa"
+    ],
+    "ru": "Возвращайся домой пораньше."
+   },
+   {
+    "k": "tr",
+    "ru": "Не кури!",
+    "a": [
+     "Non fumare"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Скажи мне правду!",
+    "a": [
+     "Dimmi la verità"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-trapassato",
+  "lv": "B1",
+  "e": "⏮️",
+  "t": "Trapassato prossimo: предпрошедшее время",
+  "x": "**Trapassato prossimo** обозначает действие, которое произошло **раньше другого действия в прошлом** («уже сделал к тому моменту»).\n\n**Образование:** **avere** или **essere** в imperfetto + причастие прошедшего времени. Выбор вспомогательного глагола и согласование — как в passato prossimo.\n| | mangiare | partire |\n| io | avevo mangiato | ero partito/a |\n| tu | avevi mangiato | eri partito/a |\n| lui/lei | aveva mangiato | era partito/a |\n| noi | avevamo mangiato | eravamo partiti/e |\n| voi | avevate mangiato | eravate partiti/e |\n| loro | avevano mangiato | erano partiti/e |\n\n**Примеры:**\n- **Quando sono arrivato alla stazione, il treno era già partito.** — Когда я пришёл на вокзал, поезд уже ушёл. (Сначала ушёл поезд, потом пришёл я.)\n- **Non avevo fame perché avevo già mangiato.** — Я не был голоден, потому что уже поел.\n- **Anna mi ha detto che aveva visto il film.** — Анна сказала мне, что видела фильм.\n\nЧасто с наречиями **già** (уже), **appena** (только что), **prima**, **mai**: **Non ero mai stato a Roma prima.** — Я никогда раньше не был в Риме.\n\nTrapassato часто встречается в косвенной речи: **Ha detto: «Ho finito»** → **Ha detto che aveva finito.**\n\n**Типичные ошибки русскоговорящих:**\n- в русском нет отдельного предпрошедшего времени, поэтому его заменяют passato prossimo: ~~Quando sono arrivato, il treno è già partito~~ → **era già partito**;\n- путать вспомогательный глагол: ~~avevo andato~~ → **ero andato**;\n- забывать согласование с essere: **Le ragazze erano uscite.**",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Quando sono arrivato alla stazione, il treno ___.",
+    "o": [
+     "ha già partito",
+     "era già partito",
+     "aveva già partito"
+    ],
+    "a": 1,
+    "ru": "Когда я пришёл на вокзал, поезд уже ушёл."
+   },
+   {
+    "k": "mc",
+    "s": "Non avevo fame perché ___.",
+    "o": [
+     "avevo già mangiato",
+     "mangiavo già",
+     "ero già mangiato"
+    ],
+    "a": 0,
+    "ru": "Я не был голоден, потому что уже поел."
+   },
+   {
+    "k": "mc",
+    "s": "Anna mi ha detto che ___ il film.",
+    "o": [
+     "avevano già visto",
+     "era già vista",
+     "aveva già visto"
+    ],
+    "a": 2,
+    "ru": "Анна сказала мне, что уже видела фильм."
+   },
+   {
+    "k": "mc",
+    "s": "Le ragazze ___ prima di noi.",
+    "o": [
+     "erano uscito",
+     "erano uscite",
+     "avevano uscito"
+    ],
+    "a": 1,
+    "ru": "Девушки вышли раньше нас."
+   },
+   {
+    "k": "type",
+    "s": "Io ___ (finire) i compiti prima di cena. (trapassato prossimo)",
+    "a": [
+     "avevo finito"
+    ],
+    "ru": "Я закончил домашнее задание до ужина."
+   },
+   {
+    "k": "type",
+    "s": "Marco ___ (andare) via quando sono arrivata. (trapassato prossimo)",
+    "a": [
+     "era andato"
+    ],
+    "ru": "Марко уже ушёл, когда я пришла."
+   },
+   {
+    "k": "type",
+    "s": "Non potevamo entrare: noi ___ (dimenticare) le chiavi. (trapassato prossimo)",
+    "a": [
+     "avevamo dimenticato"
+    ],
+    "ru": "Мы не могли войти: мы забыли ключи."
+   },
+   {
+    "k": "type",
+    "s": "Tu ___ (leggere) quel libro prima del film? (trapassato prossimo)",
+    "a": [
+     "avevi letto",
+     "avevi già letto"
+    ],
+    "ru": "Ты читал эту книгу до фильма?"
+   },
+   {
+    "k": "order",
+    "w": [
+     "già",
+     "aveva",
+     "Luca",
+     "cenato"
+    ],
+    "a": [
+     "Luca aveva già cenato"
+    ],
+    "ru": "Лука уже поужинал."
+   },
+   {
+    "k": "order",
+    "w": [
+     "partito",
+     "Quando",
+     "era",
+     "l'aereo",
+     "arrivati",
+     "siamo"
+    ],
+    "a": [
+     "Quando siamo arrivati l'aereo era partito",
+     "L'aereo era partito quando siamo arrivati"
+    ],
+    "ru": "Когда мы приехали, самолёт уже улетел."
+   },
+   {
+    "k": "tr",
+    "ru": "Когда она позвонила, я уже ушёл.",
+    "a": [
+     "Quando ha telefonato ero già uscito",
+     "Quando lei ha telefonato ero già uscito",
+     "Quando ha telefonato io ero già uscito",
+     "Quando ha chiamato ero già uscito",
+     "Quando lei ha chiamato ero già uscito",
+     "Quando ha chiamato io ero già uscito",
+     "Ero già uscito quando ha telefonato",
+     "Ero già uscito quando ha chiamato",
+     "Quando ha telefonato ero già andato via",
+     "Quando ha chiamato ero già andato via",
+     "Quando lei ha telefonato ero già andato via",
+     "Quando lei ha chiamato ero già andato via"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Он сказал, что уже поел.",
+    "a": [
+     "Ha detto che aveva già mangiato",
+     "Lui ha detto che aveva già mangiato",
+     "Ha detto di aver già mangiato",
+     "Ha detto di avere già mangiato",
+     "Lui ha detto di aver già mangiato"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-congiuntivo",
+  "lv": "B1",
+  "e": "💭",
+  "t": "Congiuntivo presente: введение",
+  "x": "**Congiuntivo** (сослагательное наклонение) выражает не факт, а мнение, желание, сомнение, чувство. Он почти всегда стоит в придаточном предложении после **che**.\n\n**Образование:**\n| | parlare | prendere | partire | capire |\n| io / tu / lui | parli | prenda | parta | capisca |\n| noi | parliamo | prendiamo | partiamo | capiamo |\n| voi | parliate | prendiate | partiate | capiate |\n| loro | parlino | prendano | partano | capiscano |\n\nТри формы единственного числа одинаковы, поэтому местоимение часто ставят для ясности: **Penso che tu abbia ragione.**\n\n**Неправильные формы:** essere → **sia, siamo, siate, siano**; avere → **abbia**; andare → **vada**; fare → **faccia**; venire → **venga**; stare → **stia**; dare → **dia**; potere → **possa**; volere → **voglia**; dovere → **debba**; sapere → **sappia**; dire → **dica**.\n\n**После каких выражений:**\n- мнение: **penso che, credo che, mi sembra che** — **Credo che Anna sia a casa**;\n- желание, воля: **voglio che, spero che, preferisco che**;\n- чувства: **sono contento che, ho paura che**;\n- безличные выражения: **è importante che, bisogna che, è possibile che**;\n- союзы: **prima che, benché, affinché, a meno che**.\n\nПосле выражений уверенности — индикатив: **So che Anna è a casa.** — Я знаю, что Анна дома.\n\nЕсли подлежащее одно и то же, используется **di + инфинитив**: **Penso di partire** (а не ~~Penso che io parta~~).\n\n**Типичные ошибки русскоговорящих:**\n- ставить индикатив после **penso che**: ~~Penso che lui ha ragione~~ → **abbia ragione**;\n- путать окончания: у -are в congiuntivo **-i** (**parli**), у -ere/-ire **-a** (**prenda**);\n- после **voglio che** использовать инфинитив, как в русском «хочу, чтобы»: **Voglio che tu venga.**",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Penso che Marco ___ ragione.",
+    "o": [
+     "abbiamo",
+     "abbiano",
+     "abbia"
+    ],
+    "a": 2,
+    "ru": "Я думаю, что Марко прав."
+   },
+   {
+    "k": "mc",
+    "s": "Voglio che tu ___ subito.",
+    "o": [
+     "veniamo",
+     "venga",
+     "vengano"
+    ],
+    "a": 1,
+    "ru": "Я хочу, чтобы ты пришёл немедленно."
+   },
+   {
+    "k": "mc",
+    "s": "È importante che voi ___ attenzione.",
+    "o": [
+     "facciate",
+     "facciamo",
+     "faccia"
+    ],
+    "a": 0,
+    "ru": "Важно, чтобы вы были внимательны."
+   },
+   {
+    "k": "mc",
+    "s": "Spero che loro ___ bene.",
+    "o": [
+     "stia",
+     "stiamo",
+     "stiano"
+    ],
+    "a": 2,
+    "ru": "Надеюсь, что у них всё хорошо."
+   },
+   {
+    "k": "type",
+    "s": "Credo che Anna ___ (essere) a casa.",
+    "a": [
+     "sia"
+    ],
+    "ru": "Думаю, Анна дома."
+   },
+   {
+    "k": "type",
+    "s": "Bisogna che noi ___ (partire) presto.",
+    "a": [
+     "partiamo"
+    ],
+    "ru": "Нам нужно уехать рано."
+   },
+   {
+    "k": "type",
+    "s": "Mia madre vuole che io ___ (studiare) di più.",
+    "a": [
+     "studi"
+    ],
+    "ru": "Мама хочет, чтобы я больше занимался."
+   },
+   {
+    "k": "type",
+    "s": "Penso che loro ___ (capire) bene.",
+    "a": [
+     "capiscano"
+    ],
+    "ru": "Я думаю, что они хорошо понимают."
+   },
+   {
+    "k": "order",
+    "w": [
+     "che",
+     "Spero",
+     "sia",
+     "tu",
+     "felice"
+    ],
+    "a": [
+     "Spero che tu sia felice"
+    ],
+    "ru": "Надеюсь, что ты счастлив."
+   },
+   {
+    "k": "order",
+    "w": [
+     "che",
+     "Penso",
+     "piova",
+     "domani"
+    ],
+    "a": [
+     "Penso che domani piova",
+     "Penso che piova domani"
+    ],
+    "ru": "Думаю, что завтра будет дождь."
+   },
+   {
+    "k": "tr",
+    "ru": "Я думаю, что он прав.",
+    "a": [
+     "Penso che abbia ragione",
+     "Penso che lui abbia ragione",
+     "Credo che abbia ragione",
+     "Credo che lui abbia ragione",
+     "Io penso che abbia ragione",
+     "Io penso che lui abbia ragione",
+     "Io credo che abbia ragione",
+     "Io credo che lui abbia ragione"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Я хочу, чтобы ты пришёл.",
+    "a": [
+     "Voglio che tu venga",
+     "Voglio che venga",
+     "Io voglio che tu venga"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-relativi",
+  "lv": "B1",
+  "e": "🧵",
+  "t": "Относительные местоимения: che, cui, il quale",
+  "x": "Относительные местоимения соединяют два предложения и соответствуют русскому «который».\n\n**Che** — самое частое; используется для подлежащего и прямого дополнения, **без предлога**, не изменяется:\n- **Il ragazzo che parla è mio fratello.** — Парень, который говорит, — мой брат.\n- **Il film che abbiamo visto è bello.** — Фильм, который мы посмотрели, хороший.\n\n**Cui** — после **предлога**, тоже не изменяется:\n- **La città in cui abito è piccola.** — Город, в котором я живу, маленький.\n- **L'amica con cui vado in vacanza.** — Подруга, с которой я еду в отпуск.\n- **Il libro di cui ti ho parlato.** — Книга, о которой я тебе говорил.\n- **Il motivo per cui sono qui.** — Причина, по которой я здесь.\nПредлог **a** перед cui можно опустить: **la persona (a) cui ho scritto**.\n\n**Il quale, la quale, i quali, le quali** — согласуются в роде и числе; заменяют **cui** после предлога (с артиклем, слитым с предлогом) или **che** в книжном стиле для ясности:\n- **Le persone con le quali lavoro sono simpatiche.**\n- **Il libro del quale ti ho parlato.**\n\n**Il cui / la cui** = «чей, которого»: **Lo scrittore il cui libro ho letto.** — Писатель, чью книгу я прочитал (артикль согласуется с предметом).\n\n**Quello che / ciò che** = «то, что»: **Non capisco quello che dici.** — Я не понимаю, что ты говоришь.\n\n**Типичные ошибки русскоговорящих:**\n- ставить **che** после предлога: ~~con che~~ → **con cui**;\n- пытаться склонять **che** по падежам, как «который/которого»: ~~la donna cui hai visto~~ → **la donna che hai visto**;\n- опускать относительное местоимение, как в английском: ~~il film abbiamo visto~~ → **il film che abbiamo visto**.",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Il ragazzo ___ parla è mio fratello.",
+    "o": [
+     "cui",
+     "il cui",
+     "che"
+    ],
+    "a": 2,
+    "ru": "Парень, который говорит, — мой брат."
+   },
+   {
+    "k": "mc",
+    "s": "La città in ___ abito è piccola.",
+    "o": [
+     "quale",
+     "cui",
+     "che"
+    ],
+    "a": 1,
+    "ru": "Город, в котором я живу, маленький."
+   },
+   {
+    "k": "mc",
+    "s": "Ecco l'amica con ___ vado in vacanza.",
+    "o": [
+     "che",
+     "cui",
+     "la cui"
+    ],
+    "a": 1,
+    "ru": "Вот подруга, с которой я еду в отпуск."
+   },
+   {
+    "k": "mc",
+    "s": "Il libro di ___ ti ho parlato è qui.",
+    "o": [
+     "che",
+     "quale",
+     "cui"
+    ],
+    "a": 2,
+    "ru": "Книга, о которой я тебе говорил, здесь."
+   },
+   {
+    "k": "type",
+    "s": "La donna ___ (которую) hai visto è mia zia.",
+    "a": [
+     "che"
+    ],
+    "ru": "Женщина, которую ты видел, — моя тётя."
+   },
+   {
+    "k": "type",
+    "s": "Il motivo per ___ (cui / il quale) sono qui è semplice.",
+    "a": [
+     "cui",
+     "il quale"
+    ],
+    "ru": "Причина, по которой я здесь, проста."
+   },
+   {
+    "k": "type",
+    "s": "Le persone con ___ (форма от il quale) lavoro sono simpatiche.",
+    "a": [
+     "le quali"
+    ],
+    "ru": "Люди, с которыми я работаю, симпатичные."
+   },
+   {
+    "k": "type",
+    "s": "Non capisco ___ (то, что) dici.",
+    "a": [
+     "quello che",
+     "ciò che"
+    ],
+    "ru": "Я не понимаю, что ты говоришь."
+   },
+   {
+    "k": "order",
+    "w": [
+     "che",
+     "Il",
+     "film",
+     "abbiamo",
+     "visto",
+     "è",
+     "bello"
+    ],
+    "a": [
+     "Il film che abbiamo visto è bello"
+    ],
+    "ru": "Фильм, который мы посмотрели, хороший."
+   },
+   {
+    "k": "order",
+    "w": [
+     "cui",
+     "La",
+     "casa",
+     "in",
+     "abito",
+     "è",
+     "grande"
+    ],
+    "a": [
+     "La casa in cui abito è grande"
+    ],
+    "ru": "Дом, в котором я живу, большой."
+   },
+   {
+    "k": "tr",
+    "ru": "Это друг, о котором я тебе говорил.",
+    "a": [
+     "È l'amico di cui ti ho parlato",
+     "Questo è l'amico di cui ti ho parlato",
+     "È l'amico del quale ti ho parlato",
+     "Questo è l'amico del quale ti ho parlato"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Девушка, которая поёт, — моя сестра.",
+    "a": [
+     "La ragazza che canta è mia sorella"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "it-b1-stare-gerundio",
+  "lv": "B1",
+  "e": "⏳",
+  "t": "Stare + gerundio и stare per",
+  "x": "**Stare + gerundio** — действие, происходящее **прямо сейчас**, в процессе (как английское *-ing*): **Sto lavorando.** — Я сейчас работаю.\n\n**Герундий (gerundio)** образуется от основы глагола:\n- **-are → -ando**: parlare → **parlando**, mangiare → **mangiando**;\n- **-ere, -ire → -endo**: leggere → **leggendo**, dormire → **dormendo**, finire → **finendo**.\n\nНеправильные: fare → **facendo**, dire → **dicendo**, bere → **bevendo**, porre → **ponendo**, tradurre → **traducendo**.\n\nСпрягается только **stare**: **sto, stai, sta, stiamo, state, stanno** + неизменяемый герундий.\n- **Che cosa stai facendo?** — Что ты сейчас делаешь?\n- **I bambini stanno dormendo.** — Дети спят.\n- В прошлом — со **stare** в imperfetto: **Stavo uscendo quando hai chiamato.** — Я как раз выходил, когда ты позвонил.\n\nМестоимения ставятся перед **stare** или присоединяются к герундию: **Lo sto facendo** = **Sto facendolo** — Я это делаю.\n\n**Stare per + инфинитив** — действие, которое **вот-вот** произойдёт («собираться, вот-вот»):\n- **Il treno sta per partire.** — Поезд вот-вот отправится.\n- **Stavo per chiamarti!** — Я как раз собирался тебе позвонить!\n\nОбычный presente тоже может описывать текущее действие: **Cosa fai?** Конструкция со **stare** подчёркивает процесс.\n\n**Типичные ошибки русскоговорящих:**\n- использовать **essere** вместо **stare**: ~~sono mangiando~~ → **sto mangiando**;\n- путать окончания: ~~leggando~~ → **leggendo**;\n- использовать stare + gerundio для состояний и длительных периодов: **Abito a Roma** (а не ~~sto abitando~~), **Ho fame**.",
+  "q": [
+   {
+    "k": "mc",
+    "s": "Che cosa ___ facendo?",
+    "o": [
+     "hai",
+     "stai",
+     "sei"
+    ],
+    "a": 1,
+    "ru": "Что ты сейчас делаешь?"
+   },
+   {
+    "k": "mc",
+    "s": "Sto ___ la cena.",
+    "o": [
+     "preparendo",
+     "preparato",
+     "preparando"
+    ],
+    "a": 2,
+    "ru": "Я готовлю ужин."
+   },
+   {
+    "k": "mc",
+    "s": "Il treno sta ___ partire.",
+    "o": [
+     "di",
+     "a",
+     "per"
+    ],
+    "a": 2,
+    "ru": "Поезд вот-вот отправится."
+   },
+   {
+    "k": "mc",
+    "s": "Noi stiamo ___ un caffè.",
+    "o": [
+     "bevendo",
+     "bevando",
+     "bevuto"
+    ],
+    "a": 0,
+    "ru": "Мы пьём кофе."
+   },
+   {
+    "k": "type",
+    "s": "I bambini ___ (stare) dormendo.",
+    "a": [
+     "stanno"
+    ],
+    "ru": "Дети спят."
+   },
+   {
+    "k": "type",
+    "s": "Anna sta ___ (leggere) un libro.",
+    "a": [
+     "leggendo"
+    ],
+    "ru": "Анна читает книгу."
+   },
+   {
+    "k": "type",
+    "s": "Che cosa stai ___ (dire)?",
+    "a": [
+     "dicendo"
+    ],
+    "ru": "Что ты такое говоришь?"
+   },
+   {
+    "k": "type",
+    "s": "Sbrigati! Il film ___ (stare per, 3-е л. ед. ч.) cominciare.",
+    "a": [
+     "sta per"
+    ],
+    "ru": "Поторопись! Фильм вот-вот начнётся."
+   },
+   {
+    "k": "order",
+    "w": [
+     "piovere",
+     "Sta",
+     "per"
+    ],
+    "a": [
+     "Sta per piovere"
+    ],
+    "ru": "Вот-вот пойдёт дождь."
+   },
+   {
+    "k": "order",
+    "w": [
+     "sto",
+     "Lo",
+     "facendo"
+    ],
+    "a": [
+     "Lo sto facendo"
+    ],
+    "ru": "Я это делаю."
+   },
+   {
+    "k": "tr",
+    "ru": "Я сейчас работаю.",
+    "a": [
+     "Sto lavorando",
+     "Io sto lavorando",
+     "Adesso sto lavorando",
+     "Ora sto lavorando",
+     "Sto lavorando adesso",
+     "Sto lavorando ora",
+     "Io adesso sto lavorando",
+     "Io ora sto lavorando"
+    ]
+   },
+   {
+    "k": "tr",
+    "ru": "Мы вот-вот уйдём.",
+    "a": [
+     "Stiamo per uscire",
+     "Stiamo per andare via",
+     "Stiamo per andarcene",
+     "Noi stiamo per uscire",
+     "Noi stiamo per andare via",
+     "Stiamo per partire"
     ]
    }
   ]
