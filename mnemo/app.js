@@ -1715,6 +1715,9 @@ const LVS = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
 const gramOf = lang => (window.MNEMO_GRAMMAR || {})[lang] || [];
 const gnorm = s => String(s || '').toLowerCase().replace(/[’`ʼ]/g, "'").replace(/[.,!?;:"«»…¿¡()–—]/g, ' ').replace(/\s+/g, ' ').trim();
 const gramCheck = (input, acc) => { const n = gnorm(input); return !!n && acc.some(a => gnorm(a) === n); };
+// Латиница без диакритики (perche вместо perché) — засчитываем как опечатку; кириллицу (й, ї) не трогаем.
+const deAcc = s => s.normalize('NFD').replace(/([a-z])[\u0300-\u036f]+/g, '$1').normalize('NFC');
+const gramFix = (input, acc) => { const n = deAcc(gnorm(input)); return n ? acc.find(a => deAcc(gnorm(a)) === n) : undefined; };
 // Теория: **жирный**, строки «- » — список, строки «| … |» — таблица (первая строка — заголовок).
 function mdLite(x) {
   const inline = t => esc(t).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
@@ -3346,7 +3349,12 @@ const A = {
     const v = $('#ans')?.value || '';
     if (!v.trim()) { toast('Введите ответ или нажмите «Не знаю»'); return; }
     ex.typed = v;
-    if (ex.acc) { answer(gramCheck(v, ex.acc)); return; }
+    if (ex.acc) {
+      if (gramCheck(v, ex.acc)) { answer(true); return; }
+      const fix = gramFix(v, ex.acc);
+      if (fix) { ex.a = fix; answer(true, { typo: true }); } else answer(false);
+      return;
+    }
     const r = checkAnswer(v, ex.a);
     answer(r.ok, { typo: r.typo });
   },
