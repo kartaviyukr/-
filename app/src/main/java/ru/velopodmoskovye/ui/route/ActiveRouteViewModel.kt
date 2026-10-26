@@ -98,6 +98,8 @@ class ActiveRouteViewModel @Inject constructor(
 
     fun dismissManual() { _manual.value = ManualMarkState.Idle }
 
+    fun hasLocationPermission(): Boolean = tracker.hasPermission()
+
     fun finish(onDone: () -> Unit) {
         viewModelScope.launch {
             progress.finishRoute()

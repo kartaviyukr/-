@@ -9,9 +9,12 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import ru.velopodmoskovye.data.content.ContentRepository
+import ru.velopodmoskovye.data.map.OfflineMaps
+import ru.velopodmoskovye.data.map.OfflineState
 import ru.velopodmoskovye.data.progress.ProgressRepository
 import ru.velopodmoskovye.data.settings.SettingsRepository
 import ru.velopodmoskovye.domain.model.Destination
@@ -50,8 +53,20 @@ class PlaceViewModel @Inject constructor(
     content: ContentRepository,
     private val progress: ProgressRepository,
     settings: SettingsRepository,
+    private val offline: OfflineMaps,
 ) : ViewModel() {
     private val id: String = checkNotNull(savedState["id"])
+
+    val offlineState: StateFlow<OfflineState> = offline.states
+        .map { it[id] ?: OfflineState.None }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), OfflineState.None)
+
+    fun downloadArea() {
+        val d = state.value.destination ?: return
+        offline.downloadArea(id, MapData.routePoints(d))
+    }
+
+    fun deleteArea() = offline.delete(id)
 
     private data class Plan(val date: LocalDate, val start: LocalTime, val walking: Boolean)
     private val plan = MutableStateFlow(Plan(LocalDate.now(), LocalTime.of(10, 0), false))

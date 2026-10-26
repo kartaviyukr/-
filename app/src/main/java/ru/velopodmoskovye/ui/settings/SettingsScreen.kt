@@ -10,6 +10,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Slider
@@ -36,6 +37,8 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import ru.velopodmoskovye.BuildConfig
+import ru.velopodmoskovye.data.map.OfflineMaps
+import ru.velopodmoskovye.data.map.OfflineState
 import ru.velopodmoskovye.data.progress.ProgressRepository
 import ru.velopodmoskovye.data.settings.Settings
 import ru.velopodmoskovye.data.settings.SettingsRepository
@@ -47,7 +50,13 @@ import javax.inject.Inject
 class SettingsViewModel @Inject constructor(
     private val repo: SettingsRepository,
     private val progress: ProgressRepository,
+    private val offline: OfflineMaps,
 ) : ViewModel() {
+    val offlineStates: StateFlow<Map<String, OfflineState>> = offline.states
+
+    fun downloadOblast() = offline.downloadOblast()
+    fun deleteOblast() = offline.delete(OfflineMaps.OBLAST_KEY)
+
     val settings: StateFlow<Settings?> = repo.settings.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
     fun setKmPerDay(v: Int) = viewModelScope.launch { repo.setKmPerDay(v) }
@@ -88,11 +97,13 @@ fun SettingsScreen(vm: SettingsViewModel = hiltViewModel()) {
         }
 
         SectionTitle("Офлайн-карты")
+        val offline by vm.offlineStates.collectAsStateWithLifecycle()
         Text(
-            "Скачивание карты области для работы без сети запланировано на следующий этап. " +
-                "Сейчас карта грузится из сети (OpenFreeMap), а просмотренные участки кешируются.",
+            "Обзорная карта всей области (до 10-го масштаба) — для спирали и перегонов. " +
+                "Подробную карту конкретного маршрута скачивайте на экране места.",
             style = MaterialTheme.typography.bodySmall,
         )
+        OfflineControl(offline[OfflineMaps.OBLAST_KEY] ?: OfflineState.None, onDownload = vm::downloadOblast, onDelete = vm::deleteOblast)
 
         SectionTitle("Прогресс")
         OutlinedButton(onClick = { confirmReset = true }) { Text("Сбросить все отметки и звания") }
@@ -112,6 +123,28 @@ fun SettingsScreen(vm: SettingsViewModel = hiltViewModel()) {
             confirmButton = { TextButton(onClick = { vm.reset(); confirmReset = false }) { Text("Сбросить") } },
             dismissButton = { TextButton(onClick = { confirmReset = false }) { Text("Отмена") } },
         )
+    }
+}
+
+@Composable
+fun OfflineControl(state: OfflineState, onDownload: () -> Unit, onDelete: () -> Unit) {
+    when (state) {
+        OfflineState.None -> OutlinedButton(onClick = onDownload) { Text("Скачать") }
+        is OfflineState.Downloading -> Column(Modifier.fillMaxWidth().padding(vertical = 6.dp)) {
+            Text(
+                if (state.total > 0) "Скачивается: ${state.done} из ${state.total} файлов" else "Готовим загрузку…",
+                style = MaterialTheme.typography.bodySmall,
+            )
+            LinearProgressIndicator(progress = { state.fraction }, modifier = Modifier.fillMaxWidth())
+        }
+        OfflineState.Ready -> Row(verticalAlignment = Alignment.CenterVertically) {
+            Text("Скачано — работает без сети", Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
+            TextButton(onClick = onDelete) { Text("Удалить") }
+        }
+        is OfflineState.Failed -> Column {
+            Text("Не удалось скачать: ${state.message}", color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall)
+            OutlinedButton(onClick = onDownload) { Text("Повторить") }
+        }
     }
 }
 

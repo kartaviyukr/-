@@ -35,6 +35,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -68,6 +69,11 @@ fun ActiveRouteScreen(
     val context = LocalContext.current
     val tts = rememberTts()
     val dest = state.destination
+
+    // Маршрут активен, а приложение перезапускали — возобновляем слежение, пока экран на виду.
+    LaunchedEffect(state.isActive) {
+        if (state.isActive && vm.hasLocationPermission()) RouteTrackingService.start(context)
+    }
 
     Scaffold(
         topBar = {

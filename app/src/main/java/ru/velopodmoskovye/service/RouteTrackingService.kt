@@ -53,15 +53,22 @@ class RouteTrackingService : LifecycleService() {
         }
         ensureChannel(this)
         val notification = buildNotification(getString(R.string.tracking_title), getString(R.string.tracking_waiting))
-        ServiceCompat.startForeground(
-            this, NOTIFICATION_ID, notification,
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION else 0,
-        )
+        try {
+            ServiceCompat.startForeground(
+                this, NOTIFICATION_ID, notification,
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) ServiceInfo.FOREGROUND_SERVICE_TYPE_LOCATION else 0,
+            )
+        } catch (e: Exception) {
+            // Android запрещает запуск слежения из фона — экран маршрута перезапустит его, когда приложение откроют.
+            stopSelf()
+            return START_NOT_STICKY
+        }
         // Новый старт (в том числе другого места) перезапускает слежение с актуальным маршрутом.
         job?.cancel()
         previous = null
         job = lifecycleScope.launch { track() }
-        return START_STICKY
+        // Не перезапускаемся сами из фона: Android 14 это запрещает для слежения за геолокацией.
+        return START_NOT_STICKY
     }
 
     private suspend fun track() {

@@ -65,6 +65,7 @@ import ru.velopodmoskovye.ui.common.openInMaps
 import ru.velopodmoskovye.ui.common.openUrl
 import ru.velopodmoskovye.ui.map.MapData
 import ru.velopodmoskovye.ui.map.MapLibreView
+import ru.velopodmoskovye.ui.settings.OfflineControl
 import ru.velopodmoskovye.ui.theme.ProgressGreen
 import ru.velopodmoskovye.ui.theme.StarGold
 import java.time.LocalDate
@@ -163,6 +164,11 @@ fun PlaceScreen(
                 InfoLine("Покрытие", dest.route.surfaceNotes)
                 InfoLine("Сезон", dest.route.seasonNotes)
                 InfoLine("Безопасность", dest.route.safetyNotes)
+            }
+            item {
+                val offline by vm.offlineState.collectAsStateWithLifecycle()
+                Text("Карта района без сети", style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(top = 8.dp))
+                OfflineControl(offline, onDownload = vm::downloadArea, onDelete = vm::deleteArea)
             }
             item { TimingCard(state, onDate = vm::setDate, onTime = vm::setStart) }
             state.suggestion?.let { s ->
