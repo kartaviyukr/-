@@ -108,6 +108,9 @@ def main():
             "destinationId": ready.get(name),
             "start": start,
             "insideMkad": inside_mkad,
+            # Точные значения — для сортировки (в JSON идут округлённые).
+            "_d": d,
+            "_az": 0.0 if start else bearing(KREMLIN, (lat, lon)),
         })
     # Порядок спирали: старт, затем кольца изнутри наружу, внутри кольца — по часовой стрелке.
     ordered = [p for p in places if p["start"]]
@@ -118,12 +121,13 @@ def main():
         if not inside:
             continue
         if from_az is None:
-            from_az = min(inside, key=lambda p: p["distanceFromKremlinKm"])["azimuthDeg"]
-        inside.sort(key=lambda p: ((p["azimuthDeg"] - from_az) % 360, p["distanceFromKremlinKm"], p["num"]))
+            from_az = min(inside, key=lambda p: p["_d"])["_az"]
+        inside.sort(key=lambda p: ((p["_az"] - from_az) % 360, p["_d"], p["num"]))
         ordered += inside
-        from_az = inside[-1]["azimuthDeg"]
+        from_az = inside[-1]["_az"]
     for i, p in enumerate(ordered):
         p["num"] = i + 1
+        del p["_d"], p["_az"]
     ids = [p["id"] for p in ordered]
     assert len(ids) == len(set(ids)), "дубли id"
     assert ordered and ordered[0]["start"], "нет старта " + START

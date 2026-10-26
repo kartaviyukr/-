@@ -1372,26 +1372,8 @@
    "insideMkad": false
   },
   {
-   "id": "shcherbinka",
-   "num": 53,
-   "name": "Щербинка",
-   "kindNote": "г.",
-   "regionId": "moskva-nao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.5,
-    "lon": 37.56
-   },
-   "distanceFromKremlinKm": 28.3,
-   "azimuthDeg": 187.4,
-   "ring": 2,
-   "destinationId": null,
-   "start": false,
-   "insideMkad": false
-  },
-  {
    "id": "podolsk",
-   "num": 54,
+   "num": 53,
    "name": "Подольск",
    "kindNote": "г.",
    "regionId": "podolsk",
@@ -1401,6 +1383,24 @@
     "lon": 37.545
    },
    "distanceFromKremlinKm": 36.0,
+   "azimuthDeg": 187.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "shcherbinka",
+   "num": 54,
+   "name": "Щербинка",
+   "kindNote": "г.",
+   "regionId": "moskva-nao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.5,
+    "lon": 37.56
+   },
+   "distanceFromKremlinKm": 28.3,
    "azimuthDeg": 187.4,
    "ring": 2,
    "destinationId": null,
@@ -1732,26 +1732,8 @@
    "insideMkad": false
   },
   {
-   "id": "kurkino",
-   "num": 73,
-   "name": "Куркино",
-   "kindNote": "бывш. д.",
-   "regionId": "moskva-szao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.89,
-    "lon": 37.39
-   },
-   "distanceFromKremlinKm": 20.9,
-   "azimuthDeg": 317.2,
-   "ring": 2,
-   "destinationId": null,
-   "start": false,
-   "insideMkad": false
-  },
-  {
    "id": "serednikovo",
-   "num": 74,
+   "num": 73,
    "name": "Середниково",
    "kindNote": "усадьба",
    "regionId": "khimki",
@@ -1761,6 +1743,24 @@
     "lon": 37.24
    },
    "distanceFromKremlinKm": 34.6,
+   "azimuthDeg": 317.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kurkino",
+   "num": 74,
+   "name": "Куркино",
+   "kindNote": "бывш. д.",
+   "regionId": "moskva-szao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.89,
+    "lon": 37.39
+   },
+   "distanceFromKremlinKm": 20.9,
    "azimuthDeg": 317.2,
    "ring": 2,
    "destinationId": null,
