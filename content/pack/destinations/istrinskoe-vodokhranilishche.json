@@ -1,0 +1,305 @@
+{
+ "id": "istrinskoe-vodokhranilishche",
+ "name": "Истринское водохранилище",
+ "settlementType": "природа",
+ "mustHave": 1,
+ "regionId": "istra",
+ "distanceFromKremlinKm": 58.1,
+ "coords": {
+  "lat": 56.03,
+  "lon": 36.83
+ },
+ "intro": [
+  "Истринское водохранилище — второе по размеру в Московской области: площадь 33,6 кв. км, береговая линия 94 км, глубина до 20 метров, средняя — около пяти.",
+  "Оно лежит на северо-западе области, примерно в 40 км по прямой от МКАД. Берега находятся в зоне санитарной охраны источников питьевого водоснабжения Москвы — поэтому суды признавали незаконным строительство у воды.",
+  "Год создания водохранилища мы в найденных источниках не нашли и не приводим.",
+  "Маршрут: станция Новоиерусалимская, дорога на север и берег водохранилища."
+ ],
+ "startPoint": {
+  "name": "Станция «Новоиерусалимская»",
+  "coords": {
+   "lat": 55.914,
+   "lon": 36.835
+  },
+  "transport": "Электрички Рижского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Новоиерусалимская»",
+  "coords": {
+   "lat": 55.9142,
+   "lon": 36.8355
+  },
+  "transport": "Электрички Рижского направления"
+ },
+ "route": {
+  "distanceKm": 30.0,
+  "durationH": 4.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "istrinskoe-vodokhranilishche-doroga",
+   "name": "Дорога на север",
+   "coords": {
+    "lat": 55.97,
+    "lon": 36.85
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "От Истры едем на север вдоль реки Истры к водохранилищу. Дорога идёт через лес и деревни.",
+    "Водохранилище — в 40 км по прямой от МКАД; это одно из главных мест отдыха на воде в Подмосковье.",
+    "Впереди — берег. Следующая точка маршрута — «Берег водохранилища». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Водохранилище находится в 40 км по прямой от МКАД.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": true
+    },
+    {
+     "text": "Это одно из мест отдыха на воде вокруг Москвы.",
+     "sourceUrl": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/10_%D0%BC%D0%B5%D1%81%D1%82_%D0%B4%D0%BB%D1%8F_%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0_%D0%BD%D0%B0_%D0%B2%D0%BE%D0%B4%D0%B5_%D0%B2%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Маршрут вдоль реки не проверен.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": false
+    },
+    {
+     "text": "Водохранилище — на северо-западе области.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "istrinskoe-vodokhranilishche-bereg",
+   "name": "Берег водохранилища",
+   "coords": {
+    "lat": 56.03,
+    "lon": 36.83
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Истринское водохранилище — второе по размеру в области: 33,6 кв. км площади, 94 км берегов, глубина до 20 метров.",
+    "Берега находятся в зоне санитарной охраны питьевого водоснабжения Москвы, поэтому застройка здесь ограничена; суд признавал незаконным строительство на берегу.",
+    "Купаться — только в разрешённых местах; не мусорим. Следующая точка маршрута — «Залив и обратный путь»."
+   ],
+   "facts": [
+    {
+     "text": "Площадь — 33,6 кв. км, береговая линия — 94 км.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": true
+    },
+    {
+     "text": "Максимальная глубина — 20 м, средняя — 5 м.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": true
+    },
+    {
+     "text": "Водохранилище — второе по размеру в области.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": true
+    },
+    {
+     "text": "Берега в зоне санитарной охраны водоснабжения Москвы.",
+     "sourceUrl": "https://realty.rbc.ru/news/577d28cb9a7947a78ce934fa",
+     "verified": true
+    },
+    {
+     "text": "Суд признавал незаконным строительство на берегу.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/sud-priznal-nezakonnym-stroitelstvo-na-beregu-istrinskogo-vodohranilischa-xl/",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "warnings": [
+    "Купание — только в разрешённых местах."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "istrinskoe-vodokhranilishche-zaliv",
+   "name": "Залив и обратный путь",
+   "coords": {
+    "lat": 56.02,
+    "lon": 36.84
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Вдоль берега много заливов. Здесь хорошо сделать привал и посмотреть на воду.",
+    "Год создания водохранилища мы в найденных источниках не нашли — честный пробел в маршруте.",
+    "Обратно к Истре едем той же дорогой; путь длинный — рассчитайте силы. Финиш — Станция «Новоиерусалимская»: Электрички Рижского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Год создания не найден.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": false
+    },
+    {
+     "text": "Описание заливов — оценка составителя.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": false
+    },
+    {
+     "text": "Водохранилище — место отдыха.",
+     "sourceUrl": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/10_%D0%BC%D0%B5%D1%81%D1%82_%D0%B4%D0%BB%D1%8F_%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0_%D0%BD%D0%B0_%D0%B2%D0%BE%D0%B4%D0%B5_%D0%B2%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Пикник у воды",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у водохранилища нет. Тематическая замена — пикник на берегу. Это выбор составителя маршрута.",
+  "story": [
+   "Истринское водохранилище — главное место для отдыха у воды на северо-западе.",
+   "Возьмите еду и воды с запасом из Истры. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Истры",
+    "address": "г. Истра",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "istrinskoe-vodokhranilishche-title",
+  "name": "Капитан Истры",
+  "legend": "Истринское водохранилище — второе по размеру в области. Кто доехал до него — капитан.",
+  "ritual": "Сфотографировать горизонт над водой.",
+  "pairVariant": "Капитаны Истры"
+ },
+ "sources": [
+  {
+   "title": "Отдых на водохранилищах — АиФ",
+   "url": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda"
+  },
+  {
+   "title": "Места для отдыха на воде — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/10_%D0%BC%D0%B5%D1%81%D1%82_%D0%B4%D0%BB%D1%8F_%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0_%D0%BD%D0%B0_%D0%B2%D0%BE%D0%B4%D0%B5_%D0%B2%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     36.824373,
+     56.03
+    ],
+    [
+     36.82939,
+     55.914
+    ],
+    [
+     36.830142,
+     55.912428
+    ],
+    [
+     36.832195,
+     55.911277
+    ],
+    [
+     36.835,
+     55.910856
+    ],
+    [
+     36.837805,
+     55.911277
+    ],
+    [
+     36.838305,
+     55.911477
+    ],
+    [
+     36.840358,
+     55.912628
+    ],
+    [
+     36.84111,
+     55.9142
+    ],
+    [
+     36.855618,
+     55.97
+    ],
+    [
+     36.845625,
+     56.02
+    ],
+    [
+     36.844872,
+     56.021572
+    ],
+    [
+     36.834873,
+     56.031572
+    ],
+    [
+     36.832813,
+     56.032723
+    ],
+    [
+     36.83,
+     56.033144
+    ],
+    [
+     36.827187,
+     56.032723
+    ],
+    [
+     36.825127,
+     56.031572
+    ],
+    [
+     36.824373,
+     56.03
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

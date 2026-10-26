@@ -1,0 +1,300 @@
+{
+ "id": "zakharovo",
+ "name": "Захарово",
+ "settlementType": "усадьба",
+ "mustHave": 2,
+ "regionId": "odintsovskiy",
+ "distanceFromKremlinKm": 42.3,
+ "coords": {
+  "lat": 55.645,
+  "lon": 36.97
+ },
+ "intro": [
+  "Захарово — имение бабушки Пушкина, Марии Алексеевны Ганнибал. Она купила его в 1804 году, и маленький Саша проводил здесь каждое лето — до отъезда в Царскосельский лицей.",
+  "Подлинный дом не сохранился. В 1999 году, к 200-летию поэта, его воссоздали по изображениям и описаниям. Сегодня здесь проходят ежегодные Пушкинские праздники поэзии.",
+  "Захарово вместе с Большими Вязёмами входит в музей-заповедник Пушкина. В 2020 году объявили о создании Пушкинской тропы, которая начинается отсюда.",
+  "Маршрут: станция Голицыно, Вязёмы по пути, Захарово и пруд."
+ ],
+ "startPoint": {
+  "name": "Станция «Голицыно»",
+  "coords": {
+   "lat": 55.615,
+   "lon": 36.985
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Голицыно»",
+  "coords": {
+   "lat": 55.6152,
+   "lon": 36.9855
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "route": {
+  "distanceKm": 10.0,
+  "durationH": 2.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "zakharovo-dom",
+   "name": "Дом Марии Ганнибал",
+   "coords": {
+    "lat": 55.645,
+    "lon": 36.97
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Бабушка поэта Мария Алексеевна Ганнибал купила Захарово в 1804 году. Мать охотно отправляла сюда маленького Сашу и его сестру, и он проводил здесь каждое лето, пока не уехал в лицей.",
+    "Подлинный дом не сохранился. В 1999 году, к 200-летию Пушкина, его воссоздали по сохранившимся изображениям и описаниям.",
+    "Сегодня здесь проходят ежегодные Пушкинские праздники поэзии."
+   ],
+   "facts": [
+    {
+     "text": "Мария Ганнибал купила Захарово в 1804 году.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "Пушкин проводил здесь каждое лето до отъезда в лицей.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "Оригинальный дом не сохранился.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "Дом воссоздан в 1999 году к 200-летию Пушкина.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "В Захарове проходят Пушкинские праздники поэзии.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "zakharovo-prud",
+   "name": "Пруд и детство поэта",
+   "coords": {
+    "lat": 55.6445,
+    "lon": 36.971
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Захарово — место, где прошло лучшее, по общему мнению биографов, время детства Пушкина. «Рамблер» рассказывал о «поэте с кудрявой головой» и его детстве.",
+    "Экскурсии обычно объединяют Захарово с Вязёмами: дворец Голицыных Пушкин описал в «Евгении Онегине» — так утверждает экскурсионный источник.",
+    "Обходим пруд и выезжаем на Пушкинскую тропу. Следующая точка маршрута — «Пушкинская тропа»."
+   ],
+   "facts": [
+    {
+     "text": "Детство Пушкина связано с Захаровом.",
+     "sourceUrl": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/",
+     "verified": true
+    },
+    {
+     "text": "Связь дворца Голицыных с «Онегиным» — по экскурсионному источнику.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": false
+    },
+    {
+     "text": "Экскурсии объединяют Захарово и Вязёмы.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": true
+    },
+    {
+     "text": "«Вечерняя Москва» писала о малоизвестных фактах жизни Пушкина.",
+     "sourceUrl": "https://vm.ru/society/1057553-vstrecha-so-smertyu-i-uchitel-gannibal-pyat-faktov-o-zhizni-pushkina-kotorye-ne-rasskazhut-v-shkole/amp",
+     "verified": true
+    },
+    {
+     "text": "Координаты пруда приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "zakharovo-tropa",
+   "name": "Пушкинская тропа",
+   "coords": {
+    "lat": 55.64,
+    "lon": 36.98
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 2020 году объявили о создании Пушкинской тропы, которая, по описаниям, начинается от Захарова.",
+    "Сноб включает пушкинские усадьбы в идеи для летнего отдыха в Подмосковье. Маршрут тропы на месте мы не проверяли.",
+    "По тропе и дорогам возвращаемся через Вязёмы к станции Голицыно. Финиш — Станция «Голицыно»: Электрички Белорусского направления."
+   ],
+   "facts": [
+    {
+     "text": "О создании Пушкинской тропы объявили в 2020 году.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": true
+    },
+    {
+     "text": "Тропа начинается от Захарова — по описаниям.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": false
+    },
+    {
+     "text": "Сноб включает пушкинские места в идеи летнего отдыха.",
+     "sourceUrl": "https://snob.ru/travel/goroda-usadby-zapovedniki-i-festivali-idei-dlya-letnego-otdyha-v-podmoskove/",
+     "verified": true
+    },
+    {
+     "text": "Маршрут тропы не проверен.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": false
+    },
+    {
+     "text": "Координаты тропы приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Бабушкины пирожки",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Захарова нет. Тематическая замена — пирожки, как у бабушки, в честь Марии Ганнибал. Это выбор составителя маршрута.",
+  "story": [
+   "В Захарове Пушкин гостил у бабушки — а где бабушка, там пирожки.",
+   "Возьмите выпечку из Голицына. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе у станции Голицыно",
+    "address": "Одинцовский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "zakharovo-title",
+  "name": "Внук Ганнибалов",
+  "legend": "В Захарове маленький Пушкин проводил лето у бабушки. Кто доехал сюда — внук Ганнибалов.",
+  "ritual": "У дома прочитать первую строчку любого стихотворения Пушкина.",
+  "pairVariant": "Внуки Ганнибалов"
+ },
+ "sources": [
+  {
+   "title": "Детство гения: Захарово — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina"
+  },
+  {
+   "title": "Детство Пушкина — Рамблер",
+   "url": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     36.964429,
+     55.645
+    ],
+    [
+     36.965175,
+     55.643428
+    ],
+    [
+     36.980179,
+     55.613428
+    ],
+    [
+     36.982216,
+     55.612277
+    ],
+    [
+     36.985,
+     55.611856
+    ],
+    [
+     36.987784,
+     55.612277
+    ],
+    [
+     36.988284,
+     55.612477
+    ],
+    [
+     36.990321,
+     55.613628
+    ],
+    [
+     36.991067,
+     55.6152
+    ],
+    [
+     36.985571,
+     55.64
+    ],
+    [
+     36.984824,
+     55.641572
+    ],
+    [
+     36.982785,
+     55.642723
+    ],
+    [
+     36.972786,
+     55.647723
+    ],
+    [
+     36.97,
+     55.648144
+    ],
+    [
+     36.967214,
+     55.647723
+    ],
+    [
+     36.965175,
+     55.646572
+    ],
+    [
+     36.964429,
+     55.645
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -2249,7 +2249,7 @@
    "distanceFromKremlinKm": 54.4,
    "azimuthDeg": 247.2,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "park-patriot",
    "start": false,
    "insideMkad": false
   },
@@ -2267,7 +2267,7 @@
    "distanceFromKremlinKm": 42.3,
    "azimuthDeg": 249.3,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "golitsyno",
    "start": false,
    "insideMkad": false
   },
@@ -2285,7 +2285,7 @@
    "distanceFromKremlinKm": 41.2,
    "azimuthDeg": 251.8,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "bolshie-vyazemy",
    "start": false,
    "insideMkad": false
   },
@@ -2303,7 +2303,7 @@
    "distanceFromKremlinKm": 42.3,
    "azimuthDeg": 253.9,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "zakharovo",
    "start": false,
    "insideMkad": false
   },
@@ -2321,7 +2321,7 @@
    "distanceFromKremlinKm": 47.8,
    "azimuthDeg": 267.4,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "zvenigorod",
    "start": false,
    "insideMkad": false
   },
@@ -2339,7 +2339,7 @@
    "distanceFromKremlinKm": 55.6,
    "azimuthDeg": 267.8,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "lutsino",
    "start": false,
    "insideMkad": false
   },
@@ -2357,7 +2357,7 @@
    "distanceFromKremlinKm": 50.7,
    "azimuthDeg": 291.3,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "istra-novyy-ierusalim",
    "start": false,
    "insideMkad": false
   },
@@ -2375,7 +2375,7 @@
    "distanceFromKremlinKm": 58.1,
    "azimuthDeg": 302.5,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "istrinskoe-vodokhranilishche",
    "start": false,
    "insideMkad": false
   },
@@ -2393,7 +2393,7 @@
    "distanceFromKremlinKm": 40.2,
    "azimuthDeg": 313.6,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "andreevka",
    "start": false,
    "insideMkad": false
   },

@@ -1,0 +1,293 @@
+{
+ "id": "andreevka",
+ "name": "Андреевка",
+ "settlementType": "рабочий посёлок",
+ "mustHave": 1,
+ "regionId": "solnechnogorsk",
+ "distanceFromKremlinKm": 40.2,
+ "coords": {
+  "lat": 56.0,
+  "lon": 37.15
+ },
+ "intro": [
+  "Андреевка — посёлок Солнечногорского округа рядом с Зеленоградом. Сегодня здесь строятся новые жилые кварталы.",
+  "Подробную историю посёлка мы в открытых источниках не нашли — честно оставляем этот раздел пустым, чтобы ничего не придумывать.",
+  "Маршрут короткий: от Зеленограда до Андреевки и обратно, через лес."
+ ],
+ "startPoint": {
+  "name": "Станция «Крюково»",
+  "coords": {
+   "lat": 55.98,
+   "lon": 37.172
+  },
+  "transport": "Электрички Ленинградского направления / МЦД-3"
+ },
+ "endPoint": {
+  "name": "Станция «Крюково»",
+  "coords": {
+   "lat": 55.9802,
+   "lon": 37.1725
+  },
+  "transport": "Электрички Ленинградского направления / МЦД-3"
+ },
+ "route": {
+  "distanceKm": 12.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "andreevka-les",
+   "name": "Лес между Зеленоградом и Андреевкой",
+   "coords": {
+    "lat": 55.99,
+    "lon": 37.16
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "От станции Крюково едем на запад, к Андреевке. Дорога идёт через лес и новые районы Зеленограда, мимо жилых кварталов.",
+    "Тропы мы на месте не проверяли — держитесь асфальта и накатанных дорожек.",
+    "Впереди — посёлок. Следующая точка маршрута — «Посёлок Андреевка». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Андреевка — рядом с Зеленоградом.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": true
+    },
+    {
+     "text": "Тропы не проверены.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    },
+    {
+     "text": "Андреевка — в Солнечногорском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "andreevka-posyolok",
+   "name": "Посёлок Андреевка",
+   "coords": {
+    "lat": 56.0,
+    "lon": 37.15
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Андреевка — рабочий посёлок Солнечногорского округа; статус его закреплён областным законом 2013 года.",
+    "Сегодня здесь строятся жилые комплексы — например, «Андреевский квартал».",
+    "Неспешно едем по улицам посёлка. Следующая точка маршрута — «Обратный путь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Статус Андреевки закреплён областным законом.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": true
+    },
+    {
+     "text": "В Андреевке строится ЖК «Андреевский квартал».",
+     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_andreevskiy_kvartal",
+     "verified": true
+    },
+    {
+     "text": "История посёлка не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    },
+    {
+     "text": "Координаты посёлка приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    },
+    {
+     "text": "Андреевка — рабочий посёлок.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "andreevka-obratno",
+   "name": "Обратный путь",
+   "coords": {
+    "lat": 55.995,
+    "lon": 37.155
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Возвращаемся в Зеленоград другой дорогой, если она есть, или той же.",
+    "Андреевка — честный пример места на спирали, о котором мало пишут. Если вы знаете его историю — расскажите о ней местным краеведам.",
+    "Финиш — станция Крюково. Финиш — Станция «Крюково»: Электрички Ленинградского направления / МЦД-3. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "История посёлка в открытых источниках не раскрыта.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    },
+    {
+     "text": "Андреевка — соседка Зеленограда.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": true
+    },
+    {
+     "text": "Маршрут обратного пути не проверен.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "verified": false
+    },
+    {
+     "text": "В посёлке строятся новые кварталы.",
+     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_andreevskiy_kvartal",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Лесной перекус",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Андреевки нет. Тематическая замена — перекус в лесу между Зеленоградом и посёлком. Это выбор составителя.",
+  "story": [
+   "Андреевка — тихий посёлок у леса рядом с Зеленоградом.",
+   "Возьмите еду из Зеленограда. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Андреевки",
+    "address": "Солнечногорский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "andreevka-title",
+  "name": "Первопроходец Андреевки",
+  "legend": "Об Андреевке мало пишут. Кто проехал её — первопроходец.",
+  "ritual": "Сфотографировать табличку с названием посёлка.",
+  "pairVariant": "Первопроходцы Андреевки"
+ },
+ "sources": [
+  {
+   "title": "Andreyevka — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.144377,
+     56.0
+    ],
+    [
+     37.145131,
+     55.998428
+    ],
+    [
+     37.155132,
+     55.988428
+    ],
+    [
+     37.167133,
+     55.978428
+    ],
+    [
+     37.16919,
+     55.977277
+    ],
+    [
+     37.172,
+     55.976856
+    ],
+    [
+     37.17481,
+     55.977277
+    ],
+    [
+     37.17531,
+     55.977477
+    ],
+    [
+     37.177367,
+     55.978628
+    ],
+    [
+     37.17812,
+     55.9802
+    ],
+    [
+     37.177367,
+     55.981772
+    ],
+    [
+     37.154869,
+     56.001572
+    ],
+    [
+     37.152811,
+     56.002723
+    ],
+    [
+     37.15,
+     56.003144
+    ],
+    [
+     37.147189,
+     56.002723
+    ],
+    [
+     37.145131,
+     56.001572
+    ],
+    [
+     37.144377,
+     56.0
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
