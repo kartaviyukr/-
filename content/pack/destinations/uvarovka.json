@@ -1,0 +1,292 @@
+{
+ "id": "uvarovka",
+ "name": "Уваровка",
+ "settlementType": "посёлок",
+ "mustHave": 1,
+ "regionId": "mozhayskiy",
+ "distanceFromKremlinKm": 128.4,
+ "coords": {
+  "lat": 55.53,
+  "lon": 35.61
+ },
+ "intro": [
+  "Уваровка — самый западный посёлок Можайского округа, выросший у железной дороги. В 1868–1869 годах акционерное общество Алексея Уварова построило линию Москва — Смоленск, и тогда же возникла станция Уваровская.",
+  "Посёлок носит имя графов Уваровых, инициаторов дороги; в 2026 году Уваровка отметила 157-летие. В Можайске открывалась выставка «Золотой век Уваровых».",
+  "Маршрут: станция, посёлок и окрестности у границы области."
+ ],
+ "startPoint": {
+  "name": "Станция «Уваровка»",
+  "coords": {
+   "lat": 55.53,
+   "lon": 35.61
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Уваровка»",
+  "coords": {
+   "lat": 55.5302,
+   "lon": 35.6105
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "uvarovka-stantsiya",
+   "name": "Станция Уваровская",
+   "coords": {
+    "lat": 55.53,
+    "lon": 35.61
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1868–1869 годах акционерное общество Алексея Уварова построило железную дорогу Москва — Смоленск. Тогда же появилась станция Уваровская.",
+    "Дорога сыграла главную роль в становлении посёлка, который носит имя Уваровых.",
+    "Едем по посёлку. Следующая точка маршрута — «Посёлок Уваровых». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В 1868–1869 годах общество Уварова построило линию Москва — Смоленск.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Тогда же возникла станция Уваровская.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Инициаторами дороги были графы Уваровы.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": true
+    },
+    {
+     "text": "Посёлок отметил 157-летие.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "uvarovka-posyolok",
+   "name": "Посёлок Уваровых",
+   "coords": {
+    "lat": 55.532,
+    "lon": 35.615
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Уваровка — один из самых западных посёлков Московской области, недалеко от границы со Смоленщиной.",
+    "В Можайске открывалась выставка «Золотой век Уваровых» — о роде, давшем имя посёлку.",
+    "Делаем круг по посёлку. Следующая точка маршрута — «Обратно к станции». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Можайске открывалась выставка «Золотой век Уваровых».",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-mozhajske-otkrylas-vystavka-pod-nazvaniem-zolotoj-vek-uvarovyh/",
+     "verified": true
+    },
+    {
+     "text": "Уваровка — у западной границы области — по наблюдению составителя.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": false
+    },
+    {
+     "text": "Уваровка — в Можайском округе.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": true
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "uvarovka-obratno",
+   "name": "Обратно к станции",
+   "coords": {
+    "lat": 55.531,
+    "lon": 35.612
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Уваровка — тихий посёлок, где главная история — железная дорога.",
+    "Если устали после спирали — отсюда электричка идёт прямо в Москву.",
+    "Финиш — станция Уваровка. Финиш — Станция «Уваровка»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок связан с железной дорогой.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Электрички до Москвы — по наблюдению составителя.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": false
+    },
+    {
+     "text": "Флаг поселения описан в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус путейца",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Уваровки нет. Тематическая замена — перекус у станции, как у строителей дороги XIX века. Это выбор составителя.",
+  "story": [
+   "Уваровка выросла у железной дороги. Перекусите у станции — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины у станции Уваровка",
+    "address": "Можайский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "uvarovka-title",
+  "name": "Западный рубеж",
+  "legend": "Уваровка — западный край спирали. Кто доехал сюда — дошёл до рубежа.",
+  "ritual": "Сфотографировать табличку станции.",
+  "pairVariant": "Западные рубежники"
+ },
+ "sources": [
+  {
+   "title": "Флаг Уваровки — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0"
+  },
+  {
+   "title": "Уваровке 157 лет — РИАМО",
+   "url": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     35.604445,
+     55.53
+    ],
+    [
+     35.605189,
+     55.528428
+    ],
+    [
+     35.607222,
+     55.527277
+    ],
+    [
+     35.61,
+     55.526856
+    ],
+    [
+     35.612778,
+     55.527277
+    ],
+    [
+     35.617778,
+     55.529277
+    ],
+    [
+     35.619811,
+     55.530428
+    ],
+    [
+     35.620555,
+     55.532
+    ],
+    [
+     35.619811,
+     55.533572
+    ],
+    [
+     35.617778,
+     55.534723
+    ],
+    [
+     35.615,
+     55.535144
+    ],
+    [
+     35.612222,
+     55.534723
+    ],
+    [
+     35.609222,
+     55.533723
+    ],
+    [
+     35.607222,
+     55.532723
+    ],
+    [
+     35.605189,
+     55.531572
+    ],
+    [
+     35.604445,
+     55.53
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

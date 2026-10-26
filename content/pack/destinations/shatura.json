@@ -1,0 +1,300 @@
+{
+ "id": "shatura",
+ "name": "Шатура",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "shatura",
+ "distanceFromKremlinKm": 122.3,
+ "coords": {
+  "lat": 55.578,
+  "lon": 39.544
+ },
+ "intro": [
+  "Шатура — город первой советской ГРЭС на торфе. Место для станции, богатое торфом, выбрал в 1914 году Роберт Классон.",
+  "Опытную «Малую Шатуру» начали строить в 1919 году и пустили 25 июля 1920 года. Основная станция — одна из первых по плану ГОЭЛРО; первую очередь ввели в 1925 году (источники называют 23 сентября и 6 декабря). Станции присвоили имя Ленина.",
+  "Когда торф истощился, станцию перевели на газ; сегодня её мощность — 1500 МВт.",
+  "Маршрут: станция, ГРЭС снаружи и Шатурское озеро."
+ ],
+ "startPoint": {
+  "name": "Станция «Шатура»",
+  "coords": {
+   "lat": 55.578,
+   "lon": 39.544
+  },
+  "transport": "Электрички Казанского направления (на Черусти)"
+ },
+ "endPoint": {
+  "name": "Станция «Шатура»",
+  "coords": {
+   "lat": 55.5782,
+   "lon": 39.5445
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 6.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "shatura-gres",
+   "name": "Шатурская ГРЭС",
+   "coords": {
+    "lat": 55.58,
+    "lon": 39.55
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Место для станции выбрал в 1914 году Роберт Классон — из-за богатых запасов торфа. Опытную «Малую Шатуру» строили с 1919 года и пустили 25 июля 1920 года.",
+    "Основная станция — одна из первых по плану ГОЭЛРО. Первую турбину 16 МВт ввели в 1925 году; источники называют 23 сентября и 6 декабря. Станции присвоили имя Ленина.",
+    "Смотрим снаружи. Следующая точка маршрута — «Из торфа — в газ»."
+   ],
+   "facts": [
+    {
+     "text": "Место выбрал Классон в 1914 году.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": true
+    },
+    {
+     "text": "«Малая Шатура» пущена 25 июля 1920 года.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": true
+    },
+    {
+     "text": "Шатурская ГРЭС — одна из первых по ГОЭЛРО.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": true
+    },
+    {
+     "text": "Даты пуска первой очереди в 1925 году расходятся.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Shatura_Thermal_Power_Plant",
+     "verified": false
+    },
+    {
+     "text": "Станции присвоено имя Ленина.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Промышленная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "shatura-gaz",
+   "name": "Из торфа — в газ",
+   "coords": {
+    "lat": 55.579,
+    "lon": 39.548
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Со временем запасы торфа истощились, и станцию перевели на газ. Сегодня её установленная мощность — 1500 МВт.",
+    "«Рамблер» писал о 95-летии станции к 100-летию ГОЭЛРО.",
+    "Едем к озеру. Следующая точка маршрута — «Шатурские озёра». Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Станцию перевели на газ из-за истощения торфа.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": true
+    },
+    {
+     "text": "Установленная мощность — 1500 МВт.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": true
+    },
+    {
+     "text": "Рамблер писал о юбилее станции.",
+     "sourceUrl": "https://news.rambler.ru/other/43936692-k-100-letiyu-goelro-shaturskaya-gres-95-let-v-stroyu/amp/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "shatura-ozero",
+   "name": "Шатурские озёра",
+   "coords": {
+    "lat": 55.575,
+    "lon": 39.54
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Шатура стоит среди мещёрских озёр. РИАМО писало о путешествии в Шатурский район — «первая советская ГРЭС и мистические валуны».",
+    "Купание — только в разрешённых местах, их мы не проверяли.",
+    "Возвращаемся к станции. Финиш — Станция «Шатура»: Электрички Казанского направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "РИАМО писало о путешествии в Шатурский район.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
+     "verified": true
+    },
+    {
+     "text": "Шатура стоит среди озёр — по наблюдению составителя.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
+     "verified": false
+    },
+    {
+     "text": "Купание не проверено.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
+     "verified": false
+    },
+    {
+     "text": "История Шатуры — kupibilet.ru.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/shatura/istoriia",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Обед торфяника",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Шатуры нет. Тематическая замена — сытный обед торфяника. Это выбор составителя.",
+  "story": [
+   "Шатура веками жила торфом. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно. Если найдёте настоящее местное блюдо — оно лучше нашей замены."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Шатуры",
+    "address": "г. Шатура",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "shatura-title",
+  "name": "Торфяник Шатуры",
+  "legend": "Шатура зажгла свет плана ГОЭЛРО на торфе. Кто проехал её — торфяник.",
+  "ritual": "Сфотографировать трубы ГРЭС над озером.",
+  "pairVariant": "Торфяники Шатуры"
+ },
+ "sources": [
+  {
+   "title": "Шатурская ГРЭС — БРЭ",
+   "url": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1"
+  },
+  {
+   "title": "Shatura Power Plant — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Shatura_Thermal_Power_Plant"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     39.534438,
+     55.575
+    ],
+    [
+     39.535184,
+     55.573428
+    ],
+    [
+     39.537219,
+     55.572277
+    ],
+    [
+     39.54,
+     55.571856
+    ],
+    [
+     39.542781,
+     55.572277
+    ],
+    [
+     39.552781,
+     55.577277
+    ],
+    [
+     39.554817,
+     55.578428
+    ],
+    [
+     39.555562,
+     55.58
+    ],
+    [
+     39.554817,
+     55.581572
+    ],
+    [
+     39.552781,
+     55.582723
+    ],
+    [
+     39.55,
+     55.583144
+    ],
+    [
+     39.547219,
+     55.582723
+    ],
+    [
+     39.541719,
+     55.580923
+    ],
+    [
+     39.541219,
+     55.580723
+    ],
+    [
+     39.539183,
+     55.579572
+    ],
+    [
+     39.535184,
+     55.576572
+    ],
+    [
+     39.534438,
+     55.575
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

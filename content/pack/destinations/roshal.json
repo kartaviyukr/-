@@ -1,0 +1,293 @@
+{
+ "id": "roshal",
+ "name": "Рошаль",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "shatura",
+ "distanceFromKremlinKm": 141.1,
+ "coords": {
+  "lat": 55.663,
+  "lon": 39.865
+ },
+ "intro": [
+  "Рошаль — самый восточный город Московской области. Он возник в мещёрском урочище Крестов Брод при строительстве порохового завода в 1914–1916 годах.",
+  "Производство выросло в химический комбинат, который сформировал рабочие кварталы, школы и культуру, но оставил профессиональные и экологические риски. Комбинат закрыли в 2006 году.",
+  "Главный общественный памятник — Дом культуры имени Косякова, построенный в 1916 году. Городской музей рассказывает об опасном труде, эвакуации завода и химической экологии.",
+  "Маршрут: Дом культуры, музей и бывший комбинат снаружи."
+ ],
+ "startPoint": {
+  "name": "Остановка «Рошаль»",
+  "coords": {
+   "lat": 55.663,
+   "lon": 39.865
+  },
+  "transport": "Автобусы от Шатуры — уточняйте"
+ },
+ "endPoint": {
+  "name": "Остановка «Рошаль»",
+  "coords": {
+   "lat": 55.6632,
+   "lon": 39.8655
+  },
+  "transport": "Автобусы до Шатуры"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "roshal-dk",
+   "name": "Дом культуры имени Косякова",
+   "coords": {
+    "lat": 55.664,
+    "lon": 39.866
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Дом культуры имени Косякова построен в 1916 году и остаётся главным общественным памятником Рошаля.",
+    "Город возник в урочище Крестов Брод при строительстве порохового завода в 1914–1916 годах.",
+    "Идём в музей. Следующая точка маршрута — «Городской музей». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Дом культуры построен в 1916 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "ДК — главный общественный памятник города.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Город возник при пороховом заводе 1914–1916 годов.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Рошаль — самый восточный город области.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "roshal-muzey",
+   "name": "Городской музей",
+   "coords": {
+    "lat": 55.663,
+    "lon": 39.867
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Музей рассказывает об опасном труде на заводе, об эвакуации предприятия и о химической экологии.",
+    "Комбинат сформировал рабочие кварталы, школы и культуру города.",
+    "Часы работы уточняйте. Следующая точка маршрута — «Бывший комбинат». Формат остановки — «заходим внутрь», заложите на неё около 30 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Музей рассказывает об опасном труде и эвакуации завода.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Музей рассказывает о химической экологии.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Комбинат сформировал кварталы, школы и культуру.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "roshal-kombinat",
+   "name": "Бывший комбинат",
+   "coords": {
+    "lat": 55.66,
+    "lon": 39.87
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Химический комбинат закрыли в 2006 году. Его территория — не туристический объект, и заходить туда нельзя.",
+    "Рошаль — край Мещёры; отсюда недалеко до Святого озера.",
+    "Возвращаемся к остановке. Финиш — Остановка «Рошаль»: Автобусы до Шатуры. Формат остановки — «смотреть снаружи», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Комбинат закрыт в 2006 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Территория — не туристический объект.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Рошаль — край Мещёры.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Бывшая промышленная территория: не заходить."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Мещёрский пикник",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Рошаля нет. Тематическая замена — пикник в мещёрском лесу. Это выбор составителя.",
+  "story": [
+   "Рошаль окружён мещёрскими лесами и болотами.",
+   "Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Рошаля",
+    "address": "г. Рошаль",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "roshal-title",
+  "name": "Восточный рубеж",
+  "legend": "Рошаль — самый восточный город области. Кто доехал сюда — дошёл до восточного рубежа.",
+  "ritual": "Сфотографировать Дом культуры 1916 года.",
+  "pairVariant": "Восточные рубежники"
+ },
+ "sources": [
+  {
+   "title": "Рошаль — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     39.859426,
+     55.663
+    ],
+    [
+     39.860173,
+     55.661428
+    ],
+    [
+     39.865173,
+     55.658428
+    ],
+    [
+     39.867213,
+     55.657277
+    ],
+    [
+     39.87,
+     55.656856
+    ],
+    [
+     39.872787,
+     55.657277
+    ],
+    [
+     39.874827,
+     55.658428
+    ],
+    [
+     39.875574,
+     55.66
+    ],
+    [
+     39.874827,
+     55.661572
+    ],
+    [
+     39.870827,
+     55.665572
+    ],
+    [
+     39.868787,
+     55.666723
+    ],
+    [
+     39.866,
+     55.667144
+    ],
+    [
+     39.863213,
+     55.666723
+    ],
+    [
+     39.861173,
+     55.665572
+    ],
+    [
+     39.860173,
+     55.664572
+    ],
+    [
+     39.859426,
+     55.663
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

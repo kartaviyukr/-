@@ -1,0 +1,299 @@
+{
+ "id": "zaraysk",
+ "name": "Зарайск",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "zaraysk",
+ "distanceFromKremlinKm": 136.2,
+ "coords": {
+  "lat": 54.762,
+  "lon": 38.885
+ },
+ "intro": [
+  "Зарайск — город с самым маленьким из сохранившихся русских кремлей. Каменный кремль построен в 1528–1531 годах по указанию Василия III для защиты от набегов; его площадь — 2,3 гектара.",
+  "Это единственный полностью сохранившийся кремль в Подмосковье; за всю историю обороны его ни разу не взяли.",
+  "Главная святыня — икона Николы Заразского. Историк А. Б. Мазуров предлагает датировать её список 1528–1531 годами; это список с утраченного «корсунского» оригинала XIII века.",
+  "Маршрут: кремль, Никольский собор и старый центр."
+ ],
+ "startPoint": {
+  "name": "Зарайск, автостанция",
+  "coords": {
+   "lat": 54.762,
+   "lon": 38.885
+  },
+  "transport": "Автобусы от Луховиц и Москвы — уточняйте"
+ },
+ "endPoint": {
+  "name": "Зарайск, автостанция",
+  "coords": {
+   "lat": 54.7622,
+   "lon": 38.8855
+  },
+  "transport": "Автобусы до Луховиц и Москвы"
+ },
+ "route": {
+  "distanceKm": 4.0,
+  "durationH": 2.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "zaraysk-kreml",
+   "name": "Зарайский кремль",
+   "coords": {
+    "lat": 54.76,
+    "lon": 38.885
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Каменный кремль построен в 1528–1531 годах по указанию великого князя Василия III для защиты от набегов. Его площадь — 2,3 гектара: это самый маленький из сохранившихся русских кремлей.",
+    "Зарайский кремль — единственный полностью сохранившийся кремль Подмосковья; при обороне его ни разу не взяли.",
+    "Обходим стены. Следующая точка маршрута — «Никольский собор»."
+   ],
+   "facts": [
+    {
+     "text": "Кремль построен в 1528–1531 годах.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Площадь кремля — 2,3 гектара.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Это самый маленький из сохранившихся русских кремлей.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Кремль построен по указанию Василия III.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Кремль ни разу не был взят.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "zaraysk-nikola",
+   "name": "Никольский собор",
+   "coords": {
+    "lat": 54.7605,
+    "lon": 38.8855
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Главная святыня Никольского собора с XVII по начало XX века — икона Николы Заразского.",
+    "А. Б. Мазуров предлагает датировать её список 1528–1531 годами (раньше относили к 1513-му). Это список с утраченного византийского «корсунского» оригинала XIII века.",
+    "Действующий храм. Следующая точка маршрута — «Старый Зарайск». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "Икона Николы Заразского — главная святыня собора с XVII по начало XX века.",
+     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
+     "verified": true
+    },
+    {
+     "text": "Мазуров датирует список 1528–1531 годами.",
+     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
+     "verified": true
+    },
+    {
+     "text": "Это список с утраченного «корсунского» оригинала XIII века.",
+     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
+     "verified": true
+    },
+    {
+     "text": "Прежняя датировка — 1513 год.",
+     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "zaraysk-tsentr",
+   "name": "Старый Зарайск",
+   "coords": {
+    "lat": 54.762,
+    "lon": 38.883
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "KudaGo собрал «N причин поехать в Зарайск» — кремль, старые улицы и тихий провинциальный ритм.",
+    "Зарайск — один из самых южных городов нашей спирали.",
+    "Возвращаемся к автостанции. Финиш — Зарайск, автостанция: Автобусы до Луховиц и Москвы. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "KudaGo собрал причины поехать в Зарайск.",
+     "sourceUrl": "https://kudago.com/msk/list/n-prichin-poehat-v-zarajsk/",
+     "verified": true
+    },
+    {
+     "text": "Зарайск описан в материале ЦИАН.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-dalnego-podmoskovja-zarajsk-216415/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://kudago.com/msk/list/n-prichin-poehat-v-zarajsk/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://kudago.com/msk/list/n-prichin-poehat-v-zarajsk/",
+     "verified": false
+    },
+    {
+     "text": "Зарайский кремль описан в Википедии.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Zaraysk_Kremlin",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Зарайский калач",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого фирменного блюда мы не нашли. Тематическая замена — калач к чаю у стен маленького кремля. Это выбор составителя.",
+  "story": [
+   "Зарайск — тихий старый город. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Зарайска",
+    "address": "г. Зарайск",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "zaraysk-title",
+  "name": "Страж малого кремля",
+  "legend": "Зарайский кремль ни разу не взяли. Кто доехал сюда — страж малого кремля.",
+  "ritual": "Сфотографировать кремль целиком — он помещается в кадр.",
+  "pairVariant": "Стражи малого кремля"
+ },
+ "sources": [
+  {
+   "title": "Зарайский кремль — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C"
+  },
+  {
+   "title": "Икона Николы Заразского — Мазуров",
+   "url": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.877551,
+     54.762
+    ],
+    [
+     38.878281,
+     54.760428
+    ],
+    [
+     38.880281,
+     54.758428
+    ],
+    [
+     38.882275,
+     54.757277
+    ],
+    [
+     38.885,
+     54.756856
+    ],
+    [
+     38.887725,
+     54.757277
+    ],
+    [
+     38.889719,
+     54.758428
+    ],
+    [
+     38.890219,
+     54.758928
+    ],
+    [
+     38.890949,
+     54.7605
+    ],
+    [
+     38.890949,
+     54.7622
+    ],
+    [
+     38.890219,
+     54.763772
+    ],
+    [
+     38.888225,
+     54.764923
+    ],
+    [
+     38.8855,
+     54.765344
+    ],
+    [
+     38.883,
+     54.765144
+    ],
+    [
+     38.880275,
+     54.764723
+    ],
+    [
+     38.878281,
+     54.763572
+    ],
+    [
+     38.877551,
+     54.762
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

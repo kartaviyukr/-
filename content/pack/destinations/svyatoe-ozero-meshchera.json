@@ -1,0 +1,304 @@
+{
+ "id": "svyatoe-ozero-meshchera",
+ "name": "Святое озеро (Мещера)",
+ "settlementType": "природа",
+ "mustHave": 2,
+ "regionId": "shatura",
+ "distanceFromKremlinKm": 146.6,
+ "coords": {
+  "lat": 55.65,
+  "lon": 39.95
+ },
+ "intro": [
+  "Святое озеро — одно из озёр Мещёры на крайнем востоке Московской области, недалеко от Рошаля.",
+  "Мещёра — край лесов, болот и торфяников; торф здесь веками добывали, а Шатурская ГРЭС когда-то работала именно на нём.",
+  "Подробных сведений о самом озере мы в найденных источниках не нашли и не придумываем. Это природный маршрут: лес, озеро и тишина.",
+  "Маршрут: Рошаль, лесная дорога и берег озера."
+ ],
+ "startPoint": {
+  "name": "Остановка «Рошаль»",
+  "coords": {
+   "lat": 55.663,
+   "lon": 39.865
+  },
+  "transport": "Автобусы от Шатуры — уточняйте"
+ },
+ "endPoint": {
+  "name": "Остановка «Рошаль»",
+  "coords": {
+   "lat": 55.6632,
+   "lon": 39.8655
+  },
+  "transport": "Автобусы до Шатуры"
+ },
+ "route": {
+  "distanceKm": 18.0,
+  "durationH": 3.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "svyatoe-ozero-meshchera-les",
+   "name": "Мещёрский лес",
+   "coords": {
+    "lat": 55.656,
+    "lon": 39.9
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Из Рошаля едем на восток через мещёрский лес. Дороги здесь могут быть песчаными или заболоченными.",
+    "Тропы мы на месте не проверяли — держитесь накатанных дорог.",
+    "Впереди — озеро. Следующая точка маршрута — «Святое озеро». Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Рошаль — край Мещёры.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Тропы не проверены.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Тип дорог — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "svyatoe-ozero-meshchera-ozero",
+   "name": "Святое озеро",
+   "coords": {
+    "lat": 55.65,
+    "lon": 39.95
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Святое озеро — мещёрское озеро среди лесов. Подробных сведений о нём в найденных источниках мы не нашли.",
+    "Мещёра — край торфяников: на местном торфе когда-то работала Шатурская ГРЭС.",
+    "Привал на берегу; купание — на свой риск, мы места не проверяли. Следующая точка маршрута — «Обратно к Рошалю». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "Святое озеро — в Мещёре — по составителю.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Подробные сведения об озере не найдены.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Шатурская ГРЭС работала на торфе.",
+     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "verified": true
+    },
+    {
+     "text": "Купание не проверено.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "warnings": [
+    "Болотистые места: не сходить с дорог."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "svyatoe-ozero-meshchera-obratno",
+   "name": "Обратно к Рошалю",
+   "coords": {
+    "lat": 55.658,
+    "lon": 39.91
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Возвращаемся в Рошаль той же лесной дорогой, не сворачивая на болота.",
+    "Мещёра — один из самых диких уголков Московской области; берегите природу и уносите мусор с собой.",
+    "Финиш — Рошаль. Финиш — Остановка «Рошаль»: Автобусы до Шатуры. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Рошаль — самый восточный город области.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    },
+    {
+     "text": "Дикость края — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Термос у озера",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Святого озера нет. Тематическая замена — горячий чай из термоса на мещёрском берегу. Это выбор составителя.",
+  "story": [
+   "В Мещёре магазинов почти нет. Еду и воду берите из Рошаля. Адреса, где купить, ниже — проверенные отмечены отдельно. Если найдёте настоящее местное блюдо — оно лучше нашей замены."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Рошаля",
+    "address": "г. Рошаль",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "svyatoe-ozero-meshchera-title",
+  "name": "Мещёрский следопыт",
+  "legend": "Святое озеро — глубь Мещёры. Кто доехал сюда — следопыт.",
+  "ritual": "Сфотографировать озеро в окружении леса.",
+  "pairVariant": "Мещёрские следопыты"
+ },
+ "sources": [
+  {
+   "title": "Рошаль — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/"
+  },
+  {
+   "title": "Шатурская ГРЭС — БРЭ",
+   "url": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     39.859426,
+     55.663
+    ],
+    [
+     39.860173,
+     55.661428
+    ],
+    [
+     39.862213,
+     55.660277
+    ],
+    [
+     39.897213,
+     55.653277
+    ],
+    [
+     39.9,
+     55.652856
+    ],
+    [
+     39.95,
+     55.646856
+    ],
+    [
+     39.952786,
+     55.647277
+    ],
+    [
+     39.954826,
+     55.648428
+    ],
+    [
+     39.955572,
+     55.65
+    ],
+    [
+     39.954826,
+     55.651572
+    ],
+    [
+     39.952786,
+     55.652723
+    ],
+    [
+     39.912787,
+     55.660723
+    ],
+    [
+     39.91,
+     55.661144
+    ],
+    [
+     39.8655,
+     55.666344
+    ],
+    [
+     39.862713,
+     55.665923
+    ],
+    [
+     39.862213,
+     55.665723
+    ],
+    [
+     39.860173,
+     55.664572
+    ],
+    [
+     39.859426,
+     55.663
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

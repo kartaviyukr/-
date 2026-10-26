@@ -1,0 +1,302 @@
+{
+ "id": "beloomut",
+ "name": "Белоомут",
+ "settlementType": "посёлок",
+ "mustHave": 1,
+ "regionId": "lukhovitsy",
+ "distanceFromKremlinKm": 141.0,
+ "coords": {
+  "lat": 54.94,
+  "lon": 39.33
+ },
+ "intro": [
+  "Белоомут — посёлок на Оке с рыбацкими традициями. Здесь проходит межрегиональный фестиваль «Царская уха».",
+  "До середины XIX века здесь было имение революционера-демократа Николая Огарёва, который за 15 лет до реформы 1861 года дал вольную своим крестьянам.",
+  "Подробную историю посёлка мы в найденных источниках не нашли.",
+  "Маршрут: Луховицы, дорога к Оке и Белоомут."
+ ],
+ "startPoint": {
+  "name": "Станция «Луховицы»",
+  "coords": {
+   "lat": 54.965,
+   "lon": 39.025
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Луховицы»",
+  "coords": {
+   "lat": 54.9652,
+   "lon": 39.0255
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 44.0,
+  "durationH": 4.0,
+  "difficulty": "сложный",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "beloomut-ogarev",
+   "name": "Имение Огарёва",
+   "coords": {
+    "lat": 54.94,
+    "lon": 39.33
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "До середины XIX века в Белоомуте было имение Николая Огарёва — поэта, публициста и друга Герцена.",
+    "Огарёв дал вольную своим крестьянам за 15 лет до Крестьянской реформы 1861 года.",
+    "Едем к Оке. Следующая точка маршрута — «Рыбацкий берег Оки». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "В Белоомуте было имение Николая Огарёва.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": true
+    },
+    {
+     "text": "Огарёв дал вольную крестьянам за 15 лет до реформы 1861 года.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": true
+    },
+    {
+     "text": "Огарёв — друг Герцена — общеизвестный факт, здесь не сверен.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": false
+    },
+    {
+     "text": "Местоположение имения не установлено.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "beloomut-oka",
+   "name": "Рыбацкий берег Оки",
+   "coords": {
+    "lat": 54.942,
+    "lon": 39.335
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Белоомут связан с рыбацкими традициями. Здесь проходит межрегиональный фестиваль «Царская уха».",
+    "Даты фестиваля меняются — уточняйте заранее.",
+    "Привал на берегу. Следующая точка маршрута — «Обратно к Луховицам». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "В Белоомуте проходит фестиваль «Царская уха».",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/",
+     "verified": true
+    },
+    {
+     "text": "Фестиваль межрегиональный.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/",
+     "verified": true
+    },
+    {
+     "text": "Даты фестиваля меняются.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/festival-uhi-sostoitsya-26-iyulya-v-luhovitskom-rajone-podmoskovya-xl/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/",
+     "verified": false
+    },
+    {
+     "text": "Рыбацкие традиции — по источнику.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "beloomut-obratno",
+   "name": "Обратно к Луховицам",
+   "coords": {
+    "lat": 54.95,
+    "lon": 39.2
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Возвращаемся к Луховицам через поля огуречного края.",
+    "Путь длинный — рассчитайте силы до заката.",
+    "Финиш — станция Луховицы. Финиш — Станция «Луховицы»: Электрички Казанского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Луховицы — огуречный край.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": false
+    },
+    {
+     "text": "Белоомут — в округе Луховицы.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/festival-uhi-sostoitsya-26-iyulya-v-luhovitskom-rajone-podmoskovya-xl/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Царская уха",
+  "kind": "блюдо",
+  "honestyNote": "Уха — блюдо, которому в Белоомуте посвящён межрегиональный фестиваль «Царская уха». Купить её можно во время фестиваля; в другие дни — уточняйте на месте.",
+  "story": [
+   "Белоомут — рыбацкий посёлок на Оке. Попадите на фестиваль или сварите уху сами (огонь — только где разрешено). Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Фестиваль «Царская уха»",
+    "address": "г.о. Луховицы, Белоомут",
+    "verified": false,
+    "note": "Даты меняются."
+   }
+  ]
+ },
+ "title": {
+  "id": "beloomut-title",
+  "name": "Ушник Белоомута",
+  "legend": "В Белоомуте варят «Царскую уху». Кто доехал сюда — ушник.",
+  "ritual": "Сфотографировать Оку с рыбацкого берега.",
+  "pairVariant": "Ушники Белоомута"
+ },
+ "sources": [
+  {
+   "title": "Неизвестная Россия — Настоящее время",
+   "url": "https://www.currenttime.tv/a/unknown-russia/30639188.html"
+  },
+  {
+   "title": "«Царская уха» — РИАМО",
+   "url": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     39.019523,
+     54.965
+    ],
+    [
+     39.020257,
+     54.963428
+    ],
+    [
+     39.022262,
+     54.962277
+    ],
+    [
+     39.025,
+     54.961856
+    ],
+    [
+     39.2,
+     54.946856
+    ],
+    [
+     39.33,
+     54.936856
+    ],
+    [
+     39.332737,
+     54.937277
+    ],
+    [
+     39.337737,
+     54.939277
+    ],
+    [
+     39.33974,
+     54.940428
+    ],
+    [
+     39.340474,
+     54.942
+    ],
+    [
+     39.33974,
+     54.943572
+    ],
+    [
+     39.337737,
+     54.944723
+    ],
+    [
+     39.335,
+     54.945144
+    ],
+    [
+     39.0255,
+     54.968344
+    ],
+    [
+     39.022762,
+     54.967923
+    ],
+    [
+     39.022262,
+     54.967723
+    ],
+    [
+     39.020257,
+     54.966572
+    ],
+    [
+     39.019523,
+     54.965
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

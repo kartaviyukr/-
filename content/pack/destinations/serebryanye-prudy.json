@@ -1,0 +1,294 @@
+{
+ "id": "serebryanye-prudy",
+ "name": "Серебряные Пруды",
+ "settlementType": "рабочий посёлок",
+ "mustHave": 1,
+ "regionId": "serebryanye-prudy",
+ "distanceFromKremlinKm": 159.1,
+ "coords": {
+  "lat": 54.468,
+  "lon": 38.723
+ },
+ "intro": [
+  "Серебряные Пруды — посёлок на самом краю Московской области, на реке Осётр. Это последняя точка нашей спирали.",
+  "Военное прошлое села известно с XVI века: в конце XVI–XVII веков край входил в Большую засечную черту, и Серебряные Пруды были острогом — форпостом защиты рубежей. В 1606–1607 годах здесь действовал Иван Болотников.",
+  "С 1743 по 1917 год серебрянопрудскими землями владели Шереметевы.",
+  "Маршрут: посёлок, река Осётр и обратно. Финиш всей спирали!"
+ ],
+ "startPoint": {
+  "name": "Серебряные Пруды, автостанция",
+  "coords": {
+   "lat": 54.468,
+   "lon": 38.723
+  },
+  "transport": "Автобусы от Москвы и Зарайска — уточняйте"
+ },
+ "endPoint": {
+  "name": "Серебряные Пруды, автостанция",
+  "coords": {
+   "lat": 54.4682,
+   "lon": 38.7235
+  },
+  "transport": "Автобусы до Москвы"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "serebryanye-prudy-ostrog",
+   "name": "Острог засечной черты",
+   "coords": {
+    "lat": 54.47,
+    "lon": 38.725
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В конце XVI–XVII веков край входил в Большую засечную черту. Серебряные Пруды стояли острогом — форпостом защиты рубежей от неприятеля.",
+    "В 1606–1607 годах село было оплотом крестьянского вождя Ивана Болотникова.",
+    "Едем к реке. Следующая точка маршрута — «Река Осётр». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Край входил в Большую засечную черту.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Серебряные Пруды были острогом.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "В 1606–1607 годах здесь действовал Болотников.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Военное прошлое известно с XVI века.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "serebryanye-prudy-osetr",
+   "name": "Река Осётр",
+   "coords": {
+    "lat": 54.465,
+    "lon": 38.72
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Посёлок стоит на реке Осётр; на гербе — символ полноводной реки, сельского края и военного прошлого.",
+    "С 1743 по 1917 год этими землями владели Шереметевы.",
+    "Привал у реки. Следующая точка маршрута — «Финиш спирали». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок стоит на реке Осётр.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Символы герба — река, сельский край и военное прошлое.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "С 1743 по 1917 год землями владели Шереметевы.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "serebryanye-prudy-final",
+   "name": "Финиш спирали",
+   "coords": {
+    "lat": 54.468,
+    "lon": 38.723
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Серебряные Пруды — на самом краю Московской области. Это последняя точка спирали от Кремля.",
+    "Самая ли это южная точка области — в найденных источниках не подтверждено, поэтому мы так не утверждаем.",
+    "Поздравляем: спираль пройдена! Финиш — Серебряные Пруды, автостанция: Автобусы до Москвы. Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок на самом краю области.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Статус самой южной точки не подтверждён.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": false
+    },
+    {
+     "text": "Серебряные Пруды описаны на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/serebryanyie-prudyi/",
+     "verified": true
+    },
+    {
+     "text": "KudaGo описывает Серебряно-Виноградный пруд в Москве — это другое место.",
+     "sourceUrl": "https://kudago.com/msk/place/serebryano-vinogradnyj-prud/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/serebryanyie-prudyi/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Праздничный пирог",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Серебряных Прудов нет. Тематическая замена — праздничный пирог в честь финиша всей спирали. Это выбор составителя.",
+  "story": [
+   "Финиш спирали стоит отметить. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Серебряных Прудов",
+    "address": "г.о. Серебряные Пруды",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "serebryanye-prudy-title",
+  "name": "Покоритель спирали",
+  "legend": "Серебряные Пруды — последняя точка спирали от Кремля. Кто доехал сюда — покоритель спирали.",
+  "ritual": "Сфотографироваться у таблички посёлка с велосипедом над головой.",
+  "pairVariant": "Покорители спирали"
+ },
+ "sources": [
+  {
+   "title": "Золотая рыбка из Серебряного пруда — За рулём",
+   "url": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/"
+  },
+  {
+   "title": "Serebryanye Prudy — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Serebryanye_Prudy"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.71459,
+     54.465
+    ],
+    [
+     38.715315,
+     54.463428
+    ],
+    [
+     38.717295,
+     54.462277
+    ],
+    [
+     38.72,
+     54.461856
+    ],
+    [
+     38.722705,
+     54.462277
+    ],
+    [
+     38.724685,
+     54.463428
+    ],
+    [
+     38.728185,
+     54.466628
+    ],
+    [
+     38.729685,
+     54.468428
+    ],
+    [
+     38.73041,
+     54.47
+    ],
+    [
+     38.729685,
+     54.471572
+    ],
+    [
+     38.727705,
+     54.472723
+    ],
+    [
+     38.725,
+     54.473144
+    ],
+    [
+     38.722295,
+     54.472723
+    ],
+    [
+     38.720315,
+     54.471572
+    ],
+    [
+     38.715315,
+     54.466572
+    ],
+    [
+     38.71459,
+     54.465
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
