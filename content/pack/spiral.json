@@ -1187,7 +1187,7 @@
    "distanceFromKremlinKm": 32.0,
    "azimuthDeg": 114.9,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "bykovo",
    "start": false,
    "insideMkad": false
   },
@@ -1205,7 +1205,7 @@
    "distanceFromKremlinKm": 27.9,
    "azimuthDeg": 115.1,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "malakhovka",
    "start": false,
    "insideMkad": false
   },
@@ -1223,7 +1223,7 @@
    "distanceFromKremlinKm": 23.2,
    "azimuthDeg": 116.1,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "tomilino",
    "start": false,
    "insideMkad": false
   },
@@ -1241,7 +1241,7 @@
    "distanceFromKremlinKm": 38.0,
    "azimuthDeg": 116.2,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "kratovo",
    "start": false,
    "insideMkad": false
   },
@@ -1259,7 +1259,7 @@
    "distanceFromKremlinKm": 29.2,
    "azimuthDeg": 117.5,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "udelnaya",
    "start": false,
    "insideMkad": false
   },
@@ -1277,7 +1277,7 @@
    "distanceFromKremlinKm": 35.9,
    "azimuthDeg": 118.5,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "zhukovskiy",
    "start": false,
    "insideMkad": false
   },
