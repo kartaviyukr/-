@@ -1,0 +1,360 @@
+{
+ "id": "kosino-tri-ozera",
+ "name": "Косино (три озера)",
+ "settlementType": "посёлок",
+ "mustHave": 1,
+ "regionId": "moskva-vao",
+ "distanceFromKremlinKm": 15.0,
+ "coords": {
+  "lat": 55.72,
+  "lon": 37.85
+ },
+ "intro": [
+  "Косино — одно из древнейших сёл, вошедших в Москву: его упоминают в летописях под 1410 годом. Но главное здесь — природа: три ледниковых озера, Белое, Чёрное и Святое, лежат на площади около 65 гектаров.",
+  "С Белым озером связывают юного Петра I: по одной версии, здесь была первая в России верфь, по другой — учебная акватория «потешной» флотилии, которую потом перевели на Плещеево озеро.",
+  "Святое озеро окружено легендами: говорят, из-под воды иногда слышен колокольный звон. Озёра входят в природно-исторический парк «Косинский».",
+  "Маршрут — петля вокруг трёх озёр и к Успенской церкви."
+ ],
+ "startPoint": {
+  "name": "Метро «Косино»",
+  "coords": {
+   "lat": 55.7033,
+   "lon": 37.851
+  },
+  "transport": "Метро «Косино», «Лермонтовский проспект»"
+ },
+ "endPoint": {
+  "name": "Метро «Косино»",
+  "coords": {
+   "lat": 55.7035,
+   "lon": 37.8515
+  },
+  "transport": "Метро «Косино»"
+ },
+ "route": {
+  "distanceKm": 6.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "У озёр — пешеходные тропы: ведём велосипед. Святое озеро — особо охраняемая территория.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "kosino-tri-ozera-beloe",
+   "name": "Белое озеро",
+   "coords": {
+    "lat": 55.718,
+    "lon": 37.853
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Белое озеро — самое крупное из трёх косинских. Имя — за светлую, прозрачную воду.",
+    "С ним связывают Петра I: по одному источнику, на Белом озере при Петре была построена первая в России судостроительная верфь; по другому — здесь тренировалась «потешная» флотилия, которую потом перевели на Плещеево озеро.",
+    "Летом озеро — место отдыха жителей восточных районов. Дальше — к Чёрному озеру."
+   ],
+   "facts": [
+    {
+     "text": "В Косине три ледниковых озера — Святое, Белое и Чёрное.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": true
+    },
+    {
+     "text": "Белое озеро названо за светлую прозрачную воду.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": true
+    },
+    {
+     "text": "По одному источнику, на Белом озере при Петре I построили первую в России судостроительную верфь.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": false
+    },
+    {
+     "text": "Другой источник называет озеро учебной акваторией «потешной» флотилии, переведённой затем на Плещеево озеро.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": false
+    },
+    {
+     "text": "Территория с тремя озёрами — около 65 гектаров.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "kosino-tri-ozera-chernoe",
+   "name": "Чёрное озеро",
+   "coords": {
+    "lat": 55.713,
+    "lon": 37.862
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Чёрное озеро — самое тёмное из трёх: вода в нём кажется почти чёрной, отсюда и название.",
+    "Все три озера ледникового происхождения — их оставил отступавший ледник.",
+    "Объезжаем озеро по тропе, не заезжая на береговые склоны, и едем к Святому — самому загадочному из трёх. Вокруг — сохранившийся кусочек природы посреди спальных кварталов."
+   ],
+   "facts": [
+    {
+     "text": "Чёрное озеро названо за тёмную воду.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": true
+    },
+    {
+     "text": "Косинские озёра имеют ледниковое происхождение.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": true
+    },
+    {
+     "text": "Озёра входят в природно-исторический парк «Косинский».",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": true
+    },
+    {
+     "text": "Косино упоминается в летописях под 1410 годом.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": true
+    },
+    {
+     "text": "Глубина Чёрного озера в найденных источниках не указана.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kosino-tri-ozera-svyatoe",
+   "name": "Святое озеро",
+   "coords": {
+    "lat": 55.709,
+    "lon": 37.853
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Святое озеро — самое загадочное. По местным преданиям, из-под воды иногда слышен глухой колокольный звон, будто на дне стоит затонувшая церковь.",
+    "Это охраняемая природная территория, поэтому к воде подходим только по тропам и не шумим.",
+    "Отсюда по дорожкам природно-исторического парка «Косинский» едем к Успенской церкви, финальной точке маршрута."
+   ],
+   "facts": [
+    {
+     "text": "По преданию, из-под воды Святого озера слышен колокольный звон.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": true
+    },
+    {
+     "text": "Святое озеро — одно из трёх ледниковых озёр Косина.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": true
+    },
+    {
+     "text": "Озёра входят в природно-исторический парк «Косинский».",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": true
+    },
+    {
+     "text": "Район Косино-Ухтомский — часть ВАО.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kosino-uhtomskij/",
+     "verified": true
+    },
+    {
+     "text": "Легенда о звоне не имеет документальных подтверждений.",
+     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "warnings": [
+    "Охраняемая природная территория: только по тропам."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "kosino-tri-ozera-uspenskaya",
+   "name": "Успенская церковь в Косине",
+   "coords": {
+    "lat": 55.719,
+    "lon": 37.858
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Косине стоит церковь Успения Пресвятой Богородицы XIX века. По описанию, здесь молилась императрица Мария Фёдоровна.",
+    "Храм напоминает, что Косино было одним из древнейших сёл, вошедших в Москву, а не только новым районом у метро.",
+    "Отсюда возвращаемся к метро «Косино»: петля вокруг трёх озёр и старого села замкнута, а древнее Косино осталось позади, за новыми домами."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Успения в Косине — храм XIX века.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": true
+    },
+    {
+     "text": "По описанию, в храме молилась императрица Мария Фёдоровна.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": true
+    },
+    {
+     "text": "Косино — одно из древнейших сёл, вошедших в состав Москвы.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": true
+    },
+    {
+     "text": "История Косина описана в краеведческом блоге «Непаханое Косино».",
+     "sourceUrl": "https://medium.com/@GenaSch/%D0%BD%D0%B5%D0%BF%D0%B0%D1%85%D0%B0%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D1%81%D0%B8%D0%BD%D0%BE-88af244fedf4",
+     "verified": true
+    },
+    {
+     "text": "Точный год постройки храма в найденных источниках не указан.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Уха у озера",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Косина нет. Тематическая замена — уха, в честь озёрного края; ловить рыбу в охраняемых озёрах нельзя, так что это скорее идея для ужина дома.",
+  "story": [
+   "Три озера — главное богатство Косина, и рыбный суп кажется естественным «вкусом места».",
+   "Это выбор составителя маршрута, а не подтверждённая местная традиция."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе у метро «Косино»",
+    "address": "Москва, Косино-Ухтомский",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "kosino-tri-ozera-title",
+  "name": "Хранитель трёх озёр",
+  "legend": "Белое, Чёрное и Святое озёра хранят память о Петре и легенды о звоне. Кто объехал все три — их хранитель.",
+  "ritual": "У Святого озера минуту помолчать и прислушаться — вдруг услышите звон.",
+  "pairVariant": "Хранители трёх озёр"
+ },
+ "sources": [
+  {
+   "title": "Озёра Москвы — АиФ",
+   "url": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy"
+  },
+  {
+   "title": "Косино — Путевка.ком",
+   "url": "https://www.putevka.com/trip/russia/moscow/108159"
+  },
+  {
+   "title": "Косино-Ухтомский — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/kosino-uhtomskij/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.84542,
+     55.7033
+    ],
+    [
+     37.846168,
+     55.701728
+    ],
+    [
+     37.84821,
+     55.700577
+    ],
+    [
+     37.851,
+     55.700156
+    ],
+    [
+     37.85379,
+     55.700577
+    ],
+    [
+     37.85429,
+     55.700777
+    ],
+    [
+     37.856332,
+     55.701928
+    ],
+    [
+     37.866833,
+     55.711428
+    ],
+    [
+     37.867581,
+     55.713
+    ],
+    [
+     37.866833,
+     55.714572
+    ],
+    [
+     37.862834,
+     55.720572
+    ],
+    [
+     37.860791,
+     55.721723
+    ],
+    [
+     37.858,
+     55.722144
+    ],
+    [
+     37.855209,
+     55.721723
+    ],
+    [
+     37.850209,
+     55.720723
+    ],
+    [
+     37.848166,
+     55.719572
+    ],
+    [
+     37.847418,
+     55.718
+    ],
+    [
+     37.84542,
+     55.7033
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

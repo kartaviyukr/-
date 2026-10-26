@@ -611,7 +611,7 @@
    "distanceFromKremlinKm": 19.0,
    "azimuthDeg": 21.5,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "mytishchi",
    "start": false,
    "insideMkad": false
   },
@@ -629,7 +629,7 @@
    "distanceFromKremlinKm": 16.9,
    "azimuthDeg": 63.3,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "vostochnyy",
    "start": false,
    "insideMkad": false
   },
@@ -647,7 +647,7 @@
    "distanceFromKremlinKm": 16.6,
    "azimuthDeg": 71.2,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "gorenki",
    "start": false,
    "insideMkad": false
   },
@@ -683,7 +683,7 @@
    "distanceFromKremlinKm": 18.9,
    "azimuthDeg": 87.2,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "saltykovka",
    "start": false,
    "insideMkad": false
   },
@@ -701,7 +701,7 @@
    "distanceFromKremlinKm": 15.0,
    "azimuthDeg": 103.7,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "kosino-tri-ozera",
    "start": false,
    "insideMkad": false
   },
@@ -719,7 +719,7 @@
    "distanceFromKremlinKm": 19.8,
    "azimuthDeg": 106.9,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "nekrasovka",
    "start": false,
    "insideMkad": false
   },
@@ -737,7 +737,7 @@
    "distanceFromKremlinKm": 19.2,
    "azimuthDeg": 116.0,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "lyubertsy",
    "start": false,
    "insideMkad": false
   },
@@ -773,7 +773,7 @@
    "distanceFromKremlinKm": 19.9,
    "azimuthDeg": 132.9,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "dzerzhinskiy-nikolo-ugreshskiy",
    "start": false,
    "insideMkad": false
   },
@@ -791,7 +791,7 @@
    "distanceFromKremlinKm": 17.8,
    "azimuthDeg": 230.4,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "solntsevo",
    "start": false,
    "insideMkad": false
   },
@@ -809,7 +809,7 @@
    "distanceFromKremlinKm": 15.4,
    "azimuthDeg": 233.8,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "meshcherskiy",
    "start": false,
    "insideMkad": false
   },
@@ -827,7 +827,7 @@
    "distanceFromKremlinKm": 16.2,
    "azimuthDeg": 253.4,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "nemchinovka",
    "start": false,
    "insideMkad": false
   },
@@ -845,7 +845,7 @@
    "distanceFromKremlinKm": 18.2,
    "azimuthDeg": 311.5,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "putilkovo",
    "start": false,
    "insideMkad": false
   },
@@ -863,7 +863,7 @@
    "distanceFromKremlinKm": 19.2,
    "azimuthDeg": 322.4,
    "ring": 1,
-   "destinationId": null,
+   "destinationId": "khimki-i-memorial-ezhi",
    "start": false,
    "insideMkad": false
   },

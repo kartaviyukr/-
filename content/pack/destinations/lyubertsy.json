@@ -1,0 +1,307 @@
+{
+ "id": "lyubertsy",
+ "name": "Люберцы",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "lyubertsy",
+ "distanceFromKremlinKm": 19.2,
+ "coords": {
+  "lat": 55.676,
+  "lon": 37.893
+ },
+ "intro": [
+  "Люберцы — город Гагарина, вертолётов и Наташинских прудов. Местность упоминается в писцовых книгах с 1621 года как деревня с двойным именем Либерицы-Назарово.",
+  "В разное время эти земли принадлежали Милославским, Александру Меньшикову и будущему императору Петру III.",
+  "XX век сделал Люберцы промышленными: здесь работают вертолётные заводы имени Миля и Камова, а в местном ремесленном училище учился Юрий Гагарин.",
+  "Маршрут — от станции к памятникам и музею Гагарина и к Наташинским прудам."
+ ],
+ "startPoint": {
+  "name": "Станция «Люберцы-1»",
+  "coords": {
+   "lat": 55.6762,
+   "lon": 37.899
+  },
+  "transport": "Электрички Казанского направления / МЦД-3"
+ },
+ "endPoint": {
+  "name": "Станция «Люберцы-1»",
+  "coords": {
+   "lat": 55.6765,
+   "lon": 37.8995
+  },
+  "transport": "Электрички Казанского направления / МЦД-3"
+ },
+ "route": {
+  "distanceKm": 8.0,
+  "durationH": 3.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "lyubertsy-gagarin",
+   "name": "Техникум и музей Юрия Гагарина",
+   "coords": {
+    "lat": 55.678,
+    "lon": 37.896
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Юрий Гагарин учился в Люберецком ремесленном училище — теперь это политехнический техникум. Город гордится этой связью: здесь работает музей Гагарина.",
+    "Путеводители называют Люберцы городом промышленности, авиации и Гагарина. Отсюда до космоса — один из самых коротких путей в нашей спирали.",
+    "Часы работы музея уточняйте. Дальше — к городским памятникам."
+   ],
+   "facts": [
+    {
+     "text": "Политехнический техникум (ранее Люберецкое ремесленное училище) окончил Юрий Гагарин.",
+     "sourceUrl": "https://360.ru/tekst/obschestvo/ljubertsy-progulka/",
+     "verified": true
+    },
+    {
+     "text": "Город известен связью с промышленностью, авиацией и Гагариным.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lyubertsi/",
+     "verified": true
+    },
+    {
+     "text": "В Люберцах есть музей Юрия Гагарина.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lyubertsi/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы музея мы не проверяли.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lyubertsi/",
+     "verified": false
+    },
+    {
+     "text": "В Люберцах работают вертолётные заводы имени Миля и Камова.",
+     "sourceUrl": "https://360.ru/tekst/obschestvo/ljubertsy-progulka/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "Часы работы музея уточняйте заранее.",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "lyubertsy-pamyatniki",
+   "name": "Памятники: «Любэ» и лётчик Власов",
+   "coords": {
+    "lat": 55.681,
+    "lon": 37.898
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Самый необычный памятник Люберец посвящён группе «Любэ»: в композиции — фигура с гантелью и Николай Расторгуев с гитарой. Его называют одним из символов города.",
+    "Рядом с гимназией, носящей имя лётчика Николая Власова, Героя Советского Союза, стоит его памятник. Есть и памятник «Борцов двух революций» на улице Инициативной.",
+    "От памятников едем к Наташинским прудам."
+   ],
+   "facts": [
+    {
+     "text": "В Люберцах есть памятник группе «Любэ» с фигурой Николая Расторгуева с гитарой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/region/blizhnee_podmoskove/points/monuments",
+     "verified": true
+    },
+    {
+     "text": "Памятник Герою Советского Союза лётчику Н. И. Власову стоит у гимназии его имени.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/region/blizhnee_podmoskove/points/monuments",
+     "verified": true
+    },
+    {
+     "text": "На улице Инициативной установлен памятник «Борцов двух революций».",
+     "sourceUrl": "https://101hotels.com/recreation/russia/region/blizhnee_podmoskove/points/monuments",
+     "verified": true
+    },
+    {
+     "text": "Местность упоминается в писцовых книгах с 1621 года как Либерицы-Назарово.",
+     "sourceUrl": "https://360.ru/tekst/obschestvo/ljubertsy-progulka/",
+     "verified": true
+    },
+    {
+     "text": "Точные адреса памятников мы не сверяли.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/region/blizhnee_podmoskove/points/monuments",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "lyubertsy-natashinskie",
+   "name": "Наташинские пруды",
+   "coords": {
+    "lat": 55.69,
+    "lon": 37.884
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Наташинские пруды — главный парк Люберец и любимое место прогулок горожан. Здесь можно провести вечер у воды.",
+    "Жители говорят, что гордятся этим парком: Люберцы — город спорта и прогулок не меньше, чем заводов. Летом у воды многолюдно, поэтому велосипед ведём рядом там, где тесно.",
+    "Обойдя пруды по прогулочным дорожкам, возвращаемся через центр города к станции Люберцы — петля замкнута."
+   ],
+   "facts": [
+    {
+     "text": "Наташинские пруды — парк для прогулок в Люберцах.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/liubertsy/natashinskie-prudy",
+     "verified": true
+    },
+    {
+     "text": "Парк «Наташинские пруды» описан в путеводителе Otello.",
+     "sourceUrl": "https://otello.ru/hotels/lyubertsi/place/park_natashinskie_prudy",
+     "verified": true
+    },
+    {
+     "text": "Жители Люберец гордятся парком, по данным РИАМО.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-lyubertsah-polyubit-sport-gorditsya-parkom-i-obschatsya-s-sosedyami-v-whatsapp-xl/",
+     "verified": true
+    },
+    {
+     "text": "Вечер у Наташинских прудов советуют в путеводителях.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lyubertsi/",
+     "verified": true
+    },
+    {
+     "text": "История названия прудов в найденных источниках не раскрыта.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/liubertsy/natashinskie-prudy",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус перед полётом",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Люберец нет. Тематическая замена — простой перекус в честь Гагарина, учившегося здесь перед дорогой в небо. Это выбор составителя маршрута.",
+  "story": [
+   "Люберцы связаны с авиацией и космосом: вертолётные заводы и Гагарин.",
+   "Возьмите бутерброды и перекусите у Наташинских прудов."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины у станции Люберцы",
+    "address": "г. Люберцы",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "lyubertsy-title",
+  "name": "Курсант Гагарина",
+  "legend": "В люберецком училище учился первый космонавт, а рядом строят вертолёты. Кто проехал город — курсант первого отряда.",
+  "ritual": "У техникума, где учился Гагарин, сказать «Поехали!» и сфотографироваться.",
+  "pairVariant": "Курсанты Гагарина"
+ },
+ "sources": [
+  {
+   "title": "Прогулка по Люберцам — 360.ru",
+   "url": "https://360.ru/tekst/obschestvo/ljubertsy-progulka/"
+  },
+  {
+   "title": "Люберцы — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lyubertsi/"
+  },
+  {
+   "title": "Памятники — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/region/blizhnee_podmoskove/points/monuments"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.878422,
+     55.69
+    ],
+    [
+     37.879169,
+     55.688428
+    ],
+    [
+     37.891171,
+     55.676428
+    ],
+    [
+     37.894171,
+     55.674628
+    ],
+    [
+     37.896212,
+     55.673477
+    ],
+    [
+     37.899,
+     55.673056
+    ],
+    [
+     37.901788,
+     55.673477
+    ],
+    [
+     37.903829,
+     55.674628
+    ],
+    [
+     37.904329,
+     55.674928
+    ],
+    [
+     37.905076,
+     55.6765
+    ],
+    [
+     37.903577,
+     55.681
+    ],
+    [
+     37.902829,
+     55.682572
+    ],
+    [
+     37.888831,
+     55.691572
+    ],
+    [
+     37.886789,
+     55.692723
+    ],
+    [
+     37.884,
+     55.693144
+    ],
+    [
+     37.881211,
+     55.692723
+    ],
+    [
+     37.879169,
+     55.691572
+    ],
+    [
+     37.878422,
+     55.69
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

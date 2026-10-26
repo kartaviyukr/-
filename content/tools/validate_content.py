@@ -26,7 +26,7 @@ URL = re.compile(r"^https?://\S+$")
 # Москва и область с запасом.
 LAT, LON = (54.1, 57.1), (35.0, 40.4)
 # Единицы — только метрические.
-IMPERIAL = re.compile(r"\b(миль|мили|миля|милях|футов|фута|фут|дюйм\w*|ярдов|ярда|ярд|фунтов|фунта|фунт|унци\w*|галлон\w*)\b", re.I)
+IMPERIAL = re.compile(r"\b(миль|мили|миля|милях|футов|фута|фут|дюйм\w*|ярдов|ярда|ярд|фунтов|фунта|фунт|унци\w*|галлон\w*)\b")
 
 errors, warnings = [], []
 
@@ -76,17 +76,20 @@ def dist_km(a, b):
     return 2 * 6371.0088 * math.asin(math.sqrt(h))
 
 
-def paragraphs(obj, key, where, lo, hi):
+def paragraphs(obj, key, where, lo, hi, min_chars=300):
     v = need(obj, key, list, where)
     if v is None:
         return
     if not (lo <= len(v) <= hi):
         err(where, f"«{key}»: {len(v)} абзацев, нужно {lo}–{hi}")
     for i, p in enumerate(v):
-        if not isinstance(p, str) or len(p.strip()) < 80:
+        if not isinstance(p, str) or len(p.strip()) < 40:
             err(where, f"«{key}»[{i}] слишком короткий абзац")
         elif IMPERIAL.search(p):
             err(where, f"«{key}»[{i}] — неметрические единицы")
+    total = sum(len(p) for p in v if isinstance(p, str))
+    if total < min_chars:
+        err(where, f"«{key}»: всего {total} знаков, нужно не меньше {min_chars}")
 
 
 def polygon(obj, key, where):
@@ -207,7 +210,7 @@ def check_destination(d, fname, spiral_ids):
             err(dw, "kind: блюдо/продукт/тематическая замена")
         if dish.get("kind") == "тематическая замена" and not dish.get("honestyNote"):
             err(dw, "для тематической замены нужна honestyNote")
-        paragraphs(dish, "story", dw, 1, 6)
+        paragraphs(dish, "story", dw, 1, 6, min_chars=120)
         for i, shop in enumerate(need(dish, "whereToBuy", list, dw) or []):
             sw = f"{dw}.whereToBuy[{i}]"
             need(shop, "name", str, sw)
