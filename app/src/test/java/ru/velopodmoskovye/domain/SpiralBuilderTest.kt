@@ -13,7 +13,7 @@ class SpiralBuilderTest {
 
     @Test
     fun startsAtTsaoAndCoversAllPlaces() {
-        assertEquals(182, rows.size)
+        assertEquals(200, rows.size)
         val nodes = spiral()
         assertEquals("ЦАО", nodes.first().item.name)
         assertEquals(rows.map { it.num }.toSet(), nodes.map { it.item.num }.toSet())
@@ -43,7 +43,7 @@ class SpiralBuilderTest {
         nodes.zipWithNext().forEach { (a, b) -> assertTrue("${a.item.name} → ${b.item.name}", a.ring <= b.ring) }
         assertEquals(SpiralBuilder.INSIDE_MKAD_RING, nodes.first().ring)
         assertEquals(SpiralBuilder.RING_NAMES.lastIndex, nodes.last().ring)
-        assertEquals("Серебряные Пруды", nodes.last().item.name)
+        assertEquals("Ярославль", nodes.last().item.name)
         // Первым после ЦАО — ближайший к Кремлю округ.
         assertEquals(rows.filter { it.insideMkad && !it.isStart }.minBy { Geo.distanceKm(Geo.KREMLIN, it.point) }.name, nodes.first().item.name)
     }
@@ -85,6 +85,9 @@ class SpiralBuilderTest {
         assertEquals(2, SpiralBuilder.ringOf(20.0))
         assertEquals(6, SpiralBuilder.ringOf(119.9))
         assertEquals(7, SpiralBuilder.ringOf(120.0))
-        assertEquals(7, SpiralBuilder.ringOf(160.0))
+        assertEquals(7, SpiralBuilder.ringOf(149.9))
+        assertEquals(8, SpiralBuilder.ringOf(160.0))
+        assertEquals(9, SpiralBuilder.ringOf(200.0))
+        assertEquals(9, SpiralBuilder.ringOf(266.0))
     }
 }

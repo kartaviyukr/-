@@ -37,7 +37,7 @@ data class RingDef(val index: Int, val name: String, val minKm: Double, val maxK
 data class Region(
     val id: String,
     val name: String,
-    /** "МО_городской_округ" | "МО_муниципальный_округ" | "Москва_АО" */
+    /** "МО_городской_округ" | "МО_муниципальный_округ" | "Москва_АО" | "соседняя_область" */
     val type: String,
     val adminCenter: String? = null,
     val distanceFromKremlinKm: Double? = null,
