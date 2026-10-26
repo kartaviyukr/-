@@ -1,0 +1,304 @@
+{
+ "id": "belopesotskiy-monastyr",
+ "name": "Белопесоцкий монастырь",
+ "settlementType": "монастырь",
+ "mustHave": 2,
+ "regionId": "stupino",
+ "distanceFromKremlinKm": 100.7,
+ "coords": {
+  "lat": 54.88,
+  "lon": 38.05
+ },
+ "intro": [
+  "Белопесоцкий монастырь стоит у Оки возле Ступина. РИАМО называет его «монастырём-крепостью»: он строился как форпост у границы Московского княжества, которая тогда проходила по Оке.",
+  "С середины 1930-х годов в зданиях монастыря размещались общежитие рабочих и тюрьма для заключённых, строивших мост через Оку.",
+  "Дату основания мы в найденных источниках не подтвердили.",
+  "Маршрут: Ступино, дорога к Оке и монастырь."
+ ],
+ "startPoint": {
+  "name": "Станция «Ступино»",
+  "coords": {
+   "lat": 54.886,
+   "lon": 38.078
+  },
+  "transport": "Электрички Павелецкого направления"
+ },
+ "endPoint": {
+  "name": "Станция «Ступино»",
+  "coords": {
+   "lat": 54.8862,
+   "lon": 38.0785
+  },
+  "transport": "Электрички Павелецкого направления"
+ },
+ "route": {
+  "distanceKm": 8.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "belopesotskiy-monastyr-krepost",
+   "name": "Монастырь-крепость",
+   "coords": {
+    "lat": 54.88,
+    "lon": 38.05
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Белопесоцкий монастырь изначально строился как крепость-форпост: граница Московского княжества тогда проходила по Оке.",
+    "Дату основания мы в найденных источниках не подтвердили.",
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Тяжёлые годы». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь строился как крепость-форпост у границы княжества.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Граница княжества проходила по Оке.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не подтверждена.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    },
+    {
+     "text": "РИАМО называет его монастырём-крепостью.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "belopesotskiy-monastyr-tyurma",
+   "name": "Тяжёлые годы",
+   "coords": {
+    "lat": 54.8802,
+    "lon": 38.0505
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "С середины 1930-х годов в зданиях монастыря размещались общежитие рабочих и тюрьма для заключённых, строивших мост через Оку.",
+    "Сегодня обитель снова действует и восстанавливается.",
+    "Едем к Оке. Следующая точка маршрута — «Берег Оки». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "С середины 1930-х здесь было общежитие рабочих и тюрьма.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Заключённые строили мост через Оку.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Монастырь снова действует.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/stupino/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "belopesotskiy-monastyr-oka",
+   "name": "Берег Оки",
+   "coords": {
+    "lat": 54.878,
+    "lon": 38.048
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Монастырь стоит у Оки — старой южной границы Москвы.",
+    "С берега видна река и Кашира на другой стороне.",
+    "Возвращаемся в Ступино. Финиш — Станция «Ступино»: Электрички Павелецкого направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь стоит у Оки.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Кашира — на другом берегу — по наблюдению составителя.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    },
+    {
+     "text": "Ступино описано на travelto.ru.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/stupino/",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Монастырская выпечка",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у монастыря нет. Тематическая замена — выпечка из лавки обители, если она открыта. Наличие мы не проверяли.",
+  "story": [
+   "У монастырей часто есть лавки. Возьмите воду из Ступина. Адреса, где купить, ниже — проверенные отмечены отдельно. Если найдёте настоящее местное блюдо — оно лучше нашей замены."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Лавка Белопесоцкого монастыря",
+    "address": "г.о. Ступино",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "belopesotskiy-monastyr-title",
+  "name": "Порубежник Оки",
+  "legend": "Белопесоцкий монастырь стерёг границу по Оке. Кто доехал сюда — порубежник.",
+  "ritual": "Сфотографировать монастырь с берега Оки.",
+  "pairVariant": "Порубежники Оки"
+ },
+ "sources": [
+  {
+   "title": "История Ступина — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/stupino/history"
+  },
+  {
+   "title": "Путешествие в Ступино — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.042535,
+     54.878
+    ],
+    [
+     38.043267,
+     54.876428
+    ],
+    [
+     38.045268,
+     54.875277
+    ],
+    [
+     38.048,
+     54.874856
+    ],
+    [
+     38.050732,
+     54.875277
+    ],
+    [
+     38.080733,
+     54.883277
+    ],
+    [
+     38.081233,
+     54.883477
+    ],
+    [
+     38.083234,
+     54.884628
+    ],
+    [
+     38.083966,
+     54.8862
+    ],
+    [
+     38.083234,
+     54.887772
+    ],
+    [
+     38.081233,
+     54.888923
+    ],
+    [
+     38.0785,
+     54.889344
+    ],
+    [
+     38.075767,
+     54.888923
+    ],
+    [
+     38.047767,
+     54.882923
+    ],
+    [
+     38.047267,
+     54.882723
+    ],
+    [
+     38.045267,
+     54.881572
+    ],
+    [
+     38.043267,
+     54.879572
+    ],
+    [
+     38.042535,
+     54.878
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -1,0 +1,303 @@
+{
+ "id": "protvino",
+ "name": "Протвино",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "serpukhov",
+ "distanceFromKremlinKm": 101.3,
+ "coords": {
+  "lat": 54.87,
+  "lon": 37.218
+ },
+ "intro": [
+  "Протвино — наукоград физиков высоких энергий. Он основан в 1960 году как секретный посёлок для сотрудников Института физики высоких энергий и сначала назывался Серпухов-7.",
+  "В 1965 году город получил имя по реке Протве. Главная тема Протвина — протонный синхротрон У-70, запущенный в 1967 году; по одному источнику, пять лет он оставался самым мощным ускорителем в мире.",
+  "Маршрут: Серпухов, дорога на запад и Протвино."
+ ],
+ "startPoint": {
+  "name": "Станция «Серпухов»",
+  "coords": {
+   "lat": 54.913,
+   "lon": 37.412
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Серпухов»",
+  "coords": {
+   "lat": 54.9132,
+   "lon": 37.4125
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "route": {
+  "distanceKm": 34.0,
+  "durationH": 3.5,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "protvino-serpukhov7",
+   "name": "Серпухов-7",
+   "coords": {
+    "lat": 54.87,
+    "lon": 37.22
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Протвино основан в 1960 году как секретный рабочий посёлок для сотрудников Института физики высоких энергий; сначала он назывался Серпухов-7.",
+    "В 1965 году город получил нынешнее имя — по реке Протве.",
+    "Едем к институту. Следующая точка маршрута — «Ускоритель У-70». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Протвино основан в 1960 году как секретный посёлок.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Сначала назывался Серпухов-7.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Имя по реке Протве получено в 1965 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Протвино описан на travelto.ru.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/protvino/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "protvino-u70",
+   "name": "Ускоритель У-70",
+   "coords": {
+    "lat": 54.865,
+    "lon": 37.21
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Протонный синхротрон У-70 запущен в 1967 году. По одному источнику, пять лет он оставался самым мощным ускорителем в мире.",
+    "Институт физики высоких энергий и У-70 — главная тема города. Территория закрыта.",
+    "Смотрим снаружи. Следующая точка маршрута — «Река Протва». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "У-70 запущен в 1967 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Пять лет У-70 был самым мощным ускорителем — по одному источнику.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "ИФВЭ и У-70 — главная тема Протвина.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/protvino/",
+     "verified": true
+    },
+    {
+     "text": "Территория закрыта.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/protvino/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/protvino/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Режимная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "protvino-protva",
+   "name": "Река Протва",
+   "coords": {
+    "lat": 54.872,
+    "lon": 37.225
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Город назван по реке Протве. Экскурсии по наукоградам объединяют Протвино с Пущином.",
+    "Обратный путь к Серпухову долгий — рассчитайте силы.",
+    "Финиш — станция Серпухов. Финиш — Станция «Серпухов»: Электрички Курского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Город назван по реке Протве.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Экскурсии объединяют Пущино и Протвино.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус физика",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Протвина нет. Тематическая замена — перекус физика на ночной смене у ускорителя. Это выбор составителя.",
+  "story": [
+   "Протвино — город ускорителя. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Протвина",
+    "address": "г. Протвино",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "protvino-title",
+  "name": "Ускоритель",
+  "legend": "В Протвине стоит У-70. Кто проехал город — ускоритель.",
+  "ritual": "Сфотографировать себя в движении — «размытым», как частица.",
+  "pairVariant": "Ускорители"
+ },
+ "sources": [
+  {
+   "title": "История Протвина — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/protvino/istoriia"
+  },
+  {
+   "title": "Протвино — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/protvino/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.204537,
+     54.865
+    ],
+    [
+     37.205269,
+     54.863428
+    ],
+    [
+     37.207268,
+     54.862277
+    ],
+    [
+     37.21,
+     54.861856
+    ],
+    [
+     37.212732,
+     54.862277
+    ],
+    [
+     37.414735,
+     54.910277
+    ],
+    [
+     37.415235,
+     54.910477
+    ],
+    [
+     37.417237,
+     54.911628
+    ],
+    [
+     37.41797,
+     54.9132
+    ],
+    [
+     37.417237,
+     54.914772
+    ],
+    [
+     37.415235,
+     54.915923
+    ],
+    [
+     37.4125,
+     54.916344
+    ],
+    [
+     37.409765,
+     54.915923
+    ],
+    [
+     37.222268,
+     54.874723
+    ],
+    [
+     37.217268,
+     54.872723
+    ],
+    [
+     37.207268,
+     54.867723
+    ],
+    [
+     37.205269,
+     54.866572
+    ],
+    [
+     37.204537,
+     54.865
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

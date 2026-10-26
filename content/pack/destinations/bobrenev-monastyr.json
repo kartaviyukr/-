@@ -1,0 +1,303 @@
+{
+ "id": "bobrenev-monastyr",
+ "name": "Бобренев монастырь",
+ "settlementType": "монастырь",
+ "mustHave": 2,
+ "regionId": "kolomna",
+ "distanceFromKremlinKm": 105.9,
+ "coords": {
+  "lat": 55.07,
+  "lon": 38.79
+ },
+ "intro": [
+  "Богородице-Рождественский Бобренев монастырь стоит за Москвой-рекой напротив Коломны. По туристическим источникам, его основали в 1381 году по повелению Дмитрия Донского в честь победы на Куликовом поле; Advantour отмечает, что документальной даты нет, но археология подтверждает раннее начало строительства.",
+  "Строительством, по преданию, руководил князь Дмитрий Боброк-Волынский — воевода Донского. По одной версии, обет построить обитель он дал перед битвой; по житию, Донской дал обет после победы, вернувшись в Коломну.",
+  "Монастырь называют «Обетным» и Бобреневым — по имени Боброка.",
+  "Маршрут: Коломна, мост через Москву-реку и монастырь."
+ ],
+ "startPoint": {
+  "name": "Станция «Коломна»",
+  "coords": {
+   "lat": 55.103,
+   "lon": 38.753
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Коломна»",
+  "coords": {
+   "lat": 55.1032,
+   "lon": 38.7535
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 10.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "bobrenev-monastyr-most",
+   "name": "Через Москву-реку",
+   "coords": {
+    "lat": 55.09,
+    "lon": 38.77
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Из Коломны едем через Москву-реку на её правый берег — к Старому Бобреневу.",
+    "Мост и дорогу мы на месте не проверяли — держитесь обочины.",
+    "Впереди — монастырь. Следующая точка маршрута — «Монастырь». Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь находится в Старом Бобреневе.",
+     "sourceUrl": "https://sobory.ru/photo/17147",
+     "verified": true
+    },
+    {
+     "text": "Дорога не проверена.",
+     "sourceUrl": "https://sobory.ru/photo/17147",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/17147",
+     "verified": false
+    },
+    {
+     "text": "Монастырь — напротив Коломны.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://sobory.ru/photo/17147",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "bobrenev-monastyr-monastyr",
+   "name": "Монастырь",
+   "coords": {
+    "lat": 55.07,
+    "lon": 38.79
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "По туристическим источникам, монастырь основан в 1381 году по повелению Дмитрия Донского в честь Куликовской победы. Advantour пишет, что даты в документах нет, но археологи подтверждают раннее начало строительства.",
+    "По одной версии, строительство вёл князь Дмитрий Боброк-Волынский — воевода, безудельный князь и боярин Донского. Отсюда имя «Бобренев».",
+    "Действующий мужской монастырь. Следующая точка маршрута — «Обетная обитель»."
+   ],
+   "facts": [
+    {
+     "text": "Основание в 1381 году — по туристическим источникам.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info",
+     "verified": false
+    },
+    {
+     "text": "Документальной даты основания нет.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": true
+    },
+    {
+     "text": "Археология подтверждает раннее начало строительства.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": true
+    },
+    {
+     "text": "Строительство связывают с Боброком-Волынским.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": true
+    },
+    {
+     "text": "Боброк — воевода Дмитрия Донского.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "bobrenev-monastyr-obet",
+   "name": "Обетная обитель",
+   "coords": {
+    "lat": 55.0702,
+    "lon": 38.7905
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Монастырь называют «Обетным». По одной версии, Боброк дал обет перед Куликовской битвой; по житию, Донской дал обет после победы, вернувшись в Коломну.",
+    "Мы приводим обе версии и не выбираем между ними.",
+    "Возвращаемся в Коломну. Финиш — Станция «Коломна»: Электрички Казанского направления. Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь называют «Обетным».",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": true
+    },
+    {
+     "text": "Версия об обете Боброка перед битвой.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": false
+    },
+    {
+     "text": "Версия об обете Донского после победы — по житию.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Монастырский хлеб",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у монастыря нет. Тематическая замена — хлеб и выпечка из лавки обители, если она открыта. Наличие мы не проверяли.",
+  "story": [
+   "Рядом Коломна с её калачами и пастилой. Купите пастилу в Коломне до или после. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Лавка Бобренева монастыря",
+    "address": "Коломенский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "bobrenev-monastyr-title",
+  "name": "Обетник",
+  "legend": "Бобренев монастырь — обитель по обету. Кто доехал сюда — обетник.",
+  "ritual": "Сфотографировать монастырь с дороги.",
+  "pairVariant": "Обетники"
+ },
+ "sources": [
+  {
+   "title": "Бобренев монастырь — advantour",
+   "url": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm"
+  },
+  {
+   "title": "Бобренёв монастырь — Спутник8",
+   "url": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.747504,
+     55.103
+    ],
+    [
+     38.748241,
+     55.101428
+    ],
+    [
+     38.785245,
+     55.068428
+    ],
+    [
+     38.787254,
+     55.067277
+    ],
+    [
+     38.79,
+     55.066856
+    ],
+    [
+     38.792746,
+     55.067277
+    ],
+    [
+     38.793246,
+     55.067477
+    ],
+    [
+     38.795255,
+     55.068628
+    ],
+    [
+     38.795991,
+     55.0702
+    ],
+    [
+     38.795255,
+     55.071772
+    ],
+    [
+     38.774758,
+     55.091572
+    ],
+    [
+     38.758259,
+     55.104772
+    ],
+    [
+     38.756248,
+     55.105923
+    ],
+    [
+     38.7535,
+     55.106344
+    ],
+    [
+     38.750752,
+     55.105923
+    ],
+    [
+     38.750252,
+     55.105723
+    ],
+    [
+     38.748241,
+     55.104572
+    ],
+    [
+     38.747504,
+     55.103
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

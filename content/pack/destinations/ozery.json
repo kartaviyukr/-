@@ -1,0 +1,290 @@
+{
+ "id": "ozery",
+ "name": "Озёры",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "kolomna",
+ "distanceFromKremlinKm": 116.0,
+ "coords": {
+  "lat": 54.856,
+  "lon": 38.556
+ },
+ "intro": [
+  "Озёры — текстильный город на левом берегу Оки. Предшественница города, деревня Озерки, упоминается в источниках конца XVI века.",
+  "В XIX веке местные предприниматели создали ткацкие, отбельные и красильные производства; с 1835 года развивалось предприятие, позднее известное как текстильная фирма «Ока».",
+  "Дату получения статуса города мы точно не сверили; город отмечает день рождения ежегодно.",
+  "Маршрут короткий: центр города, текстильная фабрика и берег Оки."
+ ],
+ "startPoint": {
+  "name": "Остановка «Озёры, центр»",
+  "coords": {
+   "lat": 54.856,
+   "lon": 38.556
+  },
+  "transport": "Автобусы от Коломны — уточняйте"
+ },
+ "endPoint": {
+  "name": "Остановка «Озёры, центр»",
+  "coords": {
+   "lat": 54.8562,
+   "lon": 38.5565
+  },
+  "transport": "Автобусы до Коломны"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "ozery-fabrika",
+   "name": "Текстильная «Ока»",
+   "coords": {
+    "lat": 54.858,
+    "lon": 38.56
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В XIX веке в Озёрах появились ткацкие, отбельные и красильные производства. С 1835 года развивалось предприятие, позднее известное как текстильная фирма «Ока».",
+    "Корпуса фабрики — главный памятник промышленной истории города.",
+    "Едем к Оке. Следующая точка маршрута — «Берег Оки». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В XIX веке появились ткацкие, отбельные и красильные производства.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": true
+    },
+    {
+     "text": "С 1835 года развивалось предприятие «Ока».",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Состояние фабрики не проверено.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Озёры описаны на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "ozery-oka",
+   "name": "Берег Оки",
+   "coords": {
+    "lat": 54.85,
+    "lon": 38.55
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Озёры стоят на левом берегу Оки — одной из главных рек Подмосковья.",
+    "С берега видны широкие поймы и луга правого берега реки.",
+    "Возвращаемся в центр. Следующая точка маршрута — «Центр». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Озёры стоят на левом берегу Оки.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": true
+    },
+    {
+     "text": "Описание вида — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Места для купания не проверены.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Озёры описаны в Календаре путешествий.",
+     "sourceUrl": "https://www.calend.ru/travel/862",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "ozery-tsentr",
+   "name": "Центр",
+   "coords": {
+    "lat": 54.856,
+    "lon": 38.556
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Деревня Озерки, предшественница города, упоминается в источниках конца XVI века.",
+    "Город отмечает день рождения ежегодно; точную дату получения статуса мы не сверили.",
+    "Финиш у остановки. Финиш — Остановка «Озёры, центр»: Автобусы до Коломны. Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Деревня Озерки упоминается в конце XVI века.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": true
+    },
+    {
+     "text": "Город ежегодно отмечает день рождения.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
+     "verified": true
+    },
+    {
+     "text": "Дата статуса города не сверена.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Пикник на Оке",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Озёр нет. Тематическая замена — пикник на берегу Оки. Это выбор составителя.",
+  "story": [
+   "Озёры — город на большой реке. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Озёр",
+    "address": "Коломенский г.о., Озёры",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "ozery-title",
+  "name": "Ткач Оки",
+  "legend": "В Озёрах ткали, белили и красили ткани. Кто проехал город — ткач Оки.",
+  "ritual": "Сфотографировать Оку с берега.",
+  "pairVariant": "Ткачи Оки"
+ },
+ "sources": [
+  {
+   "title": "Озёры — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.544539,
+     54.85
+    ],
+    [
+     38.545271,
+     54.848428
+    ],
+    [
+     38.547269,
+     54.847277
+    ],
+    [
+     38.55,
+     54.846856
+    ],
+    [
+     38.552731,
+     54.847277
+    ],
+    [
+     38.554729,
+     54.848428
+    ],
+    [
+     38.56473,
+     54.856428
+    ],
+    [
+     38.565462,
+     54.858
+    ],
+    [
+     38.56473,
+     54.859572
+    ],
+    [
+     38.562731,
+     54.860723
+    ],
+    [
+     38.56,
+     54.861144
+    ],
+    [
+     38.557269,
+     54.860723
+    ],
+    [
+     38.553269,
+     54.858723
+    ],
+    [
+     38.55127,
+     54.857572
+    ],
+    [
+     38.545271,
+     54.851572
+    ],
+    [
+     38.544539,
+     54.85
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

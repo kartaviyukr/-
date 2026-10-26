@@ -1,0 +1,299 @@
+{
+ "id": "stupino",
+ "name": "Ступино",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "stupino",
+ "distanceFromKremlinKm": 100.6,
+ "coords": {
+  "lat": 54.886,
+  "lon": 38.078
+ },
+ "intro": [
+  "Ступино — молодой индустриальный город. Днём рождения считают 30 августа 1938 года, когда рабочий посёлок Электровозстрой, возникший на месте деревень Ступино и Кремиченка, стал городом.",
+  "Сначала здесь строили электровозный завод, но ни одного электровоза не выпустили. В 1936 году комиссия под руководством Андрея Туполева признала площадку пригодной для авиапроизводства, и стройка стала «Авиакомбинатом № 150». В 1940 году заработал металлургический комбинат.",
+  "Маршрут: станция, центр и дорога к Белопесоцкому монастырю."
+ ],
+ "startPoint": {
+  "name": "Станция «Ступино»",
+  "coords": {
+   "lat": 54.886,
+   "lon": 38.078
+  },
+  "transport": "Электрички Павелецкого направления"
+ },
+ "endPoint": {
+  "name": "Станция «Ступино»",
+  "coords": {
+   "lat": 54.8862,
+   "lon": 38.0785
+  },
+  "transport": "Электрички Павелецкого направления"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "stupino-elektrovozstroy",
+   "name": "Электровозстрой",
+   "coords": {
+    "lat": 54.886,
+    "lon": 38.078
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Рабочий посёлок Электровозстрой возник на месте деревень Ступино и Кремиченка. 30 августа 1938 года он получил статус города и новое имя.",
+    "Задумывали электровозный завод, но ни один электровоз с местным названием так и не выпустили.",
+    "Едем к заводам. Следующая точка маршрута — «Авиакомбинат № 150». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Ступино стал городом 30 августа 1938 года.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Посёлок назывался Электровозстрой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Возник на месте деревень Ступино и Кремиченка.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Электровозов здесь так и не выпустили.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "stupino-aviakombinat",
+   "name": "Авиакомбинат № 150",
+   "coords": {
+    "lat": 54.89,
+    "lon": 38.085
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1936 году комиссия под руководством Андрея Туполева нашла площадку пригодной для авиапроизводства, и «Электровозстрой» стал «Авиакомбинатом № 150».",
+    "В 1940 году в городе начал работать металлургический комбинат. РИАМО называет Ступино «чудом металлургов».",
+    "Территории закрыты — смотрим снаружи. Следующая точка маршрута — «Центр Ступина»."
+   ],
+   "facts": [
+    {
+     "text": "В 1936 году комиссия Туполева выбрала площадку для авиапроизводства.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Стройка стала «Авиакомбинатом № 150».",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "В 1940 году заработал металлургический комбинат.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "РИАМО называет Ступино «чудом металлургов».",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": true
+    },
+    {
+     "text": "Территории закрыты.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Промышленные территории."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "stupino-tsentr",
+   "name": "Центр Ступина",
+   "coords": {
+    "lat": 54.887,
+    "lon": 38.08
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Ступино — город со своим театром и баней, о которых пишет РИАМО.",
+    "Отсюда недалеко до Белопесоцкого монастыря — у него в спирали свой маршрут.",
+    "Возвращаемся к станции. Финиш — Станция «Ступино»: Электрички Павелецкого направления. Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "РИАМО пишет о театре и бане Ступина.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": true
+    },
+    {
+     "text": "Белопесоцкий монастырь — рядом.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": false
+    },
+    {
+     "text": "Ступино описано в Знании.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Обед авиастроителя",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Ступина нет. Тематическая замена — обед авиастроителя. Это выбор составителя.",
+  "story": [
+   "Ступино строило самолёты и плавило металл.",
+   "Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Ступина",
+    "address": "г. Ступино",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "stupino-title",
+  "name": "Авиастроитель Ступина",
+  "legend": "Ступино выросло на авиакомбинате. Кто проехал его — авиастроитель.",
+  "ritual": "Расправить руки крыльями у станции.",
+  "pairVariant": "Авиастроители Ступина"
+ },
+ "sources": [
+  {
+   "title": "История Ступина — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/stupino/history"
+  },
+  {
+   "title": "Путешествие в Ступино — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.072534,
+     54.886
+    ],
+    [
+     38.073266,
+     54.884428
+    ],
+    [
+     38.075267,
+     54.883277
+    ],
+    [
+     38.078,
+     54.882856
+    ],
+    [
+     38.080733,
+     54.883277
+    ],
+    [
+     38.081233,
+     54.883477
+    ],
+    [
+     38.082733,
+     54.884277
+    ],
+    [
+     38.084734,
+     54.885428
+    ],
+    [
+     38.089734,
+     54.888428
+    ],
+    [
+     38.090467,
+     54.89
+    ],
+    [
+     38.089734,
+     54.891572
+    ],
+    [
+     38.087733,
+     54.892723
+    ],
+    [
+     38.085,
+     54.893144
+    ],
+    [
+     38.082267,
+     54.892723
+    ],
+    [
+     38.075267,
+     54.888723
+    ],
+    [
+     38.073266,
+     54.887572
+    ],
+    [
+     38.072534,
+     54.886
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

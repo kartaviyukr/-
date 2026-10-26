@@ -1,0 +1,298 @@
+{
+ "id": "pushchino",
+ "name": "Пущино",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "serpukhov",
+ "distanceFromKremlinKm": 102.2,
+ "coords": {
+  "lat": 54.833,
+  "lon": 37.621
+ },
+ "intro": [
+  "Пущино — наукоград на высоком правом берегу Оки, примерно в 100 км к югу от Москвы. Как современный город он ведёт отсчёт с 1956 года.",
+  "Ранняя история уходит в 1578–1579 годы: тогда в писцовых книгах местность упомянута как поместье дворян Пущиных.",
+  "Пущино известно научными институтами и радиоастрономической обсерваторией — их включают в экскурсии «Наукограды: Пущино — Протвино».",
+  "Маршрут: Серпухов, мост через Оку и Пущино."
+ ],
+ "startPoint": {
+  "name": "Станция «Серпухов»",
+  "coords": {
+   "lat": 54.913,
+   "lon": 37.412
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Серпухов»",
+  "coords": {
+   "lat": 54.9132,
+   "lon": 37.4125
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "route": {
+  "distanceKm": 42.0,
+  "durationH": 4.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "pushchino-bereg",
+   "name": "Высокий берег Оки",
+   "coords": {
+    "lat": 54.833,
+    "lon": 37.62
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Пущино стоит на высоком правом берегу Оки. С обрыва видна пойма и заповедный левый берег.",
+    "Ранняя история связана с дворянами Пущиными: в 1578–1579 годах местность упомянута как их поместье.",
+    "Едем в научный центр. Следующая точка маршрута — «Научный центр». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Пущино стоит на высоком правом берегу Оки.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 1578–1579 годах местность упомянута как поместье Пущиных.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Описание вида — оценка составителя.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Пущино — примерно в 100 км от Москвы.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "pushchino-nauka",
+   "name": "Научный центр",
+   "coords": {
+    "lat": 54.834,
+    "lon": 37.625
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Как современный город Пущино ведёт отсчёт с 1956 года. Здесь работают научные институты.",
+    "Связь биологического центра с датой 1956 года в найденных источниках не подтверждена — мы её не утверждаем.",
+    "Территории институтов закрыты. Следующая точка маршрута — «Радиоастрономическая обсерватория». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Пущино ведёт отсчёт с 1956 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Связь биоцентра с 1956 годом не подтверждена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Территории закрыты.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "История Пущина — 101hotels.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/pushchino/history",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "pushchino-observatoriya",
+   "name": "Радиоастрономическая обсерватория",
+   "coords": {
+    "lat": 54.82,
+    "lon": 37.63
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Рядом с городом — радиоастрономическая обсерватория; её включают в экскурсии по наукоградам Пущино и Протвино.",
+    "Посещение — только с экскурсией. Обратный путь к Серпухову долгий.",
+    "Финиш — станция Серпухов. Финиш — Станция «Серпухов»: Электрички Курского направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с Пущином — радиоастрономическая обсерватория.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": true
+    },
+    {
+     "text": "Экскурсии объединяют Пущино и Протвино.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": true
+    },
+    {
+     "text": "Посещение — с экскурсией, по наблюдению составителя.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус учёного",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Пущина нет. Тематическая замена — перекус учёного между экспериментами. Это выбор составителя.",
+  "story": [
+   "Пущино — город лабораторий над Окой. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Пущина",
+    "address": "г. Пущино",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "pushchino-title",
+  "name": "Биолог Пущина",
+  "legend": "Пущино — город учёных над Окой. Кто проехал его — биолог.",
+  "ritual": "Сфотографировать Оку с высокого берега.",
+  "pairVariant": "Биологи Пущина"
+ },
+ "sources": [
+  {
+   "title": "История Пущина — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia"
+  },
+  {
+   "title": "Наукограды — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.40653,
+     54.913
+    ],
+    [
+     37.407263,
+     54.911428
+    ],
+    [
+     37.409265,
+     54.910277
+    ],
+    [
+     37.627271,
+     54.817277
+    ],
+    [
+     37.63,
+     54.816856
+    ],
+    [
+     37.632729,
+     54.817277
+    ],
+    [
+     37.634726,
+     54.818428
+    ],
+    [
+     37.635457,
+     54.82
+    ],
+    [
+     37.630459,
+     54.834
+    ],
+    [
+     37.629728,
+     54.835572
+    ],
+    [
+     37.627729,
+     54.836723
+    ],
+    [
+     37.415235,
+     54.915923
+    ],
+    [
+     37.4125,
+     54.916344
+    ],
+    [
+     37.409765,
+     54.915923
+    ],
+    [
+     37.409265,
+     54.915723
+    ],
+    [
+     37.407263,
+     54.914572
+    ],
+    [
+     37.40653,
+     54.913
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

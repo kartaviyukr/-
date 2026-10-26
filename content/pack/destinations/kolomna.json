@@ -1,0 +1,310 @@
+{
+ "id": "kolomna",
+ "name": "Коломна",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "kolomna",
+ "distanceFromKremlinKm": 101.7,
+ "coords": {
+  "lat": 55.103,
+  "lon": 38.753
+ },
+ "intro": [
+  "Коломна — город кремля, калачей и пастилы у слияния Москвы-реки и Оки. Её кремль возведён в XVI веке по указу великого князя Василия III.",
+  "Самая известная башня — Маринкина; с ней связаны легенды о Марине Мнишек, жене Лжедмитрия, чья судьба трагически завершилась в Коломне. Внутрь Маринкиной и Грановитой башен пускают с экскурсией.",
+  "У Пятницких ворот работает музей «Калачная», где пекут калачи по старинному рецепту; на Посадской улице — музей «Коломенская пастила».",
+  "Маршрут: станция, кремль, Маринкина башня, «Калачная» и музей пастилы."
+ ],
+ "startPoint": {
+  "name": "Станция «Коломна»",
+  "coords": {
+   "lat": 55.103,
+   "lon": 38.753
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Коломна»",
+  "coords": {
+   "lat": 55.1032,
+   "lon": 38.7535
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 6.0,
+  "durationH": 4.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "kolomna-kreml",
+   "name": "Коломенский кремль",
+   "coords": {
+    "lat": 55.103,
+    "lon": 38.755
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Коломенский кремль возведён в XVI веке по указу великого князя Московского Василия III. Точные годы строительства мы по найденным источникам не сверили.",
+    "Внутри — соборная площадь и старые улицы. Одна из башен снаружи шестигранная, а внутри прямоугольная — как и Маринкина, она была сторожевой.",
+    "Идём к Маринкиной башне. Следующая точка маршрута — «Маринкина башня»."
+   ],
+   "facts": [
+    {
+     "text": "Кремль возведён в XVI веке по указу Василия III.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info",
+     "verified": true
+    },
+    {
+     "text": "Годы строительства не сверены.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info",
+     "verified": false
+    },
+    {
+     "text": "Одна из башен снаружи шестигранная, внутри прямоугольная.",
+     "sourceUrl": "https://experience.tripster.ru/articles/kolomenskij-kreml/",
+     "verified": true
+    },
+    {
+     "text": "Tripster рассказывает, что увидеть в кремле.",
+     "sourceUrl": "https://experience.tripster.ru/articles/kolomenskij-kreml/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://experience.tripster.ru/articles/kolomenskij-kreml/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "kolomna-marinkina",
+   "name": "Маринкина башня",
+   "coords": {
+    "lat": 55.104,
+    "lon": 38.752
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Маринкина башня — самая известная башня кремля. С ней связаны легенды о Марине Мнишек, жене Лжедмитрия II, чья судьба трагически завершилась в Коломне.",
+    "Внутрь Маринкиной и Грановитой башен можно попасть с экскурсией. Легенды мы пересказываем как легенды.",
+    "Идём к Пятницким воротам. Следующая точка маршрута — ««Калачная» и «Коломенская пастила»»."
+   ],
+   "facts": [
+    {
+     "text": "Маринкина башня — самая известная башня кремля.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info",
+     "verified": true
+    },
+    {
+     "text": "С башней связаны легенды о Марине Мнишек.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info",
+     "verified": false
+    },
+    {
+     "text": "Внутрь башен пускают с экскурсией.",
+     "sourceUrl": "https://experience.tripster.ru/articles/kolomenskij-kreml/",
+     "verified": true
+    },
+    {
+     "text": "Судьба Марины Мнишек трагически завершилась в Коломне — по туристическому источнику.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kolomna-kalachnaya",
+   "name": "«Калачная» и «Коломенская пастила»",
+   "coords": {
+    "lat": 55.102,
+    "lon": 38.756
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Музей «Калачная» у Пятницких ворот — это музей, магазин, кафе и культурное пространство; калачи здесь пекут по старинному рецепту, проводят мастер-классы.",
+    "Музей «Коломенская пастила» — на Посадской улице, 13а; там же можно увидеть фабрику пастилы купца Чуприкова. «Российская газета» советует Коломну как поездку «между калачом и пастилой».",
+    "Возвращаемся к станции. Финиш — Станция «Коломна»: Электрички Казанского направления."
+   ],
+   "facts": [
+    {
+     "text": "«Калачная» находится у Пятницких ворот.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry",
+     "verified": true
+    },
+    {
+     "text": "В «Калачной» проводят мастер-классы по выпечке.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry",
+     "verified": true
+    },
+    {
+     "text": "Музей «Коломенская пастила» — на Посадской, 13а.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry",
+     "verified": true
+    },
+    {
+     "text": "РГ: «Между калачом и пастилой».",
+     "sourceUrl": "https://rg.ru/2023/08/30/reg-cfo/chto-posmotret-v-kolomne-za-odin-den.html",
+     "verified": true
+    },
+    {
+     "text": "Т—Ж рассказывал, что посмотреть в Коломне за день.",
+     "sourceUrl": "https://t-j.ru/kolomna-one-day/",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Коломенская пастила",
+  "kind": "продукт",
+  "honestyNote": "Коломенская пастила — местный продукт, которому посвящён отдельный музей; её делают на фабрике купца Чуприкова. Калачи пекут в «Калачной». Часы и цены мы не проверяли.",
+  "story": [
+   "В Коломне есть музеи и пастилы, и калача — это главный «вкус места».",
+   "Купите пастилу и калач в музеях — проверьте часы работы. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Музей «Коломенская пастила»",
+    "address": "Коломна, ул. Посадская, 13а",
+    "verified": false,
+    "note": "Адрес по туристическому источнику."
+   },
+   {
+    "name": "Музей «Калачная»",
+    "address": "Коломна, у Пятницких ворот",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "kolomna-title",
+  "name": "Калачник Коломны",
+  "legend": "Коломна — город калачей и пастилы. Кто проехал её — калачник.",
+  "ritual": "Сфотографироваться с калачом у Пятницких ворот.",
+  "pairVariant": "Калачники Коломны"
+ },
+ "sources": [
+  {
+   "title": "Маринкина башня — Спутник8",
+   "url": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info"
+  },
+  {
+   "title": "Сувениры Коломны — Спутник8",
+   "url": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry"
+  },
+  {
+   "title": "Коломна за день — РГ",
+   "url": "https://rg.ru/2023/08/30/reg-cfo/chto-posmotret-v-kolomne-za-odin-den.html"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.746504,
+     55.104
+    ],
+    [
+     38.74724,
+     55.102428
+    ],
+    [
+     38.748241,
+     55.101428
+    ],
+    [
+     38.750252,
+     55.100277
+    ],
+    [
+     38.753252,
+     55.099277
+    ],
+    [
+     38.756,
+     55.098856
+    ],
+    [
+     38.758748,
+     55.099277
+    ],
+    [
+     38.760759,
+     55.100428
+    ],
+    [
+     38.761496,
+     55.102
+    ],
+    [
+     38.760759,
+     55.103572
+    ],
+    [
+     38.759759,
+     55.104572
+    ],
+    [
+     38.757748,
+     55.105723
+    ],
+    [
+     38.754748,
+     55.106723
+    ],
+    [
+     38.752,
+     55.107144
+    ],
+    [
+     38.749252,
+     55.106723
+    ],
+    [
+     38.74724,
+     55.105572
+    ],
+    [
+     38.746504,
+     55.104
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
