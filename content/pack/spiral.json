@@ -2807,7 +2807,7 @@
    "distanceFromKremlinKm": 89.2,
    "azimuthDeg": 266.9,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "ruza",
    "start": false,
    "insideMkad": false
   },
@@ -2825,7 +2825,7 @@
    "distanceFromKremlinKm": 91.3,
    "azimuthDeg": 313.9,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "vysokovsk",
    "start": false,
    "insideMkad": false
   },
@@ -2843,7 +2843,7 @@
    "distanceFromKremlinKm": 84.8,
    "azimuthDeg": 319.7,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "klin",
    "start": false,
    "insideMkad": false
   },
@@ -2861,7 +2861,7 @@
    "distanceFromKremlinKm": 90.6,
    "azimuthDeg": 352.7,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "zaprudnya",
    "start": false,
    "insideMkad": false
   },
@@ -2879,7 +2879,7 @@
    "distanceFromKremlinKm": 86.5,
    "azimuthDeg": 359.3,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "verbilki",
    "start": false,
    "insideMkad": false
   },
@@ -2897,7 +2897,7 @@
    "distanceFromKremlinKm": 81.8,
    "azimuthDeg": 24.9,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "peresvet",
    "start": false,
    "insideMkad": false
   },
@@ -2915,7 +2915,7 @@
    "distanceFromKremlinKm": 85.4,
    "azimuthDeg": 26.1,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "krasnozavodsk",
    "start": false,
    "insideMkad": false
   },
@@ -2933,7 +2933,7 @@
    "distanceFromKremlinKm": 81.1,
    "azimuthDeg": 28.7,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "bogorodskoe",
    "start": false,
    "insideMkad": false
   },

@@ -1,0 +1,296 @@
+{
+ "id": "krasnozavodsk",
+ "name": "Краснозаводск",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "sergievo-posadskiy",
+ "distanceFromKremlinKm": 85.4,
+ "coords": {
+  "lat": 56.44,
+  "lon": 38.229
+ },
+ "intro": [
+  "Краснозаводск — небольшой промышленный город на реке Кунье, примерно в 15 км от Сергиева Посада.",
+  "По туристическому источнику, город вырос рядом с Троицким снаряжательным заводом, построенным в 1915–1916 годах; химическое предприятие работает здесь и сегодня.",
+  "На улице Горького есть здание, связанное с химико-технологическим техникумом, открытым в 1945 году.",
+  "Маршрут: Сергиев Посад, дорога на север, Краснозаводск."
+ ],
+ "startPoint": {
+  "name": "Станция «Сергиев Посад»",
+  "coords": {
+   "lat": 56.308,
+   "lon": 38.138
+  },
+  "transport": "Электрички Ярославского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Сергиев Посад»",
+  "coords": {
+   "lat": 56.3082,
+   "lon": 38.1385
+  },
+  "transport": "Электрички Ярославского направления"
+ },
+ "route": {
+  "distanceKm": 36.0,
+  "durationH": 3.5,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "krasnozavodsk-zavod",
+   "name": "Город при заводе",
+   "coords": {
+    "lat": 56.44,
+    "lon": 38.229
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "По одному источнику, Краснозаводск возник рядом с Троицким снаряжательным заводом 1915–1916 годов; химическое предприятие работает до сих пор.",
+    "Территория завода закрыта — смотрим издалека.",
+    "Едем по городу. Следующая точка маршрута — «Улица Горького». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Город возник рядом с Троицким снаряжательным заводом 1915–1916 годов.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    },
+    {
+     "text": "Химическое предприятие работает до сих пор.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": true
+    },
+    {
+     "text": "Территория завода закрыта.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    },
+    {
+     "text": "Краснозаводск — промышленный город.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Режимная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnozavodsk-tekhnikum",
+   "name": "Улица Горького",
+   "coords": {
+    "lat": 56.441,
+    "lon": 38.23
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Здание на улице Горького связывают с химико-технологическим техникумом, открытым в 1945 году.",
+    "Краснозаводск — город инженеров и химиков, выросший при одном предприятии.",
+    "Едем к реке Кунье. Следующая точка маршрута — «Река Кунья». Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Химико-технологический техникум открыт в 1945 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": true
+    },
+    {
+     "text": "Здание техникума — на улице Горького.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": true
+    },
+    {
+     "text": "Описание города — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    },
+    {
+     "text": "Краснозаводск — в Сергиево-Посадском округе.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnozavodsk-kunya",
+   "name": "Река Кунья",
+   "coords": {
+    "lat": 56.439,
+    "lon": 38.228
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Краснозаводск стоит на реке Кунье. Берег — место для короткой паузы.",
+    "Обратный путь к Сергиеву Посаду долгий — рассчитайте силы.",
+    "Финиш — станция Сергиев Посад. Финиш — Станция «Сергиев Посад»: Электрички Ярославского направления. Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Краснозаводск стоит на реке Кунье.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": true
+    },
+    {
+     "text": "Город примерно в 15 км от Сергиева Посада.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус химика",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Краснозаводска нет. Тематическая замена — простой перекус в честь химиков завода. Это выбор составителя.",
+  "story": [
+   "Краснозаводск — город одного завода. Возьмите еду из Сергиева Посада. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Краснозаводска",
+    "address": "Сергиево-Посадский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "krasnozavodsk-title",
+  "name": "Химик Краснозаводска",
+  "legend": "Краснозаводск вырос при химическом заводе. Кто проехал его — химик.",
+  "ritual": "Сфотографировать реку Кунью.",
+  "pairVariant": "Химики Краснозаводска"
+ },
+ "sources": [
+  {
+   "title": "Краснозаводск — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnozavodsk/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.132332,
+     56.308
+    ],
+    [
+     38.133092,
+     56.306428
+    ],
+    [
+     38.135166,
+     56.305277
+    ],
+    [
+     38.138,
+     56.304856
+    ],
+    [
+     38.140834,
+     56.305277
+    ],
+    [
+     38.141334,
+     56.305477
+    ],
+    [
+     38.143408,
+     56.306628
+    ],
+    [
+     38.234926,
+     56.439428
+    ],
+    [
+     38.235688,
+     56.441
+    ],
+    [
+     38.234926,
+     56.442572
+    ],
+    [
+     38.232844,
+     56.443723
+    ],
+    [
+     38.23,
+     56.444144
+    ],
+    [
+     38.227156,
+     56.443723
+    ],
+    [
+     38.225074,
+     56.442572
+    ],
+    [
+     38.223075,
+     56.440572
+    ],
+    [
+     38.133092,
+     56.309572
+    ],
+    [
+     38.132332,
+     56.308
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

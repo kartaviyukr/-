@@ -1,0 +1,298 @@
+{
+ "id": "vysokovsk",
+ "name": "Высоковск",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "klin",
+ "distanceFromKremlinKm": 91.3,
+ "coords": {
+  "lat": 56.317,
+  "lon": 36.551
+ },
+ "intro": [
+  "Высоковск — маленький город Клинского округа, выросший вокруг крупной текстильной мануфактуры. Его характер — связь фабрики, рабочих казарм, общественных зданий и пруда.",
+  "Часть фабричных зданий, по одному источнику, превратили в музейные и арт-пространства. Активные или закрытые цеха — не туристические объекты.",
+  "Даты основания и имена владельцев мануфактуры мы в найденных источниках не нашли.",
+  "Маршрут: Клин, дорога на запад и Высоковск."
+ ],
+ "startPoint": {
+  "name": "Станция «Клин»",
+  "coords": {
+   "lat": 56.336,
+   "lon": 36.716
+  },
+  "transport": "Электрички Ленинградского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Клин»",
+  "coords": {
+   "lat": 56.3362,
+   "lon": 36.7165
+  },
+  "transport": "Электрички Ленинградского направления"
+ },
+ "route": {
+  "distanceKm": 22.0,
+  "durationH": 3.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "vysokovsk-fabrika",
+   "name": "Текстильная мануфактура",
+   "coords": {
+    "lat": 56.317,
+    "lon": 36.551
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Высоковск вырос вокруг крупной текстильной мануфактуры. Действующие, закрытые или ветхие корпуса — не туристические объекты, смотрим снаружи.",
+    "Даты основания мануфактуры и имена владельцев мы в источниках не нашли.",
+    "Едем к пруду. Следующая точка маршрута — «Пруд и казармы». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Город вырос вокруг текстильной мануфактуры.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": true
+    },
+    {
+     "text": "Фабричные корпуса — не туристические объекты.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": true
+    },
+    {
+     "text": "Даты и владельцы не найдены.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": false
+    },
+    {
+     "text": "Высоковск — в Клинском округе.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "vysokovsk-prud",
+   "name": "Пруд и казармы",
+   "coords": {
+    "lat": 56.318,
+    "lon": 36.553
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Облик города складывается из фабрики, рабочих казарм, общественных зданий и пруда.",
+    "Такие ансамбли — типичный пример подмосковного фабричного посёлка.",
+    "Едем к арт-пространствам. Следующая точка маршрута — «Фабричные арт-пространства». Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Облик — фабрика, казармы, общественные здания и пруд.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": true
+    },
+    {
+     "text": "Типичность ансамбля — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": false
+    },
+    {
+     "text": "Высоковск описан на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Описание пруда не проверено.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "vysokovsk-art",
+   "name": "Фабричные арт-пространства",
+   "coords": {
+    "lat": 56.3175,
+    "lon": 36.552
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "По одному источнику, часть старых фабричных зданий превратили в музеи и арт-пространства, где рассказывают о текстильном прошлом.",
+    "Работают ли они сейчас — уточняйте заранее.",
+    "Возвращаемся в Клин. Финиш — Станция «Клин»: Электрички Ленинградского направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Часть фабричных зданий стали музеями и арт-пространствами.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Режим работы не проверен.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Высоковск описан в Календаре путешествий.",
+     "sourceUrl": "https://www.calend.ru/travel/561/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Обед ткача",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Высоковска нет. Тематическая замена — простой обед работника текстильной фабрики. Это выбор составителя.",
+  "story": [
+   "Высоковск — город одной большой текстильной мануфактуры. Возьмите еду из Клина. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Высоковска",
+    "address": "Клинский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "vysokovsk-title",
+  "name": "Ткач Высоковска",
+  "legend": "Высоковск вырос вокруг мануфактуры. Кто проехал его — ткач.",
+  "ritual": "Сфотографировать фабричный корпус над прудом.",
+  "pairVariant": "Ткачи Высоковска"
+ },
+ "sources": [
+  {
+   "title": "Высоковск — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/"
+  },
+  {
+   "title": "Высоковск — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     36.545331,
+     56.317
+    ],
+    [
+     36.54609,
+     56.315428
+    ],
+    [
+     36.548165,
+     56.314277
+    ],
+    [
+     36.551,
+     56.313856
+    ],
+    [
+     36.716,
+     56.332856
+    ],
+    [
+     36.718836,
+     56.333277
+    ],
+    [
+     36.719336,
+     56.333477
+    ],
+    [
+     36.721412,
+     56.334628
+    ],
+    [
+     36.722172,
+     56.3362
+    ],
+    [
+     36.721412,
+     56.337772
+    ],
+    [
+     36.719336,
+     56.338923
+    ],
+    [
+     36.7165,
+     56.339344
+    ],
+    [
+     36.553,
+     56.321144
+    ],
+    [
+     36.550165,
+     56.320723
+    ],
+    [
+     36.548165,
+     56.319723
+    ],
+    [
+     36.54609,
+     56.318572
+    ],
+    [
+     36.545331,
+     56.317
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

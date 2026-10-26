@@ -1,0 +1,294 @@
+{
+ "id": "verbilki",
+ "name": "Вербилки",
+ "settlementType": "рабочий посёлок",
+ "mustHave": 2,
+ "regionId": "taldomskiy",
+ "distanceFromKremlinKm": 86.5,
+ "coords": {
+  "lat": 56.53,
+  "lon": 37.6
+ },
+ "intro": [
+  "Вербилки — посёлок знаменитого фарфорового завода. В 1766 году купец Франц Гарднер основал здесь, у реки Дубны, фарфоровый завод — первую частную фарфоровую мануфактуру в Подмосковье.",
+  "Сам Гарднер фарфористом не был: несколько лет изучал производство и искал подходящую глину. В 1856 году фабрика получила звание поставщика Императорского двора, а с 1891 года принадлежала М. С. Кузнецову.",
+  "После революции завод национализировали; сегодня производство работает под названием «Мануфактура Гарднеръ в Вербилках».",
+  "Маршрут короткий: станция, фарфоровый завод Гарднера и посёлок на Дубне."
+ ],
+ "startPoint": {
+  "name": "Станция «Вербилки»",
+  "coords": {
+   "lat": 56.53,
+   "lon": 37.6
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Вербилки»",
+  "coords": {
+   "lat": 56.5302,
+   "lon": 37.6005
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "route": {
+  "distanceKm": 4.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "verbilki-zavod",
+   "name": "Завод Гарднера",
+   "coords": {
+    "lat": 56.535,
+    "lon": 37.605
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 1766 году купец Ф. Я. Гарднер основал фарфоровый завод в селе Вербилки — его называли и Дмитровским заводом. Это первая частная фарфоровая мануфактура в подмосковном селе.",
+    "Гарднер не был фарфористом: он несколько лет изучал производство и искал глину, а завод поставил у реки Дубны.",
+    "Смотрим снаружи; фирменный магазин уточняйте. Следующая точка маршрута — «Поставщик двора»."
+   ],
+   "facts": [
+    {
+     "text": "В 1766 году Гарднер основал фарфоровый завод в Вербилках.",
+     "sourceUrl": "https://www.krugosvet.ru/enc/kultura_i_obrazovanie/izobrazitelnoe_iskusstvo/RUSSKAYA_KERAMIKA.html",
+     "verified": true
+    },
+    {
+     "text": "Завод называли Дмитровским.",
+     "sourceUrl": "https://www.krugosvet.ru/enc/kultura_i_obrazovanie/izobrazitelnoe_iskusstvo/RUSSKAYA_KERAMIKA.html",
+     "verified": true
+    },
+    {
+     "text": "Гарднер не был фарфористом.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": true
+    },
+    {
+     "text": "Завод стоит у реки Дубны.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": true
+    },
+    {
+     "text": "Это первая частная мануфактура в подмосковном селе — по одному источнику.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "verbilki-istoriya",
+   "name": "Поставщик двора",
+   "coords": {
+    "lat": 56.534,
+    "lon": 37.604
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1856 году фабрика Гарднера получила звание поставщика двора Его Императорского Величества. С 1891 года завод принадлежал М. С. Кузнецову, крупнейшему фарфоровому промышленнику.",
+    "После революции фабрику национализировали; она стала государственным Дмитровским фарфоровым заводом.",
+    "Едем по посёлку. Следующая точка маршрута — «Посёлок у Дубны»."
+   ],
+   "facts": [
+    {
+     "text": "В 1856 году фабрика стала поставщиком императорского двора.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": true
+    },
+    {
+     "text": "С 1891 года завод принадлежал М. С. Кузнецову.",
+     "sourceUrl": "https://www.krugosvet.ru/enc/kultura_i_obrazovanie/izobrazitelnoe_iskusstvo/RUSSKAYA_KERAMIKA.html",
+     "verified": true
+    },
+    {
+     "text": "После революции — государственный Дмитровский фарфоровый завод.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": true
+    },
+    {
+     "text": "Сегодня — «Мануфактура Гарднеръ в Вербилках».",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": true
+    },
+    {
+     "text": "В Подмосковье проходила выставка изделий фарфорового производства.",
+     "sourceUrl": "https://riamo.ru/news/kultura/vystavka-izdelij-farforovogo-proizvodstva-startuet-v-podmoskove-12-dekabrja/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "verbilki-posyolok",
+   "name": "Посёлок у Дубны",
+   "coords": {
+    "lat": 56.532,
+    "lon": 37.602
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Вербилки стоят на реке Дубне. Moskvich Mag включает их в поездку «за серыми журавлями, фарфором из Вербилок и пейзажами Пришвина».",
+    "Отсюда по спирали — Талдом и Журавлиная родина.",
+    "Возвращаемся к станции. Финиш — Станция «Вербилки»: Электрички Савёловского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Вербилки упоминаются в маршруте Moskvich Mag по Талдомскому краю.",
+     "sourceUrl": "https://moskvichmag.ru/?p=475266",
+     "verified": true
+    },
+    {
+     "text": "Посёлок стоит на Дубне.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": false
+    },
+    {
+     "text": "mos.ru рассказывал о фарфоре Гарднера.",
+     "sourceUrl": "https://www.mos.ru/news/item/39717073",
+     "verified": true
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Чай из гарднеровской чашки",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Вербилок нет. Тематическая замена — чай из фарфоровой чашки Гарднера, если её удастся купить. Это выбор составителя.",
+  "story": [
+   "Вербилки — это фарфор, а фарфор — это чаепитие.",
+   "Купите чашку в фирменном магазине, если он открыт. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Фирменный магазин мануфактуры",
+    "address": "Талдомский г.о., Вербилки",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "verbilki-title",
+  "name": "Фарфорист Вербилок",
+  "legend": "Здесь с 1766 года делают фарфор. Кто проехал Вербилки — фарфорист.",
+  "ritual": "Сфотографировать заводские ворота.",
+  "pairVariant": "Фарфористы Вербилок"
+ },
+ "sources": [
+  {
+   "title": "Русская керамика — Кругосвет",
+   "url": "https://www.krugosvet.ru/enc/kultura_i_obrazovanie/izobrazitelnoe_iskusstvo/RUSSKAYA_KERAMIKA.html"
+  },
+  {
+   "title": "История «Фарфоровой империи» — VK",
+   "url": "https://vk.ru/@dmmuseum-istoriya-farforovoi-imperii"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.594299,
+     56.53
+    ],
+    [
+     37.595063,
+     56.528428
+    ],
+    [
+     37.59715,
+     56.527277
+    ],
+    [
+     37.6,
+     56.526856
+    ],
+    [
+     37.60285,
+     56.527277
+    ],
+    [
+     37.603351,
+     56.527477
+    ],
+    [
+     37.605437,
+     56.528628
+    ],
+    [
+     37.609938,
+     56.533428
+    ],
+    [
+     37.610702,
+     56.535
+    ],
+    [
+     37.609938,
+     56.536572
+    ],
+    [
+     37.607851,
+     56.537723
+    ],
+    [
+     37.605,
+     56.538144
+    ],
+    [
+     37.602149,
+     56.537723
+    ],
+    [
+     37.600062,
+     56.536572
+    ],
+    [
+     37.595063,
+     56.531572
+    ],
+    [
+     37.594299,
+     56.53
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
