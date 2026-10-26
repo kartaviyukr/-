@@ -30,8 +30,8 @@ content/
 
 1. Уточнить координаты центра в `tools/places.tsv` (по OSM), запустить `python3 content/tools/build_spiral.py` —
    расстояния, азимуты, кольца и порядок спирали пересчитаются.
-2. Написать `pack/destinations/<id>.json` (id — транслит названия, как в `spiral.json`), добавить файл в
-   `manifest.json`, в `build_spiral.py` дописать название места в `WITH_CONTENT` (одно место — один маршрут), снова запустить `build_spiral.py`.
+2. Написать `pack/destinations/<id>.json` (id — транслит названия, как в `spiral.json`), снова запустить
+   `build_spiral.py` — он привяжет маршрут к месту и обновит `manifest.json` (одно место — один маршрут).
 3. `python3 content/tools/validate_content.py` — должно быть 0 ошибок.
 
 ## Границы мест

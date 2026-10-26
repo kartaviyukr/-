@@ -22,9 +22,6 @@ RING_NAMES = ["Москва внутри МКАД", "ближе 20 км", "20–
 # Спираль стартует с ЦАО — округа, где стоит Кремль.
 START = "ЦАО"
 
-# Места, для которых уже написан маршрут: название в таблице -> id файла в content/pack/destinations.
-WITH_CONTENT = {"Реутов": "reutov", "Котельники": "kotelniki", "Одинцово": "odintsovo", "Балашиха": "balashikha"}
-
 SUPERLATIVES = [
     ("biggest-city", "Самый большой город — Балашиха", "Балашиха", "Крупнейший город Подмосковья по населению"),
     ("oldest-city", "Самый старый город — Волоколамск (1135)", "Волоколамск", "Первое упоминание в летописи — 1135 год"),
@@ -83,9 +80,9 @@ def region_type(name):
 
 def main():
     rows = [l.rstrip("\n").split("\t") for l in open(os.path.join(HERE, "places.tsv"), encoding="utf-8") if l.strip()]
-    # Ссылка на маршрут ставится, только если файл маршрута уже есть в паке.
-    ready = {k: v for k, v in WITH_CONTENT.items()
-             if os.path.exists(os.path.join(ROOT, "pack", "destinations", v + ".json"))}
+    # Маршрут привязывается к месту, если в паке есть файл destinations/<id места>.json.
+    dest_dir = os.path.join(ROOT, "pack", "destinations")
+    ready = {f[:-5] for f in os.listdir(dest_dir) if f.endswith(".json")}
     places, regions = [], {}
     for num, mark, name, kind, region, *_rest in rows:
         lat, lon = float(_rest[2]), float(_rest[3])
@@ -105,7 +102,7 @@ def main():
             "distanceFromKremlinKm": round(d, 1),
             "azimuthDeg": 0.0 if start else round(bearing(KREMLIN, (lat, lon)), 1),
             "ring": ring_of(d, inside_mkad),
-            "destinationId": ready.get(name),
+            "destinationId": slug(name) if slug(name) in ready else None,
             "start": start,
             "insideMkad": inside_mkad,
             # Точные значения — для сортировки (в JSON идут округлённые).
@@ -143,6 +140,13 @@ def main():
         "superlatives": [{"id": i, "title": t, "placeId": by_name.get(n) if n else None, "note": note}
                          for i, t, n, note in SUPERLATIVES],
     }
+    # Манифест: все маршруты в порядке спирали.
+    manifest_path = os.path.join(ROOT, "pack", "manifest.json")
+    manifest = json.load(open(manifest_path, encoding="utf-8"))
+    manifest["destinations"] = [p["destinationId"] + ".json" for p in ordered if p["destinationId"]]
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, ensure_ascii=False, indent=2)
+        f.write("\n")
     with open(os.path.join(ROOT, "pack", "spiral.json"), "w", encoding="utf-8") as f:
         json.dump(pack, f, ensure_ascii=False, indent=1)
         f.write("\n")

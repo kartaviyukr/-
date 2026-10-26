@@ -449,7 +449,7 @@
    "distanceFromKremlinKm": 0.0,
    "azimuthDeg": 0.0,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "tsao",
    "start": true,
    "insideMkad": true
   },
@@ -467,7 +467,7 @@
    "distanceFromKremlinKm": 10.6,
    "azimuthDeg": 68.3,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "vao",
    "start": false,
    "insideMkad": true
   },
@@ -485,7 +485,7 @@
    "distanceFromKremlinKm": 10.8,
    "azimuthDeg": 128.0,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "yuvao",
    "start": false,
    "insideMkad": true
   },
@@ -503,7 +503,7 @@
    "distanceFromKremlinKm": 12.7,
    "azimuthDeg": 168.0,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "yuao",
    "start": false,
    "insideMkad": true
   },
@@ -521,7 +521,7 @@
    "distanceFromKremlinKm": 11.0,
    "azimuthDeg": 204.3,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "yuzao",
    "start": false,
    "insideMkad": true
   },
@@ -539,7 +539,7 @@
    "distanceFromKremlinKm": 10.7,
    "azimuthDeg": 247.5,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "zao",
    "start": false,
    "insideMkad": true
   },
@@ -557,7 +557,7 @@
    "distanceFromKremlinKm": 13.4,
    "azimuthDeg": 308.5,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "szao",
    "start": false,
    "insideMkad": true
   },
@@ -575,7 +575,7 @@
    "distanceFromKremlinKm": 11.2,
    "azimuthDeg": 328.7,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "sao",
    "start": false,
    "insideMkad": true
   },
@@ -593,7 +593,7 @@
    "distanceFromKremlinKm": 12.5,
    "azimuthDeg": 4.3,
    "ring": 0,
-   "destinationId": null,
+   "destinationId": "svao",
    "start": false,
    "insideMkad": true
   },
