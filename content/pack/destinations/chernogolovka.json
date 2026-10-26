@@ -1,0 +1,310 @@
+{
+ "id": "chernogolovka",
+ "name": "Черноголовка",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "chernogolovka",
+ "distanceFromKremlinKm": 55.5,
+ "coords": {
+  "lat": 56.01,
+  "lon": 38.379
+ },
+ "intro": [
+  "Черноголовка — город учёных в лесу, основанный в 1956 году как экспериментальная база Института химической физики на месте бывшего военного полигона.",
+  "Место выбрали академик Николай Семёнов и его ученик Фёдор Дубовицкий — для опытов с взрывчатыми веществами и ракетными топливами. В том же 1956 году Семёнов получил Нобелевскую премию по химии вместе с Сирилом Хиншелвудом — за теорию цепных реакций.",
+  "В 1962 году начали строить второй институт; со временем здесь появилось семь научных институтов. Сноб писал о Черноголовке как о городе модернистской архитектуры.",
+  "Маршрут: научный центр, квартира-музей Семёнова и лесная окраина."
+ ],
+ "startPoint": {
+  "name": "Остановка «Черноголовка»",
+  "coords": {
+   "lat": 56.01,
+   "lon": 38.379
+  },
+  "transport": "Автобусы от метро «Щёлковская» — уточняйте"
+ },
+ "endPoint": {
+  "name": "Остановка «Черноголовка»",
+  "coords": {
+   "lat": 56.0102,
+   "lon": 38.3795
+  },
+  "transport": "Автобусы до метро «Щёлковская»"
+ },
+ "route": {
+  "distanceKm": 6.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "chernogolovka-nauka",
+   "name": "Научный центр",
+   "coords": {
+    "lat": 56.012,
+    "lon": 38.385
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Черноголовка возникла в 1956 году как экспериментальная база Института химической физики. Энциклопедия называет дату основания «1956 (1958)», вторая дата, вероятно, относится к оформлению.",
+    "Полигоном по поручению Семёнова руководил Фёдор Дубовицкий, будущий член-корреспондент АН СССР. В 1962 году начали строить второй институт, позже их стало семь.",
+    "Территории институтов закрыты; едем по городу. Следующая точка маршрута — «Квартира-музей Семёнова»."
+   ],
+   "facts": [
+    {
+     "text": "Черноголовка основана в 1956 году как база Института химической физики.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "Место выбрали Семёнов и Дубовицкий.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "Энциклопедия указывает дату основания «1956 (1958)».",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": false
+    },
+    {
+     "text": "В 1962 году началось строительство второго института.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "Сейчас в Черноголовке семь научных институтов.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Территории институтов закрыты."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "chernogolovka-semenov",
+   "name": "Квартира-музей Семёнова",
+   "coords": {
+    "lat": 56.01,
+    "lon": 38.382
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Академик Николай Семёнов — основатель Черноголовки и Института химической физики. В 1956 году он получил Нобелевскую премию вместе с Сирилом Хиншелвудом за теорию цепных реакций.",
+    "РИАМО писало о квартире нобелевского лауреата — музее академика Семёнова в Черноголовке.",
+    "Часы работы музея уточняйте заранее. Следующая точка маршрута — «Город в лесу»."
+   ],
+   "facts": [
+    {
+     "text": "Семёнов — основатель Черноголовки.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "Семёнов получил Нобелевскую премию в 1956 году вместе с Хиншелвудом.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "Премия присуждена за теорию цепных реакций.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "В Черноголовке есть квартира-музей Семёнова.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы музея не проверены.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "chernogolovka-les",
+   "name": "Город в лесу",
+   "coords": {
+    "lat": 56.008,
+    "lon": 38.375
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Черноголовку называют городом модернистской архитектуры: жилые кварталы стоят прямо в лесу.",
+    "Афиша писала, что сюда стоит ехать на выходные — на астрофестиваль и science art. Один туристический источник называет 2008 год годом получения статуса наукограда; другие даты в источниках отличаются.",
+    "Возвращаемся к остановке. Финиш — Остановка «Черноголовка»: Автобусы до метро «Щёлковская»."
+   ],
+   "facts": [
+    {
+     "text": "Черноголовку называют городом модернистской архитектуры.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "В Черноголовке проходят астрофестиваль и science art.",
+     "sourceUrl": "https://daily.afisha.ru/cities/26052-astrofestival-i-science-art-zachem-ehat-v-chernogolovku-na-vyhodnye/",
+     "verified": true
+    },
+    {
+     "text": "Статус наукограда — 2008 год, по туристическому источнику.",
+     "sourceUrl": "https://teletype.in/@apfound/ykuzfeGdsI2",
+     "verified": false
+    },
+    {
+     "text": "Даты статусов города в источниках различаются.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Цепная реакция пирожков",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Черноголовки нет. Тематическая замена — пирожки, которые съедаются цепной реакцией. Это шутка составителя.",
+  "story": [
+   "Черноголовка живёт наукой и долгими разговорами за чаем.",
+   "Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Черноголовки",
+    "address": "г. Черноголовка",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "chernogolovka-title",
+  "name": "Химик Черноголовки",
+  "legend": "Здесь работал нобелевский лауреат Семёнов. Кто проехал Черноголовку — химик цепных реакций.",
+  "ritual": "Изобразить «взрыв» руками у научного центра.",
+  "pairVariant": "Химики Черноголовки"
+ },
+ "sources": [
+  {
+   "title": "Черноголовке — 70 — Сноб",
+   "url": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/"
+  },
+  {
+   "title": "Музей Семёнова — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/"
+  },
+  {
+   "title": "Черноголовка — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.369376,
+     56.008
+    ],
+    [
+     38.37013,
+     56.006428
+    ],
+    [
+     38.372188,
+     56.005277
+    ],
+    [
+     38.375,
+     56.004856
+    ],
+    [
+     38.377812,
+     56.005277
+    ],
+    [
+     38.384812,
+     56.007277
+    ],
+    [
+     38.386871,
+     56.008428
+    ],
+    [
+     38.389871,
+     56.010428
+    ],
+    [
+     38.390624,
+     56.012
+    ],
+    [
+     38.389871,
+     56.013572
+    ],
+    [
+     38.387812,
+     56.014723
+    ],
+    [
+     38.385,
+     56.015144
+    ],
+    [
+     38.382188,
+     56.014723
+    ],
+    [
+     38.376688,
+     56.012923
+    ],
+    [
+     38.376188,
+     56.012723
+    ],
+    [
+     38.372188,
+     56.010723
+    ],
+    [
+     38.37013,
+     56.009572
+    ],
+    [
+     38.369376,
+     56.008
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -1925,7 +1925,7 @@
    "distanceFromKremlinKm": 48.3,
    "azimuthDeg": 23.6,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "sofrino",
    "start": false,
    "insideMkad": false
   },
@@ -1943,7 +1943,7 @@
    "distanceFromKremlinKm": 50.9,
    "azimuthDeg": 39.5,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "krasnoarmeysk",
    "start": false,
    "insideMkad": false
   },
@@ -1961,7 +1961,7 @@
    "distanceFromKremlinKm": 40.4,
    "azimuthDeg": 56.7,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "grebnevo",
    "start": false,
    "insideMkad": false
   },
@@ -1979,7 +1979,7 @@
    "distanceFromKremlinKm": 55.5,
    "azimuthDeg": 58.5,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "chernogolovka",
    "start": false,
    "insideMkad": false
   },
@@ -1997,7 +1997,7 @@
    "distanceFromKremlinKm": 52.7,
    "azimuthDeg": 77.2,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "noginsk",
    "start": false,
    "insideMkad": false
   },
@@ -2015,7 +2015,7 @@
    "distanceFromKremlinKm": 51.9,
    "azimuthDeg": 85.6,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "elektrostal",
    "start": false,
    "insideMkad": false
   },
