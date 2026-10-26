@@ -1,0 +1,296 @@
+{
+ "id": "mozhaysk",
+ "name": "Можайск",
+ "settlementType": "город",
+ "mustHave": 2,
+ "regionId": "mozhayskiy",
+ "distanceFromKremlinKm": 103.2,
+ "coords": {
+  "lat": 55.505,
+  "lon": 36.033
+ },
+ "intro": [
+  "Можайск впервые упоминается в летописи под 1231 годом; сначала он входил в Смоленское княжество.",
+  "Первую крепость на Никольской горе, по одному источнику, построили ещё в XII веке; первые каменные постройки — Никольский собор, Никольские ворота и Воздвиженская церковь — появились в XIV веке. От кремля остались въездные ворота и 11-метровый участок стены; при Екатерине II крепость разбирали на кирпич.",
+  "Лужецкий монастырь основан в 1408 году преподобным Ферапонтом — это единственная сохранившаяся древняя обитель Можайска. В 1812 году в нём был штаб французских войск.",
+  "Маршрут: станция, Никольская гора с неоготическим собором и Лужецкий монастырь."
+ ],
+ "startPoint": {
+  "name": "Станция «Можайск»",
+  "coords": {
+   "lat": 55.505,
+   "lon": 36.033
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Можайск»",
+  "coords": {
+   "lat": 55.5052,
+   "lon": 36.0335
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "route": {
+  "distanceKm": 7.0,
+  "durationH": 3.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "mozhaysk-nikolskaya",
+   "name": "Никольская гора и собор",
+   "coords": {
+    "lat": 55.5,
+    "lon": 36.025
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Можайск впервые упоминается в летописи под 1231 годом и сначала входил в Смоленское княжество. Крепость на Никольской горе, по одному источнику, строили ещё в XII веке.",
+    "Первыми каменными постройками в XIV веке стали Никольский собор, Никольские ворота и Воздвиженская церковь. Сегодняшний собор — красивое неоготическое здание. От кремля сохранились въездные ворота и 11-метровый участок стены.",
+    "Подъём на гору крутой. Следующая точка маршрута — «Лужецкий монастырь»."
+   ],
+   "facts": [
+    {
+     "text": "Можайск впервые упомянут под 1231 годом.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Город входил в Смоленское княжество.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Крепость на Никольской горе — XII век, по одному источнику.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "От кремля сохранились ворота и 11-метровый участок стены.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "При Екатерине II крепость разбирали на кирпич.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "mozhaysk-luzhetsky",
+   "name": "Лужецкий монастырь",
+   "coords": {
+    "lat": 55.51,
+    "lon": 36.005
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Лужецкий монастырь основан в 1408 году преподобным Ферапонтом. Это единственная древняя можайская обитель, сохранившаяся до наших дней.",
+    "В 1812 году монастырь сильно пострадал: французские войска устроили здесь штаб.",
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Город после крепости». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "Лужецкий монастырь основан в 1408 году Ферапонтом.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "Это единственная сохранившаяся древняя обитель Можайска.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "В 1812 году здесь был французский штаб.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "Монастырь описан в паломническом справочнике.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "mozhaysk-upadok",
+   "name": "Город после крепости",
+   "coords": {
+    "lat": 55.505,
+    "lon": 36.03
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Упадок крепости начался после 1686 года, а при Екатерине II её начали разбирать на кирпичи.",
+    "Можайск — ворота к Бородинскому полю, у которого в спирали свой маршрут.",
+    "Возвращаемся к станции. Финиш — Станция «Можайск»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Упадок начался после 1686 года.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "Бородинское поле — рядом с Можайском.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "Можайск описан на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Можайское молоко",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого фирменного блюда мы не нашли. Тематическая замена — стакан молока или кефира: Можайский район известен молочными фермами, но и это мы не проверяли. Это выбор составителя.",
+  "story": [
+   "Можайск — ворота к Бородину, перед полем стоит подкрепиться.",
+   "Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Можайска",
+    "address": "г. Можайск",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "mozhaysk-title",
+  "name": "Можайский воевода",
+  "legend": "Можайск веками защищал западную дорогу к Москве. Кто проехал его — воевода.",
+  "ritual": "С Никольской горы сфотографировать собор.",
+  "pairVariant": "Можайские воеводы"
+ },
+ "sources": [
+  {
+   "title": "Можайск — Путёвка",
+   "url": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret"
+  },
+  {
+   "title": "История — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     35.999448,
+     55.51
+    ],
+    [
+     36.000192,
+     55.508428
+    ],
+    [
+     36.002224,
+     55.507277
+    ],
+    [
+     36.022225,
+     55.497277
+    ],
+    [
+     36.025,
+     55.496856
+    ],
+    [
+     36.027775,
+     55.497277
+    ],
+    [
+     36.029807,
+     55.498428
+    ],
+    [
+     36.038308,
+     55.503628
+    ],
+    [
+     36.039052,
+     55.5052
+    ],
+    [
+     36.038308,
+     55.506772
+    ],
+    [
+     36.036276,
+     55.507923
+    ],
+    [
+     36.007776,
+     55.512723
+    ],
+    [
+     36.005,
+     55.513144
+    ],
+    [
+     36.002224,
+     55.512723
+    ],
+    [
+     36.000192,
+     55.511572
+    ],
+    [
+     35.999448,
+     55.51
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

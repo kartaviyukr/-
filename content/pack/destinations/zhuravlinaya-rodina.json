@@ -1,0 +1,304 @@
+{
+ "id": "zhuravlinaya-rodina",
+ "name": "Журавлиная родина",
+ "settlementType": "природа",
+ "mustHave": 2,
+ "regionId": "taldomskiy",
+ "distanceFromKremlinKm": 116.7,
+ "coords": {
+  "lat": 56.8,
+  "lon": 37.73
+ },
+ "intro": [
+  "«Журавлиная родина» — заказник в Талдомском округе, крупнейшее в Центральной России место предотлётного скопления серых журавлей.",
+  "Осенью здесь собираются журавли перед перелётом на юг. Moskvich Mag зовёт сюда «за серыми журавлями и пейзажами Пришвина», а РИАМО рассказывает об экскурсиях на болото.",
+  "Это особо охраняемая территория: передвигаться только по разрешённым дорогам, к птицам не подходить.",
+  "Маршрут: Талдом, дорога на северо-восток и смотровая площадка."
+ ],
+ "startPoint": {
+  "name": "Станция «Талдом»",
+  "coords": {
+   "lat": 56.731,
+   "lon": 37.528
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Талдом»",
+  "coords": {
+   "lat": 56.7312,
+   "lon": 37.5285
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "route": {
+  "distanceKm": 30.0,
+  "durationH": 4.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "zhuravlinaya-rodina-doroga",
+   "name": "Дорога через поля",
+   "coords": {
+    "lat": 56.76,
+    "lon": 37.63
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "От Талдома едем на северо-восток через поля и перелески. Это пришвинские места — так их называет Moskvich Mag.",
+    "Дорогу мы на месте не проверяли — держитесь обочины.",
+    "Впереди — заказник. Следующая точка маршрута — «Скопление журавлей». Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Moskvich Mag связывает эти места с Пришвиным.",
+     "sourceUrl": "https://moskvichmag.ru/?p=475266",
+     "verified": true
+    },
+    {
+     "text": "Дорога не проверена.",
+     "sourceUrl": "https://moskvichmag.ru/?p=475266",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://moskvichmag.ru/?p=475266",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://moskvichmag.ru/?p=475266",
+     "verified": false
+    },
+    {
+     "text": "Заказник — в Талдомском округе.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "zhuravlinaya-rodina-zhuravli",
+   "name": "Скопление журавлей",
+   "coords": {
+    "lat": 56.8,
+    "lon": 37.73
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 40,
+   "guideStory": [
+    "«Журавлиная родина» — крупнейшее в Центральной России место предотлётного скопления серых журавлей. Лучшее время — осень.",
+    "РИАМО рассказывает об экскурсиях на болото. Смотрим с разрешённых площадок, с биноклем, тихо.",
+    "Не подходим к птицам и не уходим с дорог. Следующая точка маршрута — «Болота Дубненской низины». Формат остановки — «смотреть снаружи», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "Это крупнейшее в Центральной России место предотлётного скопления серых журавлей.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
+     "verified": true
+    },
+    {
+     "text": "Здесь проводят экскурсии на болото.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": true
+    },
+    {
+     "text": "Лучшее время — осень — оценка составителя.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
+     "verified": false
+    },
+    {
+     "text": "Правила посещения не проверены.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "warnings": [
+    "Особо охраняемая территория: только по дорогам."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "zhuravlinaya-rodina-bolota",
+   "name": "Болота Дубненской низины",
+   "coords": {
+    "lat": 56.79,
+    "lon": 37.7
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Журавли собираются на болотах и полях — тишина и простор здесь важнее любых построек.",
+    "Обратный путь к Талдому долгий; рассчитайте силы до заката.",
+    "Финиш — станция Талдом. Финиш — Станция «Талдом»: Электрички Савёловского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Журавли собираются на болотах и полях.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": false
+    },
+    {
+     "text": "Название низины мы не сверили.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Термос наблюдателя",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у заказника нет. Тематическая замена — горячий чай в термосе для долгого наблюдения за птицами. Это выбор составителя.",
+  "story": [
+   "Ждать журавлей приходится долго. Еду и воду берите из Талдома. Адреса, где купить, ниже — проверенные отмечены отдельно. Если найдёте настоящее местное блюдо — оно лучше нашей замены."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Талдома",
+    "address": "г. Талдом",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "zhuravlinaya-rodina-title",
+  "name": "Журавль",
+  "legend": "Здесь собираются журавли перед дальним перелётом. Кто доехал сюда — журавль перед стартом.",
+  "ritual": "Сфотографировать журавлиный клин в небе (если повезёт).",
+  "pairVariant": "Журавли"
+ },
+ "sources": [
+  {
+   "title": "Талдомский район — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD"
+  },
+  {
+   "title": "Журавли и сапоги — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.522269,
+     56.731
+    ],
+    [
+     37.523036,
+     56.729428
+    ],
+    [
+     37.525134,
+     56.728277
+    ],
+    [
+     37.528,
+     56.727856
+    ],
+    [
+     37.530866,
+     56.728277
+    ],
+    [
+     37.632868,
+     56.757277
+    ],
+    [
+     37.732871,
+     56.797277
+    ],
+    [
+     37.734973,
+     56.798428
+    ],
+    [
+     37.735742,
+     56.8
+    ],
+    [
+     37.734973,
+     56.801572
+    ],
+    [
+     37.732871,
+     56.802723
+    ],
+    [
+     37.73,
+     56.803144
+    ],
+    [
+     37.727129,
+     56.802723
+    ],
+    [
+     37.69713,
+     56.792723
+    ],
+    [
+     37.525634,
+     56.733923
+    ],
+    [
+     37.525134,
+     56.733723
+    ],
+    [
+     37.523036,
+     56.732572
+    ],
+    [
+     37.522269,
+     56.731
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

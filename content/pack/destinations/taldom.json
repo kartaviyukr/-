@@ -1,0 +1,298 @@
+{
+ "id": "taldom",
+ "name": "Талдом",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "taldomskiy",
+ "distanceFromKremlinKm": 109.0,
+ "coords": {
+  "lat": 56.731,
+  "lon": 37.528
+ },
+ "intro": [
+  "Талдом — столица «башмачной страны». Первое упоминание — 1677 год, когда Талдом был деревней.",
+  "К началу XX века здесь процветал обувной промысел; Савёловская железная дорога, проведённая в 1901 году, помогла ему. Перед Первой мировой кустари выпускали, по РИАМО, около 10 миллионов пар обуви в год. Сапожок изображён на гербе.",
+  "Историко-литературный музей в доме купца Волкова рассказывает о «башмачной стране» и писателях края; рядом — памятник Салтыкову-Щедрину. Краеведческий музей хранит коллекцию старинной обуви.",
+  "Маршрут короткий: станция, историко-литературный музей и центр города."
+ ],
+ "startPoint": {
+  "name": "Станция «Талдом»",
+  "coords": {
+   "lat": 56.731,
+   "lon": 37.528
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Талдом»",
+  "coords": {
+   "lat": 56.7312,
+   "lon": 37.5285
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "route": {
+  "distanceKm": 4.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "taldom-muzey",
+   "name": "Историко-литературный музей",
+   "coords": {
+    "lat": 56.73,
+    "lon": 37.53
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Историко-литературный музей работает в доме купца Дмитрия Волкова и рассказывает о «башмачной стране» и писателях края. Рядом стоит памятник Салтыкову-Щедрину.",
+    "Краеведческий музей хранит коллекцию старинной обуви.",
+    "Часы работы уточняйте. Следующая точка маршрута — «Башмачная страна». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится в доме купца Волкова.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/taldom/",
+     "verified": true
+    },
+    {
+     "text": "Музей рассказывает о «башмачной стране» и писателях.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/taldom/",
+     "verified": true
+    },
+    {
+     "text": "Рядом — памятник Салтыкову-Щедрину.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/taldom/",
+     "verified": true
+    },
+    {
+     "text": "Краеведческий музей хранит старинную обувь.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/taldom/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "taldom-bashmaki",
+   "name": "Башмачная страна",
+   "coords": {
+    "lat": 56.731,
+    "lon": 37.532
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "К началу XX века Талдом называли столицей башмачной страны. Савёловская дорога 1901 года помогла промыслу; перед Первой мировой кустари выпускали около 10 миллионов пар обуви в год.",
+    "Формально Талдом оставался селом до 1918 года, хотя по населению давно был городом. Сапожок на гербе — память о промысле.",
+    "Едем по центру. Следующая точка маршрута — «Центр Талдома»."
+   ],
+   "facts": [
+    {
+     "text": "Талдом называли столицей башмачной страны.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": true
+    },
+    {
+     "text": "Савёловская дорога проведена через Талдом в 1901 году.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": true
+    },
+    {
+     "text": "Около 10 миллионов пар обуви в год — по РИАМО.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": false
+    },
+    {
+     "text": "Сапожок на гербе символизирует обувной промысел.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BE%D0%BA%D1%80%D1%83%D0%B3%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Талдом оставался селом до 1918 года.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "taldom-tsentr",
+   "name": "Центр Талдома",
+   "coords": {
+    "lat": 56.7305,
+    "lon": 37.529
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Первое документальное упоминание Талдома — 1677 год, тогда это была деревня.",
+    "Отсюда недалеко до заказника «Журавлиная родина» — у него в спирали свой маршрут.",
+    "Возвращаемся к станции. Финиш — Станция «Талдом»: Электрички Савёловского направления. Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Первое упоминание — 1677 год.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC",
+     "verified": true
+    },
+    {
+     "text": "Журавлиная родина — в Талдомском округе.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC",
+     "verified": false
+    },
+    {
+     "text": "Талдом описан на travelto.ru.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/taldom/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Сапожный перекус",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Талдома нет. Тематическая замена — простой перекус сапожника за работой. Это выбор составителя.",
+  "story": [
+   "Талдом жил обувным ремеслом. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Талдома",
+    "address": "г. Талдом",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "taldom-title",
+  "name": "Башмачник Талдома",
+  "legend": "Талдом — столица башмачной страны. Кто проехал его — башмачник.",
+  "ritual": "Сфотографировать свою обувь у музея.",
+  "pairVariant": "Башмачники Талдома"
+ },
+ "sources": [
+  {
+   "title": "Прогулки по Талдому — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/"
+  },
+  {
+   "title": "Талдом — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/taldom/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.522269,
+     56.731
+    ],
+    [
+     37.523036,
+     56.729428
+    ],
+    [
+     37.525134,
+     56.728277
+    ],
+    [
+     37.527134,
+     56.727277
+    ],
+    [
+     37.53,
+     56.726856
+    ],
+    [
+     37.532866,
+     56.727277
+    ],
+    [
+     37.534866,
+     56.728277
+    ],
+    [
+     37.536964,
+     56.729428
+    ],
+    [
+     37.537731,
+     56.731
+    ],
+    [
+     37.536964,
+     56.732572
+    ],
+    [
+     37.534866,
+     56.733723
+    ],
+    [
+     37.532,
+     56.734144
+    ],
+    [
+     37.5285,
+     56.734344
+    ],
+    [
+     37.525634,
+     56.733923
+    ],
+    [
+     37.525134,
+     56.733723
+    ],
+    [
+     37.523036,
+     56.732572
+    ],
+    [
+     37.522269,
+     56.731
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

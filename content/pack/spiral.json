@@ -3131,7 +3131,7 @@
    "distanceFromKremlinKm": 103.2,
    "azimuthDeg": 255.2,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "mozhaysk",
    "start": false,
    "insideMkad": false
   },
@@ -3149,7 +3149,7 @@
    "distanceFromKremlinKm": 115.8,
    "azimuthDeg": 257.9,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "borodinskoe-pole",
    "start": false,
    "insideMkad": false
   },
@@ -3167,7 +3167,7 @@
    "distanceFromKremlinKm": 116.2,
    "azimuthDeg": 261.3,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "kolotskiy-monastyr",
    "start": false,
    "insideMkad": false
   },
@@ -3185,7 +3185,7 @@
    "distanceFromKremlinKm": 101.3,
    "azimuthDeg": 270.5,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "ruzskoe-vodokhranilishche",
    "start": false,
    "insideMkad": false
   },
@@ -3203,7 +3203,7 @@
    "distanceFromKremlinKm": 108.2,
    "azimuthDeg": 287.6,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "volokolamsk",
    "start": false,
    "insideMkad": false
   },
@@ -3221,7 +3221,7 @@
    "distanceFromKremlinKm": 112.1,
    "azimuthDeg": 292.7,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "yaropolets",
    "start": false,
    "insideMkad": false
   },
@@ -3239,7 +3239,7 @@
    "distanceFromKremlinKm": 113.0,
    "azimuthDeg": 345.9,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "dubna",
    "start": false,
    "insideMkad": false
   },
@@ -3257,7 +3257,7 @@
    "distanceFromKremlinKm": 109.0,
    "azimuthDeg": 357.1,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "taldom",
    "start": false,
    "insideMkad": false
   },
@@ -3275,7 +3275,7 @@
    "distanceFromKremlinKm": 116.7,
    "azimuthDeg": 3.3,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "zhuravlinaya-rodina",
    "start": false,
    "insideMkad": false
   },
