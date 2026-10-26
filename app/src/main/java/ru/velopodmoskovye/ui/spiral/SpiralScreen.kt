@@ -82,11 +82,25 @@ fun SpiralScreen(
                             FilterChip(selected = state.filter == f, onClick = { vm.setFilter(f) }, label = { Text(f.label) })
                         }
                     }
+                    Text("Сортировка", style = MaterialTheme.typography.labelMedium, modifier = Modifier.padding(top = 8.dp))
+                    Row(Modifier.horizontalScroll(rememberScrollState()).padding(top = 4.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                        SpiralSort.entries.forEach { s ->
+                            FilterChip(selected = state.sort == s, onClick = { vm.setSort(s) }, label = { Text(s.label) })
+                        }
+                    }
+                    if (state.waitingLocation) {
+                        Text(
+                            "Жду геопозицию: разрешите доступ к местоположению на экране карты.",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.error,
+                        )
+                    }
                 }
             }
             val rows = state.rows
             items(rows, key = { it.place.id }) { row ->
-                val ringHeader = rows.indexOf(row).let { i -> i == 0 || rows[i - 1].place.ring != row.place.ring }
+                val ringHeader = state.sort == SpiralSort.SPIRAL &&
+                    rows.indexOf(row).let { i -> i == 0 || rows[i - 1].place.ring != row.place.ring }
                 Column {
                     if (ringHeader) RingHeader(row.place.ring)
                     PlaceRow(row, state.activeDestinationId) {
@@ -151,11 +165,16 @@ private fun PlaceRow(row: SpiralRow, activeId: String?, onClick: () -> Unit) {
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                when {
-                    p.start -> Text("старт спирали · маршрут ${if (ready) "готов" else "готовится"}", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
-                    ready -> Text("маршрут готов", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
-                    else -> Text("маршрут готовится", style = MaterialTheme.typography.labelSmall)
-                }
+                val routeLine = buildList {
+                    if (p.start) add("старт спирали")
+                    if (row.routeKm != null) add("маршрут ${Format.km(row.routeKm)}, точек: ${row.stopsCount}") else add("маршрут готовится")
+                    row.fromMeKm?.let { add("от меня ${Format.km(it)}") }
+                }.joinToString(" · ")
+                Text(
+                    routeLine,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = if (ready) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+                )
                 row.progress?.takeIf { it.started && !it.complete }?.let {
                     LinearProgressIndicator(progress = { it.fraction }, modifier = Modifier.fillMaxWidth().padding(top = 4.dp))
                 }

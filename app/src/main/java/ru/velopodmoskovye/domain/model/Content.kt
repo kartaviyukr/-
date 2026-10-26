@@ -103,6 +103,8 @@ data class Destination(
     val title: Title,
     val sources: List<Source>,
     val lastChecked: String = "",
+    /** 1 — старый короткий маршрут, 2 — полноценный велодень: 40–70 км, 8–12 точек. */
+    val routeVersion: Int = 1,
 )
 
 @Serializable

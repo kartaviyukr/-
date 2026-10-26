@@ -10,6 +10,8 @@ import ru.velopodmoskovye.domain.route.RouteOptimizer
 import ru.velopodmoskovye.domain.route.RouteTiming
 import ru.velopodmoskovye.domain.spiral.SpiralBuilder
 import ru.velopodmoskovye.ui.map.MapData
+import ru.velopodmoskovye.ui.spiral.SpiralSort
+import ru.velopodmoskovye.ui.spiral.SpiralViewModel
 import java.io.File
 import java.time.LocalDate
 
@@ -44,12 +46,18 @@ class ContentPackTest {
     @Test
     fun destinationsAreUsable() {
         for (d in pack.destinations.values) {
-            assertTrue(d.id, d.stops.size >= 3)
+            val v2 = d.routeVersion == 2
+            if (v2) {
+                assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 8..12)
+                assertTrue("${d.id}: ${d.route.distanceKm} км", d.route.distanceKm in 40.0..70.0)
+            } else {
+                assertTrue(d.id, d.stops.size >= 3)
+            }
             assertTrue(d.id, d.stops.zipWithNext().all { (a, b) -> a.order < b.order })
             d.stops.forEach { s ->
-                assertTrue(s.id, s.facts.size in 5..12)
+                assertTrue(s.id, s.facts.size in (if (v2) 2 else 5)..12)
                 assertTrue(s.id, s.facts.all { it.sourceUrl.startsWith("http") })
-                assertTrue(s.id, s.guideStory.size in 3..6)
+                assertTrue(s.id, s.guideStory.size in (if (v2) 2 else 3)..6)
             }
             assertTrue(d.id, d.intro.size in 3..6)
             val blocks = GoogleMapsLinks.blocks(MapData.routePoints(d))
@@ -61,5 +69,19 @@ class ContentPackTest {
             val titles = ProgressCalculator.earnedTitles(pack.spiral, pack.destinations, d.stops.filter { !it.optional }.map { it.id }.toSet())
             assertTrue(titles.any { it.id == "place:${d.id}" })
         }
+    }
+
+    @Test
+    fun sortingByRouteLengthAndDistance() {
+        val rows = SpiralViewModel.buildRows(pack, emptySet(), me = pack.spiral.places.last().coords)
+        val long = SpiralViewModel.sorted(rows, SpiralSort.ROUTE_LONG).mapNotNull { it.routeKm }
+        assertEquals(long.sortedDescending(), long)
+        val short = SpiralViewModel.sorted(rows, SpiralSort.ROUTE_SHORT).mapNotNull { it.routeKm }
+        assertEquals(short.sorted(), short)
+        val near = SpiralViewModel.sorted(rows, SpiralSort.NEAR_ME)
+        assertEquals(pack.spiral.places.last().id, near.first().place.id)
+        val far = SpiralViewModel.sorted(rows, SpiralSort.KREMLIN_FAR).map { it.place.distanceFromKremlinKm }
+        assertEquals(far.sortedDescending(), far)
+        assertEquals(pack.spiral.places.map { it.id }, SpiralViewModel.sorted(rows, SpiralSort.SPIRAL).map { it.place.id })
     }
 }

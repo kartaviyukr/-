@@ -31,6 +31,9 @@ IMPERIAL = re.compile(r"\b(миль|мили|миля|милях|футов|фу
 errors, warnings = [], []
 
 
+LONG_ROUTES = []
+
+
 def err(where, msg):
     errors.append(f"{where}: {msg}")
 
@@ -121,6 +124,12 @@ def check_destination(d, fname, spiral_ids):
     if d.get("boundarySource") not in ("osm", "approx"):
         err(w, "boundarySource: osm или approx")
     paragraphs(d, "intro", w, 3, 6)
+    # Версия 2 — полноценный велодень: 40–70 км и 8–12 точек. Версия 1 — старые короткие маршруты.
+    v2 = d.get("routeVersion") == 2
+    if v2:
+        LONG_ROUTES.append(did)
+    else:
+        warn(w, "старый короткий маршрут (routeVersion 1) — переписать на 40–70 км и 8–12 точек")
     start = end = None
     for key in ("startPoint", "endPoint"):
         rp = need(d, key, dict, w)
@@ -136,6 +145,9 @@ def check_destination(d, fname, spiral_ids):
     if route:
         rw = f"{w}.route"
         need(route, "distanceKm", float, rw)
+        km = route.get("distanceKm")
+        if v2 and isinstance(km, (int, float)) and not (40 <= km <= 70):
+            err(rw, f"distanceKm {km}: маршрут версии 2 должен быть 40–70 км")
         need(route, "durationH", float, rw)
         if route.get("difficulty") not in DIFFICULTY:
             err(rw, "difficulty: лёгкий/средний/сложный")
@@ -147,7 +159,9 @@ def check_destination(d, fname, spiral_ids):
             if len(b.get("line", [])) < 2:
                 err(rw, f"барьер «{b.get('name')}» — нужна линия из ≥ 2 точек")
     stops = need(d, "stops", list, w) or []
-    if len(stops) < 3:
+    if v2 and not (8 <= len(stops) <= 12):
+        err(w, f"{len(stops)} точек, нужно 8–12")
+    elif len(stops) < 3:
         err(w, "меньше 3 точек")
     orders = [s.get("order") for s in stops]
     if orders != sorted(orders) or len(set(orders)) != len(orders):
@@ -163,7 +177,7 @@ def check_destination(d, fname, spiral_ids):
             err(sw, f"id точки должен начинаться с «{did}-»")
         need(s, "name", str, sw)
         pt = point(s, "coords", sw)
-        if pt and center and dist_km(pt, center) > 15:
+        if pt and center and dist_km(pt, center) > (30 if v2 else 15):
             warn(sw, f"точка в {dist_km(pt, center):.1f} км от центра места")
         if s.get("kind") not in STOP_KIND:
             err(sw, f"kind «{s.get('kind')}» не из списка")
@@ -181,10 +195,14 @@ def check_destination(d, fname, spiral_ids):
                     err(sw, f"schedule: неизвестный день {day}")
                 if hours != "closed" and not HOURS.match(hours):
                     err(sw, f"schedule.{day}: «{hours}» — нужен формат 10:00-18:00 или closed")
-        paragraphs(s, "guideStory", sw, 3, 6)
+        if v2:
+            paragraphs(s, "guideStory", sw, 2, 6, min_chars=200)
+        else:
+            paragraphs(s, "guideStory", sw, 3, 6)
         facts = need(s, "facts", list, sw) or []
-        if not (5 <= len(facts) <= 12):
-            err(sw, f"{len(facts)} фактов, нужно 5–12")
+        lo_f = 2 if v2 else 5
+        if not (lo_f <= len(facts) <= 12):
+            err(sw, f"{len(facts)} фактов, нужно {lo_f}–12")
         for i, f in enumerate(facts):
             fw = f"{sw}.facts[{i}]"
             need(f, "text", str, fw)
@@ -200,7 +218,7 @@ def check_destination(d, fname, spiral_ids):
             warn(sw, f"больше половины фактов не проверены ({unverified}/{len(facts)})")
     if start and stops and stops[0].get("coords"):
         first = (stops[0]["coords"]["lat"], stops[0]["coords"]["lon"])
-        if dist_km(start, first) > 5:
+        if dist_km(start, first) > (15 if v2 else 5):
             warn(w, "старт дальше 5 км от первой точки")
     dish = need(d, "dish", dict, w)
     if dish:
@@ -274,7 +292,8 @@ def main():
         print("ПРЕДУПРЕЖДЕНИЕ", wmsg)
     for e in errors:
         print("ОШИБКА", e)
-    print(f"Мест с контентом: {len(files)}; ошибок: {len(errors)}; предупреждений: {len(warnings)}")
+    print(f"Мест с контентом: {len(files)}; длинных маршрутов (40–70 км): {len(LONG_ROUTES)}; "
+          f"ошибок: {len(errors)}; предупреждений: {len(warnings)}")
     sys.exit(1 if errors else 0)
 
 
