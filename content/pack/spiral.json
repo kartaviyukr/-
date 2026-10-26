@@ -1115,7 +1115,7 @@
    "distanceFromKremlinKm": 21.8,
    "azimuthDeg": 78.7,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "pekhra-yakovlevskoe",
    "start": false,
    "insideMkad": false
   },
@@ -1133,7 +1133,7 @@
    "distanceFromKremlinKm": 35.5,
    "azimuthDeg": 79.3,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "staraya-kupavna",
    "start": false,
    "insideMkad": false
   },
@@ -1151,7 +1151,7 @@
    "distanceFromKremlinKm": 24.5,
    "azimuthDeg": 90.4,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "zheleznodorozhnyy",
    "start": false,
    "insideMkad": false
   },
@@ -1169,7 +1169,7 @@
    "distanceFromKremlinKm": 37.8,
    "azimuthDeg": 95.7,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "elektrougli",
    "start": false,
    "insideMkad": false
   },
