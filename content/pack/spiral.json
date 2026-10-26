@@ -1025,7 +1025,7 @@
    "distanceFromKremlinKm": 35.3,
    "azimuthDeg": 48.9,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "fryazino",
    "start": false,
    "insideMkad": false
   },
@@ -1043,7 +1043,7 @@
    "distanceFromKremlinKm": 29.8,
    "azimuthDeg": 51.0,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "shchelkovo",
    "start": false,
    "insideMkad": false
   },
@@ -1061,7 +1061,7 @@
    "distanceFromKremlinKm": 38.7,
    "azimuthDeg": 69.8,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "losino-petrovskiy-i-glinki",
    "start": false,
    "insideMkad": false
   },
@@ -1079,7 +1079,7 @@
    "distanceFromKremlinKm": 37.1,
    "azimuthDeg": 74.5,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "monino-muzey-vvs",
    "start": false,
    "insideMkad": false
   },
