@@ -1,0 +1,7 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+# TDLib собирается в CI и кладётся сюда
+tdlib/

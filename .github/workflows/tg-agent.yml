@@ -1,0 +1,92 @@
+name: TG Agent APK
+
+on:
+  push:
+    paths:
+      - "tg-agent/**"
+      - ".github/workflows/tg-agent.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  # Версия TDLib, под которую написан код (1.8.69). Меняйте вместе с проверкой кода.
+  TDLIB_COMMIT: ea3f69ce11aef458bfbb09869b809ede4447486f
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Restore TDLib
+        id: tdlib-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: tdlib-out
+          key: tdlib-android-arm64-${{ env.TDLIB_COMMIT }}
+
+      - name: Build TDLib for Android (arm64, ~1 час при первом запуске)
+        if: steps.tdlib-cache.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gperf php-cli
+          git clone https://github.com/tdlib/td.git td-src
+          cd td-src
+          git checkout "$TDLIB_COMMIT"
+          cd example/android
+          ./fetch-sdk.sh
+          # Собираем только arm64-v8a — этого достаточно для современных телефонов и вдвое быстрее.
+          sed -i 's/for ABI in arm64-v8a armeabi-v7a x86_64 x86 ; do/for ABI in arm64-v8a ; do/' build-openssl.sh
+          ./build-openssl.sh
+          ./build-tdlib.sh '' '' '' '' '' '' 'arm64-v8a'
+          mkdir -p "$GITHUB_WORKSPACE/tdlib-out"
+          cp -r tdlib/java tdlib/libs "$GITHUB_WORKSPACE/tdlib-out/"
+          ls -R "$GITHUB_WORKSPACE/tdlib-out" | head -30
+
+      - name: Save TDLib
+        if: steps.tdlib-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: tdlib-out
+          key: tdlib-android-arm64-${{ env.TDLIB_COMMIT }}
+
+      - name: Put TDLib into project
+        run: |
+          mkdir -p tg-agent/tdlib
+          cp -r tdlib-out/* tg-agent/tdlib/
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+
+      - name: Build APK
+        working-directory: tg-agent
+        run: gradle assembleDebug --no-daemon --stacktrace
+
+      - name: Rename APK
+        run: cp tg-agent/app/build/outputs/apk/debug/app-debug.apk tg-agent.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tg-agent-apk
+          path: tg-agent.apk
+
+      - name: Publish to Releases (latest build)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="tg-agent-latest"
+          gh release delete "$TAG" --yes --cleanup-tag || true
+          gh release create "$TAG" tg-agent.apk \
+            --prerelease \
+            --target "$GITHUB_SHA" \
+            --title "TG Агент — последняя сборка" \
+            --notes "Сборка из ветки ${GITHUB_REF_NAME}, коммит ${GITHUB_SHA::7}. Скачайте tg-agent.apk на телефон и установите."
