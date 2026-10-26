@@ -27,7 +27,7 @@ object TestData {
         kind: String = "смотреть снаружи", visit: Int = 10, schedule: Schedule? = null,
         radius: Int? = null, daylight: Boolean = false,
     ) = Stop(
-        id = id, order = order, name = id, coords = GeoPoint(lat, lon), zoneRadiusM = radius, kind = kind,
+        id = id, order = order, name = id, coords = GeoPoint(lat, lon), coordsVerified = true, zoneRadiusM = radius, kind = kind,
         optional = optional, visitMinutes = visit, schedule = schedule, daylightOnly = daylight,
         guideStory = listOf("…"), facts = emptyList(),
     )

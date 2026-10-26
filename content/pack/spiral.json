@@ -2534,7 +2534,7 @@
    "distanceFromKremlinKm": 22.8,
    "azimuthDeg": 249.0,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "odintsovo",
    "finish": false
   },
   {
@@ -2959,7 +2959,7 @@
    "distanceFromKremlinKm": 20.6,
    "azimuthDeg": 76.1,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "balashikha",
    "finish": false
   },
   {
@@ -2976,7 +2976,7 @@
    "distanceFromKremlinKm": 21.8,
    "azimuthDeg": 78.7,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "balashikha",
    "finish": false
   },
   {
@@ -3129,7 +3129,7 @@
    "distanceFromKremlinKm": 19.1,
    "azimuthDeg": 125.6,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "kotelniki",
    "finish": false
   },
   {
@@ -3418,7 +3418,7 @@
    "distanceFromKremlinKm": 16.6,
    "azimuthDeg": 71.2,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "balashikha",
    "finish": false
   },
   {
@@ -3435,7 +3435,7 @@
    "distanceFromKremlinKm": 14.9,
    "azimuthDeg": 86.5,
    "ring": 6,
-   "destinationId": null,
+   "destinationId": "reutov",
    "finish": false
   },
   {

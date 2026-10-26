@@ -115,6 +115,13 @@ fun StopScreen(onBack: () -> Unit, vm: StopViewModel = hiltViewModel()) {
                     InfoLine("Билеты", stop.ticketNote)
                     InfoLine("Велосипед", stop.bikeParkingNote)
                     InfoLine("Зона отметки", "${Geofence.radiusFor(stop)} м" + if (stop.zonePolygon != null) " или контур объекта" else "")
+                    if (!stop.coordsVerified) {
+                        Text(
+                            "Координаты точки приблизительные и ещё не сверены по карте — зона отметки расширена.",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
                 }
                 stop.warnings.forEach { WarningCard(it) }
                 if (tts.ready) {

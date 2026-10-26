@@ -32,6 +32,10 @@ class ProgressTest {
         assertFalse(Geofence.isInside(s, fixAt(0.0, 10.0, acc = 300.0)))
         // Радиус из настроек.
         assertTrue(Geofence.isInside(s, fixAt(0.0, 280.0), defaultRadiusM = 300))
+        // Несверенные координаты — зона шире.
+        val rough = s.copy(coordsVerified = false)
+        assertTrue(Geofence.isInside(rough, fixAt(0.0, 290.0)))
+        assertEquals(Geofence.UNVERIFIED_MIN_RADIUS_M, Geofence.radiusFor(rough))
     }
 
     @Test

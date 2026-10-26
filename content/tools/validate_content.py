@@ -165,6 +165,8 @@ def check_destination(d, fname, spiral_ids):
         if s.get("kind") not in STOP_KIND:
             err(sw, f"kind «{s.get('kind')}» не из списка")
         need(s, "visitMinutes", int, sw)
+        if s.get("coordsVerified") is not True:
+            warn(sw, "координаты не сверены по OSM")
         r = s.get("zoneRadiusM")
         if r is not None and not (30 <= r <= 5000):
             err(sw, "zoneRadiusM вне 30–5000 м")

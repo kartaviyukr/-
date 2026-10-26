@@ -15,6 +15,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -33,11 +34,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import ru.velopodmoskovye.data.location.LocationTracker
+import ru.velopodmoskovye.domain.geo.Geo
 import ru.velopodmoskovye.data.content.ContentRepository
 import ru.velopodmoskovye.data.db.TitleAwardEntity
 import ru.velopodmoskovye.data.progress.ProgressRepository
@@ -57,7 +62,15 @@ import javax.inject.Inject
 
 data class MetaGoal(val name: String, val done: Int, val total: Int)
 
+sealed interface KremlinFinish {
+    data object Locked : KremlinFinish
+    data object Ready : KremlinFinish
+    data object Done : KremlinFinish
+}
+
 data class TitlesUiState(
+    val kremlin: KremlinFinish = KremlinFinish.Locked,
+    val kremlinMessage: String? = null,
     val awards: List<TitleAwardEntity> = emptyList(),
     val placeTitles: Map<String, Title> = emptyMap(),
     val stats: Stats? = null,
@@ -70,10 +83,31 @@ data class TitlesUiState(
 @HiltViewModel
 class TitlesViewModel @Inject constructor(
     content: ContentRepository,
-    progress: ProgressRepository,
+    private val progress: ProgressRepository,
     settings: SettingsRepository,
+    private val tracker: LocationTracker,
 ) : ViewModel() {
-    val state: StateFlow<TitlesUiState> = combine(
+    private val kremlinMessage = MutableStateFlow<String?>(null)
+
+    /** Финиш спирали: отметка у Кремля, когда пройдены все места. На велосипеде в Кремль не въехать — отмечаемся рядом. */
+    fun finishAtKremlin() {
+        viewModelScope.launch {
+            val fix = tracker.current() ?: tracker.last.value
+            if (fix == null) {
+                kremlinMessage.value = "Нет координат. Включите геолокацию."
+                return@launch
+            }
+            val d = Geo.distanceM(fix.point, Geo.KREMLIN)
+            if (d > KREMLIN_FINISH_M) {
+                kremlinMessage.value = "До Кремля ${Format.meters(d)}. Отметка возможна не дальше ${Format.meters(KREMLIN_FINISH_M)}."
+                return@launch
+            }
+            progress.markVisited(ProgressCalculator.KREMLIN_STOP_ID, ProgressCalculator.KREMLIN_STOP_ID, fix, "manual", d)
+            kremlinMessage.value = null
+        }
+    }
+
+    private val base: StateFlow<TitlesUiState> = combine(
         flow { emit(content.pack()) }, progress.titles, progress.visitedIds, progress.trackedMeters, settings.settings,
     ) { pack, awards, visited, meters, s ->
         val completeDest = pack.destinations.values.filter { ProgressCalculator.destination(it, visited).complete }
@@ -113,8 +147,20 @@ class TitlesViewModel @Inject constructor(
             goals = goals,
             superlatives = pack.spiral.superlatives.map { it to (it.placeId != null && it.placeId in placeDone) },
             pairMode = s.pairMode,
+            kremlin = when {
+                ProgressCalculator.KREMLIN_STOP_ID in visited -> KremlinFinish.Done
+                route.isNotEmpty() && placeDone.size == route.size -> KremlinFinish.Ready
+                else -> KremlinFinish.Locked
+            },
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), TitlesUiState())
+
+    val state: StateFlow<TitlesUiState> = combine(base, kremlinMessage) { s, m -> s.copy(kremlinMessage = m) }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), TitlesUiState())
+
+    companion object {
+        const val KREMLIN_FINISH_M = 1_000.0
+    }
 }
 
 @Composable
@@ -160,6 +206,21 @@ fun TitlesScreen(vm: TitlesViewModel = hiltViewModel()) {
                         Icon(Icons.Filled.Share, "Поделиться")
                     }
                 }
+            }
+        }
+        item {
+            SectionTitle("Финиш спирали — Кремль")
+            when (state.kremlin) {
+                KremlinFinish.Locked -> Text(
+                    "Откроется, когда будут пройдены все места спирали.",
+                    style = MaterialTheme.typography.bodySmall,
+                )
+                KremlinFinish.Ready -> Column {
+                    Text("Все места пройдены! Доберитесь до Кремля и отметьтесь рядом с ним.", style = MaterialTheme.typography.bodyMedium)
+                    Button(onClick = vm::finishAtKremlin, modifier = Modifier.padding(top = 6.dp)) { Text("Я у Кремля") }
+                    state.kremlinMessage?.let { Text(it, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall) }
+                }
+                KremlinFinish.Done -> Text("Спираль пройдена. Финиш у Кремля отмечен.", color = ProgressGreen, fontWeight = FontWeight.SemiBold)
             }
         }
         item { SectionTitle("Мета-звания") }

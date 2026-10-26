@@ -131,6 +131,8 @@ data class Stop(
     val order: Int,
     val name: String,
     val coords: GeoPoint,
+    /** Координаты сверены по OSM. Пока нет — зона отметки шире (см. Geofence). */
+    val coordsVerified: Boolean = false,
     val address: String? = null,
     val zoneRadiusM: Int? = null,
     val zonePolygon: GeoPolygon? = null,

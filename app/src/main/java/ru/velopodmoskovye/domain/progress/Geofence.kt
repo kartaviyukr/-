@@ -14,7 +14,13 @@ object Geofence {
     /** Ручная отметка «я здесь» разрешена, только если до точки не дальше этого. */
     const val MANUAL_MAX_DISTANCE_M = 1_000.0
 
-    fun radiusFor(stop: Stop, defaultRadiusM: Int = DEFAULT_RADIUS_M): Int = stop.zoneRadiusM ?: defaultRadiusM
+    /** Пока координаты точки не сверены по карте, зона не уже этого радиуса. */
+    const val UNVERIFIED_MIN_RADIUS_M = 300
+
+    fun radiusFor(stop: Stop, defaultRadiusM: Int = DEFAULT_RADIUS_M): Int {
+        val r = stop.zoneRadiusM ?: defaultRadiusM
+        return if (stop.coordsVerified) r else maxOf(r, UNVERIFIED_MIN_RADIUS_M)
+    }
 
     fun isInside(stop: Stop, fix: Fix, defaultRadiusM: Int = DEFAULT_RADIUS_M): Boolean {
         if (fix.accuracyM > MAX_ACCURACY_M) return false
