@@ -2033,7 +2033,7 @@
    "distanceFromKremlinKm": 45.2,
    "azimuthDeg": 108.7,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "gzhel",
    "start": false,
    "insideMkad": false
   },
@@ -2051,7 +2051,7 @@
    "distanceFromKremlinKm": 43.6,
    "azimuthDeg": 117.9,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "ramenskoe",
    "start": false,
    "insideMkad": false
   },
@@ -2069,7 +2069,7 @@
    "distanceFromKremlinKm": 54.5,
    "azimuthDeg": 131.6,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "bronnitsy",
    "start": false,
    "insideMkad": false
   },
@@ -2087,7 +2087,7 @@
    "distanceFromKremlinKm": 42.0,
    "azimuthDeg": 158.7,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "konstantinovo",
    "start": false,
    "insideMkad": false
   },
@@ -2105,7 +2105,7 @@
    "distanceFromKremlinKm": 49.3,
    "azimuthDeg": 161.9,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "belye-stolby",
    "start": false,
    "insideMkad": false
   },
@@ -2123,7 +2123,7 @@
    "distanceFromKremlinKm": 43.6,
    "azimuthDeg": 187.3,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "klimovsk",
    "start": false,
    "insideMkad": false
   },
@@ -2141,7 +2141,7 @@
    "distanceFromKremlinKm": 55.1,
    "azimuthDeg": 209.5,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "voronovo",
    "start": false,
    "insideMkad": false
   },
@@ -2159,7 +2159,7 @@
    "distanceFromKremlinKm": 42.6,
    "azimuthDeg": 210.1,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "krasnaya-pakhra",
    "start": false,
    "insideMkad": false
   },
@@ -2177,7 +2177,7 @@
    "distanceFromKremlinKm": 47.1,
    "azimuthDeg": 214.0,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "mikhaylovskoe",
    "start": false,
    "insideMkad": false
   },
@@ -2195,7 +2195,7 @@
    "distanceFromKremlinKm": 56.0,
    "azimuthDeg": 236.2,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "kalininets",
    "start": false,
    "insideMkad": false
   },
@@ -2213,7 +2213,7 @@
    "distanceFromKremlinKm": 41.2,
    "azimuthDeg": 236.3,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "aprelevka",
    "start": false,
    "insideMkad": false
   },
@@ -2231,7 +2231,7 @@
    "distanceFromKremlinKm": 47.9,
    "azimuthDeg": 236.9,
    "ring": 3,
-   "destinationId": null,
+   "destinationId": "selyatino",
    "start": false,
    "insideMkad": false
   },
