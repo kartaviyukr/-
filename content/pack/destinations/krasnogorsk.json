@@ -1,0 +1,306 @@
+{
+ "id": "krasnogorsk",
+ "name": "Красногорск",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "krasnogorsk",
+ "distanceFromKremlinKm": 20.0,
+ "coords": {
+  "lat": 55.831,
+  "lon": 37.33
+ },
+ "intro": [
+  "Красногорск — город у северо-западной границы Москвы, выросший вокруг предприятий оптики. Даты основания в источниках расходятся: один называет 1932 год, другой говорит об объединении соседних деревень в начале XX века.",
+  "Главная старинная достопримечательность — усадьба Знаменское-Губайлово, которой владели Волынские, а затем князья Долгоруковы-Крымские. В городе работает Мемориальный музей немецких антифашистов.",
+  "Маршрут: усадьба Знаменское-Губайлово, центр и музей."
+ ],
+ "startPoint": {
+  "name": "Станция «Красногорская»",
+  "coords": {
+   "lat": 55.818,
+   "lon": 37.334
+  },
+  "transport": "Электрички Рижского направления / МЦД-2"
+ },
+ "endPoint": {
+  "name": "Станция «Красногорская»",
+  "coords": {
+   "lat": 55.8182,
+   "lon": 37.3345
+  },
+  "transport": "Электрички Рижского направления / МЦД-2"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "krasnogorsk-usadba",
+   "name": "Усадьба Знаменское-Губайлово",
+   "coords": {
+    "lat": 55.83,
+    "lon": 37.33
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Усадьба Знаменское-Губайлово изначально принадлежала Волынским, а затем перешла князьям Долгоруковым-Крымским.",
+    "РИАМО писало, что здесь планировали открыть краеведческий музей в формате экспериментариума и музей дачной жизни, а в другой статье — о «масонских балах» и «сосне Бальмонта» в усадьбе символистов. Нынешний статус проектов мы не проверяли.",
+    "Обходим усадебный парк и едем в центр. Следующая точка маршрута — «Центр и история города»."
+   ],
+   "facts": [
+    {
+     "text": "Усадьба принадлежала Волынским, затем Долгоруковым-Крымским.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "В усадьбе планировали музей дачной жизни и экспериментариум.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
+     "verified": true
+    },
+    {
+     "text": "РИАМО писало о «сосне Бальмонта» и усадьбе символистов.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/masonskie-baly-i-sosna-balmonta-kakie-tajny-skryvaet-usadba-simvolistov-v-krasnogorske-xl/",
+     "verified": true
+    },
+    {
+     "text": "Текущий статус музейных проектов не проверен.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
+     "verified": false
+    },
+    {
+     "text": "Координаты усадьбы приблизительные.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnogorsk-tsentr",
+   "name": "Центр и история города",
+   "coords": {
+    "lat": 55.831,
+    "lon": 37.32
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Город вырос вокруг предприятий оптики. Дата основания спорна: 1932 год по одному источнику и объединение деревень в начале XX века — по другому.",
+    "В годы войны в городе создали батальоны народного ополчения, истребительный батальон и трудовые отряды.",
+    "Едем к музею на улице Народного Ополчения. Следующая точка маршрута — «Музей немецких антифашистов»."
+   ],
+   "facts": [
+    {
+     "text": "Красногорск связан с оптическими предприятиями.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Дата основания города в источниках расходится.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    },
+    {
+     "text": "В войну создавались батальоны народного ополчения.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Куда сходить в Красногорске — подборка KudaGo.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": true
+    },
+    {
+     "text": "Красногорск граничит с Москвой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnogorsk-muzey",
+   "name": "Музей немецких антифашистов",
+   "coords": {
+    "lat": 55.825,
+    "lon": 37.315
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Мемориальный музей немецких антифашистов находится на улице Народного Ополчения, 15. Он рассказывает об антифашистском движении немцев в годы войны.",
+    "В коллекции — немецкие знаки и награды, листовки антифашистских организаций, газеты и униформа. По данным справочника, музей ежегодно принимает более 8000 посетителей.",
+    "Часы работы уточняйте; после музея возвращаемся к станции. Финиш — Станция «Красногорская»: Электрички Рижского направления / МЦД-2."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится на ул. Народного Ополчения, 15.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "В коллекции — знаки, награды, листовки, газеты и униформа.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "Музей принимает более 8000 посетителей в год.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    },
+    {
+     "text": "Музей — филиал Музея Победы.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус оптика",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Красногорска нет. Тематическая замена — перекус в центре города. Это выбор составителя.",
+  "story": [
+   "Красногорск — город оптиков, усадеб и военных музеев.",
+   "Кафе в центре мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Красногорска",
+    "address": "г. Красногорск",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "krasnogorsk-title",
+  "name": "Объектив Красногорска",
+  "legend": "Красногорск вырос вокруг оптики. Кто проехал его — объектив, всё видящий чётко.",
+  "ritual": "Сфотографировать усадьбу через сложенные «биноклем» ладони.",
+  "pairVariant": "Объективы Красногорска"
+ },
+ "sources": [
+  {
+   "title": "История Красногорска — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
+  },
+  {
+   "title": "Музей немецких антифашистов — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
+  },
+  {
+   "title": "Знаменское-Губайлово — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.309403,
+     55.825
+    ],
+    [
+     37.310153,
+     55.823428
+    ],
+    [
+     37.312201,
+     55.822277
+    ],
+    [
+     37.331202,
+     55.815277
+    ],
+    [
+     37.334,
+     55.814856
+    ],
+    [
+     37.336798,
+     55.815277
+    ],
+    [
+     37.337298,
+     55.815477
+    ],
+    [
+     37.339346,
+     55.816628
+    ],
+    [
+     37.340096,
+     55.8182
+    ],
+    [
+     37.335598,
+     55.83
+    ],
+    [
+     37.334848,
+     55.831572
+    ],
+    [
+     37.332799,
+     55.832723
+    ],
+    [
+     37.33,
+     55.833144
+    ],
+    [
+     37.32,
+     55.834144
+    ],
+    [
+     37.317201,
+     55.833723
+    ],
+    [
+     37.315152,
+     55.832572
+    ],
+    [
+     37.310153,
+     55.826572
+    ],
+    [
+     37.309403,
+     55.825
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
