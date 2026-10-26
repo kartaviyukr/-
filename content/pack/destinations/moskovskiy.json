@@ -1,0 +1,305 @@
+{
+ "id": "moskovskiy",
+ "name": "Московский",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "moskva-nao",
+ "distanceFromKremlinKm": 23.6,
+ "coords": {
+  "lat": 55.6,
+  "lon": 37.355
+ },
+ "intro": [
+  "Московский — город в Новой Москве у Киевского шоссе. Его развитие началось в 1955 году, когда здесь открыли научно-производственный комплекс Института полиомиелита и вирусных энцефалитов под руководством академика Михаила Чумакова.",
+  "Рядом — Филимонки: в 1929 году образовали Филимонковский сельсовет, а усадьба в Филимонках, по данным Moskvich Mag, основана князем Голицыным и сгорела в 2006 году; власти объявили о подготовке к реставрации.",
+  "Маршрут: центр Московского, институт Чумакова снаружи и Филимонки."
+ ],
+ "startPoint": {
+  "name": "Метро «Филатов Луг»",
+  "coords": {
+   "lat": 55.601,
+   "lon": 37.408
+  },
+  "transport": "Сокольническая линия"
+ },
+ "endPoint": {
+  "name": "Филимонки",
+  "coords": {
+   "lat": 55.57,
+   "lon": 37.33
+  },
+  "transport": "Автобусы — уточняйте"
+ },
+ "route": {
+  "distanceKm": 10.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "линейный",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "moskovskiy-tsentr",
+   "name": "Центр Московского",
+   "coords": {
+    "lat": 55.6,
+    "lon": 37.355
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Посёлок Московский начал развиваться в 1955 году вокруг научно-производственного комплекса института.",
+    "С 2012 года Московский — часть Москвы в Новомосковском округе. Историю его городского статуса мы в источниках не нашли и не придумываем.",
+    "Едем к институту. Следующая точка маршрута — «Институт Чумакова»."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок Московский начал развиваться в 1955 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Развитие связано с институтом полиомиелита.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Дата получения статуса города нами не проверена.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Новая Москва присоединена 1 июля 2012 года.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/filimonki/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "moskovskiy-chumakov",
+   "name": "Институт Чумакова",
+   "coords": {
+    "lat": 55.598,
+    "lon": 37.34
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1955 году здесь открыли комплекс Института полиомиелита и вирусных энцефалитов. Руководил им академик Михаил Чумаков.",
+    "Сегодня институт носит имя Чумакова. Территория закрыта — смотрим снаружи.",
+    "Дальше по дороге едем на юг, к посёлку Филимонки и сгоревшей усадьбе. Следующая точка маршрута — «Филимонки и сгоревшая усадьба»."
+   ],
+   "facts": [
+    {
+     "text": "В 1955 году открыт комплекс Института полиомиелита и вирусных энцефалитов.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Руководил институтом академик Михаил Чумаков.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Территория института закрыта.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Институт носит имя Чумакова.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Это научно-производственный комплекс.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Режимная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "moskovskiy-filimonki",
+   "name": "Филимонки и сгоревшая усадьба",
+   "coords": {
+    "lat": 55.57,
+    "lon": 37.33
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 1929 году образовали Филимонковский сельсовет в Краснопахорском районе; в 1954 году к нему присоединили земли Передельцевского сельсовета.",
+    "Усадьбу в Филимонках, основанную, по Moskvich Mag, князем Голицыным в 1801 году, уничтожил пожар 2006 года. Теперь её собираются восстанавливать.",
+    "До 2012 года Филимонки относились к Ленинскому району Московской области. Здесь маршрут заканчивается."
+   ],
+   "facts": [
+    {
+     "text": "Филимонковский сельсовет образован в 1929 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/filimonkovskoe/",
+     "verified": true
+    },
+    {
+     "text": "В 1954 году включены территории Передельцевского сельсовета.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/filimonkovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба в Филимонках сгорела в 2006 году.",
+     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба основана в 1801 году князем Голицыным.",
+     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
+     "verified": false
+    },
+    {
+     "text": "Власти объявили о подготовке к реставрации.",
+     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Руины: внутрь не заходить."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Термос вирусолога",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Московского нет. Тематическая замена — горячий чай в термосе. Это шутка составителя.",
+  "story": [
+   "Московский — город при институте вакцин.",
+   "Перекусите у метро — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе у метро «Филатов Луг»",
+    "address": "Москва",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "moskovskiy-title",
+  "name": "Привитый путник",
+  "legend": "Московский вырос при институте, создавшем вакцину от полиомиелита. Кто проехал его — привит от лени.",
+  "ritual": "У института показать большой палец вверх и сфотографироваться.",
+  "pairVariant": "Привитые путники"
+ },
+ "sources": [
+  {
+   "title": "Московский — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/moskovskij/"
+  },
+  {
+   "title": "Филимонковское — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/filimonkovskoe/"
+  },
+  {
+   "title": "Усадьба в Филимонках — Moskvich Mag",
+   "url": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.324439,
+     55.57
+    ],
+    [
+     37.325184,
+     55.568428
+    ],
+    [
+     37.32722,
+     55.567277
+    ],
+    [
+     37.33,
+     55.566856
+    ],
+    [
+     37.33278,
+     55.567277
+    ],
+    [
+     37.410783,
+     55.598277
+    ],
+    [
+     37.41282,
+     55.599428
+    ],
+    [
+     37.413565,
+     55.601
+    ],
+    [
+     37.41282,
+     55.602572
+    ],
+    [
+     37.410783,
+     55.603723
+    ],
+    [
+     37.408,
+     55.604144
+    ],
+    [
+     37.355,
+     55.603144
+    ],
+    [
+     37.34,
+     55.601144
+    ],
+    [
+     37.337218,
+     55.600723
+    ],
+    [
+     37.335181,
+     55.599572
+    ],
+    [
+     37.334435,
+     55.598
+    ],
+    [
+     37.324439,
+     55.57
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -1,0 +1,294 @@
+{
+ "id": "lesnoy-gorodok",
+ "name": "Лесной Городок",
+ "settlementType": "дачный посёлок",
+ "mustHave": 1,
+ "regionId": "odintsovskiy",
+ "distanceFromKremlinKm": 28.4,
+ "coords": {
+  "lat": 55.64,
+  "lon": 37.21
+ },
+ "intro": [
+  "Лесной Городок — дачный посёлок Одинцовского округа на Киевском направлении. По петиции жителей, здесь живёт более 30 тысяч человек — посёлок давно перерос дачный масштаб.",
+  "Историю основания посёлка мы в открытых источниках не нашли и честно оставляем её пустой.",
+  "Зато у станции МЦД-4 «Лесной Городок» благоустроили территорию и обустроили 13 тропинок. Маршрут — лесная прогулка от станции."
+ ],
+ "startPoint": {
+  "name": "Станция «Лесной Городок»",
+  "coords": {
+   "lat": 55.64,
+   "lon": 37.21
+  },
+  "transport": "Электрички Киевского направления / МЦД-4"
+ },
+ "endPoint": {
+  "name": "Станция «Лесной Городок»",
+  "coords": {
+   "lat": 55.6402,
+   "lon": 37.2105
+  },
+  "transport": "Электрички Киевского направления / МЦД-4"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "lesnoy-gorodok-stantsiya",
+   "name": "Станция МЦД-4",
+   "coords": {
+    "lat": 55.64,
+    "lon": 37.21
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "У станции МЦД-4 «Лесной Городок» благоустроили территорию и обустроили 13 тропинок — так жителям проще дойти до платформы.",
+    "Станция стоит на Киевском направлении, недалеко от Внукова, уже в Одинцовском округе.",
+    "От станции по одной из новых дорожек едем в сам посёлок. Следующая точка маршрута — «Дачный посёлок»."
+   ],
+   "facts": [
+    {
+     "text": "У станции Лесной Городок благоустроили территорию и обустроили 13 троп.",
+     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
+     "verified": true
+    },
+    {
+     "text": "Станция входит в МЦД-4.",
+     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
+     "verified": true
+    },
+    {
+     "text": "Дату открытия станции мы не нашли.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
+     "verified": false
+    },
+    {
+     "text": "Лесной Городок — в Одинцовском округе.",
+     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_lesnoy_gorodok",
+     "verified": true
+    },
+    {
+     "text": "Координаты станции приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "lesnoy-gorodok-posyolok",
+   "name": "Дачный посёлок",
+   "coords": {
+    "lat": 55.642,
+    "lon": 37.215
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Лесной Городок называют дачным посёлком, но, по петиции жителей, здесь живёт более 30 тысяч человек. Это не официальная статистика.",
+    "Дачный посёлок в России — поселение из домов, изначально не рассчитанных на круглогодичную жизнь. Здесь рядом с дачами выросли многоэтажные кварталы.",
+    "Едем к лесу. Следующая точка маршрута — «Лесная петля»."
+   ],
+   "facts": [
+    {
+     "text": "По петиции, в Лесном Городке живёт более 30 тысяч человек.",
+     "sourceUrl": "https://www.change.org/p/постройте-поликлинику-в-лесном-городке",
+     "verified": false
+    },
+    {
+     "text": "Дачный посёлок — поселение из домов не для круглогодичной жизни.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%94%D0%B0%D1%87%D0%BD%D1%8B%D0%B9_%D0%BF%D0%BE%D1%81%D1%91%D0%BB%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "В посёлке строятся многоквартирные жилые комплексы.",
+     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_lesnoy_gorodok",
+     "verified": true
+    },
+    {
+     "text": "История основания посёлка не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
+     "verified": false
+    },
+    {
+     "text": "Лесной Городок описан в англоязычной Википедии.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "lesnoy-gorodok-les",
+   "name": "Лесная петля",
+   "coords": {
+    "lat": 55.638,
+    "lon": 37.22
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Название посёлка говорит само за себя: вокруг лес. Пройдёмся по лесной петле и вернёмся к станции.",
+    "Конкретные лесные тропы мы на месте не проверяли — держитесь накатанных дорожек и не заезжайте в болотистые места.",
+    "Возвращаемся к платформе МЦД-4. Финиш — Станция «Лесной Городок»: Электрички Киевского направления / МЦД-4."
+   ],
+   "facts": [
+    {
+     "text": "Вокруг посёлка — лес.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
+     "verified": false
+    },
+    {
+     "text": "Тропы на месте не проверены.",
+     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
+     "verified": false
+    },
+    {
+     "text": "Станция находится в Одинцовском округе.",
+     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
+     "verified": true
+    },
+    {
+     "text": "Рядом с посёлком строятся новые кварталы.",
+     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_lesnoy_gorodok",
+     "verified": true
+    },
+    {
+     "text": "Координаты петли приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Лесной пикник",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Лесного Городка нет. Тематическая замена — пикник в лесу. Это выбор составителя.",
+  "story": [
+   "Лесной Городок — про лес, тишину и прогулки по тропам.",
+   "Возьмите еду с собой. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины у станции Лесной Городок",
+    "address": "Одинцовский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "lesnoy-gorodok-title",
+  "name": "Лесовик Городка",
+  "legend": "Лесной Городок вырос среди деревьев. Кто проехал его — лесовик.",
+  "ritual": "Сфотографировать самое высокое дерево у тропы.",
+  "pairVariant": "Лесовики Городка"
+ },
+ "sources": [
+  {
+   "title": "Lesnoy Gorodok — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok"
+  },
+  {
+   "title": "МЦД Лесной Городок — РИАМО",
+   "url": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.204429,
+     55.64
+    ],
+    [
+     37.205176,
+     55.638428
+    ],
+    [
+     37.207215,
+     55.637277
+    ],
+    [
+     37.217215,
+     55.635277
+    ],
+    [
+     37.22,
+     55.634856
+    ],
+    [
+     37.222785,
+     55.635277
+    ],
+    [
+     37.224824,
+     55.636428
+    ],
+    [
+     37.22557,
+     55.638
+    ],
+    [
+     37.224824,
+     55.639572
+    ],
+    [
+     37.219825,
+     55.643572
+    ],
+    [
+     37.217786,
+     55.644723
+    ],
+    [
+     37.215,
+     55.645144
+    ],
+    [
+     37.212214,
+     55.644723
+    ],
+    [
+     37.207215,
+     55.642723
+    ],
+    [
+     37.205176,
+     55.641572
+    ],
+    [
+     37.204429,
+     55.64
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

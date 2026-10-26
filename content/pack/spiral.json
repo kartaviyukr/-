@@ -1403,7 +1403,7 @@
    "distanceFromKremlinKm": 28.3,
    "azimuthDeg": 187.4,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "shcherbinka",
    "start": false,
    "insideMkad": false
   },
@@ -1421,7 +1421,7 @@
    "distanceFromKremlinKm": 35.6,
    "azimuthDeg": 193.1,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "dubrovitsy",
    "start": false,
    "insideMkad": false
   },
@@ -1439,7 +1439,7 @@
    "distanceFromKremlinKm": 29.0,
    "azimuthDeg": 194.9,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "ostafevo",
    "start": false,
    "insideMkad": false
   },
@@ -1457,7 +1457,7 @@
    "distanceFromKremlinKm": 22.0,
    "azimuthDeg": 203.2,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "kommunarka",
    "start": false,
    "insideMkad": false
   },
@@ -1475,7 +1475,7 @@
    "distanceFromKremlinKm": 35.6,
    "azimuthDeg": 213.4,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "troitsk",
    "start": false,
    "insideMkad": false
   },
@@ -1493,7 +1493,7 @@
    "distanceFromKremlinKm": 23.9,
    "azimuthDeg": 216.9,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "valuevo",
    "start": false,
    "insideMkad": false
   },
@@ -1511,7 +1511,7 @@
    "distanceFromKremlinKm": 23.6,
    "azimuthDeg": 224.4,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "moskovskiy",
    "start": false,
    "insideMkad": false
   },
@@ -1529,7 +1529,7 @@
    "distanceFromKremlinKm": 24.1,
    "azimuthDeg": 235.9,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "vnukovo",
    "start": false,
    "insideMkad": false
   },
@@ -1547,7 +1547,7 @@
    "distanceFromKremlinKm": 20.8,
    "azimuthDeg": 237.0,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "peredelkino",
    "start": false,
    "insideMkad": false
   },
@@ -1565,7 +1565,7 @@
    "distanceFromKremlinKm": 28.4,
    "azimuthDeg": 244.2,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "lesnoy-gorodok",
    "start": false,
    "insideMkad": false
   },
