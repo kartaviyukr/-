@@ -1,0 +1,315 @@
+{
+ "id": "gorki-leninskie",
+ "name": "Горки Ленинские",
+ "settlementType": "усадьба",
+ "mustHave": 2,
+ "regionId": "leninskiy",
+ "distanceFromKremlinKm": 28.6,
+ "coords": {
+  "lat": 55.51,
+  "lon": 37.77
+ },
+ "intro": [
+  "Горки — усадьба XVIII века, которую знают по последним годам жизни Ленина. Но до него у дома было несколько ярких хозяек.",
+  "В начале XIX века имением владела Аграфена Дурасова, сестра и наследница московского богача Николая Дурасова: она скупала земли, разбила парк и перестроила дом. Потом усадьба перешла её зятю, генералу и литератору Александру Писареву.",
+  "В 1909 году Горки купила Зинаида Морозова, вдова Саввы Морозова, — позже по второму мужу Морозова-Рейнбот. Интерьеры для неё делал Фёдор Шехтель, в доме были водопровод, электричество и телефон. С 1918 года здесь жил и лечился Ленин; музей-заповедник учреждён в 1972 году.",
+  "Маршрут: станция, Большой дом в парке и музейные постройки заповедника."
+ ],
+ "startPoint": {
+  "name": "Остановка «Горки Ленинские»",
+  "coords": {
+   "lat": 55.505,
+   "lon": 37.77
+  },
+  "transport": "Автобусы от метро «Домодедовская» — уточняйте"
+ },
+ "endPoint": {
+  "name": "Остановка «Горки Ленинские»",
+  "coords": {
+   "lat": 55.5052,
+   "lon": 37.7705
+  },
+  "transport": "Автобусы до метро «Домодедовская»"
+ },
+ "route": {
+  "distanceKm": 4.0,
+  "durationH": 3.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "gorki-leninskie-park",
+   "name": "Усадебный парк",
+   "coords": {
+    "lat": 55.509,
+    "lon": 37.771
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Парк в Горках разбила в начале XIX века Аграфена Дурасова — энергичная хозяйка, скупавшая окрестные земли.",
+    "При Морозовой здесь появились оранжереи, теплицы и парники; в 1914 году садоводство усадьбы участвовало в выставке в Манеже.",
+    "Сегодня парк — часть музея-заповедника. Едем по аллеям к Большому дому. Следующая точка маршрута — «Большой дом»."
+   ],
+   "facts": [
+    {
+     "text": "В начале XIX века Аграфена Дурасова скупила земли, разбила парк и перестроила дом.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Аграфена была сестрой и наследницей Николая Дурасова.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Позже имение перешло её зятю Александру Писареву.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "При Морозовой построили оранжереи и теплицы; в 1914 году садоводство участвовало в выставке в Манеже.",
+     "sourceUrl": "https://www.sputnik8.com/ru/activities/72337",
+     "verified": false
+    },
+    {
+     "text": "Парк входит в состав музея-заповедника.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorki-leninskie-dom",
+   "name": "Большой дом",
+   "coords": {
+    "lat": 55.51,
+    "lon": 37.77
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "В 1909 году усадьбу купила Зинаида Морозова, вдова мецената Саввы Морозова. Она пригласила Фёдора Шехтеля, и дом получил по тем временам роскошные удобства: ванную, паровое отопление, водопровод, электричество и телефон «Эриксон».",
+    "После революции имение национализировали. С 1918 года сюда приезжал, а затем постоянно жил Ленин: усадьба была комфортной и хорошо связанной с Москвой. Здесь он провёл последние годы жизни.",
+    "Дом открыт для посетителей с 1949 года. Музей устраивает и необычные экскурсии — например, по кухонному «закулисью» усадьбы."
+   ],
+   "facts": [
+    {
+     "text": "В 1909 году имение купила Зинаида Морозова, вдова Саввы Морозова.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Интерьеры для Морозовой создавал Фёдор Шехтель; в доме были водопровод, электричество и телефон.",
+     "sourceUrl": "https://www.sputnik8.com/ru/activities/72337",
+     "verified": true
+    },
+    {
+     "text": "Последней владелицей была Морозова-Рейнбот.",
+     "sourceUrl": "https://olymp.msu.ru/archive/Lomonosov_2012/1778/43227_1408.doc",
+     "verified": true
+    },
+    {
+     "text": "С 1918 года усадьба стала местом жизни Ленина, здесь он провёл последние годы.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба открыта для публики в 1949 году.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "В музее проводят экскурсии по кухонному «закулисью».",
+     "sourceUrl": "https://rg.ru/2023/03/14/rasprobovat-istoriiu-v-muzee-zapovednike-gorki-leninskie-vodiat-po-kuhonnomu-zakulisiu-i-ugoshchaiut-boiarskim-obedom.html",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "warnings": [
+    "Музей платный; часы работы уточняйте на сайте заповедника."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorki-leninskie-muzey",
+   "name": "Музейный комплекс заповедника",
+   "coords": {
+    "lat": 55.507,
+    "lon": 37.769
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Музей-заповедник «Горки Ленинские» учреждён в 1972 году. Сегодня это крупный комплекс: усадьба, парк, выставочные павильоны и несколько музейных зданий.",
+    "По одному туристическому источнику, в начале XX века имением владел промышленник Зимин, перестроивший дом в неоклассическом стиле. Это расходится с другими источниками, и мы оставляем вопрос открытым.",
+    "Обходим комплекс и возвращаемся к остановке. Финиш — Остановка «Горки Ленинские»: Автобусы до метро «Домодедовская»."
+   ],
+   "facts": [
+    {
+     "text": "Музей-заповедник учреждён в 1972 году.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Комплекс включает усадьбу, парк, выставочные павильоны и музейные здания.",
+     "sourceUrl": "https://tonkosti.ru/Горки_Ленинские",
+     "verified": true
+    },
+    {
+     "text": "Версия о владельце Зимине расходится с другими источниками.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    },
+    {
+     "text": "Последовательность владельцев в источниках различается.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    },
+    {
+     "text": "Горки — усадьба XVIII века.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Боярский обед",
+  "kind": "тематическая замена",
+  "honestyNote": "В музее-заповеднике, по материалу «Российской газеты», проводят программу с экскурсией по кухне и боярским обедом. Наличие программы сейчас мы не проверяли.",
+  "story": [
+   "Музей показывал гостям кухонное «закулисье» усадьбы и угощал боярским обедом.",
+   "Узнайте о программе заранее — она может проводиться по записи."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Музей-заповедник «Горки Ленинские»",
+    "address": "Ленинский г.о., Горки Ленинские",
+    "verified": false,
+    "note": "Программа по записи — уточняйте."
+   }
+  ]
+ },
+ "title": {
+  "id": "gorki-leninskie-title",
+  "name": "Гость Горок",
+  "legend": "В Горках жили Дурасова, Морозова и Ленин. Кто проехал усадьбу — гость пяти эпох.",
+  "ritual": "На аллее парка сфотографироваться у Большого дома с колоннами.",
+  "pairVariant": "Гости Горок"
+ },
+ "sources": [
+  {
+   "title": "Горки Ленинские — 360",
+   "url": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/"
+  },
+  {
+   "title": "Музей-заповедник — Tripster",
+   "url": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/"
+  },
+  {
+   "title": "Боярский обед — РГ",
+   "url": "https://rg.ru/2023/03/14/rasprobovat-istoriiu-v-muzee-zapovednike-gorki-leninskie-vodiat-po-kuhonnomu-zakulisiu-i-ugoshchaiut-boiarskim-obedom.html"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.763448,
+     55.507
+    ],
+    [
+     37.764192,
+     55.505428
+    ],
+    [
+     37.765192,
+     55.503428
+    ],
+    [
+     37.767224,
+     55.502277
+    ],
+    [
+     37.77,
+     55.501856
+    ],
+    [
+     37.772776,
+     55.502277
+    ],
+    [
+     37.773276,
+     55.502477
+    ],
+    [
+     37.775308,
+     55.503628
+    ],
+    [
+     37.776052,
+     55.5052
+    ],
+    [
+     37.776552,
+     55.509
+    ],
+    [
+     37.775808,
+     55.510572
+    ],
+    [
+     37.774808,
+     55.511572
+    ],
+    [
+     37.772776,
+     55.512723
+    ],
+    [
+     37.77,
+     55.513144
+    ],
+    [
+     37.767224,
+     55.512723
+    ],
+    [
+     37.765192,
+     55.511572
+    ],
+    [
+     37.764448,
+     55.51
+    ],
+    [
+     37.763448,
+     55.507
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

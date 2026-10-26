@@ -1295,7 +1295,7 @@
    "distanceFromKremlinKm": 26.4,
    "azimuthDeg": 137.0,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "lytkarino",
    "start": false,
    "insideMkad": false
   },
@@ -1313,7 +1313,7 @@
    "distanceFromKremlinKm": 28.6,
    "azimuthDeg": 160.4,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "gorki-leninskie",
    "start": false,
    "insideMkad": false
   },
@@ -1331,7 +1331,7 @@
    "distanceFromKremlinKm": 35.6,
    "azimuthDeg": 166.1,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "domodedovo",
    "start": false,
    "insideMkad": false
   },
@@ -1349,7 +1349,7 @@
    "distanceFromKremlinKm": 23.0,
    "azimuthDeg": 166.2,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "vidnoe-i-ekaterininskiy-monastyr",
    "start": false,
    "insideMkad": false
   },
@@ -1367,7 +1367,7 @@
    "distanceFromKremlinKm": 23.6,
    "azimuthDeg": 184.3,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "butovo-poligon-znamenskoe-sadki",
    "start": false,
    "insideMkad": false
   },
@@ -1385,7 +1385,7 @@
    "distanceFromKremlinKm": 36.0,
    "azimuthDeg": 187.4,
    "ring": 2,
-   "destinationId": null,
+   "destinationId": "podolsk",
    "start": false,
    "insideMkad": false
   },
