@@ -2411,7 +2411,7 @@
    "distanceFromKremlinKm": 76.1,
    "azimuthDeg": 315.8,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "boblovo-usadba-mendeleeva",
    "start": false,
    "insideMkad": false
   },
@@ -2429,7 +2429,7 @@
    "distanceFromKremlinKm": 69.4,
    "azimuthDeg": 317.5,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "shakhmatovo-i-tarakanovo",
    "start": false,
    "insideMkad": false
   },
@@ -2447,7 +2447,7 @@
    "distanceFromKremlinKm": 62.5,
    "azimuthDeg": 320.6,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "solnechnogorsk-i-ozero-senezh",
    "start": false,
    "insideMkad": false
   },
@@ -2465,7 +2465,7 @@
    "distanceFromKremlinKm": 74.5,
    "azimuthDeg": 349.2,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "nikolo-peshnoshskiy-monastyr",
    "start": false,
    "insideMkad": false
   },
@@ -2483,7 +2483,7 @@
    "distanceFromKremlinKm": 60.3,
    "azimuthDeg": 352.1,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "yakhroma",
    "start": false,
    "insideMkad": false
   },
@@ -2501,7 +2501,7 @@
    "distanceFromKremlinKm": 66.1,
    "azimuthDeg": 354.8,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "dmitrov",
    "start": false,
    "insideMkad": false
   },
@@ -2519,7 +2519,7 @@
    "distanceFromKremlinKm": 60.2,
    "azimuthDeg": 22.2,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "khotkovo",
    "start": false,
    "insideMkad": false
   },
@@ -2537,7 +2537,7 @@
    "distanceFromKremlinKm": 60.0,
    "azimuthDeg": 25.1,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "radonezh",
    "start": false,
    "insideMkad": false
   },
@@ -2555,7 +2555,7 @@
    "distanceFromKremlinKm": 70.4,
    "azimuthDeg": 27.0,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "sergiev-posad",
    "start": false,
    "insideMkad": false
   },
@@ -2573,7 +2573,7 @@
    "distanceFromKremlinKm": 66.7,
    "azimuthDeg": 50.6,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "fryanovo",
    "start": false,
    "insideMkad": false
   },

@@ -1,0 +1,304 @@
+{
+ "id": "nikolo-peshnoshskiy-monastyr",
+ "name": "Николо-Пешношский монастырь",
+ "settlementType": "монастырь",
+ "mustHave": 1,
+ "regionId": "dmitrovskiy",
+ "distanceFromKremlinKm": 74.5,
+ "coords": {
+  "lat": 56.41,
+  "lon": 37.39
+ },
+ "intro": [
+  "Николо-Пешношский монастырь стоит на правом берегу Яхромы, в посёлке Луговой Дмитровского округа. Его основал преподобный Мефодий — ученик Сергия Радонежского.",
+  "Мефодий хотел большего уединения, чем в обители Сергия, и с благословения учителя поселился в дубовом лесу за Яхромой. Название «Пешношский» связывают с тем, что он носил тяжёлые брёвна для постройки «пешком», на себе, через реку.",
+  "По данным Дмитровского музея, в 1361 году Мефодий стал игуменом основанной им обители; умер он в 1392 году и канонизирован в 1549 году.",
+  "Маршрут: станция Яхрома, дорога на север вдоль канала и монастырь."
+ ],
+ "startPoint": {
+  "name": "Станция «Яхрома»",
+  "coords": {
+   "lat": 56.289,
+   "lon": 37.485
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Яхрома»",
+  "coords": {
+   "lat": 56.2892,
+   "lon": 37.4855
+  },
+  "transport": "Электрички Савёловского направления"
+ },
+ "route": {
+  "distanceKm": 32.0,
+  "durationH": 4.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "nikolo-peshnoshskiy-monastyr-doroga",
+   "name": "Дорога вдоль Яхромы",
+   "coords": {
+    "lat": 56.35,
+    "lon": 37.45
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "От Яхромы едем на север вдоль реки и канала. Мефодий шёл сюда из обители Сергия, ища уединения в дубовом лесу за Яхромой.",
+    "Дорога длинная; держитесь просёлков и обочины.",
+    "Впереди — монастырь в посёлке Луговой. Следующая точка маршрута — «Монастырь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Мефодий поселился в дубовом лесу за Яхромой.",
+     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
+     "verified": true
+    },
+    {
+     "text": "Мефодий был учеником Сергия Радонежского.",
+     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
+     "verified": false
+    },
+    {
+     "text": "Монастырь — в Дмитровском округе.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-sokrovischa-muzeya",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "nikolo-peshnoshskiy-monastyr-monastyr",
+   "name": "Монастырь",
+   "coords": {
+    "lat": 56.41,
+    "lon": 37.39
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Монастырь расположен на ровном месте по правому берегу Яхромы. По данным Дмитровского музея, в 1361 году Мефодий стал игуменом основанной им обители; эта дата встречается в одном источнике.",
+    "Мефодий умер в 1392 году и был канонизирован на Московском соборе 1549 года. Подробное описание монастыря составил историк К. Ф. Калайдович.",
+    "Доступ на территорию и её состояние уточняйте на месте. Следующая точка маршрута — «Преображенская церковь»."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь на правом берегу Яхромы.",
+     "sourceUrl": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/",
+     "verified": true
+    },
+    {
+     "text": "В 1361 году Мефодий стал игуменом — по данным Дмитровского музея.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-sokrovischa-muzeya",
+     "verified": false
+    },
+    {
+     "text": "Мефодий умер в 1392 году.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-sokrovischa-muzeya",
+     "verified": true
+    },
+    {
+     "text": "Канонизирован на Московском соборе 1549 года.",
+     "sourceUrl": "https://vk.ru/@dmmuseum-sokrovischa-muzeya",
+     "verified": true
+    },
+    {
+     "text": "Описание монастыря составил К. Ф. Калайдович.",
+     "sourceUrl": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Доступ на территорию уточняйте."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "nikolo-peshnoshskiy-monastyr-preobrazhenie",
+   "name": "Преображенская церковь",
+   "coords": {
+    "lat": 56.4102,
+    "lon": 37.3905
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В монастыре стоит церковь Преображения Господня; в колокольне — церковь Мефодия Пешношского. Фотографии собраны на sobory.ru.",
+    "Название «Пешношский», по преданию, связано с тем, что Мефодий носил брёвна для обители на себе через реку.",
+    "Обратно к станции Яхрома едем той же дорогой. Финиш — Станция «Яхрома»: Электрички Савёловского направления."
+   ],
+   "facts": [
+    {
+     "text": "В монастыре есть церковь Преображения Господня.",
+     "sourceUrl": "https://sobory.ru/photo/487536",
+     "verified": true
+    },
+    {
+     "text": "В колокольне — церковь Мефодия Пешношского.",
+     "sourceUrl": "https://sobory.ru/photo/99987",
+     "verified": true
+    },
+    {
+     "text": "Происхождение названия — по преданию.",
+     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
+     "verified": false
+    },
+    {
+     "text": "Датировку церквей мы не сверяли.",
+     "sourceUrl": "https://sobory.ru/photo/487536",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/487536",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Хлеб и вода путника",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у монастыря нет. Тематическая замена — простой хлеб и вода, как у Мефодия, ушедшего в лес. Это выбор составителя.",
+  "story": [
+   "Маршрут долгий, а магазинов по пути мало.",
+   "Возьмите еду и воду с запасом из Яхромы. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Яхромы",
+    "address": "Дмитровский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "nikolo-peshnoshskiy-monastyr-title",
+  "name": "Пешноход",
+  "legend": "Мефодий носил брёвна для обители на себе. Кто доехал до Пешноши — пешноход.",
+  "ritual": "Перенести велосипед через лужу или ручей и сфотографировать это.",
+  "pairVariant": "Пешноходы"
+ },
+ "sources": [
+  {
+   "title": "Мефодий Пешношский — Азбука веры",
+   "url": "https://azbyka.ru/days/sv-mefodij-peshnoshskij"
+  },
+  {
+   "title": "Описание монастыря — Калайдович",
+   "url": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.384317,
+     56.41
+    ],
+    [
+     37.385078,
+     56.408428
+    ],
+    [
+     37.480094,
+     56.287428
+    ],
+    [
+     37.482168,
+     56.286277
+    ],
+    [
+     37.485,
+     56.285856
+    ],
+    [
+     37.487832,
+     56.286277
+    ],
+    [
+     37.488333,
+     56.286477
+    ],
+    [
+     37.490406,
+     56.287628
+    ],
+    [
+     37.491165,
+     56.2892
+    ],
+    [
+     37.490406,
+     56.290772
+    ],
+    [
+     37.454914,
+     56.351572
+    ],
+    [
+     37.395422,
+     56.411772
+    ],
+    [
+     37.393342,
+     56.412923
+    ],
+    [
+     37.3905,
+     56.413344
+    ],
+    [
+     37.387658,
+     56.412923
+    ],
+    [
+     37.387159,
+     56.412723
+    ],
+    [
+     37.385078,
+     56.411572
+    ],
+    [
+     37.384317,
+     56.41
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

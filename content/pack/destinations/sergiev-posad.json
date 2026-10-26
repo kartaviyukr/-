@@ -1,0 +1,304 @@
+{
+ "id": "sergiev-posad",
+ "name": "Сергиев Посад",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "sergievo-posadskiy",
+ "distanceFromKremlinKm": 70.4,
+ "coords": {
+  "lat": 56.315,
+  "lon": 38.136
+ },
+ "intro": [
+  "Сергиев Посад вырос вокруг Троице-Сергиевой лавры. Датой основания принято считать 1337 год — время, когда преподобный Сергий Радонежский поселился здесь.",
+  "Сергий умер 25 сентября 1392 года; его мощи хранятся в Троицком соборе — самом древнем на территории лавры. Для этого собора Андрей Рублёв написал икону «Троица».",
+  "В 1408 году ордынский темник разграбил и сжёг монастырь. В 1744 году указом Елизаветы Петровны обитель получила звание лавры. Лавра включена в список Всемирного наследия ЮНЕСКО.",
+  "Маршрут: станция, лавра и смотровая площадка."
+ ],
+ "startPoint": {
+  "name": "Станция «Сергиев Посад»",
+  "coords": {
+   "lat": 56.308,
+   "lon": 38.138
+  },
+  "transport": "Электрички Ярославского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Сергиев Посад»",
+  "coords": {
+   "lat": 56.3082,
+   "lon": 38.1385
+  },
+  "transport": "Электрички Ярославского направления"
+ },
+ "route": {
+  "distanceKm": 4.0,
+  "durationH": 3.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "sergiev-posad-troitsky",
+   "name": "Троицкий собор",
+   "coords": {
+    "lat": 56.3105,
+    "lon": 38.13
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Троицкий собор считают самым древним на территории лавры. В нём хранятся мощи преподобного Сергия, умершего 25 сентября 1392 года.",
+    "Андрей Рублёв написал для собора икону «Троица». Позже её передали в Третьяковскую галерею; по одному источнику, сейчас она в реставрационном центре имени Грабаря и должна вернуться в лавру.",
+    "Внутри — очередь к мощам; одежда скромная. Следующая точка маршрута — «Успенский собор»."
+   ],
+   "facts": [
+    {
+     "text": "Троицкий собор — самый древний в лавре.",
+     "sourceUrl": "https://www.sportmaster.ru/media/articles/chto-posmotret-v-sergievom-posade/",
+     "verified": true
+    },
+    {
+     "text": "В соборе хранятся мощи Сергия Радонежского.",
+     "sourceUrl": "https://www.sportmaster.ru/media/articles/chto-posmotret-v-sergievom-posade/",
+     "verified": true
+    },
+    {
+     "text": "Сергий умер 25 сентября 1392 года.",
+     "sourceUrl": "https://www.pnp.ru/social/kak-sozdavalas-troice-sergieva-lavra.html",
+     "verified": true
+    },
+    {
+     "text": "Рублёв написал для собора икону «Троица».",
+     "sourceUrl": "https://www.sportmaster.ru/media/articles/chto-posmotret-v-sergievom-posade/",
+     "verified": true
+    },
+    {
+     "text": "Нынешнее местонахождение иконы — по одному источнику.",
+     "sourceUrl": "https://www.sportmaster.ru/media/articles/chto-posmotret-v-sergievom-posade/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь: правила посещения."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "sergiev-posad-uspensky",
+   "name": "Успенский собор",
+   "coords": {
+    "lat": 56.31,
+    "lon": 38.131
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Крупнейшее сооружение монастыря — Успенский собор, построенный в 1559–1585 годах по образцу Успенского собора Московского Кремля.",
+    "В 1408 году монастырь разграбил и сжёг ордынский темник; большинство построек, включая деревянную церковь, погибло. В 1744 году указом Елизаветы Петровны монастырь стал лаврой.",
+    "После 1917 года лавру закрыли; в 1946 году началось её возрождение."
+   ],
+   "facts": [
+    {
+     "text": "Успенский собор построен в 1559–1585 годах по образцу кремлёвского.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2_%D0%9F%D0%BE%D1%81%D0%B0%D0%B4",
+     "verified": true
+    },
+    {
+     "text": "В 1408 году монастырь разграблен и сожжён.",
+     "sourceUrl": "https://www.pnp.ru/social/kak-sozdavalas-troice-sergieva-lavra.html",
+     "verified": true
+    },
+    {
+     "text": "В 1744 году монастырь получил звание лавры.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Лавру закрыли после 1917 года, возрождение началось в 1946-м.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/sergiev_posad/history",
+     "verified": true
+    },
+    {
+     "text": "Лавра — объект Всемирного наследия ЮНЕСКО.",
+     "sourceUrl": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "sergiev-posad-vid",
+   "name": "Вид на лавру",
+   "coords": {
+    "lat": 56.312,
+    "lon": 38.127
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Город вырос вокруг монастыря, а не крепости или торговой площади. Датой основания принято считать 1337 год — эта дата условная, принятая традицией.",
+    "Со смотровых мест за пределами стен хорошо видна вся лавра. Выберите место у дороги и сделайте фото.",
+    "Возвращаемся к станции. Финиш — Станция «Сергиев Посад»: Электрички Ярославского направления."
+   ],
+   "facts": [
+    {
+     "text": "Город сложился вокруг монастыря.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Датой основания принято считать 1337 год.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Дата 1337 год — принятая, а не доказанная.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты смотровой точки приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Лавра описана на Культура.РФ.",
+     "sourceUrl": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Лаврский квас",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого «фирменного» блюда мы не нашли. Тематическая замена — квас и выпечка из монастырских лавок у лавры, если они открыты. Наличие мы не проверяли.",
+  "story": [
+   "У лавры обычно много лавок с выпечкой и квасом.",
+   "Уточните на месте — и возьмите воду. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Лавки у Троице-Сергиевой лавры",
+    "address": "г. Сергиев Посад",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "sergiev-posad-title",
+  "name": "Паломник Лавры",
+  "legend": "Сергиев Посад вырос вокруг обители Сергия. Кто доехал сюда — паломник.",
+  "ritual": "Сфотографировать купола лавры с площадки у стен.",
+  "pairVariant": "Паломники Лавры"
+ },
+ "sources": [
+  {
+   "title": "Троице-Сергиева лавра — Культура.РФ",
+   "url": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade"
+  },
+  {
+   "title": "Как создавалась лавра — ПНП",
+   "url": "https://www.pnp.ru/social/kak-sozdavalas-troice-sergieva-lavra.html"
+  },
+  {
+   "title": "Сергиев Посад — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2_%D0%9F%D0%BE%D1%81%D0%B0%D0%B4"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.121332,
+     56.312
+    ],
+    [
+     38.122091,
+     56.310428
+    ],
+    [
+     38.124166,
+     56.309277
+    ],
+    [
+     38.128166,
+     56.307277
+    ],
+    [
+     38.135166,
+     56.305277
+    ],
+    [
+     38.138,
+     56.304856
+    ],
+    [
+     38.140834,
+     56.305277
+    ],
+    [
+     38.141334,
+     56.305477
+    ],
+    [
+     38.143408,
+     56.306628
+    ],
+    [
+     38.144168,
+     56.3082
+    ],
+    [
+     38.143408,
+     56.309772
+    ],
+    [
+     38.141334,
+     56.310923
+    ],
+    [
+     38.129834,
+     56.314723
+    ],
+    [
+     38.127,
+     56.315144
+    ],
+    [
+     38.124166,
+     56.314723
+    ],
+    [
+     38.122091,
+     56.313572
+    ],
+    [
+     38.121332,
+     56.312
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -1,0 +1,304 @@
+{
+ "id": "shakhmatovo-i-tarakanovo",
+ "name": "Шахматово и Тараканово",
+ "settlementType": "усадьба",
+ "mustHave": 3,
+ "regionId": "solnechnogorsk",
+ "distanceFromKremlinKm": 69.4,
+ "coords": {
+  "lat": 56.21,
+  "lon": 36.86
+ },
+ "intro": [
+  "Шахматово — усадьба деда Александра Блока, ботаника Андрея Бекетова. Поэт проводил здесь каждое лето с 1881 по 1916 год.",
+  "В главном доме работает экспозиция о жизни и творчестве Блока и семьи Бекетовых. Рядом, в Тараканове, — церковь, где, по традиции, венчались Блок и Любовь Менделеева.",
+  "Шахматово, Боблово и Тараканово составляют Государственный мемориальный музей-заповедник Д. И. Менделеева и А. А. Блока.",
+  "Маршрут: станция Подсолнечная (Солнечногорск), дорога на запад, Тараканово и Шахматово."
+ ],
+ "startPoint": {
+  "name": "Станция «Подсолнечная»",
+  "coords": {
+   "lat": 56.185,
+   "lon": 36.977
+  },
+  "transport": "Электрички Ленинградского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Подсолнечная»",
+  "coords": {
+   "lat": 56.1852,
+   "lon": 36.9775
+  },
+  "transport": "Электрички Ленинградского направления"
+ },
+ "route": {
+  "distanceKm": 30.0,
+  "durationH": 4.5,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "shakhmatovo-i-tarakanovo-tarakanovo",
+   "name": "Тараканово",
+   "coords": {
+    "lat": 56.205,
+    "lon": 36.88
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Тараканово — третья усадьба музея-заповедника. По традиции, в здешней церкви венчались Александр Блок и Любовь Менделеева; сведения о венчании мы знаем по туристическим источникам.",
+    "Боблово и Шахматово называют «местами-свидетелями любви Блока и его Прекрасной Дамы».",
+    "От Тараканова едем в Шахматово. Следующая точка маршрута — «Дом Бекетовых»."
+   ],
+   "facts": [
+    {
+     "text": "Музей-заповедник включает Шахматово, Боблово и Тараканово.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
+     "verified": true
+    },
+    {
+     "text": "Венчание Блока в Тараканове — по туристическим источникам.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
+     "verified": false
+    },
+    {
+     "text": "Боблово и Шахматово — места любви Блока и Менделеевой.",
+     "sourceUrl": "https://www.calend.ru/calendar/tema/shahmatovo-i-boblovo-mesta-svideteli-lyubvi-aleksandra-bloka-i-ego-prekrasnoj-damy/",
+     "verified": true
+    },
+    {
+     "text": "Координаты Тараканова приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
+     "verified": false
+    },
+    {
+     "text": "Состояние церкви мы не проверяли.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "shakhmatovo-i-tarakanovo-dom",
+   "name": "Дом Бекетовых",
+   "coords": {
+    "lat": 56.21,
+    "lon": 36.86
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Шахматово купил Андрей Бекетов, дед поэта. Блок проводил здесь каждое лето с 1881 по 1916 год — от младенчества почти до конца жизни.",
+    "В главном доме работает экспозиция о жизни и творчестве Блока и семьи Бекетовых. Один туристический источник называет Шахматово очень древним — это сомнительно, и мы на это не опираемся.",
+    "Музей платный; часы уточняйте. Следующая точка маршрута — «Окрестности Шахматова»."
+   ],
+   "facts": [
+    {
+     "text": "Шахматово купил А. Н. Бекетов, дед Блока.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
+     "verified": true
+    },
+    {
+     "text": "Блок проводил здесь каждое лето с 1881 по 1916 год.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
+     "verified": true
+    },
+    {
+     "text": "В доме экспозиция о Блоке и Бекетовых.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
+     "verified": true
+    },
+    {
+     "text": "Утверждение о древности усадьбы сомнительно.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
+     "verified": false
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "shakhmatovo-i-tarakanovo-okrestnosti",
+   "name": "Окрестности Шахматова",
+   "coords": {
+    "lat": 56.211,
+    "lon": 36.862
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Окрестности Шахматова — холмы, поля и перелески, которые Блок описывал в стихах.",
+    "Mel.fm называет Шахматово среди малоизвестных усадеб вокруг Москвы, куда стоит съездить «в гости к Блоку».",
+    "Обратно к станции Подсолнечная путь неблизкий — рассчитайте силы и время до заката. Финиш — Станция «Подсолнечная»: Электрички Ленинградского направления."
+   ],
+   "facts": [
+    {
+     "text": "Mel.fm советует посетить Шахматово.",
+     "sourceUrl": "https://mel.fm/zhizn/razvlecheniya/1534970-7-maloizvestnykh-usadeb-vokrug-moskvy-edem-v-gosti-k-prishvinu-bloku-mendeleyevu-i-drugim",
+     "verified": true
+    },
+    {
+     "text": "Пейзажи вокруг усадьбы связаны со стихами Блока.",
+     "sourceUrl": "https://mel.fm/zhizn/razvlecheniya/1534970-7-maloizvestnykh-usadeb-vokrug-moskvy-edem-v-gosti-k-prishvinu-bloku-mendeleyevu-i-drugim",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
+     "verified": false
+    },
+    {
+     "text": "Шахматово входит в музей-заповедник.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Чай с Прекрасной Дамой",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Шахматова нет. Тематическая замена — чай с вареньем, как на летней веранде Бекетовых. Это выбор составителя.",
+  "story": [
+   "В Шахматове летом жила большая семья Бекетовых.",
+   "Возьмите термос и еду из Солнечногорска. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Солнечногорска",
+    "address": "г. Солнечногорск",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "shakhmatovo-i-tarakanovo-title",
+  "name": "Рыцарь Прекрасной Дамы",
+  "legend": "В Шахматове Блок писал стихи о Прекрасной Даме. Кто доехал сюда — её рыцарь.",
+  "ritual": "Прочитать вслух строку Блока «Ночь, улица, фонарь, аптека».",
+  "pairVariant": "Рыцари Прекрасной Дамы"
+ },
+ "sources": [
+  {
+   "title": "Шахматово — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor"
+  },
+  {
+   "title": "Шахматово и Боблово — Календарь",
+   "url": "https://www.calend.ru/calendar/tema/shahmatovo-i-boblovo-mesta-svideteli-lyubvi-aleksandra-bloka-i-ego-prekrasnoj-damy/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     36.854347,
+     56.21
+    ],
+    [
+     36.855104,
+     56.208428
+    ],
+    [
+     36.857173,
+     56.207277
+    ],
+    [
+     36.877174,
+     56.202277
+    ],
+    [
+     36.974175,
+     56.182277
+    ],
+    [
+     36.977,
+     56.181856
+    ],
+    [
+     36.979825,
+     56.182277
+    ],
+    [
+     36.980325,
+     56.182477
+    ],
+    [
+     36.982393,
+     56.183628
+    ],
+    [
+     36.98315,
+     56.1852
+    ],
+    [
+     36.982393,
+     56.186772
+    ],
+    [
+     36.980325,
+     56.187923
+    ],
+    [
+     36.864827,
+     56.213723
+    ],
+    [
+     36.862,
+     56.214144
+    ],
+    [
+     36.859173,
+     56.213723
+    ],
+    [
+     36.857173,
+     56.212723
+    ],
+    [
+     36.855104,
+     56.211572
+    ],
+    [
+     36.854347,
+     56.21
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
