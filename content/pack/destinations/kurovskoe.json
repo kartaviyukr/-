@@ -1,0 +1,299 @@
+{
+ "id": "kurovskoe",
+ "name": "Куровское",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "orekhovo-zuevskiy",
+ "distanceFromKremlinKm": 84.0,
+ "coords": {
+  "lat": 55.579,
+  "lon": 38.921
+ },
+ "intro": [
+  "Куровское — город Орехово-Зуевского округа в старообрядческом Гуслицком крае. Деревня впервые упомянута в 1646 году; городом Куровское стало в 1952-м. Текстильная промышленность превратила старую деревню в фабричный город.",
+  "Рядом — Спасо-Преображенский Гуслицкий монастырь. Его основали в 1858–1859 годах по инициативе Александра II и с благословения митрополита Филарета у древнего погоста Спас на Мошеве — как миссионерский центр против раскола в старообрядческом крае.",
+  "Монастырь закрыли в 1922 году; сегодня он снова действует.",
+  "Маршрут: станция, центр Куровского и Гуслицкий монастырь."
+ ],
+ "startPoint": {
+  "name": "Станция «Куровская»",
+  "coords": {
+   "lat": 55.579,
+   "lon": 38.921
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Куровская»",
+  "coords": {
+   "lat": 55.5792,
+   "lon": 38.9215
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 12.0,
+  "durationH": 2.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "kurovskoe-gorod",
+   "name": "Фабричный город",
+   "coords": {
+    "lat": 55.579,
+    "lon": 38.921
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Деревня Куровская впервые упомянута в 1646 году. Текстильная промышленность превратила её в фабричный город; в 1952 году Куровское получило статус города.",
+    "В городе сохранилось советское фабричное наследие.",
+    "Едем к монастырю. Следующая точка маршрута — «Гуслицкий монастырь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Деревня впервые упомянута в 1646 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Статус города — 1952 год.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Текстильная промышленность преобразила деревню.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Сохранилось советское фабричное наследие.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "kurovskoe-monastyr",
+   "name": "Гуслицкий монастырь",
+   "coords": {
+    "lat": 55.6,
+    "lon": 38.94
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Спасо-Преображенский Гуслицкий монастырь основан на рубеже 1858–1859 годов по инициативе Александра II и с благословения митрополита Филарета (Дроздова), у древнего погоста Спас на Мошеве.",
+    "Вокруг жили старообрядцы, и церковь создавала здесь миссионерский центр против раскола. В 1922 году монастырь закрыли, святыни вывезли; сегодня он снова действует.",
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Старообрядческий край»."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь основан в 1858–1859 годах по инициативе Александра II.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Основан с благословения митрополита Филарета.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Монастырь стоит у погоста Спас на Мошеве.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Монастырь был миссионерским центром против раскола.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/spaso-preobrazhenskij-guslitskij-muzhskoj-monastyr/",
+     "verified": true
+    },
+    {
+     "text": "В 1922 году монастырь закрыт.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/spaso-preobrazhenskij-guslitskij-muzhskoj-monastyr/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь: правила посещения."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kurovskoe-staroobryadtsy",
+   "name": "Старообрядческий край",
+   "coords": {
+    "lat": 55.59,
+    "lon": 38.93
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Исторические Гуслицы со старообрядческой традицией шире самого Куровского; разные церковные общины нельзя смешивать.",
+    "Куровское — хорошая отправная точка для Гуслиц и Давыдова, у которых в спирали свой маршрут.",
+    "Возвращаемся к станции. Финиш — Станция «Куровская»: Электрички Казанского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Гуслицы шире Куровского.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Общины нельзя смешивать.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Монастырь описан на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Монастырская выпечка",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Куровского нет. Тематическая замена — выпечка из лавки монастыря, если она открыта. Наличие лавки мы не проверяли.",
+  "story": [
+   "У монастырей часто есть лавки с выпечкой. Возьмите воду с собой. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Лавка Гуслицкого монастыря",
+    "address": "Орехово-Зуевский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "kurovskoe-title",
+  "name": "Гуслицкий путник",
+  "legend": "Куровское — ворота Гуслиц. Кто проехал его — гуслицкий путник.",
+  "ritual": "Сфотографировать монастырь с дороги.",
+  "pairVariant": "Гуслицкие путники"
+ },
+ "sources": [
+  {
+   "title": "Гуслицкий монастырь — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
+  },
+  {
+   "title": "Куровское — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.915438,
+     55.579
+    ],
+    [
+     38.916183,
+     55.577428
+    ],
+    [
+     38.918219,
+     55.576277
+    ],
+    [
+     38.921,
+     55.575856
+    ],
+    [
+     38.923781,
+     55.576277
+    ],
+    [
+     38.924281,
+     55.576477
+    ],
+    [
+     38.926317,
+     55.577628
+    ],
+    [
+     38.94482,
+     55.598428
+    ],
+    [
+     38.945565,
+     55.6
+    ],
+    [
+     38.94482,
+     55.601572
+    ],
+    [
+     38.942783,
+     55.602723
+    ],
+    [
+     38.94,
+     55.603144
+    ],
+    [
+     38.937217,
+     55.602723
+    ],
+    [
+     38.93518,
+     55.601572
+    ],
+    [
+     38.925182,
+     55.591572
+    ],
+    [
+     38.916183,
+     55.580572
+    ],
+    [
+     38.915438,
+     55.579
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

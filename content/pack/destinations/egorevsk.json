@@ -1,0 +1,294 @@
+{
+ "id": "egorevsk",
+ "name": "Егорьевск",
+ "settlementType": "город",
+ "mustHave": 2,
+ "regionId": "egorevsk",
+ "distanceFromKremlinKm": 98.1,
+ "coords": {
+  "lat": 55.383,
+  "lon": 39.035
+ },
+ "intro": [
+  "Егорьевск стоит на реке Гуслице. По одному источнику, поселение впервые упомянуто в 1462 году в духовной грамоте Василия Тёмного как село Высокое; имя и статус города оно получило в 1778 году указом Екатерины II.",
+  "Облик Егорьевска — промышленная и купеческая архитектура XIX–XX веков. Здесь стоит старообрядческий храм Георгия Победоносца — по одному источнику, крупнейший в России — и Свято-Троицкий Мариинский монастырь, основанный в 1880 году.",
+  "Маршрут: станция, купеческий центр, старообрядческий храм и монастырь."
+ ],
+ "startPoint": {
+  "name": "Станция «Егорьевск»",
+  "coords": {
+   "lat": 55.383,
+   "lon": 39.035
+  },
+  "transport": "Электрички Казанского направления (через Куровскую) — уточняйте"
+ },
+ "endPoint": {
+  "name": "Станция «Егорьевск»",
+  "coords": {
+   "lat": 55.3832,
+   "lon": 39.0355
+  },
+  "transport": "Электрички — уточняйте"
+ },
+ "route": {
+  "distanceKm": 6.0,
+  "durationH": 2.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "egorevsk-tsentr",
+   "name": "Купеческий центр",
+   "coords": {
+    "lat": 55.385,
+    "lon": 39.03
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Егорьевск — город промышленной и купеческой архитектуры XIX–XX веков. По одному источнику, поселение известно с 1462 года как село Высокое, а городом стало в 1778 году.",
+    "Дату 1778 год мы знаем по туристическому сайту — она требует проверки.",
+    "Едем к старообрядческому храму. Следующая точка маршрута — «Храм Георгия Победоносца». Формат остановки — «проезжаем», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Город известен промышленной и купеческой архитектурой.",
+     "sourceUrl": "https://experience.tripster.ru/experience/Yegoryevsk/77122-istoriya-i-arhitektura/",
+     "verified": true
+    },
+    {
+     "text": "Село Высокое упомянуто в 1462 году — по одному источнику.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Статус города — 1778 год, по туристическому сайту.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Город стоит на реке Гуслице.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Городской округ образован 7 ноября 2015 года.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%95%D0%B3%D0%BE%D1%80%D1%8C%D0%B5%D0%B2%D1%81%D0%BA_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "egorevsk-georgiy",
+   "name": "Храм Георгия Победоносца",
+   "coords": {
+    "lat": 55.387,
+    "lon": 39.035
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Егорьевске стоит старообрядческий храм Георгия Победоносца — по одному источнику, самый крупный в России.",
+    "Егорьевск — часть старообрядческого Гуслицкого края, и такой храм здесь не случаен.",
+    "Едем к монастырю. Следующая точка маршрута — «Троицкий Мариинский монастырь». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Егорьевске есть старообрядческий храм Георгия Победоносца.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Храм — крупнейший старообрядческий в России, по одному источнику.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Город стоит на реке Гуслице.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Датировка храма не сверена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "egorevsk-monastyr",
+   "name": "Троицкий Мариинский монастырь",
+   "coords": {
+    "lat": 55.38,
+    "lon": 39.04
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Свято-Троицкий Мариинский монастырь основан в 1880 году.",
+    "Sputnik8 предлагает «узнать Егорьевск за 2 часа» — этот маршрут примерно о том же.",
+    "Возвращаемся к станции. Финиш — Станция «Егорьевск»: Электрички — уточняйте. Формат остановки — «смотреть снаружи», заложите на неё около 20 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Свято-Троицкий Мариинский монастырь основан в 1880 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Экскурсия «Узнать Егорьевск за 2 часа».",
+     "sourceUrl": "https://www.sputnik8.com/ru/yegoryevsk/activities/44469-uznat-egorevsk-za-2-chasa",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Монастырь действующий — не проверено.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Купеческий пирог",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего подтверждённого блюда у Егорьевска мы не нашли. Тематическая замена — пирог к чаю в честь купеческого города. Это выбор составителя.",
+  "story": [
+   "Егорьевск — город купцов и фабрикантов. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Егорьевска",
+    "address": "г. Егорьевск",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "egorevsk-title",
+  "name": "Георгиевец",
+  "legend": "Егорьевск назван по святому Георгию. Кто проехал его — георгиевец.",
+  "ritual": "Сфотографировать храм Георгия Победоносца.",
+  "pairVariant": "Георгиевцы"
+ },
+ "sources": [
+  {
+   "title": "История Егорьевска — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/egorevsk/istoriia"
+  },
+  {
+   "title": "Егорьевск — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%95%D0%B3%D0%BE%D1%80%D1%8C%D0%B5%D0%B2%D1%81%D0%BA_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3)"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     39.024465,
+     55.385
+    ],
+    [
+     39.025207,
+     55.383428
+    ],
+    [
+     39.027233,
+     55.382277
+    ],
+    [
+     39.037233,
+     55.377277
+    ],
+    [
+     39.04,
+     55.376856
+    ],
+    [
+     39.042767,
+     55.377277
+    ],
+    [
+     39.044793,
+     55.378428
+    ],
+    [
+     39.045534,
+     55.38
+    ],
+    [
+     39.044793,
+     55.381572
+    ],
+    [
+     39.039794,
+     55.388572
+    ],
+    [
+     39.037768,
+     55.389723
+    ],
+    [
+     39.035,
+     55.390144
+    ],
+    [
+     39.032232,
+     55.389723
+    ],
+    [
+     39.027233,
+     55.387723
+    ],
+    [
+     39.025207,
+     55.386572
+    ],
+    [
+     39.024465,
+     55.385
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -1,0 +1,294 @@
+{
+ "id": "dorokhovo",
+ "name": "Дорохово",
+ "settlementType": "посёлок",
+ "mustHave": 1,
+ "regionId": "ruzskiy",
+ "distanceFromKremlinKm": 82.1,
+ "coords": {
+  "lat": 55.55,
+  "lon": 36.36
+ },
+ "intro": [
+  "Дорохово — посёлок Рузского округа в 86 км к западу от Москвы, у станции Белорусской дороги. До 2005 года он был посёлком городского типа.",
+  "13 января жители отмечают День освобождения Дорохова от немецко-фашистских захватчиков. В 2016 году посёлок получил почётное звание «Населённый пункт воинской доблести».",
+  "Историю станции и посёлка мы в найденных источниках не нашли подробно.",
+  "Маршрут короткий: станция, мемориал освобождения и тихие улицы посёлка."
+ ],
+ "startPoint": {
+  "name": "Станция «Дорохово»",
+  "coords": {
+   "lat": 55.55,
+   "lon": 36.36
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Дорохово»",
+  "coords": {
+   "lat": 55.5502,
+   "lon": 36.3605
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "route": {
+  "distanceKm": 4.0,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "dorokhovo-stantsiya",
+   "name": "Станция Дорохово",
+   "coords": {
+    "lat": 55.55,
+    "lon": 36.36
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Дорохово — посёлок у одноимённой станции Белорусской дороги, в 86 км к западу от Москвы. До 2005 года — посёлок городского типа.",
+    "От станции ходят автобусы до Рузы и окрестных деревень.",
+    "Едем к мемориалу. Следующая точка маршрута — «Память освобождения». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Дорохово — в 86 км к западу от Москвы.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "До 2005 года — посёлок городского типа.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "От станции ходят автобусы до Рузы.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Дорохово — в Рузском округе.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "dorokhovo-memorial",
+   "name": "Память освобождения",
+   "coords": {
+    "lat": 55.552,
+    "lon": 36.365
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "13 января жители Рузского округа чтят память защитников в День освобождения Дорохова.",
+    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести».",
+    "Минута молчания у мемориала. Следующая точка маршрута — «Посёлок». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "День освобождения Дорохова отмечают 13 января.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": true
+    },
+    {
+     "text": "В 2016 году — звание «Населённый пункт воинской доблести».",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "Год освобождения мы не сверили.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": false
+    },
+    {
+     "text": "Координаты мемориала приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": false
+    },
+    {
+     "text": "Жители чтят память защитников.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "dorokhovo-posyolok",
+   "name": "Посёлок",
+   "coords": {
+    "lat": 55.551,
+    "lon": 36.362
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Дорохово — тихий посёлок на западе области. Историю его основания мы в найденных источниках не нашли.",
+    "Отсюда спираль уходит дальше на запад — к Можайску и Бородину.",
+    "Возвращаемся к станции. Финиш — Станция «Дорохово»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "История основания не найдена.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Можайск — западнее Дорохова.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Дорохово описано на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в пути",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Дорохова нет. Тематическая замена — перекус у станции перед дальней дорогой на запад. Это выбор составителя.",
+  "story": [
+   "Дорохово — ворота в западную часть спирали.",
+   "Перекусите у станции — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе у станции Дорохово",
+    "address": "Рузский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "dorokhovo-title",
+  "name": "Доблестный путник",
+  "legend": "Дорохово — населённый пункт воинской доблести. Кто проехал его — доблестный путник.",
+  "ritual": "Минуту помолчать у мемориала.",
+  "pairVariant": "Доблестные путники"
+ },
+ "sources": [
+  {
+   "title": "Дорохово — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./"
+  },
+  {
+   "title": "День освобождения — РИАМО",
+   "url": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     36.354442,
+     55.55
+    ],
+    [
+     36.355187,
+     55.548428
+    ],
+    [
+     36.357221,
+     55.547277
+    ],
+    [
+     36.36,
+     55.546856
+    ],
+    [
+     36.362779,
+     55.547277
+    ],
+    [
+     36.367779,
+     55.549277
+    ],
+    [
+     36.369814,
+     55.550428
+    ],
+    [
+     36.370558,
+     55.552
+    ],
+    [
+     36.369814,
+     55.553572
+    ],
+    [
+     36.367779,
+     55.554723
+    ],
+    [
+     36.365,
+     55.555144
+    ],
+    [
+     36.362221,
+     55.554723
+    ],
+    [
+     36.359221,
+     55.553723
+    ],
+    [
+     36.357221,
+     55.552723
+    ],
+    [
+     36.355187,
+     55.551572
+    ],
+    [
+     36.354442,
+     55.55
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

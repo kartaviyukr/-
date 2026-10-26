@@ -1,0 +1,305 @@
+{
+ "id": "krivyakino",
+ "name": "Кривякино",
+ "settlementType": "усадьба",
+ "mustHave": 1,
+ "regionId": "voskresensk",
+ "distanceFromKremlinKm": 85.0,
+ "coords": {
+  "lat": 55.28,
+  "lon": 38.68
+ },
+ "intro": [
+  "Кривякино (Красное Сельцо) — бывшая усадьба, на месте которой сегодня центральный парк Воскресенска.",
+  "Здесь жил писатель Иван Лажечников, автор исторических романов: его отец купил участок для летнего отдыха.",
+  "Сейчас усадьбу реставрируют с восстановлением исторической планировки. Сотрудники химкомбината воссоздали в парке грушевый сад сорта «Дюшес» по архивным материалам и получили за это премию.",
+  "Маршрут: станция Воскресенск, парк, усадебный дом и грушевый сад."
+ ],
+ "startPoint": {
+  "name": "Станция «Воскресенск»",
+  "coords": {
+   "lat": 55.322,
+   "lon": 38.671
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Воскресенск»",
+  "coords": {
+   "lat": 55.3222,
+   "lon": 38.6715
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 11.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "krivyakino-dom",
+   "name": "Усадебный дом",
+   "coords": {
+    "lat": 55.28,
+    "lon": 38.68
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Кривякино — усадьба, которую называли и Красным Сельцом. Здесь жил писатель Иван Лажечников: его отец купил участок для летнего отдыха.",
+    "Сейчас здесь ведут реставрацию с восстановлением исторического облика. Внутрь, скорее всего, не попасть — смотрим снаружи.",
+    "Идём в парк. Следующая точка маршрута — «Грушевый сад «Дюшес»». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Усадьбу называли также Красное Сельцо.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Здесь жил писатель И. И. Лажечников.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Отец Лажечникова купил участок для летнего отдыха.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Началась реставрация усадьбы.",
+     "sourceUrl": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/",
+     "verified": true
+    },
+    {
+     "text": "Кривякино описано в БРЭ.",
+     "sourceUrl": "https://bigenc.ru/c/kriviakino-417f82",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Реставрация: доступ ограничен."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "krivyakino-sad",
+   "name": "Грушевый сад «Дюшес»",
+   "coords": {
+    "lat": 55.2805,
+    "lon": 38.681
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Сотрудники химкомбината воссоздали в парке грушевый сад сорта «Дюшес» по архивным материалам. За это они получили премию.",
+    "Это редкий пример, когда исторический сад вернули по документам, а не по догадкам.",
+    "Гуляем по парку. Следующая точка маршрута — «Центральный парк». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В парке воссоздан грушевый сад сорта «Дюшес».",
+     "sourceUrl": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/",
+     "verified": true
+    },
+    {
+     "text": "Сад воссоздан по архивным материалам.",
+     "sourceUrl": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/",
+     "verified": true
+    },
+    {
+     "text": "Химики получили за это премию.",
+     "sourceUrl": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/",
+     "verified": true
+    },
+    {
+     "text": "Координаты сада приблизительные.",
+     "sourceUrl": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/",
+     "verified": false
+    },
+    {
+     "text": "Оценка — мнение составителя.",
+     "sourceUrl": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "krivyakino-park",
+   "name": "Центральный парк",
+   "coords": {
+    "lat": 55.281,
+    "lon": 38.679
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Центральный парк Воскресенска занимает территорию бывшей усадьбы Кривякино.",
+    "Реставрация идёт с восстановлением исторической планировки — со временем парк станет ближе к усадебному облику.",
+    "Возвращаемся к станции. Финиш — Станция «Воскресенск»: Электрички Казанского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Центральный парк занимает территорию бывшей усадьбы.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Реставрация идёт с восстановлением планировки.",
+     "sourceUrl": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/",
+     "verified": false
+    },
+    {
+     "text": "Сроки реставрации не проверены.",
+     "sourceUrl": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Груша «Дюшес»",
+  "kind": "продукт",
+  "honestyNote": "Груша сорта «Дюшес» — тот самый сорт, который воссоздали в кривякинском саду. Купить именно отсюда нельзя; ищите сорт на рынке или возьмите лимонад «Дюшес» — это не то же самое, но в тему.",
+  "story": [
+   "В Кривякине вернули грушевый сад «Дюшес».",
+   "Плоды сада, скорее всего, не продаются — это музейный сад. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Рынок Воскресенска",
+    "address": "г. Воскресенск",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "krivyakino-title",
+  "name": "Садовник Кривякина",
+  "legend": "В Кривякине по архивам вернули грушевый сад. Кто проехал усадьбу — садовник.",
+  "ritual": "Сфотографировать грушевое дерево.",
+  "pairVariant": "Садовники Кривякина"
+ },
+ "sources": [
+  {
+   "title": "Реставрация Кривякина — 360",
+   "url": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/"
+  },
+  {
+   "title": "Грушевый сад — 360",
+   "url": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.665474,
+     55.322
+    ],
+    [
+     38.67348,
+     55.281
+    ],
+    [
+     38.674219,
+     55.279428
+    ],
+    [
+     38.675219,
+     55.278428
+    ],
+    [
+     38.67724,
+     55.277277
+    ],
+    [
+     38.68,
+     55.276856
+    ],
+    [
+     38.68276,
+     55.277277
+    ],
+    [
+     38.68376,
+     55.277777
+    ],
+    [
+     38.685781,
+     55.278928
+    ],
+    [
+     38.68652,
+     55.2805
+    ],
+    [
+     38.677026,
+     55.3222
+    ],
+    [
+     38.676286,
+     55.323772
+    ],
+    [
+     38.674263,
+     55.324923
+    ],
+    [
+     38.6715,
+     55.325344
+    ],
+    [
+     38.668737,
+     55.324923
+    ],
+    [
+     38.668237,
+     55.324723
+    ],
+    [
+     38.666214,
+     55.323572
+    ],
+    [
+     38.665474,
+     55.322
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -2951,7 +2951,7 @@
    "distanceFromKremlinKm": 84.3,
    "azimuthDeg": 85.4,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "orekhovo-zuevo",
    "start": false,
    "insideMkad": false
   },
@@ -2969,7 +2969,7 @@
    "distanceFromKremlinKm": 83.5,
    "azimuthDeg": 92.7,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "likino-dulevo",
    "start": false,
    "insideMkad": false
   },
@@ -2987,7 +2987,7 @@
    "distanceFromKremlinKm": 81.1,
    "azimuthDeg": 99.9,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "guslitsy-davydovo",
    "start": false,
    "insideMkad": false
   },
@@ -3005,7 +3005,7 @@
    "distanceFromKremlinKm": 84.0,
    "azimuthDeg": 102.7,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "kurovskoe",
    "start": false,
    "insideMkad": false
   },
@@ -3023,7 +3023,7 @@
    "distanceFromKremlinKm": 98.1,
    "azimuthDeg": 114.1,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "egorevsk",
    "start": false,
    "insideMkad": false
   },
@@ -3041,7 +3041,7 @@
    "distanceFromKremlinKm": 81.7,
    "azimuthDeg": 125.4,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "voskresensk",
    "start": false,
    "insideMkad": false
   },
@@ -3059,7 +3059,7 @@
    "distanceFromKremlinKm": 85.0,
    "azimuthDeg": 127.7,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "krivyakino",
    "start": false,
    "insideMkad": false
   },
@@ -3077,7 +3077,7 @@
    "distanceFromKremlinKm": 95.9,
    "azimuthDeg": 181.8,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "prioksko-terrasnyy-zapovednik",
    "start": false,
    "insideMkad": false
   },
@@ -3095,7 +3095,7 @@
    "distanceFromKremlinKm": 94.2,
    "azimuthDeg": 188.0,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "serpukhov",
    "start": false,
    "insideMkad": false
   },
@@ -3113,7 +3113,7 @@
    "distanceFromKremlinKm": 82.1,
    "azimuthDeg": 254.6,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "dorokhovo",
    "start": false,
    "insideMkad": false
   },

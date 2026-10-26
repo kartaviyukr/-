@@ -1,0 +1,300 @@
+{
+ "id": "serpukhov",
+ "name": "Серпухов",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "serpukhov",
+ "distanceFromKremlinKm": 94.2,
+ "coords": {
+  "lat": 54.913,
+  "lon": 37.412
+ },
+ "intro": [
+  "Серпухов — один из старейших городов Подмосковья, некогда укрепление на южной границе Московского княжества. От кремля на Соборной горе остались в основном фрагменты каменной кладки.",
+  "Главная святыня — Высоцкий монастырь. Его основателями считают Сергия Радонежского и князя Владимира Андреевича Храброго; даты основания в источниках расходятся. Название, по одной версии, связано с тем, что монастырь стоит на самом высоком холме города.",
+  "Монастыри Серпухова исследователи называют форпостами южной границы Московского княжества во времена Орды.",
+  "Маршрут: станция, Соборная гора, Высоцкий монастырь и музей в особняке Мараевых."
+ ],
+ "startPoint": {
+  "name": "Станция «Серпухов»",
+  "coords": {
+   "lat": 54.913,
+   "lon": 37.412
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Серпухов»",
+  "coords": {
+   "lat": 54.9132,
+   "lon": 37.4125
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "route": {
+  "distanceKm": 7.0,
+  "durationH": 3.0,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "serpukhov-gora",
+   "name": "Соборная гора",
+   "coords": {
+    "lat": 54.92,
+    "lon": 37.41
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Серпухов был укреплением Московского княжества на южной границе. От кремля на Соборной горе остались в основном фрагменты каменной кладки, а на месте кремля сегодня гуляют туристы.",
+    "Белокаменный собор на горе в советские годы закрыли, а в конце советской эпохи в нём открыли филиал краеведческого музея.",
+    "Подъём крутой. Следующая точка маршрута — «Высоцкий монастырь»."
+   ],
+   "facts": [
+    {
+     "text": "Серпухов — укрепление Московского княжества.",
+     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "verified": true
+    },
+    {
+     "text": "От кремля остались фрагменты кладки на Соборной горе.",
+     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "verified": true
+    },
+    {
+     "text": "Белокаменный собор закрыли в советские годы.",
+     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "verified": true
+    },
+    {
+     "text": "В соборе открыли филиал музея.",
+     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "verified": true
+    },
+    {
+     "text": "Датировка кремля 1556 годом не подтверждена.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/serpukhov.htm",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "serpukhov-vysotsky",
+   "name": "Высоцкий монастырь",
+   "coords": {
+    "lat": 54.905,
+    "lon": 37.415
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Основателями Высоцкого монастыря считают Сергия Радонежского и князя Владимира Андреевича Храброго. Даты в источниках расходятся: называют 1347 и 1360 годы.",
+    "Название, по одной версии, связано с самым высоким холмом города. Серпуховские монастыри исследователи называют форпостами южной границы княжества.",
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Особняк Мараевых»."
+   ],
+   "facts": [
+    {
+     "text": "Основатели — Сергий Радонежский и Владимир Храбрый.",
+     "sourceUrl": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr",
+     "verified": true
+    },
+    {
+     "text": "Даты основания расходятся — 1347 или 1360 год.",
+     "sourceUrl": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr",
+     "verified": false
+    },
+    {
+     "text": "Название связано с высоким холмом — по одной версии.",
+     "sourceUrl": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr",
+     "verified": false
+    },
+    {
+     "text": "Монастыри Серпухова — форпосты южной границы.",
+     "sourceUrl": "https://repository.rudn.ru/ru/records/article/record/66494",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "serpukhov-maraevy",
+   "name": "Особняк Мараевых",
+   "coords": {
+    "lat": 54.915,
+    "lon": 37.413
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Купеческий особняк Мараевых хранит богатые художественные собрания — здесь работает музей.",
+    "КП советует в Серпухове смотреть остатки древнего кремля, Музей павлина и зубров рядом в заповеднике.",
+    "Часы работы уточняйте; затем — к станции. Финиш — Станция «Серпухов»: Электрички Курского направления. Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "В особняке Мараевых хранятся художественные собрания.",
+     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "verified": true
+    },
+    {
+     "text": "КП советует остатки кремля, Музей павлина и зубров.",
+     "sourceUrl": "https://www.kp.ru/russia/serpuhov/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "verified": false
+    },
+    {
+     "text": "Достопримечательности Серпухова — advantour.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/serpukhov.htm",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Серпуховский пряник",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего подтверждённого блюда у Серпухова мы не нашли. Тематическая замена — пряник к чаю в купеческом городе. Это выбор составителя.",
+  "story": [
+   "Серпухов — старый купеческий город. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Серпухова",
+    "address": "г. Серпухов",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "serpukhov-title",
+  "name": "Порубежник Серпухова",
+  "legend": "Серпухов стерёг южную границу Москвы. Кто проехал его — порубежник.",
+  "ritual": "С Соборной горы сфотографировать город.",
+  "pairVariant": "Порубежники Серпухова"
+ },
+ "sources": [
+  {
+   "title": "Гид по Серпухову — Халва",
+   "url": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda"
+  },
+  {
+   "title": "Высоцкий монастырь — Спутник8",
+   "url": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.404529,
+     54.92
+    ],
+    [
+     37.40653,
+     54.913
+    ],
+    [
+     37.409531,
+     54.905
+    ],
+    [
+     37.410264,
+     54.903428
+    ],
+    [
+     37.412266,
+     54.902277
+    ],
+    [
+     37.415,
+     54.901856
+    ],
+    [
+     37.417734,
+     54.902277
+    ],
+    [
+     37.419736,
+     54.903428
+    ],
+    [
+     37.420469,
+     54.905
+    ],
+    [
+     37.41847,
+     54.915
+    ],
+    [
+     37.417737,
+     54.916572
+    ],
+    [
+     37.414738,
+     54.921572
+    ],
+    [
+     37.412735,
+     54.922723
+    ],
+    [
+     37.41,
+     54.923144
+    ],
+    [
+     37.407265,
+     54.922723
+    ],
+    [
+     37.405262,
+     54.921572
+    ],
+    [
+     37.404529,
+     54.92
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

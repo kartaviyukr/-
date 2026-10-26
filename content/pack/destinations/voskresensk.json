@@ -1,0 +1,300 @@
+{
+ "id": "voskresensk",
+ "name": "Воскресенск",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "voskresensk",
+ "distanceFromKremlinKm": 81.7,
+ "coords": {
+  "lat": 55.322,
+  "lon": 38.671
+ },
+ "intro": [
+  "Воскресенск — город химиков на Москве-реке, выросший из нескольких посёлков. Название, по одной версии, дала церковь Воскресения в селе Воскресенском; в 1862 году по селу назвали станцию Московско-Рязанской железной дороги.",
+  "Главное предприятие — химкомбинат минеральных удобрений, работающий с первых пятилеток; сегодня он входит в «Уралхим», а в 2026 году отметил 95-летие.",
+  "Центральный парк города — бывшая усадьба Кривякино, у которой в спирали свой маршрут.",
+  "Маршрут: станция, центр и музей трудовой и боевой славы."
+ ],
+ "startPoint": {
+  "name": "Станция «Воскресенск»",
+  "coords": {
+   "lat": 55.322,
+   "lon": 38.671
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Воскресенск»",
+  "coords": {
+   "lat": 55.3222,
+   "lon": 38.6715
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "voskresensk-stantsiya",
+   "name": "Станция Воскресенск",
+   "coords": {
+    "lat": 55.322,
+    "lon": 38.671
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Село получило название по церкви Воскресения Христова. В 1862 году село Воскресенское дало имя станции Московско-Рязанской железной дороги.",
+    "Город вырос из нескольких посёлков вдоль Москвы-реки.",
+    "Едем в центр. Следующая точка маршрута — «Химкомбинат». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Село получило название по церкви Воскресения.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "В 1862 году по селу назвали станцию.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Город вырос из нескольких посёлков.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": false
+    },
+    {
+     "text": "Воскресенск описан в Академике.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/26593",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "voskresensk-khimkombinat",
+   "name": "Химкомбинат",
+   "coords": {
+    "lat": 55.33,
+    "lon": 38.68
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Завод минеральных удобрений начал работу в годы первых пятилеток. Сегодня АО «Воскресенские минеральные удобрения» входит в «Уралхим».",
+    "В 2026 году химкомбинат отметил 95-летие. Химики Воскресенска получили премию за воссоздание исторического сада в Кривякине.",
+    "Территория закрыта — смотрим издалека. Следующая точка маршрута — «Музей трудовой и боевой славы»."
+   ],
+   "facts": [
+    {
+     "text": "Завод начал работу в годы первых пятилеток.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Предприятие входит в «Уралхим».",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Химкомбинат отметил юбилей.",
+     "sourceUrl": "https://360.ru/news/mosobl/himkombinat-voskresenska-otmetil-jubilej/",
+     "verified": true
+    },
+    {
+     "text": "Химики получили премию за воссоздание сада.",
+     "sourceUrl": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/",
+     "verified": true
+    },
+    {
+     "text": "Территория закрыта.",
+     "sourceUrl": "https://360.ru/news/mosobl/himkombinat-voskresenska-otmetil-jubilej/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Промышленная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "voskresensk-muzey",
+   "name": "Музей трудовой и боевой славы",
+   "coords": {
+    "lat": 55.325,
+    "lon": 38.675
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В Воскресенске работает музей трудовой и боевой славы.",
+    "Часы работы мы не проверяли — уточните заранее.",
+    "Возвращаемся к станции или едем дальше в Кривякино. Финиш — Станция «Воскресенск»: Электрички Казанского направления. Формат остановки — «заходим внутрь», заложите на неё около 30 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "В Воскресенске есть музей трудовой и боевой славы.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": false
+    },
+    {
+     "text": "Кривякино — отдельная точка спирали.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/voskresensk",
+     "verified": true
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус химика",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Воскресенска нет. Тематическая замена — перекус в честь химиков комбината. Это выбор составителя.",
+  "story": [
+   "Воскресенск — город химиков. Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Воскресенска",
+    "address": "г. Воскресенск",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "voskresensk-title",
+  "name": "Химик Воскресенска",
+  "legend": "Воскресенск делает удобрения для всей страны. Кто проехал его — химик.",
+  "ritual": "Сфотографировать станцию с названием города.",
+  "pairVariant": "Химики Воскресенска"
+ },
+ "sources": [
+  {
+   "title": "Воскресенск — teletype",
+   "url": "https://teletype.in/@apfound/xn7ZBINwV5M"
+  },
+  {
+   "title": "Химкомбинат — 360",
+   "url": "https://360.ru/news/mosobl/himkombinat-voskresenska-otmetil-jubilej/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.665474,
+     55.322
+    ],
+    [
+     38.666214,
+     55.320428
+    ],
+    [
+     38.668237,
+     55.319277
+    ],
+    [
+     38.671,
+     55.318856
+    ],
+    [
+     38.673763,
+     55.319277
+    ],
+    [
+     38.674263,
+     55.319477
+    ],
+    [
+     38.676286,
+     55.320628
+    ],
+    [
+     38.679786,
+     55.323428
+    ],
+    [
+     38.684787,
+     55.328428
+    ],
+    [
+     38.685527,
+     55.33
+    ],
+    [
+     38.684787,
+     55.331572
+    ],
+    [
+     38.682764,
+     55.332723
+    ],
+    [
+     38.68,
+     55.333144
+    ],
+    [
+     38.677236,
+     55.332723
+    ],
+    [
+     38.675213,
+     55.331572
+    ],
+    [
+     38.666214,
+     55.323572
+    ],
+    [
+     38.665474,
+     55.322
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
