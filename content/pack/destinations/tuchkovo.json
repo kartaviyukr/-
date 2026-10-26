@@ -1,0 +1,301 @@
+{
+ "id": "tuchkovo",
+ "name": "Тучково",
+ "settlementType": "рабочий посёлок",
+ "mustHave": 1,
+ "regionId": "ruzskiy",
+ "distanceFromKremlinKm": 73.9,
+ "coords": {
+  "lat": 55.6,
+  "lon": 36.47
+ },
+ "intro": [
+  "Тучково — посёлок Рузского округа на Белорусской дороге. Туристический источник связывает его название с родом Тучковых, служивших на военной и дипломатической службе.",
+  "Самые известные Тучковы — пятеро сыновей генерала Алексея Васильевича Тучкова, ставшие генералами и отличившиеся в 1812 году; Николай Тучков умер от ран, полученных при Бородине. В посёлке есть Аллея братьев Тучковых.",
+  "В годы войны Тучково было оккупировано и освобождено; здесь открыли мемориал «Аллея Славы».",
+  "Маршрут: станция, Аллея братьев Тучковых и Аллея Славы."
+ ],
+ "startPoint": {
+  "name": "Станция «Тучково»",
+  "coords": {
+   "lat": 55.6,
+   "lon": 36.47
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Тучково»",
+  "coords": {
+   "lat": 55.6002,
+   "lon": 36.4705
+  },
+  "transport": "Электрички Белорусского направления"
+ },
+ "route": {
+  "distanceKm": 4.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "tuchkovo-tuchkovy",
+   "name": "Аллея братьев Тучковых",
+   "coords": {
+    "lat": 55.601,
+    "lon": 36.475
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Генерал Алексей Васильевич Тучков (1729–1799) — отец пяти генералов, отличившихся в войне 1812 года. Один из них, Николай Алексеевич (1765–1812), умер от ран, полученных в Бородинском сражении.",
+    "В посёлке есть Аллея братьев Тучковых. Связь названия посёлка с этим родом — версия туристического источника.",
+    "От аллеи едем к мемориалу. Следующая точка маршрута — «Аллея Славы»."
+   ],
+   "facts": [
+    {
+     "text": "А. В. Тучков — отец пяти генералов.",
+     "sourceUrl": "https://proza.ru/2021/07/05/291",
+     "verified": true
+    },
+    {
+     "text": "Н. А. Тучков умер от ран, полученных при Бородине.",
+     "sourceUrl": "https://proza.ru/2021/07/05/291",
+     "verified": true
+    },
+    {
+     "text": "В посёлке есть Аллея братьев Тучковых.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "verified": true
+    },
+    {
+     "text": "Связь названия с родом Тучковых — по туристическому источнику.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "verified": false
+    },
+    {
+     "text": "Координаты аллеи приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "tuchkovo-slava",
+   "name": "Аллея Славы",
+   "coords": {
+    "lat": 55.6,
+    "lon": 36.48
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Тучкове торжественно открыли мемориал «Аллея Славы».",
+    "МЧС упоминало годовщину освобождения посёлка от немецко-фашистских захватчиков — значит, в 1941 году Тучково было оккупировано.",
+    "Минуту молчим и едем по посёлку. Следующая точка маршрута — «Посёлок у станции». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Тучкове открыли мемориал «Аллея Славы».",
+     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "verified": true
+    },
+    {
+     "text": "Тучково было освобождено от оккупации.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": true
+    },
+    {
+     "text": "Дату освобождения мы не сверили.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": false
+    },
+    {
+     "text": "Координаты мемориала приблизительные.",
+     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "verified": false
+    },
+    {
+     "text": "Тучково — в Рузском округе.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "tuchkovo-posyolok",
+   "name": "Посёлок у станции",
+   "coords": {
+    "lat": 55.599,
+    "lon": 36.472
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Тучково — посёлок у одноимённой станции Белорусской дороги. Историю станции мы в найденных источниках не нашли.",
+    "Отсюда начинаются «рузские просторы» — дальше на север Руза и Рузское водохранилище.",
+    "Возвращаемся к станции. Финиш — Станция «Тучково»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Тучково — посёлок у станции.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "verified": true
+    },
+    {
+     "text": "История станции не найдена.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "verified": false
+    },
+    {
+     "text": "Экскурсии «Рузские просторы» включают Тучково.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "verified": false
+    },
+    {
+     "text": "Руза — к северу от Тучкова.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Генеральский обед",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Тучкова нет. Тематическая замена — сытный обед в честь пяти генералов Тучковых. Это выбор составителя.",
+  "story": [
+   "Тучково носит имя военного рода. Перекусите у станции — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе у станции Тучково",
+    "address": "Рузский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "tuchkovo-title",
+  "name": "Брат Тучковых",
+  "legend": "Пять братьев Тучковых сражались в 1812 году. Кто проехал посёлок — шестой брат.",
+  "ritual": "Сфотографироваться у Аллеи братьев Тучковых.",
+  "pairVariant": "Братья Тучковы"
+ },
+ "sources": [
+  {
+   "title": "Генералы Тучковы — Проза",
+   "url": "https://proza.ru/2021/07/05/291"
+  },
+  {
+   "title": "Аллея Славы — 360",
+   "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     36.464435,
+     55.6
+    ],
+    [
+     36.46518,
+     55.598428
+    ],
+    [
+     36.467217,
+     55.597277
+    ],
+    [
+     36.469218,
+     55.596277
+    ],
+    [
+     36.472,
+     55.595856
+    ],
+    [
+     36.48,
+     55.596856
+    ],
+    [
+     36.482783,
+     55.597277
+    ],
+    [
+     36.48482,
+     55.598428
+    ],
+    [
+     36.485565,
+     55.6
+    ],
+    [
+     36.48482,
+     55.601572
+    ],
+    [
+     36.482783,
+     55.602723
+    ],
+    [
+     36.477783,
+     55.603723
+    ],
+    [
+     36.475,
+     55.604144
+    ],
+    [
+     36.472217,
+     55.603723
+    ],
+    [
+     36.467717,
+     55.602923
+    ],
+    [
+     36.467217,
+     55.602723
+    ],
+    [
+     36.46518,
+     55.601572
+    ],
+    [
+     36.464435,
+     55.6
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

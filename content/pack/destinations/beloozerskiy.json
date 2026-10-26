@@ -1,0 +1,295 @@
+{
+ "id": "beloozerskiy",
+ "name": "Белоозёрский",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "voskresensk",
+ "distanceFromKremlinKm": 61.0,
+ "coords": {
+  "lat": 55.46,
+  "lon": 38.44
+ },
+ "intro": [
+  "Белоозёрский — небольшой город Воскресенского округа (с 2019 года — город). По одному источнику, он основан в 1960-х как посёлок для рабочих; другой описывает его как жилой посёлок авиационной испытательной базы у железнодорожной платформы.",
+  "Главная звезда города — озеро Белое; рядом и озеро Островное. Режим отдыха у озёр различается и уточняется ежегодно.",
+  "Маршрут: станция, город и берег Белого озера."
+ ],
+ "startPoint": {
+  "name": "Станция «Белоозёрская»",
+  "coords": {
+   "lat": 55.46,
+   "lon": 38.44
+  },
+  "transport": "Электрички Казанского направления (на Рязань)"
+ },
+ "endPoint": {
+  "name": "Станция «Белоозёрская»",
+  "coords": {
+   "lat": 55.4602,
+   "lon": 38.4405
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "route": {
+  "distanceKm": 5.0,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "beloozerskiy-gorod",
+   "name": "Город у платформы",
+   "coords": {
+    "lat": 55.46,
+    "lon": 38.44
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Белоозёрский вырос у железнодорожной платформы. По одному источнику, его основали в 1960-х как посёлок для рабочих; по другому — как жилой посёлок авиационной испытательной базы.",
+    "В 2006–2019 годах здесь было городское поселение Белоозёрский, а в 2019 году посёлок стал городом.",
+    "Едем к озеру. Следующая точка маршрута — «Озеро Белое»."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок основан в 1960-х — по одному источнику.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": false
+    },
+    {
+     "text": "Посёлок связан с авиационной испытательной базой — по другому источнику.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": false
+    },
+    {
+     "text": "Городское поселение существовало в 2006–2019 годах.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": true
+    },
+    {
+     "text": "С 2019 года Белоозёрский — город.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "beloozerskiy-beloe",
+   "name": "Озеро Белое",
+   "coords": {
+    "lat": 55.465,
+    "lon": 38.45
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Главная звезда Белоозёрского — озеро Белое. Это место отдыха горожан.",
+    "Режим отдыха на озёрах ежегодно уточняется: проверьте, где разрешено купание.",
+    "Обходим часть берега. Следующая точка маршрута — «Озеро Островное». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Главная достопримечательность — озеро Белое.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": true
+    },
+    {
+     "text": "Режим отдыха на озёрах уточняется ежегодно.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": true
+    },
+    {
+     "text": "Места для купания не проверены.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": false
+    },
+    {
+     "text": "Координаты озера приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": false
+    },
+    {
+     "text": "Город назван, вероятно, по озеру — не проверено.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "warnings": [
+    "Купание — только в разрешённых местах."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "beloozerskiy-ostrovnoe",
+   "name": "Озеро Островное",
+   "coords": {
+    "lat": 55.462,
+    "lon": 38.455
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Рядом с Белым — озеро Островное. Вместе они дают природную паузу в маршруте.",
+    "Режим отдыха у этого озера может отличаться от Белого — уточняйте на месте.",
+    "Возвращаемся к станции. Финиш — Станция «Белоозёрская»: Электрички Казанского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с городом есть озеро Островное.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": true
+    },
+    {
+     "text": "Режим отдыха у озёр различается.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": false
+    },
+    {
+     "text": "Белоозёрский — в Воскресенском округе.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Пикник у Белого озера",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Белоозёрского нет. Тематическая замена — пикник на берегу озера Белое. Это выбор составителя.",
+  "story": [
+   "Белоозёрский — город у озера. Возьмите еду с собой — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Магазины Белоозёрского",
+    "address": "Воскресенский г.о.",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "beloozerskiy-title",
+  "name": "Белоозёрец",
+  "legend": "Главное в Белоозёрском — Белое озеро. Кто доехал сюда — белоозёрец.",
+  "ritual": "Сфотографировать отражение неба в озере.",
+  "pairVariant": "Белоозёрцы"
+ },
+ "sources": [
+  {
+   "title": "Белоозёрский — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9"
+  },
+  {
+   "title": "Поселение Белоозёрский — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.434455,
+     55.46
+    ],
+    [
+     38.435198,
+     55.458428
+    ],
+    [
+     38.437227,
+     55.457277
+    ],
+    [
+     38.44,
+     55.456856
+    ],
+    [
+     38.455,
+     55.458856
+    ],
+    [
+     38.457773,
+     55.459277
+    ],
+    [
+     38.459803,
+     55.460428
+    ],
+    [
+     38.460546,
+     55.462
+    ],
+    [
+     38.459803,
+     55.463572
+    ],
+    [
+     38.454803,
+     55.466572
+    ],
+    [
+     38.452773,
+     55.467723
+    ],
+    [
+     38.45,
+     55.468144
+    ],
+    [
+     38.447227,
+     55.467723
+    ],
+    [
+     38.437227,
+     55.462723
+    ],
+    [
+     38.435198,
+     55.461572
+    ],
+    [
+     38.434455,
+     55.46
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

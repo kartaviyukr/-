@@ -1,0 +1,291 @@
+{
+ "id": "chekhov-i-lopasnya-zachatevskoe",
+ "name": "Чехов и Лопасня-Зачатьевское",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "chekhov",
+ "distanceFromKremlinKm": 68.4,
+ "coords": {
+  "lat": 55.143,
+  "lon": 37.466
+ },
+ "intro": [
+  "Город Чехов во времена писателя назывался станцией Лопасня — отсюда Антон Чехов ездил в своё Мелихово.",
+  "В городе — музей-усадьба «Лопасня-Зачатьевское». Имение принадлежало родственникам Петра Ланского — второго мужа Натальи Гончаровой-Пушкиной.",
+  "Подробную историю переименования города мы в найденных источниках не сверили и не приводим.",
+  "Маршрут: станция, центр и усадьба Лопасня-Зачатьевское."
+ ],
+ "startPoint": {
+  "name": "Станция «Чехов»",
+  "coords": {
+   "lat": 55.143,
+   "lon": 37.466
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "endPoint": {
+  "name": "Станция «Чехов»",
+  "coords": {
+   "lat": 55.1432,
+   "lon": 37.4665
+  },
+  "transport": "Электрички Курского направления"
+ },
+ "route": {
+  "distanceKm": 6.0,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "chekhov-i-lopasnya-zachatevskoe-lopasnya",
+   "name": "Станция Лопасня",
+   "coords": {
+    "lat": 55.143,
+    "lon": 37.466
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Во времена Чехова здесь была станция Лопасня: писатель приезжал сюда поездом и ехал дальше в Мелихово.",
+    "Сегодня город носит имя Чехова; Мелихово — отдельный маршрут нашей спирали.",
+    "Едем в центр. Следующая точка маршрута — «Усадьба Лопасня-Зачатьевское». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Город Чехов во времена писателя назывался станцией Лопасня.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "Мелихово находится рядом с городом.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "Дата переименования не сверена.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
+    },
+    {
+     "text": "Координаты станции приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
+    },
+    {
+     "text": "«Радио Свобода» писало о Мелихове.",
+     "sourceUrl": "https://www.svoboda.org/a/2151712.html",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "chekhov-i-lopasnya-zachatevskoe-usadba",
+   "name": "Усадьба Лопасня-Зачатьевское",
+   "coords": {
+    "lat": 55.148,
+    "lon": 37.48
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Музей-усадьба «Лопасня-Зачатьевское» находится в городе Чехове. Имение принадлежало родственникам Петра Ланского — второго мужа Натальи Гончаровой, вдовы Пушкина.",
+    "Подробную историю владельцев и построек мы в найденных источниках не сверили.",
+    "Часы работы уточняйте. Следующая точка маршрута — «Центр Чехова». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Чехове есть музей-усадьба «Лопасня-Зачатьевское».",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "Имение принадлежало родственникам П. Ланского.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "Ланской — второй муж Натальи Гончаровой-Пушкиной.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "История построек не сверена.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "chekhov-i-lopasnya-zachatevskoe-tsentr",
+   "name": "Центр Чехова",
+   "coords": {
+    "lat": 55.145,
+    "lon": 37.47
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Чехов — город, названный в честь писателя, жившего неподалёку.",
+    "Отсюда удобно продолжить путь к Мелихову и Давидовой пустыни — у них отдельные маршруты.",
+    "Возвращаемся к станции. Финиш — Станция «Чехов»: Электрички Курского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+   ],
+   "facts": [
+    {
+     "text": "Город назван в честь писателя.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
+    },
+    {
+     "text": "Мелихово — недалеко от города.",
+     "sourceUrl": "https://tonkosti.ru/Усадьба_Мелихово",
+     "verified": true
+    },
+    {
+     "text": "Координаты центра приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
+    },
+    {
+     "text": "Давидова пустынь — в Чеховском округе.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Чай на Лопасне",
+  "kind": "тематическая замена",
+  "honestyNote": "Своего блюда у Чехова нет. Тематическая замена — чай у станции, где Чехов пересаживался на лошадей. Это выбор составителя.",
+  "story": [
+   "Станция Лопасня была воротами в чеховское Мелихово.",
+   "Перекусите в центре — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Чехова",
+    "address": "г. Чехов",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "chekhov-i-lopasnya-zachatevskoe-title",
+  "name": "Пассажир Лопасни",
+  "legend": "Чехов приезжал сюда поездом на станцию Лопасня. Кто проехал город — пассажир Лопасни.",
+  "ritual": "Сфотографировать здание станции.",
+  "pairVariant": "Пассажиры Лопасни"
+ },
+ "sources": [
+  {
+   "title": "Мелихово и Лопасня — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.460499,
+     55.143
+    ],
+    [
+     37.461236,
+     55.141428
+    ],
+    [
+     37.463249,
+     55.140277
+    ],
+    [
+     37.466,
+     55.139856
+    ],
+    [
+     37.468751,
+     55.140277
+    ],
+    [
+     37.482751,
+     55.145277
+    ],
+    [
+     37.484765,
+     55.146428
+    ],
+    [
+     37.485502,
+     55.148
+    ],
+    [
+     37.484765,
+     55.149572
+    ],
+    [
+     37.482751,
+     55.150723
+    ],
+    [
+     37.48,
+     55.151144
+    ],
+    [
+     37.477249,
+     55.150723
+    ],
+    [
+     37.467249,
+     55.147723
+    ],
+    [
+     37.463249,
+     55.145723
+    ],
+    [
+     37.461236,
+     55.144572
+    ],
+    [
+     37.460499,
+     55.143
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

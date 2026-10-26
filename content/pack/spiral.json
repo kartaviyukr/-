@@ -2591,7 +2591,7 @@
    "distanceFromKremlinKm": 75.1,
    "azimuthDeg": 78.4,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "elektrogorsk",
    "start": false,
    "insideMkad": false
   },
@@ -2609,7 +2609,7 @@
    "distanceFromKremlinKm": 64.6,
    "azimuthDeg": 86.6,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "pavlovskiy-posad",
    "start": false,
    "insideMkad": false
   },
@@ -2627,7 +2627,7 @@
    "distanceFromKremlinKm": 62.7,
    "azimuthDeg": 89.8,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "bolshie-dvory",
    "start": false,
    "insideMkad": false
   },
@@ -2645,7 +2645,7 @@
    "distanceFromKremlinKm": 77.0,
    "azimuthDeg": 90.2,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "drezna",
    "start": false,
    "insideMkad": false
   },
@@ -2663,7 +2663,7 @@
    "distanceFromKremlinKm": 61.0,
    "azimuthDeg": 121.8,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "beloozerskiy",
    "start": false,
    "insideMkad": false
   },
@@ -2681,7 +2681,7 @@
    "distanceFromKremlinKm": 72.1,
    "azimuthDeg": 163.5,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "mikhnevo",
    "start": false,
    "insideMkad": false
   },
@@ -2699,7 +2699,7 @@
    "distanceFromKremlinKm": 72.0,
    "azimuthDeg": 178.5,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "melikhovo",
    "start": false,
    "insideMkad": false
   },
@@ -2717,7 +2717,7 @@
    "distanceFromKremlinKm": 76.3,
    "azimuthDeg": 186.6,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "davidova-pustyn",
    "start": false,
    "insideMkad": false
   },
@@ -2735,7 +2735,7 @@
    "distanceFromKremlinKm": 68.4,
    "azimuthDeg": 188.1,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "chekhov-i-lopasnya-zachatevskoe",
    "start": false,
    "insideMkad": false
   },
@@ -2753,7 +2753,7 @@
    "distanceFromKremlinKm": 68.9,
    "azimuthDeg": 234.2,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "naro-fominsk",
    "start": false,
    "insideMkad": false
   },
@@ -2771,7 +2771,7 @@
    "distanceFromKremlinKm": 61.0,
    "azimuthDeg": 251.7,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "kubinka",
    "start": false,
    "insideMkad": false
   },
@@ -2789,7 +2789,7 @@
    "distanceFromKremlinKm": 73.9,
    "azimuthDeg": 257.3,
    "ring": 4,
-   "destinationId": null,
+   "destinationId": "tuchkovo",
    "start": false,
    "insideMkad": false
   },
