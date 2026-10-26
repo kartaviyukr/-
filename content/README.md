@@ -6,10 +6,10 @@
 content/
 ├── pack/                       ← уезжает в APK
 │   ├── manifest.json           версия пака и список мест с готовым маршрутом
-│   ├── spiral.json             все 183 места спирали, кольца, округа, «самые-самые»
+│   ├── spiral.json             все 182 места спирали (ЦАО → округа внутри МКАД → кольца наружу), «самые-самые»
 │   └── destinations/*.json     маршрут места: точки, рассказы, факты, блюдо, звание
 └── tools/
-    ├── appendix_a.tsv          исходная таблица мест (Приложение А из ТЗ)
+    ├── places.tsv              таблица мест: 9 округов Москвы внутри МКАД + места за МКАД
     ├── build_spiral.py         пересчёт спирали из таблицы
     └── validate_content.py     проверка схемы и объёмов, запускается в CI
 ```
@@ -28,10 +28,10 @@ content/
 
 ## Как добавить место
 
-1. Уточнить координаты центра в `tools/appendix_a.tsv` (по OSM), запустить `python3 content/tools/build_spiral.py` —
+1. Уточнить координаты центра в `tools/places.tsv` (по OSM), запустить `python3 content/tools/build_spiral.py` —
    расстояния, азимуты, кольца и порядок спирали пересчитаются.
 2. Написать `pack/destinations/<id>.json` (id — транслит названия, как в `spiral.json`), добавить файл в
-   `manifest.json`, в `build_spiral.py` дописать номер места в `WITH_CONTENT`, снова запустить `build_spiral.py`.
+   `manifest.json`, в `build_spiral.py` дописать название места в `WITH_CONTENT` (одно место — один маршрут), снова запустить `build_spiral.py`.
 3. `python3 content/tools/validate_content.py` — должно быть 0 ошибок.
 
 ## Границы мест

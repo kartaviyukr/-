@@ -41,8 +41,6 @@ data class Stats(
 }
 
 object ProgressCalculator {
-    const val KREMLIN_STOP_ID = "kremlin"
-
     fun destination(dest: Destination, visitedStopIds: Set<String>): DestinationProgress {
         val req = dest.stops.filter { !it.optional }
         val opt = dest.stops.filter { it.optional }
@@ -72,7 +70,7 @@ object ProgressCalculator {
                 result += EarnedTitle("bonus:${dest.id}", TitleKind.PLACE_BONUS, dest.title.bonusVariant, "Все точки места, включая необязательные: ${dest.name}")
             }
         }
-        val route = spiral.places.filter { !it.finish }
+        val route = spiral.places
         for (region in spiral.regions) {
             val places = route.filter { it.regionId == region.id }
             if (places.isNotEmpty() && places.all { it.id in completePlaceIds }) {
@@ -89,8 +87,8 @@ object ProgressCalculator {
         if (stars.isNotEmpty() && stars.all { it.id in completePlaceIds }) {
             result += EarnedTitle("stars", TitleKind.STARS, "Собиратель звёзд", "Пройдены все обязательные места ★: ${stars.size}")
         }
-        if (route.isNotEmpty() && route.all { it.id in completePlaceIds } && KREMLIN_STOP_ID in visitedStopIds) {
-            result += EarnedTitle("spiral", TitleKind.SPIRAL, "Велопаломник Подмосковья", "Вся спираль пройдена, финиш — Кремль")
+        if (route.isNotEmpty() && route.all { it.id in completePlaceIds }) {
+            result += EarnedTitle("spiral", TitleKind.SPIRAL, "Велопаломник Подмосковья", "Вся спираль пройдена — от ЦАО до самого дальнего места области")
         }
         for (s in spiral.superlatives) {
             if (s.placeId != null && s.placeId in completePlaceIds) {

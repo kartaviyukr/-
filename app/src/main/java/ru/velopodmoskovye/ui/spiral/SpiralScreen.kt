@@ -19,7 +19,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.DirectionsBike
 import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Train
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -40,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import ru.velopodmoskovye.domain.progress.ProgressCalculator
+import ru.velopodmoskovye.domain.spiral.SpiralBuilder
 import ru.velopodmoskovye.ui.Format
 import ru.velopodmoskovye.ui.theme.ProgressGreen
 import ru.velopodmoskovye.ui.theme.StarGold
@@ -59,17 +59,19 @@ fun SpiralScreen(
         LazyColumn(Modifier.fillMaxSize(), contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 96.dp)) {
             item {
                 Column(Modifier.padding(16.dp)) {
-                    Text("Спираль к Кремлю", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+                    Text("Спираль от Кремля", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
                     Text(
-                        "${state.total} мест от самого дальнего к центру. Пройдено: ${state.complete}. " +
-                            "При ${state.kmPerDay} км в день — около ${state.days} дней пути.",
+                        "${state.total} мест: старт в ЦАО, затем округа Москвы внутри МКАД и дальше кольцами наружу. " +
+                            "У каждого места — свой веломаршрут. Пройдено: ${state.complete}.",
                         style = MaterialTheme.typography.bodyMedium,
                     )
-                    Text(
-                        "Спираль — рекомендация: начать можно с любого места.",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    )
+                    state.next?.let {
+                        Text(
+                            "Следующее по спирали: ${it.num}. ${it.name}",
+                            style = MaterialTheme.typography.labelLarge,
+                            color = MaterialTheme.colorScheme.primary,
+                        )
+                    }
                     Spacer(Modifier.padding(4.dp))
                     LinearProgressIndicator(
                         progress = { if (state.total == 0) 0f else state.complete.toFloat() / state.total },
@@ -87,20 +89,6 @@ fun SpiralScreen(
                 val ringHeader = rows.indexOf(row).let { i -> i == 0 || rows[i - 1].place.ring != row.place.ring }
                 Column {
                     if (ringHeader) RingHeader(row.place.ring)
-                    if (row.dayStart && state.filter == SpiralFilter.ALL) DayHeader(row.day, row.dayKm)
-                    row.transferIn?.takeIf { state.filter == SpiralFilter.ALL }?.let { t ->
-                        Row(Modifier.padding(start = 32.dp, top = 2.dp, bottom = 2.dp), verticalAlignment = Alignment.CenterVertically) {
-                            Icon(if (t.suggestTrain) Icons.Filled.Train else Icons.AutoMirrored.Filled.DirectionsBike, null,
-                                modifier = Modifier.size(14.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
-                            Spacer(Modifier.width(6.dp))
-                            Text(
-                                "перегон ~${Format.km(t.rideKm)}, ${Format.hours(t.durationH)}" +
-                                    if (t.suggestTrain) " · можно сократить электричкой" else "",
-                                style = MaterialTheme.typography.labelSmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            )
-                        }
-                    }
                     PlaceRow(row, state.activeDestinationId) {
                         val id = row.place.destinationId
                         if (id != null) {
@@ -125,21 +113,11 @@ fun SpiralScreen(
 private fun RingHeader(ring: Int) {
     Surface(color = MaterialTheme.colorScheme.secondaryContainer, modifier = Modifier.fillMaxWidth().padding(top = 12.dp)) {
         Text(
-            "Кольцо ${ProgressCalculator.ringName(ring)}",
+            if (ring == SpiralBuilder.INSIDE_MKAD_RING) ProgressCalculator.ringName(ring) else "Кольцо ${ProgressCalculator.ringName(ring)}",
             style = MaterialTheme.typography.titleSmall,
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
         )
     }
-}
-
-@Composable
-private fun DayHeader(day: Int, km: Double) {
-    Text(
-        "День $day · ~${Format.km(km)}",
-        style = MaterialTheme.typography.labelLarge,
-        color = MaterialTheme.colorScheme.primary,
-        modifier = Modifier.padding(start = 16.dp, top = 10.dp, bottom = 2.dp),
-    )
 }
 
 @Composable
@@ -174,14 +152,13 @@ private fun PlaceRow(row: SpiralRow, activeId: String?, onClick: () -> Unit) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
                 when {
-                    row.coveredByName != null -> Text("входит в маршрут «${row.coveredByName}»", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
+                    p.start -> Text("старт спирали · маршрут ${if (ready) "готов" else "готовится"}", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
                     ready -> Text("маршрут готов", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
                     else -> Text("маршрут готовится", style = MaterialTheme.typography.labelSmall)
                 }
                 row.progress?.takeIf { it.started && !it.complete }?.let {
                     LinearProgressIndicator(progress = { it.fraction }, modifier = Modifier.fillMaxWidth().padding(top = 4.dp))
                 }
-                if (row.overnight) Text("ночёвка", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.tertiary)
             }
         }
     }

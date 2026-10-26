@@ -62,7 +62,10 @@ data class SpiralPlace(
     val ring: Int,
     /** id файла с маршрутом, если контент уже написан. */
     val destinationId: String? = null,
-    val finish: Boolean = false,
+    /** Старт спирали — ЦАО. */
+    val start: Boolean = false,
+    /** Административный округ Москвы внутри МКАД (кольцо 0). */
+    val insideMkad: Boolean = false,
 )
 
 @Serializable

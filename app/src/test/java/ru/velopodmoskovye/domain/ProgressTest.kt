@@ -62,11 +62,10 @@ class ProgressTest {
         ))
         val d2 = TestData.destination("d2", listOf(TestData.stop("d2a", 55.65, 37.86)))
         val places = listOf(
-            SpiralPlace("p1", 1, "П1", "г.", "r1", 3, d1.coords, 15.0, 86.0, 6, "d1"),
-            SpiralPlace("p2", 2, "П2", "г.", "r2", 1, d2.coords, 19.0, 126.0, 6, "d2"),
-            SpiralPlace("kremlin", 3, "Кремль", "финиш", "msk", 3, Geo.KREMLIN, 0.0, 0.0, 6, null, finish = true),
+            SpiralPlace("p1", 1, "П1", "г.", "r1", 3, d1.coords, 15.0, 86.0, 0, "d1"),
+            SpiralPlace("p2", 2, "П2", "г.", "r2", 1, d2.coords, 19.0, 126.0, 0, "d2"),
         )
-        val sp = SpiralPack(1, Geo.KREMLIN, listOf(RingDef(6, "ближе 20 км", 0.0, 20.0)),
+        val sp = SpiralPack(1, Geo.KREMLIN, listOf(RingDef(0, "ближе 20 км", 0.0, 20.0)),
             listOf(Region("r1", "Реутов", "МО_городской_округ"), Region("r2", "Котельники", "МО_городской_округ")),
             places)
         return sp to mapOf("d1" to d1, "d2" to d2)
@@ -95,9 +94,9 @@ class ProgressTest {
         val titles = ProgressCalculator.earnedTitles(sp, dests, all)
         assertTrue(titles.any { it.kind == TitleKind.PLACE_BONUS })
         assertTrue(titles.any { it.kind == TitleKind.RING })
-        assertFalse(titles.any { it.kind == TitleKind.SPIRAL })
-        val withKremlin = ProgressCalculator.earnedTitles(sp, dests, all + ProgressCalculator.KREMLIN_STOP_ID)
-        assertTrue(withKremlin.any { it.kind == TitleKind.SPIRAL })
+        assertTrue(titles.any { it.kind == TitleKind.SPIRAL })
+        val partial = ProgressCalculator.earnedTitles(sp, dests, setOf("d1a", "d1b"))
+        assertFalse(partial.any { it.kind == TitleKind.SPIRAL })
     }
 
     @Test

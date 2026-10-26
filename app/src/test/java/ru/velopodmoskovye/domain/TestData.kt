@@ -13,13 +13,16 @@ import java.io.File
 object TestData {
     val repoRoot: File = File(System.getProperty("repoRoot") ?: "..").absoluteFile
 
-    data class AppendixRow(val num: Int, val name: String, val distKm: Double, val az: Double, val point: GeoPoint)
+    data class PlaceRow(val num: Int, val name: String, val kind: String, val distKm: Double, val az: Double, val point: GeoPoint) {
+        val insideMkad: Boolean get() = kind.startsWith("административный округ Москвы")
+        val isStart: Boolean get() = name == "ЦАО"
+    }
 
-    /** Приложение А из ТЗ: 183 места в эталонном порядке спирали. */
-    fun appendixA(): List<AppendixRow> =
-        File(repoRoot, "content/tools/appendix_a.tsv").readLines(Charsets.UTF_8).filter { it.isNotBlank() }.map {
+    /** Таблица мест спирали: 9 округов Москвы внутри МКАД + места за МКАД. */
+    fun places(): List<PlaceRow> =
+        File(repoRoot, "content/tools/places.tsv").readLines(Charsets.UTF_8).filter { it.isNotBlank() }.map {
             val c = it.split('\t')
-            AppendixRow(c[0].toInt(), c[2], c[5].toDouble(), c[6].toDouble(), GeoPoint(c[7].toDouble(), c[8].toDouble()))
+            PlaceRow(c[0].toInt(), c[2], c[3], c[5].toDouble(), c[6].toDouble(), GeoPoint(c[7].toDouble(), c[8].toDouble()))
         }
 
     fun stop(

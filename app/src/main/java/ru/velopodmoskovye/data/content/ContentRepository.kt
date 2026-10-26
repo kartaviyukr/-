@@ -10,7 +10,6 @@ import kotlinx.serialization.json.Json
 import ru.velopodmoskovye.domain.model.ContentManifest
 import ru.velopodmoskovye.domain.model.Destination
 import ru.velopodmoskovye.domain.model.SpiralPack
-import ru.velopodmoskovye.domain.model.SpiralPlace
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -21,9 +20,6 @@ data class ContentPack(
     val destinations: Map<String, Destination>,
 ) {
     val regionNames: Map<String, String> = spiral.regions.associate { it.id to it.name }
-
-    /** Места спирали, которые покрывает маршрут (сам город и усадьбы-перемычки). */
-    fun placesOf(destinationId: String): List<SpiralPlace> = spiral.places.filter { it.destinationId == destinationId }
 }
 
 object ContentParser {

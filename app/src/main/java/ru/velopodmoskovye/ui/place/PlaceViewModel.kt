@@ -18,7 +18,6 @@ import ru.velopodmoskovye.data.map.OfflineState
 import ru.velopodmoskovye.data.progress.ProgressRepository
 import ru.velopodmoskovye.data.settings.SettingsRepository
 import ru.velopodmoskovye.domain.model.Destination
-import ru.velopodmoskovye.domain.model.SpiralPlace
 import ru.velopodmoskovye.domain.progress.DestinationProgress
 import ru.velopodmoskovye.domain.progress.ProgressCalculator
 import ru.velopodmoskovye.domain.route.GoogleMapsLinks
@@ -32,7 +31,6 @@ import javax.inject.Inject
 data class PlaceUiState(
     val loading: Boolean = true,
     val destination: Destination? = null,
-    val places: List<SpiralPlace> = emptyList(),
     val regionName: String = "",
     val visited: Set<String> = emptySet(),
     val progress: DestinationProgress? = null,
@@ -83,7 +81,6 @@ class PlaceViewModel @Inject constructor(
         PlaceUiState(
             loading = false,
             destination = dest,
-            places = pack.placesOf(dest.id),
             regionName = pack.regionNames[dest.regionId] ?: "",
             visited = visited,
             progress = ProgressCalculator.destination(dest, visited),

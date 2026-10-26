@@ -25,13 +25,14 @@ import javax.inject.Inject
 
 /** Группы мест для фильтра на карте. */
 enum class PlaceCategory(val label: String) {
-    CITY("Города"), SETTLEMENT("Посёлки и сёла"), ESTATE("Усадьбы"), MONASTERY("Монастыри"),
+    MOSCOW_AO("Округа Москвы"), CITY("Города"), SETTLEMENT("Посёлки и сёла"), ESTATE("Усадьбы"), MONASTERY("Монастыри"),
     NATURE("Природа"), MEMORIAL("Памятные места"), OTHER("Другое");
 
     companion object {
         fun of(kindNote: String): PlaceCategory {
             val k = kindNote.lowercase()
             return when {
+                k.startsWith("административный округ") -> MOSCOW_AO
                 "природа" in k -> NATURE
                 "монастыр" in k && !k.startsWith("с.") -> MONASTERY
                 "усадьб" in k && !k.startsWith("г.") && !k.startsWith("рп") -> ESTATE
@@ -72,7 +73,7 @@ class MapViewModel @Inject constructor(
     ) { pack, visited, s, f, fix ->
         val zones = OpenZones.compute(pack.spiral, pack.destinations, visited, s.geofenceRadiusM)
         val completeDest = pack.destinations.values.filter { ProgressCalculator.destination(it, visited).complete }.map { it.id }.toSet()
-        val complete = pack.spiral.places.filter { it.destinationId in completeDest || (it.finish && ProgressCalculator.KREMLIN_STOP_ID in visited) }
+        val complete = pack.spiral.places.filter { it.destinationId in completeDest }
             .map { it.id }.toSet()
         val shown = pack.spiral.places.filter { p ->
             val starOk = when (f.stars) {
@@ -80,7 +81,7 @@ class MapViewModel @Inject constructor(
                 StarFilter.STAR_OR_HALF -> p.mustHave >= 2
                 StarFilter.STAR -> p.mustHave == 3
             }
-            starOk && (p.finish || PlaceCategory.of(p.kindNote) in f.categories)
+            starOk && PlaceCategory.of(p.kindNote) in f.categories
         }
         val routeStops = pack.destinations.values.flatMap { d -> d.stops }
         val layers = buildList {

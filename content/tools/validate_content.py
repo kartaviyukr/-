@@ -249,8 +249,14 @@ def main():
             linked.add(p["destinationId"])
     if nums != list(range(1, len(nums) + 1)):
         err("spiral.json", "номера мест должны идти подряд с 1")
-    if not spiral["places"][-1].get("finish"):
-        err("spiral.json", "последним должен быть финиш (Кремль)")
+    if not spiral["places"][0].get("start"):
+        err("spiral.json", "первым должен быть старт спирали (ЦАО)")
+    inside = [p for p in spiral["places"] if p.get("insideMkad")]
+    if [p["num"] for p in inside] != list(range(1, len(inside) + 1)):
+        err("spiral.json", "округа Москвы внутри МКАД должны идти первыми")
+    dest_ids = [p["destinationId"] for p in spiral["places"] if p.get("destinationId")]
+    if len(dest_ids) != len(set(dest_ids)):
+        err("spiral.json", "у каждого места должен быть свой маршрут — один файл не может покрывать несколько мест")
     files = manifest["destinations"]
     for f in files:
         path = os.path.join(PACK, "destinations", f)

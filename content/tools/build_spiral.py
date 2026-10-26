@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Пересчёт большого маршрута (спирали к Кремлю) из таблицы мест.
+"""Пересчёт большого маршрута (спирали от Кремля наружу) из таблицы мест.
 
-Вход: content/tools/appendix_a.tsv (номер, отметка, название, тип, округ, км, азимут, lat, lon).
+Вход: content/tools/places.tsv (номер, отметка, название, тип, округ, км, азимут, lat, lon).
 Расстояние и азимут пересчитываются по координатам, кольца и порядок строятся тем же
 алгоритмом, что в приложении (SpiralBuilder.kt). Если после уточнения координат место
 сменило кольцо — это нормально, порядок перегенерируется.
@@ -16,23 +16,22 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 KREMLIN = (55.752, 37.618)
-BOUNDS = [120, 100, 80, 60, 40, 20, 0]
-RING_NAMES = ["дальше 120 км", "100–120 км", "80–100 км", "60–80 км", "40–60 км", "20–40 км", "ближе 20 км"]
+# Кольцо 0 — Москва внутри МКАД (административные округа), дальше — по расстоянию от Кремля.
+LOWER = [0, 20, 40, 60, 80, 100, 120]
+RING_NAMES = ["Москва внутри МКАД", "ближе 20 км", "20–40 км", "40–60 км", "60–80 км", "80–100 км", "100–120 км", "дальше 120 км"]
+# Спираль стартует с ЦАО — округа, где стоит Кремль.
+START = "ЦАО"
 
-# Места, для которых уже написан маршрут: номер в таблице -> id файла в content/pack/destinations.
-WITH_CONTENT = {
-    177: "reutov", 159: "kotelniki", 124: "odintsovo", 149: "balashikha",
-    # Усадьбы Горенки и Пехра-Яковлевское входят в маршрут «Балашиха» как перемычки.
-    176: "balashikha", 150: "balashikha",
-}
+# Места, для которых уже написан маршрут: название в таблице -> id файла в content/pack/destinations.
+WITH_CONTENT = {"Реутов": "reutov", "Котельники": "kotelniki", "Одинцово": "odintsovo", "Балашиха": "balashikha"}
 
 SUPERLATIVES = [
-    ("biggest-city", "Самый большой город — Балашиха", 149, "Крупнейший город Подмосковья по населению"),
-    ("oldest-city", "Самый старый город — Волоколамск (1135)", 27, "Первое упоминание в летописи — 1135 год"),
-    ("smallest-city", "Самый маленький город — Верея", 22, "Самый малонаселённый город области"),
-    ("biggest-rp", "Самый большой рабочий посёлок — Нахабино", 127, ""),
-    ("biggest-village", "Самая большая деревня — Путилково", 170, ""),
-    ("famous-dacha", "Самый известный дачный посёлок — Переделкино", 122, ""),
+    ("biggest-city", "Самый большой город — Балашиха", "Балашиха", "Крупнейший город Подмосковья по населению"),
+    ("oldest-city", "Самый старый город — Волоколамск (1135)", "Волоколамск", "Первое упоминание в летописи — 1135 год"),
+    ("smallest-city", "Самый маленький город — Верея", "Верея", "Самый малонаселённый город области"),
+    ("biggest-rp", "Самый большой рабочий посёлок — Нахабино", "Нахабино", ""),
+    ("biggest-village", "Самая большая деревня — Путилково", "Путилково", ""),
+    ("famous-dacha", "Самый известный дачный посёлок — Переделкино", "Переделкино", ""),
     ("biggest-selo", "Самое большое село — уточняется", None, "Проверить при наполнении контента"),
 ]
 
@@ -72,11 +71,10 @@ def bearing(a, b):
     return (math.degrees(math.atan2(y, x)) + 360) % 360
 
 
-def ring_of(d):
-    for i, b in enumerate(BOUNDS):
-        if d >= b:
-            return i
-    return len(BOUNDS) - 1
+def ring_of(d, inside_mkad=False):
+    if inside_mkad:
+        return 0
+    return 1 + max(i for i, b in enumerate(LOWER) if d >= b)
 
 
 def region_type(name):
@@ -84,7 +82,7 @@ def region_type(name):
 
 
 def main():
-    rows = [l.rstrip("\n").split("\t") for l in open(os.path.join(HERE, "appendix_a.tsv"), encoding="utf-8") if l.strip()]
+    rows = [l.rstrip("\n").split("\t") for l in open(os.path.join(HERE, "places.tsv"), encoding="utf-8") if l.strip()]
     # Ссылка на маршрут ставится, только если файл маршрута уже есть в паке.
     ready = {k: v for k, v in WITH_CONTENT.items()
              if os.path.exists(os.path.join(ROOT, "pack", "destinations", v + ".json"))}
@@ -93,10 +91,11 @@ def main():
         lat, lon = float(_rest[2]), float(_rest[3])
         rid = slug(region)
         regions.setdefault(rid, {"id": rid, "name": region, "type": region_type(region), "verified": False})
-        finish = kind == "финиш спирали"
-        d = hav(KREMLIN, (lat, lon))
+        start = name == START
+        inside_mkad = kind.startswith("административный округ Москвы")
+        d = 0.0 if start else hav(KREMLIN, (lat, lon))
         places.append({
-            "id": "kremlin" if finish else slug(name),
+            "id": slug(name),
             "num": int(num),
             "name": name,
             "kindNote": kind,
@@ -104,46 +103,46 @@ def main():
             "mustHave": 3 if mark == "★" else 2 if mark == "☆" else 1,
             "coords": {"lat": lat, "lon": lon},
             "distanceFromKremlinKm": round(d, 1),
-            "azimuthDeg": 0.0 if finish else round(bearing(KREMLIN, (lat, lon)), 1),
-            "ring": len(BOUNDS) - 1 if finish else ring_of(d),
-            "destinationId": ready.get(int(num)),
-            "finish": finish,
+            "azimuthDeg": 0.0 if start else round(bearing(KREMLIN, (lat, lon)), 1),
+            "ring": ring_of(d, inside_mkad),
+            "destinationId": ready.get(name),
+            "start": start,
+            "insideMkad": inside_mkad,
         })
-    # Порядок спирали.
-    route = [p for p in places if not p["finish"]]
-    ordered, start = [], None
-    for ring in range(len(BOUNDS)):
+    # Порядок спирали: старт, затем кольца изнутри наружу, внутри кольца — по часовой стрелке.
+    ordered = [p for p in places if p["start"]]
+    route = [p for p in places if not p["start"]]
+    from_az = None
+    for ring in range(len(RING_NAMES)):
         inside = [p for p in route if p["ring"] == ring]
         if not inside:
             continue
-        if start is None:
-            start = max(inside, key=lambda p: p["distanceFromKremlinKm"])["azimuthDeg"]
-        inside.sort(key=lambda p: ((p["azimuthDeg"] - start) % 360, p["num"]))
+        if from_az is None:
+            from_az = min(inside, key=lambda p: p["distanceFromKremlinKm"])["azimuthDeg"]
+        inside.sort(key=lambda p: ((p["azimuthDeg"] - from_az) % 360, p["distanceFromKremlinKm"], p["num"]))
         ordered += inside
-        start = inside[-1]["azimuthDeg"]
-    ordered += [p for p in places if p["finish"]]
-    moved = [p["name"] for i, p in enumerate(ordered) if p["num"] != i + 1]
-    if moved:
-        print("Порядок изменился относительно таблицы:", ", ".join(moved[:10]), file=sys.stderr)
+        from_az = inside[-1]["azimuthDeg"]
     for i, p in enumerate(ordered):
         p["num"] = i + 1
     ids = [p["id"] for p in ordered]
     assert len(ids) == len(set(ids)), "дубли id"
-    by_num = {int(r[0]): slug(r[2]) for r in rows}
+    assert ordered and ordered[0]["start"], "нет старта " + START
+    by_name = {p["name"]: p["id"] for p in places}
     pack = {
-        "version": 1,
+        "version": 2,
         "origin": {"lat": KREMLIN[0], "lon": KREMLIN[1]},
-        "rings": [{"index": i, "name": n, "minKm": float(BOUNDS[i]), "maxKm": None if i == 0 else float(BOUNDS[i - 1])}
-                  for i, n in enumerate(RING_NAMES)],
+        "rings": [{"index": 0, "name": RING_NAMES[0], "minKm": 0.0, "maxKm": None}] +
+                 [{"index": i + 1, "name": RING_NAMES[i + 1], "minKm": float(LOWER[i]),
+                   "maxKm": float(LOWER[i + 1]) if i + 1 < len(LOWER) else None} for i in range(len(LOWER))],
         "regions": sorted(regions.values(), key=lambda r: r["name"]),
         "places": ordered,
-        "superlatives": [{"id": i, "title": t, "placeId": by_num.get(n) if n else None, "note": note}
+        "superlatives": [{"id": i, "title": t, "placeId": by_name.get(n) if n else None, "note": note}
                          for i, t, n, note in SUPERLATIVES],
     }
     with open(os.path.join(ROOT, "pack", "spiral.json"), "w", encoding="utf-8") as f:
         json.dump(pack, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print(f"spiral.json: {len(ordered)} мест, {len(regions)} округов")
+    print(f"spiral.json: {len(ordered)} мест, {len(regions)} округов; старт — {ordered[0]['name']}, финиш — {ordered[-1]['name']}")
 
 
 if __name__ == "__main__":

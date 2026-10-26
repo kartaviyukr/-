@@ -254,14 +254,6 @@ private fun Header(dest: Destination, state: PlaceUiState) {
                 modifier = Modifier.padding(top = 4.dp),
             )
         }
-        val covered = state.places.filter { it.id != dest.id }
-        if (covered.isNotEmpty()) {
-            Text(
-                "Маршрут заодно проходит: ${covered.joinToString { it.name }}",
-                style = MaterialTheme.typography.bodySmall,
-                modifier = Modifier.padding(top = 4.dp),
-            )
-        }
     }
 }
 

@@ -59,7 +59,6 @@ class SettingsViewModel @Inject constructor(
 
     val settings: StateFlow<Settings?> = repo.settings.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
-    fun setKmPerDay(v: Int) = viewModelScope.launch { repo.setKmPerDay(v) }
     fun setRadius(v: Int) = viewModelScope.launch { repo.setRadius(v) }
     fun setSpeed(v: Int) = viewModelScope.launch { repo.setSpeed(v) }
     fun setTheme(v: ThemeMode) = viewModelScope.launch { repo.setTheme(v) }
@@ -76,12 +75,10 @@ fun SettingsScreen(vm: SettingsViewModel = hiltViewModel()) {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp)) {
         Text("Настройки", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
 
-        IntSlider("Километров в день", settings.kmPerDay, 40..120, step = 5, unit = "км", onChange = vm::setKmPerDay,
-            hint = "Под эту цифру спираль разбивается на дни и подсказывает ночёвки.")
         IntSlider("Радиус отметки на точке", settings.geofenceRadiusM, 50..500, step = 10, unit = "м", onChange = vm::setRadius,
             hint = "Для больших объектов (поле, парк) радиус задан в контенте и не меняется.")
         IntSlider("Средняя скорость", settings.speedKmh, 8..25, step = 1, unit = "км/ч", onChange = vm::setSpeed,
-            hint = "Для проверки «успеваю до заката» и оценки перегонов.")
+            hint = "Для проверки «успеваю до заката».")
 
         SectionTitle("Тема")
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -99,7 +96,7 @@ fun SettingsScreen(vm: SettingsViewModel = hiltViewModel()) {
         SectionTitle("Офлайн-карты")
         val offline by vm.offlineStates.collectAsStateWithLifecycle()
         Text(
-            "Обзорная карта всей области (до 10-го масштаба) — для спирали и перегонов. " +
+            "Обзорная карта всей области (до 10-го масштаба) — для спирали. " +
                 "Подробную карту конкретного маршрута скачивайте на экране места.",
             style = MaterialTheme.typography.bodySmall,
         )

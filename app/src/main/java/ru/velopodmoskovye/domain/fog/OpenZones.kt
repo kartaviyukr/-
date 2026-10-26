@@ -9,8 +9,6 @@ import ru.velopodmoskovye.domain.progress.ProgressCalculator
 
 /** Какие зоны карты открыты при текущих посещениях. */
 object OpenZones {
-    const val KREMLIN_RADIUS_M = 400.0
-
     /** Граница места: из контента, иначе оболочка вокруг точек маршрута с запасом 300 м. */
     fun placeRing(dest: Destination): List<GeoPoint> =
         dest.boundaryGeoJson?.outer ?: Geo.convexHull(
@@ -38,15 +36,12 @@ object OpenZones {
             }
         }
         // Пройденный округ закрашивается целиком (граница округа или все его места).
-        val route = spiral.places.filter { !it.finish }
+        val route = spiral.places
         for (region in spiral.regions) {
             val places = route.filter { it.regionId == region.id }
             if (places.isEmpty() || !places.all { it.destinationId != null && it.destinationId in completeDest }) continue
             val ring = region.boundaryGeoJson?.outer ?: continue
             zones += Zone("region:${region.id}", ring, Zone.Level.REGION)
-        }
-        if (ProgressCalculator.KREMLIN_STOP_ID in visited) {
-            zones += Zone("kremlin", Geo.circle(Geo.KREMLIN, KREMLIN_RADIUS_M), Zone.Level.PLACE)
         }
         return zones
     }

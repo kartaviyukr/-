@@ -19,15 +19,17 @@ class ContentPackTest {
     private val pack = ContentParser.parse { File(dir, it).readText(Charsets.UTF_8) }
 
     @Test
-    fun spiralHas183PlacesEndingAtKremlin() {
-        assertEquals(183, pack.spiral.places.size)
-        assertTrue(pack.spiral.places.last().finish)
-        assertEquals(ProgressCalculator.KREMLIN_STOP_ID, pack.spiral.places.last().id)
+    fun spiralStartsAtTsaoWithOkrugsInsideMkad() {
+        assertEquals(182, pack.spiral.places.size)
+        assertTrue(pack.spiral.places.first().start)
+        assertEquals("ЦАО", pack.spiral.places.first().name)
+        assertEquals(9, pack.spiral.places.count { it.insideMkad })
+        assertTrue(pack.spiral.places.take(9).all { it.insideMkad })
     }
 
     @Test
     fun spiralOrderMatchesAlgorithm() {
-        val nodes = SpiralBuilder.build(pack.spiral.places, coords = { it.coords }, isFinish = { it.finish })
+        val nodes = SpiralBuilder.build(pack.spiral.places, coords = { it.coords }, isStart = { it.start }, insideMkad = { it.insideMkad })
         assertEquals(pack.spiral.places.map { it.id }, nodes.map { it.item.id })
         nodes.forEach { assertEquals(it.item.name, it.item.ring, it.ring) }
     }

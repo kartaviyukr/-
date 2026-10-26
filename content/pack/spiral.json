@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "origin": {
   "lat": 55.752,
   "lon": 37.618
@@ -7,45 +7,51 @@
  "rings": [
   {
    "index": 0,
-   "name": "дальше 120 км",
-   "minKm": 120.0,
+   "name": "Москва внутри МКАД",
+   "minKm": 0.0,
    "maxKm": null
   },
   {
    "index": 1,
-   "name": "100–120 км",
-   "minKm": 100.0,
-   "maxKm": 120.0
+   "name": "ближе 20 км",
+   "minKm": 0.0,
+   "maxKm": 20.0
   },
   {
    "index": 2,
-   "name": "80–100 км",
-   "minKm": 80.0,
-   "maxKm": 100.0
-  },
-  {
-   "index": 3,
-   "name": "60–80 км",
-   "minKm": 60.0,
-   "maxKm": 80.0
-  },
-  {
-   "index": 4,
-   "name": "40–60 км",
-   "minKm": 40.0,
-   "maxKm": 60.0
-  },
-  {
-   "index": 5,
    "name": "20–40 км",
    "minKm": 20.0,
    "maxKm": 40.0
   },
   {
+   "index": 3,
+   "name": "40–60 км",
+   "minKm": 40.0,
+   "maxKm": 60.0
+  },
+  {
+   "index": 4,
+   "name": "60–80 км",
+   "minKm": 60.0,
+   "maxKm": 80.0
+  },
+  {
+   "index": 5,
+   "name": "80–100 км",
+   "minKm": 80.0,
+   "maxKm": 100.0
+  },
+  {
    "index": 6,
-   "name": "ближе 20 км",
-   "minKm": 0.0,
-   "maxKm": 20.0
+   "name": "100–120 км",
+   "minKm": 100.0,
+   "maxKm": 120.0
+  },
+  {
+   "index": 7,
+   "name": "дальше 120 км",
+   "minKm": 120.0,
+   "maxKm": null
   }
  ],
  "regions": [
@@ -212,12 +218,6 @@
    "verified": false
   },
   {
-   "id": "moskva",
-   "name": "Москва",
-   "type": "Москва_АО",
-   "verified": false
-  },
-  {
    "id": "moskva-vao",
    "name": "Москва, ВАО",
    "type": "Москва_АО",
@@ -262,6 +262,12 @@
   {
    "id": "moskva-tao",
    "name": "Москва, ТАО",
+   "type": "Москва_АО",
+   "verified": false
+  },
+  {
+   "id": "moskva-tsao",
+   "name": "Москва, ЦАО",
    "type": "Москва_АО",
    "verified": false
   },
@@ -430,2949 +436,170 @@
  ],
  "places": [
   {
-   "id": "serebryanye-prudy",
+   "id": "tsao",
    "num": 1,
-   "name": "Серебряные Пруды",
-   "kindNote": "рп",
-   "regionId": "serebryanye-prudy",
-   "mustHave": 1,
+   "name": "ЦАО",
+   "kindNote": "административный округ Москвы (Кремль, Китай-город)",
+   "regionId": "moskva-tsao",
+   "mustHave": 3,
    "coords": {
-    "lat": 54.468,
-    "lon": 38.723
+    "lat": 55.752,
+    "lon": 37.6175
    },
-   "distanceFromKremlinKm": 159.1,
-   "azimuthDeg": 153.3,
+   "distanceFromKremlinKm": 0.0,
+   "azimuthDeg": 0.0,
    "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": true,
+   "insideMkad": true
   },
   {
-   "id": "uvarovka",
+   "id": "vao",
    "num": 2,
-   "name": "Уваровка",
-   "kindNote": "рп",
-   "regionId": "mozhayskiy",
+   "name": "ВАО",
+   "kindNote": "административный округ Москвы (Перово)",
+   "regionId": "moskva-vao",
    "mustHave": 1,
    "coords": {
-    "lat": 55.53,
-    "lon": 35.61
+    "lat": 55.787,
+    "lon": 37.775
    },
-   "distanceFromKremlinKm": 128.4,
-   "azimuthDeg": 259.7,
+   "distanceFromKremlinKm": 10.6,
+   "azimuthDeg": 68.3,
    "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
-   "id": "shakhovskaya",
+   "id": "yuvao",
    "num": 3,
-   "name": "Шаховская",
-   "kindNote": "рп",
-   "regionId": "shakhovskaya",
+   "name": "ЮВАО",
+   "kindNote": "административный округ Москвы (Люблино, Капотня)",
+   "regionId": "moskva-yuvao",
    "mustHave": 1,
    "coords": {
-    "lat": 56.033,
-    "lon": 35.505
-   },
-   "distanceFromKremlinKm": 135.4,
-   "azimuthDeg": 284.2,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "belaya-kolp",
-   "num": 4,
-   "name": "Белая Колпь",
-   "kindNote": "с., усадьба",
-   "regionId": "shakhovskaya",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.12,
-    "lon": 35.53
-   },
-   "distanceFromKremlinKm": 136.3,
-   "azimuthDeg": 288.3,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "teryaevo-iosifo-volotskiy-monastyr",
-   "num": 5,
-   "name": "Теряево (Иосифо-Волоцкий монастырь)",
-   "kindNote": "с., монастырь",
-   "regionId": "volokolamskiy",
-   "mustHave": 3,
-   "coords": {
-    "lat": 56.12,
-    "lon": 35.8
-   },
-   "distanceFromKremlinKm": 120.4,
-   "azimuthDeg": 290.6,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "lotoshino",
-   "num": 6,
-   "name": "Лотошино",
-   "kindNote": "рп",
-   "regionId": "lotoshino",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.231,
-    "lon": 35.642
-   },
-   "distanceFromKremlinKm": 133.9,
-   "azimuthDeg": 294.2,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "mikulino",
-   "num": 7,
-   "name": "Микулино",
-   "kindNote": "с., валы удельного города",
-   "regionId": "lotoshino",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.45,
-    "lon": 35.6
-   },
-   "distanceFromKremlinKm": 147.3,
-   "azimuthDeg": 302.6,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "roshal",
-   "num": 8,
-   "name": "Рошаль",
-   "kindNote": "г.",
-   "regionId": "shatura",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.663,
-    "lon": 39.865
-   },
-   "distanceFromKremlinKm": 141.1,
-   "azimuthDeg": 93.1,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "svyatoe-ozero-meshchera",
-   "num": 9,
-   "name": "Святое озеро (Мещера)",
-   "kindNote": "природа",
-   "regionId": "shatura",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.65,
-    "lon": 39.95
-   },
-   "distanceFromKremlinKm": 146.6,
-   "azimuthDeg": 93.5,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "shatura",
-   "num": 10,
-   "name": "Шатура",
-   "kindNote": "г.",
-   "regionId": "shatura",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.578,
-    "lon": 39.544
-   },
-   "distanceFromKremlinKm": 122.3,
-   "azimuthDeg": 98.3,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dedinovo",
-   "num": 11,
-   "name": "Дединово",
-   "kindNote": "с., родина корабля «Орёл»",
-   "regionId": "lukhovitsy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 54.99,
-    "lon": 39.37
-   },
-   "distanceFromKremlinKm": 139.4,
-   "azimuthDeg": 126.7,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "beloomut",
-   "num": 12,
-   "name": "Белоомут",
-   "kindNote": "рп, Ока, шлюз",
-   "regionId": "lukhovitsy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.94,
-    "lon": 39.33
-   },
-   "distanceFromKremlinKm": 141.0,
-   "azimuthDeg": 129.1,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "lukhovitsy",
-   "num": 13,
-   "name": "Луховицы",
-   "kindNote": "г.",
-   "regionId": "lukhovitsy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.965,
-    "lon": 39.025
-   },
-   "distanceFromKremlinKm": 124.8,
-   "azimuthDeg": 134.0,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zaraysk",
-   "num": 14,
-   "name": "Зарайск",
-   "kindNote": "г., кремль",
-   "regionId": "zaraysk",
-   "mustHave": 3,
-   "coords": {
-    "lat": 54.762,
-    "lon": 38.885
-   },
-   "distanceFromKremlinKm": 136.2,
-   "azimuthDeg": 143.4,
-   "ring": 0,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ozery",
-   "num": 15,
-   "name": "Озёры",
-   "kindNote": "г.",
-   "regionId": "kolomna",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.856,
-    "lon": 38.556
-   },
-   "distanceFromKremlinKm": 116.0,
-   "azimuthDeg": 148.8,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ozherele",
-   "num": 16,
-   "name": "Ожерелье",
-   "kindNote": "мкр Каширы",
-   "regionId": "kashira",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.79,
-    "lon": 38.27
-   },
-   "distanceFromKremlinKm": 114.7,
-   "azimuthDeg": 158.6,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kashira",
-   "num": 17,
-   "name": "Кашира",
-   "kindNote": "г.",
-   "regionId": "kashira",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.834,
-    "lon": 38.151
-   },
-   "distanceFromKremlinKm": 107.5,
-   "azimuthDeg": 161.5,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "stupino",
-   "num": 18,
-   "name": "Ступино",
-   "kindNote": "г.",
-   "regionId": "stupino",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.886,
-    "lon": 38.078
-   },
-   "distanceFromKremlinKm": 100.6,
-   "azimuthDeg": 163.0,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "belopesotskiy-monastyr",
-   "num": 19,
-   "name": "Белопесоцкий монастырь",
-   "kindNote": "монастырь",
-   "regionId": "stupino",
-   "mustHave": 2,
-   "coords": {
-    "lat": 54.88,
-    "lon": 38.05
-   },
-   "distanceFromKremlinKm": 100.7,
-   "azimuthDeg": 164.1,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "pushchino",
-   "num": 20,
-   "name": "Пущино",
-   "kindNote": "г.",
-   "regionId": "serpukhov",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.833,
-    "lon": 37.621
-   },
-   "distanceFromKremlinKm": 102.2,
-   "azimuthDeg": 179.9,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "protvino",
-   "num": 21,
-   "name": "Протвино",
-   "kindNote": "г.",
-   "regionId": "serpukhov",
-   "mustHave": 1,
-   "coords": {
-    "lat": 54.87,
-    "lon": 37.218
-   },
-   "distanceFromKremlinKm": 101.3,
-   "azimuthDeg": 194.6,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "vereya",
-   "num": 22,
-   "name": "Верея",
-   "kindNote": "г.",
-   "regionId": "naro-fominskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.343,
-    "lon": 36.186
-   },
-   "distanceFromKremlinKm": 100.9,
-   "azimuthDeg": 243.8,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "mozhaysk",
-   "num": 23,
-   "name": "Можайск",
-   "kindNote": "г.",
-   "regionId": "mozhayskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.505,
-    "lon": 36.033
-   },
-   "distanceFromKremlinKm": 103.2,
-   "azimuthDeg": 255.2,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "borodinskoe-pole",
-   "num": 24,
-   "name": "Бородинское поле",
-   "kindNote": "памятное место",
-   "regionId": "mozhayskiy",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.52,
-    "lon": 35.82
-   },
-   "distanceFromKremlinKm": 115.8,
-   "azimuthDeg": 257.9,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kolotskiy-monastyr",
-   "num": 25,
-   "name": "Колоцкий монастырь",
-   "kindNote": "монастырь",
-   "regionId": "mozhayskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.58,
-    "lon": 35.79
-   },
-   "distanceFromKremlinKm": 116.2,
-   "azimuthDeg": 261.3,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ruzskoe-vodokhranilishche",
-   "num": 26,
-   "name": "Рузское водохранилище",
-   "kindNote": "природа",
-   "regionId": "ruzskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.75,
-    "lon": 36.0
-   },
-   "distanceFromKremlinKm": 101.3,
-   "azimuthDeg": 270.5,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "volokolamsk",
-   "num": 27,
-   "name": "Волоколамск",
-   "kindNote": "г., кремль",
-   "regionId": "volokolamskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.035,
-    "lon": 35.958
-   },
-   "distanceFromKremlinKm": 108.2,
-   "azimuthDeg": 287.6,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "yaropolets",
-   "num": 28,
-   "name": "Ярополец",
-   "kindNote": "с., две усадьбы",
-   "regionId": "volokolamskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.13,
-    "lon": 35.95
-   },
-   "distanceFromKremlinKm": 112.1,
-   "azimuthDeg": 292.7,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dubna",
-   "num": 29,
-   "name": "Дубна",
-   "kindNote": "г., Волга, канал",
-   "regionId": "dubna",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.737,
-    "lon": 37.166
-   },
-   "distanceFromKremlinKm": 113.0,
-   "azimuthDeg": 345.9,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "taldom",
-   "num": 30,
-   "name": "Талдом",
-   "kindNote": "г.",
-   "regionId": "taldomskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.731,
-    "lon": 37.528
-   },
-   "distanceFromKremlinKm": 109.0,
-   "azimuthDeg": 357.1,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zhuravlinaya-rodina",
-   "num": 31,
-   "name": "Журавлиная родина",
-   "kindNote": "природа",
-   "regionId": "taldomskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.8,
-    "lon": 37.73
-   },
-   "distanceFromKremlinKm": 116.7,
-   "azimuthDeg": 3.3,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kolomna",
-   "num": 32,
-   "name": "Коломна",
-   "kindNote": "г., кремль",
-   "regionId": "kolomna",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.103,
-    "lon": 38.753
-   },
-   "distanceFromKremlinKm": 101.7,
-   "azimuthDeg": 134.8,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "bobrenev-monastyr",
-   "num": 33,
-   "name": "Бобренев монастырь",
-   "kindNote": "монастырь",
-   "regionId": "kolomna",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.07,
-    "lon": 38.79
-   },
-   "distanceFromKremlinKm": 105.9,
-   "azimuthDeg": 135.2,
-   "ring": 1,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "prioksko-terrasnyy-zapovednik",
-   "num": 34,
-   "name": "Приокско-Террасный заповедник",
-   "kindNote": "природа",
-   "regionId": "serpukhov",
-   "mustHave": 3,
-   "coords": {
-    "lat": 54.89,
-    "lon": 37.57
-   },
-   "distanceFromKremlinKm": 95.9,
-   "azimuthDeg": 181.8,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "serpukhov",
-   "num": 35,
-   "name": "Серпухов",
-   "kindNote": "г.",
-   "regionId": "serpukhov",
-   "mustHave": 3,
-   "coords": {
-    "lat": 54.913,
-    "lon": 37.412
-   },
-   "distanceFromKremlinKm": 94.2,
-   "azimuthDeg": 188.0,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dorokhovo",
-   "num": 36,
-   "name": "Дорохово",
-   "kindNote": "рп",
-   "regionId": "ruzskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.55,
-    "lon": 36.36
-   },
-   "distanceFromKremlinKm": 82.1,
-   "azimuthDeg": 254.6,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ruza",
-   "num": 37,
-   "name": "Руза",
-   "kindNote": "г.",
-   "regionId": "ruzskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.701,
-    "lon": 36.196
-   },
-   "distanceFromKremlinKm": 89.2,
-   "azimuthDeg": 266.9,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "vysokovsk",
-   "num": 38,
-   "name": "Высоковск",
-   "kindNote": "г.",
-   "regionId": "klin",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.317,
-    "lon": 36.551
-   },
-   "distanceFromKremlinKm": 91.3,
-   "azimuthDeg": 313.9,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "klin",
-   "num": 39,
-   "name": "Клин",
-   "kindNote": "г.",
-   "regionId": "klin",
-   "mustHave": 3,
-   "coords": {
-    "lat": 56.331,
-    "lon": 36.729
-   },
-   "distanceFromKremlinKm": 84.8,
-   "azimuthDeg": 319.7,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zaprudnya",
-   "num": 40,
-   "name": "Запрудня",
-   "kindNote": "рп",
-   "regionId": "taldomskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.56,
-    "lon": 37.43
-   },
-   "distanceFromKremlinKm": 90.6,
-   "azimuthDeg": 352.7,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "verbilki",
-   "num": 41,
-   "name": "Вербилки",
-   "kindNote": "рп, фарфор Гарднера",
-   "regionId": "taldomskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.53,
-    "lon": 37.6
-   },
-   "distanceFromKremlinKm": 86.5,
-   "azimuthDeg": 359.3,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "peresvet",
-   "num": 42,
-   "name": "Пересвет",
-   "kindNote": "г.",
-   "regionId": "sergievo-posadskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.418,
-    "lon": 38.177
-   },
-   "distanceFromKremlinKm": 81.8,
-   "azimuthDeg": 24.9,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "krasnozavodsk",
-   "num": 43,
-   "name": "Краснозаводск",
-   "kindNote": "г.",
-   "regionId": "sergievo-posadskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.44,
-    "lon": 38.229
-   },
-   "distanceFromKremlinKm": 85.4,
-   "azimuthDeg": 26.1,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "bogorodskoe",
-   "num": 44,
-   "name": "Богородское",
-   "kindNote": "с., игрушка",
-   "regionId": "sergievo-posadskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.39,
-    "lon": 38.25
-   },
-   "distanceFromKremlinKm": 81.1,
-   "azimuthDeg": 28.7,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "orekhovo-zuevo",
-   "num": 45,
-   "name": "Орехово-Зуево",
-   "kindNote": "г.",
-   "regionId": "orekhovo-zuevskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.806,
-    "lon": 38.962
-   },
-   "distanceFromKremlinKm": 84.3,
-   "azimuthDeg": 85.4,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "likino-dulevo",
-   "num": 46,
-   "name": "Ликино-Дулёво",
-   "kindNote": "г.",
-   "regionId": "orekhovo-zuevskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.709,
-    "lon": 38.949
-   },
-   "distanceFromKremlinKm": 83.5,
-   "azimuthDeg": 92.7,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "guslitsy-davydovo",
-   "num": 47,
-   "name": "Гуслицы (Давыдово)",
-   "kindNote": "старообрядческий край",
-   "regionId": "orekhovo-zuevskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.62,
-    "lon": 38.89
-   },
-   "distanceFromKremlinKm": 81.1,
-   "azimuthDeg": 99.9,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kurovskoe",
-   "num": 48,
-   "name": "Куровское",
-   "kindNote": "г.",
-   "regionId": "orekhovo-zuevskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.579,
-    "lon": 38.921
-   },
-   "distanceFromKremlinKm": 84.0,
-   "azimuthDeg": 102.7,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "egorevsk",
-   "num": 49,
-   "name": "Егорьевск",
-   "kindNote": "г.",
-   "regionId": "egorevsk",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.383,
-    "lon": 39.035
-   },
-   "distanceFromKremlinKm": 98.1,
-   "azimuthDeg": 114.1,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "voskresensk",
-   "num": 50,
-   "name": "Воскресенск",
-   "kindNote": "г.",
-   "regionId": "voskresensk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.322,
-    "lon": 38.671
-   },
-   "distanceFromKremlinKm": 81.7,
-   "azimuthDeg": 125.4,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "krivyakino",
-   "num": 51,
-   "name": "Кривякино",
-   "kindNote": "усадьба",
-   "regionId": "voskresensk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.28,
-    "lon": 38.68
-   },
-   "distanceFromKremlinKm": 85.0,
-   "azimuthDeg": 127.7,
-   "ring": 2,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "mikhnevo",
-   "num": 52,
-   "name": "Михнево",
-   "kindNote": "рп",
-   "regionId": "stupino",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.13,
-    "lon": 37.94
-   },
-   "distanceFromKremlinKm": 72.1,
-   "azimuthDeg": 163.5,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "melikhovo",
-   "num": 53,
-   "name": "Мелихово",
-   "kindNote": "усадьба",
-   "regionId": "chekhov",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.105,
-    "lon": 37.648
-   },
-   "distanceFromKremlinKm": 72.0,
-   "azimuthDeg": 178.5,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "davidova-pustyn",
-   "num": 54,
-   "name": "Давидова пустынь",
-   "kindNote": "монастырь",
-   "regionId": "chekhov",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.07,
-    "lon": 37.48
-   },
-   "distanceFromKremlinKm": 76.3,
-   "azimuthDeg": 186.6,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "chekhov-i-lopasnya-zachatevskoe",
-   "num": 55,
-   "name": "Чехов и Лопасня-Зачатьевское",
-   "kindNote": "г., усадьба",
-   "regionId": "chekhov",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.143,
-    "lon": 37.466
-   },
-   "distanceFromKremlinKm": 68.4,
-   "azimuthDeg": 188.1,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "naro-fominsk",
-   "num": 56,
-   "name": "Наро-Фоминск",
-   "kindNote": "г.",
-   "regionId": "naro-fominskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.386,
-    "lon": 36.734
-   },
-   "distanceFromKremlinKm": 68.9,
-   "azimuthDeg": 234.2,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kubinka",
-   "num": 57,
-   "name": "Кубинка",
-   "kindNote": "г.",
-   "regionId": "odintsovskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.576,
-    "lon": 36.696
-   },
-   "distanceFromKremlinKm": 61.0,
-   "azimuthDeg": 251.7,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "tuchkovo",
-   "num": 58,
-   "name": "Тучково",
-   "kindNote": "рп",
-   "regionId": "ruzskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.6,
-    "lon": 36.47
-   },
-   "distanceFromKremlinKm": 73.9,
-   "azimuthDeg": 257.3,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "boblovo-usadba-mendeleeva",
-   "num": 59,
-   "name": "Боблово (усадьба Менделеева)",
-   "kindNote": "д., усадьба",
-   "regionId": "klin",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.24,
-    "lon": 36.76
-   },
-   "distanceFromKremlinKm": 76.1,
-   "azimuthDeg": 315.8,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "shakhmatovo-i-tarakanovo",
-   "num": 60,
-   "name": "Шахматово и Тараканово",
-   "kindNote": "усадьба",
-   "regionId": "solnechnogorsk",
-   "mustHave": 3,
-   "coords": {
-    "lat": 56.21,
-    "lon": 36.86
-   },
-   "distanceFromKremlinKm": 69.4,
-   "azimuthDeg": 317.5,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "solnechnogorsk-i-ozero-senezh",
-   "num": 61,
-   "name": "Солнечногорск и озеро Сенеж",
-   "kindNote": "г.",
-   "regionId": "solnechnogorsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.185,
-    "lon": 36.977
-   },
-   "distanceFromKremlinKm": 62.5,
-   "azimuthDeg": 320.6,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "nikolo-peshnoshskiy-monastyr",
-   "num": 62,
-   "name": "Николо-Пешношский монастырь",
-   "kindNote": "монастырь",
-   "regionId": "dmitrovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.41,
-    "lon": 37.39
-   },
-   "distanceFromKremlinKm": 74.5,
-   "azimuthDeg": 349.2,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "yakhroma",
-   "num": 63,
-   "name": "Яхрома",
-   "kindNote": "г., шлюзы канала",
-   "regionId": "dmitrovskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.289,
-    "lon": 37.484
-   },
-   "distanceFromKremlinKm": 60.3,
-   "azimuthDeg": 352.1,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dmitrov",
-   "num": 64,
-   "name": "Дмитров",
-   "kindNote": "г., кремль",
-   "regionId": "dmitrovskiy",
-   "mustHave": 3,
-   "coords": {
-    "lat": 56.344,
-    "lon": 37.52
-   },
-   "distanceFromKremlinKm": 66.1,
-   "azimuthDeg": 354.8,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "khotkovo",
-   "num": 65,
-   "name": "Хотьково",
-   "kindNote": "г.",
-   "regionId": "sergievo-posadskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.253,
-    "lon": 37.987
-   },
-   "distanceFromKremlinKm": 60.2,
-   "azimuthDeg": 22.2,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "radonezh",
-   "num": 66,
-   "name": "Радонеж",
-   "kindNote": "с.",
-   "regionId": "sergievo-posadskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.24,
-    "lon": 38.03
-   },
-   "distanceFromKremlinKm": 60.0,
-   "azimuthDeg": 25.1,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "sergiev-posad",
-   "num": 67,
-   "name": "Сергиев Посад",
-   "kindNote": "г., Лавра",
-   "regionId": "sergievo-posadskiy",
-   "mustHave": 3,
-   "coords": {
-    "lat": 56.315,
-    "lon": 38.136
-   },
-   "distanceFromKremlinKm": 70.4,
-   "azimuthDeg": 27.0,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "fryanovo",
-   "num": 68,
-   "name": "Фряново",
-   "kindNote": "рп, усадьба",
-   "regionId": "shchelkovo",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.13,
-    "lon": 38.45
-   },
-   "distanceFromKremlinKm": 66.7,
-   "azimuthDeg": 50.6,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "elektrogorsk",
-   "num": 69,
-   "name": "Электрогорск",
-   "kindNote": "г.",
-   "regionId": "pavlovo-posadskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.882,
-    "lon": 38.798
-   },
-   "distanceFromKremlinKm": 75.1,
-   "azimuthDeg": 78.4,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "pavlovskiy-posad",
-   "num": 70,
-   "name": "Павловский Посад",
-   "kindNote": "г.",
-   "regionId": "pavlovo-posadskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.782,
-    "lon": 38.65
-   },
-   "distanceFromKremlinKm": 64.6,
-   "azimuthDeg": 86.6,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "bolshie-dvory",
-   "num": 71,
-   "name": "Большие Дворы",
-   "kindNote": "рп",
-   "regionId": "pavlovo-posadskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.75,
-    "lon": 38.62
-   },
-   "distanceFromKremlinKm": 62.7,
-   "azimuthDeg": 89.8,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "drezna",
-   "num": 72,
-   "name": "Дрезна",
-   "kindNote": "г.",
-   "regionId": "orekhovo-zuevskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.744,
-    "lon": 38.849
-   },
-   "distanceFromKremlinKm": 77.0,
-   "azimuthDeg": 90.2,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "beloozerskiy",
-   "num": 73,
-   "name": "Белоозёрский",
-   "kindNote": "рп",
-   "regionId": "voskresensk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.46,
-    "lon": 38.44
-   },
-   "distanceFromKremlinKm": 61.0,
-   "azimuthDeg": 121.8,
-   "ring": 3,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "bronnitsy",
-   "num": 74,
-   "name": "Бронницы",
-   "kindNote": "г.",
-   "regionId": "bronnitsy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.425,
-    "lon": 38.264
-   },
-   "distanceFromKremlinKm": 54.5,
-   "azimuthDeg": 131.6,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "konstantinovo",
-   "num": 75,
-   "name": "Константиново",
-   "kindNote": "усадьба",
-   "regionId": "domodedovo",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.4,
-    "lon": 37.86
-   },
-   "distanceFromKremlinKm": 42.0,
-   "azimuthDeg": 158.7,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "belye-stolby",
-   "num": 76,
-   "name": "Белые Столбы",
-   "kindNote": "рп, Госфильмофонд",
-   "regionId": "domodedovo",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.33,
-    "lon": 37.86
-   },
-   "distanceFromKremlinKm": 49.3,
-   "azimuthDeg": 161.9,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "klimovsk",
-   "num": 77,
-   "name": "Климовск",
-   "kindNote": "мкр Подольска",
-   "regionId": "podolsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.363,
-    "lon": 37.53
-   },
-   "distanceFromKremlinKm": 43.6,
-   "azimuthDeg": 187.3,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "voronovo",
-   "num": 78,
-   "name": "Вороново",
-   "kindNote": "усадьба",
-   "regionId": "moskva-tao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.32,
-    "lon": 37.19
-   },
-   "distanceFromKremlinKm": 55.1,
-   "azimuthDeg": 209.5,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "krasnaya-pakhra",
-   "num": 79,
-   "name": "Красная Пахра",
-   "kindNote": "с.",
-   "regionId": "moskva-tao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.42,
-    "lon": 37.28
-   },
-   "distanceFromKremlinKm": 42.6,
-   "azimuthDeg": 210.1,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "mikhaylovskoe",
-   "num": 80,
-   "name": "Михайловское",
-   "kindNote": "усадьба",
-   "regionId": "moskva-tao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.4,
-    "lon": 37.2
-   },
-   "distanceFromKremlinKm": 47.1,
-   "azimuthDeg": 214.0,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kalininets",
-   "num": 81,
-   "name": "Калининец",
-   "kindNote": "рп",
-   "regionId": "naro-fominskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.47,
-    "lon": 36.88
-   },
-   "distanceFromKremlinKm": 56.0,
-   "azimuthDeg": 236.2,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "aprelevka",
-   "num": 82,
-   "name": "Апрелевка",
-   "kindNote": "г.",
-   "regionId": "naro-fominskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.545,
-    "lon": 37.073
-   },
-   "distanceFromKremlinKm": 41.2,
-   "azimuthDeg": 236.3,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "selyatino",
-   "num": 83,
-   "name": "Селятино",
-   "kindNote": "рп",
-   "regionId": "naro-fominskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.515,
-    "lon": 36.98
-   },
-   "distanceFromKremlinKm": 47.9,
-   "azimuthDeg": 236.9,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "park-patriot",
-   "num": 84,
-   "name": "Парк «Патриот»",
-   "kindNote": "музейный комплекс",
-   "regionId": "odintsovskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.56,
-    "lon": 36.82
-   },
-   "distanceFromKremlinKm": 54.4,
-   "azimuthDeg": 247.2,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "golitsyno",
-   "num": 85,
-   "name": "Голицыно",
-   "kindNote": "г.",
-   "regionId": "odintsovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.616,
-    "lon": 36.987
-   },
-   "distanceFromKremlinKm": 42.3,
-   "azimuthDeg": 249.3,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "bolshie-vyazemy",
-   "num": 86,
-   "name": "Большие Вязёмы",
-   "kindNote": "усадьба",
-   "regionId": "odintsovskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.635,
-    "lon": 36.995
-   },
-   "distanceFromKremlinKm": 41.2,
-   "azimuthDeg": 251.8,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zakharovo",
-   "num": 87,
-   "name": "Захарово",
-   "kindNote": "усадьба",
-   "regionId": "odintsovskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.645,
-    "lon": 36.97
-   },
-   "distanceFromKremlinKm": 42.3,
-   "azimuthDeg": 253.9,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zvenigorod",
-   "num": 88,
-   "name": "Звенигород",
-   "kindNote": "г.",
-   "regionId": "odintsovskiy",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.73,
-    "lon": 36.855
-   },
-   "distanceFromKremlinKm": 47.8,
-   "azimuthDeg": 267.4,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "lutsino",
-   "num": 89,
-   "name": "Луцино",
-   "kindNote": "д., обрывы Москвы-реки",
-   "regionId": "odintsovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.73,
-    "lon": 36.73
-   },
-   "distanceFromKremlinKm": 55.6,
-   "azimuthDeg": 267.8,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "istra-novyy-ierusalim",
-   "num": 90,
-   "name": "Истра (Новый Иерусалим)",
-   "kindNote": "г.",
-   "regionId": "istra",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.915,
-    "lon": 36.86
-   },
-   "distanceFromKremlinKm": 50.7,
-   "azimuthDeg": 291.3,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "istrinskoe-vodokhranilishche",
-   "num": 91,
-   "name": "Истринское водохранилище",
-   "kindNote": "природа",
-   "regionId": "istra",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.03,
-    "lon": 36.83
-   },
-   "distanceFromKremlinKm": 58.1,
-   "azimuthDeg": 302.5,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "andreevka",
-   "num": 92,
-   "name": "Андреевка",
-   "kindNote": "рп",
-   "regionId": "solnechnogorsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.0,
-    "lon": 37.15
-   },
-   "distanceFromKremlinKm": 40.2,
-   "azimuthDeg": 313.6,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "mendeleevo",
-   "num": 93,
-   "name": "Менделеево",
-   "kindNote": "рп",
-   "regionId": "solnechnogorsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.04,
-    "lon": 37.22
-   },
-   "distanceFromKremlinKm": 40.5,
-   "azimuthDeg": 322.4,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "olgovo",
-   "num": 94,
-   "name": "Ольгово",
-   "kindNote": "усадьба",
-   "regionId": "dmitrovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.27,
-    "lon": 37.37
-   },
-   "distanceFromKremlinKm": 59.6,
-   "azimuthDeg": 345.1,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "iksha",
-   "num": 95,
-   "name": "Икша",
-   "kindNote": "рп",
-   "regionId": "dmitrovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.17,
-    "lon": 37.5
-   },
-   "distanceFromKremlinKm": 47.1,
-   "azimuthDeg": 351.1,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dedenevo",
-   "num": 96,
-   "name": "Деденево",
-   "kindNote": "посёлок, канал",
-   "regionId": "dmitrovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.24,
-    "lon": 37.52
-   },
-   "distanceFromKremlinKm": 54.6,
-   "azimuthDeg": 353.6,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "muranovo",
-   "num": 97,
-   "name": "Мураново",
-   "kindNote": "усадьба",
-   "regionId": "pushkinskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.16,
-    "lon": 37.9
-   },
-   "distanceFromKremlinKm": 48.6,
-   "azimuthDeg": 21.0,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "abramtsevo",
-   "num": 98,
-   "name": "Абрамцево",
-   "kindNote": "усадьба",
-   "regionId": "sergievo-posadskiy",
-   "mustHave": 3,
-   "coords": {
-    "lat": 56.234,
-    "lon": 37.963
-   },
-   "distanceFromKremlinKm": 57.7,
-   "azimuthDeg": 21.7,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "sofrino",
-   "num": 99,
-   "name": "Софрино",
-   "kindNote": "рп",
-   "regionId": "pushkinskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.15,
-    "lon": 37.93
-   },
-   "distanceFromKremlinKm": 48.3,
-   "azimuthDeg": 23.6,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "krasnoarmeysk",
-   "num": 100,
-   "name": "Красноармейск",
-   "kindNote": "г.",
-   "regionId": "pushkinskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.104,
-    "lon": 38.14
-   },
-   "distanceFromKremlinKm": 50.9,
-   "azimuthDeg": 39.5,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "grebnevo",
-   "num": 101,
-   "name": "Гребнево",
-   "kindNote": "усадьба",
-   "regionId": "shchelkovo",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.95,
-    "lon": 38.16
-   },
-   "distanceFromKremlinKm": 40.4,
-   "azimuthDeg": 56.7,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "chernogolovka",
-   "num": 102,
-   "name": "Черноголовка",
-   "kindNote": "г.",
-   "regionId": "chernogolovka",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.01,
-    "lon": 38.379
-   },
-   "distanceFromKremlinKm": 55.5,
-   "azimuthDeg": 58.5,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "noginsk",
-   "num": 103,
-   "name": "Ногинск",
-   "kindNote": "г.",
-   "regionId": "bogorodskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.854,
-    "lon": 38.441
-   },
-   "distanceFromKremlinKm": 52.7,
-   "azimuthDeg": 77.2,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "elektrostal",
-   "num": 104,
-   "name": "Электросталь",
-   "kindNote": "г.",
-   "regionId": "elektrostal",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.785,
-    "lon": 38.445
-   },
-   "distanceFromKremlinKm": 51.9,
-   "azimuthDeg": 85.6,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "gzhel",
-   "num": 105,
-   "name": "Гжель",
-   "kindNote": "с., фарфор",
-   "regionId": "ramenskiy",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.62,
-    "lon": 38.3
-   },
-   "distanceFromKremlinKm": 45.2,
-   "azimuthDeg": 108.7,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ramenskoe",
-   "num": 106,
-   "name": "Раменское",
-   "kindNote": "г.",
-   "regionId": "ramenskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.567,
-    "lon": 38.23
-   },
-   "distanceFromKremlinKm": 43.6,
-   "azimuthDeg": 117.9,
-   "ring": 4,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zhukovskiy",
-   "num": 107,
-   "name": "Жуковский",
-   "kindNote": "г.",
-   "regionId": "zhukovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.597,
-    "lon": 38.12
-   },
-   "distanceFromKremlinKm": 35.9,
-   "azimuthDeg": 118.5,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "lytkarino",
-   "num": 108,
-   "name": "Лыткарино",
-   "kindNote": "г.",
-   "regionId": "lytkarino",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.578,
-    "lon": 37.904
-   },
-   "distanceFromKremlinKm": 26.4,
-   "azimuthDeg": 137.0,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "gorki-leninskie",
-   "num": 109,
-   "name": "Горки Ленинские",
-   "kindNote": "усадьба",
-   "regionId": "leninskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.51,
-    "lon": 37.77
-   },
-   "distanceFromKremlinKm": 28.6,
-   "azimuthDeg": 160.4,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "domodedovo",
-   "num": 110,
-   "name": "Домодедово",
-   "kindNote": "г.",
-   "regionId": "domodedovo",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.441,
+    "lat": 55.692,
     "lon": 37.754
    },
-   "distanceFromKremlinKm": 35.6,
-   "azimuthDeg": 166.1,
-   "ring": 5,
+   "distanceFromKremlinKm": 10.8,
+   "azimuthDeg": 128.0,
+   "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
-   "id": "vidnoe-i-ekaterininskiy-monastyr",
-   "num": 111,
-   "name": "Видное и Екатерининский монастырь",
-   "kindNote": "г.",
-   "regionId": "leninskiy",
+   "id": "yuao",
+   "num": 4,
+   "name": "ЮАО",
+   "kindNote": "административный округ Москвы (Коломенское, Царицыно)",
+   "regionId": "moskva-yuao",
    "mustHave": 1,
    "coords": {
-    "lat": 55.551,
-    "lon": 37.705
+    "lat": 55.64,
+    "lon": 37.66
    },
-   "distanceFromKremlinKm": 23.0,
-   "azimuthDeg": 166.2,
-   "ring": 5,
+   "distanceFromKremlinKm": 12.7,
+   "azimuthDeg": 168.0,
+   "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
-   "id": "butovo-poligon-znamenskoe-sadki",
-   "num": 112,
-   "name": "Бутово (полигон, Знаменское-Садки)",
-   "kindNote": "памятное место",
+   "id": "yuzao",
+   "num": 5,
+   "name": "ЮЗАО",
+   "kindNote": "административный округ Москвы",
    "regionId": "moskva-yuzao",
    "mustHave": 1,
    "coords": {
-    "lat": 55.54,
-    "lon": 37.59
+    "lat": 55.662,
+    "lon": 37.546
    },
-   "distanceFromKremlinKm": 23.6,
-   "azimuthDeg": 184.3,
-   "ring": 5,
+   "distanceFromKremlinKm": 11.0,
+   "azimuthDeg": 204.3,
+   "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
-   "id": "podolsk",
-   "num": 113,
-   "name": "Подольск",
-   "kindNote": "г.",
-   "regionId": "podolsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.431,
-    "lon": 37.545
-   },
-   "distanceFromKremlinKm": 36.0,
-   "azimuthDeg": 187.4,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "shcherbinka",
-   "num": 114,
-   "name": "Щербинка",
-   "kindNote": "г.",
-   "regionId": "moskva-nao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.5,
-    "lon": 37.56
-   },
-   "distanceFromKremlinKm": 28.3,
-   "azimuthDeg": 187.4,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dubrovitsy",
-   "num": 115,
-   "name": "Дубровицы",
-   "kindNote": "с., Знаменская церковь",
-   "regionId": "podolsk",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.44,
-    "lon": 37.49
-   },
-   "distanceFromKremlinKm": 35.6,
-   "azimuthDeg": 193.1,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ostafevo",
-   "num": 116,
-   "name": "Остафьево",
-   "kindNote": "усадьба",
-   "regionId": "moskva-nao",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.5,
-    "lon": 37.5
-   },
-   "distanceFromKremlinKm": 29.0,
-   "azimuthDeg": 194.9,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kommunarka",
-   "num": 117,
-   "name": "Коммунарка",
-   "kindNote": "посёлок",
-   "regionId": "moskva-nao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.57,
-    "lon": 37.48
-   },
-   "distanceFromKremlinKm": 22.0,
-   "azimuthDeg": 203.2,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "troitsk",
-   "num": 118,
-   "name": "Троицк",
-   "kindNote": "г.",
-   "regionId": "moskva-tao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.484,
-    "lon": 37.307
-   },
-   "distanceFromKremlinKm": 35.6,
-   "azimuthDeg": 213.4,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "valuevo",
-   "num": 119,
-   "name": "Валуево",
-   "kindNote": "усадьба",
-   "regionId": "moskva-nao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.58,
-    "lon": 37.39
-   },
-   "distanceFromKremlinKm": 23.9,
-   "azimuthDeg": 216.9,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "moskovskiy",
-   "num": 120,
-   "name": "Московский",
-   "kindNote": "г.",
-   "regionId": "moskva-nao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.6,
-    "lon": 37.355
-   },
-   "distanceFromKremlinKm": 23.6,
-   "azimuthDeg": 224.4,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "vnukovo",
-   "num": 121,
-   "name": "Внуково",
-   "kindNote": "посёлок",
+   "id": "zao",
+   "num": 6,
+   "name": "ЗАО",
+   "kindNote": "административный округ Москвы (Кунцево)",
    "regionId": "moskva-zao",
    "mustHave": 1,
    "coords": {
-    "lat": 55.63,
-    "lon": 37.3
+    "lat": 55.715,
+    "lon": 37.46
    },
-   "distanceFromKremlinKm": 24.1,
-   "azimuthDeg": 235.9,
-   "ring": 5,
+   "distanceFromKremlinKm": 10.7,
+   "azimuthDeg": 247.5,
+   "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
-   "id": "peredelkino",
-   "num": 122,
-   "name": "Переделкино",
-   "kindNote": "дп, писательский городок",
-   "regionId": "moskva-nao",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.65,
-    "lon": 37.34
-   },
-   "distanceFromKremlinKm": 20.8,
-   "azimuthDeg": 237.0,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "lesnoy-gorodok",
-   "num": 123,
-   "name": "Лесной Городок",
-   "kindNote": "дп",
-   "regionId": "odintsovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.64,
-    "lon": 37.21
-   },
-   "distanceFromKremlinKm": 28.4,
-   "azimuthDeg": 244.2,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "odintsovo",
-   "num": 124,
-   "name": "Одинцово",
-   "kindNote": "г.",
-   "regionId": "odintsovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.678,
-    "lon": 37.278
-   },
-   "distanceFromKremlinKm": 22.8,
-   "azimuthDeg": 249.0,
-   "ring": 5,
-   "destinationId": "odintsovo",
-   "finish": false
-  },
-  {
-   "id": "arkhangelskoe",
-   "num": 125,
-   "name": "Архангельское",
-   "kindNote": "усадьба",
-   "regionId": "krasnogorsk",
-   "mustHave": 3,
-   "coords": {
-    "lat": 55.785,
-    "lon": 37.285
-   },
-   "distanceFromKremlinKm": 21.2,
-   "azimuthDeg": 280.1,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "pavlovskaya-sloboda",
-   "num": 126,
-   "name": "Павловская Слобода",
-   "kindNote": "с.",
-   "regionId": "istra",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.81,
-    "lon": 37.08
-   },
-   "distanceFromKremlinKm": 34.3,
-   "azimuthDeg": 281.1,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "nakhabino",
-   "num": 127,
-   "name": "Нахабино",
-   "kindNote": "рп (крупнейший)",
-   "regionId": "krasnogorsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.84,
-    "lon": 37.18
-   },
-   "distanceFromKremlinKm": 29.1,
-   "azimuthDeg": 289.8,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "snegiri",
-   "num": 128,
-   "name": "Снегири",
-   "kindNote": "рп, мемориал 1941",
-   "regionId": "istra",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.89,
-    "lon": 37.03
-   },
-   "distanceFromKremlinKm": 39.8,
-   "azimuthDeg": 292.9,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dedovsk",
-   "num": 129,
-   "name": "Дедовск",
-   "kindNote": "г.",
-   "regionId": "istra",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.87,
-    "lon": 37.124
-   },
-   "distanceFromKremlinKm": 33.5,
-   "azimuthDeg": 293.2,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "krasnogorsk",
-   "num": 130,
-   "name": "Красногорск",
-   "kindNote": "г.",
-   "regionId": "krasnogorsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.831,
-    "lon": 37.33
-   },
-   "distanceFromKremlinKm": 20.0,
-   "azimuthDeg": 296.1,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kryukovo",
-   "num": 131,
-   "name": "Крюково",
-   "kindNote": "бои 1941",
-   "regionId": "moskva-zelao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.98,
-    "lon": 37.17
-   },
-   "distanceFromKremlinKm": 37.7,
-   "azimuthDeg": 312.4,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zelenograd",
-   "num": 132,
-   "name": "Зеленоград",
-   "kindNote": "г.",
-   "regionId": "moskva-zelao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.987,
-    "lon": 37.194
-   },
-   "distanceFromKremlinKm": 37.2,
-   "azimuthDeg": 314.8,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "serednikovo",
-   "num": 133,
-   "name": "Середниково",
-   "kindNote": "усадьба",
-   "regionId": "khimki",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.98,
-    "lon": 37.24
-   },
-   "distanceFromKremlinKm": 34.6,
-   "azimuthDeg": 317.2,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kurkino",
-   "num": 134,
-   "name": "Куркино",
-   "kindNote": "бывш. д.",
+   "id": "szao",
+   "num": 7,
+   "name": "СЗАО",
+   "kindNote": "административный округ Москвы (Тушино)",
    "regionId": "moskva-szao",
    "mustHave": 1,
    "coords": {
-    "lat": 55.89,
-    "lon": 37.39
+    "lat": 55.827,
+    "lon": 37.45
    },
-   "distanceFromKremlinKm": 20.9,
-   "azimuthDeg": 317.2,
-   "ring": 5,
+   "distanceFromKremlinKm": 13.4,
+   "azimuthDeg": 308.5,
+   "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
-   "id": "memorial-shtyki",
-   "num": 135,
-   "name": "Мемориал «Штыки»",
-   "kindNote": "памятное место",
-   "regionId": "moskva-zelao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.97,
-    "lon": 37.3
-   },
-   "distanceFromKremlinKm": 31.3,
-   "azimuthDeg": 320.8,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo",
-   "num": 136,
-   "name": "Молжаниново, Новосёлки, Черкизово",
-   "kindNote": "деревни в черте Москвы",
+   "id": "sao",
+   "num": 8,
+   "name": "САО",
+   "kindNote": "административный округ Москвы",
    "regionId": "moskva-sao",
    "mustHave": 1,
    "coords": {
-    "lat": 55.93,
-    "lon": 37.37
+    "lat": 55.838,
+    "lon": 37.525
    },
-   "distanceFromKremlinKm": 25.1,
-   "azimuthDeg": 322.1,
-   "ring": 5,
+   "distanceFromKremlinKm": 11.2,
+   "azimuthDeg": 328.7,
+   "ring": 0,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
-   "id": "marfino",
-   "num": 137,
-   "name": "Марфино",
-   "kindNote": "усадьба",
-   "regionId": "mytishchi",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.03,
-    "lon": 37.42
-   },
-   "distanceFromKremlinKm": 33.3,
-   "azimuthDeg": 338.3,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dolgoprudnyy",
-   "num": 138,
-   "name": "Долгопрудный",
-   "kindNote": "г.",
-   "regionId": "dolgoprudnyy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.938,
-    "lon": 37.502
-   },
-   "distanceFromKremlinKm": 21.9,
-   "azimuthDeg": 340.8,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "lobnya",
-   "num": 139,
-   "name": "Лобня",
-   "kindNote": "г.",
-   "regionId": "lobnya",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.013,
-    "lon": 37.475
-   },
-   "distanceFromKremlinKm": 30.4,
-   "azimuthDeg": 343.0,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "fedoskino",
-   "num": 140,
-   "name": "Федоскино",
-   "kindNote": "с., лаковая миниатюра",
-   "regionId": "mytishchi",
-   "mustHave": 2,
-   "coords": {
-    "lat": 56.0,
-    "lon": 37.53
-   },
-   "distanceFromKremlinKm": 28.1,
-   "azimuthDeg": 348.8,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zhostovo",
-   "num": 141,
-   "name": "Жостово",
-   "kindNote": "д., подносы",
-   "regionId": "mytishchi",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.96,
-    "lon": 37.56
-   },
-   "distanceFromKremlinKm": 23.4,
-   "azimuthDeg": 351.1,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "pushkino",
-   "num": 142,
-   "name": "Пушкино",
-   "kindNote": "г.",
-   "regionId": "pushkinskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 56.011,
-    "lon": 37.847
-   },
-   "distanceFromKremlinKm": 32.1,
-   "azimuthDeg": 26.3,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ivanteevka",
-   "num": 143,
-   "name": "Ивантеевка",
-   "kindNote": "г.",
-   "regionId": "pushkinskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.971,
-    "lon": 37.921
-   },
-   "distanceFromKremlinKm": 30.8,
-   "azimuthDeg": 37.7,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "korolev",
-   "num": 144,
-   "name": "Королёв",
-   "kindNote": "г.",
-   "regionId": "korolev",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.922,
-    "lon": 37.854
-   },
-   "distanceFromKremlinKm": 24.0,
-   "azimuthDeg": 37.8,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "fryazino",
-   "num": 145,
-   "name": "Фрязино",
-   "kindNote": "г.",
-   "regionId": "fryazino",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.96,
-    "lon": 38.045
-   },
-   "distanceFromKremlinKm": 35.3,
-   "azimuthDeg": 48.9,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "shchelkovo",
-   "num": 146,
-   "name": "Щёлково",
-   "kindNote": "г.",
-   "regionId": "shchelkovo",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.92,
-    "lon": 37.99
-   },
-   "distanceFromKremlinKm": 29.8,
-   "azimuthDeg": 51.0,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "losino-petrovskiy-i-glinki",
-   "num": 147,
-   "name": "Лосино-Петровский и Глинки",
-   "kindNote": "г., усадьба",
-   "regionId": "losino-petrovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.871,
-    "lon": 38.2
-   },
-   "distanceFromKremlinKm": 38.7,
-   "azimuthDeg": 69.8,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "monino-muzey-vvs",
-   "num": 148,
-   "name": "Монино (музей ВВС)",
-   "kindNote": "рп",
-   "regionId": "shchelkovo",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.84,
-    "lon": 38.19
-   },
-   "distanceFromKremlinKm": 37.1,
-   "azimuthDeg": 74.5,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "balashikha",
-   "num": 149,
-   "name": "Балашиха",
-   "kindNote": "г.",
-   "regionId": "balashikha",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.796,
-    "lon": 37.938
-   },
-   "distanceFromKremlinKm": 20.6,
-   "azimuthDeg": 76.1,
-   "ring": 5,
-   "destinationId": "balashikha",
-   "finish": false
-  },
-  {
-   "id": "pekhra-yakovlevskoe",
-   "num": 150,
-   "name": "Пехра-Яковлевское",
-   "kindNote": "усадьба",
-   "regionId": "balashikha",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.79,
-    "lon": 37.96
-   },
-   "distanceFromKremlinKm": 21.8,
-   "azimuthDeg": 78.7,
-   "ring": 5,
-   "destinationId": "balashikha",
-   "finish": false
-  },
-  {
-   "id": "staraya-kupavna",
-   "num": 151,
-   "name": "Старая Купавна",
-   "kindNote": "г.",
-   "regionId": "bogorodskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.81,
-    "lon": 38.177
-   },
-   "distanceFromKremlinKm": 35.5,
-   "azimuthDeg": 79.3,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "zheleznodorozhnyy",
-   "num": 152,
-   "name": "Железнодорожный",
-   "kindNote": "мкр Балашихи",
-   "regionId": "balashikha",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.75,
-    "lon": 38.01
-   },
-   "distanceFromKremlinKm": 24.5,
-   "azimuthDeg": 90.4,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "elektrougli",
-   "num": 153,
-   "name": "Электроугли",
-   "kindNote": "г.",
-   "regionId": "bogorodskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.717,
-    "lon": 38.219
-   },
-   "distanceFromKremlinKm": 37.8,
-   "azimuthDeg": 95.7,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "bykovo",
-   "num": 154,
-   "name": "Быково",
-   "kindNote": "усадьба",
-   "regionId": "ramenskiy",
-   "mustHave": 2,
-   "coords": {
-    "lat": 55.63,
-    "lon": 38.08
-   },
-   "distanceFromKremlinKm": 32.0,
-   "azimuthDeg": 114.9,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "malakhovka",
-   "num": 155,
-   "name": "Малаховка",
-   "kindNote": "рп",
-   "regionId": "lyubertsy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.645,
-    "lon": 38.02
-   },
-   "distanceFromKremlinKm": 27.9,
-   "azimuthDeg": 115.1,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "tomilino",
-   "num": 156,
-   "name": "Томилино",
-   "kindNote": "рп",
-   "regionId": "lyubertsy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.66,
-    "lon": 37.95
-   },
-   "distanceFromKremlinKm": 23.2,
-   "azimuthDeg": 116.1,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kratovo",
-   "num": 157,
-   "name": "Кратово",
-   "kindNote": "дп",
-   "regionId": "ramenskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.6,
-    "lon": 38.16
-   },
-   "distanceFromKremlinKm": 38.0,
-   "azimuthDeg": 116.2,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "udelnaya",
-   "num": 158,
-   "name": "Удельная",
-   "kindNote": "дп",
-   "regionId": "ramenskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.63,
-    "lon": 38.03
-   },
-   "distanceFromKremlinKm": 29.2,
-   "azimuthDeg": 117.5,
-   "ring": 5,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kotelniki",
-   "num": 159,
-   "name": "Котельники",
-   "kindNote": "г.",
-   "regionId": "kotelniki",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.652,
-    "lon": 37.865
-   },
-   "distanceFromKremlinKm": 19.1,
-   "azimuthDeg": 125.6,
-   "ring": 6,
-   "destinationId": "kotelniki",
-   "finish": false
-  },
-  {
-   "id": "lyublino",
-   "num": 160,
-   "name": "Люблино",
-   "kindNote": "бывш. г.",
-   "regionId": "moskva-yuvao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.68,
-    "lon": 37.76
-   },
-   "distanceFromKremlinKm": 12.0,
-   "azimuthDeg": 131.9,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "dzerzhinskiy-nikolo-ugreshskiy",
-   "num": 161,
-   "name": "Дзержинский (Николо-Угрешский)",
-   "kindNote": "г.",
-   "regionId": "lyubertsy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.63,
-    "lon": 37.85
-   },
-   "distanceFromKremlinKm": 19.9,
-   "azimuthDeg": 132.9,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kapotnya",
-   "num": 162,
-   "name": "Капотня",
-   "kindNote": "бывш. с.",
-   "regionId": "moskva-yuvao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.64,
-    "lon": 37.8
-   },
-   "distanceFromKremlinKm": 16.9,
-   "azimuthDeg": 137.4,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kolomenskoe",
-   "num": 163,
-   "name": "Коломенское",
-   "kindNote": "бывш. с.",
-   "regionId": "moskva-yuao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.67,
-    "lon": 37.67
-   },
-   "distanceFromKremlinKm": 9.7,
-   "azimuthDeg": 160.3,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "tsaritsyno",
-   "num": 164,
-   "name": "Царицыно",
-   "kindNote": "усадьба",
-   "regionId": "moskva-yuao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.61,
-    "lon": 37.68
-   },
-   "distanceFromKremlinKm": 16.3,
-   "azimuthDeg": 166.1,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "solntsevo",
-   "num": 165,
-   "name": "Солнцево",
-   "kindNote": "бывш. г.",
-   "regionId": "moskva-zao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.65,
-    "lon": 37.4
-   },
-   "distanceFromKremlinKm": 17.8,
-   "azimuthDeg": 230.4,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "meshcherskiy",
-   "num": 166,
-   "name": "Мещерский",
-   "kindNote": "посёлок",
-   "regionId": "moskva-zao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.67,
-    "lon": 37.42
-   },
-   "distanceFromKremlinKm": 15.4,
-   "azimuthDeg": 233.8,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "nemchinovka",
-   "num": 167,
-   "name": "Немчиновка",
-   "kindNote": "посёлок, Малевич",
-   "regionId": "odintsovskiy",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.71,
-    "lon": 37.37
-   },
-   "distanceFromKremlinKm": 16.2,
-   "azimuthDeg": 253.4,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "kuntsevo",
-   "num": 168,
-   "name": "Кунцево",
-   "kindNote": "бывш. г.",
-   "regionId": "moskva-zao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.73,
-    "lon": 37.42
-   },
-   "distanceFromKremlinKm": 12.6,
-   "azimuthDeg": 258.9,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "tushino",
-   "num": 169,
-   "name": "Тушино",
-   "kindNote": "бывш. г.",
-   "regionId": "moskva-szao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.83,
-    "lon": 37.43
-   },
-   "distanceFromKremlinKm": 14.6,
-   "azimuthDeg": 306.5,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "putilkovo",
-   "num": 170,
-   "name": "Путилково",
-   "kindNote": "д. (крупнейшая)",
-   "regionId": "krasnogorsk",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.86,
-    "lon": 37.4
-   },
-   "distanceFromKremlinKm": 18.2,
-   "azimuthDeg": 311.5,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "khimki-i-memorial-ezhi",
-   "num": 171,
-   "name": "Химки и мемориал «Ежи»",
-   "kindNote": "г.",
-   "regionId": "khimki",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.889,
-    "lon": 37.43
-   },
-   "distanceFromKremlinKm": 19.2,
-   "azimuthDeg": 322.4,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "ostankino",
-   "num": 172,
-   "name": "Останкино",
-   "kindNote": "бывш. с.",
+   "id": "svao",
+   "num": 9,
+   "name": "СВАО",
+   "kindNote": "административный округ Москвы (Останкино, Бабушкин)",
    "regionId": "moskva-svao",
    "mustHave": 1,
    "coords": {
-    "lat": 55.82,
-    "lon": 37.61
+    "lat": 55.864,
+    "lon": 37.633
    },
-   "distanceFromKremlinKm": 7.6,
-   "azimuthDeg": 356.2,
-   "ring": 6,
+   "distanceFromKremlinKm": 12.5,
+   "azimuthDeg": 4.3,
+   "ring": 0,
    "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "babushkin",
-   "num": 173,
-   "name": "Бабушкин",
-   "kindNote": "бывш. г.",
-   "regionId": "moskva-svao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.87,
-    "lon": 37.66
-   },
-   "distanceFromKremlinKm": 13.4,
-   "azimuthDeg": 11.3,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": true
   },
   {
    "id": "mytishchi",
-   "num": 174,
+   "num": 10,
    "name": "Мытищи",
    "kindNote": "г.",
    "regionId": "mytishchi",
@@ -3383,13 +610,14 @@
    },
    "distanceFromKremlinKm": 19.0,
    "azimuthDeg": 21.5,
-   "ring": 6,
+   "ring": 1,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": false
   },
   {
    "id": "vostochnyy",
-   "num": 175,
+   "num": 11,
    "name": "Восточный",
    "kindNote": "посёлок",
    "regionId": "moskva-vao",
@@ -3400,13 +628,14 @@
    },
    "distanceFromKremlinKm": 16.9,
    "azimuthDeg": 63.3,
-   "ring": 6,
+   "ring": 1,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": false
   },
   {
    "id": "gorenki",
-   "num": 176,
+   "num": 12,
    "name": "Горенки",
    "kindNote": "усадьба",
    "regionId": "balashikha",
@@ -3417,13 +646,14 @@
    },
    "distanceFromKremlinKm": 16.6,
    "azimuthDeg": 71.2,
-   "ring": 6,
-   "destinationId": "balashikha",
-   "finish": false
+   "ring": 1,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
   },
   {
    "id": "reutov",
-   "num": 177,
+   "num": 13,
    "name": "Реутов",
    "kindNote": "г.",
    "regionId": "reutov",
@@ -3434,13 +664,14 @@
    },
    "distanceFromKremlinKm": 14.9,
    "azimuthDeg": 86.5,
-   "ring": 6,
+   "ring": 1,
    "destinationId": "reutov",
-   "finish": false
+   "start": false,
+   "insideMkad": false
   },
   {
    "id": "saltykovka",
-   "num": 178,
+   "num": 14,
    "name": "Салтыковка",
    "kindNote": "мкр, дачи",
    "regionId": "balashikha",
@@ -3451,30 +682,14 @@
    },
    "distanceFromKremlinKm": 18.9,
    "azimuthDeg": 87.2,
-   "ring": 6,
+   "ring": 1,
    "destinationId": null,
-   "finish": false
-  },
-  {
-   "id": "perovo",
-   "num": 179,
-   "name": "Перово",
-   "kindNote": "бывш. г.",
-   "regionId": "moskva-vao",
-   "mustHave": 1,
-   "coords": {
-    "lat": 55.75,
-    "lon": 37.78
-   },
-   "distanceFromKremlinKm": 10.1,
-   "azimuthDeg": 91.2,
-   "ring": 6,
-   "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": false
   },
   {
    "id": "kosino-tri-ozera",
-   "num": 180,
+   "num": 15,
    "name": "Косино (три озера)",
    "kindNote": "бывш. посёлок",
    "regionId": "moskva-vao",
@@ -3485,13 +700,14 @@
    },
    "distanceFromKremlinKm": 15.0,
    "azimuthDeg": 103.7,
-   "ring": 6,
+   "ring": 1,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": false
   },
   {
    "id": "nekrasovka",
-   "num": 181,
+   "num": 16,
    "name": "Некрасовка",
    "kindNote": "бывш. посёлок",
    "regionId": "moskva-yuvao",
@@ -3502,13 +718,14 @@
    },
    "distanceFromKremlinKm": 19.8,
    "azimuthDeg": 106.9,
-   "ring": 6,
+   "ring": 1,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": false
   },
   {
    "id": "lyubertsy",
-   "num": 182,
+   "num": 17,
    "name": "Люберцы",
    "kindNote": "г.",
    "regionId": "lyubertsy",
@@ -3519,26 +736,2980 @@
    },
    "distanceFromKremlinKm": 19.2,
    "azimuthDeg": 116.0,
-   "ring": 6,
+   "ring": 1,
    "destinationId": null,
-   "finish": false
+   "start": false,
+   "insideMkad": false
   },
   {
-   "id": "kremlin",
-   "num": 183,
-   "name": "Кремль",
-   "kindNote": "финиш спирали",
-   "regionId": "moskva",
+   "id": "kotelniki",
+   "num": 18,
+   "name": "Котельники",
+   "kindNote": "г.",
+   "regionId": "kotelniki",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.652,
+    "lon": 37.865
+   },
+   "distanceFromKremlinKm": 19.1,
+   "azimuthDeg": 125.6,
+   "ring": 1,
+   "destinationId": "kotelniki",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dzerzhinskiy-nikolo-ugreshskiy",
+   "num": 19,
+   "name": "Дзержинский (Николо-Угрешский)",
+   "kindNote": "г.",
+   "regionId": "lyubertsy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.63,
+    "lon": 37.85
+   },
+   "distanceFromKremlinKm": 19.9,
+   "azimuthDeg": 132.9,
+   "ring": 1,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "solntsevo",
+   "num": 20,
+   "name": "Солнцево",
+   "kindNote": "бывш. г.",
+   "regionId": "moskva-zao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.65,
+    "lon": 37.4
+   },
+   "distanceFromKremlinKm": 17.8,
+   "azimuthDeg": 230.4,
+   "ring": 1,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "meshcherskiy",
+   "num": 21,
+   "name": "Мещерский",
+   "kindNote": "посёлок",
+   "regionId": "moskva-zao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.67,
+    "lon": 37.42
+   },
+   "distanceFromKremlinKm": 15.4,
+   "azimuthDeg": 233.8,
+   "ring": 1,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "nemchinovka",
+   "num": 22,
+   "name": "Немчиновка",
+   "kindNote": "посёлок, Малевич",
+   "regionId": "odintsovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.71,
+    "lon": 37.37
+   },
+   "distanceFromKremlinKm": 16.2,
+   "azimuthDeg": 253.4,
+   "ring": 1,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "putilkovo",
+   "num": 23,
+   "name": "Путилково",
+   "kindNote": "д. (крупнейшая)",
+   "regionId": "krasnogorsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.86,
+    "lon": 37.4
+   },
+   "distanceFromKremlinKm": 18.2,
+   "azimuthDeg": 311.5,
+   "ring": 1,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "khimki-i-memorial-ezhi",
+   "num": 24,
+   "name": "Химки и мемориал «Ежи»",
+   "kindNote": "г.",
+   "regionId": "khimki",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.889,
+    "lon": 37.43
+   },
+   "distanceFromKremlinKm": 19.2,
+   "azimuthDeg": 322.4,
+   "ring": 1,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "marfino",
+   "num": 25,
+   "name": "Марфино",
+   "kindNote": "усадьба",
+   "regionId": "mytishchi",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.03,
+    "lon": 37.42
+   },
+   "distanceFromKremlinKm": 33.3,
+   "azimuthDeg": 338.3,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dolgoprudnyy",
+   "num": 26,
+   "name": "Долгопрудный",
+   "kindNote": "г.",
+   "regionId": "dolgoprudnyy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.938,
+    "lon": 37.502
+   },
+   "distanceFromKremlinKm": 21.9,
+   "azimuthDeg": 340.8,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "lobnya",
+   "num": 27,
+   "name": "Лобня",
+   "kindNote": "г.",
+   "regionId": "lobnya",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.013,
+    "lon": 37.475
+   },
+   "distanceFromKremlinKm": 30.4,
+   "azimuthDeg": 343.0,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "fedoskino",
+   "num": 28,
+   "name": "Федоскино",
+   "kindNote": "с., лаковая миниатюра",
+   "regionId": "mytishchi",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.0,
+    "lon": 37.53
+   },
+   "distanceFromKremlinKm": 28.1,
+   "azimuthDeg": 348.8,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zhostovo",
+   "num": 29,
+   "name": "Жостово",
+   "kindNote": "д., подносы",
+   "regionId": "mytishchi",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.96,
+    "lon": 37.56
+   },
+   "distanceFromKremlinKm": 23.4,
+   "azimuthDeg": 351.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "pushkino",
+   "num": 30,
+   "name": "Пушкино",
+   "kindNote": "г.",
+   "regionId": "pushkinskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.011,
+    "lon": 37.847
+   },
+   "distanceFromKremlinKm": 32.1,
+   "azimuthDeg": 26.3,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ivanteevka",
+   "num": 31,
+   "name": "Ивантеевка",
+   "kindNote": "г.",
+   "regionId": "pushkinskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.971,
+    "lon": 37.921
+   },
+   "distanceFromKremlinKm": 30.8,
+   "azimuthDeg": 37.7,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "korolev",
+   "num": 32,
+   "name": "Королёв",
+   "kindNote": "г.",
+   "regionId": "korolev",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.922,
+    "lon": 37.854
+   },
+   "distanceFromKremlinKm": 24.0,
+   "azimuthDeg": 37.8,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "fryazino",
+   "num": 33,
+   "name": "Фрязино",
+   "kindNote": "г.",
+   "regionId": "fryazino",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.96,
+    "lon": 38.045
+   },
+   "distanceFromKremlinKm": 35.3,
+   "azimuthDeg": 48.9,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "shchelkovo",
+   "num": 34,
+   "name": "Щёлково",
+   "kindNote": "г.",
+   "regionId": "shchelkovo",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.92,
+    "lon": 37.99
+   },
+   "distanceFromKremlinKm": 29.8,
+   "azimuthDeg": 51.0,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "losino-petrovskiy-i-glinki",
+   "num": 35,
+   "name": "Лосино-Петровский и Глинки",
+   "kindNote": "г., усадьба",
+   "regionId": "losino-petrovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.871,
+    "lon": 38.2
+   },
+   "distanceFromKremlinKm": 38.7,
+   "azimuthDeg": 69.8,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "monino-muzey-vvs",
+   "num": 36,
+   "name": "Монино (музей ВВС)",
+   "kindNote": "рп",
+   "regionId": "shchelkovo",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.84,
+    "lon": 38.19
+   },
+   "distanceFromKremlinKm": 37.1,
+   "azimuthDeg": 74.5,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "balashikha",
+   "num": 37,
+   "name": "Балашиха",
+   "kindNote": "г.",
+   "regionId": "balashikha",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.796,
+    "lon": 37.938
+   },
+   "distanceFromKremlinKm": 20.6,
+   "azimuthDeg": 76.1,
+   "ring": 2,
+   "destinationId": "balashikha",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "pekhra-yakovlevskoe",
+   "num": 38,
+   "name": "Пехра-Яковлевское",
+   "kindNote": "усадьба",
+   "regionId": "balashikha",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.79,
+    "lon": 37.96
+   },
+   "distanceFromKremlinKm": 21.8,
+   "azimuthDeg": 78.7,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "staraya-kupavna",
+   "num": 39,
+   "name": "Старая Купавна",
+   "kindNote": "г.",
+   "regionId": "bogorodskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.81,
+    "lon": 38.177
+   },
+   "distanceFromKremlinKm": 35.5,
+   "azimuthDeg": 79.3,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zheleznodorozhnyy",
+   "num": 40,
+   "name": "Железнодорожный",
+   "kindNote": "мкр Балашихи",
+   "regionId": "balashikha",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.75,
+    "lon": 38.01
+   },
+   "distanceFromKremlinKm": 24.5,
+   "azimuthDeg": 90.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "elektrougli",
+   "num": 41,
+   "name": "Электроугли",
+   "kindNote": "г.",
+   "regionId": "bogorodskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.717,
+    "lon": 38.219
+   },
+   "distanceFromKremlinKm": 37.8,
+   "azimuthDeg": 95.7,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "bykovo",
+   "num": 42,
+   "name": "Быково",
+   "kindNote": "усадьба",
+   "regionId": "ramenskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.63,
+    "lon": 38.08
+   },
+   "distanceFromKremlinKm": 32.0,
+   "azimuthDeg": 114.9,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "malakhovka",
+   "num": 43,
+   "name": "Малаховка",
+   "kindNote": "рп",
+   "regionId": "lyubertsy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.645,
+    "lon": 38.02
+   },
+   "distanceFromKremlinKm": 27.9,
+   "azimuthDeg": 115.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "tomilino",
+   "num": 44,
+   "name": "Томилино",
+   "kindNote": "рп",
+   "regionId": "lyubertsy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.66,
+    "lon": 37.95
+   },
+   "distanceFromKremlinKm": 23.2,
+   "azimuthDeg": 116.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kratovo",
+   "num": 45,
+   "name": "Кратово",
+   "kindNote": "дп",
+   "regionId": "ramenskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.6,
+    "lon": 38.16
+   },
+   "distanceFromKremlinKm": 38.0,
+   "azimuthDeg": 116.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "udelnaya",
+   "num": 46,
+   "name": "Удельная",
+   "kindNote": "дп",
+   "regionId": "ramenskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.63,
+    "lon": 38.03
+   },
+   "distanceFromKremlinKm": 29.2,
+   "azimuthDeg": 117.5,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zhukovskiy",
+   "num": 47,
+   "name": "Жуковский",
+   "kindNote": "г.",
+   "regionId": "zhukovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.597,
+    "lon": 38.12
+   },
+   "distanceFromKremlinKm": 35.9,
+   "azimuthDeg": 118.5,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "lytkarino",
+   "num": 48,
+   "name": "Лыткарино",
+   "kindNote": "г.",
+   "regionId": "lytkarino",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.578,
+    "lon": 37.904
+   },
+   "distanceFromKremlinKm": 26.4,
+   "azimuthDeg": 137.0,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "gorki-leninskie",
+   "num": 49,
+   "name": "Горки Ленинские",
+   "kindNote": "усадьба",
+   "regionId": "leninskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.51,
+    "lon": 37.77
+   },
+   "distanceFromKremlinKm": 28.6,
+   "azimuthDeg": 160.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "domodedovo",
+   "num": 50,
+   "name": "Домодедово",
+   "kindNote": "г.",
+   "regionId": "domodedovo",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.441,
+    "lon": 37.754
+   },
+   "distanceFromKremlinKm": 35.6,
+   "azimuthDeg": 166.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "vidnoe-i-ekaterininskiy-monastyr",
+   "num": 51,
+   "name": "Видное и Екатерининский монастырь",
+   "kindNote": "г.",
+   "regionId": "leninskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.551,
+    "lon": 37.705
+   },
+   "distanceFromKremlinKm": 23.0,
+   "azimuthDeg": 166.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki",
+   "num": 52,
+   "name": "Бутово (полигон, Знаменское-Садки)",
+   "kindNote": "памятное место",
+   "regionId": "moskva-yuzao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.54,
+    "lon": 37.59
+   },
+   "distanceFromKremlinKm": 23.6,
+   "azimuthDeg": 184.3,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "shcherbinka",
+   "num": 53,
+   "name": "Щербинка",
+   "kindNote": "г.",
+   "regionId": "moskva-nao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.5,
+    "lon": 37.56
+   },
+   "distanceFromKremlinKm": 28.3,
+   "azimuthDeg": 187.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "podolsk",
+   "num": 54,
+   "name": "Подольск",
+   "kindNote": "г.",
+   "regionId": "podolsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.431,
+    "lon": 37.545
+   },
+   "distanceFromKremlinKm": 36.0,
+   "azimuthDeg": 187.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dubrovitsy",
+   "num": 55,
+   "name": "Дубровицы",
+   "kindNote": "с., Знаменская церковь",
+   "regionId": "podolsk",
    "mustHave": 3,
    "coords": {
-    "lat": 55.752,
-    "lon": 37.618
+    "lat": 55.44,
+    "lon": 37.49
    },
-   "distanceFromKremlinKm": 0.0,
-   "azimuthDeg": 0.0,
+   "distanceFromKremlinKm": 35.6,
+   "azimuthDeg": 193.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ostafevo",
+   "num": 56,
+   "name": "Остафьево",
+   "kindNote": "усадьба",
+   "regionId": "moskva-nao",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.5,
+    "lon": 37.5
+   },
+   "distanceFromKremlinKm": 29.0,
+   "azimuthDeg": 194.9,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kommunarka",
+   "num": 57,
+   "name": "Коммунарка",
+   "kindNote": "посёлок",
+   "regionId": "moskva-nao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.57,
+    "lon": 37.48
+   },
+   "distanceFromKremlinKm": 22.0,
+   "azimuthDeg": 203.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "troitsk",
+   "num": 58,
+   "name": "Троицк",
+   "kindNote": "г.",
+   "regionId": "moskva-tao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.484,
+    "lon": 37.307
+   },
+   "distanceFromKremlinKm": 35.6,
+   "azimuthDeg": 213.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "valuevo",
+   "num": 59,
+   "name": "Валуево",
+   "kindNote": "усадьба",
+   "regionId": "moskva-nao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.58,
+    "lon": 37.39
+   },
+   "distanceFromKremlinKm": 23.9,
+   "azimuthDeg": 216.9,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "moskovskiy",
+   "num": 60,
+   "name": "Московский",
+   "kindNote": "г.",
+   "regionId": "moskva-nao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.6,
+    "lon": 37.355
+   },
+   "distanceFromKremlinKm": 23.6,
+   "azimuthDeg": 224.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "vnukovo",
+   "num": 61,
+   "name": "Внуково",
+   "kindNote": "посёлок",
+   "regionId": "moskva-zao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.63,
+    "lon": 37.3
+   },
+   "distanceFromKremlinKm": 24.1,
+   "azimuthDeg": 235.9,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "peredelkino",
+   "num": 62,
+   "name": "Переделкино",
+   "kindNote": "дп, писательский городок",
+   "regionId": "moskva-nao",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.65,
+    "lon": 37.34
+   },
+   "distanceFromKremlinKm": 20.8,
+   "azimuthDeg": 237.0,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "lesnoy-gorodok",
+   "num": 63,
+   "name": "Лесной Городок",
+   "kindNote": "дп",
+   "regionId": "odintsovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.64,
+    "lon": 37.21
+   },
+   "distanceFromKremlinKm": 28.4,
+   "azimuthDeg": 244.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "odintsovo",
+   "num": 64,
+   "name": "Одинцово",
+   "kindNote": "г.",
+   "regionId": "odintsovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.678,
+    "lon": 37.278
+   },
+   "distanceFromKremlinKm": 22.8,
+   "azimuthDeg": 249.0,
+   "ring": 2,
+   "destinationId": "odintsovo",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "arkhangelskoe",
+   "num": 65,
+   "name": "Архангельское",
+   "kindNote": "усадьба",
+   "regionId": "krasnogorsk",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.785,
+    "lon": 37.285
+   },
+   "distanceFromKremlinKm": 21.2,
+   "azimuthDeg": 280.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "pavlovskaya-sloboda",
+   "num": 66,
+   "name": "Павловская Слобода",
+   "kindNote": "с.",
+   "regionId": "istra",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.81,
+    "lon": 37.08
+   },
+   "distanceFromKremlinKm": 34.3,
+   "azimuthDeg": 281.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "nakhabino",
+   "num": 67,
+   "name": "Нахабино",
+   "kindNote": "рп (крупнейший)",
+   "regionId": "krasnogorsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.84,
+    "lon": 37.18
+   },
+   "distanceFromKremlinKm": 29.1,
+   "azimuthDeg": 289.8,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "snegiri",
+   "num": 68,
+   "name": "Снегири",
+   "kindNote": "рп, мемориал 1941",
+   "regionId": "istra",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.89,
+    "lon": 37.03
+   },
+   "distanceFromKremlinKm": 39.8,
+   "azimuthDeg": 292.9,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dedovsk",
+   "num": 69,
+   "name": "Дедовск",
+   "kindNote": "г.",
+   "regionId": "istra",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.87,
+    "lon": 37.124
+   },
+   "distanceFromKremlinKm": 33.5,
+   "azimuthDeg": 293.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "krasnogorsk",
+   "num": 70,
+   "name": "Красногорск",
+   "kindNote": "г.",
+   "regionId": "krasnogorsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.831,
+    "lon": 37.33
+   },
+   "distanceFromKremlinKm": 20.0,
+   "azimuthDeg": 296.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kryukovo",
+   "num": 71,
+   "name": "Крюково",
+   "kindNote": "бои 1941",
+   "regionId": "moskva-zelao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.98,
+    "lon": 37.17
+   },
+   "distanceFromKremlinKm": 37.7,
+   "azimuthDeg": 312.4,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zelenograd",
+   "num": 72,
+   "name": "Зеленоград",
+   "kindNote": "г.",
+   "regionId": "moskva-zelao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.987,
+    "lon": 37.194
+   },
+   "distanceFromKremlinKm": 37.2,
+   "azimuthDeg": 314.8,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kurkino",
+   "num": 73,
+   "name": "Куркино",
+   "kindNote": "бывш. д.",
+   "regionId": "moskva-szao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.89,
+    "lon": 37.39
+   },
+   "distanceFromKremlinKm": 20.9,
+   "azimuthDeg": 317.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "serednikovo",
+   "num": 74,
+   "name": "Середниково",
+   "kindNote": "усадьба",
+   "regionId": "khimki",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.98,
+    "lon": 37.24
+   },
+   "distanceFromKremlinKm": 34.6,
+   "azimuthDeg": 317.2,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "memorial-shtyki",
+   "num": 75,
+   "name": "Мемориал «Штыки»",
+   "kindNote": "памятное место",
+   "regionId": "moskva-zelao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.97,
+    "lon": 37.3
+   },
+   "distanceFromKremlinKm": 31.3,
+   "azimuthDeg": 320.8,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "molzhaninovo-novoselki-cherkizovo",
+   "num": 76,
+   "name": "Молжаниново, Новосёлки, Черкизово",
+   "kindNote": "деревни в черте Москвы",
+   "regionId": "moskva-sao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.93,
+    "lon": 37.37
+   },
+   "distanceFromKremlinKm": 25.1,
+   "azimuthDeg": 322.1,
+   "ring": 2,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "mendeleevo",
+   "num": 77,
+   "name": "Менделеево",
+   "kindNote": "рп",
+   "regionId": "solnechnogorsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.04,
+    "lon": 37.22
+   },
+   "distanceFromKremlinKm": 40.5,
+   "azimuthDeg": 322.4,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "olgovo",
+   "num": 78,
+   "name": "Ольгово",
+   "kindNote": "усадьба",
+   "regionId": "dmitrovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.27,
+    "lon": 37.37
+   },
+   "distanceFromKremlinKm": 59.6,
+   "azimuthDeg": 345.1,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "iksha",
+   "num": 79,
+   "name": "Икша",
+   "kindNote": "рп",
+   "regionId": "dmitrovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.17,
+    "lon": 37.5
+   },
+   "distanceFromKremlinKm": 47.1,
+   "azimuthDeg": 351.1,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dedenevo",
+   "num": 80,
+   "name": "Деденево",
+   "kindNote": "посёлок, канал",
+   "regionId": "dmitrovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.24,
+    "lon": 37.52
+   },
+   "distanceFromKremlinKm": 54.6,
+   "azimuthDeg": 353.6,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "muranovo",
+   "num": 81,
+   "name": "Мураново",
+   "kindNote": "усадьба",
+   "regionId": "pushkinskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.16,
+    "lon": 37.9
+   },
+   "distanceFromKremlinKm": 48.6,
+   "azimuthDeg": 21.0,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "abramtsevo",
+   "num": 82,
+   "name": "Абрамцево",
+   "kindNote": "усадьба",
+   "regionId": "sergievo-posadskiy",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.234,
+    "lon": 37.963
+   },
+   "distanceFromKremlinKm": 57.7,
+   "azimuthDeg": 21.7,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "sofrino",
+   "num": 83,
+   "name": "Софрино",
+   "kindNote": "рп",
+   "regionId": "pushkinskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.15,
+    "lon": 37.93
+   },
+   "distanceFromKremlinKm": 48.3,
+   "azimuthDeg": 23.6,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "krasnoarmeysk",
+   "num": 84,
+   "name": "Красноармейск",
+   "kindNote": "г.",
+   "regionId": "pushkinskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.104,
+    "lon": 38.14
+   },
+   "distanceFromKremlinKm": 50.9,
+   "azimuthDeg": 39.5,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "grebnevo",
+   "num": 85,
+   "name": "Гребнево",
+   "kindNote": "усадьба",
+   "regionId": "shchelkovo",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.95,
+    "lon": 38.16
+   },
+   "distanceFromKremlinKm": 40.4,
+   "azimuthDeg": 56.7,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "chernogolovka",
+   "num": 86,
+   "name": "Черноголовка",
+   "kindNote": "г.",
+   "regionId": "chernogolovka",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.01,
+    "lon": 38.379
+   },
+   "distanceFromKremlinKm": 55.5,
+   "azimuthDeg": 58.5,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "noginsk",
+   "num": 87,
+   "name": "Ногинск",
+   "kindNote": "г.",
+   "regionId": "bogorodskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.854,
+    "lon": 38.441
+   },
+   "distanceFromKremlinKm": 52.7,
+   "azimuthDeg": 77.2,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "elektrostal",
+   "num": 88,
+   "name": "Электросталь",
+   "kindNote": "г.",
+   "regionId": "elektrostal",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.785,
+    "lon": 38.445
+   },
+   "distanceFromKremlinKm": 51.9,
+   "azimuthDeg": 85.6,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "gzhel",
+   "num": 89,
+   "name": "Гжель",
+   "kindNote": "с., фарфор",
+   "regionId": "ramenskiy",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.62,
+    "lon": 38.3
+   },
+   "distanceFromKremlinKm": 45.2,
+   "azimuthDeg": 108.7,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ramenskoe",
+   "num": 90,
+   "name": "Раменское",
+   "kindNote": "г.",
+   "regionId": "ramenskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.567,
+    "lon": 38.23
+   },
+   "distanceFromKremlinKm": 43.6,
+   "azimuthDeg": 117.9,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "bronnitsy",
+   "num": 91,
+   "name": "Бронницы",
+   "kindNote": "г.",
+   "regionId": "bronnitsy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.425,
+    "lon": 38.264
+   },
+   "distanceFromKremlinKm": 54.5,
+   "azimuthDeg": 131.6,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "konstantinovo",
+   "num": 92,
+   "name": "Константиново",
+   "kindNote": "усадьба",
+   "regionId": "domodedovo",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.4,
+    "lon": 37.86
+   },
+   "distanceFromKremlinKm": 42.0,
+   "azimuthDeg": 158.7,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "belye-stolby",
+   "num": 93,
+   "name": "Белые Столбы",
+   "kindNote": "рп, Госфильмофонд",
+   "regionId": "domodedovo",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.33,
+    "lon": 37.86
+   },
+   "distanceFromKremlinKm": 49.3,
+   "azimuthDeg": 161.9,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "klimovsk",
+   "num": 94,
+   "name": "Климовск",
+   "kindNote": "мкр Подольска",
+   "regionId": "podolsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.363,
+    "lon": 37.53
+   },
+   "distanceFromKremlinKm": 43.6,
+   "azimuthDeg": 187.3,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "voronovo",
+   "num": 95,
+   "name": "Вороново",
+   "kindNote": "усадьба",
+   "regionId": "moskva-tao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.32,
+    "lon": 37.19
+   },
+   "distanceFromKremlinKm": 55.1,
+   "azimuthDeg": 209.5,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "krasnaya-pakhra",
+   "num": 96,
+   "name": "Красная Пахра",
+   "kindNote": "с.",
+   "regionId": "moskva-tao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.42,
+    "lon": 37.28
+   },
+   "distanceFromKremlinKm": 42.6,
+   "azimuthDeg": 210.1,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "mikhaylovskoe",
+   "num": 97,
+   "name": "Михайловское",
+   "kindNote": "усадьба",
+   "regionId": "moskva-tao",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.4,
+    "lon": 37.2
+   },
+   "distanceFromKremlinKm": 47.1,
+   "azimuthDeg": 214.0,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kalininets",
+   "num": 98,
+   "name": "Калининец",
+   "kindNote": "рп",
+   "regionId": "naro-fominskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.47,
+    "lon": 36.88
+   },
+   "distanceFromKremlinKm": 56.0,
+   "azimuthDeg": 236.2,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "aprelevka",
+   "num": 99,
+   "name": "Апрелевка",
+   "kindNote": "г.",
+   "regionId": "naro-fominskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.545,
+    "lon": 37.073
+   },
+   "distanceFromKremlinKm": 41.2,
+   "azimuthDeg": 236.3,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "selyatino",
+   "num": 100,
+   "name": "Селятино",
+   "kindNote": "рп",
+   "regionId": "naro-fominskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.515,
+    "lon": 36.98
+   },
+   "distanceFromKremlinKm": 47.9,
+   "azimuthDeg": 236.9,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "park-patriot",
+   "num": 101,
+   "name": "Парк «Патриот»",
+   "kindNote": "музейный комплекс",
+   "regionId": "odintsovskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.56,
+    "lon": 36.82
+   },
+   "distanceFromKremlinKm": 54.4,
+   "azimuthDeg": 247.2,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "golitsyno",
+   "num": 102,
+   "name": "Голицыно",
+   "kindNote": "г.",
+   "regionId": "odintsovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.616,
+    "lon": 36.987
+   },
+   "distanceFromKremlinKm": 42.3,
+   "azimuthDeg": 249.3,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "bolshie-vyazemy",
+   "num": 103,
+   "name": "Большие Вязёмы",
+   "kindNote": "усадьба",
+   "regionId": "odintsovskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.635,
+    "lon": 36.995
+   },
+   "distanceFromKremlinKm": 41.2,
+   "azimuthDeg": 251.8,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zakharovo",
+   "num": 104,
+   "name": "Захарово",
+   "kindNote": "усадьба",
+   "regionId": "odintsovskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.645,
+    "lon": 36.97
+   },
+   "distanceFromKremlinKm": 42.3,
+   "azimuthDeg": 253.9,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zvenigorod",
+   "num": 105,
+   "name": "Звенигород",
+   "kindNote": "г.",
+   "regionId": "odintsovskiy",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.73,
+    "lon": 36.855
+   },
+   "distanceFromKremlinKm": 47.8,
+   "azimuthDeg": 267.4,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "lutsino",
+   "num": 106,
+   "name": "Луцино",
+   "kindNote": "д., обрывы Москвы-реки",
+   "regionId": "odintsovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.73,
+    "lon": 36.73
+   },
+   "distanceFromKremlinKm": 55.6,
+   "azimuthDeg": 267.8,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "istra-novyy-ierusalim",
+   "num": 107,
+   "name": "Истра (Новый Иерусалим)",
+   "kindNote": "г.",
+   "regionId": "istra",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.915,
+    "lon": 36.86
+   },
+   "distanceFromKremlinKm": 50.7,
+   "azimuthDeg": 291.3,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "istrinskoe-vodokhranilishche",
+   "num": 108,
+   "name": "Истринское водохранилище",
+   "kindNote": "природа",
+   "regionId": "istra",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.03,
+    "lon": 36.83
+   },
+   "distanceFromKremlinKm": 58.1,
+   "azimuthDeg": 302.5,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "andreevka",
+   "num": 109,
+   "name": "Андреевка",
+   "kindNote": "рп",
+   "regionId": "solnechnogorsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.0,
+    "lon": 37.15
+   },
+   "distanceFromKremlinKm": 40.2,
+   "azimuthDeg": 313.6,
+   "ring": 3,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "boblovo-usadba-mendeleeva",
+   "num": 110,
+   "name": "Боблово (усадьба Менделеева)",
+   "kindNote": "д., усадьба",
+   "regionId": "klin",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.24,
+    "lon": 36.76
+   },
+   "distanceFromKremlinKm": 76.1,
+   "azimuthDeg": 315.8,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "shakhmatovo-i-tarakanovo",
+   "num": 111,
+   "name": "Шахматово и Тараканово",
+   "kindNote": "усадьба",
+   "regionId": "solnechnogorsk",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.21,
+    "lon": 36.86
+   },
+   "distanceFromKremlinKm": 69.4,
+   "azimuthDeg": 317.5,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "solnechnogorsk-i-ozero-senezh",
+   "num": 112,
+   "name": "Солнечногорск и озеро Сенеж",
+   "kindNote": "г.",
+   "regionId": "solnechnogorsk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.185,
+    "lon": 36.977
+   },
+   "distanceFromKremlinKm": 62.5,
+   "azimuthDeg": 320.6,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "nikolo-peshnoshskiy-monastyr",
+   "num": 113,
+   "name": "Николо-Пешношский монастырь",
+   "kindNote": "монастырь",
+   "regionId": "dmitrovskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.41,
+    "lon": 37.39
+   },
+   "distanceFromKremlinKm": 74.5,
+   "azimuthDeg": 349.2,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "yakhroma",
+   "num": 114,
+   "name": "Яхрома",
+   "kindNote": "г., шлюзы канала",
+   "regionId": "dmitrovskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.289,
+    "lon": 37.484
+   },
+   "distanceFromKremlinKm": 60.3,
+   "azimuthDeg": 352.1,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dmitrov",
+   "num": 115,
+   "name": "Дмитров",
+   "kindNote": "г., кремль",
+   "regionId": "dmitrovskiy",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.344,
+    "lon": 37.52
+   },
+   "distanceFromKremlinKm": 66.1,
+   "azimuthDeg": 354.8,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "khotkovo",
+   "num": 116,
+   "name": "Хотьково",
+   "kindNote": "г.",
+   "regionId": "sergievo-posadskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.253,
+    "lon": 37.987
+   },
+   "distanceFromKremlinKm": 60.2,
+   "azimuthDeg": 22.2,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "radonezh",
+   "num": 117,
+   "name": "Радонеж",
+   "kindNote": "с.",
+   "regionId": "sergievo-posadskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.24,
+    "lon": 38.03
+   },
+   "distanceFromKremlinKm": 60.0,
+   "azimuthDeg": 25.1,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "sergiev-posad",
+   "num": 118,
+   "name": "Сергиев Посад",
+   "kindNote": "г., Лавра",
+   "regionId": "sergievo-posadskiy",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.315,
+    "lon": 38.136
+   },
+   "distanceFromKremlinKm": 70.4,
+   "azimuthDeg": 27.0,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "fryanovo",
+   "num": 119,
+   "name": "Фряново",
+   "kindNote": "рп, усадьба",
+   "regionId": "shchelkovo",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.13,
+    "lon": 38.45
+   },
+   "distanceFromKremlinKm": 66.7,
+   "azimuthDeg": 50.6,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "elektrogorsk",
+   "num": 120,
+   "name": "Электрогорск",
+   "kindNote": "г.",
+   "regionId": "pavlovo-posadskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.882,
+    "lon": 38.798
+   },
+   "distanceFromKremlinKm": 75.1,
+   "azimuthDeg": 78.4,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "pavlovskiy-posad",
+   "num": 121,
+   "name": "Павловский Посад",
+   "kindNote": "г.",
+   "regionId": "pavlovo-posadskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.782,
+    "lon": 38.65
+   },
+   "distanceFromKremlinKm": 64.6,
+   "azimuthDeg": 86.6,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "bolshie-dvory",
+   "num": 122,
+   "name": "Большие Дворы",
+   "kindNote": "рп",
+   "regionId": "pavlovo-posadskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.75,
+    "lon": 38.62
+   },
+   "distanceFromKremlinKm": 62.7,
+   "azimuthDeg": 89.8,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "drezna",
+   "num": 123,
+   "name": "Дрезна",
+   "kindNote": "г.",
+   "regionId": "orekhovo-zuevskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.744,
+    "lon": 38.849
+   },
+   "distanceFromKremlinKm": 77.0,
+   "azimuthDeg": 90.2,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "beloozerskiy",
+   "num": 124,
+   "name": "Белоозёрский",
+   "kindNote": "рп",
+   "regionId": "voskresensk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.46,
+    "lon": 38.44
+   },
+   "distanceFromKremlinKm": 61.0,
+   "azimuthDeg": 121.8,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "mikhnevo",
+   "num": 125,
+   "name": "Михнево",
+   "kindNote": "рп",
+   "regionId": "stupino",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.13,
+    "lon": 37.94
+   },
+   "distanceFromKremlinKm": 72.1,
+   "azimuthDeg": 163.5,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "melikhovo",
+   "num": 126,
+   "name": "Мелихово",
+   "kindNote": "усадьба",
+   "regionId": "chekhov",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.105,
+    "lon": 37.648
+   },
+   "distanceFromKremlinKm": 72.0,
+   "azimuthDeg": 178.5,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "davidova-pustyn",
+   "num": 127,
+   "name": "Давидова пустынь",
+   "kindNote": "монастырь",
+   "regionId": "chekhov",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.07,
+    "lon": 37.48
+   },
+   "distanceFromKremlinKm": 76.3,
+   "azimuthDeg": 186.6,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "chekhov-i-lopasnya-zachatevskoe",
+   "num": 128,
+   "name": "Чехов и Лопасня-Зачатьевское",
+   "kindNote": "г., усадьба",
+   "regionId": "chekhov",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.143,
+    "lon": 37.466
+   },
+   "distanceFromKremlinKm": 68.4,
+   "azimuthDeg": 188.1,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "naro-fominsk",
+   "num": 129,
+   "name": "Наро-Фоминск",
+   "kindNote": "г.",
+   "regionId": "naro-fominskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.386,
+    "lon": 36.734
+   },
+   "distanceFromKremlinKm": 68.9,
+   "azimuthDeg": 234.2,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kubinka",
+   "num": 130,
+   "name": "Кубинка",
+   "kindNote": "г.",
+   "regionId": "odintsovskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.576,
+    "lon": 36.696
+   },
+   "distanceFromKremlinKm": 61.0,
+   "azimuthDeg": 251.7,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "tuchkovo",
+   "num": 131,
+   "name": "Тучково",
+   "kindNote": "рп",
+   "regionId": "ruzskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.6,
+    "lon": 36.47
+   },
+   "distanceFromKremlinKm": 73.9,
+   "azimuthDeg": 257.3,
+   "ring": 4,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ruza",
+   "num": 132,
+   "name": "Руза",
+   "kindNote": "г.",
+   "regionId": "ruzskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.701,
+    "lon": 36.196
+   },
+   "distanceFromKremlinKm": 89.2,
+   "azimuthDeg": 266.9,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "vysokovsk",
+   "num": 133,
+   "name": "Высоковск",
+   "kindNote": "г.",
+   "regionId": "klin",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.317,
+    "lon": 36.551
+   },
+   "distanceFromKremlinKm": 91.3,
+   "azimuthDeg": 313.9,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "klin",
+   "num": 134,
+   "name": "Клин",
+   "kindNote": "г.",
+   "regionId": "klin",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.331,
+    "lon": 36.729
+   },
+   "distanceFromKremlinKm": 84.8,
+   "azimuthDeg": 319.7,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zaprudnya",
+   "num": 135,
+   "name": "Запрудня",
+   "kindNote": "рп",
+   "regionId": "taldomskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.56,
+    "lon": 37.43
+   },
+   "distanceFromKremlinKm": 90.6,
+   "azimuthDeg": 352.7,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "verbilki",
+   "num": 136,
+   "name": "Вербилки",
+   "kindNote": "рп, фарфор Гарднера",
+   "regionId": "taldomskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.53,
+    "lon": 37.6
+   },
+   "distanceFromKremlinKm": 86.5,
+   "azimuthDeg": 359.3,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "peresvet",
+   "num": 137,
+   "name": "Пересвет",
+   "kindNote": "г.",
+   "regionId": "sergievo-posadskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.418,
+    "lon": 38.177
+   },
+   "distanceFromKremlinKm": 81.8,
+   "azimuthDeg": 24.9,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "krasnozavodsk",
+   "num": 138,
+   "name": "Краснозаводск",
+   "kindNote": "г.",
+   "regionId": "sergievo-posadskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.44,
+    "lon": 38.229
+   },
+   "distanceFromKremlinKm": 85.4,
+   "azimuthDeg": 26.1,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "bogorodskoe",
+   "num": 139,
+   "name": "Богородское",
+   "kindNote": "с., игрушка",
+   "regionId": "sergievo-posadskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.39,
+    "lon": 38.25
+   },
+   "distanceFromKremlinKm": 81.1,
+   "azimuthDeg": 28.7,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "orekhovo-zuevo",
+   "num": 140,
+   "name": "Орехово-Зуево",
+   "kindNote": "г.",
+   "regionId": "orekhovo-zuevskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.806,
+    "lon": 38.962
+   },
+   "distanceFromKremlinKm": 84.3,
+   "azimuthDeg": 85.4,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "likino-dulevo",
+   "num": 141,
+   "name": "Ликино-Дулёво",
+   "kindNote": "г.",
+   "regionId": "orekhovo-zuevskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.709,
+    "lon": 38.949
+   },
+   "distanceFromKremlinKm": 83.5,
+   "azimuthDeg": 92.7,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "guslitsy-davydovo",
+   "num": 142,
+   "name": "Гуслицы (Давыдово)",
+   "kindNote": "старообрядческий край",
+   "regionId": "orekhovo-zuevskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.62,
+    "lon": 38.89
+   },
+   "distanceFromKremlinKm": 81.1,
+   "azimuthDeg": 99.9,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kurovskoe",
+   "num": 143,
+   "name": "Куровское",
+   "kindNote": "г.",
+   "regionId": "orekhovo-zuevskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.579,
+    "lon": 38.921
+   },
+   "distanceFromKremlinKm": 84.0,
+   "azimuthDeg": 102.7,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "egorevsk",
+   "num": 144,
+   "name": "Егорьевск",
+   "kindNote": "г.",
+   "regionId": "egorevsk",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.383,
+    "lon": 39.035
+   },
+   "distanceFromKremlinKm": 98.1,
+   "azimuthDeg": 114.1,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "voskresensk",
+   "num": 145,
+   "name": "Воскресенск",
+   "kindNote": "г.",
+   "regionId": "voskresensk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.322,
+    "lon": 38.671
+   },
+   "distanceFromKremlinKm": 81.7,
+   "azimuthDeg": 125.4,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "krivyakino",
+   "num": 146,
+   "name": "Кривякино",
+   "kindNote": "усадьба",
+   "regionId": "voskresensk",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.28,
+    "lon": 38.68
+   },
+   "distanceFromKremlinKm": 85.0,
+   "azimuthDeg": 127.7,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "prioksko-terrasnyy-zapovednik",
+   "num": 147,
+   "name": "Приокско-Террасный заповедник",
+   "kindNote": "природа",
+   "regionId": "serpukhov",
+   "mustHave": 3,
+   "coords": {
+    "lat": 54.89,
+    "lon": 37.57
+   },
+   "distanceFromKremlinKm": 95.9,
+   "azimuthDeg": 181.8,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "serpukhov",
+   "num": 148,
+   "name": "Серпухов",
+   "kindNote": "г.",
+   "regionId": "serpukhov",
+   "mustHave": 3,
+   "coords": {
+    "lat": 54.913,
+    "lon": 37.412
+   },
+   "distanceFromKremlinKm": 94.2,
+   "azimuthDeg": 188.0,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dorokhovo",
+   "num": 149,
+   "name": "Дорохово",
+   "kindNote": "рп",
+   "regionId": "ruzskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.55,
+    "lon": 36.36
+   },
+   "distanceFromKremlinKm": 82.1,
+   "azimuthDeg": 254.6,
+   "ring": 5,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "mozhaysk",
+   "num": 150,
+   "name": "Можайск",
+   "kindNote": "г.",
+   "regionId": "mozhayskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.505,
+    "lon": 36.033
+   },
+   "distanceFromKremlinKm": 103.2,
+   "azimuthDeg": 255.2,
    "ring": 6,
    "destinationId": null,
-   "finish": true
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "borodinskoe-pole",
+   "num": 151,
+   "name": "Бородинское поле",
+   "kindNote": "памятное место",
+   "regionId": "mozhayskiy",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.52,
+    "lon": 35.82
+   },
+   "distanceFromKremlinKm": 115.8,
+   "azimuthDeg": 257.9,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kolotskiy-monastyr",
+   "num": 152,
+   "name": "Колоцкий монастырь",
+   "kindNote": "монастырь",
+   "regionId": "mozhayskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.58,
+    "lon": 35.79
+   },
+   "distanceFromKremlinKm": 116.2,
+   "azimuthDeg": 261.3,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ruzskoe-vodokhranilishche",
+   "num": 153,
+   "name": "Рузское водохранилище",
+   "kindNote": "природа",
+   "regionId": "ruzskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.75,
+    "lon": 36.0
+   },
+   "distanceFromKremlinKm": 101.3,
+   "azimuthDeg": 270.5,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "volokolamsk",
+   "num": 154,
+   "name": "Волоколамск",
+   "kindNote": "г., кремль",
+   "regionId": "volokolamskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.035,
+    "lon": 35.958
+   },
+   "distanceFromKremlinKm": 108.2,
+   "azimuthDeg": 287.6,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "yaropolets",
+   "num": 155,
+   "name": "Ярополец",
+   "kindNote": "с., две усадьбы",
+   "regionId": "volokolamskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.13,
+    "lon": 35.95
+   },
+   "distanceFromKremlinKm": 112.1,
+   "azimuthDeg": 292.7,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dubna",
+   "num": 156,
+   "name": "Дубна",
+   "kindNote": "г., Волга, канал",
+   "regionId": "dubna",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.737,
+    "lon": 37.166
+   },
+   "distanceFromKremlinKm": 113.0,
+   "azimuthDeg": 345.9,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "taldom",
+   "num": 157,
+   "name": "Талдом",
+   "kindNote": "г.",
+   "regionId": "taldomskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.731,
+    "lon": 37.528
+   },
+   "distanceFromKremlinKm": 109.0,
+   "azimuthDeg": 357.1,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zhuravlinaya-rodina",
+   "num": 158,
+   "name": "Журавлиная родина",
+   "kindNote": "природа",
+   "regionId": "taldomskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.8,
+    "lon": 37.73
+   },
+   "distanceFromKremlinKm": 116.7,
+   "azimuthDeg": 3.3,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kolomna",
+   "num": 159,
+   "name": "Коломна",
+   "kindNote": "г., кремль",
+   "regionId": "kolomna",
+   "mustHave": 3,
+   "coords": {
+    "lat": 55.103,
+    "lon": 38.753
+   },
+   "distanceFromKremlinKm": 101.7,
+   "azimuthDeg": 134.8,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "bobrenev-monastyr",
+   "num": 160,
+   "name": "Бобренев монастырь",
+   "kindNote": "монастырь",
+   "regionId": "kolomna",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.07,
+    "lon": 38.79
+   },
+   "distanceFromKremlinKm": 105.9,
+   "azimuthDeg": 135.2,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ozery",
+   "num": 161,
+   "name": "Озёры",
+   "kindNote": "г.",
+   "regionId": "kolomna",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.856,
+    "lon": 38.556
+   },
+   "distanceFromKremlinKm": 116.0,
+   "azimuthDeg": 148.8,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ozherele",
+   "num": 162,
+   "name": "Ожерелье",
+   "kindNote": "мкр Каширы",
+   "regionId": "kashira",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.79,
+    "lon": 38.27
+   },
+   "distanceFromKremlinKm": 114.7,
+   "azimuthDeg": 158.6,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kashira",
+   "num": 163,
+   "name": "Кашира",
+   "kindNote": "г.",
+   "regionId": "kashira",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.834,
+    "lon": 38.151
+   },
+   "distanceFromKremlinKm": 107.5,
+   "azimuthDeg": 161.5,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "stupino",
+   "num": 164,
+   "name": "Ступино",
+   "kindNote": "г.",
+   "regionId": "stupino",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.886,
+    "lon": 38.078
+   },
+   "distanceFromKremlinKm": 100.6,
+   "azimuthDeg": 163.0,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "belopesotskiy-monastyr",
+   "num": 165,
+   "name": "Белопесоцкий монастырь",
+   "kindNote": "монастырь",
+   "regionId": "stupino",
+   "mustHave": 2,
+   "coords": {
+    "lat": 54.88,
+    "lon": 38.05
+   },
+   "distanceFromKremlinKm": 100.7,
+   "azimuthDeg": 164.1,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "pushchino",
+   "num": 166,
+   "name": "Пущино",
+   "kindNote": "г.",
+   "regionId": "serpukhov",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.833,
+    "lon": 37.621
+   },
+   "distanceFromKremlinKm": 102.2,
+   "azimuthDeg": 179.9,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "protvino",
+   "num": 167,
+   "name": "Протвино",
+   "kindNote": "г.",
+   "regionId": "serpukhov",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.87,
+    "lon": 37.218
+   },
+   "distanceFromKremlinKm": 101.3,
+   "azimuthDeg": 194.6,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "vereya",
+   "num": 168,
+   "name": "Верея",
+   "kindNote": "г.",
+   "regionId": "naro-fominskiy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.343,
+    "lon": 36.186
+   },
+   "distanceFromKremlinKm": 100.9,
+   "azimuthDeg": 243.8,
+   "ring": 6,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "uvarovka",
+   "num": 169,
+   "name": "Уваровка",
+   "kindNote": "рп",
+   "regionId": "mozhayskiy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.53,
+    "lon": 35.61
+   },
+   "distanceFromKremlinKm": 128.4,
+   "azimuthDeg": 259.7,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "shakhovskaya",
+   "num": 170,
+   "name": "Шаховская",
+   "kindNote": "рп",
+   "regionId": "shakhovskaya",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.033,
+    "lon": 35.505
+   },
+   "distanceFromKremlinKm": 135.4,
+   "azimuthDeg": 284.2,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "belaya-kolp",
+   "num": 171,
+   "name": "Белая Колпь",
+   "kindNote": "с., усадьба",
+   "regionId": "shakhovskaya",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.12,
+    "lon": 35.53
+   },
+   "distanceFromKremlinKm": 136.3,
+   "azimuthDeg": 288.3,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "teryaevo-iosifo-volotskiy-monastyr",
+   "num": 172,
+   "name": "Теряево (Иосифо-Волоцкий монастырь)",
+   "kindNote": "с., монастырь",
+   "regionId": "volokolamskiy",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.12,
+    "lon": 35.8
+   },
+   "distanceFromKremlinKm": 120.4,
+   "azimuthDeg": 290.6,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "lotoshino",
+   "num": 173,
+   "name": "Лотошино",
+   "kindNote": "рп",
+   "regionId": "lotoshino",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.231,
+    "lon": 35.642
+   },
+   "distanceFromKremlinKm": 133.9,
+   "azimuthDeg": 294.2,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "mikulino",
+   "num": 174,
+   "name": "Микулино",
+   "kindNote": "с., валы удельного города",
+   "regionId": "lotoshino",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.45,
+    "lon": 35.6
+   },
+   "distanceFromKremlinKm": 147.3,
+   "azimuthDeg": 302.6,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "roshal",
+   "num": 175,
+   "name": "Рошаль",
+   "kindNote": "г.",
+   "regionId": "shatura",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.663,
+    "lon": 39.865
+   },
+   "distanceFromKremlinKm": 141.1,
+   "azimuthDeg": 93.1,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "svyatoe-ozero-meshchera",
+   "num": 176,
+   "name": "Святое озеро (Мещера)",
+   "kindNote": "природа",
+   "regionId": "shatura",
+   "mustHave": 2,
+   "coords": {
+    "lat": 55.65,
+    "lon": 39.95
+   },
+   "distanceFromKremlinKm": 146.6,
+   "azimuthDeg": 93.5,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "shatura",
+   "num": 177,
+   "name": "Шатура",
+   "kindNote": "г.",
+   "regionId": "shatura",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.578,
+    "lon": 39.544
+   },
+   "distanceFromKremlinKm": 122.3,
+   "azimuthDeg": 98.3,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "dedinovo",
+   "num": 178,
+   "name": "Дединово",
+   "kindNote": "с., родина корабля «Орёл»",
+   "regionId": "lukhovitsy",
+   "mustHave": 2,
+   "coords": {
+    "lat": 54.99,
+    "lon": 39.37
+   },
+   "distanceFromKremlinKm": 139.4,
+   "azimuthDeg": 126.7,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "beloomut",
+   "num": 179,
+   "name": "Белоомут",
+   "kindNote": "рп, Ока, шлюз",
+   "regionId": "lukhovitsy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.94,
+    "lon": 39.33
+   },
+   "distanceFromKremlinKm": 141.0,
+   "azimuthDeg": 129.1,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "lukhovitsy",
+   "num": 180,
+   "name": "Луховицы",
+   "kindNote": "г.",
+   "regionId": "lukhovitsy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.965,
+    "lon": 39.025
+   },
+   "distanceFromKremlinKm": 124.8,
+   "azimuthDeg": 134.0,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "zaraysk",
+   "num": 181,
+   "name": "Зарайск",
+   "kindNote": "г., кремль",
+   "regionId": "zaraysk",
+   "mustHave": 3,
+   "coords": {
+    "lat": 54.762,
+    "lon": 38.885
+   },
+   "distanceFromKremlinKm": 136.2,
+   "azimuthDeg": 143.4,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "serebryanye-prudy",
+   "num": 182,
+   "name": "Серебряные Пруды",
+   "kindNote": "рп",
+   "regionId": "serebryanye-prudy",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.468,
+    "lon": 38.723
+   },
+   "distanceFromKremlinKm": 159.1,
+   "azimuthDeg": 153.3,
+   "ring": 7,
+   "destinationId": null,
+   "start": false,
+   "insideMkad": false
   }
  ],
  "superlatives": [
