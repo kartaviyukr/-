@@ -1,0 +1,271 @@
+#!/usr/bin/env python3
+"""Проверка контент-пака: схема, объёмы текста, источники, ссылки между файлами.
+
+Запуск: python3 content/tools/validate_content.py   (код выхода 1 при ошибках)
+Ошибки ломают сборку, предупреждения — только печатаются.
+"""
+import json
+import math
+import os
+import re
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+PACK = os.path.join(os.path.dirname(HERE), "pack")
+
+SETTLEMENT = {"город", "рабочий посёлок", "дачный посёлок", "посёлок", "село", "деревня", "усадьба", "монастырь",
+              "природа", "памятное место"}
+STOP_KIND = {"смотреть снаружи", "заходим внутрь", "проезжаем"}
+DISH_KIND = {"блюдо", "продукт", "тематическая замена"}
+DIFFICULTY = {"лёгкий", "средний", "сложный"}
+SHAPE = {"линейный", "петля"}
+REGION_TYPE = {"МО_городской_округ", "МО_муниципальный_округ", "Москва_АО"}
+DAYS = {"mon", "tue", "wed", "thu", "fri", "sat", "sun"}
+HOURS = re.compile(r"^\d{2}:\d{2}-\d{2}:\d{2}(,\d{2}:\d{2}-\d{2}:\d{2})*$")
+URL = re.compile(r"^https?://\S+$")
+# Москва и область с запасом.
+LAT, LON = (54.1, 57.1), (35.0, 40.4)
+# Единицы — только метрические.
+IMPERIAL = re.compile(r"\b(миль|мили|миля|фут|футов|дюйм|ярд|фунт|унци|галлон)", re.I)
+
+errors, warnings = [], []
+
+
+def err(where, msg):
+    errors.append(f"{where}: {msg}")
+
+
+def warn(where, msg):
+    warnings.append(f"{where}: {msg}")
+
+
+def need(obj, key, typ, where, optional=False):
+    if key not in obj or obj[key] is None:
+        if not optional:
+            err(where, f"нет поля «{key}»")
+        return None
+    v = obj[key]
+    if typ is float:
+        ok = isinstance(v, (int, float)) and not isinstance(v, bool)
+    else:
+        ok = isinstance(v, typ)
+    if not ok:
+        err(where, f"поле «{key}» должно быть {typ.__name__}")
+        return None
+    if isinstance(v, str) and not v.strip() and not optional:
+        err(where, f"поле «{key}» пустое")
+    return v
+
+
+def point(obj, key, where, optional=False):
+    p = need(obj, key, dict, where, optional)
+    if p is None:
+        return None
+    lat, lon = need(p, "lat", float, f"{where}.{key}"), need(p, "lon", float, f"{where}.{key}")
+    if lat is None or lon is None:
+        return None
+    if not (LAT[0] <= lat <= LAT[1] and LON[0] <= lon <= LON[1]):
+        err(where, f"{key} вне Москвы и области: {lat}, {lon}")
+    return lat, lon
+
+
+def dist_km(a, b):
+    p1, p2 = math.radians(a[0]), math.radians(b[0])
+    dp, dl = p2 - p1, math.radians(b[1] - a[1])
+    h = math.sin(dp / 2) ** 2 + math.cos(p1) * math.cos(p2) * math.sin(dl / 2) ** 2
+    return 2 * 6371.0088 * math.asin(math.sqrt(h))
+
+
+def paragraphs(obj, key, where, lo, hi):
+    v = need(obj, key, list, where)
+    if v is None:
+        return
+    if not (lo <= len(v) <= hi):
+        err(where, f"«{key}»: {len(v)} абзацев, нужно {lo}–{hi}")
+    for i, p in enumerate(v):
+        if not isinstance(p, str) or len(p.strip()) < 80:
+            err(where, f"«{key}»[{i}] слишком короткий абзац")
+        elif IMPERIAL.search(p):
+            err(where, f"«{key}»[{i}] — неметрические единицы")
+
+
+def polygon(obj, key, where):
+    poly = obj.get(key)
+    if poly is None:
+        return
+    if poly.get("type") != "Polygon" or not poly.get("coordinates"):
+        err(where, f"{key}: ожидается GeoJSON Polygon")
+        return
+    ring = poly["coordinates"][0]
+    if len(ring) < 4 or ring[0] != ring[-1]:
+        err(where, f"{key}: внешнее кольцо должно быть замкнуто и иметь ≥ 3 вершин")
+
+
+def check_destination(d, fname, spiral_ids):
+    w = fname
+    did = need(d, "id", str, w)
+    if did and did + ".json" != fname:
+        err(w, f"id «{did}» не совпадает с именем файла")
+    need(d, "name", str, w)
+    if d.get("settlementType") not in SETTLEMENT:
+        err(w, f"settlementType «{d.get('settlementType')}» не из списка")
+    if d.get("mustHave") not in (1, 2, 3):
+        err(w, "mustHave должно быть 1, 2 или 3")
+    need(d, "regionId", str, w)
+    need(d, "distanceFromKremlinKm", float, w)
+    center = point(d, "coords", w)
+    polygon(d, "boundaryGeoJson", w)
+    if d.get("boundarySource") not in ("osm", "approx"):
+        err(w, "boundarySource: osm или approx")
+    paragraphs(d, "intro", w, 3, 6)
+    start = end = None
+    for key in ("startPoint", "endPoint"):
+        rp = need(d, key, dict, w)
+        if rp:
+            need(rp, "name", str, f"{w}.{key}")
+            need(rp, "transport", str, f"{w}.{key}")
+            pt = point(rp, "coords", f"{w}.{key}")
+            if key == "startPoint":
+                start = pt
+            else:
+                end = pt
+    route = need(d, "route", dict, w)
+    if route:
+        rw = f"{w}.route"
+        need(route, "distanceKm", float, rw)
+        need(route, "durationH", float, rw)
+        if route.get("difficulty") not in DIFFICULTY:
+            err(rw, "difficulty: лёгкий/средний/сложный")
+        if route.get("shape", "линейный") not in SHAPE:
+            err(rw, "shape: линейный/петля")
+        for k in ("surfaceNotes", "seasonNotes", "safetyNotes"):
+            need(route, k, str, rw)
+        for b in route.get("barriers", []):
+            if len(b.get("line", [])) < 2:
+                err(rw, f"барьер «{b.get('name')}» — нужна линия из ≥ 2 точек")
+    stops = need(d, "stops", list, w) or []
+    if len(stops) < 3:
+        err(w, "меньше 3 точек")
+    orders = [s.get("order") for s in stops]
+    if orders != sorted(orders) or len(set(orders)) != len(orders):
+        err(w, "order точек должен строго возрастать")
+    seen = set()
+    for s in stops:
+        sw = f"{w}/{s.get('id')}"
+        sid = need(s, "id", str, sw)
+        if sid in seen:
+            err(sw, "повтор id точки")
+        seen.add(sid)
+        if sid and did and not sid.startswith(did + "-"):
+            err(sw, f"id точки должен начинаться с «{did}-»")
+        need(s, "name", str, sw)
+        pt = point(s, "coords", sw)
+        if pt and center and dist_km(pt, center) > 15:
+            warn(sw, f"точка в {dist_km(pt, center):.1f} км от центра места")
+        if s.get("kind") not in STOP_KIND:
+            err(sw, f"kind «{s.get('kind')}» не из списка")
+        need(s, "visitMinutes", int, sw)
+        r = s.get("zoneRadiusM")
+        if r is not None and not (30 <= r <= 5000):
+            err(sw, "zoneRadiusM вне 30–5000 м")
+        polygon(s, "zonePolygon", sw)
+        sch = s.get("schedule")
+        if sch is not None:
+            for day, hours in sch.get("days", {}).items():
+                if day not in DAYS:
+                    err(sw, f"schedule: неизвестный день {day}")
+                if hours != "closed" and not HOURS.match(hours):
+                    err(sw, f"schedule.{day}: «{hours}» — нужен формат 10:00-18:00 или closed")
+        paragraphs(s, "guideStory", sw, 3, 6)
+        facts = need(s, "facts", list, sw) or []
+        if not (5 <= len(facts) <= 12):
+            err(sw, f"{len(facts)} фактов, нужно 5–12")
+        for i, f in enumerate(facts):
+            fw = f"{sw}.facts[{i}]"
+            need(f, "text", str, fw)
+            url = need(f, "sourceUrl", str, fw)
+            if url and not URL.match(url):
+                err(fw, "sourceUrl — не ссылка")
+            if not isinstance(f.get("verified"), bool):
+                err(fw, "verified должно быть true/false")
+            if IMPERIAL.search(f.get("text", "")):
+                err(fw, "неметрические единицы")
+        unverified = sum(1 for f in facts if f.get("verified") is False)
+        if facts and unverified * 2 > len(facts):
+            warn(sw, f"больше половины фактов не проверены ({unverified}/{len(facts)})")
+    if start and stops and stops[0].get("coords"):
+        first = (stops[0]["coords"]["lat"], stops[0]["coords"]["lon"])
+        if dist_km(start, first) > 5:
+            warn(w, "старт дальше 5 км от первой точки")
+    dish = need(d, "dish", dict, w)
+    if dish:
+        dw = f"{w}.dish"
+        need(dish, "name", str, dw)
+        if dish.get("kind") not in DISH_KIND:
+            err(dw, "kind: блюдо/продукт/тематическая замена")
+        if dish.get("kind") == "тематическая замена" and not dish.get("honestyNote"):
+            err(dw, "для тематической замены нужна honestyNote")
+        paragraphs(dish, "story", dw, 1, 6)
+        for i, shop in enumerate(need(dish, "whereToBuy", list, dw) or []):
+            sw = f"{dw}.whereToBuy[{i}]"
+            need(shop, "name", str, sw)
+            need(shop, "address", str, sw)
+            point(shop, "coords", sw, optional=True)
+            if not isinstance(shop.get("verified"), bool):
+                err(sw, "verified должно быть true/false")
+    title = need(d, "title", dict, w)
+    if title:
+        for k in ("id", "name", "legend", "ritual", "pairVariant"):
+            need(title, k, str, f"{w}.title")
+    sources = need(d, "sources", list, w) or []
+    if not sources:
+        err(w, "нет источников")
+    for s in sources:
+        if not URL.match(s.get("url", "")):
+            err(w, f"источник «{s.get('title')}» без ссылки")
+    if did and did not in spiral_ids:
+        err(w, "место не упомянуто в spiral.json (destinationId)")
+
+
+def main():
+    manifest = json.load(open(os.path.join(PACK, "manifest.json"), encoding="utf-8"))
+    for k in ("version", "updated", "spiral", "destinations"):
+        if k not in manifest:
+            err("manifest.json", f"нет поля «{k}»")
+    spiral = json.load(open(os.path.join(PACK, manifest["spiral"]), encoding="utf-8"))
+    region_ids = {r["id"] for r in spiral["regions"]}
+    for r in spiral["regions"]:
+        if r["type"] not in REGION_TYPE:
+            err("spiral.json", f"округ {r['name']}: тип {r['type']}")
+    linked = set()
+    nums = []
+    for p in spiral["places"]:
+        nums.append(p["num"])
+        if p["regionId"] not in region_ids:
+            err("spiral.json", f"{p['name']}: неизвестный округ {p['regionId']}")
+        if p.get("destinationId"):
+            linked.add(p["destinationId"])
+    if nums != list(range(1, len(nums) + 1)):
+        err("spiral.json", "номера мест должны идти подряд с 1")
+    if not spiral["places"][-1].get("finish"):
+        err("spiral.json", "последним должен быть финиш (Кремль)")
+    files = manifest["destinations"]
+    for f in files:
+        path = os.path.join(PACK, "destinations", f)
+        if not os.path.exists(path):
+            err("manifest.json", f"нет файла {f}")
+            continue
+        check_destination(json.load(open(path, encoding="utf-8")), f, linked)
+    for did in linked:
+        if did + ".json" not in files:
+            err("spiral.json", f"destinationId {did} без файла в манифесте")
+    for wmsg in warnings:
+        print("ПРЕДУПРЕЖДЕНИЕ", wmsg)
+    for e in errors:
+        print("ОШИБКА", e)
+    print(f"Мест с контентом: {len(files)}; ошибок: {len(errors)}; предупреждений: {len(warnings)}")
+    sys.exit(1 if errors else 0)
+
+
+if __name__ == "__main__":
+    main()

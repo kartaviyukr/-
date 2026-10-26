@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Велоподмосковье</string>
+    <string name="tracking_title">Маршрут идёт</string>
+    <string name="tracking_waiting">Ищем координаты…</string>
+    <string name="stop_reached">Точка пройдена: %1$s</string>
+    <string name="title_awarded">Новое звание!</string>
+    <string name="all_stops_done">Все точки пройдены. Маршрут завершён.</string>
+    <string name="next_stop">Дальше: %1$s · %2$s</string>
+    <string name="stop_tracking">Остановить</string>
+    <string name="channel_route">Активный маршрут</string>
+    <string name="channel_events">Отметки и звания</string>
+</resources>

@@ -1,0 +1,101 @@
+name: Сборка APK «Велоподмосковье»
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+    tags:
+      - 'velo-v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Одновременно идёт одна сборка: два запуска не должны спорить за релиз.
+concurrency:
+  group: velopodmoskovye-apk
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Проверить контент, собрать и опубликовать APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Проверить контент-пак
+        run: python3 content/tools/validate_content.py
+
+      - name: Установить JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Определить версию
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/velo-v* ]]; then
+            VERSION_NAME="${GITHUB_REF#refs/tags/velo-v}"
+          else
+            VERSION_NAME="0.1.${GITHUB_RUN_NUMBER}"
+          fi
+          echo "VERSION_NAME=${VERSION_NAME}" >> "$GITHUB_ENV"
+          echo "VERSION_CODE=${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
+
+      - name: Юнит-тесты
+        run: ./gradlew --no-daemon testReleaseUnitTest
+
+      - name: Сборка release APK и UI-тестов
+        run: ./gradlew --no-daemon assembleRelease assembleDebugAndroidTest
+
+      - name: Подготовить файл
+        run: |
+          mkdir -p dist
+          cp app/build/outputs/apk/release/app-release.apk \
+             "dist/velopodmoskovye-${VERSION_NAME}.apk"
+          ls -la dist
+
+      - name: Загрузить APK как артефакт сборки
+        uses: actions/upload-artifact@v4
+        with:
+          name: velopodmoskovye-apk
+          path: dist/*.apk
+          if-no-files-found: error
+
+      - name: Отчёт о тестах (при падении)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/tests/
+          if-no-files-found: ignore
+
+      - name: Опубликовать релиз по тегу
+        if: startsWith(github.ref, 'refs/tags/velo-v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF#refs/tags/}" dist/*.apk \
+            --title "Велоподмосковье ${VERSION_NAME}" \
+            --notes "APK для установки на Android. Скачайте файл и откройте его на телефоне." \
+            || gh release upload "${GITHUB_REF#refs/tags/}" dist/*.apk --clobber
+
+      - name: Обновить сборку «latest»
+        if: "!startsWith(github.ref, 'refs/tags/')"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release delete velopodmoskovye-latest --yes --cleanup-tag || true
+          gh release create velopodmoskovye-latest dist/*.apk \
+            --target "${GITHUB_SHA}" \
+            --prerelease \
+            --title "Велоподмосковье — последняя сборка" \
+            --notes "Велопутешествие по спирали от дальних мест Подмосковья к Кремлю.
+
+          Скачайте APK ниже и откройте файл на Android-телефоне, чтобы установить.
+          Сборка ${VERSION_NAME} из ветки \`${GITHUB_REF#refs/heads/}\`."
