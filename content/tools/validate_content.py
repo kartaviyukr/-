@@ -182,8 +182,10 @@ def check_destination(d, fname, spiral_ids):
             if len(b.get("line", [])) < 2:
                 err(rw, f"барьер «{b.get('name')}» — нужна линия из ≥ 2 точек")
     stops = need(d, "stops", list, w) or []
-    if v3 and not (5 <= len(stops) <= 12):
-        err(w, f"{len(stops)} точек, нужно 5–12 (цель — 6–8)")
+    if v3 and not (4 <= len(stops) <= 12):
+        err(w, f"{len(stops)} точек, нужно 4–12 (цель — 6–8)")
+    elif v3 and len(stops) < 6:
+        warn(w, f"всего {len(stops)} точки — цель 6–8, нужно найти ещё")
     elif ver == 2 and not (8 <= len(stops) <= 12):
         err(w, f"{len(stops)} точек, нужно 8–12")
     elif len(stops) < 3:

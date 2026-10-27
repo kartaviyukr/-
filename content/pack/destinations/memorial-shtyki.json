@@ -12,83 +12,66 @@
  "intro": [
   "Мемориальный комплекс «Штыки» стоит на 40-м километре Ленинградского шоссе, при въезде в Зеленоград. Он посвящён воинам Красной армии, погибшим в ноябре — декабре 1941 года при обороне Москвы.",
   "В декабре 1941 года здесь проходил последний рубеж обороны столицы и шли бои за деревню Матушкино. Монумент установлен 24 июня 1974 года; в братской могиле — останки 760 бойцов, найденных при строительстве города.",
-  "Свои места маршрута: «Последний рубеж», «Мемориал «Штыки»». По пути маршрут заходит и к соседям: Молжаниново, Новосёлки, Черкизово — «Церковь Рождества Христова в Черкизове», «Поля у Шереметьева»; Химки и мемориал «Ежи» — «Мемориал «Противотанковые ежи»», «Центр Химок»; Путилково — «Долина Сходни», «Бывшая деревенская часть»; Красногорск — «Усадьба Знаменское-Губайлово», «Музей немецких антифашистов».",
-  "Маршрут линейный, около 49 км и 10 точек. Финиш — Станция «Красногорская» (Электрички Рижского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Братская могила у шоссе», «Мемориал «Штыки»», «Минута памяти», «Комплекс 1974 года», «Последний рубеж». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 11 км: старт и финиш — Станция «Фирсановская» (Электрички Ленинградского направления / МЦД-3). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Крюково»",
+  "name": "Станция «Фирсановская»",
   "coords": {
-   "lat": 55.98,
-   "lon": 37.172
+   "lat": 55.9622,
+   "lon": 37.2495
   },
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "endPoint": {
-  "name": "Станция «Красногорская»",
+  "name": "Станция «Фирсановская»",
   "coords": {
-   "lat": 55.818,
-   "lon": 37.334
+   "lat": 55.9622,
+   "lon": 37.2495
   },
-  "transport": "Электрички Рижского направления / МЦД-2"
+  "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "route": {
-  "distanceKm": 49.0,
-  "durationH": 6.5,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 10.9,
+  "durationH": 1.7,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "memorial-shtyki-rubezh",
-   "name": "Последний рубеж",
+   "id": "memorial-shtyki-bratskaya",
+   "name": "Братская могила у шоссе",
    "coords": {
-    "lat": 55.975,
-    "lon": 37.25
+    "lat": 55.9705,
+    "lon": 37.299
    },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
    "guideStory": [
-    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
-    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Следующая точка маршрута — «Мемориал «Штыки»»."
+    "В 1950-х годах погибших в боях за Москву перезахоронили в одну большую братскую могилу — на месте воронки от взрыва вдоль Ленинградского шоссе.",
+    "Позже над ней поднялся мемориал «Штыки», посвящённый воинам, погибшим здесь в ноябре — декабре 1941 года."
    ],
    "facts": [
     {
-     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
-     "verified": true
-    },
-    {
-     "text": "Шли бои за деревню Матушкино.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
-     "verified": true
-    },
-    {
-     "text": "Матушкино освобождено 8 декабря 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
+     "text": "В 1950-х годах погибших перезахоронили в братскую могилу на месте воронки.",
      "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": false
+     "verified": true
     },
     {
-     "text": "Ленинградское шоссе — плотное движение.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": false
+     "text": "Мемориал посвящён воинам, погибшим в ноябре — декабре 1941 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
     }
-   ],
-   "warnings": [
-    "Ленинградское шоссе: не выезжать на проезжую часть."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "memorial-shtyki-memorial",
@@ -102,7 +85,7 @@
    "guideStory": [
     "Мемориал стоит на 40-м километре Ленинградского шоссе. Строительство шло с 1973 года, монумент установлен 24 июня 1974 года.",
     "В братской могиле похоронены останки 760 бойцов, найденных во время строительства Зеленограда. Памятник — объект культурного наследия регионального значения.",
-    "Подходим пешком по безопасной дорожке и минуту молчим. Следующая точка маршрута — «Церковь Рождества Христова в Черкизове»."
+    "Подходим пешком по безопасной дорожке и минуту молчим. Следующая точка маршрута — «Минута памяти»."
    ],
    "facts": [
     {
@@ -136,390 +119,139 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "memorial-shtyki-tserkov",
-   "name": "Церковь Рождества Христова в Черкизове",
+   "id": "memorial-shtyki-pamyat",
+   "name": "Минута памяти",
    "coords": {
-    "lat": 55.93,
-    "lon": 37.36
+    "lat": 55.9702,
+    "lon": 37.3005
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "visitMinutes": 10,
    "guideStory": [
-    "Церковь Рождества Христова в Черкизове находится в Молжаниновском районе Москвы; её также называют храмом в Новоподрезкове.",
-    "Датировку и историю храма мы в найденных источниках не нашли — фотографии собраны на sobory.ru. Следующая точка маршрута — «Поля у Шереметьева»."
+    "Мемориал называют «Штыки» — по форме монумента, напоминающего штыки винтовок.",
+    "К монументу приносят цветы в памятные даты обороны Москвы.",
+    "Здесь маршрут заканчивается; на автобус до Зеленограда или Москвы садимся на ближайшей остановке."
    ],
    "facts": [
     {
-     "text": "Церковь Рождества Христова в Черкизове — в Молжаниновском районе.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
-    },
-    {
-     "text": "Храм также называют храмом в Новоподрезкове.",
-     "sourceUrl": "https://sobory.ru/photo/453558",
-     "verified": true
-    },
-    {
-     "text": "Датировка храма не найдена.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
+     "text": "Название «Штыки» связано с формой монумента.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
      "verified": false
     },
     {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
+     "text": "Мемориал описан в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    },
+    {
+     "text": "Мемориал описан на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
+     "verified": true
+    },
+    {
+     "text": "Традиция возложения цветов — по наблюдению составителя.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
      "verified": false
     },
     {
-     "text": "Район относится к Северному округу.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
+     "text": "Координаты остановки приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": false
     }
-   ],
-   "warnings": [
-    "Действующий храм."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "memorial-shtyki-polya",
-   "name": "Поля у Шереметьева",
+   "id": "memorial-shtyki-avtory",
+   "name": "Комплекс 1974 года",
    "coords": {
-    "lat": 55.938,
-    "lon": 37.38
+    "lat": 55.971,
+    "lon": 37.301
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Мемориал строили с 1973 года по 24 июня 1974 года по проекту архитекторов И. А. Покровского и Ю. А. Свердловского, скульпторы — А. Г. Штейман и Е. А. Штейман-Деревянко.",
+    "Комплекс — объект культурного наследия регионального значения; стоит у второго въезда в Зеленоград, на 40-м километре."
+   ],
+   "facts": [
+    {
+     "text": "Мемориал строился с 1973 года по 24 июня 1974 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    },
+    {
+     "text": "Архитекторы — И. А. Покровский и Ю. А. Свердловский.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    },
+    {
+     "text": "Мемориал стоит на 40-м километре у второго въезда в Зеленоград.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Shtyki_Memorial",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "memorial-shtyki-rubezh",
+   "name": "Последний рубеж",
+   "coords": {
+    "lat": 55.975,
+    "lon": 37.25
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "По краю района — поля и перелески, над которыми заходят на посадку самолёты.",
-    "Это редкое место в Москве, где огромный город выглядит как настоящая деревня.",
-    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Следующая точка маршрута — «Мемориал «Противотанковые ежи»»."
+    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
+    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Финиш — Станция «Фирсановская»: Электрички Ленинградского направления / МЦД-3."
    ],
    "facts": [
     {
-     "text": "Над районом заходят на посадку самолёты.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
+     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
     },
     {
-     "text": "Описание ландшафта — наблюдение составителя.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
+     "text": "Шли бои за деревню Матушкино.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
     },
     {
-     "text": "Район находится на севере Москвы.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
+     "text": "Матушкино освобождено 8 декабря 1941 года.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
      "verified": true
     },
     {
      "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
      "verified": false
     },
     {
-     "text": "Новая Москва описана в Рувики.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "memorial-shtyki-ezhi",
-   "name": "Мемориал «Противотанковые ежи»",
-   "coords": {
-    "lat": 55.902,
-    "lon": 37.425
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Монумент «Ежи» открыли 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой. Он стоит на 23-м километре Ленинградского шоссе.",
-    "Три стальных противотанковых ежа высотой до 6 метров, по данным путеводителей, сделаны из балок, предназначавшихся для Дворца Советов. У подножия — каменный подиум с картой обороны столицы."
-   ],
-   "facts": [
-    {
-     "text": "Монумент «Ежи» открыт 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой.",
-     "sourceUrl": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/",
-     "verified": true
-    },
-    {
-     "text": "Мемориал стоит на 23-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi",
-     "verified": true
-    },
-    {
-     "text": "Высота ежей — около 6 метров; у подножия подиум с картой обороны столицы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Ежи изготовили из стальных балок, предназначавшихся для Дворца Советов.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
+     "text": "Ленинградское шоссе — плотное движение.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
      "verified": false
-    },
-    {
-     "text": "Местные источники называют это место последним рубежом, до которого дошёл враг; другие отмечают, что боёв здесь не было.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Khimki_War_Memorial",
-     "verified": false
-    },
-    {
-     "text": "Годовщину установки монумента ежегодно отмечают в Химках.",
-     "sourceUrl": "https://360.ru/news/mosobl/godovschinu-ustanovki-monumenta-protivotankovye-ezhi-otmetili-v-himkah/",
-     "verified": true
     }
    ],
    "warnings": [
-    "Мемориал у оживлённого шоссе: подходим пешком по безопасной дорожке."
+    "Ленинградское шоссе: не выезжать на проезжую часть."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "memorial-shtyki-gorod",
-   "name": "Центр Химок",
-   "coords": {
-    "lat": 55.889,
-    "lon": 37.44
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Химки путеводители описывают как город обороны Москвы, авиации, космоса и канала имени Москвы — все эти слои здесь переплетены.",
-    "В городе и рядом немало памятников; главный — у Ленинградского шоссе, на месте рубежа обороны 1941 года."
-   ],
-   "facts": [
-    {
-     "text": "Химки связаны с обороной Москвы, авиацией, космосом и каналом имени Москвы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": true
-    },
-    {
-     "text": "Путеводитель Путевка.ком предлагает маршрут по главным достопримечательностям Химок.",
-     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
-     "verified": true
-    },
-    {
-     "text": "Список достопримечательностей Химок ведёт командировка.ру.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/khimki/",
-     "verified": true
-    },
-    {
-     "text": "Год получения статуса города в найденных источниках не указан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": false
-    },
-    {
-     "text": "Химки граничат с Москвой.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "memorial-shtyki-skhodnya",
-   "name": "Долина Сходни",
-   "coords": {
-    "lat": 55.87,
-    "lon": 37.405
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "По одной из версий, название Путилково связано с древним торговым путём по речке Сходне.",
-    "Первое письменное упоминание Путилкова — 1576 год, описание границ Спас-Тушинской монастырской вотчины. Тушино с его историей Смуты — совсем рядом, ниже по Сходне."
-   ],
-   "facts": [
-    {
-     "text": "Название по одной версии связано с древним торговым путём по Сходне.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Первое письменное упоминание — 1576 год, при описании границ Спас-Тушинской вотчины.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сходня течёт к Тушину.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково расположено у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Версия о торговом пути не подтверждена документами.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "memorial-shtyki-staroe",
-   "name": "Бывшая деревенская часть",
-   "coords": {
-    "lat": 55.863,
-    "lon": 37.395
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "От старой деревни почти ничего не осталось: на её месте выросли многоэтажки, и сохранилось ли что-то от старой застройки, мы не проверяли.",
-    "И всё же Путилково живёт под деревенским именем, напоминая о временах, когда здесь были избы, а не микрорайоны.",
-    "Маршрут Путилкова завершён — короткий, но любопытный: от записи 1576 года до одного из крупнейших «негородов» страны."
-   ],
-   "facts": [
-    {
-     "text": "Путилково выросло из деревни, упомянутой в 1576 году.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сегодня это крупный населённый пункт у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сохранность старой застройки мы не проверяли.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково входит в городской округ Красногорск.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Понятие «деревня» в России определяется статусом, а не размером.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "memorial-shtyki-usadba",
-   "name": "Усадьба Знаменское-Губайлово",
-   "coords": {
-    "lat": 55.83,
-    "lon": 37.33
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Усадьба Знаменское-Губайлово изначально принадлежала Волынским, а затем перешла князьям Долгоруковым-Крымским.",
-    "РИАМО писало, что здесь планировали открыть краеведческий музей в формате экспериментариума и музей дачной жизни, а в другой статье — о «масонских балах» и «сосне Бальмонта» в усадьбе символистов. Нынешний статус проектов мы не проверяли."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба принадлежала Волынским, затем Долгоруковым-Крымским.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": true
-    },
-    {
-     "text": "В усадьбе планировали музей дачной жизни и экспериментариум.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
-     "verified": true
-    },
-    {
-     "text": "РИАМО писало о «сосне Бальмонта» и усадьбе символистов.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/masonskie-baly-i-sosna-balmonta-kakie-tajny-skryvaet-usadba-simvolistov-v-krasnogorske-xl/",
-     "verified": true
-    },
-    {
-     "text": "Текущий статус музейных проектов не проверен.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты усадьбы приблизительные.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "memorial-shtyki-muzey",
-   "name": "Музей немецких антифашистов",
-   "coords": {
-    "lat": 55.825,
-    "lon": 37.315
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Мемориальный музей немецких антифашистов находится на улице Народного Ополчения, 15. Он рассказывает об антифашистском движении немцев в годы войны.",
-    "В коллекции — немецкие знаки и награды, листовки антифашистских организаций, газеты и униформа. По данным справочника, музей ежегодно принимает более 8000 посетителей."
-   ],
-   "facts": [
-    {
-     "text": "Музей находится на ул. Народного Ополчения, 15.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": true
-    },
-    {
-     "text": "В коллекции — знаки, награды, листовки, газеты и униформа.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": true
-    },
-    {
-     "text": "Музей принимает более 8000 посетителей в год.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": false
-    },
-    {
-     "text": "Музей — филиал Музея Победы.",
-     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -527,8 +259,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Блюда у этого маршрута нет. Предлагаем тихий привал после мемориала. Это выбор составителя.",
   "story": [
-   "Маршрут о памяти, поэтому «вкус места» — пауза.",
-   "Перекусить можно в Зеленограде. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Маршрут о памяти, поэтому «вкус места» — пауза. Перекусить можно в Зеленограде. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -556,131 +287,95 @@
    "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
   },
   {
-   "title": "Церковь в Черкизове — sobory.ru",
-   "url": "https://sobory.ru/photo/11000"
+   "title": "Источник: en.wikipedia.org",
+   "url": "https://en.wikipedia.org/wiki/Shtyki_Memorial"
   },
   {
-   "title": "Монумент «Ежи» — culture.ru",
-   "url": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi"
+   "title": "Источник: 1plus1.gppc.ru",
+   "url": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf"
   },
   {
-   "title": "Мемориал «Ежи» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/"
-  },
-  {
-   "title": "Химки — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/"
-  },
-  {
-   "title": "Путилково — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/cities/putilkovo/"
-  },
-  {
-   "title": "Деревня — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F"
-  },
-  {
-   "title": "История Красногорска — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
-  },
-  {
-   "title": "Музей немецких антифашистов — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
-  },
-  {
-   "title": "Знаменское-Губайлово — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
+   "title": "Источник: mos.ru",
+   "url": "https://www.mos.ru/moi-raion/matushkino/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.16638,
-     55.98
+     37.243883,
+     55.9622
     ],
     [
-     37.167133,
-     55.978428
+     37.244635,
+     55.960628
     ],
     [
-     37.310153,
-     55.823428
+     37.246691,
+     55.959477
     ],
     [
-     37.312201,
-     55.822277
+     37.2495,
+     55.959056
     ],
     [
-     37.331202,
-     55.815277
-    ],
-    [
-     37.334,
-     55.814856
-    ],
-    [
-     37.336798,
-     55.815277
-    ],
-    [
-     37.338846,
-     55.816428
-    ],
-    [
-     37.444855,
-     55.887428
-    ],
-    [
-     37.445606,
-     55.889
-    ],
-    [
-     37.444855,
-     55.890572
-    ],
-    [
-     37.429857,
-     55.903572
-    ],
-    [
-     37.384861,
-     55.939572
-    ],
-    [
-     37.382807,
-     55.940723
+     37.252309,
+     55.959477
     ],
     [
      37.302809,
-     55.972723
+     55.967277
     ],
     [
-     37.3,
-     55.973144
+     37.303309,
+     55.967477
+    ],
+    [
+     37.305366,
+     55.968628
+    ],
+    [
+     37.305866,
+     55.969428
+    ],
+    [
+     37.306618,
+     55.971
+    ],
+    [
+     37.305866,
+     55.972572
+    ],
+    [
+     37.303809,
+     55.973723
+    ],
+    [
+     37.301,
+     55.974144
     ],
     [
      37.25,
      55.978144
     ],
     [
-     37.172,
-     55.983144
+     37.247191,
+     55.977723
     ],
     [
-     37.16919,
-     55.982723
+     37.245134,
+     55.976572
     ],
     [
-     37.167133,
-     55.981572
+     37.244381,
+     55.975
     ],
     [
-     37.16638,
-     55.98
+     37.243883,
+     55.9622
     ]
    ]
   ]

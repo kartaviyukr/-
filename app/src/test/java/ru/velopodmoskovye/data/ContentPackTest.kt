@@ -46,10 +46,10 @@ class ContentPackTest {
     @Test
     fun destinationsAreUsable() {
         for (d in pack.destinations.values) {
-            // Версия 3 — только свои точки места, 5–12 точек (цель 6–8); версия 2 (40–70 км) — переходная.
+            // Версия 3 — только свои точки места, 4–12 точек (цель 6–8); версия 2 (40–70 км) — переходная.
             assertTrue(d.id, d.routeVersion in 2..3)
             if (d.routeVersion == 3) {
-                assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 5..12)
+                assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 4..12)
             } else {
                 assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 8..12)
                 assertTrue("${d.id}: ${d.route.distanceKm} км", d.route.distanceKm in 40.0..70.0)

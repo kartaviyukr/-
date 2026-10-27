@@ -13,33 +13,33 @@
   "Молжаниновский район — самый «сельский» район Москвы на севере, у Шереметьева. В его черте сохранились деревни, в том числе Новосёлки и Черкизово.",
   "Главный памятник — церковь Рождества Христова в Черкизове (её также называют храмом в Новоподрезкове).",
   "Подробной истории этих деревень мы в открытых источниках не нашли и ничего не придумываем. Маршрут — тихая прогулка по московской «деревне» к храму.",
-  "Свои места маршрута: «Церковь Рождества Христова в Черкизове», «Деревенские улицы», «Поля у Шереметьева». По пути маршрут заходит и к соседям: Химки и мемориал «Ежи» — «Мемориал «Противотанковые ежи»», «Центр Химок»; Путилково — «Долина Сходни», «Бывшая деревенская часть»; Красногорск — «Усадьба Знаменское-Губайлово», «Музей немецких антифашистов»; Архангельское — «Большой дворец»; Немчиновка — «Место захоронения Малевича».",
-  "Маршрут линейный, около 49 км и 11 точек. Финиш — Платформа «Немчиновка» (Электрички Белорусского направления / МЦД-1), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Церковь Рождества Христова в Черкизове», «Деревенские улицы», «Поля у Шереметьева», «Восемь деревень района». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 6 км: старт и финиш — Станция «Новоподрезково» (Электрички Ленинградского направления / МЦД-3). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Новоподрезково»",
   "coords": {
-   "lat": 55.935,
-   "lon": 37.35
+   "lat": 55.9352,
+   "lon": 37.3505
   },
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "endPoint": {
-  "name": "Платформа «Немчиновка»",
+  "name": "Станция «Новоподрезково»",
   "coords": {
-   "lat": 55.7135,
-   "lon": 37.3705
+   "lat": 55.9352,
+   "lon": 37.3505
   },
-  "transport": "Электрички Белорусского направления / МЦД-1"
+  "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "route": {
-  "distanceKm": 49.0,
-  "durationH": 7.1,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 5.8,
+  "durationH": 1.2,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -88,8 +88,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "molzhaninovo-novoselki-cherkizovo-derevni",
@@ -134,8 +134,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "molzhaninovo-novoselki-cherkizovo-polya",
@@ -149,7 +149,7 @@
    "guideStory": [
     "По краю района — поля и перелески, над которыми заходят на посадку самолёты.",
     "Это редкое место в Москве, где огромный город выглядит как настоящая деревня.",
-    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Следующая точка маршрута — «Мемориал «Противотанковые ежи»»."
+    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Следующая точка маршрута — «Восемь деревень района»."
    ],
    "facts": [
     {
@@ -182,395 +182,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "molzhaninovo-novoselki-cherkizovo-ezhi",
-   "name": "Мемориал «Противотанковые ежи»",
+   "id": "molzhaninovo-novoselki-cherkizovo-derevni-2",
+   "name": "Восемь деревень района",
    "coords": {
-    "lat": 55.902,
-    "lon": 37.425
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Монумент «Ежи» открыли 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой. Он стоит на 23-м километре Ленинградского шоссе.",
-    "Три стальных противотанковых ежа высотой до 6 метров, по данным путеводителей, сделаны из балок, предназначавшихся для Дворца Советов. У подножия — каменный подиум с картой обороны столицы."
-   ],
-   "facts": [
-    {
-     "text": "Монумент «Ежи» открыт 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой.",
-     "sourceUrl": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/",
-     "verified": true
-    },
-    {
-     "text": "Мемориал стоит на 23-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi",
-     "verified": true
-    },
-    {
-     "text": "Высота ежей — около 6 метров; у подножия подиум с картой обороны столицы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Ежи изготовили из стальных балок, предназначавшихся для Дворца Советов.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
-     "verified": false
-    },
-    {
-     "text": "Местные источники называют это место последним рубежом, до которого дошёл враг; другие отмечают, что боёв здесь не было.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Khimki_War_Memorial",
-     "verified": false
-    },
-    {
-     "text": "Годовщину установки монумента ежегодно отмечают в Химках.",
-     "sourceUrl": "https://360.ru/news/mosobl/godovschinu-ustanovki-monumenta-protivotankovye-ezhi-otmetili-v-himkah/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориал у оживлённого шоссе: подходим пешком по безопасной дорожке."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo-gorod",
-   "name": "Центр Химок",
-   "coords": {
-    "lat": 55.889,
-    "lon": 37.44
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Химки путеводители описывают как город обороны Москвы, авиации, космоса и канала имени Москвы — все эти слои здесь переплетены.",
-    "В городе и рядом немало памятников; главный — у Ленинградского шоссе, на месте рубежа обороны 1941 года."
-   ],
-   "facts": [
-    {
-     "text": "Химки связаны с обороной Москвы, авиацией, космосом и каналом имени Москвы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": true
-    },
-    {
-     "text": "Путеводитель Путевка.ком предлагает маршрут по главным достопримечательностям Химок.",
-     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
-     "verified": true
-    },
-    {
-     "text": "Список достопримечательностей Химок ведёт командировка.ру.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/khimki/",
-     "verified": true
-    },
-    {
-     "text": "Год получения статуса города в найденных источниках не указан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": false
-    },
-    {
-     "text": "Химки граничат с Москвой.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo-skhodnya",
-   "name": "Долина Сходни",
-   "coords": {
-    "lat": 55.87,
-    "lon": 37.405
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "По одной из версий, название Путилково связано с древним торговым путём по речке Сходне.",
-    "Первое письменное упоминание Путилкова — 1576 год, описание границ Спас-Тушинской монастырской вотчины. Тушино с его историей Смуты — совсем рядом, ниже по Сходне."
-   ],
-   "facts": [
-    {
-     "text": "Название по одной версии связано с древним торговым путём по Сходне.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Первое письменное упоминание — 1576 год, при описании границ Спас-Тушинской вотчины.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сходня течёт к Тушину.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково расположено у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Версия о торговом пути не подтверждена документами.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo-staroe",
-   "name": "Бывшая деревенская часть",
-   "coords": {
-    "lat": 55.863,
-    "lon": 37.395
+    "lat": 55.938,
+    "lon": 37.365
    },
    "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "От старой деревни почти ничего не осталось: на её месте выросли многоэтажки, и сохранилось ли что-то от старой застройки, мы не проверяли.",
-    "И всё же Путилково живёт под деревенским именем, напоминая о временах, когда здесь были избы, а не микрорайоны.",
-    "Маршрут Путилкова завершён — короткий, но любопытный: от записи 1576 года до одного из крупнейших «негородов» страны."
+    "В Молжаниновский район входят восточная часть посёлка Новоподрезково и восемь деревень: Бурцево, Верескино, Филино, Новодмитровка, Новосёлки, Молжаниновка, Мелькисарово, Черкизово.",
+    "Это самый малонаселённый район Москвы — около 10 тысяч жителей; для прилетающих в Шереметьево он первый ориентир столицы."
    ],
    "facts": [
     {
-     "text": "Путилково выросло из деревни, упомянутой в 1576 году.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "text": "В район входят Новоподрезково и восемь деревень.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/molzhaninovskiy/?onsite_tag=moi_raion",
      "verified": true
     },
     {
-     "text": "Сегодня это крупный населённый пункт у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сохранность старой застройки мы не проверяли.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково входит в городской округ Красногорск.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Понятие «деревня» в России определяется статусом, а не размером.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F",
+     "text": "Молжаниновский — самый маленький по населению район Москвы, около 10 тысяч жителей.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/molzhaninovskiy/?onsite_tag=moi_raion",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo-usadba",
-   "name": "Усадьба Знаменское-Губайлово",
-   "coords": {
-    "lat": 55.83,
-    "lon": 37.33
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Усадьба Знаменское-Губайлово изначально принадлежала Волынским, а затем перешла князьям Долгоруковым-Крымским.",
-    "РИАМО писало, что здесь планировали открыть краеведческий музей в формате экспериментариума и музей дачной жизни, а в другой статье — о «масонских балах» и «сосне Бальмонта» в усадьбе символистов. Нынешний статус проектов мы не проверяли."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба принадлежала Волынским, затем Долгоруковым-Крымским.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": true
-    },
-    {
-     "text": "В усадьбе планировали музей дачной жизни и экспериментариум.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
-     "verified": true
-    },
-    {
-     "text": "РИАМО писало о «сосне Бальмонта» и усадьбе символистов.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/masonskie-baly-i-sosna-balmonta-kakie-tajny-skryvaet-usadba-simvolistov-v-krasnogorske-xl/",
-     "verified": true
-    },
-    {
-     "text": "Текущий статус музейных проектов не проверен.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты усадьбы приблизительные.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo-muzey",
-   "name": "Музей немецких антифашистов",
-   "coords": {
-    "lat": 55.825,
-    "lon": 37.315
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Мемориальный музей немецких антифашистов находится на улице Народного Ополчения, 15. Он рассказывает об антифашистском движении немцев в годы войны.",
-    "В коллекции — немецкие знаки и награды, листовки антифашистских организаций, газеты и униформа. По данным справочника, музей ежегодно принимает более 8000 посетителей."
-   ],
-   "facts": [
-    {
-     "text": "Музей находится на ул. Народного Ополчения, 15.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": true
-    },
-    {
-     "text": "В коллекции — знаки, награды, листовки, газеты и униформа.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": true
-    },
-    {
-     "text": "Музей принимает более 8000 посетителей в год.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": false
-    },
-    {
-     "text": "Музей — филиал Музея Победы.",
-     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo-dvorets",
-   "name": "Большой дворец",
-   "coords": {
-    "lat": 55.785,
-    "lon": 37.284
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
-   "guideStory": [
-    "В 1810 году Архангельское купил князь Николай Борисович Юсупов — коллекционер и вельможа. Он превратил усадьбу в музей своей эпохи: по одному источнику, в его коллекции было более 540 полотен западноевропейских живописцев и десятки мраморных скульптур.",
-    "После революции имение национализировали, и уже в 1919 году здесь открылся государственный музей. Послевоенную реставрацию вели по сохранившимся фотографиям и архивам.",
-    "Музей платный; часы работы и правила прохода с велосипедом уточняйте у входа."
-   ],
-   "facts": [
-    {
-     "text": "Усадьбу в 1810 году купил князь Николай Юсупов.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
-     "verified": true
-    },
-    {
-     "text": "В коллекции Юсупова было более 540 полотен и десятки скульптур.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
-     "verified": false
-    },
-    {
-     "text": "Юсуповы владели усадьбой с 1810 по 1917 год.",
-     "sourceUrl": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe",
-     "verified": true
-    },
-    {
-     "text": "Государственный музей открылся в 1919 году.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
-     "verified": true
-    },
-    {
-     "text": "Архангельское называют «подмосковным Версалем».",
-     "sourceUrl": "https://www.kommersant.ru/gallery/4094761",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "molzhaninovo-novoselki-cherkizovo-malevich",
-   "name": "Место захоронения Малевича",
-   "coords": {
-    "lat": 55.723,
-    "lon": 37.357
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Малевич завещал похоронить себя под дубом в Немчиновке. 21 мая 1935 года урну опустили в землю, над могилой поставили деревянный куб с чёрным квадратом работы Суетина.",
-    "В годы войны могилу разрушили, поле распахали. Точное место нашли энтузиасты, в том числе внучатый племянник художника Станислав Богданов, с помощью геодезических исследований и георадаров.",
-    "На месте захоронения установили закладную плиту будущего памятника — мраморный чёрный квадрат размером с картину из Третьяковской галереи. Состояние памятного места сейчас мы не проверяли."
-   ],
-   "facts": [
-    {
-     "text": "21 мая 1935 года урну с прахом Малевича опустили в землю в Немчиновке.",
-     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
-     "verified": true
-    },
-    {
-     "text": "Над могилой установили деревянный куб работы ученика Суетина с чёрным квадратом.",
-     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
-     "verified": true
-    },
-    {
-     "text": "Могила была уничтожена в годы войны, поле распахали.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
-     "verified": true
-    },
-    {
-     "text": "Место нашли с помощью геодезических исследований и георадаров.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
-     "verified": true
-    },
-    {
-     "text": "Установлена закладная плита — мраморный чёрный квадрат размером с картину в Третьяковке.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
-     "verified": true
-    },
-    {
-     "text": "Памятник планировали установить в Ромашкове; текущее состояние не проверено.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/pamyatnik-hudozhniku-kazimiru-malevichu-planiruyut-ustanovit-v-odintsove-xl/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 110
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -578,8 +222,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Молжанинова нет. Тематическая замена — простой деревенский пикник. Это выбор составителя.",
   "story": [
-   "Молжаниново — настоящая деревня внутри мегаполиса.",
-   "Возьмите еду с собой. Адреса, где купить, ниже — проверенные отмечены отдельно. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Молжаниново — настоящая деревня внутри мегаполиса. Возьмите еду с собой. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -603,115 +246,63 @@
    "url": "https://sobory.ru/photo/11000"
   },
   {
-   "title": "Монумент «Ежи» — culture.ru",
-   "url": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/453558"
   },
   {
-   "title": "Мемориал «Ежи» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/"
+   "title": "Источник: ru.ruwiki.ru",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0"
   },
   {
-   "title": "Химки — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/"
-  },
-  {
-   "title": "Путилково — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/cities/putilkovo/"
-  },
-  {
-   "title": "Деревня — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F"
-  },
-  {
-   "title": "История Красногорска — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
-  },
-  {
-   "title": "Музей немецких антифашистов — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
-  },
-  {
-   "title": "Знаменское-Губайлово — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
-  },
-  {
-   "title": "Архангельское — 360",
-   "url": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/"
-  },
-  {
-   "title": "Архангельское — tonkosti.ru",
-   "url": "https://tonkosti.ru/Архангельское"
-  },
-  {
-   "title": "Музей-усадьба — Tripster",
-   "url": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe"
-  },
-  {
-   "title": "Немчиновка и Малевич — КП",
-   "url": "https://www.kp.ru/daily/26307.4/3185386/"
-  },
-  {
-   "title": "Малевич — Новая газета",
-   "url": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda"
-  },
-  {
-   "title": "Стародачная Немчиновка — Мир квартир",
-   "url": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/"
+   "title": "Источник: mos.ru",
+   "url": "https://www.mos.ru/moi-raion/molzhaninovskiy/?onsite_tag=moi_raion"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.278409,
-     55.785
+     37.344887,
+     55.9352
     ],
     [
-     37.279158,
-     55.783428
+     37.345639,
+     55.933628
     ],
     [
-     37.352165,
-     55.721428
+     37.347693,
+     55.932477
     ],
     [
-     37.365667,
-     55.711928
+     37.357194,
+     55.927277
     ],
     [
-     37.367709,
-     55.710777
+     37.36,
+     55.926856
     ],
     [
-     37.3705,
-     55.710356
+     37.362806,
+     55.927277
     ],
     [
-     37.373291,
-     55.710777
+     37.372806,
+     55.929277
     ],
     [
-     37.375333,
-     55.711928
+     37.374861,
+     55.930428
     ],
     [
-     37.376081,
-     55.7135
+     37.384861,
+     55.936428
     ],
     [
-     37.445606,
-     55.889
-    ],
-    [
-     37.444855,
-     55.890572
-    ],
-    [
-     37.429857,
-     55.903572
+     37.385614,
+     55.938
     ],
     [
      37.384861,
@@ -726,24 +317,24 @@
      55.941144
     ],
     [
-     37.35,
-     55.938144
+     37.365,
+     55.941144
     ],
     [
-     37.347193,
-     55.937723
+     37.362193,
+     55.940723
     ],
     [
-     37.345139,
-     55.936572
+     37.347693,
+     55.937923
     ],
     [
-     37.344387,
-     55.935
+     37.345639,
+     55.936772
     ],
     [
-     37.278409,
-     55.785
+     37.344887,
+     55.9352
     ]
    ]
   ]
