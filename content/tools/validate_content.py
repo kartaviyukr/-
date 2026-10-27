@@ -110,17 +110,20 @@ def polygon(obj, key, where):
 CENTERS = {}  # id места → (центр, имя), заполняется из spiral.json
 KREMLIN_PT = (55.7520, 37.6175)
 OKRUGS = {"tsao", "sao", "svao", "vao", "yuvao", "yuao", "yuzao", "zao", "szao"}
+# Точки, которые в черте своего города, хотя центр соседнего места ближе (Голутвин — в Коломне, Бобренев — за рекой).
+OWN_DESPITE_NEIGHBOUR = {"kolomna-sliyanie", "kolomna-staro-golutvin"}
+STOP_POINTS = []  # (id места, имя точки, координаты) всех маршрутов версии 3 — для проверки пересечений
 
 
 def foreign_place(did, pt):
-    """Имя другого места спирали, к которому точка явно ближе, чем к своему (допуск 4 км)."""
+    """Имя другого места спирали, к которому точка ближе, чем к своему (допуск 1 км, у округов Москвы — 3 км)."""
     okr = did in OKRUGS
     inside = min(CENTERS, key=lambda k: dist_km(pt, CENTERS[k][0])) in OKRUGS
     if okr != inside:
         return "внутри МКАД" if inside else "за МКАД"
     own = dist_km(pt, CENTERS[did][0])
     best = min(((dist_km(pt, c), n) for k, (c, n) in CENTERS.items() if k != did and (k in OKRUGS) == okr), default=None)
-    if best and own > best[0] + 4.0:
+    if best and own > best[0] + (3.0 if okr else 1.0):
         return best[1]
     return None
 
@@ -206,7 +209,9 @@ def check_destination(d, fname, spiral_ids):
         pt = point(s, "coords", sw)
         if pt and center and dist_km(pt, center) > (30 if v2 else 15):
             warn(sw, f"точка в {dist_km(pt, center):.1f} км от центра места")
-        if v3 and pt and did in CENTERS:
+        if v3 and pt:
+            STOP_POINTS.append((did, s.get("name"), pt))
+        if v3 and pt and did in CENTERS and sid not in OWN_DESPITE_NEIGHBOUR:
             other = foreign_place(did, pt)
             if other:
                 err(sw, f"точка «{s.get('name')}» ближе к месту «{other}», чем к своему — маршрут не должен заезжать к соседям")
@@ -317,6 +322,10 @@ def main():
             err("manifest.json", f"нет файла {f}")
             continue
         check_destination(json.load(open(path, encoding="utf-8")), f, linked)
+    for i, (a, an, ap) in enumerate(STOP_POINTS):
+        for b, bn, bp in STOP_POINTS[i + 1:]:
+            if a != b and dist_km(ap, bp) < 0.6:
+                err(f"{a}.json", f"точка «{an}» совпадает с точкой «{bn}» маршрута {b} — у каждого места свои точки")
     for did in linked:
         if did + ".json" not in files:
             err("spiral.json", f"destinationId {did} без файла в манифесте")
