@@ -13,8 +13,8 @@
   "Дорохово — посёлок Рузского округа в 86 км к западу от Москвы, у станции Белорусской дороги. До 2005 года он был посёлком городского типа.",
   "13 января жители отмечают День освобождения Дорохова от немецко-фашистских захватчиков. В 2016 году посёлок получил почётное звание «Населённый пункт воинской доблести».",
   "Историю станции и посёлка мы в найденных источниках не нашли подробно.",
-  "Свои места маршрута: «Память освобождения». По пути маршрут заходит и к соседям: Тучково — «Посёлок у станции»; Кубинка — «Аэродром Кубинка»; Парк «Патриот» — «Главный храм Вооружённых сил»; Калининец — «Тарасково»; Селятино — «Посёлок «Гидромонтажа»», «Институт Данилевского»; Апрелевка — «Город и ручей Прелый», «Завод грампластинок».",
-  "Маршрут линейный, около 70 км и 9 точек. Финиш — Станция «Апрелевка» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Дорохово», «Исток Зуёвки и Капанки», «Посёлок», «Память освобождения». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Станция «Дорохово» (Электрички Белорусского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Дорохово»",
@@ -25,24 +25,147 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Апрелевка»",
+  "name": "Станция «Дорохово»",
   "coords": {
-   "lat": 55.5452,
-   "lon": 37.0735
+   "lat": 55.5502,
+   "lon": 36.3605
   },
-  "transport": "Электрички Киевского направления / МЦД-4"
+  "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.1,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.1,
+  "durationH": 0.7,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "dorokhovo-stantsiya",
+   "name": "Станция Дорохово",
+   "coords": {
+    "lat": 55.55,
+    "lon": 36.36
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Дорохово — посёлок у одноимённой станции Белорусской дороги, в 86 км к западу от Москвы. До 2005 года — посёлок городского типа.",
+    "От станции ходят автобусы до Рузы и окрестных деревень. Следующая точка маршрута — «Исток Зуёвки и Капанки»."
+   ],
+   "facts": [
+    {
+     "text": "Дорохово — в 86 км к западу от Москвы.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "До 2005 года — посёлок городского типа.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "От станции ходят автобусы до Рузы.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Дорохово — в Рузском округе.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "dorokhovo-istoki",
+   "name": "Исток Зуёвки и Капанки",
+   "coords": {
+    "lat": 55.5478,
+    "lon": 36.3548
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "У Дорохова берут начало две речки, текущие в разные стороны, — Зуёвка и Капанка.",
+    "В 2016 году посёлку присвоили звание «Населённый пункт воинской доблести». Следующая точка маршрута — «Посёлок». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Дорохове исток рек Зуёвки и Капанки, текущих в разные стороны.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "В 2016 году — звание «Населённый пункт воинской доблести».",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "dorokhovo-posyolok",
+   "name": "Посёлок",
+   "coords": {
+    "lat": 55.551,
+    "lon": 36.362
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Дорохово — тихий посёлок на западе области. Историю его основания мы в найденных источниках не нашли.",
+    "Отсюда спираль уходит дальше на запад — к Можайску и Бородину. Следующая точка маршрута — «Память освобождения». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "История основания не найдена.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Можайск — западнее Дорохова.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": false
+    },
+    {
+     "text": "Дорохово описано на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
   {
    "id": "dorokhovo-memorial",
    "name": "Память освобождения",
@@ -54,7 +177,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "13 января жители Рузского округа чтят память защитников в День освобождения Дорохова.",
-    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести». Следующая точка маршрута — «Посёлок у станции»."
+    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести». Финиш — Станция «Дорохово»: Электрички Белорусского направления."
    ],
    "facts": [
     {
@@ -86,383 +209,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "dorokhovo-posyolok",
-   "name": "Посёлок у станции",
-   "coords": {
-    "lat": 55.599,
-    "lon": 36.472
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Тучково — посёлок у одноимённой станции Белорусской дороги. Историю станции мы в найденных источниках не нашли.",
-    "Отсюда начинаются «рузские просторы» — дальше на север Руза и Рузское водохранилище. Следующая точка маршрута — «Аэродром Кубинка»."
-   ],
-   "facts": [
-    {
-     "text": "Тучково — посёлок у станции.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
-     "verified": true
-    },
-    {
-     "text": "История станции не найдена.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
-     "verified": false
-    },
-    {
-     "text": "Экскурсии «Рузские просторы» включают Тучково.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
-     "verified": false
-    },
-    {
-     "text": "Руза — к северу от Тучкова.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "dorokhovo-aerodrom",
-   "name": "Аэродром Кубинка",
-   "coords": {
-    "lat": 55.61,
-    "lon": 36.65
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Аэродром открылся в 1935 году примерно в 5 км к северо-западу от города. С 1938 года полки испытывали здесь новые истребители — Як-1 и ЛаГГ-3.",
-    "После 1945 года здесь стояли фронтовые истребительные дивизии; 324-я в ноябре 1950 года отправилась на Корейскую войну. В 1993 году сюда перевели управление 16-й воздушной армии из Германии.",
-    "Военный объект: смотрим издалека, ничего не снимаем у КПП. Следующая точка маршрута — «Небо «Витязей» и «Стрижей»»."
-   ],
-   "facts": [
-    {
-     "text": "Аэродром открылся в 1935 году.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "С 1938 года здесь испытывали Як-1 и ЛаГГ-3.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "324-я дивизия в ноябре 1950 года отправилась в Корею.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "В 1993 году сюда перевели управление 16-й воздушной армии.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": true
-    },
-    {
-     "text": "Аэродром описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kubinka_(air_base)",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Военный объект: не фотографировать."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "dorokhovo-khram",
-   "name": "Главный храм Вооружённых сил",
-   "coords": {
-    "lat": 55.565,
-    "lon": 36.82
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
-   "guideStory": [
-    "Главный храм Вооружённых сил — одна из ключевых точек парка. Рядом — музейный комплекс «Дорога памяти».",
-    "Дату освящения храма мы в найденных источниках не сверили и поэтому не приводим.",
-    "Билеты в музейный комплекс и режим посещения храма уточняйте на официальном сайте парка."
-   ],
-   "facts": [
-    {
-     "text": "Главный храм ВС РФ и комплекс «Дорога памяти» — главные объекты парка.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": true
-    },
-    {
-     "text": "Парк расположен на 43-м километре Минского шоссе.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": true
-    },
-    {
-     "text": "Парк открыт в 2015 году.",
-     "sourceUrl": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/",
-     "verified": true
-    },
-    {
-     "text": "Дата освящения храма нами не сверена.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": false
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "dorokhovo-taraskovo",
-   "name": "Тарасково",
-   "coords": {
-    "lat": 55.49,
-    "lon": 36.9
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
-    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
-    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок «Гидромонтажа»»."
-   ],
-   "facts": [
-    {
-     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    },
-    {
-     "text": "Посёлок связан с военным городком.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    },
-    {
-     "text": "Дата основания не найдена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Калининец находится недалеко от станции Голицыно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "dorokhovo-gidromontazh",
-   "name": "Посёлок «Гидромонтажа»",
-   "coords": {
-    "lat": 55.515,
-    "lon": 36.975
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
-    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Посёлок отмечал 66-й день рождения.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Подробности о работе треста не найдены.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Селятино находится в Наро-Фоминском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "dorokhovo-institut",
-   "name": "Институт Данилевского",
-   "coords": {
-    "lat": 55.516,
-    "lon": 36.982
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В Селятине расположен Институт русско-славянских исследований имени Н. Я. Данилевского — философа и естествоиспытателя XIX века, автора книги «Россия и Европа».",
-    "У городского поселения Селятино есть флаг, составленный на основе его герба."
-   ],
-   "facts": [
-    {
-     "text": "В Селятине расположен Институт русско-славянских исследований имени Данилевского.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Данилевский — автор книги «Россия и Европа».",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Селятина составлен на основе герба.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Координаты института приблизительные.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Селятино — посёлок на Киевском направлении.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "dorokhovo-gorod",
-   "name": "Город и ручей Прелый",
-   "coords": {
-    "lat": 55.545,
-    "lon": 37.075
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
-    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Следующая точка маршрута — «Завод грампластинок»."
-   ],
-   "facts": [
-    {
-     "text": "Апрелевка основана в 1899 году, город — с 1961 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Город расположен в 28 км к юго-западу от Москвы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Версия о ручье Прелом — одна из версий.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "В Апрелевке есть генеральские дачи.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/04/01/kult-gramplas/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "dorokhovo-zavod",
-   "name": "Завод грампластинок",
-   "coords": {
-    "lat": 55.55,
-    "lon": 37.07
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
-    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
-    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
-   ],
-   "facts": [
-    {
-     "text": "Завод основан в 1910 году Б. Моллем.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
-     "verified": true
-    },
-    {
-     "text": "Первые пластинки выпущены в декабре 1910 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "С 1964 года завод входил в фирму «Мелодия».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -497,141 +245,77 @@
   {
    "title": "День освобождения — РИАМО",
    "url": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/"
-  },
-  {
-   "title": "Генералы Тучковы — Проза",
-   "url": "https://proza.ru/2021/07/05/291"
-  },
-  {
-   "title": "Аллея Славы — 360",
-   "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
-  },
-  {
-   "title": "Авиабаза Кубинка — migflug",
-   "url": "https://migflug.com/ru/авиабазы/кубинка/"
-  },
-  {
-   "title": "Kubinka air base — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
-  },
-  {
-   "title": "Парк «Патриот» — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
-  },
-  {
-   "title": "Парк «Патриот» — Яндекс Путешествия",
-   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
-  },
-  {
-   "title": "Kalininets — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kalininets"
-  },
-  {
-   "title": "Tamanskaya Division — Military Wiki",
-   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
-  },
-  {
-   "title": "Selyatino — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Selyatino"
-  },
-  {
-   "title": "Селятино 66 лет — Рамблер",
-   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
-  },
-  {
-   "title": "Апрелевский завод грампластинок — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
-  },
-  {
-   "title": "Апрелевский завод — БРЭ",
-   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
-  },
-  {
-   "title": "Апрелевка — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.354442,
-     55.55
+     36.349242,
+     55.5478
     ],
     [
-     36.355187,
-     55.548428
+     36.349987,
+     55.546228
     ],
     [
-     36.357221,
-     55.547277
+     36.352021,
+     55.545077
     ],
     [
-     36.36,
-     55.546856
+     36.3548,
+     55.544656
     ],
     [
-     36.9,
-     55.486856
+     36.357579,
+     55.545077
     ],
     [
-     36.902775,
-     55.487277
+     36.367779,
+     55.549277
     ],
     [
-     37.077779,
-     55.542277
+     36.369814,
+     55.550428
     ],
     [
-     37.079813,
-     55.543428
+     36.370558,
+     55.552
     ],
     [
-     37.080557,
-     55.545
+     36.369814,
+     55.553572
     ],
     [
-     37.079813,
-     55.546572
+     36.367779,
+     55.554723
     ],
     [
-     37.074813,
-     55.551572
+     36.365,
+     55.555144
     ],
     [
-     37.072779,
-     55.552723
+     36.362221,
+     55.554723
     ],
     [
-     37.07,
-     55.553144
+     36.359221,
+     55.553723
     ],
     [
-     36.65,
-     55.613144
+     36.352021,
+     55.550523
     ],
     [
-     36.472,
-     55.602144
+     36.349987,
+     55.549372
     ],
     [
-     36.469218,
-     55.601723
-    ],
-    [
-     36.357221,
-     55.552723
-    ],
-    [
-     36.355187,
-     55.551572
-    ],
-    [
-     36.354442,
-     55.55
+     36.349242,
+     55.5478
     ]
    ]
   ]

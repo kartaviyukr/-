@@ -12,82 +12,36 @@
  "intro": [
   "Андреевка — посёлок Солнечногорского округа рядом с Зеленоградом. Сегодня здесь строятся новые жилые кварталы.",
   "Подробную историю посёлка мы в открытых источниках не нашли — честно оставляем этот раздел пустым, чтобы ничего не придумывать.",
-  "Свои места маршрута: «Лес между Зеленоградом и Андреевкой», «Посёлок Андреевка». По пути маршрут заходит и к соседям: Зеленоград — «Центр Зеленограда», «МИЭТ»; Менделеево — «Институт времени», «Посёлок метрологов»; Середниково — «Главный дом»; Мемориал «Штыки» — «Последний рубеж», «Мемориал «Штыки»»; Молжаниново, Новосёлки, Черкизово — «Церковь Рождества Христова в Черкизове», «Деревенские улицы».",
-  "Маршрут линейный, около 46 км и 11 точек. Финиш — Станция «Новоподрезково» (Электрички Ленинградского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Посёлок Андреевка», «Храм Спаса Всемилостивого», «Старое село Спас-Андреевское», «Лес между Зеленоградом и Андреевкой». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 5 км: старт и финиш — Андреевка, центр (До ближайшей станции — Станция «Крюково», около 3 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Крюково»",
+  "name": "Андреевка, центр",
   "coords": {
-   "lat": 55.98,
-   "lon": 37.172
+   "lat": 56.0,
+   "lon": 37.15
   },
-  "transport": "Электрички Ленинградского направления / МЦД-3"
+  "transport": "До ближайшей станции — Станция «Крюково», около 3 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Новоподрезково»",
+  "name": "Андреевка, центр",
   "coords": {
-   "lat": 55.9352,
-   "lon": 37.3505
+   "lat": 56.0,
+   "lon": 37.15
   },
-  "transport": "Электрички Ленинградского направления / МЦД-3"
+  "transport": "До ближайшей станции — Станция «Крюково», около 3 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 46.0,
-  "durationH": 6.2,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 4.8,
+  "durationH": 0.9,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "andreevka-les",
-   "name": "Лес между Зеленоградом и Андреевкой",
-   "coords": {
-    "lat": 55.99,
-    "lon": 37.16
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "От станции Крюково едем на запад, к Андреевке. Дорога идёт через лес и новые районы Зеленограда, мимо жилых кварталов.",
-    "Тропы мы на месте не проверяли — держитесь асфальта и накатанных дорожек. Следующая точка маршрута — «Посёлок Андреевка»."
-   ],
-   "facts": [
-    {
-     "text": "Андреевка — рядом с Зеленоградом.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "Тропы не проверены.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Андреевка — в Солнечногорском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "andreevka-posyolok",
    "name": "Посёлок Андреевка",
@@ -99,7 +53,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Андреевка — рабочий посёлок Солнечногорского округа; статус его закреплён областным законом 2013 года.",
-    "Сегодня здесь строятся жилые комплексы — например, «Андреевский квартал». Следующая точка маршрута — «Центр Зеленограда». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Сегодня здесь строятся жилые комплексы — например, «Андреевский квартал». Следующая точка маршрута — «Храм Спаса Всемилостивого»."
    ],
    "facts": [
     {
@@ -131,432 +85,121 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "andreevka-tsentr",
-   "name": "Центр Зеленограда",
+   "id": "andreevka-spas",
+   "name": "Храм Спаса Всемилостивого",
+   "coords": {
+    "lat": 56.0022,
+    "lon": 37.1478
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Храм Спаса Всемилостивого возвели в 1676 году и освятили в 1678-м; шатровую колокольню пристроили в 1864 году, боковые приделы — в 1902-м.",
+    "Церковь на этом месте упоминается уже в 1589 году. Следующая точка маршрута — «Старое село Спас-Андреевское»."
+   ],
+   "facts": [
+    {
+     "text": "Храм построен в 1676 году и освящён в 1678 году.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Колокольня — 1864 год, приделы — 1902 год.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Первые упоминания — 1589 год.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "andreevka-spas-andreevskoe",
+   "name": "Старое село Спас-Андреевское",
+   "coords": {
+    "lat": 56.0036,
+    "lon": 37.1455
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Название места менялось: пустошь, затем село Спасское, Спас-Андреевское и, наконец, Андреевское.",
+    "Точное место старого села не обозначено — это ориентир на улицах посёлка рядом с храмом. Следующая точка маршрута — «Лес между Зеленоградом и Андреевкой»."
+   ],
+   "facts": [
+    {
+     "text": "Названия: пустошь, Спасское, Спас-Андреевское, Андреевское.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Храм относится к Солнечногорскому округу.",
+     "sourceUrl": "https://sobory.ru/photo/17289",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "andreevka-les",
+   "name": "Лес между Зеленоградом и Андреевкой",
    "coords": {
     "lat": 55.99,
-    "lon": 37.205
+    "lon": 37.16
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "3 марта 1958 года Совет Министров СССР принял постановление о новом городе у станции Крюково. Фактически строить начали в 1960 году.",
-    "Сначала рассчитывали на 60 тысяч жителей, в 1963 году утвердили второй генплан — на 80 тысяч. Сегодня в Зеленограде живёт более 250 тысяч человек."
+    "От станции Крюково едем на запад, к Андреевке. Дорога идёт через лес и новые районы Зеленограда, мимо жилых кварталов.",
+    "Тропы мы на месте не проверяли — держитесь асфальта и накатанных дорожек. Финиш — Андреевка, центр: До ближайшей станции — Станция «Крюково», около 3 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
    ],
    "facts": [
     {
-     "text": "Постановление о строительстве города принято 3 марта 1958 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
+     "text": "Андреевка — рядом с Зеленоградом.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
      "verified": true
     },
     {
-     "text": "Строительство начато в 1960 году.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "В 1963 году утверждён генплан на 80 тысяч жителей.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "Население Зеленограда — более 250 тысяч.",
-     "sourceUrl": "https://teletype.in/@apfound/P1uXyLJPkH4",
-     "verified": true
-    },
-    {
-     "text": "Зеленоград — около 25 км от МКАД.",
-     "sourceUrl": "https://teletype.in/@apfound/P1uXyLJPkH4",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "andreevka-miet",
-   "name": "МИЭТ",
-   "coords": {
-    "lat": 55.984,
-    "lon": 37.21
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "МИЭТ — опорный вуз Зеленограда. Сам институт пишет, что Зеленоград задумывался как город будущего с технопарком и высокотехнологичными производствами.",
-    "Вокруг вуза выросли десятки компаний — по данным ОЭЗ «Технополис Москва», более 50, в основном его спин-оффы."
-   ],
-   "facts": [
-    {
-     "text": "Зеленоград задумывался как город будущего с технопарком.",
-     "sourceUrl": "https://eng.miet.ru/page/10374",
-     "verified": true
-    },
-    {
-     "text": "Вокруг МИЭТ работает более 50 компаний.",
-     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
-     "verified": true
-    },
-    {
-     "text": "МИЭТ — опорный вуз Зеленограда.",
-     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
-     "verified": true
-    },
-    {
-     "text": "Координаты МИЭТ приблизительные.",
-     "sourceUrl": "https://eng.miet.ru/page/10374",
-     "verified": false
-    },
-    {
-     "text": "Зеленоград описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Zelenograd",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "andreevka-institut",
-   "name": "Институт времени",
-   "coords": {
-    "lat": 56.035,
-    "lon": 37.23
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Всероссийский научно-исследовательский институт физико-технических и радиотехнических измерений (ВНИИФТРИ) Росстандарта называют расположенным в Солнечногорске; РИАМО писало о нём как об «институте времени».",
-    "Что институт находится именно в Менделееве — по нашим источникам вывод косвенный, поэтому этот факт помечен как непроверенный."
-   ],
-   "facts": [
-    {
-     "text": "ВНИИФТРИ Росстандарта — метрологический институт в Солнечногорском округе.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
-     "verified": true
-    },
-    {
-     "text": "РИАМО называло институт в Солнечногорском округе «институтом времени».",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/",
-     "verified": true
-    },
-    {
-     "text": "Расположение института именно в Менделееве не проверено.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Территория института закрыта.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
+     "text": "Тропы не проверены.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
      "verified": false
     },
     {
      "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
      "verified": false
-    }
-   ],
-   "warnings": [
-    "Режимная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "andreevka-posyolok-2",
-   "name": "Посёлок метрологов",
-   "coords": {
-    "lat": 56.04,
-    "lon": 37.225
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Менделеево — посёлок городского типа в составе Солнечногорского округа, на 40-м километре Ленинградского шоссе. Статус он получил в 1965 году; по данным 2021 года, здесь жило около 6300 человек.",
-    "Дмитрий Менделеев был учёным-хранителем Депо образцовых мер и весов, которое стало Главной палатой мер и весов; в 1917 году в Палате работала в том числе лаборатория времени. Связь этой истории с названием посёлка мы в источниках не нашли."
-   ],
-   "facts": [
+    },
     {
-     "text": "Менделеево — посёлок городского типа Солнечногорского округа.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "text": "Андреевка — в Солнечногорском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
      "verified": true
     },
     {
-     "text": "Посёлок расположен на 40-м километре Ленинградского шоссе, в верховьях Клязьмы.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Статус пгт — с 1965 года; население в 2021 году — 6317 человек.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Менделеев был учёным-хранителем Депо образцовых мер и весов.",
-     "sourceUrl": "https://museum.vniim.ru/files/175-collect.pdf",
-     "verified": true
-    },
-    {
-     "text": "Происхождение названия посёлка в найденных источниках не объяснено.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "andreevka-dom",
-   "name": "Главный дом",
-   "coords": {
-    "lat": 55.98,
-    "lon": 37.24
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "Имение перешло к Столыпиным, родне бабушки Лермонтова; по одному источнику, они владели им с 1825 по 1869 год. Юный Лермонтов провёл у родственников всего два лета, но именно они определяют судьбу усадьбы.",
-    "В 1990-х имение получил Лермонтовский фонд, созданный потомком поэта. Сегодня в доме — экспозиции, а усадьба принимает экскурсии."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба принадлежала Столыпиным, родне бабушки Лермонтова.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": true
-    },
-    {
-     "text": "Столыпины владели имением с 1825 по 1869 год — по одному источнику.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": false
-    },
-    {
-     "text": "Лермонтов провёл здесь два лета.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": true
-    },
-    {
-     "text": "В 1990-х имение получил Лермонтовский фонд.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": true
-    },
-    {
-     "text": "Потомок Лермонтова рассказывал о наследии поэта.",
-     "sourceUrl": "https://www.interfax.ru/russia/780569",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "andreevka-rubezh",
-   "name": "Последний рубеж",
-   "coords": {
-    "lat": 55.975,
-    "lon": 37.25
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
-    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Следующая точка маршрута — «Мемориал «Штыки»»."
-   ],
-   "facts": [
-    {
-     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
-     "verified": true
-    },
-    {
-     "text": "Шли бои за деревню Матушкино.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
-     "verified": true
-    },
-    {
-     "text": "Матушкино освобождено 8 декабря 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": false
-    },
-    {
-     "text": "Ленинградское шоссе — плотное движение.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Ленинградское шоссе: не выезжать на проезжую часть."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "andreevka-memorial",
-   "name": "Мемориал «Штыки»",
-   "coords": {
-    "lat": 55.97,
-    "lon": 37.3
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Мемориал стоит на 40-м километре Ленинградского шоссе. Строительство шло с 1973 года, монумент установлен 24 июня 1974 года.",
-    "В братской могиле похоронены останки 760 бойцов, найденных во время строительства Зеленограда. Памятник — объект культурного наследия регионального значения.",
-    "Подходим пешком по безопасной дорожке и минуту молчим. Следующая точка маршрута — «Церковь Рождества Христова в Черкизове»."
-   ],
-   "facts": [
-    {
-     "text": "Мемориал находится на 40-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": true
-    },
-    {
-     "text": "Монумент установлен 24 июня 1974 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": true
-    },
-    {
-     "text": "В братской могиле — останки 760 бойцов.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": false
-    },
-    {
-     "text": "Мемориал посвящён погибшим при обороне Москвы в 1941 году.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": true
-    },
-    {
-     "text": "Памятник — объект культурного наследия регионального значения.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориал: тишина и уважение."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "andreevka-tserkov",
-   "name": "Церковь Рождества Христова в Черкизове",
-   "coords": {
-    "lat": 55.93,
-    "lon": 37.36
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Церковь Рождества Христова в Черкизове находится в Молжаниновском районе Москвы; её также называют храмом в Новоподрезкове.",
-    "Датировку и историю храма мы в найденных источниках не нашли — фотографии собраны на sobory.ru. Следующая точка маршрута — «Деревенские улицы»."
-   ],
-   "facts": [
-    {
-     "text": "Церковь Рождества Христова в Черкизове — в Молжаниновском районе.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
-    },
-    {
-     "text": "Храм также называют храмом в Новоподрезкове.",
-     "sourceUrl": "https://sobory.ru/photo/453558",
-     "verified": true
-    },
-    {
-     "text": "Датировка храма не найдена.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Район относится к Северному округу.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "andreevka-derevni",
-   "name": "Деревенские улицы",
-   "coords": {
-    "lat": 55.932,
-    "lon": 37.37
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Молжаниново, Новосёлки и Черкизово — деревни, оказавшиеся в черте Москвы. Здесь частные дома и огороды соседствуют с аэропортом и трассами.",
-    "Историю деревень мы не нашли в открытых источниках; если знаете её — это хороший повод поговорить с местными."
-   ],
-   "facts": [
-    {
-     "text": "Деревни находятся в черте Москвы.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "История деревень в найденных источниках не раскрыта.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Район соседствует с аэропортом Шереметьево.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Москва расширялась в 2012 году за счёт Новой Москвы, но Молжаниново входило в неё раньше.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 110
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -564,8 +207,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Андреевки нет. Тематическая замена — перекус в лесу между Зеленоградом и посёлком. Это выбор составителя.",
   "story": [
-   "Андреевка — тихий посёлок у леса рядом с Зеленоградом.",
-   "Возьмите еду из Зеленограда. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Андреевка — тихий посёлок у леса рядом с Зеленоградом. Возьмите еду из Зеленограда. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -589,127 +231,87 @@
    "url": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast"
   },
   {
-   "title": "Зеленоград — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/927481"
+   "title": "Источник: novostroy-m.ru",
+   "url": "https://www.novostroy-m.ru/baza/zhk_andreevskiy_kvartal"
   },
   {
-   "title": "Микрон — Skillbox",
-   "url": "https://skillbox.ru/media/code/mikron-navsegda-kak-i-dlya-chego-proizvodyat-mikroelektroniku-v-rossii/"
+   "title": "Источник: azbyka.ru",
+   "url": "https://azbyka.ru/palomnik/%D0%A1%D0%BF%D0%B0%D1%81%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0)"
   },
   {
-   "title": "МИЭТ",
-   "url": "https://eng.miet.ru/page/10374"
-  },
-  {
-   "title": "Менделеево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
-  },
-  {
-   "title": "Институт времени — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/"
-  },
-  {
-   "title": "Середниково — Афиша",
-   "url": "https://www.afisha.ru/msk/museum/serednikovo-7556/"
-  },
-  {
-   "title": "Усадьбы и храмы — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/activities/61262-usadby-i-hramy-moskovskogo-severa"
-  },
-  {
-   "title": "Штыки — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)"
-  },
-  {
-   "title": "Мемориал «Штыки» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
-  },
-  {
-   "title": "Церковь в Черкизове — sobory.ru",
-   "url": "https://sobory.ru/photo/11000"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/17289"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.144377,
-     56.0
+     37.139877,
+     56.0036
     ],
     [
-     37.145131,
-     55.998428
+     37.14063,
+     56.002028
     ],
     [
      37.155132,
      55.988428
     ],
     [
-     37.167133,
-     55.978428
+     37.157189,
+     55.987277
     ],
     [
-     37.16919,
-     55.977277
+     37.16,
+     55.986856
     ],
     [
-     37.357194,
-     55.927277
+     37.162811,
+     55.987277
     ],
     [
-     37.36,
-     55.926856
+     37.164868,
+     55.988428
     ],
     [
-     37.362806,
-     55.927277
+     37.165621,
+     55.99
     ],
     [
-     37.372806,
-     55.929277
+     37.164868,
+     55.991572
     ],
     [
-     37.374861,
-     55.930428
+     37.15267,
+     56.003772
     ],
     [
-     37.375613,
-     55.932
+     37.15037,
+     56.005172
     ],
     [
-     37.374861,
-     55.933572
+     37.148312,
+     56.006323
     ],
     [
-     37.229874,
-     56.041572
+     37.1455,
+     56.006744
     ],
     [
-     37.227814,
-     56.042723
+     37.142688,
+     56.006323
     ],
     [
-     37.225,
-     56.043144
+     37.14063,
+     56.005172
     ],
     [
-     37.222186,
-     56.042723
-    ],
-    [
-     37.147189,
-     56.002723
-    ],
-    [
-     37.145131,
-     56.001572
-    ],
-    [
-     37.144377,
-     56.0
+     37.139877,
+     56.0036
     ]
    ]
   ]

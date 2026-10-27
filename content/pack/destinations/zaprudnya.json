@@ -12,33 +12,33 @@
  "intro": [
   "Запрудня — посёлок Талдомского округа на севере Московской области. Подробную историю посёлка мы в открытых источниках не нашли и не придумываем.",
   "Талдомский муниципальный район 8 июня 2018 года преобразовали в Талдомский городской округ; Запрудня — один из его посёлков.",
-  "Свои места маршрута: «Посёлок Запрудня». По пути маршрут заходит и к соседям: Николо-Пешношский монастырь — «Преображенская церковь»; Дмитров — «Город князей»; Яхрома — «Суконная фабрика», «Шлюз № 3»; Деденево — «Спасо-Влахернский монастырь», «Легенда о хане Дедене»; Икша — «Посёлок Икша».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Икша» (Электрички Савёловского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Посёлок Запрудня», «Дворец культуры «Прогресс»», «Запруда на Куновке», «Берег канала имени Москвы», «Преображенский храм». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Запрудня, центр (До ближайшей станции — Станция «Вербилки», около 11 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Вербилки»",
+  "name": "Запрудня, центр",
   "coords": {
-   "lat": 56.53,
-   "lon": 37.6
+   "lat": 56.56,
+   "lon": 37.43
   },
-  "transport": "Электрички Савёловского направления"
+  "transport": "До ближайшей станции — Станция «Вербилки», около 11 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Икша»",
+  "name": "Запрудня, центр",
   "coords": {
-   "lat": 56.17,
-   "lon": 37.5
+   "lat": 56.56,
+   "lon": 37.43
   },
-  "transport": "Электрички Савёловского направления"
+  "transport": "До ближайшей станции — Станция «Вербилки», около 11 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.8,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 3.6,
+  "durationH": 0.9,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -53,7 +53,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Запрудня — рабочий посёлок. История его основания и промышленности в найденных источниках не раскрыта.",
-    "Талдомский край Moskvich Mag описывает как землю журавлей, фарфора из Вербилок и пришвинских пейзажей. Следующая точка маршрута — «Преображенская церковь»."
+    "Талдомский край Moskvich Mag описывает как землю журавлей, фарфора из Вербилок и пришвинских пейзажей. Следующая точка маршрута — «Дворец культуры «Прогресс»»."
    ],
    "facts": [
     {
@@ -85,334 +85,137 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "zaprudnya-progress",
+   "name": "Дворец культуры «Прогресс»",
+   "coords": {
+    "lat": 56.559,
+    "lon": 37.429
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Дворец культуры «Прогресс» вновь открыли после реконструкции 29 января 2017 года.",
+    "Рабочий посёлок образован в 1932 году из посёлка при стекольном заводе и сёл Запрудня и Гари. Следующая точка маршрута — «Запруда на Куновке». Формат остановки — «смотреть снаружи», заложите на неё около 5 минут."
+   ],
+   "facts": [
+    {
+     "text": "ДК «Прогресс» открыт после реконструкции 29 января 2017 года.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8F",
+     "verified": true
+    },
+    {
+     "text": "Посёлок образован в 1932 году.",
+     "sourceUrl": "https://savelrr.ru/poselenie-zaprudnya.html",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "zaprudnya-kunovka",
+   "name": "Запруда на Куновке",
+   "coords": {
+    "lat": 56.5565,
+    "lon": 37.4255
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Название Запрудная известно с XVIII века и, вероятно, идёт от небольшой запруды на речке Куновке.",
+    "Соседнее село Гари упоминается в писцовых книгах 1627 года как вотчина стольника Н. Ф. Леонтьева. Следующая точка маршрута — «Берег канала имени Москвы»."
+   ],
+   "facts": [
+    {
+     "text": "Название, вероятно, происходит от запруды на Куновке.",
+     "sourceUrl": "https://savelrr.ru/poselenie-zaprudnya.html",
+     "verified": false
+    },
+    {
+     "text": "Село Гари упоминается в писцовых книгах 1627 года.",
+     "sourceUrl": "https://savelrr.ru/poselenie-zaprudnya.html",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "zaprudnya-kanal",
+   "name": "Берег канала имени Москвы",
+   "coords": {
+    "lat": 56.5605,
+    "lon": 37.4395
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Центральная часть посёлка лежит на правом берегу канала имени Москвы, между трассой Москва — Дубна и старой Талдомской дорогой.",
+    "Посёлок сложился из бывших деревень Запрудное, Гари и Хохлово. Следующая точка маршрута — «Преображенский храм»."
+   ],
+   "facts": [
+    {
+     "text": "Центр посёлка — на правом берегу канала имени Москвы.",
+     "sourceUrl": "https://savelrr.ru/poselenie-zaprudnya.html",
+     "verified": true
+    },
+    {
+     "text": "Посёлок вырос из деревень Запрудное, Гари и Хохлово.",
+     "sourceUrl": "https://savelrr.ru/poselenie-zaprudnya.html",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "zaprudnya-preobrazhenie",
-   "name": "Преображенская церковь",
+   "name": "Преображенский храм",
    "coords": {
-    "lat": 56.4102,
-    "lon": 37.3905
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В монастыре стоит церковь Преображения Господня; в колокольне — церковь Мефодия Пешношского. Фотографии собраны на sobory.ru.",
-    "Название «Пешношский», по преданию, связано с тем, что Мефодий носил брёвна для обители на себе через реку."
-   ],
-   "facts": [
-    {
-     "text": "В монастыре есть церковь Преображения Господня.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
-     "verified": true
-    },
-    {
-     "text": "В колокольне — церковь Мефодия Пешношского.",
-     "sourceUrl": "https://sobory.ru/photo/99987",
-     "verified": true
-    },
-    {
-     "text": "Происхождение названия — по преданию.",
-     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
-     "verified": false
-    },
-    {
-     "text": "Датировку церквей мы не сверяли.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "zaprudnya-knyazya",
-   "name": "Город князей",
-   "coords": {
-    "lat": 56.345,
-    "lon": 37.52
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По одному источнику, в 1301 году в Дмитрове прошёл съезд четырёх князей. В 1364 году город вошёл в состав Московского княжества.",
-    "Tripster называет Дмитров «ровесником столицы» — Москва впервые упомянута в 1147 году, всего на семь лет раньше предания о Дмитрове."
-   ],
-   "facts": [
-    {
-     "text": "В 1301 году в Дмитрове прошёл съезд четырёх князей — по одному источнику.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    },
-    {
-     "text": "В 1364 году Дмитров вошёл в Московское княжество.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": true
-    },
-    {
-     "text": "Дмитров называют ровесником столицы.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": true
-    },
-    {
-     "text": "Москва впервые упомянута в 1147 году.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "zaprudnya-fabrika",
-   "name": "Суконная фабрика",
-   "coords": {
-    "lat": 56.29,
-    "lon": 37.48
+    "lat": 56.5652,
+    "lon": 37.4335
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 10,
    "guideStory": [
-    "По одной версии, история Яхромы как города начинается в 1841 году, когда здесь основали суконную фабрику. Вскоре её купил и модернизировал московский купец Иван Лямин.",
-    "Поселения на этих землях существовали и раньше, так что дата условна."
+    "Каменный Преображенский храм с колокольней построили в Гарях в 1870 году; в советское время его закрыли, а в 1952 году разобрали.",
+    "Новый храм по проекту старого начали строить в 2003 году; в нём хранится резная фигура святителя Николая из прежней церкви."
    ],
    "facts": [
     {
-     "text": "В 1841 году основана суконная фабрика — по одной версии, начало истории города.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Фабрику купил и модернизировал купец Иван Лямин.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
+     "text": "Каменный храм построен в 1870 году.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%97%D0%B0%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8F)",
      "verified": true
     },
     {
-     "text": "Поселения здесь существовали и раньше.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
+     "text": "В 1952 году храм был разрушен.",
+     "sourceUrl": "https://drevo-info.ru/articles/13676167",
      "verified": true
     },
     {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Состояние фабричных корпусов не проверено.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "zaprudnya-shlyuz",
-   "name": "Шлюз № 3",
-   "coords": {
-    "lat": 56.287,
-    "lon": 37.49
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Шлюз № 3 канала имени Москвы — однокамерный судоходный шлюз в Яхроме. Его строили с 1932 по 1936 год, а официально приняли в эксплуатацию 15 июля 1937 года.",
-    "Вместе со шлюзом № 4 в Деденеве он образует Яхромский гидроузел. Следующая точка маршрута — «Спасо-Влахернский монастырь»."
-   ],
-   "facts": [
-    {
-     "text": "Шлюз № 3 — однокамерный судоходный шлюз в Яхроме.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Строили с 1932 по 1936 год.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Принят в эксплуатацию 15 июля 1937 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Вместе со шлюзом № 4 образует Яхромский гидроузел.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Координаты шлюза приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Гидросооружение: не заходить на охраняемую территорию."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "zaprudnya-monastyr",
-   "name": "Спасо-Влахернский монастырь",
-   "coords": {
-    "lat": 56.245,
-    "lon": 37.515
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "С XVIII века Деденевом владели Головины; здесь была их усадьба. С этим родом связывают основание Спасо-Влахернского женского монастыря.",
-    "Монастырь действующий: вход в скромной одежде, женщинам — в платке, фото — с разрешения. Следующая точка маршрута — «Легенда о хане Дедене»."
-   ],
-   "facts": [
-    {
-     "text": "С XVIII века село принадлежало Головиным, здесь была их усадьба.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Основателями монастыря называют представителей рода Головиных.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Спасо-Влахернский монастырь находится в Деденеве.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": true
-    },
-    {
-     "text": "Монастырь действующий, женский.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    },
-    {
-     "text": "Координаты монастыря приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "zaprudnya-legenda",
-   "name": "Легенда о хане Дедене",
-   "coords": {
-    "lat": 56.242,
-    "lon": 37.52
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "По преданию, посёлок назван в честь ордынского хана Деденя, убитого в этих местах в XIII веке; один источник называет 1295 год. Это легенда, а не документ.",
-    "Первое письменное упоминание села относится к 1504 году — с этой даты Деденево и отсчитывает свою историю."
-   ],
-   "facts": [
-    {
-     "text": "По преданию, название связано с ханом Деденем, убитым здесь в XIII веке.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Предание датирует гибель хана 1295 годом.",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": false
-    },
-    {
-     "text": "Первое упоминание села — 1504 год.",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": true
-    },
-    {
-     "text": "Ближайшая станция — «Турист».",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Флаг поселения Деденево утверждён 5 октября 2006 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%94%D0%B5%D0%B4%D0%B5%D0%BD%D0%B5%D0%B2%D0%BE",
+     "text": "Строительство нового храма началось в 2003 году.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%97%D0%B0%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8F)",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "zaprudnya-posyolok-2",
-   "name": "Посёлок Икша",
-   "coords": {
-    "lat": 56.17,
-    "lon": 37.5
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Икша — рабочий посёлок; до 2018 года он был центром городского поселения Икша. Краеведы, собравшие сборник по местной истории, пишут, что окрестные деревни упоминаются в межевой грамоте Ивана III дмитровскому князю Юрию Ивановичу.",
-    "Река Икша в Подмосковье — правый приток Волгуши. Происхождение названия посёлка мы в источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "Икша — рабочий посёлок Дмитровского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Городское поселение Икша упразднено в 2018 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Окрестные деревни упоминаются в грамотах 1496 и 1504 годов.",
-     "sourceUrl": "https://books.yandex.ru/books/AAmnUscU/read-online",
-     "verified": true
-    },
-    {
-     "text": "Река Икша — правый приток Волгуши.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "В округе определили задачи по развитию посёлка.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-dmitrovskom-okruge-opredelili-zadachi-po-razvitiju-poselka-iksha/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -444,119 +247,95 @@
    "url": "https://en.wikipedia.org/wiki/Zaprudnya"
   },
   {
-   "title": "Мефодий Пешношский — Азбука веры",
-   "url": "https://azbyka.ru/days/sv-mefodij-peshnoshskij"
+   "title": "Источник: moskvichmag.ru",
+   "url": "https://moskvichmag.ru/?p=475266"
   },
   {
-   "title": "Описание монастыря — Калайдович",
-   "url": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/"
+   "title": "Источник: ru.wikipedia.org",
+   "url": "https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8F"
   },
   {
-   "title": "Ровесник столицы — Tripster",
-   "url": "https://experience.tripster.ru/articles/dmitrov/"
+   "title": "Источник: savelrr.ru",
+   "url": "https://savelrr.ru/poselenie-zaprudnya.html"
   },
   {
-   "title": "История Дмитрова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/dmitrov/istoriia"
+   "title": "Источник: ru.wikipedia.org",
+   "url": "https://ru.wikipedia.org/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%97%D0%B0%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8F)"
   },
   {
-   "title": "Перемиловская высота — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0"
-  },
-  {
-   "title": "Шлюз № 3 — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963"
-  },
-  {
-   "title": "«Турист» хана Деденя — За рулём",
-   "url": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/"
-  },
-  {
-   "title": "Деденево — knls.net",
-   "url": "https://knls.net/?p=13068"
-  },
-  {
-   "title": "Шлюз № 6 — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)"
-  },
-  {
-   "title": "Шлюзы канала — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B"
+   "title": "Источник: drevo-info.ru",
+   "url": "https://drevo-info.ru/articles/13676167"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.384817,
-     56.4102
+     37.419795,
+     56.5565
     ],
     [
-     37.494353,
-     56.17
+     37.420559,
+     56.554928
     ],
     [
-     37.495109,
-     56.168428
+     37.422648,
+     56.553777
     ],
     [
-     37.497176,
-     56.167277
+     37.4255,
+     56.553356
     ],
     [
-     37.5,
-     56.166856
+     37.428352,
+     56.553777
     ],
     [
-     37.502824,
-     56.167277
+     37.442353,
+     56.557777
     ],
     [
-     37.504891,
-     56.168428
+     37.444441,
+     56.558928
     ],
     [
-     37.505647,
-     56.17
+     37.445206,
+     56.5605
     ],
     [
-     37.605701,
-     56.53
+     37.444441,
+     56.562072
     ],
     [
-     37.604937,
-     56.531572
+     37.438442,
+     56.566772
     ],
     [
-     37.60285,
-     56.532723
+     37.436353,
+     56.567923
     ],
     [
-     37.432853,
-     56.562723
+     37.4335,
+     56.568344
     ],
     [
-     37.43,
-     56.563144
+     37.430647,
+     56.567923
     ],
     [
-     37.427147,
-     56.562723
+     37.428558,
+     56.566772
     ],
     [
-     37.425059,
-     56.561572
+     37.420559,
+     56.558072
     ],
     [
-     37.424295,
-     56.56
-    ],
-    [
-     37.384817,
-     56.4102
+     37.419795,
+     56.5565
     ]
    ]
   ]
