@@ -13,224 +13,36 @@
   "Луцино — деревня к западу от Звенигорода, известная высокими берегами Москвы-реки. Это маршрут на природу: лес, долина реки и крутые склоны.",
   "Статус памятника природы и подробную историю деревни мы в найденных источниках не подтвердили и честно об этом говорим.",
   "Через южный микрорайон Звенигорода проходит Луцинское шоссе, ведущее к реке. Маршрут: Звенигород, шоссе и берег Москвы-реки.",
-  "Свои места маршрута: «Луцинское шоссе», «Деревня Луцино», «Высокий берег Москвы-реки». По пути маршрут заходит и к соседям: Звенигород — «Успенский собор на Городке», «Саввино-Сторожевский монастырь»; Кубинка — «Аэродром Кубинка», «Небо «Витязей» и «Стрижей»», «Вокзал Кубинка-1».",
-  "Маршрут линейный, около 42 км и 8 точек. Финиш — Станция «Кубинка-1» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Высокий берег Москвы-реки», «Никольский храм», «Деревня Луцино», «Часовня Всех Святых», «Городище железного века». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Луцино, центр (До ближайшей станции — Станция «Звенигород», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Звенигород»",
+  "name": "Луцино, центр",
   "coords": {
    "lat": 55.73,
-   "lon": 36.855
+   "lon": 36.73
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "До ближайшей станции — Станция «Звенигород», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Кубинка-1»",
+  "name": "Луцино, центр",
   "coords": {
-   "lat": 55.577,
-   "lon": 36.695
+   "lat": 55.73,
+   "lon": 36.73
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "До ближайшей станции — Станция «Звенигород», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 42.0,
-  "durationH": 5.6,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 2.3,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "lutsino-shosse",
-   "name": "Луцинское шоссе",
-   "coords": {
-    "lat": 55.715,
-    "lon": 36.84
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Луцинское шоссе проходит через южный микрорайон Звенигорода; от него до Москвы-реки — несколько сотен метров.",
-    "По шоссе выезжаем из города в сторону Луцина. Движение может быть плотным — держитесь обочины. Следующая точка маршрута — «Успенский собор на Городке»."
-   ],
-   "facts": [
-    {
-     "text": "Луцинское шоссе проходит через южный микрорайон Звенигорода.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": true
-    },
-    {
-     "text": "От шоссе до Москвы-реки несколько сотен метров.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": true
-    },
-    {
-     "text": "Звенигород описан в материале ЦИАН.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/",
-     "verified": true
-    },
-    {
-     "text": "Интенсивность движения не проверена.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "lutsino-sobor",
-   "name": "Успенский собор на Городке",
-   "coords": {
-    "lat": 55.7285,
-    "lon": 36.834
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Успенский собор датируют концом XIV века. Это один из немногих сохранившихся белокаменных храмов московской традиции.",
-    "В 1918 году во время реставрации в храме обнаружили три образа, приписываемых Андрею Рублёву: «Апостол Павел», «Архангел Михаил» и «Спас Вседержитель». Сегодня они в Третьяковской галерее."
-   ],
-   "facts": [
-    {
-     "text": "Успенский собор датируют концом XIV века.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Это один из немногих сохранившихся белокаменных храмов московской традиции.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В 1918 году в храме нашли три иконы, приписываемые Рублёву.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Звенигородский чин хранится в Третьяковской галерее.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Точную дату постройки собора мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "lutsino-monastyr",
-   "name": "Саввино-Сторожевский монастырь",
-   "coords": {
-    "lat": 55.728,
-    "lon": 36.815
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "Саввино-Сторожевский монастырь стоит на горе Сторожевской. Его основание связывают с преподобным Саввой Сторожевским около 1398 года — эту дату мы не нашли в проверенных источниках.",
-    "Рождественский собор монастыря построен в начале XV века и тоже связан с именем Рублёва. С 2016 года в нём идёт научная реставрация, храм в лесах."
-   ],
-   "facts": [
-    {
-     "text": "Рождественский собор монастыря построен в начале XV века.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Собор связывают с именем Рублёва.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "С 2016 года в соборе идёт научная реставрация.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Основание монастыря около 1398 года не подтверждено найденными источниками.",
-     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
-     "verified": false
-    },
-    {
-     "text": "360.ru советует, что посмотреть в Звенигороде на выходных.",
-     "sourceUrl": "https://360.ru/news/mosobl/chto-posmotret-na-vyhodnyh-v-zvenigorode/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "lutsino-derevnya",
-   "name": "Деревня Луцино",
-   "coords": {
-    "lat": 55.732,
-    "lon": 36.735
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Луцино — небольшая деревня Одинцовского округа. Её историю мы в найденных источниках не нашли.",
-    "Отсюда возвращаемся в Звенигород той же дорогой; если устали — можно поискать автобус до города. Следующая точка маршрута — «Высокий берег Москвы-реки»."
-   ],
-   "facts": [
-    {
-     "text": "Луцино — деревня Одинцовского округа.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
-    },
-    {
-     "text": "История деревни не найдена.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
-    },
-    {
-     "text": "Наличие автобуса не проверено.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": false
-    },
-    {
-     "text": "Координаты деревни приблизительные.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
-    },
-    {
-     "text": "Звенигород — ближайший город.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
   {
    "id": "lutsino-bereg",
    "name": "Высокий берег Москвы-реки",
@@ -242,7 +54,7 @@
    "visitMinutes": 30,
    "guideStory": [
     "У Луцина Москва-река течёт в глубокой долине с высокими берегами. Будьте осторожны у края — склоны крутые.",
-    "Жители окрестностей собирали подписи против застройки этих земель — значит, ценность места понимают и местные. Следующая точка маршрута — «Аэродром Кубинка»."
+    "Жители окрестностей собирали подписи против застройки этих земель — значит, ценность места понимают и местные. Следующая точка маршрута — «Никольский храм»."
    ],
    "facts": [
     {
@@ -277,149 +89,147 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "lutsino-aerodrom",
-   "name": "Аэродром Кубинка",
+   "id": "lutsino-nikolskiy",
+   "name": "Никольский храм",
    "coords": {
-    "lat": 55.61,
-    "lon": 36.65
+    "lat": 55.7312,
+    "lon": 36.7325
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "visitMinutes": 10,
    "guideStory": [
-    "Аэродром открылся в 1935 году примерно в 5 км к северо-западу от города. С 1938 года полки испытывали здесь новые истребители — Як-1 и ЛаГГ-3.",
-    "После 1945 года здесь стояли фронтовые истребительные дивизии; 324-я в ноябре 1950 года отправилась на Корейскую войну. В 1993 году сюда перевели управление 16-й воздушной армии из Германии.",
-    "Военный объект: смотрим издалека, ничего не снимаем у КПП. Следующая точка маршрута — «Небо «Витязей» и «Стрижей»»."
+    "Каменный Никольский храм Луцина построен в начале XIX века; деревянная церковь Николы упоминается ещё в 1558–1560 годах.",
+    "Луцино стоит на правом берегу Москвы-реки, примерно в 6 км к западу от Звенигорода; в документах 1537 года оно значится за Саввино-Сторожевским монастырём."
    ],
    "facts": [
     {
-     "text": "Аэродром открылся в 1935 году.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "text": "Каменный храм начала XIX века; деревянная церковь — с 1558–1560 годов.",
+     "sourceUrl": "https://sobory.ru/article/?object=04852",
      "verified": true
     },
     {
-     "text": "С 1938 года здесь испытывали Як-1 и ЛаГГ-3.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "324-я дивизия в ноябре 1950 года отправилась в Корею.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "В 1993 году сюда перевели управление 16-й воздушной армии.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": true
-    },
-    {
-     "text": "Аэродром описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kubinka_(air_base)",
+     "text": "В 1537 году село принадлежало Саввино-Сторожевскому монастырю.",
+     "sourceUrl": "https://culttourism.ru/moscow_region/zvenigorod/selo_lutsino.html",
      "verified": true
     }
    ],
-   "warnings": [
-    "Военный объект: не фотографировать."
-   ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "lutsino-vityazi",
-   "name": "Небо «Витязей» и «Стрижей»",
+   "id": "lutsino-derevnya",
+   "name": "Деревня Луцино",
    "coords": {
-    "lat": 55.6,
-    "lon": 36.67
+    "lat": 55.732,
+    "lon": 36.735
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "В Кубинке базируются пилотажные группы «Стрижи» и «Русские витязи». Если повезёт, в небе можно увидеть их тренировку.",
-    "Altapress писал о планах сделать из аэродрома бизнес-терминал — статус этих планов мы не проверяли. Следующая точка маршрута — «Вокзал Кубинка-1»."
+    "Луцино — небольшая деревня Одинцовского округа. Её историю мы в найденных источниках не нашли.",
+    "Отсюда возвращаемся в Звенигород той же дорогой; если устали — можно поискать автобус до города. Следующая точка маршрута — «Часовня Всех Святых»."
    ],
    "facts": [
     {
-     "text": "В Кубинке базируются «Стрижи» и «Русские витязи».",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": true
-    },
-    {
-     "text": "Планы бизнес-терминала — статус не проверен.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
+     "text": "Луцино — деревня Одинцовского округа.",
+     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
      "verified": false
     },
     {
-     "text": "Расписание тренировок не известно.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
+     "text": "История деревни не найдена.",
+     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
      "verified": false
     },
     {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
+     "text": "Наличие автобуса не проверено.",
+     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
      "verified": false
     },
     {
-     "text": "Аэродром — военный.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kubinka_(air_base)",
+     "text": "Координаты деревни приблизительные.",
+     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
+     "verified": false
+    },
+    {
+     "text": "Звенигород — ближайший город.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "lutsino-vokzal",
-   "name": "Вокзал Кубинка-1",
+   "id": "lutsino-vsekh-svyatykh",
+   "name": "Часовня Всех Святых",
    "coords": {
-    "lat": 55.577,
-    "lon": 36.695
+    "lat": 55.7326,
+    "lon": 36.7362
    },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 5,
    "guideStory": [
-    "В южной части города стоит здание вокзала у станции Кубинка-1. Историю станции мы в найденных источниках не нашли.",
-    "Кубинка — примерно в 60 км к западу от центра Москвы. Финиш — Станция «Кубинка-1»: Электрички Белорусского направления."
+    "Небольшую церковь-часовню Всех Святых на сельском кладбище построили в 2003 году взамен деревянной, разрушенной в XX веке.",
+    "Краеведы водят сюда маршрут «Луцино: дюны, мамонты и сбитень на меду» — по высокому берегу и к излучине реки."
    ],
    "facts": [
     {
-     "text": "У станции Кубинка-1 есть здание вокзала.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "Часовня Всех Святых построена в 2003 году.",
+     "sourceUrl": "https://vsehsvtlucino.cerkov.ru/",
      "verified": true
     },
     {
-     "text": "Кубинка — примерно в 60 км к западу от центра Москвы.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "История станции не найдена.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
-     "verified": false
-    },
-    {
-     "text": "Кубинка описана на travelto.ru.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "Краеведческий маршрут «Луцино: дюны, мамонты и сбитень на меду».",
+     "sourceUrl": "https://odin.ru/news/?id=87082",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "lutsino-gorodishche",
+   "name": "Городище железного века",
+   "coords": {
+    "lat": 55.7282,
+    "lon": 36.7398
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В дачном посёлке Академии наук рядом с Луцином есть городище железного века — первой половины I тысячелетия нашей эры; всерьёз его пока не раскапывали.",
+    "В 1930-х годах при раскопках здесь нашли остатки скелета мамонта. Финиш — Луцино, центр: До ближайшей станции — Станция «Звенигород», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с Луцином — городище первой половины I тысячелетия н. э.",
+     "sourceUrl": "https://culttourism.ru/moscow_region/zvenigorod/selo_lutsino.html",
+     "verified": true
+    },
+    {
+     "text": "В 1930-х годах найдены остатки скелета мамонта.",
+     "sourceUrl": "https://odin.ru/news/?id=87082",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -427,8 +237,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Луцина нет. Тематическая замена — пикник на высоком берегу Москвы-реки. Это выбор составителя.",
   "story": [
-   "Луцино — природный маршрут, и лучший «вкус места» здесь — вид на реку.",
-   "Возьмите еду и воду из Звенигорода. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Луцино — природный маршрут, и лучший «вкус места» здесь — вид на реку. Возьмите еду и воду из Звенигорода. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -452,91 +261,91 @@
    "url": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/"
   },
   {
-   "title": "Звенигород — booksite.ru",
-   "url": "https://booksite.ru/fulltext/1/001/008/044/951.htm"
+   "title": "Источник: change.org",
+   "url": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь"
   },
   {
-   "title": "Успенский собор — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/article/?object=04852"
   },
   {
-   "title": "Достопримечательности — Tripster",
-   "url": "https://experience.tripster.ru/experience/Zvenigorod/sights"
+   "title": "Источник: culttourism.ru",
+   "url": "https://culttourism.ru/moscow_region/zvenigorod/selo_lutsino.html"
   },
   {
-   "title": "Авиабаза Кубинка — migflug",
-   "url": "https://migflug.com/ru/авиабазы/кубинка/"
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer"
   },
   {
-   "title": "Kubinka air base — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
+   "title": "Источник: vsehsvtlucino.cerkov.ru",
+   "url": "https://vsehsvtlucino.cerkov.ru/"
+  },
+  {
+   "title": "Источник: odin.ru",
+   "url": "https://odin.ru/news/?id=87082"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.644433,
-     55.61
-    ],
-    [
-     36.645179,
-     55.608428
-    ],
-    [
-     36.690183,
-     55.575428
-    ],
-    [
-     36.692219,
-     55.574277
-    ],
-    [
-     36.695,
-     55.573856
-    ],
-    [
-     36.697781,
-     55.574277
-    ],
-    [
-     36.699817,
-     55.575428
-    ],
-    [
-     36.844834,
-     55.713428
-    ],
-    [
-     36.859836,
-     55.728428
-    ],
-    [
-     36.860584,
+     36.724416,
      55.73
     ],
     [
-     36.859836,
-     55.731572
+     36.725164,
+     55.728428
     ],
     [
-     36.857792,
-     55.732723
+     36.727208,
+     55.727277
     ],
     [
-     36.855,
-     55.733144
+     36.737008,
+     55.725477
     ],
     [
-     36.735,
-     55.735144
+     36.7398,
+     55.725056
     ],
     [
-     36.732208,
-     55.734723
+     36.742592,
+     55.725477
+    ],
+    [
+     36.744635,
+     55.726628
+    ],
+    [
+     36.745383,
+     55.7282
+    ],
+    [
+     36.744635,
+     55.729772
+    ],
+    [
+     36.741036,
+     55.734172
+    ],
+    [
+     36.738992,
+     55.735323
+    ],
+    [
+     36.7362,
+     55.735744
+    ],
+    [
+     36.733408,
+     55.735323
+    ],
+    [
+     36.729708,
+     55.733923
     ],
     [
      36.727208,
@@ -547,12 +356,8 @@
      55.731572
     ],
     [
-     36.645179,
-     55.611572
-    ],
-    [
-     36.644433,
-     55.61
+     36.724416,
+     55.73
     ]
    ]
   ]
