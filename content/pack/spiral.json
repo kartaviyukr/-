@@ -4007,7 +4007,7 @@
    "distanceFromKremlinKm": 202.1,
    "azimuthDeg": 12.2,
    "ring": 9,
-   "destinationId": null,
+   "destinationId": "uglich",
    "start": false,
    "insideMkad": false
   },
@@ -4025,7 +4025,7 @@
    "distanceFromKremlinKm": 231.8,
    "azimuthDeg": 12.3,
    "ring": 9,
-   "destinationId": null,
+   "destinationId": "myshkin",
    "start": false,
    "insideMkad": false
   },
@@ -4043,7 +4043,7 @@
    "distanceFromKremlinKm": 266.2,
    "azimuthDeg": 15.9,
    "ring": 9,
-   "destinationId": null,
+   "destinationId": "rybinsk",
    "start": false,
    "insideMkad": false
   },
@@ -4061,7 +4061,7 @@
    "distanceFromKremlinKm": 262.5,
    "azimuthDeg": 25.6,
    "ring": 9,
-   "destinationId": null,
+   "destinationId": "tutaev",
    "start": false,
    "insideMkad": false
   },
@@ -4079,7 +4079,7 @@
    "distanceFromKremlinKm": 249.9,
    "azimuthDeg": 32.5,
    "ring": 9,
-   "destinationId": null,
+   "destinationId": "yaroslavl",
    "start": false,
    "insideMkad": false
   }

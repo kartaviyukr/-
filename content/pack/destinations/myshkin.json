@@ -1,0 +1,452 @@
+{
+ "id": "myshkin",
+ "name": "Мышкин",
+ "settlementType": "город",
+ "mustHave": 2,
+ "regionId": "yaroslavskaya-oblast",
+ "distanceFromKremlinKm": 231.8,
+ "coords": {
+  "lat": 57.786,
+  "lon": 38.454
+ },
+ "intro": [
+  "Мышкин стал городом в 1777 году и получил герб с мышью; по легенде, мышь спасла князя от змеи. Купцы отправляли отсюда баржи в Петербург, и город сохранил купеческий облик.",
+  "Маршрут начинается с Никольского и Успенского соборов и Музея мыши, а затем идёт вверх по Волге в Углич: церковь Димитрия на Крови и палаты царевича в кремле, «Дивная» церковь Алексеевского монастыря, ГЭС со шлюзом и музей гидроэнергетики.",
+  "Около 50 км, финиш на автостанции Углича.",
+  "Дорога асфальтовая; переправу через Волгу у Мышкина проверьте заранее."
+ ],
+ "startPoint": {
+  "name": "Мышкин, автостанция",
+  "coords": {
+   "lat": 57.786,
+   "lon": 38.45
+  },
+  "transport": "Автобусы из Ярославля и Рыбинска"
+ },
+ "endPoint": {
+  "name": "Углич, автостанция",
+  "coords": {
+   "lat": 57.524,
+   "lon": 38.315
+  },
+  "transport": "Автобусы до Ярославля и Москвы"
+ },
+ "route": {
+  "distanceKm": 50.0,
+  "durationH": 8.0,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт.",
+  "seasonNotes": "С мая по сентябрь.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "myshkin-nikolsky",
+   "name": "Никольский собор",
+   "coords": {
+    "lat": 57.789,
+    "lon": 38.457
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Никольский собор 1766–1769 годов построен на средства купца Александра Березина; его называют старейшей сохранившейся каменной постройкой города.",
+    "Состояние храма, по отзывам, плохое — смотрим снаружи и бережно. Следующая точка маршрута — «Успенский собор»."
+   ],
+   "facts": [
+    {
+     "text": "Никольский собор построен в 1766–1769 годах на средства купца Березина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/%D0%A7%D1%82%D0%BE_%D0%BF%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C_%D0%B2_%D0%9C%D1%8B%D1%88%D0%BA%D0%B8%D0%BD%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Никольская церковь находится в полуразрушенном состоянии.",
+     "sourceUrl": "https://tonkosti.ru/otzyv/V-poiskah-hot-chego-nibud-krasivogo_—_ob-Uspenskom-sobore-goroda-Myshkin-32679206",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "myshkin-uspensky",
+   "name": "Успенский собор",
+   "coords": {
+    "lat": 57.788,
+    "lon": 38.455
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Успенский собор строили в 1805–1820 годах по проекту итальянца Иоганнеса Манфрини — на пожертвования горожан, больше всех дал купец Замяткин.",
+    "После революции собор закрыли, а на колокольне устроили водонапорную башню. Прихожанам храм вернули в 1992 году, в 2009-м его отреставрировали."
+   ],
+   "facts": [
+    {
+     "text": "Собор построен в 1805–1820 годах по проекту Иоганнеса Манфрини.",
+     "sourceUrl": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/%D0%A7%D1%82%D0%BE_%D0%BF%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C_%D0%B2_%D0%9C%D1%8B%D1%88%D0%BA%D0%B8%D0%BD%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Большую часть средств пожертвовал купец Замяткин.",
+     "sourceUrl": "https://tonkosti.ru/Успенский_собор_города_Мышкина",
+     "verified": true
+    },
+    {
+     "text": "Храм вернули прихожанам в 1992 году, в 2009 году отреставрировали.",
+     "sourceUrl": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/%D0%A7%D1%82%D0%BE_%D0%BF%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C_%D0%B2_%D0%9C%D1%8B%D1%88%D0%BA%D0%B8%D0%BD%D0%B5",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "myshkin-muzey-myshi",
+   "name": "Музей мыши",
+   "coords": {
+    "lat": 57.787,
+    "lon": 38.453
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Мышкин получил статус города в 1777 году, тогда же появился герб с мышью на красном поле. По легенде, мышь разбудила князя на волжском берегу и спасла его от змеи — это предание, а не летопись.",
+    "Музей мыши называют единственным в мире: здесь собраны мыши со всего света — игрушки, фигурки, картинки."
+   ],
+   "facts": [
+    {
+     "text": "Мышкин стал городом в 1777 году; тогда появился герб с мышью.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/yaroslavl/myshkin.htm",
+     "verified": true
+    },
+    {
+     "text": "Легенда о мыши, спасшей князя, — предание.",
+     "sourceUrl": "https://experience.tripster.ru/articles/myshkin/",
+     "verified": false
+    },
+    {
+     "text": "В Музее мыши собрана большая коллекция мышей со всего мира.",
+     "sourceUrl": "https://experience.tripster.ru/articles/myshkin/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "myshkin-ges",
+   "name": "Угличская ГЭС и шлюз",
+   "coords": {
+    "lat": 57.531,
+    "lon": 38.323
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Угличскую ГЭС начали строить в 1935 году; первая в каскаде Волжско-Камских ГЭС, она дала ток 8 декабря 1940 года. Строили её в основном заключённые.",
+    "Рядом — шлюз. Вид с набережной на суда, проходящие шлюзование, — отдельное развлечение."
+   ],
+   "facts": [
+    {
+     "text": "Строительство Угличской ГЭС началось в 1935 году, станция открыта в 1940-м.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Uglich_Hydroelectric_Station",
+     "verified": true
+    },
+    {
+     "text": "Угличская ГЭС — первая в каскаде Волжско-Камских ГЭС.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Uglich_Hydroelectric_Station",
+     "verified": true
+    },
+    {
+     "text": "На набережной — шлюз, ГЭС и музей гидроэнергетики.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/yaroslavskaya-oblast/uglich/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "myshkin-muzey-ges",
+   "name": "Музей гидроэнергетики",
+   "coords": {
+    "lat": 57.532,
+    "lon": 38.327
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Интерактивный музей гидроэнергетики работает на Спасской улице, 33, в бывшем здании управления Волголага — рядом с ГЭС.",
+    "Экспозиция рассказывает, как создавались гидростанции России. По отзывам, с 2011 года музей входит в пятёрку лучших региональных музеев страны."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится на улице Спасской, 33, в бывшем здании управления Волголага.",
+     "sourceUrl": "https://travelask.ru/questions/956710-muzey-gidroenergetiki",
+     "verified": true
+    },
+    {
+     "text": "Музей входит в пятёрку «Лучших региональных музеев России» с 2011 года.",
+     "sourceUrl": "https://travelask.ru/questions/956710-muzey-gidroenergetiki",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
+  {
+   "id": "myshkin-dmitry",
+   "name": "Церковь Димитрия на Крови",
+   "coords": {
+    "lat": 57.529,
+    "lon": 38.33
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Красная церковь с голубыми куполами стоит в Угличском кремле на месте, где 15 мая 1591 года нашли тело царевича Дмитрия. Самая популярная версия — убийство по воле Бориса Годунова, но официальных выводов о причинах смерти нет.",
+    "Нынешний храм построен в 1692 году. До него здесь стояли часовня и деревянная церковь 1630 года. Внутри — колокол, которым, по преданию, созывали народ после гибели царевича."
+   ],
+   "facts": [
+    {
+     "text": "Церковь построена в 1692 году на месте гибели царевича Дмитрия.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/uglich/dmitry-church.htm",
+     "verified": true
+    },
+    {
+     "text": "Царевич погиб 15 мая 1591 года; официальных выводов о причинах смерти нет.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC_%D0%BD%D0%B0_%D0%BA%D1%80%D0%BE%D0%B2%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "В 1630 году на месте часовни построили деревянную церковь.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/uglich/dmitry-church.htm",
+     "verified": true
+    },
+    {
+     "text": "В храме выставлен колокол, звонивший после гибели царевича.",
+     "sourceUrl": "https://www.lonelyplanet.com/pois/1473660",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 60,
+   "coordsVerified": false
+  },
+  {
+   "id": "myshkin-palaty",
+   "name": "Палаты царевича Дмитрия",
+   "coords": {
+    "lat": 57.5295,
+    "lon": 38.331
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В кремле сохранились палаты, где царевич Дмитрий жил с матерью и слугами. Это одно из немногих гражданских зданий той эпохи.",
+    "Кремль Углича стоит на высоком берегу Волги — отсюда хорошо видно шлюз и ГЭС. Следующая точка маршрута — «Дивная церковь Алексеевского монастыря»."
+   ],
+   "facts": [
+    {
+     "text": "Царевич Дмитрий жил в палатах с матерью и слугами.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/uglich/attractions.htm",
+     "verified": true
+    },
+    {
+     "text": "Палаты находятся на территории Угличского кремля.",
+     "sourceUrl": "https://www.orexca.com/rus/russia/uglich.htm",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 70,
+   "coordsVerified": false
+  },
+  {
+   "id": "myshkin-divnaya",
+   "name": "Дивная церковь Алексеевского монастыря",
+   "coords": {
+    "lat": 57.525,
+    "lon": 38.325
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "На холме у Каменного ручья стоит трёхшатровая Успенская церковь Алексеевского монастыря 1628 года — её не зря называют «Дивной».",
+    "Возникновение обители связывают со святителем Алексием, посетившим Углич в 1371 году. Сначала монастырь назывался Успенским."
+   ],
+   "facts": [
+    {
+     "text": "«Дивная» Успенская церковь построена в 1628 году.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/uglich/alekseevsky-monastery.htm",
+     "verified": true
+    },
+    {
+     "text": "В 1371 году святитель Алексий благословил инока Адриана строить обитель.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/uglich/alekseevsky-monastery.htm",
+     "verified": true
+    },
+    {
+     "text": "Сначала монастырь назывался Успенским.",
+     "sourceUrl": "https://www.orexca.com/rus/russia/uglich.htm",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 80,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Мышкинская выпечка",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли. Выпечка — простой перекус в дорогу, а не традиция.",
+  "story": [
+   "Маленький Мышкин живёт туристами, и в нём легко найти выпечку к чаю.",
+   "Это выбор составителя — местное блюдо, если найдёте, лучше нашей замены."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе в центре Мышкина",
+    "address": "Мышкин, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "myshkin-title",
+  "name": "Мышиный гонец",
+  "legend": "Из Мышкина в Углич вверх по Волге. Кто доехал — мышиный гонец.",
+  "ritual": "Сфотографироваться у Музея мыши на старте.",
+  "pairVariant": "Мышиные гонцы"
+ },
+ "sources": [
+  {
+   "title": "Мышкин — Advantour",
+   "url": "https://www.advantour.com/rus/russia/yaroslavl/myshkin.htm"
+  },
+  {
+   "title": "Что посмотреть в Мышкине — Тонкости",
+   "url": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/%D0%A7%D1%82%D0%BE_%D0%BF%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C_%D0%B2_%D0%9C%D1%8B%D1%88%D0%BA%D0%B8%D0%BD%D0%B5"
+  },
+  {
+   "title": "Церковь Димитрия на Крови — Advantour",
+   "url": "https://www.advantour.com/rus/russia/uglich/dmitry-church.htm"
+  },
+  {
+   "title": "Алексеевский монастырь — Advantour",
+   "url": "https://www.advantour.com/rus/russia/uglich/alekseevsky-monastery.htm"
+  },
+  {
+   "title": "Uglich Hydroelectric Station — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Uglich_Hydroelectric_Station"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 2,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.309144,
+     57.524
+    ],
+    [
+     38.309929,
+     57.522428
+    ],
+    [
+     38.312072,
+     57.521277
+    ],
+    [
+     38.315,
+     57.520856
+    ],
+    [
+     38.325,
+     57.521856
+    ],
+    [
+     38.327928,
+     57.522277
+    ],
+    [
+     38.330071,
+     57.523428
+    ],
+    [
+     38.336072,
+     57.527928
+    ],
+    [
+     38.336856,
+     57.5295
+    ],
+    [
+     38.462898,
+     57.789
+    ],
+    [
+     38.462108,
+     57.790572
+    ],
+    [
+     38.459949,
+     57.791723
+    ],
+    [
+     38.457,
+     57.792144
+    ],
+    [
+     38.454051,
+     57.791723
+    ],
+    [
+     38.447051,
+     57.788723
+    ],
+    [
+     38.444892,
+     57.787572
+    ],
+    [
+     38.309929,
+     57.525572
+    ],
+    [
+     38.309144,
+     57.524
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
