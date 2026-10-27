@@ -13,8 +13,8 @@
   "Лосино-Петровский — промышленный город на Клязьме с неожиданным названием: оно связано не с Лосиным Островом, а с казённой Лосиной кожевенной фабрикой Петра I, выпускавшей амуницию и обмундирование.",
   "Вокруг фабрики выросла рабочая слобода; в XIX веке кожевенное дело сменили текстильные предприятия. Рабочие, по одной из версий, просили Александра I построить новый храм — так появился собор Николая Чудотворца, освящённый Иоанном Кронштадтским.",
   "Рядом — усадьба Глинки, одна из старейших в Подмосковье. В 1727 году сподвижник Петра Яков Брюс ушёл в отставку и купил землю между Клязьмой и Ворей; по преданию, он здесь наблюдал звёзды, а народ считал его колдуном.",
-  "Свои места маршрута: «Собор Николая Чудотворца», «Усадьба Глинки Якова Брюса», «Клязьма у Глинок». По пути маршрут заходит и к соседям: Монино (музей ВВС) — «Посёлок Монино», «Центральный музей ВВС»; Старая Купавна — «Музей в центре культуры «Акрихин»», «Купавинская фабрика и пруд»; Электроугли — «Завод электроугольных изделий»; Гжель — «Белая глина и майолика».",
-  "Маршрут линейный, около 51 км и 9 точек. Финиш — Станция «Гжель» (Электрички Казанского направления (на Шатуру)), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Собор Николая Чудотворца», «Место Лосиной мануфактуры», «Клязьма у Глинок», «Усадьба Глинки Якова Брюса», «Церковь Рождества Богородицы», «Никольский парк». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 8 км: старт и финиш — Остановка у собора, Лосино-Петровский (Автобусы от Щёлкова и метро «Щёлковская»). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка у собора, Лосино-Петровский",
@@ -25,21 +25,21 @@
   "transport": "Автобусы от Щёлкова и метро «Щёлковская»"
  },
  "endPoint": {
-  "name": "Станция «Гжель»",
+  "name": "Остановка у собора, Лосино-Петровский",
   "coords": {
-   "lat": 55.615,
-   "lon": 38.305
+   "lat": 55.871,
+   "lon": 38.2
   },
-  "transport": "Электрички Казанского направления (на Шатуру)"
+  "transport": "Автобусы от Щёлкова и метро «Щёлковская»"
  },
  "route": {
-  "distanceKm": 51.0,
-  "durationH": 7.5,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 7.8,
+  "durationH": 1.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -86,8 +86,87 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "losino-petrovskiy-i-glinki-manufaktura",
+   "name": "Место Лосиной мануфактуры",
+   "coords": {
+    "lat": 55.869,
+    "lon": 38.198
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1708 году здесь основали казённую кожевенную Лосиную мануфактуру — она делала амуницию для русской армии.",
+    "До 1928 года город назывался Петровской слободой; нынешнее имя соединяет лосиную мануфактуру и Петра. Следующая точка маршрута — «Клязьма у Глинок»."
+   ],
+   "facts": [
+    {
+     "text": "В 1708 году основана казённая кожевенная Лосиная мануфактура.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
+     "verified": true
+    },
+    {
+     "text": "Мануфактура производила амуницию для армии.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "losino-petrovskiy-i-glinki-klyazma",
+   "name": "Клязьма у Глинок",
+   "coords": {
+    "lat": 55.88,
+    "lon": 38.18
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Усадьба Брюса стоит между двумя реками — Клязьмой и Ворей. Место выбрано не случайно: тихий угол для учёного в отставке.",
+    "Отсюда по просёлкам и улицам едем к платформе Монино — следующей точке спирали.",
+    "Маршрут Лосино-Петровского и Глинок завершён у железной дороги: от фабрики Петра к усадьбе его сподвижника."
+   ],
+   "facts": [
+    {
+     "text": "Брюс купил землю между Клязьмой и Ворей.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Лосино-Петровский — город на Клязьме.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
+     "verified": true
+    },
+    {
+     "text": "Глинково — населённый пункт в Московской области.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": true
+    },
+    {
+     "text": "Удобство места для наблюдений Брюса — версия, а не факт.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
+     "verified": false
+    },
+    {
+     "text": "Рядом находится Монино.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "losino-petrovskiy-i-glinki-glinki",
@@ -140,345 +219,75 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "losino-petrovskiy-i-glinki-klyazma",
-   "name": "Клязьма у Глинок",
+   "id": "losino-petrovskiy-i-glinki-rozhdestvo",
+   "name": "Церковь Рождества Богородицы",
    "coords": {
-    "lat": 55.88,
-    "lon": 38.18
+    "lat": 55.874,
+    "lon": 38.206
    },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Усадьба Брюса стоит между двумя реками — Клязьмой и Ворей. Место выбрано не случайно: тихий угол для учёного в отставке.",
-    "Отсюда по просёлкам и улицам едем к платформе Монино — следующей точке спирали.",
-    "Маршрут Лосино-Петровского и Глинок завершён у железной дороги: от фабрики Петра к усадьбе его сподвижника."
-   ],
-   "facts": [
-    {
-     "text": "Брюс купил землю между Клязьмой и Ворей.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский — город на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": true
-    },
-    {
-     "text": "Глинково — населённый пункт в Московской области.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Удобство места для наблюдений Брюса — версия, а не факт.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": false
-    },
-    {
-     "text": "Рядом находится Монино.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "losino-petrovskiy-i-glinki-posyolok",
-   "name": "Посёлок Монино",
-   "coords": {
-    "lat": 55.84,
-    "lon": 38.19
-   },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 10,
    "guideStory": [
-    "Монино — посёлок при академии и аэродроме. До музея ВВС добираются электричкой с Ярославского вокзала до станции Монино.",
-    "Посёлок живёт рядом с военной академией и аэродромом, поэтому часть территорий здесь закрыта, а дорогу к музею лучше выбирать по указателям."
+    "Туристические обзоры называют церковь Рождества Пресвятой Богородицы одной из главных достопримечательностей города; её датируют 1820-ми годами.",
+    "Рядом — местный музей истории города. Следующая точка маршрута — «Никольский парк». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "До музея можно добраться на электричке от Ярославского вокзала до станции Монино.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
+     "text": "Церковь Рождества Пресвятой Богородицы — одна из главных достопримечательностей города.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D1%81%D0%B8%D0%BD%D0%BE-%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9",
      "verified": true
     },
     {
-     "text": "Музей находится на территории Военно-воздушной академии имени Гагарина.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Музей ВВС — главная достопримечательность Монина.",
-     "sourceUrl": "https://t-j.ru/must-see-muzei-vvs/",
-     "verified": true
-    },
-    {
-     "text": "Границы закрытых территорий посёлка мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Монино — рабочий посёлок в Щёлковском округе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
+     "text": "Церковь датируют 1820-ми годами.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D1%81%D0%B8%D0%BD%D0%BE-%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9",
      "verified": false
     }
-   ],
-   "warnings": [
-    "Территория академии — режимная: только по разрешённым маршрутам."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "losino-petrovskiy-i-glinki-muzey",
-   "name": "Центральный музей ВВС",
-   "coords": {
-    "lat": 55.838,
-    "lon": 38.17
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 120,
-   "guideStory": [
-    "Центральный музей ВВС создан 28 ноября 1958 года и принял первых посетителей 23 февраля 1960 года. Под открытым небом и в ангарах стоят самолёты от первых аэропланов до реактивных истребителей.",
-    "Фонды насчитывают десятки тысяч единиц: «Коммерсант» писал о 37 тысячах, а «Новая газета» в 2016 году — о более чем 50 тысячах. Музей принимал свыше 200 тысяч человек в год.",
-    "В 2018 году предлагали перевезти экспозицию в парк «Патриот», и авиаконструкторы предупреждали, что самолёты могут этого не пережить. Что с музеем сейчас и как он работает — проверьте заранее."
-   ],
-   "facts": [
-    {
-     "text": "Музей создан 28 ноября 1958 года, первых посетителей принял 23 февраля 1960 года.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": true
-    },
-    {
-     "text": "Фонды музея — более 37 тысяч единиц (по данным «Коммерсанта»).",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
-     "verified": true
-    },
-    {
-     "text": "В 2016 году писали о собрании более 50 тысяч единиц хранения.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": false
-    },
-    {
-     "text": "Музей принимал более 200 тысяч посетителей в год (данные 2016 года).",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": true
-    },
-    {
-     "text": "В 2018 году обсуждался перенос музея в парк «Патриот».",
-     "sourceUrl": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov",
-     "verified": true
-    },
-    {
-     "text": "В административном здании музея был пожар, часть моделей первых самолётов сгорела.",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Режим работы и доступ меняются — проверьте на сайте музея перед поездкой.",
-   "ticketNote": "Билеты — по правилам музея; уточняйте.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 50
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "losino-petrovskiy-i-glinki-akrikhin",
-   "name": "Музей в центре культуры «Акрихин»",
+   "id": "losino-petrovskiy-i-glinki-nikolskiy-park",
+   "name": "Никольский парк",
    "coords": {
-    "lat": 55.812,
-    "lon": 38.17
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "В XX веке рядом с текстильной слободой выросло химико-фармацевтическое предприятие «Акрихин».",
-    "Городской музей в центре культуры «Акрихин» вырос из заводского музея трудовой славы и рассказывает о шёлке, сукне и лекарствах — трёх профессиях Купавны."
-   ],
-   "facts": [
-    {
-     "text": "В XX веке рядом выросло химико-фармацевтическое предприятие «Акрихин».",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    },
-    {
-     "text": "Городской музей находится в центре культуры «Акрихин».",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    },
-    {
-     "text": "Музей вырос из заводского музея трудовой славы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    },
-    {
-     "text": "Часы работы музея мы не проверяли.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": false
-    },
-    {
-     "text": "Население города — около 20 тысяч человек.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%9A%D1%83%D0%BF%D0%B0%D0%B2%D0%BD%D0%B0",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "Часы работы не проверены.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "losino-petrovskiy-i-glinki-fabrika",
-   "name": "Купавинская фабрика и пруд",
-   "coords": {
-    "lat": 55.808,
-    "lon": 38.179
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "С XVIII века в Купавне работала шёлковая, а затем суконная мануфактура. Она сформировала фабричную слободу и пруд, которые видны и сегодня.",
-    "Кто именно основал суконное производство, источники спорят; подробную историю купавинских фабрик разбирает статья в журнале МАРХИ."
-   ],
-   "facts": [
-    {
-     "text": "С XVIII века Купавна стала центром шёлкового, затем суконного производства.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Мануфактура сформировала фабричную слободу и пруд.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    },
-    {
-     "text": "История купавинских фабрик разобрана в журнале МАРХИ.",
-     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
-     "verified": true
-    },
-    {
-     "text": "Кто основал суконное производство, источники оспаривают.",
-     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
-     "verified": false
-    },
-    {
-     "text": "Купавинская фабрика и пруд — уличная часть маршрута по городу.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Территория фабрики — частная: смотрим снаружи."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "losino-petrovskiy-i-glinki-zavod",
-   "name": "Завод электроугольных изделий",
-   "coords": {
-    "lat": 55.719,
-    "lon": 38.225
+    "lat": 55.87,
+    "lon": 38.202
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Опытный завод электроугольных изделий выпускает около 30 марок электрощёток для электрических машин общепромышленного назначения.",
-    "В городе есть и научно-исследовательский институт электроугольных изделий — наследник того самого завода «электрических углей»."
+    "В городском парке — памятник Лермонтову и его возлюбленной, скульптура «Мальчик и лось» и фонтаны; рядом — памятник Святителю Николаю и собор.",
+    "Никольскую церковь построили в 1822 году на деньги Александра I по просьбе рабочих Лосиного завода; в советское время её не закрыли."
    ],
    "facts": [
     {
-     "text": "Опытный завод выпускает 30 марок электрощёток для электрических машин.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/",
+     "text": "В парке стоят памятник Лермонтову и скульптура «Мальчик и лось».",
+     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D1%81%D0%B8%D0%BD%D0%BE-%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9",
      "verified": true
     },
     {
-     "text": "В Электроуглях работает АО «НИИЭИ».",
-     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/",
+     "text": "Никольская церковь построена в 1822 году на средства Александра I.",
+     "sourceUrl": "https://tonkosti.ru/Никольская_церковь_в_Лосино-Петровском",
      "verified": true
     },
     {
-     "text": "Завод — наследник производства электрических углей 1899 года.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
-     "verified": false
-    },
-    {
-     "text": "Достопримечательности города перечисляет командировка.ру.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/",
+     "text": "В советские годы церковь не закрывали.",
+     "sourceUrl": "https://tonkosti.ru/Никольская_церковь_в_Лосино-Петровском",
      "verified": true
-    },
-    {
-     "text": "Электроугли с 2006 года — центр городского поселения.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующее предприятие: не фотографировать проходные."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "losino-petrovskiy-i-glinki-glina",
-   "name": "Белая глина и майолика",
-   "coords": {
-    "lat": 55.625,
-    "lon": 38.29
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Местные жители начали делать фарфор, узнав о качестве белой глины, залегавшей рядом. Происхождение названия «Гжель» спорно: популярная версия связывает его со словом «жечь», то есть с обжигом.",
-    "Во второй половине XVIII века здесь делали майолику из красной глины, расписанную белой, жёлтой, синей, зелёной и коричневой красками."
-   ],
-   "facts": [
-    {
-     "text": "Промысел вырос на местной белой глине.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
-     "verified": true
-    },
-    {
-     "text": "Версия о происхождении названия от слова «жечь» спорна.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
-     "verified": false
-    },
-    {
-     "text": "Во второй половине XVIII века делали майолику из красной глины.",
-     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
-     "verified": true
-    },
-    {
-     "text": "Майолику расписывали белой, жёлтой, синей, зелёной и коричневой красками.",
-     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
-     "verified": true
-    },
-    {
-     "text": "Туристический сайт относит первые упоминания мастеров к XIV веку — не подтверждено.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -519,119 +328,83 @@
    "url": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah"
   },
   {
-   "title": "Музей ВВС — Новая газета",
-   "url": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi"
+   "title": "Источник: en.wikipedia.org",
+   "url": "https://en.wikipedia.org/wiki/Losino-Petrovsky"
   },
   {
-   "title": "Музей ВВС — Коммерсантъ",
-   "url": "https://www.kommersant.ru/doc/602688"
+   "title": "Источник: cyclowiki.org",
+   "url": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
   },
   {
-   "title": "Перенос музея — Meduza",
-   "url": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov"
+   "title": "Источник: vokrugsveta.ru",
+   "url": "https://www.vokrugsveta.ru/articles/obiteli-dukhov-7-samykh-zhutkikh-domov-s-privideniyami-v-rossii-id901310/"
   },
   {
-   "title": "Монино — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9B%D0%BE%D1%81%D0%B8%D0%BD%D0%BE-%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9"
   },
   {
-   "title": "История Старой Купавны — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia"
-  },
-  {
-   "title": "Старая Купавна — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/"
-  },
-  {
-   "title": "Купавинские фабрики — МАРХИ",
-   "url": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf"
-  },
-  {
-   "title": "Электроугли — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/"
-  },
-  {
-   "title": "Электроугли — ЦИАН",
-   "url": "https://www.cian.ru/stati-elektrougli-216552/"
-  },
-  {
-   "title": "АО «НИИЭИ» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/"
-  },
-  {
-   "title": "История Гжели — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/gzhel/history"
-  },
-  {
-   "title": "Экскурсии по Гжели — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8"
-  },
-  {
-   "title": "Промыслы Подмосковья — 360",
-   "url": "https://360.ru/tekst/mosobl/ot-gzheli-do-klina-i-zhostova-gde-zhivut-legendarnye-promysly-podmoskovja/"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/Никольская_церковь_в_Лосино-Петровском"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.164401,
-     55.838
+     38.166394,
+     55.885
     ],
     [
-     38.164405,
-     55.812
+     38.167145,
+     55.883428
     ],
     [
-     38.165154,
-     55.810428
+     38.175146,
+     55.878428
     ],
     [
-     38.220166,
-     55.717428
+     38.193147,
+     55.867428
     ],
     [
-     38.285177,
-     55.623428
+     38.195198,
+     55.866277
     ],
     [
-     38.300179,
-     55.613428
+     38.198,
+     55.865856
     ],
     [
-     38.302216,
-     55.612277
+     38.200802,
+     55.866277
     ],
     [
-     38.305,
-     55.611856
+     38.204802,
+     55.867277
     ],
     [
-     38.307784,
-     55.612277
+     38.206853,
+     55.868428
     ],
     [
-     38.309821,
-     55.613428
+     38.210853,
+     55.872428
     ],
     [
-     38.310567,
-     55.615
+     38.211604,
+     55.874
     ],
     [
-     38.205604,
-     55.871
+     38.210853,
+     55.875572
     ],
     [
-     38.204853,
-     55.872572
-    ],
-    [
-     38.202802,
-     55.873723
+     38.208802,
+     55.876723
     ],
     [
      38.174803,
@@ -652,10 +425,6 @@
     [
      38.166394,
      55.885
-    ],
-    [
-     38.164401,
-     55.838
     ]
    ]
   ]

@@ -13,8 +13,8 @@
   "Электроугли — город с самым «техническим» именем на спирали. Его название связывают с заводом электрических углей, открытым в 1899 году у станции Кудиново.",
   "Рядом лежали залежи белых огнеупорных глин, поэтому здесь развивались и кирпичное, и керамическое производства.",
   "Самое старое ядро города — сельцо Каменка, упомянутое в документах 1623 года. Сегодня в Электроуглях живёт около 25 тысяч человек, а опытный завод электроугольных изделий выпускает электрощётки для электрических машин.",
-  "Свои места маршрута: «Завод электроугольных изделий», «Каменка — старое ядро». По пути маршрут заходит и к соседям: Старая Купавна — «Купавинская фабрика и пруд»; Монино (музей ВВС) — «Центральный музей ВВС», «Посёлок Монино»; Лосино-Петровский и Глинки — «Собор Николая Чудотворца», «Клязьма у Глинок»; Гребнево — «Храм и пруды».",
-  "Маршрут линейный, около 53 км и 8 точек. Финиш — Станция «Фрязино-Пассажирская» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция у бывшего Кудинова», «Каменка — старое ядро», «Церковь Святой Троицы», «Кудиновский керамический комбинат», «Завод электроугольных изделий». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Станция «Электроугли» (Электрички Горьковского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Электроугли»",
@@ -25,24 +25,183 @@
   "transport": "Электрички Горьковского направления"
  },
  "endPoint": {
-  "name": "Станция «Фрязино-Пассажирская»",
+  "name": "Станция «Электроугли»",
   "coords": {
-   "lat": 55.9592,
-   "lon": 38.0505
+   "lat": 55.7172,
+   "lon": 38.2205
   },
-  "transport": "Электрички Ярославского направления"
+  "transport": "Электрички Горьковского направления"
  },
  "route": {
-  "distanceKm": 53.0,
-  "durationH": 7.2,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 4.1,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "elektrougli-stantsiya",
+   "name": "Станция у бывшего Кудинова",
+   "coords": {
+    "lat": 55.717,
+    "lon": 38.22
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Станция когда-то называлась по соседнему Кудинову. В 1899 году у станции Кудиново открыли завод электрических углей — и он дал имя будущему городу.",
+    "Железная дорога и глина сделали это место промышленным: рядом были залежи белых огнеупорных глин для кирпича и керамики."
+   ],
+   "facts": [
+    {
+     "text": "Название города связано с заводом электрических углей, открытым в 1899 году у станции Кудиново.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    },
+    {
+     "text": "Рядом были залежи белых огнеупорных глин для кирпичного и керамического производства.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    },
+    {
+     "text": "Электроугли — город в Богородском округе.",
+     "sourceUrl": "https://en.Wikipedia.com/wiki/Elektrougli",
+     "verified": true
+    },
+    {
+     "text": "Даты переименования станции в найденных источниках не указаны.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": false
+    },
+    {
+     "text": "В городе живёт около 25 тысяч человек.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "elektrougli-kamenka",
+   "name": "Каменка — старое ядро",
+   "coords": {
+    "lat": 55.715,
+    "lon": 38.215
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Центральная часть города — бывшее сельцо Каменка; первые упоминания о нём встречаются в документах 1623 года.",
+    "Так что Электроугли старше своего заводского имени почти на три века: сначала была деревня, потом станция, потом завод и город."
+   ],
+   "facts": [
+    {
+     "text": "Первые упоминания о сельце Каменка относятся к 1623 году.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Каменка — центральная часть современного города.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Электроугли с 2006 года — административный центр городского поселения.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Старой застройки Каменки мы не проверяли.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": false
+    },
+    {
+     "text": "Город назван по заводу электрических углей.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "elektrougli-troitsa",
+   "name": "Церковь Святой Троицы",
+   "coords": {
+    "lat": 55.718,
+    "lon": 38.215
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В центре города стоит церковь Святой Троицы, основанная в 1897 году.",
+    "Самое старое ядро города — село Каменка, упомянутое ещё в 1623 году; его землями владели Милославские, Нарышкины и Волконские. Следующая точка маршрута — «Кудиновский керамический комбинат»."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Святой Троицы основана в 1897 году.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/",
+     "verified": true
+    },
+    {
+     "text": "Село Каменка впервые упоминается в 1623 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    },
+    {
+     "text": "Землями владели Милославские, Нарышкины и Волконские.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "elektrougli-keramika",
+   "name": "Кудиновский керамический комбинат",
+   "coords": {
+    "lat": 55.725,
+    "lon": 38.23
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Местные залежи белых огнеупорных глин дали жизнь кирпичным и гончарным заводам; из них выросла артель «Коопсиликат», а затем — Кудиновский комбинат керамических изделий.",
+    "По одному источнику, его продукцию использовали при строительстве зданий МГУ и МИД. Завод можно посещать только по разрешению — смотрим снаружи."
+   ],
+   "facts": [
+    {
+     "text": "Из гончарно-кирпичных заводов образовалась артель «Коопсиликат», затем Кудиновский комбинат.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    },
+    {
+     "text": "Продукция комбината использовалась при строительстве МГУ и МИД.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
   {
    "id": "elektrougli-zavod",
    "name": "Завод электроугольных изделий",
@@ -88,344 +247,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "elektrougli-kamenka",
-   "name": "Каменка — старое ядро",
-   "coords": {
-    "lat": 55.715,
-    "lon": 38.215
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Центральная часть города — бывшее сельцо Каменка; первые упоминания о нём встречаются в документах 1623 года.",
-    "Так что Электроугли старше своего заводского имени почти на три века: сначала была деревня, потом станция, потом завод и город."
-   ],
-   "facts": [
-    {
-     "text": "Первые упоминания о сельце Каменка относятся к 1623 году.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    },
-    {
-     "text": "Каменка — центральная часть современного города.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    },
-    {
-     "text": "Электроугли с 2006 года — административный центр городского поселения.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    },
-    {
-     "text": "Старой застройки Каменки мы не проверяли.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": false
-    },
-    {
-     "text": "Город назван по заводу электрических углей.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "elektrougli-fabrika",
-   "name": "Купавинская фабрика и пруд",
-   "coords": {
-    "lat": 55.808,
-    "lon": 38.179
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "С XVIII века в Купавне работала шёлковая, а затем суконная мануфактура. Она сформировала фабричную слободу и пруд, которые видны и сегодня.",
-    "Кто именно основал суконное производство, источники спорят; подробную историю купавинских фабрик разбирает статья в журнале МАРХИ."
-   ],
-   "facts": [
-    {
-     "text": "С XVIII века Купавна стала центром шёлкового, затем суконного производства.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Мануфактура сформировала фабричную слободу и пруд.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    },
-    {
-     "text": "История купавинских фабрик разобрана в журнале МАРХИ.",
-     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
-     "verified": true
-    },
-    {
-     "text": "Кто основал суконное производство, источники оспаривают.",
-     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
-     "verified": false
-    },
-    {
-     "text": "Купавинская фабрика и пруд — уличная часть маршрута по городу.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Территория фабрики — частная: смотрим снаружи."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "elektrougli-muzey",
-   "name": "Центральный музей ВВС",
-   "coords": {
-    "lat": 55.838,
-    "lon": 38.17
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 120,
-   "guideStory": [
-    "Центральный музей ВВС создан 28 ноября 1958 года и принял первых посетителей 23 февраля 1960 года. Под открытым небом и в ангарах стоят самолёты от первых аэропланов до реактивных истребителей.",
-    "Фонды насчитывают десятки тысяч единиц: «Коммерсант» писал о 37 тысячах, а «Новая газета» в 2016 году — о более чем 50 тысячах. Музей принимал свыше 200 тысяч человек в год.",
-    "В 2018 году предлагали перевезти экспозицию в парк «Патриот», и авиаконструкторы предупреждали, что самолёты могут этого не пережить. Что с музеем сейчас и как он работает — проверьте заранее."
-   ],
-   "facts": [
-    {
-     "text": "Музей создан 28 ноября 1958 года, первых посетителей принял 23 февраля 1960 года.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": true
-    },
-    {
-     "text": "Фонды музея — более 37 тысяч единиц (по данным «Коммерсанта»).",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
-     "verified": true
-    },
-    {
-     "text": "В 2016 году писали о собрании более 50 тысяч единиц хранения.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": false
-    },
-    {
-     "text": "Музей принимал более 200 тысяч посетителей в год (данные 2016 года).",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": true
-    },
-    {
-     "text": "В 2018 году обсуждался перенос музея в парк «Патриот».",
-     "sourceUrl": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov",
-     "verified": true
-    },
-    {
-     "text": "В административном здании музея был пожар, часть моделей первых самолётов сгорела.",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Режим работы и доступ меняются — проверьте на сайте музея перед поездкой.",
-   "ticketNote": "Билеты — по правилам музея; уточняйте.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "elektrougli-posyolok",
-   "name": "Посёлок Монино",
-   "coords": {
-    "lat": 55.84,
-    "lon": 38.19
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Монино — посёлок при академии и аэродроме. До музея ВВС добираются электричкой с Ярославского вокзала до станции Монино.",
-    "Посёлок живёт рядом с военной академией и аэродромом, поэтому часть территорий здесь закрыта, а дорогу к музею лучше выбирать по указателям."
-   ],
-   "facts": [
-    {
-     "text": "До музея можно добраться на электричке от Ярославского вокзала до станции Монино.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Музей находится на территории Военно-воздушной академии имени Гагарина.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Музей ВВС — главная достопримечательность Монина.",
-     "sourceUrl": "https://t-j.ru/must-see-muzei-vvs/",
-     "verified": true
-    },
-    {
-     "text": "Границы закрытых территорий посёлка мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Монино — рабочий посёлок в Щёлковском округе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Территория академии — режимная: только по разрешённым маршрутам."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "elektrougli-sobor",
-   "name": "Собор Николая Чудотворца",
-   "coords": {
-    "lat": 55.871,
-    "lon": 38.2
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Город назван по Лосиной кожевенной фабрике Петра I — казённому предприятию, шившему амуницию для армии. Вокруг фабрики выросла рабочая слобода.",
-    "По одной из версий, рабочие ходатайствовали перед Александром I о строительстве нового храма. Классический собор Николая Чудотворца освятил Иоанн Кронштадтский."
-   ],
-   "facts": [
-    {
-     "text": "Название города связано с казённой Лосиной кожевенной фабрикой Петра I.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "В XIX веке кожевенное производство сменили текстильные предприятия.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "По одной из версий, рабочие ходатайствовали перед Александром I о новой церкви.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": false
-    },
-    {
-     "text": "Собор Николая Чудотворца освятил Иоанн Кронштадтский.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский стоит на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "elektrougli-klyazma",
-   "name": "Клязьма у Глинок",
-   "coords": {
-    "lat": 55.88,
-    "lon": 38.18
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Усадьба Брюса стоит между двумя реками — Клязьмой и Ворей. Место выбрано не случайно: тихий угол для учёного в отставке.",
-    "Отсюда по просёлкам и улицам едем к платформе Монино — следующей точке спирали.",
-    "Маршрут Лосино-Петровского и Глинок завершён у железной дороги: от фабрики Петра к усадьбе его сподвижника."
-   ],
-   "facts": [
-    {
-     "text": "Брюс купил землю между Клязьмой и Ворей.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский — город на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": true
-    },
-    {
-     "text": "Глинково — населённый пункт в Московской области.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Удобство места для наблюдений Брюса — версия, а не факт.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": false
-    },
-    {
-     "text": "Рядом находится Монино.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "elektrougli-prudy",
-   "name": "Храм и пруды",
-   "coords": {
-    "lat": 55.9495,
-    "lon": 38.161
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "У усадьбы есть храм; его историю мы в найденных источниках не нашли и поэтому не пересказываем.",
-    "В Гребневе бывал Державин, а Александр Грин приезжал сюда поправить здоровье. Вокруг — пруды усадебного парка. Финиш — Станция «Фрязино-Пассажирская»: Электрички Ярославского направления."
-   ],
-   "facts": [
-    {
-     "text": "В усадьбе бывал Державин.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "Александр Грин приезжал сюда поправить здоровье.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "История храма в найденных источниках не раскрыта.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Гребнево описано на KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты прудов приблизительные.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -466,67 +289,27 @@
    "url": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/"
   },
   {
-   "title": "История Старой Купавны — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia"
+   "title": "Источник: en.Wikipedia.com",
+   "url": "https://en.Wikipedia.com/wiki/Elektrougli"
   },
   {
-   "title": "Старая Купавна — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/"
-  },
-  {
-   "title": "Купавинские фабрики — МАРХИ",
-   "url": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf"
-  },
-  {
-   "title": "Музей ВВС — Новая газета",
-   "url": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi"
-  },
-  {
-   "title": "Музей ВВС — Коммерсантъ",
-   "url": "https://www.kommersant.ru/doc/602688"
-  },
-  {
-   "title": "Перенос музея — Meduza",
-   "url": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov"
-  },
-  {
-   "title": "Монино — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE"
-  },
-  {
-   "title": "Усадьба Глинки — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8"
-  },
-  {
-   "title": "Лосино-Петровский — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/"
-  },
-  {
-   "title": "Экскурсия «Брюс всемогущий» — Sputnik8",
-   "url": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah"
-  },
-  {
-   "title": "Гребнево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
-  },
-  {
-   "title": "Судьба Гребнева — 360",
-   "url": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/elektrougli/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.044883,
-     55.9592
+     38.209418,
+     55.718
     ],
     [
-     38.045636,
-     55.957628
+     38.209419,
+     55.715
     ],
     [
      38.210166,
@@ -553,44 +336,40 @@
      55.717428
     ],
     [
-     38.230582,
-     55.719
+     38.234835,
+     55.723428
     ],
     [
-     38.205604,
-     55.871
+     38.235583,
+     55.725
     ],
     [
-     38.204853,
-     55.872572
+     38.234835,
+     55.726572
     ],
     [
-     38.165863,
-     55.951072
+     38.232791,
+     55.727723
     ],
     [
-     38.163808,
-     55.952223
+     38.23,
+     55.728144
     ],
     [
-     38.161,
-     55.952644
+     38.227209,
+     55.727723
     ],
     [
-     38.0505,
-     55.962344
+     38.212209,
+     55.720723
     ],
     [
-     38.047692,
-     55.961923
+     38.210166,
+     55.719572
     ],
     [
-     38.045636,
-     55.960772
-    ],
-    [
-     38.044883,
-     55.9592
+     38.209418,
+     55.718
     ]
    ]
   ]

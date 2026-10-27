@@ -13,36 +13,119 @@
   "Пехра-Яковлевское — усадьба Голицыных на высоком берегу Пехорки, в черте Балашихи. Она больше двухсот лет принадлежала этому роду.",
   "Основу ансамбля заложил князь Пётр Михайлович Голицын, знаток искусства, которого называют создателем первого «музеума» в Москве. После его гибели в 1775 году имение перешло к сыну Михаилу; к концу XVIII века усадьба пришла в упадок, но в начале XIX века её восстановили в стиле классицизма.",
   "Жемчужина усадьбы — Преображенский (Спасский) храм-ротонда с двумя колокольнями, редкий для Подмосковья. В 1933 году его закрыли и разорили, а с 1991 года он снова принадлежит церкви.",
-  "Свои места маршрута: «Въезд со львами и главный дом», «Преображенский храм-ротонда», «Берег Пехорки». По пути маршрут заходит и к соседям: Горенки — «Усадьба Горенки: главный дом»; Реутов — «Монумент крылатой ракете «Метеорит»», «Площадь Академика Челомея и ДК «Мир»»; Косино (три озера) — «Успенская церковь в Косине», «Чёрное озеро»; Котельники — «Сосновая улица и Кузьминский лесопарк», «Усадьба «Белая Дача»»; Дзержинский (Николо-Угрешский) — «Угрешский историко-краеведческий музей», «Дзержинский карьер».",
-  "Маршрут линейный, около 48 км и 12 точек. Финиш — Метро «Котельники» (Метро «Котельники», Таганско-Краснопресненская линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Лестница со львами между парком и садом», «Берег Пехорки», «Въезд со львами и главный дом», «История Голицыных», «Преображенский храм-ротонда». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 7 км: старт и финиш — Станция «Балашиха» (Электричка от Москвы через Реутово до станции Балашиха). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Въезд в усадьбу Пехра-Яковлевское",
+  "name": "Станция «Балашиха»",
   "coords": {
-   "lat": 55.787,
-   "lon": 37.954
+   "lat": 55.8088,
+   "lon": 37.959
   },
-  "transport": "Автобусы по Балашихе — уточняйте; ближайшие станции — Балашиха и Салтыковская"
+  "transport": "Электричка от Москвы через Реутово до станции Балашиха"
  },
  "endPoint": {
-  "name": "Метро «Котельники»",
+  "name": "Станция «Балашиха»",
   "coords": {
-   "lat": 55.674,
-   "lon": 37.859
+   "lat": 55.8088,
+   "lon": 37.959
   },
-  "transport": "Метро «Котельники», Таганско-Краснопресненская линия"
+  "transport": "Электричка от Москвы через Реутово до станции Балашиха"
  },
  "route": {
-  "distanceKm": 48.0,
-  "durationH": 7.3,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 7.1,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "pekhra-yakovlevskoe-lestnitsa",
+   "name": "Лестница со львами между парком и садом",
+   "coords": {
+    "lat": 55.792,
+    "lon": 37.964
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В усадьбе были главный дом с двумя флигелями, церковь, собственный театр, оранжерея и большой парк. Парк и сад с фонтаном соединяла лестница со статуями львов.",
+    "Усадьба — памятник федерального значения, но здания давно не ремонтировались; смотрим снаружи."
+   ],
+   "facts": [
+    {
+     "text": "Усадьба включала главный дом с флигелями, церковь, театр, оранжерею и парк.",
+     "sourceUrl": "https://tonkosti.ru/Пехра-Яковлевское",
+     "verified": true
+    },
+    {
+     "text": "Парк и сад соединяла лестница со львиными статуями.",
+     "sourceUrl": "https://tonkosti.ru/Пехра-Яковлевское",
+     "verified": true
+    },
+    {
+     "text": "Усадьба — памятник федерального значения.",
+     "sourceUrl": "https://tonkosti.ru/Пехра-Яковлевское",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "pekhra-yakovlevskoe-pekhorka",
+   "name": "Берег Пехорки",
+   "coords": {
+    "lat": 55.787,
+    "lon": 37.962
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Под обрывом течёт Пехорка — та самая река, на которой стоит вся Балашиха и её «мельница».",
+    "Историко-краеведческий музей Балашихи разработал экскурсионный маршрут по усадьбе и показывает участникам пять зданий комплекса — если хотите внутрь, договаривайтесь с музеем."
+   ],
+   "facts": [
+    {
+     "text": "Музей Балашихи разработал экскурсионный маршрут по усадьбе.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
+     "verified": true
+    },
+    {
+     "text": "Экскурсантам показывают пять зданий комплекса.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба стоит на берегу Пехорки.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A5%D1%80%D0%B0%D0%BC_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F_%D0%B2_%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Каталог sobory.ru хранит фотографии Преображенской церкви.",
+     "sourceUrl": "https://sobory.ru/photo/56702",
+     "verified": true
+    },
+    {
+     "text": "Возможность купания в Пехорке мы не проверяли.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%85%D1%80%D0%B0-%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
   {
    "id": "pekhra-yakovlevskoe-vorota",
    "name": "Въезд со львами и главный дом",
@@ -93,8 +176,44 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "pekhra-yakovlevskoe-golitsyny",
+   "name": "История Голицыных",
+   "coords": {
+    "lat": 55.789,
+    "lon": 37.958
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Усадьба связана с семьёй князей Голицыных с конца XVII века; основу нынешнего комплекса заложил Пётр Михайлович Голицын.",
+    "После гибели Петра Голицына на дуэли в 1775 году усадьба перешла к сыну Михаилу, к концу века пришла в упадок, а в начале XIX века её восстановили в стиле классицизма."
+   ],
+   "facts": [
+    {
+     "text": "Пехра-Яковлевское связано с Голицыными с конца XVII века.",
+     "sourceUrl": "https://tonkosti.ru/Пехра-Яковлевское",
+     "verified": true
+    },
+    {
+     "text": "Пётр Голицын погиб на дуэли в 1775 году, усадьба перешла к сыну Михаилу.",
+     "sourceUrl": "https://finance.rambler.ru/economics/51353861-o-pobeditele-pugacheva-knyaze-golitsyne/",
+     "verified": true
+    },
+    {
+     "text": "В начале XIX века усадьбу восстановили, постройки — в стиле классицизма.",
+     "sourceUrl": "https://finance.rambler.ru/economics/51353861-o-pobeditele-pugacheva-knyaze-golitsyne/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "pekhra-yakovlevskoe-hram",
@@ -146,534 +265,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "pekhra-yakovlevskoe-pekhorka",
-   "name": "Берег Пехорки",
-   "coords": {
-    "lat": 55.787,
-    "lon": 37.962
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Под обрывом течёт Пехорка — та самая река, на которой стоит вся Балашиха и её «мельница».",
-    "Историко-краеведческий музей Балашихи разработал экскурсионный маршрут по усадьбе и показывает участникам пять зданий комплекса — если хотите внутрь, договаривайтесь с музеем."
-   ],
-   "facts": [
-    {
-     "text": "Музей Балашихи разработал экскурсионный маршрут по усадьбе.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
-     "verified": true
-    },
-    {
-     "text": "Экскурсантам показывают пять зданий комплекса.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
-     "verified": true
-    },
-    {
-     "text": "Усадьба стоит на берегу Пехорки.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A5%D1%80%D0%B0%D0%BC_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F_%D0%B2_%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Каталог sobory.ru хранит фотографии Преображенской церкви.",
-     "sourceUrl": "https://sobory.ru/photo/56702",
-     "verified": true
-    },
-    {
-     "text": "Возможность купания в Пехорке мы не проверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%85%D1%80%D0%B0-%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "pekhra-yakovlevskoe-usadba",
-   "name": "Усадьба Горенки: главный дом",
-   "coords": {
-    "lat": 55.7975,
-    "lon": 37.88
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Горенки во второй половине XVIII — начале XIX века принадлежали графам Разумовским. До них, по одному из источников, владельцами были князья Долгорукие, построившие в 1719 году церковь и кирпичный дворец.",
-    "Усадьба признана федеральным памятником истории и архитектуры, но о реставрации пока не слышно. В 1970-х здесь был детский санаторий.",
-    "Территория закрыта для свободного входа: смотрим снаружи, а внутрь — только с экскурсией. Иногда здесь проходят события — например, впервые провели выпускной бал."
-   ],
-   "facts": [
-    {
-     "text": "Горенки — усадьба графов Разумовских во второй половине XVIII — начале XIX века.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/93607",
-     "verified": true
-    },
-    {
-     "text": "По одному из источников, князья Долгорукие в 1719 году построили здесь церковь и кирпичный дворец.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Усадьба на шоссе Энтузиастов признана федеральным памятником.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
-     "verified": true
-    },
-    {
-     "text": "В 1970-х, по справочнику, в усадьбе был детский санаторий.",
-     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/092/217.htm",
-     "verified": true
-    },
-    {
-     "text": "В усадьбе впервые провели выпускной бал.",
-     "sourceUrl": "https://riamo.ru/news/kultura/v-balashihe-vpervye-vypusknoj-bal-proveli-v-usadbe-grafov-razumovskih-gorenki",
-     "verified": true
-    },
-    {
-     "text": "Реставрация, по данным одного источника, не запланирована.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Территория закрыта для свободного посещения: внутрь — только с экскурсией."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "pekhra-yakovlevskoe-meteorit",
-   "name": "Монумент крылатой ракете «Метеорит»",
-   "coords": {
-    "lat": 55.7678,
-    "lon": 37.863
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "openingHoursNote": "Монумент на открытой площадке.",
-   "bikeParkingNote": "Можно остановиться на тротуаре рядом, не загораживая проход.",
-   "guideStory": [
-    "От фабричной воды — к ракете. Реутов называют наукоградом не за красивые слова: рядом работает НПО машиностроения, одно из крупнейших ракетно-космических предприятий страны. Глава города однажды сформулировал это прямо: говорим «Реутов» — подразумеваем «НПО машиностроения».",
-    "На постаменте — «Метеорит», советская стратегическая крылатая ракета, которую разрабатывали в начале 1980-х. По справочным материалам, она прошла полный цикл испытаний, но на вооружение так и не поступила — помешала экономика начала 1990-х. Получилась ракета-памятник не победе, а эпохе: огромная работа, оставшаяся без продолжения."
-   ],
-   "facts": [
-    {
-     "text": "«Метеорит» — советская стратегическая крылатая ракета, разрабатывавшаяся в начале 1980-х годов.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-reutove-poyavitsya-novyj-skver-okolo-monumenta-krylatoj-rakete-meteorit-xl/",
-     "verified": true
-    },
-    {
-     "text": "По справочным данным, ракета прошла испытания, но не была принята на вооружение из-за экономической ситуации начала 1990-х.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-reutove-poyavitsya-novyj-skver-okolo-monumenta-krylatoj-rakete-meteorit-xl/",
-     "verified": false
-    },
-    {
-     "text": "Около монумента планируют новый сквер, продолжающий парк «Фабричный пруд»; его благоустраивают совместно с НПО машиностроения.",
-     "sourceUrl": "https://360.ru/news/obschestvo/okolo-monumenta-krylatoj-rakete-v-reutove-pojavitsja-novyj-skver/",
-     "verified": true
-    },
-    {
-     "text": "Опытно-конструкторское бюро, ставшее НПО машиностроения, создано в 1955 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/reutov/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Статус наукограда Реутов получил благодаря градообразующему предприятию — АО «ВПК «НПО машиностроения».",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/reutov/istoriia",
-     "verified": true
-    },
-    {
-     "text": "В Реутове открывалась выставка ракет под открытым небом.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/vystavka-raket-pod-otkrytym-nebom-otkrylas-v-reutove-xl/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "НПО машиностроения — режимное предприятие: не фотографируйте проходные и ограждение, не задерживайтесь у ворот."
-   ],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "pekhra-yakovlevskoe-chelomey",
-   "name": "Площадь Академика Челомея и ДК «Мир»",
-   "coords": {
-    "lat": 55.763,
-    "lon": 37.872
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "openingHoursNote": "ДК работает по расписанию мероприятий.",
-   "bikeParkingNote": "На площади много пешеходов — ведём велосипед.",
-   "guideStory": [
-    "Владимир Челомей — генеральный конструктор авиакосмической техники, человек, без которого Реутов был бы просто фабричным пригородом. Его имя город носит в названиях: улица Академика Челомея появилась на карте в 1985 году по ходатайству НПО машиностроения, а путеводители советуют посмотреть и памятник конструктору.",
-    "Память о Челомее в Реутове живая: здесь проходят конференции по ракетно-космической отрасли, выставка под названием «Леонардо ракетного мира», а медалью имени академика награждают в том числе городских руководителей. Рядом — ДК «Мир», главная концертная площадка города."
-   ],
-   "facts": [
-    {
-     "text": "Улица Академика Челомея появилась на карте Реутова в 1985 году и названа по ходатайству НПО машиностроения.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Улица носит имя генерального конструктора авиакосмической техники Владимира Челомея.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Путеводители советуют осмотреть в Реутове памятник Владимиру Челомею.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/reutov/",
-     "verified": true
-    },
-    {
-     "text": "ДК «Мир» называют главной концертной площадкой Реутова.",
-     "sourceUrl": "https://360.ru/news/obschestvo/gorod-dnja--reutov-11717/",
-     "verified": true
-    },
-    {
-     "text": "В Реутове открывалась выставка «Леонардо ракетного мира».",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/vystavka-leonardo-raketnogo-mira-otkrylas-v-reutove/",
-     "verified": true
-    },
-    {
-     "text": "В городе проходила всероссийская конференция по ракетно-космической отрасли.",
-     "sourceUrl": "https://riamo.ru/news/ekonomika/v-reutove-proshla-vserossijskaja-konferentsija-po-raketno-kosmicheskoj-otrasli/",
-     "verified": true
-    },
-    {
-     "text": "Главу Реутова награждали медалью имени академика Челомея.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/glavu-reutova-nagradili-medalyu-imeni-akademika-chelomeya-xl/",
-     "verified": true
-    },
-    {
-     "text": "Площадь у ДК «Мир» носит имя Челомея (по данным ТЗ маршрута; в найденных источниках прямо не подтверждено).",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
-     "verified": false
-    }
-   ],
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "pekhra-yakovlevskoe-uspenskaya",
-   "name": "Успенская церковь в Косине",
-   "coords": {
-    "lat": 55.719,
-    "lon": 37.858
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В Косине стоит церковь Успения Пресвятой Богородицы XIX века. По описанию, здесь молилась императрица Мария Фёдоровна.",
-    "Храм напоминает, что Косино было одним из древнейших сёл, вошедших в Москву, а не только новым районом у метро. Следующая точка маршрута — «Чёрное озеро»."
-   ],
-   "facts": [
-    {
-     "text": "Церковь Успения в Косине — храм XIX века.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "По описанию, в храме молилась императрица Мария Фёдоровна.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "Косино — одно из древнейших сёл, вошедших в состав Москвы.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "История Косина описана в краеведческом блоге «Непаханое Косино».",
-     "sourceUrl": "https://medium.com/@GenaSch/%D0%BD%D0%B5%D0%BF%D0%B0%D1%85%D0%B0%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D1%81%D0%B8%D0%BD%D0%BE-88af244fedf4",
-     "verified": true
-    },
-    {
-     "text": "Точный год постройки храма в найденных источниках не указан.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "pekhra-yakovlevskoe-chernoe",
-   "name": "Чёрное озеро",
-   "coords": {
-    "lat": 55.713,
-    "lon": 37.862
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Чёрное озеро — самое тёмное из трёх: вода в нём кажется почти чёрной, отсюда и название.",
-    "Все три озера ледникового происхождения — их оставил отступавший ледник.",
-    "Объезжаем озеро по тропе, не заезжая на береговые склоны, и едем к Святому — самому загадочному из трёх. Вокруг — сохранившийся кусочек природы посреди спальных кварталов."
-   ],
-   "facts": [
-    {
-     "text": "Чёрное озеро названо за тёмную воду.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": true
-    },
-    {
-     "text": "Косинские озёра имеют ледниковое происхождение.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": true
-    },
-    {
-     "text": "Озёра входят в природно-исторический парк «Косинский».",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "Косино упоминается в летописях под 1410 годом.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "Глубина Чёрного озера в найденных источниках не указана.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "pekhra-yakovlevskoe-kuzminsky-les",
-   "name": "Сосновая улица и Кузьминский лесопарк",
-   "coords": {
-    "lat": 55.6735,
-    "lon": 37.85
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "daylightOnly": true,
-   "openingHoursNote": "Лес — в светлое время суток.",
-   "bikeParkingNote": "По лесу едем по дорожкам, не по тропам.",
-   "guideStory": [
-    "Сразу от метро — в лес. Сосновая улица прижимается к Кузьминскому лесопарку, и новые кварталы Котельников буквально упираются в сосны. Жилые комплексы рядом даже называют по лесу, а объявления о квартирах обещают лесопарк в паре шагов.",
-    "Кузьминский лес — большой зелёный массив на стыке Москвы и области. По одним данным, вместе с Люблинским парком он образует огромную природную территорию больше тысячи гектаров, но эту цифру мы не смогли проверить по официальным источникам. В любом случае это лучший способ начать день: тихо, тенисто и без машин."
-   ],
-   "facts": [
-    {
-     "text": "Квартиры на Сосновой улице находятся рядом с Кузьминским лесопарком, примерно в 1–1,5 км от центра города.",
-     "sourceUrl": "https://www.komandirovka.ru/apartments/kotelniki/apartamentyi-na-sosnovoy-1k1-2/",
-     "verified": true
-    },
-    {
-     "text": "ЖК «Кузьминский лес» в Котельниках соседствует с Кузьминским лесопарком и прудом Белая Дача.",
-     "sourceUrl": "https://www.novostroy-m.ru/baza/jk_kuzminskiy_les",
-     "verified": true
-    },
-    {
-     "text": "По данным гостиничного сайта, объединённая территория парка «Кузьминки-Люблино» — около 1189 гектаров.",
-     "sourceUrl": "https://otello.ru/hotels/moskva/place/park_kuzminki_lyublino",
-     "verified": false
-    },
-    {
-     "text": "На территории парка «Кузьминки-Люблино» есть Мишкин пруд, созданный в 1973–1974 годах.",
-     "sourceUrl": "https://otello.ru/hotels/moskva/place/park_kuzminki_lyublino",
-     "verified": false
-    },
-    {
-     "text": "Станция метро «Котельники» открыта 21 сентября 2015 года на Таганско-Краснопресненской линии.",
-     "sourceUrl": "https://www.mos.ru/news/item/1186073",
-     "verified": true
-    }
-   ],
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "pekhra-yakovlevskoe-belaya-dacha",
-   "name": "Усадьба «Белая Дача»",
-   "coords": {
-    "lat": 55.6645,
-    "lon": 37.861
-   },
-   "address": "мкр. Белая Дача, 1А",
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
-   "openingHoursNote": "Музей работает по выходным и по записи (по данным ТЗ маршрута). Обязательно уточните перед поездкой.",
-   "schedule": {
-    "days": {
-     "sat": "10:00-17:00",
-     "sun": "10:00-17:00"
-    },
-    "byAppointment": true
-   },
-   "ticketNote": "Стоимость уточняйте при записи.",
-   "bikeParkingNote": "Велосипед оставляем у ограды усадьбы.",
-   "guideStory": [
-    "Белая Дача — дворянская усадьба конца XVIII века и памятник позднего классицизма. Основал её генерал-майор Аршеневский; источники расходятся в имени и дате — называют 1788 и 1798 годы. Сначала имение звали «Дачей Аршеневских», а «Белой» оно стало по цвету фасадов.",
-    "Главная интрига этого места — в том, что было после. В 1918 году на усадебных землях создали сельскохозяйственную артель, с 1946 года здесь работал совхоз «Белая Дача». Он снабжал Кремль, и в народе его называли «кремлёвской грядкой»; говорят, его посещал Фидель Кастро. Совхоз превратился в агрохолдинг — тот самый, чьи салаты продаются по всей стране."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба «Белая Дача» — объект культурного наследия, памятник архитектуры позднего классицизма.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Основание усадьбы источники относят к 1788 или 1798 году и называют основателем генерал-майора Аршеневского.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Сначала имение называлось «Дача Аршеневских», а имя «Белая Дача» закрепилось за белыми фасадами.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "В 1918 году на землях бывшего имения Аршеневских создали сельскохозяйственную артель.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-kotelnikah-est-svezhie-salaty-s-beloj-dachi-i-ezdit-na-metro-xl/",
-     "verified": true
-    },
-    {
-     "text": "С 1946 года здесь работал совхоз «Белая Дача».",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Совхоз снабжал Кремль, и в народе его называли «кремлёвской грядкой».",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-kotelnikah-est-svezhie-salaty-s-beloj-dachi-i-ezdit-na-metro-xl/",
-     "verified": true
-    },
-    {
-     "text": "Фидель Кастро, по данным туристических материалов, посещал совхоз в 1960-х.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kotelniki/",
-     "verified": false
-    },
-    {
-     "text": "Музей торжественно открыт в мае 1995 года и посвящён истории овощеводства в России за пять веков и истории совхоза.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/kotelniki/",
-     "verified": true
-    },
-    {
-     "text": "В комплекс входят главный дом, западный и восточный флигели, аллея и парк с прудом.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    }
-   ],
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "pekhra-yakovlevskoe-muzey",
-   "name": "Угрешский историко-краеведческий музей",
-   "coords": {
-    "lat": 55.63,
-    "lon": 37.846
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Угрешский историко-краеведческий музей рассказывает о прошлом края: археологические находки, этнография и документы о городе и монастыре.",
-    "Это хорошее место понять, как монастырская слобода стала заводским городом. Часы работы уточняйте заранее."
-   ],
-   "facts": [
-    {
-     "text": "Угрешский историко-краеведческий музей хранит археологические находки, этнографию и документы о городе и монастыре.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Музей рекомендуют для знакомства с прошлым края.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Адрес и часы работы музея мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Монастырь и город тесно связаны исторически.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Ансамбль монастыря называют впечатляющим.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Часы работы не проверены — уточняйте перед поездкой.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 110
-  },
-  {
-   "id": "pekhra-yakovlevskoe-karyer",
-   "name": "Дзержинский карьер",
-   "coords": {
-    "lat": 55.625,
-    "lon": 37.825
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Дзержинский карьер — несколько искусственных озёр, окружённых насыпями. Когда-то здесь добывали песок, а потом карьер в основном затопило.",
-    "Сегодня это популярное место отдыха у воды — неожиданно живописное для промышленной окраины."
-   ],
-   "facts": [
-    {
-     "text": "Дзержинский карьер — несколько искусственных озёр, окружённых насыпями.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Здесь добывали песок, затем карьер в основном затопило.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Карьер популярен как место отдыха у воды.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Купание в карьере не регламентировано — по найденным источникам это не проверено.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Город Дзержинский вырос из монастырской слободы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 120
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -714,123 +307,51 @@
    "url": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/"
   },
   {
-   "title": "Усадьба Горенки — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/Пехра-Яковлевское"
   },
   {
-   "title": "Горенки — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/93607"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/56702"
   },
   {
-   "title": "Жить в Балашихе — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/"
+   "title": "Источник: teletype.in",
+   "url": "https://teletype.in/@apfound/BddZKeDcasY"
   },
   {
-   "title": "Реутов — Академик (зеркало статьи Википедии)",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/27658"
-  },
-  {
-   "title": "История Реутова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/reutov/istoriia"
-  },
-  {
-   "title": "Реутов — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/reutov/"
-  },
-  {
-   "title": "Город дня — Реутов (360.ru)",
-   "url": "https://360.ru/news/obschestvo/gorod-dnja--reutov-11717/"
-  },
-  {
-   "title": "Новости Реутова — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/memorial-slavy-otkryli-v-reutove-posle-rekonstruktsii-xl/"
-  },
-  {
-   "title": "Церковь Казанской иконы в Реутове — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BA%D0%BE%D0%BD%D1%8B_%D0%91%D0%BE%D0%B6%D0%B8%D0%B5%D0%B9_%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8_%D0%B2_%D0%A0%D0%B5%D1%83%D1%82%D0%BE%D0%B2%D0%B5"
-  },
-  {
-   "title": "Озёра Москвы — АиФ",
-   "url": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy"
-  },
-  {
-   "title": "Косино — Путевка.ком",
-   "url": "https://www.putevka.com/trip/russia/moscow/108159"
-  },
-  {
-   "title": "Косино-Ухтомский — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/kosino-uhtomskij/"
-  },
-  {
-   "title": "Усадьба «Белая Дача» — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB"
-  },
-  {
-   "title": "Котельники — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kotelniki/"
-  },
-  {
-   "title": "Котельники — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/59731"
-  },
-  {
-   "title": "Казанский храм (Котельники) — Азбука паломника",
-   "url": "https://azbyka.ru/palomnik/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9A%D0%BE%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B8)"
-  },
-  {
-   "title": "История «Белой Дачи» — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/zhit-v-kotelnikah-est-svezhie-salaty-s-beloj-dachi-i-ezdit-na-metro-xl/"
-  },
-  {
-   "title": "Открытие станции «Котельники» — mos.ru",
-   "url": "https://www.mos.ru/news/item/1186073"
-  },
-  {
-   "title": "Николо-Угрешский монастырь — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Николо-Угрешский монастырь — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Дзержинский — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9"
+   "title": "Источник: finance.rambler.ru",
+   "url": "https://finance.rambler.ru/economics/51353861-o-pobeditele-pugacheva-knyaze-golitsyne/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.819431,
-     55.625
+     37.950408,
+     55.788
     ],
     [
-     37.820177,
-     55.623428
+     37.951157,
+     55.786428
     ],
     [
-     37.822216,
-     55.622277
+     37.953204,
+     55.785277
     ],
     [
-     37.825,
-     55.621856
+     37.959204,
+     55.784277
     ],
     [
-     37.827784,
-     55.622277
+     37.962,
+     55.783856
     ],
     [
-     37.848785,
-     55.627277
-    ],
-    [
-     37.850823,
-     55.628428
+     37.964796,
+     55.784277
     ],
     [
      37.966843,
@@ -841,44 +362,40 @@
      55.787
     ],
     [
-     37.966843,
-     55.788572
+     37.969592,
+     55.792
     ],
     [
-     37.963843,
-     55.790572
+     37.964595,
+     55.8088
     ],
     [
-     37.961796,
-     55.791723
+     37.963845,
+     55.810372
+    ],
+    [
+     37.961797,
+     55.811523
     ],
     [
      37.959,
-     55.792144
+     55.811944
     ],
     [
-     37.88,
-     55.800644
+     37.956203,
+     55.811523
     ],
     [
-     37.877203,
-     55.800223
+     37.954155,
+     55.810372
     ],
     [
-     37.875156,
-     55.799072
+     37.953405,
+     55.8088
     ],
     [
-     37.85816,
-     55.769372
-    ],
-    [
-     37.857411,
-     55.7678
-    ],
-    [
-     37.819431,
-     55.625
+     37.950408,
+     55.788
     ]
    ]
   ]

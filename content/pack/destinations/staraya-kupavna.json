@@ -13,10 +13,18 @@
   "Старая Купавна — одно из древнейших мест на востоке Подмосковья. Купавну упоминает духовная грамота великого князя Симеона Гордого 1348–1353 годов как вотчинное село.",
   "С XVIII века здесь работала шёлковая, затем суконная мануфактура — вокруг неё сложились фабричная слобода и пруд. В XX веке рядом выросло химико-фармацевтическое предприятие «Акрихин».",
   "Главный памятник — Троицкий храм 1751 года; есть и церковь Рождества Богородицы XIX века. Городской музей вырос из заводского музея трудовой славы «Акрихина».",
-  "Свои места маршрута: «Троицкий храм 1751 года», «Купавинская фабрика и пруд», «Музей в центре культуры «Акрихин»». По пути маршрут заходит и к соседям: Монино (музей ВВС) — «Центральный музей ВВС», «Посёлок Монино»; Лосино-Петровский и Глинки — «Собор Николая Чудотворца», «Клязьма у Глинок»; Гребнево — «Храм и пруды»; Фрязино — «НПП «Исток»»; Щёлково — «Набережная Клязьмы».",
-  "Маршрут линейный, около 45 км и 10 точек. Финиш — Станция «Щёлково» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Купавинская фабрика и пруд», «Купавинский пруд», «Суконная фабрика — история», «Музей в центре культуры «Акрихин»», «Троицкий храм 1751 года». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Остановка «Старая Купавна» (Автобусы до станций Купавна и Электроугли). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Остановка «Старая Купавна»",
+  "coords": {
+   "lat": 55.8092,
+   "lon": 38.1755
+  },
+  "transport": "Автобусы до станций Купавна и Электроугли"
+ },
+ "endPoint": {
   "name": "Остановка «Старая Купавна»",
   "coords": {
    "lat": 55.809,
@@ -24,73 +32,17 @@
   },
   "transport": "Автобусы от станций Купавна и Электроугли, от Ногинска — уточняйте"
  },
- "endPoint": {
-  "name": "Станция «Щёлково»",
-  "coords": {
-   "lat": 55.9203,
-   "lon": 37.9935
-  },
-  "transport": "Электрички Ярославского направления"
- },
  "route": {
-  "distanceKm": 45.0,
-  "durationH": 7.1,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 2.8,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "staraya-kupavna-troitsky",
-   "name": "Троицкий храм 1751 года",
-   "coords": {
-    "lat": 55.81,
-    "lon": 38.174
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Троицкий храм 1751 года — старейшая постройка Купавны и главный ориентир города.",
-    "Сама Купавна куда старше: в духовной грамоте Симеона Гордого 1348–1353 годов она уже названа вотчинным селом, которое князь завещал наследникам. Следующая точка маршрута — «Купавинская фабрика и пруд»."
-   ],
-   "facts": [
-    {
-     "text": "Троицкий храм построен в 1751 году.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": true
-    },
-    {
-     "text": "Купавна упомянута в духовной грамоте Симеона Гордого 1348–1353 годов.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
-     "verified": true
-    },
-    {
-     "text": "В то время Купавна была вотчинным селом.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
-     "verified": true
-    },
-    {
-     "text": "В городе есть церковь Рождества Пресвятой Богородицы XIX века.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%9A%D1%83%D0%BF%D0%B0%D0%B2%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Храм действующий — по найденным источникам не уточнено.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "staraya-kupavna-fabrika",
    "name": "Купавинская фабрика и пруд",
@@ -136,8 +88,70 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "staraya-kupavna-prud",
+   "name": "Купавинский пруд",
+   "coords": {
+    "lat": 55.808,
+    "lon": 38.18
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Главная природная достопримечательность — Купавинский пруд (озеро Купавна): вдоль него гуляют и катаются на лодках.",
+    "Вокруг — благоустроенные скверы, удобное место для привала. Следующая точка маршрута — «Суконная фабрика — история»."
+   ],
+   "facts": [
+    {
+     "text": "Купавинский пруд — главная достопримечательность, здесь гуляют и катаются на лодках.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%9A%D1%83%D0%BF%D0%B0%D0%B2%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Вдоль пруда — благоустроенные скверы.",
+     "sourceUrl": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-staroy-kupavne/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "staraya-kupavna-sukno",
+   "name": "Суконная фабрика — история",
+   "coords": {
+    "lat": 55.805,
+    "lon": 38.175
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Купавинская суконная фабрика основана в XVIII веке и считается одной из старейших в России; она поставляла сукно императорскому двору и армии.",
+    "Позже Купавна стала центром шёлкового, затем суконного и химико-фармацевтического производства."
+   ],
+   "facts": [
+    {
+     "text": "Купавинская суконная фабрика основана в XVIII веке и поставляла сукно двору и армии.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%9A%D1%83%D0%BF%D0%B0%D0%B2%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Купавна с XVIII века — центр шёлкового, суконного и химико-фармацевтического производства.",
+     "sourceUrl": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-staroy-kupavne/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "staraya-kupavna-akrikhin",
@@ -182,346 +196,56 @@
    "openingHoursNote": "Часы работы не проверены.",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "staraya-kupavna-muzey",
-   "name": "Центральный музей ВВС",
+   "id": "staraya-kupavna-troitsky",
+   "name": "Троицкий храм 1751 года",
    "coords": {
-    "lat": 55.838,
-    "lon": 38.17
+    "lat": 55.81,
+    "lon": 38.174
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 120,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
    "guideStory": [
-    "Центральный музей ВВС создан 28 ноября 1958 года и принял первых посетителей 23 февраля 1960 года. Под открытым небом и в ангарах стоят самолёты от первых аэропланов до реактивных истребителей.",
-    "Фонды насчитывают десятки тысяч единиц: «Коммерсант» писал о 37 тысячах, а «Новая газета» в 2016 году — о более чем 50 тысячах. Музей принимал свыше 200 тысяч человек в год.",
-    "В 2018 году предлагали перевезти экспозицию в парк «Патриот», и авиаконструкторы предупреждали, что самолёты могут этого не пережить. Что с музеем сейчас и как он работает — проверьте заранее."
+    "Троицкий храм 1751 года — старейшая постройка Купавны и главный ориентир города.",
+    "Сама Купавна куда старше: в духовной грамоте Симеона Гордого 1348–1353 годов она уже названа вотчинным селом, которое князь завещал наследникам. Финиш — Остановка «Старая Купавна»: Автобусы от станций Купавна и Электроугли, от Ногинска — уточняйте."
    ],
    "facts": [
     {
-     "text": "Музей создан 28 ноября 1958 года, первых посетителей принял 23 февраля 1960 года.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
+     "text": "Троицкий храм построен в 1751 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
      "verified": true
     },
     {
-     "text": "Фонды музея — более 37 тысяч единиц (по данным «Коммерсанта»).",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
+     "text": "Купавна упомянута в духовной грамоте Симеона Гордого 1348–1353 годов.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
      "verified": true
     },
     {
-     "text": "В 2016 году писали о собрании более 50 тысяч единиц хранения.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": false
-    },
-    {
-     "text": "Музей принимал более 200 тысяч посетителей в год (данные 2016 года).",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
+     "text": "В то время Купавна была вотчинным селом.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
      "verified": true
     },
     {
-     "text": "В 2018 году обсуждался перенос музея в парк «Патриот».",
-     "sourceUrl": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov",
+     "text": "В городе есть церковь Рождества Пресвятой Богородицы XIX века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%9A%D1%83%D0%BF%D0%B0%D0%B2%D0%BD%D0%B0",
      "verified": true
     },
     {
-     "text": "В административном здании музея был пожар, часть моделей первых самолётов сгорела.",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Режим работы и доступ меняются — проверьте на сайте музея перед поездкой.",
-   "ticketNote": "Билеты — по правилам музея; уточняйте.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "staraya-kupavna-posyolok",
-   "name": "Посёлок Монино",
-   "coords": {
-    "lat": 55.84,
-    "lon": 38.19
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Монино — посёлок при академии и аэродроме. До музея ВВС добираются электричкой с Ярославского вокзала до станции Монино.",
-    "Посёлок живёт рядом с военной академией и аэродромом, поэтому часть территорий здесь закрыта, а дорогу к музею лучше выбирать по указателям."
-   ],
-   "facts": [
-    {
-     "text": "До музея можно добраться на электричке от Ярославского вокзала до станции Монино.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Музей находится на территории Военно-воздушной академии имени Гагарина.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Музей ВВС — главная достопримечательность Монина.",
-     "sourceUrl": "https://t-j.ru/must-see-muzei-vvs/",
-     "verified": true
-    },
-    {
-     "text": "Границы закрытых территорий посёлка мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Монино — рабочий посёлок в Щёлковском округе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
+     "text": "Храм действующий — по найденным источникам не уточнено.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
      "verified": false
     }
    ],
    "warnings": [
-    "Территория академии — режимная: только по разрешённым маршрутам."
+    "Действующий храм."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "staraya-kupavna-sobor",
-   "name": "Собор Николая Чудотворца",
-   "coords": {
-    "lat": 55.871,
-    "lon": 38.2
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Город назван по Лосиной кожевенной фабрике Петра I — казённому предприятию, шившему амуницию для армии. Вокруг фабрики выросла рабочая слобода.",
-    "По одной из версий, рабочие ходатайствовали перед Александром I о строительстве нового храма. Классический собор Николая Чудотворца освятил Иоанн Кронштадтский."
-   ],
-   "facts": [
-    {
-     "text": "Название города связано с казённой Лосиной кожевенной фабрикой Петра I.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "В XIX веке кожевенное производство сменили текстильные предприятия.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "По одной из версий, рабочие ходатайствовали перед Александром I о новой церкви.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": false
-    },
-    {
-     "text": "Собор Николая Чудотворца освятил Иоанн Кронштадтский.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский стоит на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "staraya-kupavna-klyazma",
-   "name": "Клязьма у Глинок",
-   "coords": {
-    "lat": 55.88,
-    "lon": 38.18
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Усадьба Брюса стоит между двумя реками — Клязьмой и Ворей. Место выбрано не случайно: тихий угол для учёного в отставке.",
-    "Отсюда по просёлкам и улицам едем к платформе Монино — следующей точке спирали.",
-    "Маршрут Лосино-Петровского и Глинок завершён у железной дороги: от фабрики Петра к усадьбе его сподвижника."
-   ],
-   "facts": [
-    {
-     "text": "Брюс купил землю между Клязьмой и Ворей.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский — город на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": true
-    },
-    {
-     "text": "Глинково — населённый пункт в Московской области.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Удобство места для наблюдений Брюса — версия, а не факт.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": false
-    },
-    {
-     "text": "Рядом находится Монино.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "staraya-kupavna-prudy",
-   "name": "Храм и пруды",
-   "coords": {
-    "lat": 55.9495,
-    "lon": 38.161
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "У усадьбы есть храм; его историю мы в найденных источниках не нашли и поэтому не пересказываем.",
-    "В Гребневе бывал Державин, а Александр Грин приезжал сюда поправить здоровье. Вокруг — пруды усадебного парка. Следующая точка маршрута — «НПП «Исток»»."
-   ],
-   "facts": [
-    {
-     "text": "В усадьбе бывал Державин.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "Александр Грин приезжал сюда поправить здоровье.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "История храма в найденных источниках не раскрыта.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Гребнево описано на KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты прудов приблизительные.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "staraya-kupavna-istok",
-   "name": "НПП «Исток»",
-   "coords": {
-    "lat": 55.958,
-    "lon": 38.05
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "НПП «Исток» — крупнейшее и градообразующее предприятие наукограда, наследник послевоенного НИИ-160. Здесь занимаются электроникой сверхвысоких частот.",
-    "Во Фрязине собираются создать национальный центр СВЧ-электроники в рамках особой экономической зоны."
-   ],
-   "facts": [
-    {
-     "text": "«Исток» — крупнейшее и градообразующее предприятие Фрязина.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "После войны здесь развивался НИИ-160.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
-     "verified": true
-    },
-    {
-     "text": "Во Фрязине создадут национальный центр СВЧ-электроники в рамках ОЭЗ.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/natsionalnyj-tsentr-svch-elektroniki-rf-sozdadut-vo-fryazine-v-ramkah-oez-xl/",
-     "verified": true
-    },
-    {
-     "text": "НПП «Исток» описано в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/NPP_Istok",
-     "verified": true
-    },
-    {
-     "text": "Численность работников предприятия в найденных источниках не указана.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Режимное предприятие: не фотографировать проходные."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "staraya-kupavna-klyazma-2",
-   "name": "Набережная Клязьмы",
-   "coords": {
-    "lat": 55.924,
-    "lon": 38.005
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Щёлково стоит на берегах Клязьмы — река отражена и в символике городского флага.",
-    "Река давала фабрикам воду для промывки и окраски тканей, а теперь даёт горожанам место для прогулок и рыбалки.",
-    "Вдоль Клязьмы возвращаемся к станции: петля по фабричному городу замкнута, и река проводит нас до самой железной дороги."
-   ],
-   "facts": [
-    {
-     "text": "Город расположен на Клязьме, что отражено в символике флага.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — промышленный город с текстильной историей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-schelkovo-216393/",
-     "verified": true
-    },
-    {
-     "text": "Набережная — место прогулок горожан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/schyolkovo/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Щёлкова описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — центр городского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -562,79 +286,23 @@
    "url": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf"
   },
   {
-   "title": "Музей ВВС — Новая газета",
-   "url": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%9A%D1%83%D0%BF%D0%B0%D0%B2%D0%BD%D0%B0"
   },
   {
-   "title": "Музей ВВС — Коммерсантъ",
-   "url": "https://www.kommersant.ru/doc/602688"
-  },
-  {
-   "title": "Перенос музея — Meduza",
-   "url": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov"
-  },
-  {
-   "title": "Монино — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE"
-  },
-  {
-   "title": "Усадьба Глинки — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8"
-  },
-  {
-   "title": "Лосино-Петровский — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/"
-  },
-  {
-   "title": "Экскурсия «Брюс всемогущий» — Sputnik8",
-   "url": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah"
-  },
-  {
-   "title": "Гребнево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
-  },
-  {
-   "title": "Судьба Гребнева — 360",
-   "url": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/"
-  },
-  {
-   "title": "История Фрязина — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia"
-  },
-  {
-   "title": "Фрязино — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/"
-  },
-  {
-   "title": "НПП «Исток» — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB"
-  },
-  {
-   "title": "История Щёлкова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia"
-  },
-  {
-   "title": "Щёлково — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/shchelkovo/history"
-  },
-  {
-   "title": "Флаг Щёлкова — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-staroy-kupavne/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.987889,
-     55.9203
-    ],
-    [
-     37.988641,
-     55.918728
+     38.164405,
+     55.812
     ],
     [
      38.165154,
@@ -642,75 +310,59 @@
     ],
     [
      38.170155,
-     55.807428
+     55.803428
     ],
     [
      38.172203,
-     55.806277
+     55.802277
     ],
     [
-     38.176203,
-     55.805277
+     38.175,
+     55.801856
     ],
     [
-     38.179,
-     55.804856
+     38.177797,
+     55.802277
     ],
     [
-     38.181797,
-     55.805277
+     38.179845,
+     55.803428
     ],
     [
-     38.183845,
+     38.184845,
      55.806428
     ],
     [
-     38.184595,
+     38.185595,
      55.808
     ],
     [
-     38.195599,
-     55.84
+     38.184845,
+     55.809572
     ],
     [
-     38.205604,
-     55.871
+     38.182797,
+     55.810723
     ],
     [
-     38.204853,
-     55.872572
+     38.172798,
+     55.814723
     ],
     [
-     38.165863,
-     55.951072
+     38.17,
+     55.815144
     ],
     [
-     38.163808,
-     55.952223
+     38.167202,
+     55.814723
     ],
     [
-     38.161,
-     55.952644
+     38.165154,
+     55.813572
     ],
     [
-     38.05,
-     55.961144
-    ],
-    [
-     38.047192,
-     55.960723
-    ],
-    [
-     38.045136,
-     55.959572
-    ],
-    [
-     37.988641,
-     55.921872
-    ],
-    [
-     37.987889,
-     55.9203
+     38.164405,
+     55.812
     ]
    ]
   ]

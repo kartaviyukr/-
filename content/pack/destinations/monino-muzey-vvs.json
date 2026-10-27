@@ -13,8 +13,8 @@
   "Монино знают по одному адресу — Центральному музею Военно-воздушных сил. Его создали 28 ноября 1958 года, а первых посетителей он принял 23 февраля 1960 года.",
   "Музей стоит на территории Военно-воздушной академии имени Гагарина. Коллекция охватывает авиацию от начала XX века до современных истребителей; в фондах — десятки тысяч единиц хранения, источники называют и 37, и 50 тысяч.",
   "По данным 2016 года, музей принимал больше 200 тысяч человек в год. В 2018 году обсуждали перенос экспозиции в парк «Патриот», против чего выступали авиаконструкторы; актуальное положение уточняйте перед поездкой.",
-  "Свои места маршрута: «Посёлок Монино», «Центральный музей ВВС». По пути маршрут заходит и к соседям: Лосино-Петровский и Глинки — «Собор Николая Чудотворца», «Клязьма у Глинок»; Гребнево — «Храм и пруды»; Фрязино — «НПП «Исток»»; Щёлково — «Набережная Клязьмы»; Ивантеевка — «Река Уча и старые фабрики», «Историко-краеведческий музей».",
-  "Маршрут линейный, около 51 км и 9 точек. Финиш — Станция «Ивантеевка» (Электрички Ярославского направления (ветка на Фрязино)), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Монино», «Посёлок Монино», «Центральный музей ВВС», «Открытая стоянка самолётов», «Военно-воздушная академия». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 8 км: старт и финиш — Станция «Монино» (Электрички с Ярославского вокзала до станции Монино). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Монино»",
@@ -25,24 +25,55 @@
   "transport": "Электрички с Ярославского вокзала до станции Монино"
  },
  "endPoint": {
-  "name": "Станция «Ивантеевка»",
+  "name": "Станция «Монино»",
   "coords": {
-   "lat": 55.974,
-   "lon": 37.923
+   "lat": 55.842,
+   "lon": 38.196
   },
-  "transport": "Электрички Ярославского направления (ветка на Фрязино)"
+  "transport": "Электрички с Ярославского вокзала до станции Монино"
  },
  "route": {
-  "distanceKm": 51.0,
-  "durationH": 7.4,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 7.9,
+  "durationH": 3.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "monino-muzey-vvs-stantsiya",
+   "name": "Станция Монино",
+   "coords": {
+    "lat": 55.842,
+    "lon": 38.194
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Самый простой путь в Монино — электричка с Ярославского вокзала до одноимённой станции.",
+    "Музей называют градообразующим для 22-тысячного посёлка. Следующая точка маршрута — «Посёлок Монино». Формат остановки — «проезжаем», заложите на неё около 5 минут."
+   ],
+   "facts": [
+    {
+     "text": "До Монина удобнее всего ехать электричкой с Ярославского вокзала.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/tsentralnyj-muzej-voenno-vozdushnyh-sil",
+     "verified": true
+    },
+    {
+     "text": "Музей — градообразующее предприятие 22-тысячного Монина.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2016/09/02/69732-gotovitsya-aviaudar-po-monino",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "monino-muzey-vvs-posyolok",
    "name": "Посёлок Монино",
@@ -88,8 +119,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "monino-muzey-vvs-muzey",
@@ -141,338 +172,70 @@
    "ticketNote": "Билеты — по правилам музея; уточняйте.",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "monino-muzey-vvs-sobor",
-   "name": "Собор Николая Чудотворца",
+   "id": "monino-muzey-vvs-stoyanka",
+   "name": "Открытая стоянка самолётов",
    "coords": {
-    "lat": 55.871,
+    "lat": 55.837,
+    "lon": 38.215
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 60,
+   "guideStory": [
+    "Центральный музей ВВС — один из крупнейших авиационных музеев: на открытых площадках стоят почти 200 летательных аппаратов, а всего экспонатов — около 54 тысяч.",
+    "Обходить стоянку — дело на час-два. Велосипед оставляем у входа. Следующая точка маршрута — «Военно-воздушная академия»."
+   ],
+   "facts": [
+    {
+     "text": "В музее выставлено почти 200 летательных аппаратов, всего экспонатов — 54 тысячи.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/tsentralnyj-muzej-voenno-vozdushnyh-sil",
+     "verified": true
+    },
+    {
+     "text": "Посещаемость музея — свыше 200 тысяч человек в год.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2016/09/02/69732-gotovitsya-aviaudar-po-monino",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "monino-muzey-vvs-akademiya",
+   "name": "Военно-воздушная академия",
+   "coords": {
+    "lat": 55.84,
     "lon": 38.2
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "visitMinutes": 10,
    "guideStory": [
-    "Город назван по Лосиной кожевенной фабрике Петра I — казённому предприятию, шившему амуницию для армии. Вокруг фабрики выросла рабочая слобода.",
-    "По одной из версий, рабочие ходатайствовали перед Александром I о строительстве нового храма. Классический собор Николая Чудотворца освятил Иоанн Кронштадтский."
+    "Музей ВВС расположен на территории Военно-воздушной академии имени Гагарина, в 23 км от Москвы, по адресу ул. Музейная, 1.",
+    "Музей создан 28 ноября 1958 года, а первых посетителей принял 23 февраля 1960 года. Территория академии закрыта — смотрим снаружи."
    ],
    "facts": [
     {
-     "text": "Название города связано с казённой Лосиной кожевенной фабрикой Петра I.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
+     "text": "Музей находится на территории Военно-воздушной академии им. Гагарина.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/tsentralnyj-muzej-voenno-vozdushnyh-sil",
      "verified": true
     },
     {
-     "text": "В XIX веке кожевенное производство сменили текстильные предприятия.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "По одной из версий, рабочие ходатайствовали перед Александром I о новой церкви.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": false
-    },
-    {
-     "text": "Собор Николая Чудотворца освятил Иоанн Кронштадтский.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский стоит на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
+     "text": "Музей создан 28 ноября 1958 года, первых посетителей принял 23 февраля 1960 года.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2016/09/02/69732-gotovitsya-aviaudar-po-monino",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "monino-muzey-vvs-klyazma",
-   "name": "Клязьма у Глинок",
-   "coords": {
-    "lat": 55.88,
-    "lon": 38.18
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Усадьба Брюса стоит между двумя реками — Клязьмой и Ворей. Место выбрано не случайно: тихий угол для учёного в отставке.",
-    "Отсюда по просёлкам и улицам едем к платформе Монино — следующей точке спирали.",
-    "Маршрут Лосино-Петровского и Глинок завершён у железной дороги: от фабрики Петра к усадьбе его сподвижника."
-   ],
-   "facts": [
-    {
-     "text": "Брюс купил землю между Клязьмой и Ворей.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский — город на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": true
-    },
-    {
-     "text": "Глинково — населённый пункт в Московской области.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Удобство места для наблюдений Брюса — версия, а не факт.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
-     "verified": false
-    },
-    {
-     "text": "Рядом находится Монино.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "monino-muzey-vvs-prudy",
-   "name": "Храм и пруды",
-   "coords": {
-    "lat": 55.9495,
-    "lon": 38.161
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "У усадьбы есть храм; его историю мы в найденных источниках не нашли и поэтому не пересказываем.",
-    "В Гребневе бывал Державин, а Александр Грин приезжал сюда поправить здоровье. Вокруг — пруды усадебного парка. Следующая точка маршрута — «НПП «Исток»»."
-   ],
-   "facts": [
-    {
-     "text": "В усадьбе бывал Державин.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "Александр Грин приезжал сюда поправить здоровье.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "История храма в найденных источниках не раскрыта.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Гребнево описано на KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты прудов приблизительные.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "monino-muzey-vvs-istok",
-   "name": "НПП «Исток»",
-   "coords": {
-    "lat": 55.958,
-    "lon": 38.05
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "НПП «Исток» — крупнейшее и градообразующее предприятие наукограда, наследник послевоенного НИИ-160. Здесь занимаются электроникой сверхвысоких частот.",
-    "Во Фрязине собираются создать национальный центр СВЧ-электроники в рамках особой экономической зоны."
-   ],
-   "facts": [
-    {
-     "text": "«Исток» — крупнейшее и градообразующее предприятие Фрязина.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "После войны здесь развивался НИИ-160.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
-     "verified": true
-    },
-    {
-     "text": "Во Фрязине создадут национальный центр СВЧ-электроники в рамках ОЭЗ.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/natsionalnyj-tsentr-svch-elektroniki-rf-sozdadut-vo-fryazine-v-ramkah-oez-xl/",
-     "verified": true
-    },
-    {
-     "text": "НПП «Исток» описано в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/NPP_Istok",
-     "verified": true
-    },
-    {
-     "text": "Численность работников предприятия в найденных источниках не указана.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Режимное предприятие: не фотографировать проходные."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "monino-muzey-vvs-klyazma-2",
-   "name": "Набережная Клязьмы",
-   "coords": {
-    "lat": 55.924,
-    "lon": 38.005
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Щёлково стоит на берегах Клязьмы — река отражена и в символике городского флага.",
-    "Река давала фабрикам воду для промывки и окраски тканей, а теперь даёт горожанам место для прогулок и рыбалки.",
-    "Вдоль Клязьмы возвращаемся к станции: петля по фабричному городу замкнута, и река проводит нас до самой железной дороги."
-   ],
-   "facts": [
-    {
-     "text": "Город расположен на Клязьме, что отражено в символике флага.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — промышленный город с текстильной историей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-schelkovo-216393/",
-     "verified": true
-    },
-    {
-     "text": "Набережная — место прогулок горожан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/schyolkovo/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Щёлкова описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — центр городского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "monino-muzey-vvs-ucha",
-   "name": "Река Уча и старые фабрики",
-   "coords": {
-    "lat": 55.976,
-    "lon": 37.93
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Промышленная история Ивантеевки связана с рекой: по данным краеведов, бумажную мельницу на Уче построили ещё в середине XVI века.",
-    "В 1831 году имение Баташёвых вместе с тремя фабриками купил купец И. А. Щёкин и построил бумагопрядильную фабрику. В 1875 году появилась красильно-аппретурная фабрика."
-   ],
-   "facts": [
-    {
-     "text": "Музейная экспозиция связывает начало промышленной истории с бумажной мельницей на Уче середины XVI века.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/",
-     "verified": true
-    },
-    {
-     "text": "В 1831 году имение Баташёвых с тремя фабриками было продано купцу И. А. Щёкину.",
-     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёкин построил бумагопрядильную фабрику.",
-     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "В 1875 году построили красильно-аппретурную фабрику.",
-     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Точное место первой бумажной мельницы мы не сверяли.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "monino-muzey-vvs-muzey-2",
-   "name": "Историко-краеведческий музей",
-   "coords": {
-    "lat": 55.972,
-    "lon": 37.92
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Городской историко-краеведческий музей открыли в 1998 году. Он рассказывает о промышленных этапах Ивантеевки и о биографиях её жителей.",
-    "Здесь лучше всего видно, что город — это череда фабрик: от бумажной мельницы XVI века до трикотажного комбината XX века."
-   ],
-   "facts": [
-    {
-     "text": "Историко-краеведческий музей Ивантеевки открыт в 1998 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Музей раскрывает этапы промышленной истории и биографии жителей.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/",
-     "verified": true
-    },
-    {
-     "text": "Поселение упоминается около 1586 года под названием Вантеево.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Часы работы музея мы не проверяли.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia",
-     "verified": false
-    },
-    {
-     "text": "В 1938 году посёлок получил статус города.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Часы работы не проверены.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -517,83 +280,31 @@
    "url": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE"
   },
   {
-   "title": "Усадьба Глинки — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8"
+   "title": "Источник: kp.ru",
+   "url": "https://www.kp.ru/russia/podmoskove/mesta/tsentralnyj-muzej-voenno-vozdushnyh-sil"
   },
   {
-   "title": "Лосино-Петровский — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/"
+   "title": "Источник: novayagazeta.ru",
+   "url": "https://novayagazeta.ru/articles/2016/09/02/69732-gotovitsya-aviaudar-po-monino"
   },
   {
-   "title": "Экскурсия «Брюс всемогущий» — Sputnik8",
-   "url": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah"
-  },
-  {
-   "title": "Гребнево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
-  },
-  {
-   "title": "Судьба Гребнева — 360",
-   "url": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/"
-  },
-  {
-   "title": "История Фрязина — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia"
-  },
-  {
-   "title": "Фрязино — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/"
-  },
-  {
-   "title": "НПП «Исток» — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB"
-  },
-  {
-   "title": "История Щёлкова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia"
-  },
-  {
-   "title": "Щёлково — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/shchelkovo/history"
-  },
-  {
-   "title": "Флаг Щёлкова — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0"
-  },
-  {
-   "title": "История Ивантеевки — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia"
-  },
-  {
-   "title": "Ивантеевка — Циклопедия",
-   "url": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0"
-  },
-  {
-   "title": "Ивантеевка — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/"
+   "title": "Источник: t-j.ru",
+   "url": "https://t-j.ru/must-see-muzei-vvs/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.914382,
-     55.972
+     38.164401,
+     55.838
     ],
     [
-     37.915134,
-     55.970428
-    ],
-    [
-     38.00014,
-     55.922428
-    ],
-    [
-     38.002194,
-     55.921277
+     38.165151,
+     55.836428
     ],
     [
      38.1672,
@@ -604,68 +315,56 @@
      55.834856
     ],
     [
-     38.19,
-     55.836856
+     38.215,
+     55.833856
     ],
     [
-     38.1928,
-     55.837277
+     38.217799,
+     55.834277
+    ],
+    [
+     38.219849,
+     55.835428
+    ],
+    [
+     38.220599,
+     55.837
+    ],
+    [
+     38.219849,
+     55.838572
+    ],
+    [
+     38.217799,
+     55.839723
     ],
     [
      38.1988,
-     55.839277
+     55.844723
     ],
     [
-     38.200849,
-     55.840428
+     38.196,
+     55.845144
     ],
     [
-     38.2016,
-     55.842
+     38.194,
+     55.845144
     ],
     [
-     38.205604,
-     55.871
+     38.1912,
+     55.844723
     ],
     [
-     38.204853,
-     55.872572
+     38.1672,
+     55.840723
     ],
     [
-     38.165863,
-     55.951072
+     38.165151,
+     55.839572
     ],
     [
-     38.163808,
-     55.952223
-    ],
-    [
-     38.161,
-     55.952644
-    ],
-    [
-     37.93,
-     55.979144
-    ],
-    [
-     37.92719,
-     55.978723
-    ],
-    [
-     37.920191,
-     55.976723
-    ],
-    [
-     37.918134,
-     55.975572
-    ],
-    [
-     37.915134,
-     55.973572
-    ],
-    [
-     37.914382,
-     55.972
+     38.164401,
+     55.838
     ]
    ]
   ]

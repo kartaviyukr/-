@@ -13,8 +13,8 @@
   "Железнодорожный — бывший город, ставший в 2015 году частью Балашихи. Его история — история станции: Железнодорожная стоит на линии Москва — Нижний Новгород примерно в 10 км к востоку от МКАД.",
   "Городом Железнодорожный был с 1952 года, областного подчинения — с 1960-го. После включения в Балашиху здесь утвердили восемь микрорайонов: Железнодорожный, Керамик, Купавна, Кучино, Ольгино, Павлино, Новое Павлино и Саввино.",
   "С этими местами связывают и литературу: популярные статьи рассказывают, что станция, на которой Анна Каренина бросилась под поезд, теперь остановка МЦД под другим именем. Подтвердить детали по найденным источникам мы не смогли, поэтому упоминаем это как версию.",
-  "Свои места маршрута: «Краеведческий музей», «Саввино». По пути маршрут заходит и к соседям: Пехра-Яковлевское — «Берег Пехорки»; Горенки — «Усадьба Горенки: главный дом»; Реутов — «Монумент крылатой ракете «Метеорит»», «Площадь Академика Челомея и ДК «Мир»»; Косино (три озера) — «Успенская церковь в Косине», «Чёрное озеро»; Котельники — «Сосновая улица и Кузьминский лесопарк», «Усадьба «Белая Дача»»; Дзержинский (Николо-Угрешский) — «Угрешский историко-краеведческий музей», «Дзержинский карьер».",
-  "Маршрут линейный, около 57 км и 12 точек. Финиш — Метро «Котельники» (Метро «Котельники», Таганско-Краснопресненская линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Железнодорожная», «Краеведческий музей», «Саввино», «Преображенская церковь в Саввине», «Храм Новомучеников в Кучине», «Дом-музей Андрея Белого в Кучине». Все они — в самом городе или рядом с ним.",
+  "Маршрут линейный, около 9 км: старт — Станция «Железнодорожная», финиш — Платформа «Ольгино» (МЦД-4). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Железнодорожная»",
@@ -25,24 +25,70 @@
   "transport": "Электрички Горьковского направления / МЦД-4"
  },
  "endPoint": {
-  "name": "Метро «Котельники»",
+  "name": "Платформа «Ольгино»",
   "coords": {
-   "lat": 55.674,
-   "lon": 37.859
+   "lat": 55.748,
+   "lon": 37.985
   },
-  "transport": "Метро «Котельники», Таганско-Краснопресненская линия"
+  "transport": "МЦД-4"
  },
  "route": {
-  "distanceKm": 57.0,
-  "durationH": 8.2,
-  "difficulty": "сложный",
+  "distanceKm": 9.0,
+  "durationH": 2.1,
+  "difficulty": "лёгкий",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "zheleznodorozhnyy-stantsiya",
+   "name": "Станция Железнодорожная",
+   "coords": {
+    "lat": 55.752,
+    "lon": 38.008
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Станция Железнодорожная на линии Москва — Нижний Новгород дала имя всему городу. Она находится примерно в 10 км к востоку от МКАД.",
+    "В 2025 году рядом открыли платформу Ольгино в рамках МЦД-4, и около 60% пассажиропотока со станции перенаправили туда."
+   ],
+   "facts": [
+    {
+     "text": "Станция Железнодорожная — на линии Москва — Нижний Новгород, в 10 км к востоку от МКАД.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "С 1 июля 2025 года около 60% пассажиропотока перенаправили на платформу Ольгино.",
+     "sourceUrl": "https://riamo.ru/news/transport/60-passazhiropotoka-perenapravyat-s-zheleznodorozhnoj-na-novuyu-platformu-olgino-v-balashihe-xl/",
+     "verified": true
+    },
+    {
+     "text": "Железнодорожный был городом с 1952 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "В 2015 году город включили в состав Балашихи.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Связь станции с сюжетом «Анны Карениной» в найденных источниках не подтверждена.",
+     "sourceUrl": "https://sport24.ru/-/article-na-kakoy-stantsii-anna-karenina-brosilas-pod-poyezd-teper-eto-ostanovka-mtsd-i-u-neye-drugoye-nazvaniye",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "zheleznodorozhnyy-muzey",
    "name": "Краеведческий музей",
@@ -86,8 +132,8 @@
    "openingHoursNote": "Часы работы не проверены.",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "zheleznodorozhnyy-savvino",
@@ -100,7 +146,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Саввино — один из восьми микрорайонов бывшего города, старое село, которое вошло в Железнодорожный.",
-    "Здесь лучше всего видно, как город складывался из сёл и деревень вокруг станции: старые улицы соседствуют с новыми кварталами. Следующая точка маршрута — «Берег Пехорки»."
+    "Здесь лучше всего видно, как город складывался из сёл и деревень вокруг станции: старые улицы соседствуют с новыми кварталами. Следующая точка маршрута — «Преображенская церковь в Саввине»."
    ],
    "facts": [
     {
@@ -132,534 +178,106 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "zheleznodorozhnyy-pekhorka",
-   "name": "Берег Пехорки",
+   "id": "zheleznodorozhnyy-savvino-tserkov",
+   "name": "Преображенская церковь в Саввине",
    "coords": {
-    "lat": 55.787,
-    "lon": 37.962
+    "lat": 55.756,
+    "lon": 38.005
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Под обрывом течёт Пехорка — та самая река, на которой стоит вся Балашиха и её «мельница».",
-    "Историко-краеведческий музей Балашихи разработал экскурсионный маршрут по усадьбе и показывает участникам пять зданий комплекса — если хотите внутрь, договаривайтесь с музеем."
+    "Главный храм Саввина — церковь Преображения Господня 1885 года. Её фаянсовые иконостасы сделали в начале XX века на Конаковском фаянсовом заводе на пожертвования купца Викулы Морозова.",
+    "Саввино — самая древняя из здешних деревень: её упоминают в летописях 1327 года; в XIX веке Морозов основал здесь хлопкопрядильную мануфактуру."
    ],
    "facts": [
     {
-     "text": "Музей Балашихи разработал экскурсионный маршрут по усадьбе.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
+     "text": "Церковь Преображения в Саввине построена в 1885 году.",
+     "sourceUrl": "https://teletype.in/@apfound/mUbw_5YeGbz",
      "verified": true
     },
     {
-     "text": "Экскурсантам показывают пять зданий комплекса.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
+     "text": "Фаянсовые иконостасы выполнены на Конаковском заводе на пожертвования Викулы Морозова.",
+     "sourceUrl": "https://teletype.in/@apfound/mUbw_5YeGbz",
      "verified": true
     },
     {
-     "text": "Усадьба стоит на берегу Пехорки.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A5%D1%80%D0%B0%D0%BC_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F_%D0%B2_%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B5",
+     "text": "Саввино упоминается в летописях 1327 года.",
+     "sourceUrl": "https://teletype.in/@apfound/mUbw_5YeGbz",
      "verified": true
-    },
-    {
-     "text": "Каталог sobory.ru хранит фотографии Преображенской церкви.",
-     "sourceUrl": "https://sobory.ru/photo/56702",
-     "verified": true
-    },
-    {
-     "text": "Возможность купания в Пехорке мы не проверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%85%D1%80%D0%B0-%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "zheleznodorozhnyy-usadba",
-   "name": "Усадьба Горенки: главный дом",
+   "id": "zheleznodorozhnyy-kuchino-khram",
+   "name": "Храм Новомучеников в Кучине",
    "coords": {
-    "lat": 55.7975,
-    "lon": 37.88
+    "lat": 55.762,
+    "lon": 37.985
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 25,
+   "visitMinutes": 10,
    "guideStory": [
-    "Горенки во второй половине XVIII — начале XIX века принадлежали графам Разумовским. До них, по одному из источников, владельцами были князья Долгорукие, построившие в 1719 году церковь и кирпичный дворец.",
-    "Усадьба признана федеральным памятником истории и архитектуры, но о реставрации пока не слышно. В 1970-х здесь был детский санаторий.",
-    "Территория закрыта для свободного входа: смотрим снаружи, а внутрь — только с экскурсией. Иногда здесь проходят события — например, впервые провели выпускной бал."
+    "В Кучине стоит храм Новомучеников и исповедников Церкви Русской — современная церковь бывшего посёлка.",
+    "Кучино было дачным и усадебным местом; сегодня это тихий микрорайон у леса. Следующая точка маршрута — «Дом-музей Андрея Белого в Кучине»."
    ],
    "facts": [
     {
-     "text": "Горенки — усадьба графов Разумовских во второй половине XVIII — начале XIX века.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/93607",
+     "text": "В Кучине есть храм Новомучеников и исповедников Церкви Русской.",
+     "sourceUrl": "https://sobory.ru/photo/24026",
      "verified": true
     },
     {
-     "text": "По одному из источников, князья Долгорукие в 1719 году построили здесь церковь и кирпичный дворец.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
+     "text": "Кучино — один из микрорайонов Железнодорожного.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
      "verified": true
-    },
-    {
-     "text": "Усадьба на шоссе Энтузиастов признана федеральным памятником.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
-     "verified": true
-    },
-    {
-     "text": "В 1970-х, по справочнику, в усадьбе был детский санаторий.",
-     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/092/217.htm",
-     "verified": true
-    },
-    {
-     "text": "В усадьбе впервые провели выпускной бал.",
-     "sourceUrl": "https://riamo.ru/news/kultura/v-balashihe-vpervye-vypusknoj-bal-proveli-v-usadbe-grafov-razumovskih-gorenki",
-     "verified": true
-    },
-    {
-     "text": "Реставрация, по данным одного источника, не запланирована.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
-     "verified": false
     }
-   ],
-   "warnings": [
-    "Территория закрыта для свободного посещения: внутрь — только с экскурсией."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "zheleznodorozhnyy-meteorit",
-   "name": "Монумент крылатой ракете «Метеорит»",
-   "coords": {
-    "lat": 55.7678,
-    "lon": 37.863
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "openingHoursNote": "Монумент на открытой площадке.",
-   "bikeParkingNote": "Можно остановиться на тротуаре рядом, не загораживая проход.",
-   "guideStory": [
-    "От фабричной воды — к ракете. Реутов называют наукоградом не за красивые слова: рядом работает НПО машиностроения, одно из крупнейших ракетно-космических предприятий страны. Глава города однажды сформулировал это прямо: говорим «Реутов» — подразумеваем «НПО машиностроения».",
-    "На постаменте — «Метеорит», советская стратегическая крылатая ракета, которую разрабатывали в начале 1980-х. По справочным материалам, она прошла полный цикл испытаний, но на вооружение так и не поступила — помешала экономика начала 1990-х. Получилась ракета-памятник не победе, а эпохе: огромная работа, оставшаяся без продолжения."
-   ],
-   "facts": [
-    {
-     "text": "«Метеорит» — советская стратегическая крылатая ракета, разрабатывавшаяся в начале 1980-х годов.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-reutove-poyavitsya-novyj-skver-okolo-monumenta-krylatoj-rakete-meteorit-xl/",
-     "verified": true
-    },
-    {
-     "text": "По справочным данным, ракета прошла испытания, но не была принята на вооружение из-за экономической ситуации начала 1990-х.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-reutove-poyavitsya-novyj-skver-okolo-monumenta-krylatoj-rakete-meteorit-xl/",
-     "verified": false
-    },
-    {
-     "text": "Около монумента планируют новый сквер, продолжающий парк «Фабричный пруд»; его благоустраивают совместно с НПО машиностроения.",
-     "sourceUrl": "https://360.ru/news/obschestvo/okolo-monumenta-krylatoj-rakete-v-reutove-pojavitsja-novyj-skver/",
-     "verified": true
-    },
-    {
-     "text": "Опытно-конструкторское бюро, ставшее НПО машиностроения, создано в 1955 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/reutov/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Статус наукограда Реутов получил благодаря градообразующему предприятию — АО «ВПК «НПО машиностроения».",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/reutov/istoriia",
-     "verified": true
-    },
-    {
-     "text": "В Реутове открывалась выставка ракет под открытым небом.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/vystavka-raket-pod-otkrytym-nebom-otkrylas-v-reutove-xl/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "НПО машиностроения — режимное предприятие: не фотографируйте проходные и ограждение, не задерживайтесь у ворот."
-   ],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "zheleznodorozhnyy-chelomey",
-   "name": "Площадь Академика Челомея и ДК «Мир»",
-   "coords": {
-    "lat": 55.763,
-    "lon": 37.872
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "openingHoursNote": "ДК работает по расписанию мероприятий.",
-   "bikeParkingNote": "На площади много пешеходов — ведём велосипед.",
-   "guideStory": [
-    "Владимир Челомей — генеральный конструктор авиакосмической техники, человек, без которого Реутов был бы просто фабричным пригородом. Его имя город носит в названиях: улица Академика Челомея появилась на карте в 1985 году по ходатайству НПО машиностроения, а путеводители советуют посмотреть и памятник конструктору.",
-    "Память о Челомее в Реутове живая: здесь проходят конференции по ракетно-космической отрасли, выставка под названием «Леонардо ракетного мира», а медалью имени академика награждают в том числе городских руководителей. Рядом — ДК «Мир», главная концертная площадка города."
-   ],
-   "facts": [
-    {
-     "text": "Улица Академика Челомея появилась на карте Реутова в 1985 году и названа по ходатайству НПО машиностроения.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Улица носит имя генерального конструктора авиакосмической техники Владимира Челомея.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Путеводители советуют осмотреть в Реутове памятник Владимиру Челомею.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/reutov/",
-     "verified": true
-    },
-    {
-     "text": "ДК «Мир» называют главной концертной площадкой Реутова.",
-     "sourceUrl": "https://360.ru/news/obschestvo/gorod-dnja--reutov-11717/",
-     "verified": true
-    },
-    {
-     "text": "В Реутове открывалась выставка «Леонардо ракетного мира».",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/vystavka-leonardo-raketnogo-mira-otkrylas-v-reutove/",
-     "verified": true
-    },
-    {
-     "text": "В городе проходила всероссийская конференция по ракетно-космической отрасли.",
-     "sourceUrl": "https://riamo.ru/news/ekonomika/v-reutove-proshla-vserossijskaja-konferentsija-po-raketno-kosmicheskoj-otrasli/",
-     "verified": true
-    },
-    {
-     "text": "Главу Реутова награждали медалью имени академика Челомея.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/glavu-reutova-nagradili-medalyu-imeni-akademika-chelomeya-xl/",
-     "verified": true
-    },
-    {
-     "text": "Площадь у ДК «Мир» носит имя Челомея (по данным ТЗ маршрута; в найденных источниках прямо не подтверждено).",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
-     "verified": false
-    }
-   ],
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "zheleznodorozhnyy-uspenskaya",
-   "name": "Успенская церковь в Косине",
+   "id": "zheleznodorozhnyy-belyy",
+   "name": "Дом-музей Андрея Белого в Кучине",
    "coords": {
-    "lat": 55.719,
-    "lon": 37.858
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В Косине стоит церковь Успения Пресвятой Богородицы XIX века. По описанию, здесь молилась императрица Мария Фёдоровна.",
-    "Храм напоминает, что Косино было одним из древнейших сёл, вошедших в Москву, а не только новым районом у метро. Следующая точка маршрута — «Чёрное озеро»."
-   ],
-   "facts": [
-    {
-     "text": "Церковь Успения в Косине — храм XIX века.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "По описанию, в храме молилась императрица Мария Фёдоровна.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "Косино — одно из древнейших сёл, вошедших в состав Москвы.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "История Косина описана в краеведческом блоге «Непаханое Косино».",
-     "sourceUrl": "https://medium.com/@GenaSch/%D0%BD%D0%B5%D0%BF%D0%B0%D1%85%D0%B0%D0%BD%D0%BE%D0%B5-%D0%BA%D0%BE%D1%81%D0%B8%D0%BD%D0%BE-88af244fedf4",
-     "verified": true
-    },
-    {
-     "text": "Точный год постройки храма в найденных источниках не указан.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "zheleznodorozhnyy-chernoe",
-   "name": "Чёрное озеро",
-   "coords": {
-    "lat": 55.713,
-    "lon": 37.862
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Чёрное озеро — самое тёмное из трёх: вода в нём кажется почти чёрной, отсюда и название.",
-    "Все три озера ледникового происхождения — их оставил отступавший ледник.",
-    "Объезжаем озеро по тропе, не заезжая на береговые склоны, и едем к Святому — самому загадочному из трёх. Вокруг — сохранившийся кусочек природы посреди спальных кварталов."
-   ],
-   "facts": [
-    {
-     "text": "Чёрное озеро названо за тёмную воду.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": true
-    },
-    {
-     "text": "Косинские озёра имеют ледниковое происхождение.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": true
-    },
-    {
-     "text": "Озёра входят в природно-исторический парк «Косинский».",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "Косино упоминается в летописях под 1410 годом.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    },
-    {
-     "text": "Глубина Чёрного озера в найденных источниках не указана.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "zheleznodorozhnyy-kuzminsky-les",
-   "name": "Сосновая улица и Кузьминский лесопарк",
-   "coords": {
-    "lat": 55.6735,
-    "lon": 37.85
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "daylightOnly": true,
-   "openingHoursNote": "Лес — в светлое время суток.",
-   "bikeParkingNote": "По лесу едем по дорожкам, не по тропам.",
-   "guideStory": [
-    "Сразу от метро — в лес. Сосновая улица прижимается к Кузьминскому лесопарку, и новые кварталы Котельников буквально упираются в сосны. Жилые комплексы рядом даже называют по лесу, а объявления о квартирах обещают лесопарк в паре шагов.",
-    "Кузьминский лес — большой зелёный массив на стыке Москвы и области. По одним данным, вместе с Люблинским парком он образует огромную природную территорию больше тысячи гектаров, но эту цифру мы не смогли проверить по официальным источникам. В любом случае это лучший способ начать день: тихо, тенисто и без машин."
-   ],
-   "facts": [
-    {
-     "text": "Квартиры на Сосновой улице находятся рядом с Кузьминским лесопарком, примерно в 1–1,5 км от центра города.",
-     "sourceUrl": "https://www.komandirovka.ru/apartments/kotelniki/apartamentyi-na-sosnovoy-1k1-2/",
-     "verified": true
-    },
-    {
-     "text": "ЖК «Кузьминский лес» в Котельниках соседствует с Кузьминским лесопарком и прудом Белая Дача.",
-     "sourceUrl": "https://www.novostroy-m.ru/baza/jk_kuzminskiy_les",
-     "verified": true
-    },
-    {
-     "text": "По данным гостиничного сайта, объединённая территория парка «Кузьминки-Люблино» — около 1189 гектаров.",
-     "sourceUrl": "https://otello.ru/hotels/moskva/place/park_kuzminki_lyublino",
-     "verified": false
-    },
-    {
-     "text": "На территории парка «Кузьминки-Люблино» есть Мишкин пруд, созданный в 1973–1974 годах.",
-     "sourceUrl": "https://otello.ru/hotels/moskva/place/park_kuzminki_lyublino",
-     "verified": false
-    },
-    {
-     "text": "Станция метро «Котельники» открыта 21 сентября 2015 года на Таганско-Краснопресненской линии.",
-     "sourceUrl": "https://www.mos.ru/news/item/1186073",
-     "verified": true
-    }
-   ],
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "zheleznodorozhnyy-belaya-dacha",
-   "name": "Усадьба «Белая Дача»",
-   "coords": {
-    "lat": 55.6645,
-    "lon": 37.861
-   },
-   "address": "мкр. Белая Дача, 1А",
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
-   "openingHoursNote": "Музей работает по выходным и по записи (по данным ТЗ маршрута). Обязательно уточните перед поездкой.",
-   "schedule": {
-    "days": {
-     "sat": "10:00-17:00",
-     "sun": "10:00-17:00"
-    },
-    "byAppointment": true
-   },
-   "ticketNote": "Стоимость уточняйте при записи.",
-   "bikeParkingNote": "Велосипед оставляем у ограды усадьбы.",
-   "guideStory": [
-    "Белая Дача — дворянская усадьба конца XVIII века и памятник позднего классицизма. Основал её генерал-майор Аршеневский; источники расходятся в имени и дате — называют 1788 и 1798 годы. Сначала имение звали «Дачей Аршеневских», а «Белой» оно стало по цвету фасадов.",
-    "Главная интрига этого места — в том, что было после. В 1918 году на усадебных землях создали сельскохозяйственную артель, с 1946 года здесь работал совхоз «Белая Дача». Он снабжал Кремль, и в народе его называли «кремлёвской грядкой»; говорят, его посещал Фидель Кастро. Совхоз превратился в агрохолдинг — тот самый, чьи салаты продаются по всей стране."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба «Белая Дача» — объект культурного наследия, памятник архитектуры позднего классицизма.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Основание усадьбы источники относят к 1788 или 1798 году и называют основателем генерал-майора Аршеневского.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Сначала имение называлось «Дача Аршеневских», а имя «Белая Дача» закрепилось за белыми фасадами.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "В 1918 году на землях бывшего имения Аршеневских создали сельскохозяйственную артель.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-kotelnikah-est-svezhie-salaty-s-beloj-dachi-i-ezdit-na-metro-xl/",
-     "verified": true
-    },
-    {
-     "text": "С 1946 года здесь работал совхоз «Белая Дача».",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Совхоз снабжал Кремль, и в народе его называли «кремлёвской грядкой».",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-kotelnikah-est-svezhie-salaty-s-beloj-dachi-i-ezdit-na-metro-xl/",
-     "verified": true
-    },
-    {
-     "text": "Фидель Кастро, по данным туристических материалов, посещал совхоз в 1960-х.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kotelniki/",
-     "verified": false
-    },
-    {
-     "text": "Музей торжественно открыт в мае 1995 года и посвящён истории овощеводства в России за пять веков и истории совхоза.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/kotelniki/",
-     "verified": true
-    },
-    {
-     "text": "В комплекс входят главный дом, западный и восточный флигели, аллея и парк с прудом.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB",
-     "verified": true
-    }
-   ],
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "zheleznodorozhnyy-muzey-2",
-   "name": "Угрешский историко-краеведческий музей",
-   "coords": {
-    "lat": 55.63,
-    "lon": 37.846
+    "lat": 55.76,
+    "lon": 37.98
    },
    "kind": "заходим внутрь",
-   "visitMinutes": 40,
+   "visitMinutes": 30,
    "guideStory": [
-    "Угрешский историко-краеведческий музей рассказывает о прошлом края: археологические находки, этнография и документы о городе и монастыре.",
-    "Это хорошее место понять, как монастырская слобода стала заводским городом. Часы работы уточняйте заранее."
+    "В Кучине жил и работал писатель и поэт Борис Бугаев — Андрей Белый. Его дом-музей называют одной из главных достопримечательностей Железнодорожного.",
+    "С 2015 года Железнодорожный входит в Балашиху, а Кучино — один из его восьми микрорайонов."
    ],
    "facts": [
     {
-     "text": "Угрешский историко-краеведческий музей хранит археологические находки, этнографию и документы о городе и монастыре.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
+     "text": "В Кучине работает дом-музей Андрея Белого.",
+     "sourceUrl": "https://teletype.in/@apfound/mUbw_5YeGbz",
      "verified": true
     },
     {
-     "text": "Музей рекомендуют для знакомства с прошлым края.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Адрес и часы работы музея мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Монастырь и город тесно связаны исторически.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Ансамбль монастыря называют впечатляющим.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
+     "text": "С 2015 года Железнодорожный — часть Балашихи, Кучино — один из 8 микрорайонов.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
      "verified": true
     }
    ],
-   "openingHoursNote": "Часы работы не проверены — уточняйте перед поездкой.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 110
-  },
-  {
-   "id": "zheleznodorozhnyy-karyer",
-   "name": "Дзержинский карьер",
-   "coords": {
-    "lat": 55.625,
-    "lon": 37.825
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Дзержинский карьер — несколько искусственных озёр, окружённых насыпями. Когда-то здесь добывали песок, а потом карьер в основном затопило.",
-    "Сегодня это популярное место отдыха у воды — неожиданно живописное для промышленной окраины."
-   ],
-   "facts": [
-    {
-     "text": "Дзержинский карьер — несколько искусственных озёр, окружённых насыпями.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Здесь добывали песок, затем карьер в основном затопило.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Карьер популярен как место отдыха у воды.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Купание в карьере не регламентировано — по найденным источникам это не проверено.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Город Дзержинский вырос из монастырской слободы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 120
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -700,135 +318,59 @@
    "url": "https://riamo.ru/news/transport/60-passazhiropotoka-perenapravyat-s-zheleznodorozhnoj-na-novuyu-platformu-olgino-v-balashihe-xl/"
   },
   {
-   "title": "Пехра-Яковлевское — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9F%D0%B5%D1%85%D1%80%D0%B0-%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5"
+   "title": "Источник: sport24.ru",
+   "url": "https://sport24.ru/-/article-na-kakoy-stantsii-anna-karenina-brosilas-pod-poyezd-teper-eto-ostanovka-mtsd-i-u-neye-drugoye-nazvaniye"
   },
   {
-   "title": "Храм Преображения — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A5%D1%80%D0%B0%D0%BC_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F_%D0%B2_%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B5"
+   "title": "Источник: mirkvartir.ru",
+   "url": "https://www.mirkvartir.ru/journal/reviews/2021/11/16/zheleznodorozhny/"
   },
   {
-   "title": "Экскурсия музея — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/"
+   "title": "Источник: teletype.in",
+   "url": "https://teletype.in/@apfound/mUbw_5YeGbz"
   },
   {
-   "title": "Усадьба Горенки — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8"
-  },
-  {
-   "title": "Горенки — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/93607"
-  },
-  {
-   "title": "Жить в Балашихе — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/"
-  },
-  {
-   "title": "Реутов — Академик (зеркало статьи Википедии)",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/27658"
-  },
-  {
-   "title": "История Реутова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/reutov/istoriia"
-  },
-  {
-   "title": "Реутов — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/reutov/"
-  },
-  {
-   "title": "Город дня — Реутов (360.ru)",
-   "url": "https://360.ru/news/obschestvo/gorod-dnja--reutov-11717/"
-  },
-  {
-   "title": "Новости Реутова — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/memorial-slavy-otkryli-v-reutove-posle-rekonstruktsii-xl/"
-  },
-  {
-   "title": "Церковь Казанской иконы в Реутове — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BA%D0%BE%D0%BD%D1%8B_%D0%91%D0%BE%D0%B6%D0%B8%D0%B5%D0%B9_%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8_%D0%B2_%D0%A0%D0%B5%D1%83%D1%82%D0%BE%D0%B2%D0%B5"
-  },
-  {
-   "title": "Озёра Москвы — АиФ",
-   "url": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy"
-  },
-  {
-   "title": "Косино — Путевка.ком",
-   "url": "https://www.putevka.com/trip/russia/moscow/108159"
-  },
-  {
-   "title": "Косино-Ухтомский — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/kosino-uhtomskij/"
-  },
-  {
-   "title": "Усадьба «Белая Дача» — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%C2%AB%D0%91%D0%B5%D0%BB%D0%B0%D1%8F_%D0%94%D0%B0%D1%87%D0%B0%C2%BB"
-  },
-  {
-   "title": "Котельники — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kotelniki/"
-  },
-  {
-   "title": "Котельники — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/59731"
-  },
-  {
-   "title": "Казанский храм (Котельники) — Азбука паломника",
-   "url": "https://azbyka.ru/palomnik/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9A%D0%BE%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B8)"
-  },
-  {
-   "title": "История «Белой Дачи» — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/zhit-v-kotelnikah-est-svezhie-salaty-s-beloj-dachi-i-ezdit-na-metro-xl/"
-  },
-  {
-   "title": "Открытие станции «Котельники» — mos.ru",
-   "url": "https://www.mos.ru/news/item/1186073"
-  },
-  {
-   "title": "Николо-Угрешский монастырь — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Николо-Угрешский монастырь — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE-%D0%A3%D0%B3%D1%80%D0%B5%D1%88%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Дзержинский — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/24026"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.819431,
-     55.625
+     37.974412,
+     55.76
     ],
     [
-     37.820177,
-     55.623428
+     37.979414,
+     55.748
     ],
     [
-     37.822216,
-     55.622277
+     37.980162,
+     55.746428
     ],
     [
-     37.825,
-     55.621856
+     37.982207,
+     55.745277
     ],
     [
-     37.827784,
-     55.622277
+     37.985,
+     55.744856
     ],
     [
-     37.848785,
-     55.627277
+     38.01,
+     55.744856
     ],
     [
-     37.850823,
-     55.628428
+     38.012793,
+     55.745277
+    ],
+    [
+     38.032794,
+     55.752277
     ],
     [
      38.034839,
@@ -847,36 +389,28 @@
      55.757723
     ],
     [
-     37.964796,
-     55.789723
+     37.987794,
+     55.764723
     ],
     [
-     37.962,
-     55.790144
+     37.985,
+     55.765144
     ],
     [
-     37.88,
-     55.800644
+     37.982206,
+     55.764723
     ],
     [
-     37.877203,
-     55.800223
+     37.977206,
+     55.762723
     ],
     [
-     37.875156,
-     55.799072
+     37.975161,
+     55.761572
     ],
     [
-     37.85816,
-     55.769372
-    ],
-    [
-     37.857411,
-     55.7678
-    ],
-    [
-     37.819431,
-     55.625
+     37.974412,
+     55.76
     ]
    ]
   ]
