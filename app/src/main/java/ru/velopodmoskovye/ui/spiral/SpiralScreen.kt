@@ -19,6 +19,11 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.DirectionsBike
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Place
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -48,6 +53,7 @@ import ru.velopodmoskovye.ui.theme.StarGold
 fun SpiralScreen(
     onOpenPlace: (String) -> Unit,
     onOpenActive: (String) -> Unit,
+    onOpenStop: (String, String) -> Unit,
     vm: SpiralViewModel = hiltViewModel(),
 ) {
     val state by vm.state.collectAsStateWithLifecycle()
@@ -77,6 +83,17 @@ fun SpiralScreen(
                         progress = { if (state.total == 0) 0f else state.complete.toFloat() / state.total },
                         modifier = Modifier.fillMaxWidth(),
                     )
+                    OutlinedTextField(
+                        value = state.query,
+                        onValueChange = vm::setQuery,
+                        modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                        singleLine = true,
+                        leadingIcon = { Icon(Icons.Filled.Search, null) },
+                        trailingIcon = {
+                            if (state.query.isNotEmpty()) IconButton(onClick = { vm.setQuery("") }) { Icon(Icons.Filled.Clear, "Очистить") }
+                        },
+                        placeholder = { Text("Найти место или точку: усадьба, монастырь, Пушкин…") },
+                    )
                     Row(Modifier.horizontalScroll(rememberScrollState()).padding(top = 8.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                         SpiralFilter.entries.forEach { f ->
                             FilterChip(selected = state.filter == f, onClick = { vm.setFilter(f) }, label = { Text(f.label) })
@@ -95,6 +112,25 @@ fun SpiralScreen(
                             color = MaterialTheme.colorScheme.error,
                         )
                     }
+                }
+            }
+            if (state.query.isNotBlank()) {
+                item {
+                    Text(
+                        if (state.stopHits.isEmpty()) "Точек не найдено" else "Точки: ${state.stopHits.size}",
+                        style = MaterialTheme.typography.titleSmall,
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp),
+                    )
+                }
+                items(state.stopHits, key = { "stop-${it.stopId}" }) { hit ->
+                    StopHitRow(hit) { onOpenStop(hit.destinationId, hit.stopId) }
+                }
+                item {
+                    Text(
+                        "Места: ${state.rows.size}",
+                        style = MaterialTheme.typography.titleSmall,
+                        modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 4.dp),
+                    )
                 }
             }
             val rows = state.rows
@@ -119,6 +155,23 @@ fun SpiralScreen(
                 icon = { Icon(Icons.AutoMirrored.Filled.DirectionsBike, null) },
                 text = { Text("Активный маршрут") },
             )
+        }
+    }
+}
+
+@Composable
+private fun StopHitRow(hit: StopHit, onClick: () -> Unit) {
+    Card(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 3.dp).clickable(onClick = onClick),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+    ) {
+        Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Filled.Place, null, tint = MaterialTheme.colorScheme.primary)
+            Spacer(Modifier.width(12.dp))
+            Column {
+                Text(hit.stopName, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.SemiBold)
+                Text(hit.placeName, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
         }
     }
 }

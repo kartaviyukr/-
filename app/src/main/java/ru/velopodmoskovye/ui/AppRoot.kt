@@ -85,6 +85,7 @@ fun AppRoot(appViewModel: AppViewModel) {
                 SpiralScreen(
                     onOpenPlace = { nav.navigate(Routes.place(it)) },
                     onOpenActive = { nav.navigate(Routes.active(it)) },
+                    onOpenStop = { d, s -> nav.navigate(Routes.stop(d, s)) },
                 )
             }
             composable(Routes.MAP) { MapScreen(onOpenPlace = { nav.navigate(Routes.place(it)) }) }

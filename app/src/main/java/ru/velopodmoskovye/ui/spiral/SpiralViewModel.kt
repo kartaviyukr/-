@@ -43,6 +43,14 @@ enum class SpiralSort(val label: String) {
     STOPS("Больше точек"),
 }
 
+/** Найденная точка маршрута: открывается сразу экраном точки. */
+data class StopHit(
+    val destinationId: String,
+    val stopId: String,
+    val stopName: String,
+    val placeName: String,
+)
+
 enum class SpiralFilter(val label: String) { ALL("Все"), STARS("★ и ☆"), READY("С маршрутом"), TODO("Не пройдено") }
 
 data class SpiralUiState(
@@ -57,6 +65,10 @@ data class SpiralUiState(
     /** Первое непройденное место по спирали — куда ехать дальше. */
     val next: SpiralPlace? = null,
     val activeDestinationId: String? = null,
+    /** Строка поиска по местам и точкам. */
+    val query: String = "",
+    /** Точки маршрутов, подходящие под поиск. */
+    val stopHits: List<StopHit> = emptyList(),
 )
 
 @HiltViewModel
@@ -67,13 +79,15 @@ class SpiralViewModel @Inject constructor(
 ) : ViewModel() {
     private val filter = MutableStateFlow(SpiralFilter.ALL)
     private val sort = MutableStateFlow(SpiralSort.SPIRAL)
+    private val query = MutableStateFlow("")
 
     val state: StateFlow<SpiralUiState> = combine(
         combine(flow { emit(content.pack()) }, progress.visitedIds, progress.activeRoute) { a, b, c -> Triple(a, b, c) },
-        filter, sort, tracker.last,
-    ) { (pack, visited, active), f, s, me ->
+        filter, sort, tracker.last, query,
+    ) { (pack, visited, active), f, s, me, q ->
         val rows = buildRows(pack, visited, me?.point)
-        val filtered = rows.filter { r ->
+        val found = search(pack, rows, q)
+        val filtered = found.rows.filter { r ->
             when (f) {
                 SpiralFilter.ALL -> true
                 SpiralFilter.STARS -> r.place.mustHave >= 2
@@ -88,17 +102,47 @@ class SpiralViewModel @Inject constructor(
             total = rows.size, complete = rows.count { it.complete },
             next = rows.firstOrNull { !it.complete }?.place,
             activeDestinationId = active?.destinationId,
+            query = q, stopHits = found.stops,
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), SpiralUiState())
 
     fun setFilter(f: SpiralFilter) { filter.value = f }
+
+    fun setQuery(q: String) { query.value = q }
 
     fun setSort(s: SpiralSort) {
         sort.value = s
         if (s == SpiralSort.NEAR_ME && tracker.last.value == null) viewModelScope.launch { tracker.current() }
     }
 
+    data class SearchResult(val rows: List<SpiralRow>, val stops: List<StopHit>)
+
     companion object {
+        private fun norm(s: String) = s.lowercase().replace('ё', 'е')
+
+        /**
+         * Поиск по названию места, округа и по точкам маршрутов (название, рассказ не учитывается).
+         * Пустой запрос — всё без изменений; место попадает в список, если совпало оно само или любая его точка.
+         */
+        fun search(pack: ContentPack, rows: List<SpiralRow>, query: String, maxStops: Int = 40): SearchResult {
+            val words = norm(query).split(' ', ',').filter { it.isNotBlank() }
+            if (words.isEmpty()) return SearchResult(rows, emptyList())
+            fun hit(text: String) = norm(text).let { t -> words.all { it in t } }
+            val stops = mutableListOf<StopHit>()
+            val matchedPlaces = mutableSetOf<String>()
+            for (r in rows) {
+                val dest = r.place.destinationId?.let { pack.destinations[it] }
+                if (hit(r.place.name) || hit(r.regionName)) matchedPlaces += r.place.id
+                dest?.stops?.forEach { st ->
+                    if (hit(st.name) || hit("${st.name} ${r.place.name}")) {
+                        matchedPlaces += r.place.id
+                        if (stops.size < maxStops) stops += StopHit(dest.id, st.id, st.name, r.place.name)
+                    }
+                }
+            }
+            return SearchResult(rows.filter { it.place.id in matchedPlaces }, stops)
+        }
+
         /** Строго по спирали: одно место — один веломаршрут. */
         fun buildRows(pack: ContentPack, visited: Set<String>, me: GeoPoint? = null): List<SpiralRow> = pack.spiral.places.map { p ->
             val dest = p.destinationId?.let { pack.destinations[it] }

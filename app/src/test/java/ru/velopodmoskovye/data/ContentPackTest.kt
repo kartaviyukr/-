@@ -85,4 +85,21 @@ class ContentPackTest {
         assertEquals(far.sortedDescending(), far)
         assertEquals(pack.spiral.places.map { it.id }, SpiralViewModel.sorted(rows, SpiralSort.SPIRAL).map { it.place.id })
     }
+
+    @Test
+    fun searchFindsPlacesAndStops() {
+        val rows = SpiralViewModel.buildRows(pack, emptySet())
+        assertEquals(rows.size, SpiralViewModel.search(pack, rows, "  ").rows.size)
+        val byPlace = SpiralViewModel.search(pack, rows, "коломна")
+        assertTrue(byPlace.rows.any { it.place.name == "Коломна" })
+        // Поиск по точке: «ё» и «е» не различаются, регистр не важен.
+        val byStop = SpiralViewModel.search(pack, rows, "малевич")
+        assertTrue(byStop.stops.isNotEmpty())
+        byStop.stops.forEach { hit ->
+            val dest = pack.destinations.getValue(hit.destinationId)
+            assertTrue(dest.stops.any { it.id == hit.stopId })
+        }
+        assertTrue(byStop.rows.all { r -> byStop.stops.any { it.placeName == r.place.name } || r.place.name.lowercase().contains("малевич") })
+        assertTrue(SpiralViewModel.search(pack, rows, "зъщщхыжь").rows.isEmpty())
+    }
 }
