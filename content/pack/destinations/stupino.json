@@ -12,8 +12,8 @@
  "intro": [
   "Ступино — молодой индустриальный город. Днём рождения считают 30 августа 1938 года, когда рабочий посёлок Электровозстрой, возникший на месте деревень Ступино и Кремиченка, стал городом.",
   "Сначала здесь строили электровозный завод, но ни одного электровоза не выпустили. В 1936 году комиссия под руководством Андрея Туполева признала площадку пригодной для авиапроизводства, и стройка стала «Авиакомбинатом № 150». В 1940 году заработал металлургический комбинат.",
-  "Свои места маршрута: «Электровозстрой», «Авиакомбинат № 150», «Центр Ступина». По пути маршрут заходит и к соседям: Кашира — «Берег Оки», «Архитектура ГОЭЛРО»; Ожерелье — «Город железнодорожников», «Узловая станция»; Белопесоцкий монастырь — «Тяжёлые годы».",
-  "Маршрут линейный, около 57 км и 8 точек. Финиш — Станция «Ступино» (Электрички Павелецкого направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Электровозстрой», «Церковь Покрова», «Авиакомбинат № 150», «Историко-краеведческий музей», «Центр Ступина». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Станция «Ступино» (Электрички Павелецкого направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Ступино»",
@@ -26,19 +26,19 @@
  "endPoint": {
   "name": "Станция «Ступино»",
   "coords": {
-   "lat": 54.886,
-   "lon": 38.078
+   "lat": 54.8862,
+   "lon": 38.0785
   },
   "transport": "Электрички Павелецкого направления"
  },
  "route": {
-  "distanceKm": 57.0,
-  "durationH": 6.2,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.6,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -85,8 +85,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "stupino-pokrov",
+   "name": "Церковь Покрова",
+   "coords": {
+    "lat": 54.8895,
+    "lon": 38.0725
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Церковь Покрова путеводитель называет одной из главных архитектурных достопримечательностей Ступина.",
+    "Храм относят к началу XX века, но точную дату источники не подтверждают. Следующая точка маршрута — «Авиакомбинат № 150». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Покрова — одна из главных достопримечательностей города.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Церковь построена в начале XX века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "stupino-aviakombinat",
@@ -133,8 +164,39 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "stupino-muzey",
+   "name": "Историко-краеведческий музей",
+   "coords": {
+    "lat": 54.8882,
+    "lon": 38.0822
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Историко-краеведческий музей Ступина находится на улице Андропова, 61/11.",
+    "Город вырос вокруг заводов в конце 1930-х годов. Следующая точка маршрута — «Центр Ступина». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится на ул. Андропова, 61/11.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/points",
+     "verified": true
+    },
+    {
+     "text": "Основание города относят к 1938 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "stupino-tsentr",
@@ -147,7 +209,7 @@
    "visitMinutes": 10,
    "guideStory": [
     "Ступино — город со своим театром и баней, о которых пишет РИАМО.",
-    "Отсюда недалеко до Белопесоцкого монастыря — у него в спирали свой маршрут. Следующая точка маршрута — «Берег Оки». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+    "Отсюда недалеко до Белопесоцкого монастыря — у него в спирали свой маршрут. Финиш — Станция «Ступино»: Электрички Павелецкого направления. Формат остановки — «проезжаем», заложите на неё около 10 минут."
    ],
    "facts": [
     {
@@ -179,240 +241,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "stupino-oka",
-   "name": "Берег Оки",
-   "coords": {
-    "lat": 54.84,
-    "lon": 38.16
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Кашира стоит на правом высоком берегу Оки. Историю самого города мы в найденных источниках не сверили и подробно не пересказываем.",
-    "С берега хорошо видна широкая Ока и её пойма. Следующая точка маршрута — «Архитектура ГОЭЛРО». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Кашира стоит на Оке.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": true
-    },
-    {
-     "text": "Берег — правый, высокий — по наблюдению составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
-    },
-    {
-     "text": "История города не сверена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "stupino-chernyshev",
-   "name": "Архитектура ГОЭЛРО",
-   "coords": {
-    "lat": 54.848,
-    "lon": 38.235
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Одним из ранних объектов архитектора С. Е. Чернышёва по плану ГОЭЛРО была Каширская районная электростанция.",
-    "Первые электростанции ГОЭЛРО строили быстро и в разруху — Кашира и «Электропередача» в Электрогорске стали опорой новой энергосистемы."
-   ],
-   "facts": [
-    {
-     "text": "Ранний объект Чернышёва по ГОЭЛРО — Каширская ГРЭС.",
-     "sourceUrl": "https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-9f4a699d-e90e-49ac-9cc6-e05a77a886d1/c/cheredina.pdf",
-     "verified": true
-    },
-    {
-     "text": "«Электропередача» тоже опора энергосистемы.",
-     "sourceUrl": "https://habr.com/en/articles/916262",
-     "verified": true
-    },
-    {
-     "text": "Оценка — мнение составителя.",
-     "sourceUrl": "https://habr.com/en/articles/916262",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "stupino-gorod",
-   "name": "Город железнодорожников",
-   "coords": {
-    "lat": 54.792,
-    "lon": 38.275
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Ожерелье — город с 1958 года, в 10 км к югу от Каширы.",
-    "Деревня Ожерелье упоминается ещё с 1578 года.",
-    "Делаем небольшой круг по улицам города железнодорожников. Следующая точка маршрута — «Узловая станция». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Ожерелье — город с 1958 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Деревня упоминается с 1578 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Ожерелье — в 10 км к югу от Каширы.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "stupino-stantsiya",
-   "name": "Узловая станция",
-   "coords": {
-    "lat": 54.79,
-    "lon": 38.27
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Станция Ожерелье работает с 1930 года; здесь сходятся линии Москва — Саратов и Москва — Донбасс.",
-    "Узел определил судьбу посёлка: город вырос вокруг станции. Следующая точка маршрута — «Тяжёлые годы». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Станция Ожерелье — с 1930 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Здесь сходятся линии Москва — Саратов и Москва — Донбасс.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Город вырос вокруг станции — вывод составителя.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": false
-    },
-    {
-     "text": "Ожерелье — в 118 км к югу от Москвы.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "stupino-tyurma",
-   "name": "Тяжёлые годы",
-   "coords": {
-    "lat": 54.8802,
-    "lon": 38.0505
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "С середины 1930-х годов в зданиях монастыря размещались общежитие рабочих и тюрьма для заключённых, строивших мост через Оку.",
-    "Сегодня обитель снова действует и восстанавливается. Финиш — Станция «Ступино»: Электрички Павелецкого направления."
-   ],
-   "facts": [
-    {
-     "text": "С середины 1930-х здесь было общежитие рабочих и тюрьма.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": true
-    },
-    {
-     "text": "Заключённые строили мост через Оку.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": true
-    },
-    {
-     "text": "Монастырь снова действует.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/stupino/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -449,71 +279,75 @@
    "url": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/"
   },
   {
-   "title": "Kashira Power Plant — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kashira_Power_Plant"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE"
   },
   {
-   "title": "Открытие ГРЭС — Президентская библиотека",
-   "url": "https://www.prlib.ru/en/history/619289"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/stupino/points"
   },
   {
-   "title": "Ожерелье — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/27669"
+   "title": "Источник: znanierussia.ru",
+   "url": "https://znanierussia.ru/articles/%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.045035,
-     54.8802
+     38.067033,
+     54.8895
     ],
     [
-     38.045767,
-     54.878628
+     38.067766,
+     54.887928
     ],
     [
-     38.047767,
-     54.877477
+     38.073266,
+     54.884428
     ],
     [
-     38.267273,
-     54.787277
+     38.075267,
+     54.883277
     ],
     [
-     38.27,
-     54.786856
+     38.078,
+     54.882856
     ],
     [
-     38.272727,
-     54.787277
+     38.080733,
+     54.883277
     ],
     [
-     38.277727,
-     54.789277
+     38.081233,
+     54.883477
     ],
     [
-     38.279723,
-     54.790428
+     38.082733,
+     54.884277
     ],
     [
-     38.280453,
-     54.792
+     38.084933,
+     54.885477
     ],
     [
-     38.279723,
-     54.793572
+     38.086934,
+     54.886628
     ],
     [
-     38.239729,
-     54.849572
+     38.089734,
+     54.888428
     ],
     [
-     38.23773,
-     54.850723
+     38.090467,
+     54.89
+    ],
+    [
+     38.089734,
+     54.891572
     ],
     [
      38.087733,
@@ -524,20 +358,20 @@
      54.893144
     ],
     [
-     38.082267,
-     54.892723
+     38.0725,
+     54.892644
     ],
     [
-     38.047767,
-     54.882923
+     38.069767,
+     54.892223
     ],
     [
-     38.045767,
-     54.881772
+     38.067766,
+     54.891072
     ],
     [
-     38.045035,
-     54.8802
+     38.067033,
+     54.8895
     ]
    ]
   ]
