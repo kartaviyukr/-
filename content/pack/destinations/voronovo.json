@@ -13,8 +13,8 @@
   "Вороново — усадьба в Новой Москве, прославившаяся поступком хозяина. В 1812 году она принадлежала московскому градоначальнику Фёдору Ростопчину.",
   "В ночь на 20 сентября (2 октября) 1812 года, в ожидании французов, Ростопчин сам сжёг главный дом. Уцелел только храм.",
   "Дом восстанавливал сын Ростопчина Александр. Здесь любила отдыхать поэтесса Евдокия Ростопчина. В середине XIX века Вороново перешло к Шереметевым, которые добавили мансарду и аркаду с балконом, — в таком виде дом и сохранился.",
-  "Свои места маршрута: «Главный дом». По пути маршрут заходит и к соседям: Михайловское — «Дом Кречетникова»; Красная Пахра — «Усадьба и штаб Кутузова»; Троицк — «Научный городок», «Центр Троицка»; Московский — «Филимонки и сгоревшая усадьба»; Внуково — «Аэропорт Внуково», «История аэродрома».",
-  "Маршрут линейный, около 59 км и 8 точек. Финиш — Станция «Внуково» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Голландский домик», «Уцелевший храм», «Главный дом», «Пруды и стихи Ростопчиной». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 1 км: старт и финиш — Остановка «Вороново» (Автобусы от метро «Тёплый Стан» по Калужскому шоссе — уточняйте). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Вороново»",
@@ -25,24 +25,107 @@
   "transport": "Автобусы от метро «Тёплый Стан» по Калужскому шоссе — уточняйте"
  },
  "endPoint": {
-  "name": "Станция «Внуково»",
+  "name": "Остановка «Вороново»",
   "coords": {
-   "lat": 55.638,
-   "lon": 37.32
+   "lat": 55.3202,
+   "lon": 37.1905
   },
-  "transport": "Электрички Киевского направления / МЦД-4"
+  "transport": "Автобусы до метро «Тёплый Стан»"
  },
  "route": {
-  "distanceKm": 59.0,
-  "durationH": 6.8,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.2,
+  "durationH": 0.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "voronovo-gollandskiy",
+   "name": "Голландский домик",
+   "coords": {
+    "lat": 55.3214,
+    "lon": 37.1856
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Из построек архитектора К. И. Бланка уцелели Спасская церковь и Голландский домик.",
+    "Ростопчин распродал усадьбу; при новом владельце Голенищеве-Кутузове-Толстом дом дважды горел, потом имение купил А. Д. Шереметев. Следующая точка маршрута — «Уцелевший храм»."
+   ],
+   "facts": [
+    {
+     "text": "От построек Бланка сохранились Спасская церковь и Голландский домик.",
+     "sourceUrl": "https://tonkosti.ru/Усадьба_Вороново",
+     "verified": true
+    },
+    {
+     "text": "При Голенищеве-Кутузове-Толстом усадебный дом дважды горел.",
+     "sourceUrl": "https://bigenc.ru/c/voronovo-3f93b1",
+     "verified": true
+    },
+    {
+     "text": "Позже усадьбу купил А. Д. Шереметев.",
+     "sourceUrl": "https://bigenc.ru/c/voronovo-3f93b1",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "voronovo-khram",
+   "name": "Уцелевший храм",
+   "coords": {
+    "lat": 55.323,
+    "lon": 37.187
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В пожаре 1812 года уцелел только храм усадьбы. Его называют главным уцелевшим свидетелем ростопчинской эпохи.",
+    "Датировку храма мы в найденных источниках не сверили и поэтому не приводим.",
+    "От храма неспешно идём к усадебным прудам. Следующая точка маршрута — «Главный дом»."
+   ],
+   "facts": [
+    {
+     "text": "В пожаре 1812 года уцелел только храм.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": true
+    },
+    {
+     "text": "Датировка храма нами не проверена.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": false
+    },
+    {
+     "text": "Вороново — в составе Новой Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба описана в Большой российской энциклопедии.",
+     "sourceUrl": "https://bigenc.ru/c/voronovo-3f93b1",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
   {
    "id": "voronovo-dom",
    "name": "Главный дом",
@@ -55,7 +138,7 @@
    "guideStory": [
     "В ночь на 20 сентября (2 октября) 1812 года Ростопчин, ожидая подхода французских войск, сжёг главный дом своей усадьбы.",
     "Восстанавливал дом уже сын градоначальника, Александр. В середине XIX века усадьба перешла к Шереметевым; они достроили мансардную крышу на французский манер и открытую аркаду с балконом. В таком виде здание дошло до нас.",
-    "На территории сейчас санаторий; доступ уточняйте. Следующая точка маршрута — «Дом Кречетникова»."
+    "На территории сейчас санаторий; доступ уточняйте. Следующая точка маршрута — «Пруды и стихи Ростопчиной»."
    ],
    "facts": [
     {
@@ -89,339 +172,55 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "voronovo-dom-2",
-   "name": "Дом Кречетникова",
+   "id": "voronovo-prudy",
+   "name": "Пруды и стихи Ростопчиной",
    "coords": {
-    "lat": 55.4,
-    "lon": 37.2
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Двухэтажный дом с мезонином выстроен на средства тульского и рязанского наместника генерала Михаила Кречетникова.",
-    "В 1784 году усадьбу посетил Андрей Болотов — агроном, писатель и мемуарист, оставивший записки о своей эпохе.",
-    "Доступ на территорию мы не проверяли — смотрим снаружи. Следующая точка маршрута — «Усадьба и штаб Кутузова»."
-   ],
-   "facts": [
-    {
-     "text": "Дом построен на средства генерала М. Н. Кречетникова.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Кречетников был тульским и рязанским наместником.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Дом — двухэтажный с мезонином.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "В 1784 году здесь побывал А. Т. Болотов.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Доступ на территорию не проверен.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Доступ на территорию может быть ограничен."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "voronovo-usadba",
-   "name": "Усадьба и штаб Кутузова",
-   "coords": {
-    "lat": 55.418,
-    "lon": 37.275
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "По данным управы района, в сентябре 1812 года в усадьбе был штаб Кутузова, а при отступлении французов здесь ночевал Наполеон. Тот же источник в другом месте называет штабом усадьбу Александрово-Щапово, так что вопрос открыт.",
-    "С 1728 года село принадлежало князьям Дадиани, к концу века — Салтыковым. В 1913 году усадьбу купил Сергей Витте, бывший министр финансов."
-   ],
-   "facts": [
-    {
-     "text": "По данным управы, в усадьбе был штаб Кутузова.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": false
-    },
-    {
-     "text": "При отступлении французов здесь ночевал Наполеон.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": false
-    },
-    {
-     "text": "С 1728 года село принадлежало князьям Дадиани.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": true
-    },
-    {
-     "text": "К концу XVIII века село перешло к Салтыковым.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": true
-    },
-    {
-     "text": "В 1913 году усадьбу купил Сергей Витте.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "voronovo-nauka",
-   "name": "Научный городок",
-   "coords": {
-    "lat": 55.48,
-    "lon": 37.295
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В конце 1944 года в Троицке разместился НИИЗМ — институт земного магнетизма. Позже появились институты Академии наук: подразделения ФИАН, институты высоких давлений, ядерных исследований, спектроскопии.",
-    "С 1940-х годов параллельно строили научную базу и жильё. К 1970-м посёлок стал развитым городом научно-производственного профиля."
-   ],
-   "facts": [
-    {
-     "text": "В конце 1944 года в Троицке разместился НИИЗМ.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
-     "verified": true
-    },
-    {
-     "text": "В Троицке работают ФИАН и институты РАН — ИФВД, ИЯИ, ИСАН.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
-     "verified": true
-    },
-    {
-     "text": "К 1970-м Троицк стал городом научно-производственного профиля.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
-     "verified": true
-    },
-    {
-     "text": "«Вечерняя Москва»: Троицк начинался с обсерватории.",
-     "sourceUrl": "https://vm.ru/society/209502-troick-nachinalsya-s-observatorii/amp",
-     "verified": true
-    },
-    {
-     "text": "Территории институтов закрыты для посетителей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Территории институтов закрыты."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "voronovo-tsentr",
-   "name": "Центр Троицка",
-   "coords": {
-    "lat": 55.485,
-    "lon": 37.305
+    "lat": 55.321,
+    "lon": 37.19
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Долго фабричный посёлок и научный городок существовали как бы независимо друг от друга, а потом срослись в один город.",
-    "Статус города Троицк получил в 1977 году. По данным 2021 года, в нём жило около 65 тысяч человек. Следующая точка маршрута — «Филимонки и сгоревшая усадьба»."
+    "Вороново стало любимым местом отдыха поэтессы Евдокии Ростопчиной, урождённой Сушковой; здесь написан ряд её стихотворений.",
+    "Историки сходятся, что Москву в 1812 году подожгли сами русские, и главную роль сыграл Ростопчин; сожжённое Вороново — пример этой тактики «выжженной земли»."
    ],
    "facts": [
     {
-     "text": "Фабричный посёлок и научный городок долго существовали независимо.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "text": "Вороново — любимое место отдыха Е. П. Ростопчиной.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
      "verified": true
     },
     {
-     "text": "В 1977 году Троицку присвоен статус города.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "text": "В Воронове написан ряд её стихотворений.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
      "verified": true
     },
     {
-     "text": "Население по данным 2021 года — 65 043 человека.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)",
-     "verified": true
+     "text": "Ростопчин сыграл главную роль в пожаре Москвы — оценка историков.",
+     "sourceUrl": "https://bigenc.ru/c/voronovo-3f93b1",
+     "verified": false
     },
     {
-     "text": "Городской округ образован в 2005 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)",
-     "verified": true
+     "text": "Пруды — по описанию составителя.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": false
     },
     {
-     "text": "В 2024 году территория округа значительно расширена.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)",
-     "verified": true
+     "text": "Координаты прудов приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": false
     }
    ],
+   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "voronovo-filimonki",
-   "name": "Филимонки и сгоревшая усадьба",
-   "coords": {
-    "lat": 55.57,
-    "lon": 37.33
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1929 году образовали Филимонковский сельсовет в Краснопахорском районе; в 1954 году к нему присоединили земли Передельцевского сельсовета.",
-    "Усадьбу в Филимонках, основанную, по Moskvich Mag, князем Голицыным в 1801 году, уничтожил пожар 2006 года. Теперь её собираются восстанавливать."
-   ],
-   "facts": [
-    {
-     "text": "Филимонковский сельсовет образован в 1929 году.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/filimonkovskoe/",
-     "verified": true
-    },
-    {
-     "text": "В 1954 году включены территории Передельцевского сельсовета.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/filimonkovskoe/",
-     "verified": true
-    },
-    {
-     "text": "Усадьба в Филимонках сгорела в 2006 году.",
-     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
-     "verified": true
-    },
-    {
-     "text": "Усадьба основана в 1801 году князем Голицыным.",
-     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
-     "verified": false
-    },
-    {
-     "text": "Власти объявили о подготовке к реставрации.",
-     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Руины: внутрь не заходить."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "voronovo-aeroport",
-   "name": "Аэропорт Внуково",
-   "coords": {
-    "lat": 55.605,
-    "lon": 37.286
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В сентябре 1945 года решили перевести Центральный московский аэропорт с Ходынского поля во Внуково, и он стал главной гражданской авиагаванью столицы.",
-    "Сегодня Внуково — старейший действующий аэропорт Москвы. Зона аэропорта охраняется; с велосипедом в терминал не заходят."
-   ],
-   "facts": [
-    {
-     "text": "В сентябре 1945 года Центральный аэропорт перевели с Ходынского поля во Внуково.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Внуково — старейший действующий аэропорт Москвы.",
-     "sourceUrl": "https://news.mail.ru/card/1549/",
-     "verified": true
-    },
-    {
-     "text": "Велосипед в терминал не заносят — правило составителя.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": false
-    },
-    {
-     "text": "Внуково называют главной гражданской авиагаванью послевоенной Москвы.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Аэропорт описан в карточке Mail.ru.",
-     "sourceUrl": "https://news.mail.ru/card/1549/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Охраняемая зона аэропорта."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "voronovo-istoriya",
-   "name": "История аэродрома",
-   "coords": {
-    "lat": 55.615,
-    "lon": 37.295
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В 1937 году правительство утвердило план нового аэродрома, чтобы разгрузить московский авиаузел. Работы начались в 1938 году, первую очередь приняли в 1941-м.",
-    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года."
-   ],
-   "facts": [
-    {
-     "text": "План аэродрома утверждён в 1937 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Работы начаты в 1938 году, первая очередь принята в 1941 году.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Открытие планировали на 18 августа 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Аэропорт открыт досрочно, 2 июля 1941 года.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Внукову исполнилось 80 лет в 2021 году.",
-     "sourceUrl": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -458,71 +257,27 @@
    "url": "https://www.mos.ru/moi-raion/voronovo/"
   },
   {
-   "title": "Михайловское — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
-  },
-  {
-   "title": "Краснопахорский — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/krasnopakhorskij/"
-  },
-  {
-   "title": "Тарутинский манёвр — booksite.ru",
-   "url": "https://booksite.ru/FullText/1/001/008/067/856.htm"
-  },
-  {
-   "title": "Троицк — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)"
-  },
-  {
-   "title": "Троицк — ЦИАН",
-   "url": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/"
-  },
-  {
-   "title": "Троицк начинался с обсерватории — ВМ",
-   "url": "https://vm.ru/society/209502-troick-nachinalsya-s-observatorii/amp"
-  },
-  {
-   "title": "Московский — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/moskovskij/"
-  },
-  {
-   "title": "Филимонковское — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/filimonkovskoe/"
-  },
-  {
-   "title": "Усадьба в Филимонках — Moskvich Mag",
-   "url": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/"
-  },
-  {
-   "title": "Внуково — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/vnukovo/"
-  },
-  {
-   "title": "История Внукова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia"
-  },
-  {
-   "title": "Внукову 80 лет — Вокруг света",
-   "url": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/Усадьба_Вороново"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.182474,
-     55.322
+     37.180074,
+     55.3214
     ],
     [
-     37.183214,
-     55.320428
+     37.180814,
+     55.319828
     ],
     [
-     37.185215,
-     55.318428
+     37.182837,
+     55.318677
     ],
     [
      37.187237,
@@ -537,68 +292,52 @@
      55.317277
     ],
     [
-     37.194785,
-     55.318428
+     37.193263,
+     55.317477
     ],
     [
-     37.279797,
-     55.416428
+     37.195285,
+     55.318628
     ],
     [
-     37.280539,
-     55.418
+     37.196026,
+     55.3202
     ],
     [
-     37.310549,
-     55.485
+     37.195285,
+     55.321772
     ],
     [
-     37.335561,
-     55.57
+     37.194786,
+     55.322572
     ],
     [
-     37.32557,
-     55.638
+     37.191786,
+     55.324572
     ],
     [
-     37.324824,
-     55.639572
+     37.189763,
+     55.325723
     ],
     [
-     37.322785,
-     55.640723
+     37.187,
+     55.326144
     ],
     [
-     37.32,
-     55.641144
+     37.184237,
+     55.325723
     ],
     [
-     37.317215,
-     55.640723
+     37.182214,
+     55.324572
     ],
     [
-     37.315176,
-     55.639572
+     37.180814,
+     55.322972
     ],
     [
-     37.290179,
-     55.616572
-    ],
-    [
-     37.28118,
-     55.606572
-    ],
-    [
-     37.280434,
-     55.605
-    ],
-    [
-     37.194463,
-     55.4
-    ],
-    [
-     37.182474,
-     55.322
+     37.180074,
+     55.3214
     ]
    ]
   ]

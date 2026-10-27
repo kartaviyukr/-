@@ -13,8 +13,8 @@
   "Селятино — посёлок Наро-Фоминского округа на Киевском направлении. Его история тесно связана с трестом «Гидромонтаж», который в 1957 году стал градообразующим предприятием.",
   "В посёлке работает Институт русско-славянских исследований имени Н. Я. Данилевского и стоит Серафимовский храм. У поселения есть свои герб и флаг.",
   "Происхождение названия «Селятино» мы в найденных источниках не нашли и не придумываем.",
-  "Свои места маршрута: «Институт Данилевского», «Серафимовский храм», «Посёлок «Гидромонтажа»». По пути маршрут заходит и к соседям: Калининец — «Тарасково», «Таманская дивизия»; Парк «Патриот» — «Танковый музей»; Апрелевка — «Завод грампластинок», «Город и ручей Прелый».",
-  "Маршрут линейный, около 52 км и 8 точек. Финиш — Станция «Апрелевка» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Серафимовский храм», «Посёлок «Гидромонтажа»», «Зал воинской славы», «Институт Данилевского». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Станция «Селятино» (Электрички Киевского направления / МЦД-4). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Селятино»",
@@ -25,70 +25,24 @@
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "endPoint": {
-  "name": "Станция «Апрелевка»",
+  "name": "Станция «Селятино»",
   "coords": {
-   "lat": 55.5452,
-   "lon": 37.0735
+   "lat": 55.5152,
+   "lon": 36.9805
   },
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 52.0,
-  "durationH": 6.3,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 1.7,
+  "durationH": 0.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "selyatino-institut",
-   "name": "Институт Данилевского",
-   "coords": {
-    "lat": 55.516,
-    "lon": 36.982
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В Селятине расположен Институт русско-славянских исследований имени Н. Я. Данилевского — философа и естествоиспытателя XIX века, автора книги «Россия и Европа».",
-    "У городского поселения Селятино есть флаг, составленный на основе его герба."
-   ],
-   "facts": [
-    {
-     "text": "В Селятине расположен Институт русско-славянских исследований имени Данилевского.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Данилевский — автор книги «Россия и Европа».",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Селятина составлен на основе герба.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Координаты института приблизительные.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Селятино — посёлок на Киевском направлении.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "selyatino-khram",
    "name": "Серафимовский храм",
@@ -135,8 +89,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "selyatino-gidromontazh",
@@ -181,245 +135,85 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "selyatino-taraskovo",
-   "name": "Тарасково",
+   "id": "selyatino-zal-slavy",
+   "name": "Зал воинской славы",
    "coords": {
-    "lat": 55.49,
-    "lon": 36.9
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
-    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
-    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Таманская дивизия»."
-   ],
-   "facts": [
-    {
-     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    },
-    {
-     "text": "Посёлок связан с военным городком.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    },
-    {
-     "text": "Дата основания не найдена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Калининец находится недалеко от станции Голицыно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "selyatino-divisiya",
-   "name": "Таманская дивизия",
-   "coords": {
-    "lat": 55.47,
-    "lon": 36.88
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "2-я гвардейская Таманская мотострелковая дивизия — одна из самых известных дивизий Сухопутных войск России.",
-    "Её подразделения занимают большой комплекс к северу и северо-западу от Апрелевки. Калининец связан с этой дивизией.",
-    "Военная территория: не фотографировать КПП и объекты. Следующая точка маршрута — «Танковый музей»."
-   ],
-   "facts": [
-    {
-     "text": "Таманская дивизия — одна из самых известных в Сухопутных войсках.",
-     "sourceUrl": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division",
-     "verified": true
-    },
-    {
-     "text": "Подразделения дивизии расположены к северу и северо-западу от Апрелевки.",
-     "sourceUrl": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division",
-     "verified": true
-    },
-    {
-     "text": "Связь Калининца с дивизией — по совокупности источников.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Военная территория закрыта.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Военная территория: не фотографировать."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "selyatino-tanki",
-   "name": "Танковый музей",
-   "coords": {
-    "lat": 55.56,
-    "lon": 36.825
+    "lat": 55.517,
+    "lon": 36.98
    },
    "kind": "заходим внутрь",
-   "visitMinutes": 60,
+   "visitMinutes": 20,
    "guideStory": [
-    "Танковый музей (Технический центр) — одно из крупнейших собраний бронетехники. Музей разделён на семь павильонов: справа от аллеи — зарубежная техника, слева — российская.",
-    "В проекте парка предусматривались также интерактивный музей с симуляторами управления и музеи ВКС, ВДВ и ВМФ.",
-    "Музей платный; по туристическим данным, парк работает со вторника по воскресенье — проверьте перед поездкой."
+    "В Селятине работает зал воинской славы: экспозиция охватывает историю от побед Александра Невского до создания ядерного щита.",
+    "Кресты на пяти куполах местного Серафимовского храма освятили в 2010 году. Следующая точка маршрута — «Институт Данилевского»."
    ],
    "facts": [
     {
-     "text": "Танковый музей разделён на семь павильонов.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "text": "Экспозиция зала — от Александра Невского до ядерного щита.",
+     "sourceUrl": "https://www.culture.ru/institutes/103455/zal-voinskoi-slavy-pgt-selyatino",
      "verified": true
     },
     {
-     "text": "Справа от аллеи — зарубежная техника, слева — российская.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "text": "В 2010 году на пять куполов храма установили кресты.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
      "verified": true
-    },
-    {
-     "text": "Проект парка включал интерактивный музей бронетехники с симуляторами.",
-     "sourceUrl": "https://realty.rbc.ru/news/577d215f9a7947a78ce913ad",
-     "verified": true
-    },
-    {
-     "text": "Парк работает вт–вс — по туристическому сайту.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": false
     }
    ],
-   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "selyatino-zavod",
-   "name": "Завод грампластинок",
+   "id": "selyatino-institut",
+   "name": "Институт Данилевского",
    "coords": {
-    "lat": 55.55,
-    "lon": 37.07
+    "lat": 55.516,
+    "lon": 36.982
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
-    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
-    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
+    "В Селятине расположен Институт русско-славянских исследований имени Н. Я. Данилевского — философа и естествоиспытателя XIX века, автора книги «Россия и Европа».",
+    "У городского поселения Селятино есть флаг, составленный на основе его герба."
    ],
    "facts": [
     {
-     "text": "Завод основан в 1910 году Б. Моллем.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "text": "В Селятине расположен Институт русско-славянских исследований имени Данилевского.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
      "verified": true
     },
     {
-     "text": "Первые пластинки выпущены в декабре 1910 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "С 1964 года завод входил в фирму «Мелодия».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "text": "Данилевский — автор книги «Россия и Европа».",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
      "verified": false
+    },
+    {
+     "text": "Флаг Селятина составлен на основе герба.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Координаты института приблизительные.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Селятино — посёлок на Киевском направлении.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "selyatino-gorod",
-   "name": "Город и ручей Прелый",
-   "coords": {
-    "lat": 55.545,
-    "lon": 37.075
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
-    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Финиш — Станция «Апрелевка»: Электрички Киевского направления / МЦД-4."
-   ],
-   "facts": [
-    {
-     "text": "Апрелевка основана в 1899 году, город — с 1961 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Город расположен в 28 км к юго-западу от Москвы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Версия о ручье Прелом — одна из версий.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "В Апрелевке есть генеральские дачи.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/04/01/kult-gramplas/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -456,107 +250,91 @@
    "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
   },
   {
-   "title": "Kalininets — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kalininets"
+   "title": "Источник: azbyka.ru",
+   "url": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)"
   },
   {
-   "title": "Tamanskaya Division — Military Wiki",
-   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/institutes/103455/zal-voinskoi-slavy-pgt-selyatino"
   },
   {
-   "title": "Парк «Патриот» — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
-  },
-  {
-   "title": "Парк «Патриот» — Яндекс Путешествия",
-   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
-  },
-  {
-   "title": "Апрелевский завод грампластинок — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
-  },
-  {
-   "title": "Апрелевский завод — БРЭ",
-   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
-  },
-  {
-   "title": "Апрелевка — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
+   "title": "Источник: cyclowiki.org",
+   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.819441,
-     55.56
+     36.969447,
+     55.515
     ],
     [
-     36.820185,
-     55.558428
+     36.970191,
+     55.513428
     ],
     [
-     36.875196,
-     55.468428
+     36.973191,
+     55.511428
     ],
     [
-     36.877227,
-     55.467277
+     36.975224,
+     55.510277
     ],
     [
-     36.88,
-     55.466856
+     36.978,
+     55.509856
     ],
     [
-     36.882773,
-     55.467277
+     36.980776,
+     55.510277
     ],
     [
-     37.077779,
-     55.542277
+     36.982809,
+     55.511428
     ],
     [
-     37.079813,
-     55.543428
+     36.986809,
+     55.514428
     ],
     [
-     37.080557,
-     55.545
+     36.987553,
+     55.516
     ],
     [
-     37.079813,
-     55.546572
+     36.986809,
+     55.517572
     ],
     [
-     37.074813,
-     55.551572
+     36.984777,
+     55.518723
     ],
     [
-     37.072779,
-     55.552723
+     36.982777,
+     55.519723
     ],
     [
-     37.07,
-     55.553144
+     36.98,
+     55.520144
     ],
     [
-     36.825,
-     55.563144
+     36.977223,
+     55.519723
     ],
     [
-     36.82222,
-     55.562723
+     36.972223,
+     55.517723
     ],
     [
-     36.820185,
-     55.561572
+     36.970191,
+     55.516572
     ],
     [
-     36.819441,
-     55.56
+     36.969447,
+     55.515
     ]
    ]
   ]

@@ -163,6 +163,10 @@ def check_destination(d, fname, spiral_ids):
             need(rp, "name", str, f"{w}.{key}")
             need(rp, "transport", str, f"{w}.{key}")
             pt = point(rp, "coords", f"{w}.{key}")
+            if v3 and pt and d.get("id") in CENTERS:
+                other = foreign_place(d["id"], pt)
+                if other:
+                    err(f"{w}.{key}", f"«{rp.get('name')}» ближе к месту «{other}» — старт и финиш тоже должны быть в своём месте")
             if key == "startPoint":
                 start = pt
             else:
