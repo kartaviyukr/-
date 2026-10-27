@@ -11,9 +11,8 @@
  },
  "intro": [
   "Тула — город оружейников, самоваров и пряников. Её каменный кремль построен в 1514–1520 годах, а музей оружия — в здании-шлеме у набережной.",
-  "Маршрут начинается в кремле с Успенским собором, заходит в музеи оружия, самоваров и пряника и уходит на юг — в Ясную Поляну, родовое имение Льва Толстого: Прешпект, дом писателя и его могила в лесу.",
-  "Около 55 км с возвращением на Московский вокзал Тулы. В Ясной Поляне велосипед оставляем у входа: по усадьбе — пешком.",
-  "Дорога до Ясной Поляны — по обочине загородной трассы; держитесь друг за другом."
+  "Точки маршрута: «Музей оружия — «шлем»», «Тульский кремль», «Успенский собор», «Музей «Тульские самовары»», «Ясная Поляна: Прешпект», «Дом Толстого», «Могила Толстого», «Музей «Тульский пряник»». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 51 км: старт и финиш — Московский вокзал, Тула (Поезда и электрички из Москвы). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Московский вокзал, Тула",
@@ -29,117 +28,19 @@
    "lat": 54.219,
    "lon": 37.642
   },
-  "transport": "Поезда до Москвы"
+  "transport": "Поезда и электрички из Москвы"
  },
  "route": {
-  "distanceKm": 55.0,
-  "durationH": 8.5,
-  "difficulty": "средний",
+  "distanceKm": 51.2,
+  "durationH": 7.1,
+  "difficulty": "сложный",
   "shape": "петля",
   "surfaceNotes": "Городской асфальт, загородная дорога до Ясной Поляны.",
   "seasonNotes": "С мая по сентябрь; Ясная Поляна закрыта по понедельникам — проверьте заранее.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "tula-kreml",
-   "name": "Тульский кремль",
-   "coords": {
-    "lat": 54.1965,
-    "lon": 37.6185
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Каменный кремль Тулы построили по приказу Василия III в 1514–1520 годах для защиты от татарских набегов; по другим данным, строить начали в 1507 году.",
-    "В 2017 году после реконструкции на его территории открылся музейно-выставочный комплекс; там есть макет кремля XVII века."
-   ],
-   "facts": [
-    {
-     "text": "Стены кремля возведены по приказу Василия III в 1514–1520 годах.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
-     "verified": true
-    },
-    {
-     "text": "По другим данным, строительство началось в 1507 году.",
-     "sourceUrl": "https://www.culture.ru/institutes/1988/tulskiy-kreml",
-     "verified": false
-    },
-    {
-     "text": "В 2017 году на территории кремля открылся музейно-выставочный комплекс.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "tula-uspensky",
-   "name": "Успенский собор",
-   "coords": {
-    "lat": 54.1962,
-    "lon": 37.618
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Нынешний Успенский собор кремля — XVIII века; его роспись в 1765–1766 годах выполнили ярославские мастера.",
-    "Колокольню разобрали после пожара 1936 года, а нынешняя — точная копия утраченной. Следующая точка маршрута — «Музей «Тульские самовары»»."
-   ],
-   "facts": [
-    {
-     "text": "Роспись собора выполнили ярославские мастера в 1765–1766 годах.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
-     "verified": true
-    },
-    {
-     "text": "Колокольню разобрали после пожара 1936 года; нынешняя — копия утраченной.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
-  },
-  {
-   "id": "tula-samovar",
-   "name": "Музей «Тульские самовары»",
-   "coords": {
-    "lat": 54.1955,
-    "lon": 37.6195
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Небольшой музей у кремля рассказывает об истории самоварного промысла, прославившего Тулу.",
-    "Экспозиция занимает три зала — самовары от простых до диковинных. Следующая точка маршрута — «Музей оружия — «шлем»». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
-   ],
-   "facts": [
-    {
-     "text": "Экспозиция музея самоваров состоит из трёх залов.",
-     "sourceUrl": "https://www.sputnik8.com/ru/tula/pages/muzei-tuly",
-     "verified": true
-    },
-    {
-     "text": "Музей рассказывает об истории самоварного промысла.",
-     "sourceUrl": "https://www.sputnik8.com/ru/tula/pages/muzei-tuly",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 30,
-   "coordsVerified": false
-  },
   {
    "id": "tula-muzey-oruzhiya",
    "name": "Музей оружия — «шлем»",
@@ -173,43 +74,105 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 40,
+   "order": 10,
    "coordsVerified": false
   },
   {
-   "id": "tula-pryanik",
-   "name": "Музей «Тульский пряник»",
+   "id": "tula-kreml",
+   "name": "Тульский кремль",
    "coords": {
-    "lat": 54.199,
-    "lon": 37.596
+    "lat": 54.1965,
+    "lon": 37.6185
    },
    "kind": "заходим внутрь",
    "visitMinutes": 30,
    "guideStory": [
-    "Первое письменное упоминание тульского пряника относится к 1685 году. Пряники здесь печатные: тесто прессовали в резных деревянных формах.",
-    "В музее есть самый маленький пряник — чуть больше полтинника — и гигантский пудовый. Можно попробовать пряник с чаем."
+    "Каменный кремль Тулы построили по приказу Василия III в 1514–1520 годах для защиты от татарских набегов; по другим данным, строить начали в 1507 году.",
+    "В 2017 году после реконструкции на его территории открылся музейно-выставочный комплекс; там есть макет кремля XVII века."
    ],
    "facts": [
     {
-     "text": "Первое упоминание тульского пряника относится к 1685 году.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A2%D1%83%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D1%8F%D0%BD%D0%B8%D0%BA",
+     "text": "Стены кремля возведены по приказу Василия III в 1514–1520 годах.",
+     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
      "verified": true
     },
     {
-     "text": "Тульские пряники печатные: тесто прессуют в деревянных формах.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A2%D1%83%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D1%8F%D0%BD%D0%B8%D0%BA",
-     "verified": true
+     "text": "По другим данным, строительство началось в 1507 году.",
+     "sourceUrl": "https://www.culture.ru/institutes/1988/tulskiy-kreml",
+     "verified": false
     },
     {
-     "text": "В музее есть самый маленький пряник и пудовый пряник.",
-     "sourceUrl": "https://www.culture.ru/institutes/11358/muzei-tulskii-pryanik",
+     "text": "В 2017 году на территории кремля открылся музейно-выставочный комплекс.",
+     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 50,
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "tula-uspensky",
+   "name": "Успенский собор",
+   "coords": {
+    "lat": 54.1962,
+    "lon": 37.618
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Нынешний Успенский собор кремля — XVIII века; его роспись в 1765–1766 годах выполнили ярославские мастера.",
+    "Колокольню разобрали после пожара 1936 года, а нынешняя — точная копия утраченной. Следующая точка маршрута — «Музей «Тульские самовары»»."
+   ],
+   "facts": [
+    {
+     "text": "Роспись собора выполнили ярославские мастера в 1765–1766 годах.",
+     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
+     "verified": true
+    },
+    {
+     "text": "Колокольню разобрали после пожара 1936 года; нынешняя — копия утраченной.",
+     "sourceUrl": "https://experience.tripster.ru/articles/dostoprimechatelnosti-tuly/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "tula-samovar",
+   "name": "Музей «Тульские самовары»",
+   "coords": {
+    "lat": 54.1955,
+    "lon": 37.6195
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Небольшой музей у кремля рассказывает об истории самоварного промысла, прославившего Тулу.",
+    "Экспозиция занимает три зала — самовары от простых до диковинных. Следующая точка маршрута — «Музей оружия — «шлем»». Следующая точка маршрута — «Ясная Поляна: Прешпект»."
+   ],
+   "facts": [
+    {
+     "text": "Экспозиция музея самоваров состоит из трёх залов.",
+     "sourceUrl": "https://www.sputnik8.com/ru/tula/pages/muzei-tuly",
+     "verified": true
+    },
+    {
+     "text": "Музей рассказывает об истории самоварного промысла.",
+     "sourceUrl": "https://www.sputnik8.com/ru/tula/pages/muzei-tuly",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
    "coordsVerified": false
   },
   {
@@ -240,7 +203,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 60,
+   "order": 50,
    "coordsVerified": false
   },
   {
@@ -276,7 +239,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 70,
+   "order": 60,
    "coordsVerified": false
   },
   {
@@ -290,7 +253,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Толстой умер в 1910 году и был похоронен в Ясной Поляне, в лесу недалеко от усадьбы.",
-    "Это одно из самых тихих мест русской литературы. Говорим вполголоса и с тропы не сходим. Финиш — Московский вокзал, Тула: Поезда до Москвы. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+    "Это одно из самых тихих мест русской литературы. Говорим вполголоса и с тропы не сходим. Следующая точка маршрута — «Музей «Тульский пряник»». Следующая точка маршрута — «Музей «Тульский пряник»»."
    ],
    "facts": [
     {
@@ -305,6 +268,42 @@
     }
    ],
    "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 70,
+   "coordsVerified": false
+  },
+  {
+   "id": "tula-pryanik",
+   "name": "Музей «Тульский пряник»",
+   "coords": {
+    "lat": 54.199,
+    "lon": 37.596
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Первое письменное упоминание тульского пряника относится к 1685 году. Пряники здесь печатные: тесто прессовали в резных деревянных формах.",
+    "В музее есть самый маленький пряник — чуть больше полтинника — и гигантский пудовый. Можно попробовать пряник с чаем."
+   ],
+   "facts": [
+    {
+     "text": "Первое упоминание тульского пряника относится к 1685 году.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A2%D1%83%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D1%8F%D0%BD%D0%B8%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Тульские пряники печатные: тесто прессуют в деревянных формах.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A2%D1%83%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D1%80%D1%8F%D0%BD%D0%B8%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "В музее есть самый маленький пряник и пудовый пряник.",
+     "sourceUrl": "https://www.culture.ru/institutes/11358/muzei-tulskii-pryanik",
+     "verified": true
+    }
+   ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
@@ -359,10 +358,26 @@
   {
    "title": "Ясная Поляна — Т—Ж",
    "url": "https://t-j.ru/yasnaya-polyana-one-day/"
+  },
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/articles/muzej-oruzhiya-v-tule/"
+  },
+  {
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/institutes/1988/tulskiy-kreml"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/tula/pages/muzei-tuly"
+  },
+  {
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/tulskaya-oblast/tula/sight/yasnaya-polyana"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [

@@ -107,6 +107,24 @@ def polygon(obj, key, where):
         err(where, f"{key}: внешнее кольцо должно быть замкнуто и иметь ≥ 3 вершин")
 
 
+CENTERS = {}  # id места → (центр, имя), заполняется из spiral.json
+KREMLIN_PT = (55.7520, 37.6175)
+OKRUGS = {"tsao", "sao", "svao", "vao", "yuvao", "yuao", "yuzao", "zao", "szao"}
+
+
+def foreign_place(did, pt):
+    """Имя другого места спирали, к которому точка явно ближе, чем к своему (допуск 4 км)."""
+    okr = did in OKRUGS
+    inside = dist_km(pt, KREMLIN_PT) < 16.5
+    if okr != inside:
+        return "внутри МКАД" if inside else "за МКАД"
+    own = dist_km(pt, CENTERS[did][0])
+    best = min(((dist_km(pt, c), n) for k, (c, n) in CENTERS.items() if k != did and (k in OKRUGS) == okr), default=None)
+    if best and own > best[0] + 4.0:
+        return best[1]
+    return None
+
+
 def check_destination(d, fname, spiral_ids):
     w = fname
     did = need(d, "id", str, w)
@@ -124,12 +142,17 @@ def check_destination(d, fname, spiral_ids):
     if d.get("boundarySource") not in ("osm", "approx"):
         err(w, "boundarySource: osm или approx")
     paragraphs(d, "intro", w, 3, 6)
-    # Версия 2 — полноценный велодень: 40–70 км и 8–12 точек. Старые короткие маршруты (версия 1) больше не принимаются.
-    v2 = d.get("routeVersion") == 2
-    if v2:
+    # Версия 3 — маршрут только по своему месту и окрестностям, 6–12 точек, длина — сколько позволяет место.
+    # Версия 2 (40–70 км с заездами к соседям) пока допускается с предупреждением; версия 1 — ошибка.
+    ver = d.get("routeVersion")
+    v3 = ver == 3
+    v2 = ver in (2, 3)
+    if v3:
         LONG_ROUTES.append(did)
+    elif ver == 2:
+        warn(w, "маршрут версии 2 заезжает к соседям — переписать на версию 3 (только свои точки)")
     else:
-        err(w, "старый короткий маршрут (routeVersion 1) — нужен маршрут 40–70 км и 8–12 точек")
+        err(w, "старый короткий маршрут (routeVersion 1)")
     start = end = None
     for key in ("startPoint", "endPoint"):
         rp = need(d, key, dict, w)
@@ -146,7 +169,7 @@ def check_destination(d, fname, spiral_ids):
         rw = f"{w}.route"
         need(route, "distanceKm", float, rw)
         km = route.get("distanceKm")
-        if v2 and isinstance(km, (int, float)) and not (40 <= km <= 70):
+        if ver == 2 and isinstance(km, (int, float)) and not (40 <= km <= 70):
             err(rw, f"distanceKm {km}: маршрут версии 2 должен быть 40–70 км")
         need(route, "durationH", float, rw)
         if route.get("difficulty") not in DIFFICULTY:
@@ -159,7 +182,9 @@ def check_destination(d, fname, spiral_ids):
             if len(b.get("line", [])) < 2:
                 err(rw, f"барьер «{b.get('name')}» — нужна линия из ≥ 2 точек")
     stops = need(d, "stops", list, w) or []
-    if v2 and not (8 <= len(stops) <= 12):
+    if v3 and not (6 <= len(stops) <= 12):
+        err(w, f"{len(stops)} точек, нужно 6–12")
+    elif ver == 2 and not (8 <= len(stops) <= 12):
         err(w, f"{len(stops)} точек, нужно 8–12")
     elif len(stops) < 3:
         err(w, "меньше 3 точек")
@@ -179,6 +204,10 @@ def check_destination(d, fname, spiral_ids):
         pt = point(s, "coords", sw)
         if pt and center and dist_km(pt, center) > (30 if v2 else 15):
             warn(sw, f"точка в {dist_km(pt, center):.1f} км от центра места")
+        if v3 and pt and did in CENTERS:
+            other = foreign_place(did, pt)
+            if other:
+                err(sw, f"точка «{s.get('name')}» ближе к месту «{other}», чем к своему — маршрут не должен заезжать к соседям")
         if s.get("kind") not in STOP_KIND:
             err(sw, f"kind «{s.get('kind')}» не из списка")
         need(s, "visitMinutes", int, sw)
@@ -263,6 +292,7 @@ def main():
     linked = set()
     nums = []
     for p in spiral["places"]:
+        CENTERS[p["id"]] = ((p["coords"]["lat"], p["coords"]["lon"]), p["name"])
         nums.append(p["num"])
         if p["regionId"] not in region_ids:
             err("spiral.json", f"{p['name']}: неизвестный округ {p['regionId']}")
@@ -292,7 +322,7 @@ def main():
         print("ПРЕДУПРЕЖДЕНИЕ", wmsg)
     for e in errors:
         print("ОШИБКА", e)
-    print(f"Мест с контентом: {len(files)}; длинных маршрутов (40–70 км): {len(LONG_ROUTES)}; "
+    print(f"Мест с контентом: {len(files)}; маршрутов по своим точкам (версия 3): {len(LONG_ROUTES)}; "
           f"ошибок: {len(errors)}; предупреждений: {len(warnings)}")
     sys.exit(1 if errors else 0)
 

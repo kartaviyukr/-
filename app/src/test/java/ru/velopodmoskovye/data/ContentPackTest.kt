@@ -46,10 +46,14 @@ class ContentPackTest {
     @Test
     fun destinationsAreUsable() {
         for (d in pack.destinations.values) {
-            // Все маршруты — полноценный велодень (версия 2).
-            assertEquals(d.id, 2, d.routeVersion)
-            assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 8..12)
-            assertTrue("${d.id}: ${d.route.distanceKm} км", d.route.distanceKm in 40.0..70.0)
+            // Версия 3 — только свои точки места, 6–12 точек; версия 2 (40–70 км) — переходная.
+            assertTrue(d.id, d.routeVersion in 2..3)
+            if (d.routeVersion == 3) {
+                assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 6..12)
+            } else {
+                assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 8..12)
+                assertTrue("${d.id}: ${d.route.distanceKm} км", d.route.distanceKm in 40.0..70.0)
+            }
             assertTrue(d.id, d.stops.zipWithNext().all { (a, b) -> a.order < b.order })
             d.stops.forEach { s ->
                 assertTrue(s.id, s.facts.size in 2..12)
