@@ -13,14 +13,14 @@
   "Середниково — лермонтовская усадьба. Имение принадлежало Столыпиным, родне бабушки Михаила Лермонтова, и юный поэт провёл здесь два лета.",
   "Здесь вырос Пётр Столыпин. При последних владельцах, Фирсановых, в усадьбе бывали Шаляпин, Рахманинов и Серов. После революции здесь был санаторий «Мцыри», а в 1990-х имение получил Лермонтовский фонд, созданный потомком поэта.",
   "Сегодня это музейный комплекс с 16 историческими постройками; здесь сняли более 40 исторических фильмов и сериалов.",
-  "Свои места маршрута: «Главный дом», «Парк и кинодекорации». По пути маршрут заходит и к соседям: Крюково — «Матушкино», «Бывший посёлок Крюково»; Андреевка — «Лес между Зеленоградом и Андреевкой», «Посёлок Андреевка»; Менделеево — «Институт времени», «Верховья Клязьмы»; Зеленоград — «Центр Зеленограда», «МИЭТ»; Мемориал «Штыки» — «Мемориал «Штыки»».",
-  "Маршрут линейный, около 50 км и 11 точек. Финиш — Станция «Фирсановская» (Электрички Ленинградского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Парк и кинодекорации», «Усадьба Фирсановых», «Главный дом», «Каскад прудов и каменные мосты», «Лермонтовские лета». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 7 км: старт и финиш — Станция «Фирсановская» (Электрички Ленинградского направления / МЦД-3). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Фирсановская»",
   "coords": {
-   "lat": 55.962,
-   "lon": 37.249
+   "lat": 55.9622,
+   "lon": 37.2495
   },
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
@@ -33,63 +33,16 @@
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "route": {
-  "distanceKm": 50.0,
-  "durationH": 6.6,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 6.6,
+  "durationH": 1.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "serednikovo-dom",
-   "name": "Главный дом",
-   "coords": {
-    "lat": 55.98,
-    "lon": 37.24
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "Имение перешло к Столыпиным, родне бабушки Лермонтова; по одному источнику, они владели им с 1825 по 1869 год. Юный Лермонтов провёл у родственников всего два лета, но именно они определяют судьбу усадьбы.",
-    "В 1990-х имение получил Лермонтовский фонд, созданный потомком поэта. Сегодня в доме — экспозиции, а усадьба принимает экскурсии."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба принадлежала Столыпиным, родне бабушки Лермонтова.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": true
-    },
-    {
-     "text": "Столыпины владели имением с 1825 по 1869 год — по одному источнику.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": false
-    },
-    {
-     "text": "Лермонтов провёл здесь два лета.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": true
-    },
-    {
-     "text": "В 1990-х имение получил Лермонтовский фонд.",
-     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
-     "verified": true
-    },
-    {
-     "text": "Потомок Лермонтова рассказывал о наследии поэта.",
-     "sourceUrl": "https://www.interfax.ru/russia/780569",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "serednikovo-park",
    "name": "Парк и кинодекорации",
@@ -134,430 +87,168 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "serednikovo-matushkino",
-   "name": "Матушкино",
+   "id": "serednikovo-firsanovy",
+   "name": "Усадьба Фирсановых",
    "coords": {
-    "lat": 55.99,
-    "lon": 37.19
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Деревня Матушкино на короткое время оказалась оккупирована, но 8 декабря 1941 года её освободили.",
-    "На землях бывших деревень Матушкино и Савёлки и посёлка Крюково позже построили Зеленоград.",
-    "От Матушкина через новые кварталы возвращаемся к станции Крюково."
-   ],
-   "facts": [
-    {
-     "text": "Матушкино освобождено 8 декабря 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": true
-    },
-    {
-     "text": "Зеленоград построен на землях Матушкина, Савёлок и Крюкова.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "Матушкино — район Зеленограда.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": false
-    },
-    {
-     "text": "Детали боёв за деревню мы не приводим.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "serednikovo-posyolok",
-   "name": "Бывший посёлок Крюково",
-   "coords": {
-    "lat": 55.975,
-    "lon": 37.165
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1970 году северную часть посёлка Крюково до железной дороги передали городу Зеленограду; другие населённые пункты присоединили в 1970–1980-х.",
-    "Сегодня Старое Крюково — отдельный район Зеленограда со своей историей. Следующая точка маршрута — «Лес между Зеленоградом и Андреевкой»."
-   ],
-   "facts": [
-    {
-     "text": "В 1970 году северная часть Крюкова передана Зеленограду.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "В 1970–1980-х к городу присоединили другие населённые пункты.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "Старое Крюково — район Зеленограда.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/staroe-kryukovo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/staroe-kryukovo/",
-     "verified": false
-    },
-    {
-     "text": "Состав присоединённых пунктов мы не перечисляем.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "serednikovo-les",
-   "name": "Лес между Зеленоградом и Андреевкой",
-   "coords": {
-    "lat": 55.99,
-    "lon": 37.16
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "От станции Крюково едем на запад, к Андреевке. Дорога идёт через лес и новые районы Зеленограда, мимо жилых кварталов.",
-    "Тропы мы на месте не проверяли — держитесь асфальта и накатанных дорожек. Следующая точка маршрута — «Посёлок Андреевка»."
-   ],
-   "facts": [
-    {
-     "text": "Андреевка — рядом с Зеленоградом.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "Тропы не проверены.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Андреевка — в Солнечногорском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "serednikovo-posyolok-2",
-   "name": "Посёлок Андреевка",
-   "coords": {
-    "lat": 56.0,
-    "lon": 37.15
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Андреевка — рабочий посёлок Солнечногорского округа; статус его закреплён областным законом 2013 года.",
-    "Сегодня здесь строятся жилые комплексы — например, «Андреевский квартал». Следующая точка маршрута — «Институт времени». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Статус Андреевки закреплён областным законом.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "В Андреевке строится ЖК «Андреевский квартал».",
-     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_andreevskiy_kvartal",
-     "verified": true
-    },
-    {
-     "text": "История посёлка не найдена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Координаты посёлка приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Андреевка — рабочий посёлок.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "serednikovo-institut",
-   "name": "Институт времени",
-   "coords": {
-    "lat": 56.035,
-    "lon": 37.23
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Всероссийский научно-исследовательский институт физико-технических и радиотехнических измерений (ВНИИФТРИ) Росстандарта называют расположенным в Солнечногорске; РИАМО писало о нём как об «институте времени».",
-    "Что институт находится именно в Менделееве — по нашим источникам вывод косвенный, поэтому этот факт помечен как непроверенный."
-   ],
-   "facts": [
-    {
-     "text": "ВНИИФТРИ Росстандарта — метрологический институт в Солнечногорском округе.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
-     "verified": true
-    },
-    {
-     "text": "РИАМО называло институт в Солнечногорском округе «институтом времени».",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/",
-     "verified": true
-    },
-    {
-     "text": "Расположение института именно в Менделееве не проверено.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Территория института закрыта.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Режимная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "serednikovo-klyazma",
-   "name": "Верховья Клязьмы",
-   "coords": {
-    "lat": 56.045,
-    "lon": 37.215
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Менделеево стоит в верховьях Клязьмы — той самой реки, что дальше течёт через Щёлково и Ногинск к Владимиру.",
-    "Здесь Клязьма ещё совсем небольшая речка. Тропы вдоль неё мы на месте не проверяли.",
-    "По тихим улицам посёлка возвращаемся к остановке на шоссе. Следующая точка маршрута — «Центр Зеленограда»."
-   ],
-   "facts": [
-    {
-     "text": "Посёлок расположен в верховьях Клязьмы.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Клязьма течёт через Щёлково и Ногинск.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
-    },
-    {
-     "text": "Тропы вдоль реки не проверены.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
-    },
-    {
-     "text": "Менделеево соседствует с Зеленоградом.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "serednikovo-tsentr",
-   "name": "Центр Зеленограда",
-   "coords": {
-    "lat": 55.99,
-    "lon": 37.205
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "3 марта 1958 года Совет Министров СССР принял постановление о новом городе у станции Крюково. Фактически строить начали в 1960 году.",
-    "Сначала рассчитывали на 60 тысяч жителей, в 1963 году утвердили второй генплан — на 80 тысяч. Сегодня в Зеленограде живёт более 250 тысяч человек."
-   ],
-   "facts": [
-    {
-     "text": "Постановление о строительстве города принято 3 марта 1958 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "Строительство начато в 1960 году.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "В 1963 году утверждён генплан на 80 тысяч жителей.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "Население Зеленограда — более 250 тысяч.",
-     "sourceUrl": "https://teletype.in/@apfound/P1uXyLJPkH4",
-     "verified": true
-    },
-    {
-     "text": "Зеленоград — около 25 км от МКАД.",
-     "sourceUrl": "https://teletype.in/@apfound/P1uXyLJPkH4",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "serednikovo-miet",
-   "name": "МИЭТ",
-   "coords": {
-    "lat": 55.984,
-    "lon": 37.21
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "МИЭТ — опорный вуз Зеленограда. Сам институт пишет, что Зеленоград задумывался как город будущего с технопарком и высокотехнологичными производствами.",
-    "Вокруг вуза выросли десятки компаний — по данным ОЭЗ «Технополис Москва», более 50, в основном его спин-оффы."
-   ],
-   "facts": [
-    {
-     "text": "Зеленоград задумывался как город будущего с технопарком.",
-     "sourceUrl": "https://eng.miet.ru/page/10374",
-     "verified": true
-    },
-    {
-     "text": "Вокруг МИЭТ работает более 50 компаний.",
-     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
-     "verified": true
-    },
-    {
-     "text": "МИЭТ — опорный вуз Зеленограда.",
-     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
-     "verified": true
-    },
-    {
-     "text": "Координаты МИЭТ приблизительные.",
-     "sourceUrl": "https://eng.miet.ru/page/10374",
-     "verified": false
-    },
-    {
-     "text": "Зеленоград описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Zelenograd",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "serednikovo-memorial",
-   "name": "Мемориал «Штыки»",
-   "coords": {
-    "lat": 55.97,
-    "lon": 37.3
+    "lat": 55.9795,
+    "lon": 37.241
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 20,
    "guideStory": [
-    "Мемориал стоит на 40-м километре Ленинградского шоссе. Строительство шло с 1973 года, монумент установлен 24 июня 1974 года.",
-    "В братской могиле похоронены останки 760 бойцов, найденных во время строительства Зеленограда. Памятник — объект культурного наследия регионального значения.",
-    "Подходим пешком по безопасной дорожке и минуту молчим. Финиш — Станция «Фирсановская»: Электрички Ленинградского направления / МЦД-3."
+    "В усадьбе вырос Пётр Столыпин. При последних владельцах — Фирсановых — здесь бывали Шаляпин, Рахманинов и Серов.",
+    "После революции в усадьбе работал санаторий с лермонтовским названием «Мцыри» — в честь его поэмы. Следующая точка маршрута — «Главный дом»."
    ],
    "facts": [
     {
-     "text": "Мемориал находится на 40-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "В усадьбе вырос Пётр Столыпин.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
      "verified": true
     },
     {
-     "text": "Монумент установлен 24 июня 1974 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "При Фирсановых здесь бывали Шаляпин, Рахманинов и Серов.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
      "verified": true
     },
     {
-     "text": "В братской могиле — останки 760 бойцов.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "После революции здесь был санаторий «Мцыри».",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": true
+    },
+    {
+     "text": "Станция названа Фирсановкой по последним владельцам.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
      "verified": false
     },
     {
-     "text": "Мемориал посвящён погибшим при обороне Москвы в 1941 году.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": true
-    },
-    {
-     "text": "Памятник — объект культурного наследия регионального значения.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "Усадьба описана на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/Середниково",
      "verified": true
     }
    ],
-   "warnings": [
-    "Мемориал: тишина и уважение."
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "serednikovo-dom",
+   "name": "Главный дом",
+   "coords": {
+    "lat": 55.98,
+    "lon": 37.24
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Имение перешло к Столыпиным, родне бабушки Лермонтова; по одному источнику, они владели им с 1825 по 1869 год. Юный Лермонтов провёл у родственников всего два лета, но именно они определяют судьбу усадьбы.",
+    "В 1990-х имение получил Лермонтовский фонд, созданный потомком поэта. Сегодня в доме — экспозиции, а усадьба принимает экскурсии."
+   ],
+   "facts": [
+    {
+     "text": "Усадьба принадлежала Столыпиным, родне бабушки Лермонтова.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": true
+    },
+    {
+     "text": "Столыпины владели имением с 1825 по 1869 год — по одному источнику.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": false
+    },
+    {
+     "text": "Лермонтов провёл здесь два лета.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": true
+    },
+    {
+     "text": "В 1990-х имение получил Лермонтовский фонд.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": true
+    },
+    {
+     "text": "Потомок Лермонтова рассказывал о наследии поэта.",
+     "sourceUrl": "https://www.interfax.ru/russia/780569",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "serednikovo-prudy",
+   "name": "Каскад прудов и каменные мосты",
+   "coords": {
+    "lat": 55.983,
+    "lon": 37.242
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Пейзажный парк Середникова — около 90 гектаров с каскадом из трёх прудов и старинными каменными мостами.",
+    "Восстановление усадьбы финансировал внучатый племянник и полный тёзка поэта — Михаил Юрьевич Лермонтов. Следующая точка маршрута — «Лермонтовские лета»."
+   ],
+   "facts": [
+    {
+     "text": "Парк с каскадом из трёх прудов и каменными мостами занимает около 90 га.",
+     "sourceUrl": "https://360.ru/news/zima/pobyvat-v-lermontovskih-mestah-i-stat-geroem-istoricheskogo-filma-chem-zanjatsja-v-solnechnogorske/",
+     "verified": true
+    },
+    {
+     "text": "Восстановление финансировал потомок поэта Михаил Юрьевич Лермонтов.",
+     "sourceUrl": "https://www.interfax.ru/russia/780569",
+     "verified": true
+    }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 110
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "serednikovo-lermontov",
+   "name": "Лермонтовские лета",
+   "coords": {
+    "lat": 55.981,
+    "lon": 37.245
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Четыре лета подряд бабушка Елизавета Арсеньева с внуком Мишей гостила здесь у брата. В Середникове пятнадцатилетний Лермонтов впервые влюбился — в восемнадцатилетнюю Екатерину Сушкову.",
+    "С 1825 по 1869 год усадьба принадлежала Столыпиным. Финиш — Станция «Фирсановская»: Электрички Ленинградского направления / МЦД-3."
+   ],
+   "facts": [
+    {
+     "text": "Лермонтов четыре лета подряд гостил с бабушкой в Середникове.",
+     "sourceUrl": "https://aif.ru/society/history/15384",
+     "verified": true
+    },
+    {
+     "text": "Здесь Лермонтов в 15 лет влюбился в Екатерину Сушкову.",
+     "sourceUrl": "https://aif.ru/society/history/15384",
+     "verified": true
+    },
+    {
+     "text": "С 1825 по 1869 год усадьбой владели Столыпины.",
+     "sourceUrl": "https://aif.ru/society/history/15384",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -594,127 +285,95 @@
    "url": "https://www.sputnik8.com/ru/moscow/activities/61262-usadby-i-hramy-moskovskogo-severa"
   },
   {
-   "title": "Крюково — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/kryukovo/"
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/zima/pobyvat-v-lermontovskih-mestah-i-stat-geroem-istoricheskogo-filma-chem-zanjatsja-v-solnechnogorske/"
   },
   {
-   "title": "Экскурсии — Музей Зеленограда",
-   "url": "https://mosmuseum.ru/association/zelenograd/tours"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/Середниково"
   },
   {
-   "title": "Andreyevka — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast"
+   "title": "Источник: interfax.ru",
+   "url": "https://www.interfax.ru/russia/780569"
   },
   {
-   "title": "Менделеево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
-  },
-  {
-   "title": "Институт времени — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/"
-  },
-  {
-   "title": "Зеленоград — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/927481"
-  },
-  {
-   "title": "Микрон — Skillbox",
-   "url": "https://skillbox.ru/media/code/mikron-navsegda-kak-i-dlya-chego-proizvodyat-mikroelektroniku-v-rossii/"
-  },
-  {
-   "title": "МИЭТ",
-   "url": "https://eng.miet.ru/page/10374"
-  },
-  {
-   "title": "Штыки — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)"
-  },
-  {
-   "title": "Мемориал «Штыки» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
+   "title": "Источник: aif.ru",
+   "url": "https://aif.ru/society/history/15384"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.144377,
-     56.0
+     37.23438,
+     55.98
     ],
     [
-     37.145131,
-     55.998428
+     37.235133,
+     55.978428
     ],
     [
-     37.160134,
-     55.973428
+     37.244635,
+     55.960628
     ],
     [
-     37.162191,
-     55.972277
+     37.246691,
+     55.959477
     ],
     [
-     37.246191,
-     55.959277
+     37.2495,
+     55.959056
     ],
     [
-     37.249,
-     55.958856
+     37.252309,
+     55.959477
     ],
     [
-     37.251809,
-     55.959277
+     37.254365,
+     55.960628
     ],
     [
-     37.302809,
-     55.967277
+     37.255117,
+     55.9622
     ],
     [
-     37.304865,
-     55.968428
+     37.25062,
+     55.981
     ],
     [
-     37.305618,
-     55.97
+     37.249867,
+     55.982572
     ],
     [
-     37.304865,
-     55.971572
+     37.246867,
+     55.984572
     ],
     [
-     37.234874,
-     56.036572
+     37.24481,
+     55.985723
     ],
     [
-     37.219875,
-     56.046572
+     37.242,
+     55.986144
     ],
     [
-     37.217815,
-     56.047723
+     37.23919,
+     55.985723
     ],
     [
-     37.215,
-     56.048144
+     37.237133,
+     55.984572
     ],
     [
-     37.212185,
-     56.047723
+     37.235133,
+     55.981572
     ],
     [
-     37.210125,
-     56.046572
-    ],
-    [
-     37.145131,
-     56.001572
-    ],
-    [
-     37.144377,
-     56.0
+     37.23438,
+     55.98
     ]
    ]
   ]

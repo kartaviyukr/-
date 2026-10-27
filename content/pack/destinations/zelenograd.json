@@ -13,10 +13,18 @@
   "Зеленоград — город-спутник и административный округ Москвы, около 25 километров от МКАД. 3 марта 1958 года Совет Министров СССР постановил построить новый город у станции Крюково, чтобы рассредоточить население Москвы; стройка началась в 1960 году.",
   "Сначала планировали город на 60 тысяч жителей, в 1963 году — на 80 тысяч. Сегодня здесь живёт более 250 тысяч человек.",
   "Зеленоград стал центром советской микроэлектроники: в НИИМЭ выпуск микросхем наладили уже в 1964 году. Здесь работают МИЭТ, «Микрон» и «Ангстрем» с музеем микроэлектроники.",
-  "Свои места маршрута: «Центр Зеленограда», «МИЭТ», ««Микрон» и «Ангстрем»». По пути маршрут заходит и к соседям: Мемориал «Штыки» — «Последний рубеж», «Мемориал «Штыки»»; Молжаниново, Новосёлки, Черкизово — «Церковь Рождества Христова в Черкизове», «Поля у Шереметьева»; Химки и мемориал «Ежи» — «Мемориал «Противотанковые ежи»», «Центр Химок»; Путилково — «Долина Сходни», «Бывшая деревенская часть»; Красногорск — «Усадьба Знаменское-Губайлово».",
-  "Маршрут линейный, около 49 км и 12 точек. Финиш — Станция «Красногорская» (Электрички Рижского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Большой городской пруд», «Центр Зеленограда», «Площадь Юности («Плешка»)», ««Микрон» и «Ангстрем»», «МИЭТ», «Музей Зеленограда». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 10 км: старт и финиш — Станция «Крюково» (Электрички Ленинградского направления / МЦД-3). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Станция «Крюково»",
+  "coords": {
+   "lat": 55.9802,
+   "lon": 37.1725
+  },
+  "transport": "Электрички Ленинградского направления / МЦД-3"
+ },
+ "endPoint": {
   "name": "Станция «Крюково»",
   "coords": {
    "lat": 55.98,
@@ -24,25 +32,48 @@
   },
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
- "endPoint": {
-  "name": "Станция «Красногорская»",
-  "coords": {
-   "lat": 55.8182,
-   "lon": 37.3345
-  },
-  "transport": "Электрички Рижского направления / МЦД-2"
- },
  "route": {
-  "distanceKm": 49.0,
-  "durationH": 6.6,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 10.2,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "zelenograd-prud",
+   "name": "Большой городской пруд",
+   "coords": {
+    "lat": 55.995,
+    "lon": 37.198
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Большой городской пруд у «Ангстрема» — одно из самых живописных мест города, популярное для отдыха и рыбалки.",
+    "Вдоль берега — площадки и пляж. Следующая точка маршрута — «Центр Зеленограда». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Большой городской пруд — одно из живописнейших мест города.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/zelenograd/points",
+     "verified": true
+    },
+    {
+     "text": "Вдоль берега пруда есть площадки и пляж.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/zelenograd/points",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "zelenograd-tsentr",
    "name": "Центр Зеленограда",
@@ -86,54 +117,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "zelenograd-miet",
-   "name": "МИЭТ",
+   "id": "zelenograd-pleshka",
+   "name": "Площадь Юности («Плешка»)",
    "coords": {
-    "lat": 55.984,
-    "lon": 37.21
+    "lat": 55.989,
+    "lon": 37.211
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "МИЭТ — опорный вуз Зеленограда. Сам институт пишет, что Зеленоград задумывался как город будущего с технопарком и высокотехнологичными производствами.",
-    "Вокруг вуза выросли десятки компаний — по данным ОЭЗ «Технополис Москва», более 50, в основном его спин-оффы."
+    "Площадь Юности, которую горожане зовут «Плешкой», — одна из главных достопримечательностей старой части Зеленограда.",
+    "Отсюда хорошо видно, как задумывался город-спутник: широкие пространства среди леса. Следующая точка маршрута — ««Микрон» и «Ангстрем»»."
    ],
    "facts": [
     {
-     "text": "Зеленоград задумывался как город будущего с технопарком.",
-     "sourceUrl": "https://eng.miet.ru/page/10374",
+     "text": "Площадь Юности («Плешка») — одна из главных достопримечательностей старого Зеленограда.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/zelenograd/points",
      "verified": true
     },
     {
-     "text": "Вокруг МИЭТ работает более 50 компаний.",
-     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
-     "verified": true
-    },
-    {
-     "text": "МИЭТ — опорный вуз Зеленограда.",
-     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
-     "verified": true
-    },
-    {
-     "text": "Координаты МИЭТ приблизительные.",
-     "sourceUrl": "https://eng.miet.ru/page/10374",
-     "verified": false
-    },
-    {
-     "text": "Зеленоград описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Zelenograd",
+     "text": "Площадь любят местные жители.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/zelenograd/points",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "zelenograd-mikron",
@@ -180,440 +196,85 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "zelenograd-rubezh",
-   "name": "Последний рубеж",
+   "id": "zelenograd-miet",
+   "name": "МИЭТ",
    "coords": {
-    "lat": 55.975,
-    "lon": 37.25
+    "lat": 55.984,
+    "lon": 37.21
    },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
-    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Следующая точка маршрута — «Мемориал «Штыки»»."
+    "МИЭТ — опорный вуз Зеленограда. Сам институт пишет, что Зеленоград задумывался как город будущего с технопарком и высокотехнологичными производствами.",
+    "Вокруг вуза выросли десятки компаний — по данным ОЭЗ «Технополис Москва», более 50, в основном его спин-оффы."
    ],
    "facts": [
     {
-     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "text": "Зеленоград задумывался как город будущего с технопарком.",
+     "sourceUrl": "https://eng.miet.ru/page/10374",
      "verified": true
     },
     {
-     "text": "Шли бои за деревню Матушкино.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "text": "Вокруг МИЭТ работает более 50 компаний.",
+     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
      "verified": true
     },
     {
-     "text": "Матушкино освобождено 8 декабря 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
+     "text": "МИЭТ — опорный вуз Зеленограда.",
+     "sourceUrl": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf",
      "verified": true
     },
     {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "Координаты МИЭТ приблизительные.",
+     "sourceUrl": "https://eng.miet.ru/page/10374",
      "verified": false
     },
     {
-     "text": "Ленинградское шоссе — плотное движение.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Ленинградское шоссе: не выезжать на проезжую часть."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "zelenograd-memorial",
-   "name": "Мемориал «Штыки»",
-   "coords": {
-    "lat": 55.97,
-    "lon": 37.3
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Мемориал стоит на 40-м километре Ленинградского шоссе. Строительство шло с 1973 года, монумент установлен 24 июня 1974 года.",
-    "В братской могиле похоронены останки 760 бойцов, найденных во время строительства Зеленограда. Памятник — объект культурного наследия регионального значения.",
-    "Подходим пешком по безопасной дорожке и минуту молчим. Следующая точка маршрута — «Церковь Рождества Христова в Черкизове»."
-   ],
-   "facts": [
-    {
-     "text": "Мемориал находится на 40-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": true
-    },
-    {
-     "text": "Монумент установлен 24 июня 1974 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": true
-    },
-    {
-     "text": "В братской могиле — останки 760 бойцов.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": false
-    },
-    {
-     "text": "Мемориал посвящён погибшим при обороне Москвы в 1941 году.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": true
-    },
-    {
-     "text": "Памятник — объект культурного наследия регионального значения.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориал: тишина и уважение."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "zelenograd-tserkov",
-   "name": "Церковь Рождества Христова в Черкизове",
-   "coords": {
-    "lat": 55.93,
-    "lon": 37.36
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Церковь Рождества Христова в Черкизове находится в Молжаниновском районе Москвы; её также называют храмом в Новоподрезкове.",
-    "Датировку и историю храма мы в найденных источниках не нашли — фотографии собраны на sobory.ru. Следующая точка маршрута — «Поля у Шереметьева»."
-   ],
-   "facts": [
-    {
-     "text": "Церковь Рождества Христова в Черкизове — в Молжаниновском районе.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
-    },
-    {
-     "text": "Храм также называют храмом в Новоподрезкове.",
-     "sourceUrl": "https://sobory.ru/photo/453558",
-     "verified": true
-    },
-    {
-     "text": "Датировка храма не найдена.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Район относится к Северному округу.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "zelenograd-polya",
-   "name": "Поля у Шереметьева",
-   "coords": {
-    "lat": 55.938,
-    "lon": 37.38
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По краю района — поля и перелески, над которыми заходят на посадку самолёты.",
-    "Это редкое место в Москве, где огромный город выглядит как настоящая деревня.",
-    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Следующая точка маршрута — «Мемориал «Противотанковые ежи»»."
-   ],
-   "facts": [
-    {
-     "text": "Над районом заходят на посадку самолёты.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Описание ландшафта — наблюдение составителя.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Район находится на севере Москвы.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Новая Москва описана в Рувики.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "zelenograd-ezhi",
-   "name": "Мемориал «Противотанковые ежи»",
-   "coords": {
-    "lat": 55.902,
-    "lon": 37.425
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Монумент «Ежи» открыли 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой. Он стоит на 23-м километре Ленинградского шоссе.",
-    "Три стальных противотанковых ежа высотой до 6 метров, по данным путеводителей, сделаны из балок, предназначавшихся для Дворца Советов. У подножия — каменный подиум с картой обороны столицы."
-   ],
-   "facts": [
-    {
-     "text": "Монумент «Ежи» открыт 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой.",
-     "sourceUrl": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/",
-     "verified": true
-    },
-    {
-     "text": "Мемориал стоит на 23-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi",
-     "verified": true
-    },
-    {
-     "text": "Высота ежей — около 6 метров; у подножия подиум с картой обороны столицы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Ежи изготовили из стальных балок, предназначавшихся для Дворца Советов.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
-     "verified": false
-    },
-    {
-     "text": "Местные источники называют это место последним рубежом, до которого дошёл враг; другие отмечают, что боёв здесь не было.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Khimki_War_Memorial",
-     "verified": false
-    },
-    {
-     "text": "Годовщину установки монумента ежегодно отмечают в Химках.",
-     "sourceUrl": "https://360.ru/news/mosobl/godovschinu-ustanovki-monumenta-protivotankovye-ezhi-otmetili-v-himkah/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориал у оживлённого шоссе: подходим пешком по безопасной дорожке."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "zelenograd-gorod",
-   "name": "Центр Химок",
-   "coords": {
-    "lat": 55.889,
-    "lon": 37.44
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Химки путеводители описывают как город обороны Москвы, авиации, космоса и канала имени Москвы — все эти слои здесь переплетены.",
-    "В городе и рядом немало памятников; главный — у Ленинградского шоссе, на месте рубежа обороны 1941 года."
-   ],
-   "facts": [
-    {
-     "text": "Химки связаны с обороной Москвы, авиацией, космосом и каналом имени Москвы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": true
-    },
-    {
-     "text": "Путеводитель Путевка.ком предлагает маршрут по главным достопримечательностям Химок.",
-     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
-     "verified": true
-    },
-    {
-     "text": "Список достопримечательностей Химок ведёт командировка.ру.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/khimki/",
-     "verified": true
-    },
-    {
-     "text": "Год получения статуса города в найденных источниках не указан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": false
-    },
-    {
-     "text": "Химки граничат с Москвой.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "text": "Зеленоград описан в англоязычной Википедии.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Zelenograd",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "zelenograd-skhodnya",
-   "name": "Долина Сходни",
+   "id": "zelenograd-muzey",
+   "name": "Музей Зеленограда",
    "coords": {
-    "lat": 55.87,
-    "lon": 37.405
+    "lat": 55.986,
+    "lon": 37.205
    },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
    "guideStory": [
-    "По одной из версий, название Путилково связано с древним торговым путём по речке Сходне.",
-    "Первое письменное упоминание Путилкова — 1576 год, описание границ Спас-Тушинской монастырской вотчины. Тушино с его историей Смуты — совсем рядом, ниже по Сходне."
+    "Городской музей основали сами зеленоградцы: в его основу легли военные материалы, собранные жителями о боях 1941 года в этих местах.",
+    "В фондах — военно-историческая миниатюра, археологические находки, картины местных художников. Финиш — Станция «Крюково»: Электрички Ленинградского направления / МЦД-3."
    ],
    "facts": [
     {
-     "text": "Название по одной версии связано с древним торговым путём по Сходне.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "text": "Инициаторами музея стали зеленоградцы, собранные ими военные материалы легли в основу музея.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/zelenograd/points",
      "verified": true
     },
     {
-     "text": "Первое письменное упоминание — 1576 год, при описании границ Спас-Тушинской вотчины.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сходня течёт к Тушину.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково расположено у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Версия о торговом пути не подтверждена документами.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "zelenograd-staroe",
-   "name": "Бывшая деревенская часть",
-   "coords": {
-    "lat": 55.863,
-    "lon": 37.395
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "От старой деревни почти ничего не осталось: на её месте выросли многоэтажки, и сохранилось ли что-то от старой застройки, мы не проверяли.",
-    "И всё же Путилково живёт под деревенским именем, напоминая о временах, когда здесь были избы, а не микрорайоны.",
-    "Маршрут Путилкова завершён — короткий, но любопытный: от записи 1576 года до одного из крупнейших «негородов» страны."
-   ],
-   "facts": [
-    {
-     "text": "Путилково выросло из деревни, упомянутой в 1576 году.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сегодня это крупный населённый пункт у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сохранность старой застройки мы не проверяли.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково входит в городской округ Красногорск.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Понятие «деревня» в России определяется статусом, а не размером.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F",
+     "text": "В фондах — военно-историческая миниатюра, археология и работы местных художников.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/zelenograd/points",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 110
-  },
-  {
-   "id": "zelenograd-usadba",
-   "name": "Усадьба Знаменское-Губайлово",
-   "coords": {
-    "lat": 55.83,
-    "lon": 37.33
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Усадьба Знаменское-Губайлово изначально принадлежала Волынским, а затем перешла князьям Долгоруковым-Крымским.",
-    "РИАМО писало, что здесь планировали открыть краеведческий музей в формате экспериментариума и музей дачной жизни, а в другой статье — о «масонских балах» и «сосне Бальмонта» в усадьбе символистов. Нынешний статус проектов мы не проверяли."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба принадлежала Волынским, затем Долгоруковым-Крымским.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": true
-    },
-    {
-     "text": "В усадьбе планировали музей дачной жизни и экспериментариум.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
-     "verified": true
-    },
-    {
-     "text": "РИАМО писало о «сосне Бальмонта» и усадьбе символистов.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/masonskie-baly-i-sosna-balmonta-kakie-tajny-skryvaet-usadba-simvolistov-v-krasnogorske-xl/",
-     "verified": true
-    },
-    {
-     "text": "Текущий статус музейных проектов не проверен.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты усадьбы приблизительные.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 120
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -621,8 +282,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Зеленограда нет. Тематическая замена — перекус в центре города в честь инженеров-электронщиков. Это выбор составителя.",
   "story": [
-   "Зеленоград — город микросхем, институтов и инженеров.",
-   "Кафе в центре мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Зеленоград — город микросхем, институтов и инженеров. Кафе в центре мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -654,52 +314,24 @@
    "url": "https://eng.miet.ru/page/10374"
   },
   {
-   "title": "Штыки — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/zelenograd/points"
   },
   {
-   "title": "Мемориал «Штыки» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
+   "title": "Источник: teletype.in",
+   "url": "https://teletype.in/@apfound/P1uXyLJPkH4"
   },
   {
-   "title": "Церковь в Черкизове — sobory.ru",
-   "url": "https://sobory.ru/photo/11000"
+   "title": "Источник: ar2024.technomoscow.ru",
+   "url": "https://ar2024.technomoscow.ru/pdf/ar/ru/technopolis-moscow-sites_miet-mikron-angstrem.pdf"
   },
   {
-   "title": "Монумент «Ежи» — culture.ru",
-   "url": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi"
-  },
-  {
-   "title": "Мемориал «Ежи» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/"
-  },
-  {
-   "title": "Химки — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/"
-  },
-  {
-   "title": "Путилково — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/cities/putilkovo/"
-  },
-  {
-   "title": "Деревня — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F"
-  },
-  {
-   "title": "История Красногорска — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
-  },
-  {
-   "title": "Музей немецких антифашистов — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
-  },
-  {
-   "title": "Знаменское-Губайлово — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
+   "title": "Источник: en.wikipedia.org",
+   "url": "https://en.wikipedia.org/wiki/Zelenograd"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -713,68 +345,56 @@
      55.978428
     ],
     [
-     37.329654,
-     55.816628
-    ],
-    [
-     37.331702,
-     55.815477
-    ],
-    [
-     37.3345,
-     55.815056
-    ],
-    [
-     37.337298,
-     55.815477
-    ],
-    [
-     37.339346,
-     55.816628
-    ],
-    [
-     37.444855,
-     55.887428
-    ],
-    [
-     37.445606,
-     55.889
-    ],
-    [
-     37.444855,
-     55.890572
-    ],
-    [
-     37.429857,
-     55.903572
-    ],
-    [
-     37.384861,
-     55.939572
-    ],
-    [
-     37.382807,
-     55.940723
-    ],
-    [
-     37.302809,
-     55.972723
-    ],
-    [
-     37.207811,
-     55.992723
-    ],
-    [
-     37.205,
-     55.993144
-    ],
-    [
-     37.202189,
-     55.992723
-    ],
-    [
      37.16919,
-     55.982723
+     55.977277
+    ],
+    [
+     37.172,
+     55.976856
+    ],
+    [
+     37.22,
+     55.978856
+    ],
+    [
+     37.22281,
+     55.979277
+    ],
+    [
+     37.224867,
+     55.980428
+    ],
+    [
+     37.22562,
+     55.982
+    ],
+    [
+     37.224867,
+     55.983572
+    ],
+    [
+     37.215868,
+     55.990572
+    ],
+    [
+     37.21381,
+     55.991723
+    ],
+    [
+     37.200811,
+     55.997723
+    ],
+    [
+     37.198,
+     55.998144
+    ],
+    [
+     37.195189,
+     55.997723
+    ],
+    [
+     37.193131,
+     55.996572
     ],
     [
      37.167133,
