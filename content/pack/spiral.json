@@ -3917,7 +3917,7 @@
    "distanceFromKremlinKm": 166.1,
    "azimuthDeg": 5.0,
    "ring": 8,
-   "destinationId": null,
+   "destinationId": "kalyazin",
    "start": false,
    "insideMkad": false
   },

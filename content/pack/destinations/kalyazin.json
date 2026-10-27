@@ -1,0 +1,451 @@
+{
+ "id": "kalyazin",
+ "name": "Калязин",
+ "settlementType": "город",
+ "mustHave": 2,
+ "regionId": "tverskaya-oblast",
+ "distanceFromKremlinKm": 166.1,
+ "coords": {
+  "lat": 57.24,
+  "lon": 37.858
+ },
+ "intro": [
+  "Калязин — город, который ушёл под воду: в 1939–1940 годах при создании Угличского водохранилища затопили старый центр и Троицкий Макарьев монастырь. Над водой осталась колокольня высотой 74,5 метра.",
+  "Маршрут начинается в краеведческом музее с фресками затопленного монастыря, проходит к колокольне и радиотелескопу РТ-64, а затем уходит на юго-запад в древний Кашин — к Воскресенскому собору с мощами Анны Кашинской, деревянным лавам через Кашинку и Музею каши.",
+  "Около 45 км, финиш на станции Кашин, откуда идут поезда и автобусы.",
+  "Дорога Калязин — Кашин асфальтовая; лавы в Кашине проходим пешком, ведя велосипед."
+ ],
+ "startPoint": {
+  "name": "Калязин, автостанция",
+  "coords": {
+   "lat": 57.238,
+   "lon": 37.84
+  },
+  "transport": "Автобусы и поезда через Савёлово"
+ },
+ "endPoint": {
+  "name": "Станция «Кашин»",
+  "coords": {
+   "lat": 57.35,
+   "lon": 37.63
+  },
+  "transport": "Поезда и автобусы до Москвы и Твери"
+ },
+ "route": {
+  "distanceKm": 45.0,
+  "durationH": 7.5,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт; деревянные лавы в Кашине — пешком.",
+  "seasonNotes": "С мая по сентябрь; лавы в Кашине временные — проверьте, наведены ли они.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "kalyazin-muzey",
+   "name": "Калязинский краеведческий музей",
+   "coords": {
+    "lat": 57.238,
+    "lon": 37.845
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Музей занимает Богоявленскую церковь 1781 года. Здесь археология, церковное искусство, фрагменты монастыря и быт купцов и дворян.",
+    "Среди экспонатов — фрески XVII века из затопленного Макарьева монастыря с сюжетами вроде грехопадения Адама и Евы и Вавилонской башни."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится в Богоявленской церкви 1781 года.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/tverskaya-oblast/kalyazin/",
+     "verified": true
+    },
+    {
+     "text": "В музее хранятся фрески XVII века Макарьева монастыря.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/tverskaya-oblast/kalyazin/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalyazin-makariev",
+   "name": "Память Макарьева монастыря",
+   "coords": {
+    "lat": 57.24,
+    "lon": 37.86
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Славу Калязину принёс Троицкий Макарьев монастырь: его основал преподобный Макарий Калязинский в первой половине XV века, по одной из дат — в 1434 году.",
+    "В 1940 году монастырь ушёл под воду. Часть фресок XVII века успели спасти — сейчас они в музеях."
+   ],
+   "facts": [
+    {
+     "text": "Троицкий монастырь основал Макарий Калязинский; одна из дат — 1434 год.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/tverskaya-oblast/kalyazin/",
+     "verified": false
+    },
+    {
+     "text": "Монастырь затоплен в 1940 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/tverskaya-oblast/kalyazin/",
+     "verified": true
+    },
+    {
+     "text": "Троицкий Макарьев монастырь принёс известность этой территории.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kalyazin/pages/chto-posmotret-v-kalyazine",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalyazin-kolokolnya",
+   "name": "Затопленная колокольня",
+   "coords": {
+    "lat": 57.242,
+    "lon": 37.853
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Над водой Угличского водохранилища стоит колокольня Никольского собора высотой около 74,5 метра. Собор построили в 1694 году, колокольню пристроили в 1796–1800 годах.",
+    "Когда в 1939–1940 годах город затопили, колокольню оставили как навигационный знак. Колокола на ней снова собрали на средства жителей, а в 2015 году объявили о превращении колокольни в маяк."
+   ],
+   "facts": [
+    {
+     "text": "Высота колокольни — 74,5 метра; собор построен в 1694 году, колокольня — в 1796–1800 годах.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kalyazin/pages/chto-posmotret-v-kalyazine",
+     "verified": true
+    },
+    {
+     "text": "При затоплении колокольню оставили в качестве навигационного знака.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kalyazin/pages/chto-posmotret-v-kalyazine",
+     "verified": true
+    },
+    {
+     "text": "В 1939–1940 годах при строительстве водохранилища город затопили.",
+     "sourceUrl": "https://media.halvacard.ru/travel/cto-posmotret-v-kaliazine-zatoplennaia-kolokolnia-radioteleskop-kaliazinskoe-uxo-i-ulitocnaia-ferma",
+     "verified": true
+    },
+    {
+     "text": "В 2015 году сообщалось о планах превратить колокольню в маяк.",
+     "sourceUrl": "https://rg.ru/2015/11/09/reg-cfo/kolokolnya-anons.html",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalyazin-rt-64",
+   "name": "Радиотелескоп РТ-64",
+   "coords": {
+    "lat": 57.223,
+    "lon": 37.9
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Под Калязином стоит радиотелескоп с антенной диаметром 64 метра — один из крупнейших в мире. Его строили для связи с автоматическими станциями у Венеры и Марса.",
+    "Второй такой же РТ-64 работает под Щёлковом, в Медвежьих озёрах. На территорию обсерватории не заходим — смотрим с дороги."
+   ],
+   "facts": [
+    {
+     "text": "Диаметр антенны РТ-64 — 64 метра.",
+     "sourceUrl": "https://wiki.riteme.site/wiki/RT-64",
+     "verified": true
+    },
+    {
+     "text": "Телескоп создавался для связи с миссиями к Венере и Марсу.",
+     "sourceUrl": "https://wiki.riteme.site/wiki/RT-64",
+     "verified": true
+    },
+    {
+     "text": "Туристы приезжают в Калязин посмотреть на радиотелескоп РТ-64.",
+     "sourceUrl": "https://media.halvacard.ru/travel/cto-posmotret-v-kaliazine-zatoplennaia-kolokolnia-radioteleskop-kaliazinskoe-uxo-i-ulitocnaia-ferma",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalyazin-kashin-tsentr",
+   "name": "Кашин — удельный город",
+   "coords": {
+    "lat": 57.3605,
+    "lon": 37.6135
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Кашин упоминается в летописи под 1238 годом. Около 1300 года он был уделом князя Дмитрия Борисовича, в 1382 году вошёл в Тверское княжество, а в 1486-м — в Московское.",
+    "Город связан с Анной Кашинской: её канонизировали в 1650 году, затем почитание запретили, а в 1909 году восстановили. Центр Кашина — тихие купеческие улицы над рекой."
+   ],
+   "facts": [
+    {
+     "text": "Кашин упоминается в летописи под 1238 годом.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/060/169.htm",
+     "verified": true
+    },
+    {
+     "text": "В 1382 году Кашин присоединён к Тверскому княжеству, в 1486-м вошёл в Московское.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/060/169.htm",
+     "verified": true
+    },
+    {
+     "text": "Анна Кашинская канонизирована в 1650 году, почитание восстановлено в 1909 году.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Anna_of_Kashin",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalyazin-kashin-voskresensky",
+   "name": "Кашин: Воскресенский собор",
+   "coords": {
+    "lat": 57.358,
+    "lon": 37.615
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В Воскресенском соборе Кашина хранятся мощи благоверной Анны Кашинской — главной святой города.",
+    "Собор стоит недалеко от знаменитых кашинских лав — деревянных мостков через реку. Следующая точка маршрута — «Кашинские лавы». Формат остановки — «заходим внутрь», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Воскресенском соборе хранятся мощи Анны Кашинской.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    },
+    {
+     "text": "Собор находится недалеко от кашинских лав.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 60,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalyazin-kashin-lavy",
+   "name": "Кашинские лавы",
+   "coords": {
+    "lat": 57.359,
+    "lon": 37.61
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Лавы — временные деревянные мостки через реку Кашинку. Экскурсоводы говорят, что аналогов им в России нет.",
+    "Велосипед по лавам ведите в руках: настил узкий и без перил. Следующая точка маршрута — «Музей каши». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Кашинские лавы — временные деревянные мостки через реку.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    },
+    {
+     "text": "По словам источника, лавы не имеют аналогов в России.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 70,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalyazin-kashin-kasha",
+   "name": "Музей каши",
+   "coords": {
+    "lat": 57.357,
+    "lon": 37.612
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Музей каши работает с 2014 года в доме начала XIX века, который раньше принадлежал купцам Запениновым.",
+    "Здесь рассказывают о крупах и кашах и, конечно, кормят — хороший финиш длинного дня. Финиш — Станция «Кашин»: Поезда и автобусы до Москвы и Твери."
+   ],
+   "facts": [
+    {
+     "text": "Музей каши работает с 2014 года.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    },
+    {
+     "text": "Здание начала XIX века принадлежало купцам Запениновым.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 80,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Каша",
+  "kind": "тематическая замена",
+  "honestyNote": "Местным блюдом Калязина мы её не считаем — это отсылка к Музею каши в Кашине на финише.",
+  "story": [
+   "В Кашине работает Музей каши — отличный повод закончить длинный день тарелкой каши.",
+   "Блюдо выбрано составителем как тема финиша, а не как калязинская традиция."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Музей каши",
+    "address": "Кашин, центр",
+    "verified": false,
+    "note": "Туристический источник; часы работы уточняйте."
+   }
+  ]
+ },
+ "title": {
+  "id": "kalyazin-title",
+  "name": "Звонарь над водой",
+  "legend": "Затопленный Калязин и древний Кашин. Кто проехал — звонарь над водой.",
+  "ritual": "Сфотографироваться с затопленной колокольней.",
+  "pairVariant": "Звонари над водой"
+ },
+ "sources": [
+  {
+   "title": "Что посмотреть в Калязине — Спутник8",
+   "url": "https://www.sputnik8.com/ru/kalyazin/pages/chto-posmotret-v-kalyazine"
+  },
+  {
+   "title": "Калязин — Travelto",
+   "url": "https://travelto.ru/cities/rossiya/tverskaya-oblast/kalyazin/"
+  },
+  {
+   "title": "Колокольня — Российская газета",
+   "url": "https://rg.ru/2015/11/09/reg-cfo/kolokolnya-anons.html"
+  },
+  {
+   "title": "RT-64 — Wikipedia",
+   "url": "https://wiki.riteme.site/wiki/RT-64"
+  },
+  {
+   "title": "Кашин — экскурсии Спутник8",
+   "url": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi"
+  },
+  {
+   "title": "Кашин — энциклопедия",
+   "url": "https://booksite.ru/FullText/1/001/008/060/169.htm"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 2,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.604171,
+     57.359
+    ],
+    [
+     37.604952,
+     57.357428
+    ],
+    [
+     37.606952,
+     57.355428
+    ],
+    [
+     37.609086,
+     57.354277
+    ],
+    [
+     37.837095,
+     57.235277
+    ],
+    [
+     37.897096,
+     57.220277
+    ],
+    [
+     37.9,
+     57.219856
+    ],
+    [
+     37.902904,
+     57.220277
+    ],
+    [
+     37.90503,
+     57.221428
+    ],
+    [
+     37.905808,
+     57.223
+    ],
+    [
+     37.90503,
+     57.224572
+    ],
+    [
+     37.902904,
+     57.225723
+    ],
+    [
+     37.616415,
+     57.363223
+    ],
+    [
+     37.6135,
+     57.363644
+    ],
+    [
+     37.610585,
+     57.363223
+    ],
+    [
+     37.607085,
+     57.361723
+    ],
+    [
+     37.604952,
+     57.360572
+    ],
+    [
+     37.604171,
+     57.359
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
