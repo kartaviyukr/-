@@ -13,82 +13,36 @@
   "Гуслицы — исторический край бывшего Богородского уезда, названный по реке Гуслице, притоку Нерской. В конце XVII — начале XVIII века сюда, спасаясь от гонений, пришли старообрядцы.",
   "Гуслицкие мастера славились как переписчики певческих книг и иконописцы: книги с гуслицкими заставками до сих пор встречаются в старообрядческих храмах по всей России.",
   "Давыдово — гуслицкая деревня Орехово-Зуевского округа; первое упоминание — 1631 год, прежние названия — погост Сельна и село Воздвиженское. По переписи 2010 года это третья по населению деревня России.",
-  "Свои места маршрута: «Гуслицкий край», «Деревня Давыдово». По пути маршрут заходит и к соседям: Куровское — «Гуслицкий монастырь», «Старообрядческий край», «Фабричный город»; Ликино-Дулёво — «Дулёвский фарфоровый завод»; Дрезна — «Фабричный пруд»; Орехово-Зуево — «Колыбель футбола».",
-  "Маршрут линейный, около 62 км и 8 точек. Финиш — Станция «Орехово-Зуево» (Электрички Горьковского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Деревня Давыдово», «Место Крестовоздвиженского храма», «Старообрядческий храм Воздвижения Честного Креста», «Гуслицкий край». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 7 км: старт и финиш — Гуслицы (Давыдово), центр (До ближайшей станции — Станция «Куровская», около 5 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Куровская»",
+  "name": "Гуслицы (Давыдово), центр",
   "coords": {
-   "lat": 55.579,
-   "lon": 38.921
+   "lat": 55.62,
+   "lon": 38.89
   },
-  "transport": "Электрички Казанского направления"
+  "transport": "До ближайшей станции — Станция «Куровская», около 5 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Орехово-Зуево»",
+  "name": "Гуслицы (Давыдово), центр",
   "coords": {
-   "lat": 55.8062,
-   "lon": 38.9625
+   "lat": 55.62,
+   "lon": 38.89
   },
-  "transport": "Электрички Горьковского направления"
+  "transport": "До ближайшей станции — Станция «Куровская», около 5 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 62.0,
-  "durationH": 7.1,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 6.8,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "guslitsy-davydovo-guslitsy",
-   "name": "Гуслицкий край",
-   "coords": {
-    "lat": 55.6,
-    "lon": 38.9
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Гуслицы — исторический регион бывшего Богородского уезда, названный по реке Гуслице. В конце XVII — начале XVIII века сюда пришли старообрядцы.",
-    "Исторические Гуслицы со старообрядческой традицией шире любого одного населённого пункта; разные церковные общины смешивать нельзя."
-   ],
-   "facts": [
-    {
-     "text": "Гуслицы названы по реке Гуслице, притоку Нерской.",
-     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
-     "verified": true
-    },
-    {
-     "text": "В конце XVII — начале XVIII века сюда пришли старообрядцы.",
-     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
-     "verified": true
-    },
-    {
-     "text": "Гуслицы шире одного населённого пункта.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
-     "verified": false
-    },
-    {
-     "text": "Разные общины нельзя смешивать.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "guslitsy-davydovo-davydovo",
    "name": "Деревня Давыдово",
@@ -132,288 +86,116 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "guslitsy-davydovo-monastyr",
-   "name": "Гуслицкий монастырь",
+   "id": "guslitsy-davydovo-edinovercheskiy",
+   "name": "Место Крестовоздвиженского храма",
    "coords": {
-    "lat": 55.6,
-    "lon": 38.94
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Спасо-Преображенский Гуслицкий монастырь основан на рубеже 1858–1859 годов по инициативе Александра II и с благословения митрополита Филарета (Дроздова), у древнего погоста Спас на Мошеве.",
-    "Вокруг жили старообрядцы, и церковь создавала здесь миссионерский центр против раскола. В 1922 году монастырь закрыли, святыни вывезли; сегодня он снова действует.",
-    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Старообрядческий край»."
-   ],
-   "facts": [
-    {
-     "text": "Монастырь основан в 1858–1859 годах по инициативе Александра II.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Основан с благословения митрополита Филарета.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Монастырь стоит у погоста Спас на Мошеве.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Монастырь был миссионерским центром против раскола.",
-     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/spaso-preobrazhenskij-guslitskij-muzhskoj-monastyr/",
-     "verified": true
-    },
-    {
-     "text": "В 1922 году монастырь закрыт.",
-     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/spaso-preobrazhenskij-guslitskij-muzhskoj-monastyr/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "guslitsy-davydovo-staroobryadtsy",
-   "name": "Старообрядческий край",
-   "coords": {
-    "lat": 55.59,
-    "lon": 38.93
+    "lat": 55.621,
+    "lon": 38.8905
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 5,
    "guideStory": [
-    "Исторические Гуслицы со старообрядческой традицией шире самого Куровского; разные церковные общины нельзя смешивать.",
-    "Куровское — хорошая отправная точка для Гуслиц и Давыдова, у которых в спирали свой маршрут. Следующая точка маршрута — «Фабричный город»."
+    "Единоверческий Крестовоздвиженский храм стоял там, где теперь поликлиника; его разобрали в 1970–1980-х годах.",
+    "По этому храму деревню на картах XIX — начала XX века называли Воздвиженским; первое письменное упоминание Давыдова — 9 июня 1631 года."
    ],
    "facts": [
     {
-     "text": "Гуслицы шире Куровского.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "text": "Крестовоздвиженский храм стоял на месте современной поликлиники.",
+     "sourceUrl": "http://sobory.ru/article/?object=14509",
      "verified": true
     },
     {
-     "text": "Общины нельзя смешивать.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "text": "Первое упоминание — 9 июня 1631 года; на картах — Воздвиженское.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%B2%D1%8B%D0%B4%D0%BE%D0%B2%D0%BE_(%D0%9E%D1%80%D0%B5%D1%85%D0%BE%D0%B2%D0%BE-%D0%97%D1%83%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3)",
      "verified": true
-    },
-    {
-     "text": "Монастырь описан на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "guslitsy-davydovo-gorod",
-   "name": "Фабричный город",
+   "id": "guslitsy-davydovo-staroobryadcheskiy",
+   "name": "Старообрядческий храм Воздвижения Честного Креста",
    "coords": {
-    "lat": 55.579,
-    "lon": 38.921
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Деревня Куровская впервые упомянута в 1646 году. Текстильная промышленность превратила её в фабричный город; в 1952 году Куровское получило статус города.",
-    "В городе сохранилось советское фабричное наследие. Следующая точка маршрута — «Дулёвский фарфоровый завод»."
-   ],
-   "facts": [
-    {
-     "text": "Деревня впервые упомянута в 1646 году.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": true
-    },
-    {
-     "text": "Статус города — 1952 год.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": true
-    },
-    {
-     "text": "Текстильная промышленность преобразила деревню.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": true
-    },
-    {
-     "text": "Сохранилось советское фабричное наследие.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "guslitsy-davydovo-farfor",
-   "name": "Дулёвский фарфоровый завод",
-   "coords": {
-    "lat": 55.7,
-    "lon": 38.95
+    "lat": 55.6195,
+    "lon": 38.887
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Завод основал в 1832 году Терентий Кузнецов в пустоши Дулёво. По одной версии, в 1864 году наследником стал Матвей Кузнецов, при котором завод достиг расцвета; по другой — товарищество М. С. Кузнецова владело им с 1889 по 1917 год.",
-    "В 1932 году при заводе создали красочный завод и художественную лабораторию. Главным художником был Алексей Сотников."
-   ],
-   "facts": [
-    {
-     "text": "Завод основан в 1832 году Т. Кузнецовым в пустоши Дулёво.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%B0%D1%80%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4",
-     "verified": true
-    },
-    {
-     "text": "Даты владения М. С. Кузнецова в источниках расходятся.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%B0%D1%80%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4",
-     "verified": false
-    },
-    {
-     "text": "В 1932 году созданы красочный завод и художественная лаборатория.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%B0%D1%80%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4",
-     "verified": true
-    },
-    {
-     "text": "Главный художник — Алексей Сотников.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "vc.ru писал о фарфоровой империи Кузнецовых.",
-     "sourceUrl": "https://vc.ru/37860",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "guslitsy-davydovo-prud",
-   "name": "Фабричный пруд",
-   "coords": {
-    "lat": 55.747,
-    "lon": 38.852
-   },
-   "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "Фабричный пруд — часть производственного ансамбля; такие пруды давали воду для производства.",
-    "Сегодня это тихое место в центре маленького города. Следующая точка маршрута — «Колыбель футбола». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+    "В Давыдове живёт община Русской православной старообрядческой церкви; у неё деревянный храм Воздвижения Честного Креста, и община собирает средства на каменный.",
+    "Старообрядческая моленная в Давыдове упоминается уже в «Ведомости» 1826 года; последнее здание зимней моленной до революции построили в 1916 году, а в 1930-е храмы закрыли."
    ],
    "facts": [
     {
-     "text": "В Дрезне сохранился фабричный пруд.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
+     "text": "В Давыдове есть деревянный храм Воздвижения Честного Креста РПСЦ.",
+     "sourceUrl": "https://rpsc.ru/church/davydovo/",
      "verified": true
     },
     {
-     "text": "Назначение пруда — общее для фабрик того времени.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
-     "verified": false
-    },
-    {
-     "text": "Координаты пруда приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
-     "verified": false
-    },
-    {
-     "text": "Дрезна описана на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0",
+     "text": "Моленная упоминается в «Ведомости» 1826 года; зимняя моленная — 1916 год.",
+     "sourceUrl": "https://rpsc.ru/church/davydovo/",
      "verified": true
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
-     "verified": false
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "guslitsy-davydovo-futbol",
-   "name": "Колыбель футбола",
+   "id": "guslitsy-davydovo-guslitsy",
+   "name": "Гуслицкий край",
    "coords": {
-    "lat": 55.807,
-    "lon": 38.965
+    "lat": 55.6,
+    "lon": 38.9
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Орехово-Зуево считают одним из мест, где начинался российский футбол; краевед Владимир Лизунов писал об этой истории. Точные даты первых матчей мы не сверили.",
-    "Город официально появился в 1917 году объединением Орехова, Зуева и Никольского."
+    "Гуслицы — исторический регион бывшего Богородского уезда, названный по реке Гуслице. В конце XVII — начале XVIII века сюда пришли старообрядцы.",
+    "Исторические Гуслицы со старообрядческой традицией шире любого одного населённого пункта; разные церковные общины смешивать нельзя."
    ],
    "facts": [
     {
-     "text": "Город — одна из колыбелей российского футбола.",
-     "sourceUrl": "https://rg.ru/articles/2018-06-rodina-futbol/",
+     "text": "Гуслицы названы по реке Гуслице, притоку Нерской.",
+     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
      "verified": true
     },
     {
-     "text": "Об этой истории писал краевед Лизунов.",
-     "sourceUrl": "https://rg.ru/articles/2018-06-rodina-futbol/",
+     "text": "В конце XVII — начале XVIII века сюда пришли старообрядцы.",
+     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
      "verified": true
     },
     {
-     "text": "Даты первых матчей не сверены.",
-     "sourceUrl": "https://rg.ru/articles/2018-06-rodina-futbol/",
-     "verified": false
-    },
-    {
-     "text": "Город образован в 1917 году объединением трёх поселений.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/orekhovo-zuevo/istoriia",
+     "text": "Гуслицы шире одного населённого пункта.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
      "verified": true
     },
     {
      "text": "Координаты приблизительные.",
-     "sourceUrl": "https://rg.ru/articles/2018-06-rodina-futbol/",
+     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
      "verified": false
+    },
+    {
+     "text": "Разные общины нельзя смешивать.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -449,127 +231,91 @@
    "url": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf"
   },
   {
-   "title": "Гуслицкий монастырь — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
    "title": "Куровское — travelto.ru",
    "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/"
   },
   {
-   "title": "Дулёвский фарфоровый завод — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%B0%D1%80%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4"
+   "title": "Источник: sobory.ru",
+   "url": "http://sobory.ru/article/?object=14509"
   },
   {
-   "title": "История — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia"
+   "title": "Источник: ru.wikipedia.org",
+   "url": "https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%B2%D1%8B%D0%B4%D0%BE%D0%B2%D0%BE_(%D0%9E%D1%80%D0%B5%D1%85%D0%BE%D0%B2%D0%BE-%D0%97%D1%83%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3)"
   },
   {
-   "title": "Дрезна — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0"
-  },
-  {
-   "title": "Дрезна — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/"
-  },
-  {
-   "title": "Морозовская стачка — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%87%D0%BA%D0%B0"
-  },
-  {
-   "title": "Никольская мануфактура — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%D0%B8%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%BE_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B9_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D1%8B"
-  },
-  {
-   "title": "История — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/orekhovo-zuevo/istoriia"
+   "title": "Источник: rpsc.ru",
+   "url": "https://rpsc.ru/church/davydovo/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.846414,
-     55.747
+     38.881432,
+     55.6195
     ],
     [
-     38.884432,
-     55.62
-    ],
-    [
-     38.885178,
-     55.618428
+     38.882178,
+     55.617928
     ],
     [
      38.89518,
      55.598428
     ],
     [
-     38.916183,
-     55.577428
+     38.897217,
+     55.597277
     ],
     [
-     38.918219,
-     55.576277
+     38.9,
+     55.596856
     ],
     [
-     38.921,
-     55.575856
+     38.902783,
+     55.597277
     ],
     [
-     38.923781,
-     55.576277
-    ],
-    [
-     38.925817,
-     55.577428
-    ],
-    [
-     38.94482,
+     38.90482,
      55.598428
     ],
     [
-     38.945565,
+     38.905565,
      55.6
     ],
     [
-     38.970595,
-     55.807
+     38.896068,
+     55.621
     ],
     [
-     38.969845,
-     55.808572
+     38.895322,
+     55.622572
     ],
     [
-     38.967797,
-     55.809723
+     38.893284,
+     55.623723
     ],
     [
-     38.965,
-     55.810144
+     38.8905,
+     55.624144
     ],
     [
-     38.962203,
-     55.809723
+     38.887716,
+     55.623723
     ],
     [
-     38.959703,
-     55.808923
+     38.884216,
+     55.622223
     ],
     [
-     38.849207,
-     55.749723
+     38.882178,
+     55.621072
     ],
     [
-     38.847162,
-     55.748572
-    ],
-    [
-     38.846414,
-     55.747
+     38.881432,
+     55.6195
     ]
    ]
   ]
