@@ -13,8 +13,8 @@
   "Звенигород — один из древнейших городов Подмосковья. Впервые он упомянут в духовной грамоте Ивана Калиты 1339 года, но раскопки на Городке показали, что город существовал ещё до монгольского нашествия.",
   "Расцвет пришёлся на 1389–1434 годы. При Дмитрии Донском появился кремль на Городке, а его сын Юрий Звенигородский особенно много сделал для города.",
   "На Городке стоит белокаменный Успенский собор конца XIV века; в 1918 году в нём нашли три иконы, приписываемые Андрею Рублёву. Рядом — Саввино-Сторожевский монастырь, чей Рождественский собор начала XV века тоже связывают с Рублёвым.",
-  "Свои места маршрута: «Городок», «Саввино-Сторожевский монастырь». По пути маршрут заходит и к соседям: Луцино — «Деревня Луцино», «Высокий берег Москвы-реки»; Кубинка — «Аэродром Кубинка»; Тучково — «Аллея Славы», «Посёлок у станции»; Дорохово — «Память освобождения».",
-  "Маршрут линейный, около 61 км и 8 точек. Финиш — Станция «Дорохово» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Скит преподобного Саввы», «Саввино-Сторожевский монастырь», «Успенский собор на Городке», «Городок», «Вознесенский храм», «Александро-Невский храм». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 11 км: старт и финиш — Станция «Звенигород» (Электрички Белорусского направления (ветка на Звенигород)). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Звенигород»",
@@ -25,69 +25,59 @@
   "transport": "Электрички Белорусского направления (ветка на Звенигород)"
  },
  "endPoint": {
-  "name": "Станция «Дорохово»",
+  "name": "Станция «Звенигород»",
   "coords": {
-   "lat": 55.5502,
-   "lon": 36.3605
+   "lat": 55.7302,
+   "lon": 36.8555
   },
   "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 61.0,
-  "durationH": 7.2,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 10.8,
+  "durationH": 2.4,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "zvenigorod-gorodok",
-   "name": "Городок",
+   "id": "zvenigorod-skit",
+   "name": "Скит преподобного Саввы",
    "coords": {
-    "lat": 55.728,
-    "lon": 36.835
+    "lat": 55.73,
+    "lon": 36.8
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "visitMinutes": 15,
    "guideStory": [
-    "Звенигород впервые упомянут в духовной грамоте Ивана Калиты 1339 года. Раскопки 1943–1945 и 1954–1957 годов показали, что город существовал ещё до монгольского нашествия.",
-    "При Дмитрии Донском здесь появилось укрепление — кремль, который назвали Городок. Его сын Юрий Звенигородский внёс в развитие города особенно большой вклад; расцвет пришёлся на 1389–1434 годы."
+    "Рядом с Саввино-Сторожевским монастырём сохранился скит, который, по преданию, выкопал сам преподобный Савва возле деревянной церкви.",
+    "Жизнь монастыря началась в 1398 году; есть предание, что Левитан задумал «Вечерний звон» под его стенами."
    ],
    "facts": [
     {
-     "text": "Звенигород упомянут в духовной грамоте Ивана Калиты 1339 года.",
-     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
+     "text": "Скит, выкопанный преподобным Саввой, сохранился до наших дней.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%B0%D0%B2%D0%B2%D0%B8%D0%BD%D0%BE-%D0%A1%D1%82%D0%BE%D1%80%D0%BE%D0%B6%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
      "verified": true
     },
     {
-     "text": "Раскопки показали, что город существовал до монгольского нашествия.",
-     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
+     "text": "Жизнь обители началась в 1398 году.",
+     "sourceUrl": "https://360.ru/news/mosobl/chto-posmotret-na-vyhodnyh-v-zvenigorode/",
      "verified": true
     },
     {
-     "text": "Расцвет города — 1389–1434 годы.",
-     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
-     "verified": true
-    },
-    {
-     "text": "Кремль-Городок появился при Дмитрии Донском.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/zvenigorod.htm",
-     "verified": true
-    },
-    {
-     "text": "Юрий Звенигородский внёс большой вклад в развитие города.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/zvenigorod.htm",
-     "verified": true
+     "text": "По преданию, Левитан задумал «Вечерний звон» под стенами монастыря.",
+     "sourceUrl": "https://www.ipu.ru/sites/default/files/news/%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4-%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%98%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC.doc",
+     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "zvenigorod-monastyr",
@@ -134,290 +124,164 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "zvenigorod-derevnya",
-   "name": "Деревня Луцино",
+   "id": "zvenigorod-sobor",
+   "name": "Успенский собор на Городке",
    "coords": {
-    "lat": 55.732,
-    "lon": 36.735
+    "lat": 55.7285,
+    "lon": 36.834
    },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Луцино — небольшая деревня Одинцовского округа. Её историю мы в найденных источниках не нашли.",
-    "Отсюда возвращаемся в Звенигород той же дорогой; если устали — можно поискать автобус до города. Следующая точка маршрута — «Высокий берег Москвы-реки»."
-   ],
-   "facts": [
-    {
-     "text": "Луцино — деревня Одинцовского округа.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
-    },
-    {
-     "text": "История деревни не найдена.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
-    },
-    {
-     "text": "Наличие автобуса не проверено.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": false
-    },
-    {
-     "text": "Координаты деревни приблизительные.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
-    },
-    {
-     "text": "Звенигород — ближайший город.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "zvenigorod-bereg",
-   "name": "Высокий берег Москвы-реки",
-   "coords": {
-    "lat": 55.73,
-    "lon": 36.73
-   },
-   "kind": "смотреть снаружи",
+   "kind": "заходим внутрь",
    "visitMinutes": 30,
    "guideStory": [
-    "У Луцина Москва-река течёт в глубокой долине с высокими берегами. Будьте осторожны у края — склоны крутые.",
-    "Жители окрестностей собирали подписи против застройки этих земель — значит, ценность места понимают и местные. Следующая точка маршрута — «Аэродром Кубинка»."
+    "Успенский собор датируют концом XIV века. Это один из немногих сохранившихся белокаменных храмов московской традиции.",
+    "В 1918 году во время реставрации в храме обнаружили три образа, приписываемых Андрею Рублёву: «Апостол Павел», «Архангел Михаил» и «Спас Вседержитель». Сегодня они в Третьяковской галерее."
    ],
    "facts": [
     {
-     "text": "У Луцина высокие берега Москвы-реки.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
-    },
-    {
-     "text": "Жители выступали против застройки окрестных земель.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
+     "text": "Успенский собор датируют концом XIV века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
      "verified": true
     },
     {
-     "text": "Статус памятника природы не подтверждён.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
+     "text": "Это один из немногих сохранившихся белокаменных храмов московской традиции.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
     },
     {
-     "text": "Склоны могут быть опасны — оценка составителя.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
-     "verified": false
+     "text": "В 1918 году в храме нашли три иконы, приписываемые Рублёву.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
     },
     {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.change.org/p/президент-россии-застроить-эти-земли-убить-жизнь",
+     "text": "Звенигородский чин хранится в Третьяковской галерее.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Точную дату постройки собора мы не сверяли.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
      "verified": false
     }
    ],
-   "daylightOnly": true,
    "warnings": [
-    "Крутые склоны: не подходить к краю."
+    "Действующий храм."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "zvenigorod-aerodrom",
-   "name": "Аэродром Кубинка",
+   "id": "zvenigorod-gorodok",
+   "name": "Городок",
    "coords": {
-    "lat": 55.61,
-    "lon": 36.65
+    "lat": 55.728,
+    "lon": 36.835
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 20,
    "guideStory": [
-    "Аэродром открылся в 1935 году примерно в 5 км к северо-западу от города. С 1938 года полки испытывали здесь новые истребители — Як-1 и ЛаГГ-3.",
-    "После 1945 года здесь стояли фронтовые истребительные дивизии; 324-я в ноябре 1950 года отправилась на Корейскую войну. В 1993 году сюда перевели управление 16-й воздушной армии из Германии.",
-    "Военный объект: смотрим издалека, ничего не снимаем у КПП. Следующая точка маршрута — «Небо «Витязей» и «Стрижей»»."
+    "Звенигород впервые упомянут в духовной грамоте Ивана Калиты 1339 года. Раскопки 1943–1945 и 1954–1957 годов показали, что город существовал ещё до монгольского нашествия.",
+    "При Дмитрии Донском здесь появилось укрепление — кремль, который назвали Городок. Его сын Юрий Звенигородский внёс в развитие города особенно большой вклад; расцвет пришёлся на 1389–1434 годы."
    ],
    "facts": [
     {
-     "text": "Аэродром открылся в 1935 году.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "text": "Звенигород упомянут в духовной грамоте Ивана Калиты 1339 года.",
+     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
      "verified": true
     },
     {
-     "text": "С 1938 года здесь испытывали Як-1 и ЛаГГ-3.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "text": "Раскопки показали, что город существовал до монгольского нашествия.",
+     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
      "verified": true
     },
     {
-     "text": "324-я дивизия в ноябре 1950 года отправилась в Корею.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "text": "Расцвет города — 1389–1434 годы.",
+     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
      "verified": true
     },
     {
-     "text": "В 1993 году сюда перевели управление 16-й воздушной армии.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
+     "text": "Кремль-Городок появился при Дмитрии Донском.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/zvenigorod.htm",
      "verified": true
     },
     {
-     "text": "Аэродром описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kubinka_(air_base)",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Военный объект: не фотографировать."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "zvenigorod-slava",
-   "name": "Аллея Славы",
-   "coords": {
-    "lat": 55.6,
-    "lon": 36.48
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В Тучкове торжественно открыли мемориал «Аллея Славы».",
-    "МЧС упоминало годовщину освобождения посёлка от немецко-фашистских захватчиков — значит, в 1941 году Тучково было оккупировано. Следующая точка маршрута — «Посёлок у станции». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "В Тучкове открыли мемориал «Аллея Славы».",
-     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
-     "verified": true
-    },
-    {
-     "text": "Тучково было освобождено от оккупации.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
-     "verified": true
-    },
-    {
-     "text": "Дату освобождения мы не сверили.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
-     "verified": false
-    },
-    {
-     "text": "Координаты мемориала приблизительные.",
-     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
-     "verified": false
-    },
-    {
-     "text": "Тучково — в Рузском округе.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "text": "Юрий Звенигородский внёс большой вклад в развитие города.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/zvenigorod.htm",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "zvenigorod-posyolok",
-   "name": "Посёлок у станции",
+   "id": "zvenigorod-voznesenskiy",
+   "name": "Вознесенский храм",
    "coords": {
-    "lat": 55.599,
-    "lon": 36.472
+    "lat": 55.729,
+    "lon": 36.858
    },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 10,
    "guideStory": [
-    "Тучково — посёлок у одноимённой станции Белорусской дороги. Историю станции мы в найденных источниках не нашли.",
-    "Отсюда начинаются «рузские просторы» — дальше на север Руза и Рузское водохранилище. Следующая точка маршрута — «Память освобождения»."
+    "Вознесенский храм известен с XVI века; на месте каменной церкви раньше стояла деревянная.",
+    "Храм стоит в историческом центре Звенигорода, у подножия Городка. Следующая точка маршрута — «Александро-Невский храм». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "Тучково — посёлок у станции.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "text": "Вознесенский храм известен с XVI века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0",
      "verified": true
     },
     {
-     "text": "История станции не найдена.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
-     "verified": false
-    },
-    {
-     "text": "Экскурсии «Рузские просторы» включают Тучково.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "text": "На месте каменного храма раньше была деревянная церковь.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0",
      "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
-     "verified": false
-    },
-    {
-     "text": "Руза — к северу от Тучкова.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "zvenigorod-memorial",
-   "name": "Память освобождения",
+   "id": "zvenigorod-nevskiy",
+   "name": "Александро-Невский храм",
    "coords": {
-    "lat": 55.552,
-    "lon": 36.365
+    "lat": 55.732,
+    "lon": 36.862
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "13 января жители Рузского округа чтят память защитников в День освобождения Дорохова.",
-    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести». Финиш — Станция «Дорохово»: Электрички Белорусского направления."
+    "Кирпичный Александро-Невский храм начинает свою историю в 1895 году.",
+    "На Городке рядом сохранилась старейшая в Подмосковье церковь Успения 1390-х годов — контраст двух эпох. Финиш — Станция «Звенигород»: Электрички Белорусского направления."
    ],
    "facts": [
     {
-     "text": "День освобождения Дорохова отмечают 13 января.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "text": "История Александро-Невского храма начинается в 1895 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0",
      "verified": true
     },
     {
-     "text": "В 2016 году — звание «Населённый пункт воинской доблести».",
-     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
-     "verified": true
-    },
-    {
-     "text": "Год освобождения мы не сверили.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": false
-    },
-    {
-     "text": "Координаты мемориала приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": false
-    },
-    {
-     "text": "Жители чтят память защитников.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "text": "Церковь Успения на Городке 1390-х годов — старейшая в Подмосковье.",
+     "sourceUrl": "https://www.ipu.ru/sites/default/files/news/%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4-%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%98%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC.doc",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -454,115 +318,103 @@
    "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5"
   },
   {
-   "title": "Достопримечательности — Tripster",
-   "url": "https://experience.tripster.ru/experience/Zvenigorod/sights"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A1%D0%B0%D0%B2%D0%B2%D0%B8%D0%BD%D0%BE-%D0%A1%D1%82%D0%BE%D1%80%D0%BE%D0%B6%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
   },
   {
-   "title": "Звенигород — ЦИАН",
-   "url": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/"
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/mosobl/chto-posmotret-na-vyhodnyh-v-zvenigorode/"
   },
   {
-   "title": "Авиабаза Кубинка — migflug",
-   "url": "https://migflug.com/ru/авиабазы/кубинка/"
+   "title": "Источник: ipu.ru",
+   "url": "https://www.ipu.ru/sites/default/files/news/%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4-%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%98%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC.doc"
   },
   {
-   "title": "Kubinka air base — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
+   "title": "Источник: advantour.com",
+   "url": "https://www.advantour.com/rus/russia/zvenigorod.htm"
   },
   {
-   "title": "Генералы Тучковы — Проза",
-   "url": "https://proza.ru/2021/07/05/291"
-  },
-  {
-   "title": "Аллея Славы — 360",
-   "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
-  },
-  {
-   "title": "Дорохово — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./"
-  },
-  {
-   "title": "День освобождения — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.354942,
-     55.5502
-    ],
-    [
-     36.355687,
-     55.548628
-    ],
-    [
-     36.357721,
-     55.547477
-    ],
-    [
-     36.3605,
-     55.547056
-    ],
-    [
-     36.363279,
-     55.547477
-    ],
-    [
-     36.652783,
-     55.607277
-    ],
-    [
-     36.654821,
-     55.608428
-    ],
-    [
-     36.859836,
-     55.728428
-    ],
-    [
-     36.860584,
+     36.794416,
      55.73
     ],
     [
-     36.859836,
-     55.731572
+     36.795164,
+     55.728428
     ],
     [
-     36.857792,
-     55.732723
+     36.797208,
+     55.727277
     ],
     [
-     36.855,
-     55.733144
+     36.8,
+     55.726856
     ],
     [
-     36.735,
-     55.735144
+     36.815,
+     55.724856
     ],
     [
-     36.732208,
+     36.835,
+     55.724856
+    ],
+    [
+     36.858,
+     55.725856
+    ],
+    [
+     36.860792,
+     55.726277
+    ],
+    [
+     36.862835,
+     55.727428
+    ],
+    [
+     36.866836,
+     55.730428
+    ],
+    [
+     36.867584,
+     55.732
+    ],
+    [
+     36.866836,
+     55.733572
+    ],
+    [
+     36.864792,
      55.734723
     ],
     [
-     36.727208,
+     36.862,
+     55.735144
+    ],
+    [
+     36.8,
+     55.733144
+    ],
+    [
+     36.797208,
      55.732723
     ],
     [
-     36.357721,
-     55.552923
+     36.795164,
+     55.731572
     ],
     [
-     36.355687,
-     55.551772
-    ],
-    [
-     36.354942,
-     55.5502
+     36.794416,
+     55.73
     ]
    ]
   ]

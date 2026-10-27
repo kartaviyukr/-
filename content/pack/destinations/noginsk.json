@@ -13,10 +13,18 @@
   "Ногинск — бывший Богородск. По одной версии, история начинается с 1389 года и села Рогожа на Владимирской дороге, где меняли лошадей; с начала XVI века оно называлось «Старый Рогожский Ям».",
   "В 1781 году по указу Екатерины II село переименовали в Богородск. В 1930 году город стал Ногинском.",
   "Главная промышленная история — Богородско-Глуховская мануфактура Морозовых: в 1842 году Захар Морозов купил село Глухово, с этого начинают историю фабрики. Позже на её основе возник один из крупнейших текстильных комбинатов СССР.",
-  "Свои места маршрута: «Богородск», «Глуховская мануфактура». По пути маршрут заходит и к соседям: Электросталь — «Завод «Электросталь»»; Большие Дворы — «Церковь Богоявления»; Павловский Посад — «Музей платка и шали»; Дрезна — «Краеведческий музей»; Ликино-Дулёво — «ЛиАЗ», «Два посёлка — один город».",
-  "Маршрут линейный, около 69 км и 8 точек. Финиш — Станция «Ликино» (Электрички Казанского направления (через Куровскую) — уточняйте), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Модерн Ногинска», «Глуховский парк и особняк Арсения Морозова», «Глуховская мануфактура», «Самая высокая колокольня», «Храм Константина Богородского», «Богородск». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 9 км: старт и финиш — Станция «Ногинск» (Электрички Горьковского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Станция «Ногинск»",
+  "coords": {
+   "lat": 55.8532,
+   "lon": 38.4415
+  },
+  "transport": "Электрички Горьковского направления"
+ },
+ "endPoint": {
   "name": "Станция «Ногинск»",
   "coords": {
    "lat": 55.853,
@@ -24,25 +32,202 @@
   },
   "transport": "Электрички Горьковского направления"
  },
- "endPoint": {
-  "name": "Станция «Ликино»",
-  "coords": {
-   "lat": 55.709,
-   "lon": 38.949
-  },
-  "transport": "Электрички Казанского направления (через Куровскую) — уточняйте"
- },
  "route": {
-  "distanceKm": 69.0,
-  "durationH": 7.9,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 9.2,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "noginsk-modern",
+   "name": "Модерн Ногинска",
+   "coords": {
+    "lat": 55.856,
+    "lon": 38.445
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Ногинске хорошо сохранилась архитектура модерна: здание Новоткацкой фабрики, женская гимназия, родильный дом, фабричное училище.",
+    "Медленно проезжаем фабричные улицы — город промышленников начала XX века. Следующая точка маршрута — «Глуховский парк и особняк Арсения Морозова»."
+   ],
+   "facts": [
+    {
+     "text": "В Ногинске сохранились здания в стиле модерн: Новоткацкая фабрика, женская гимназия, родильный дом.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9D%D0%BE%D0%B3%D0%B8%D0%BD%D1%81%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Сохранилось фабричное училище в стиле модерн.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9D%D0%BE%D0%B3%D0%B8%D0%BD%D1%81%D0%BA%D0%B0",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "noginsk-morozov",
+   "name": "Глуховский парк и особняк Арсения Морозова",
+   "coords": {
+    "lat": 55.865,
+    "lon": 38.46
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В парке, названном по бывшему посёлку Глухово, стоит особняк Арсения Морозова; в Ногинске работает музей купцов Морозовых.",
+    "Парк — хорошее место для прогулки в любое время года. Следующая точка маршрута — «Глуховская мануфактура». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "В парке Глухово стоит особняк Арсения Морозова.",
+     "sourceUrl": "https://www.kp.ru/russia/noginsk/",
+     "verified": true
+    },
+    {
+     "text": "В Ногинске работает музей купцов Морозовых.",
+     "sourceUrl": "https://www.kp.ru/russia/noginsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "noginsk-glukhovo",
+   "name": "Глуховская мануфактура",
+   "coords": {
+    "lat": 55.87,
+    "lon": 38.42
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 1842 году Захар Морозов купил село Глухово — с этого начинают историю Богородско-Глуховской мануфактуры. Другой источник датирует основание 1847 годом. Сыновья Захара Морозова расширили производство.",
+    "В советское время на базе мануфактуры вырос один из крупнейших и старейших текстильных комбинатов СССР."
+   ],
+   "facts": [
+    {
+     "text": "В 1842 году Захар Морозов купил село Глухово.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Другой источник датирует основание мануфактуры 1847 годом.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/noginsk",
+     "verified": false
+    },
+    {
+     "text": "Сыновья Захара Морозова расширили производство.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Комбинат стал одним из крупнейших текстильных предприятий СССР.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Территория фабрики может быть закрыта.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "noginsk-kolokolnya",
+   "name": "Самая высокая колокольня",
+   "coords": {
+    "lat": 55.855,
+    "lon": 38.438
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "РИАМО в рубрике «Здесь был я» рассказывало об «охоте на фазана и самой высокой колокольне в Ногинске».",
+    "Названия храма и высоты колокольни мы по найденным источникам не сверили — смотрим на месте и не повторяем непроверенные цифры. Следующая точка маршрута — «Храм Константина Богородского»."
+   ],
+   "facts": [
+    {
+     "text": "В Ногинске есть колокольня, которую РИАМО называет самой высокой.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/zdes-byl-ya-ohota-na-fazana-i-samaya-vysokaya-kolokolnya-v-noginske-xl",
+     "verified": false
+    },
+    {
+     "text": "Высота колокольни не сверена.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/zdes-byl-ya-ohota-na-fazana-i-samaya-vysokaya-kolokolnya-v-noginske-xl",
+     "verified": false
+    },
+    {
+     "text": "Координаты колокольни приблизительные.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/zdes-byl-ya-ohota-na-fazana-i-samaya-vysokaya-kolokolnya-v-noginske-xl",
+     "verified": false
+    },
+    {
+     "text": "С 1769 года в Богородске выдавали «билеты на право ткачества».",
+     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
+     "verified": false
+    },
+    {
+     "text": "Ткачество стало главной отраслью местной промышленности.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "noginsk-konstantin",
+   "name": "Храм Константина Богородского",
+   "coords": {
+    "lat": 55.853,
+    "lon": 38.438
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Храм Константина Богородского построили в 2000 году на месте разрушенной керосиновой лавки; с 2014 года это самостоятельный приход.",
+    "Богоявленский собор рядом — с четырёхъярусной колокольней и механическими часами на все четыре стороны."
+   ],
+   "facts": [
+    {
+     "text": "Храм построен в 2000 году на месте керосиновой лавки, с 2014 года — самостоятельный приход.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9D%D0%BE%D0%B3%D0%B8%D0%BD%D1%81%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "На колокольне Богоявленского собора — механические часы с четырьмя циферблатами.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/points/cathedrals/bogoiavlenskii_sobor",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
   {
    "id": "noginsk-tsentr",
    "name": "Богородск",
@@ -92,335 +277,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "noginsk-glukhovo",
-   "name": "Глуховская мануфактура",
-   "coords": {
-    "lat": 55.87,
-    "lon": 38.42
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1842 году Захар Морозов купил село Глухово — с этого начинают историю Богородско-Глуховской мануфактуры. Другой источник датирует основание 1847 годом. Сыновья Захара Морозова расширили производство.",
-    "В советское время на базе мануфактуры вырос один из крупнейших и старейших текстильных комбинатов СССР."
-   ],
-   "facts": [
-    {
-     "text": "В 1842 году Захар Морозов купил село Глухово.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Другой источник датирует основание мануфактуры 1847 годом.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/noginsk",
-     "verified": false
-    },
-    {
-     "text": "Сыновья Захара Морозова расширили производство.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Комбинат стал одним из крупнейших текстильных предприятий СССР.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Территория фабрики может быть закрыта.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "noginsk-zavod",
-   "name": "Завод «Электросталь»",
-   "coords": {
-    "lat": 55.79,
-    "lon": 38.45
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1916 году Николай Второв выбрал урочище Затишье для первого в России завода легированной стали. Строить его начали тысячи крестьян, и в 1917 году заводы выдали первую продукцию.",
-    "По одному справочнику, в 1923 году здесь выплавили первую в стране нержавеющую сталь, а позже завод давал пятую часть всей стали страны — эти цифры мы не перепроверяли."
-   ],
-   "facts": [
-    {
-     "text": "В 1916 году Второв выбрал урочище Затишье для завода легированной стали.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/elektrostal/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Посёлок при стройке назывался Затишье.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/elektrostal/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Первая продукция выпущена в 1917 году.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/31935",
-     "verified": true
-    },
-    {
-     "text": "В 1923 году выплавлена первая в стране нержавеющая сталь — по одному справочнику.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/31935",
-     "verified": false
-    },
-    {
-     "text": "Завод давал пятую часть стали страны — не проверено.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrostal-216529/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Промышленная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "noginsk-khram",
-   "name": "Церковь Богоявления",
-   "coords": {
-    "lat": 55.75,
-    "lon": 38.62
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В каталоге храмов Павлово-Посадского округа в Больших Дворах значится церковь Богоявления Господня.",
-    "Что означает год 2020 в каталоге — постройку или освящение — мы не установили. Следующая точка маршрута — «Музей платка и шали». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "В Больших Дворах есть церковь Богоявления Господня.",
-     "sourceUrl": "https://sobory.ru/geo/distr/18&help",
-     "verified": true
-    },
-    {
-     "text": "Значение года 2020 в каталоге не установлено.",
-     "sourceUrl": "https://sobory.ru/geo/distr/18&help",
-     "verified": false
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://sobory.ru/geo/distr/18&help",
-     "verified": false
-    },
-    {
-     "text": "Храм в каталоге sobory.ru.",
-     "sourceUrl": "https://sobory.ru/geo/distr/18&help",
-     "verified": true
-    },
-    {
-     "text": "Храм действующий — не проверено.",
-     "sourceUrl": "https://sobory.ru/geo/distr/18&help",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "noginsk-muzey",
-   "name": "Музей платка и шали",
-   "coords": {
-    "lat": 55.78,
-    "lon": 38.655
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Музей русского платка и шали открылся в 2002 году по инициативе местного коллекционера Владимира Шишенина. В нём более четырёхсот экспонатов, старейшие — XVIII века.",
-    "Выставка платков есть и в Павлово-Посадском краеведческом музее. Следующая точка маршрута — «Краеведческий музей»."
-   ],
-   "facts": [
-    {
-     "text": "Музей платка и шали открыт в 2002 году по инициативе В. Шишенина.",
-     "sourceUrl": "https://experience.tripster.ru/articles/pavlovsky-posad/",
-     "verified": true
-    },
-    {
-     "text": "В музее более 400 экспонатов, старейшие — XVIII века.",
-     "sourceUrl": "https://experience.tripster.ru/articles/pavlovsky-posad/",
-     "verified": true
-    },
-    {
-     "text": "Выставка платков есть в краеведческом музее.",
-     "sourceUrl": "https://experience.tripster.ru/articles/pavlovsky-posad/",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://experience.tripster.ru/articles/pavlovsky-posad/",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://experience.tripster.ru/articles/pavlovsky-posad/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "noginsk-muzey-2",
-   "name": "Краеведческий музей",
-   "coords": {
-    "lat": 55.745,
-    "lon": 38.848
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Краеведческий музей Дрезны, по данным путеводителя, рассказывает забавные истории о текстильных магнатах.",
-    "Дрезна стала городом в 1940 году. Имена владельцев фабрики мы по найденным источникам не сверили и не приводим.",
-    "Часы работы уточняйте; затем — к станции. Следующая точка маршрута — «ЛиАЗ»."
-   ],
-   "facts": [
-    {
-     "text": "Музей рассказывает о текстильных магнатах.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Дрезна стала городом в 1940 году.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Имена владельцев фабрики не сверены.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "noginsk-liaz",
-   "name": "ЛиАЗ",
-   "coords": {
-    "lat": 55.715,
-    "lon": 38.955
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Ликинский автобусный завод ведёт историю с 1933 года, а автобусы выпускает с 1959 года. Жёлтые и зелёные ЛиАЗы ездят по всей стране.",
-    "Территория завода закрыта — смотрим снаружи. Следующая точка маршрута — «Два посёлка — один город»."
-   ],
-   "facts": [
-    {
-     "text": "История ЛиАЗа восходит к 1933 году.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
-     "verified": true
-    },
-    {
-     "text": "Производство автобусов начато в 1959 году.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
-     "verified": true
-    },
-    {
-     "text": "Территория закрыта.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
-     "verified": false
-    },
-    {
-     "text": "Цвета автобусов — наблюдение составителя.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "noginsk-gorod",
-   "name": "Два посёлка — один город",
-   "coords": {
-    "lat": 55.709,
-    "lon": 38.949
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В 1937 году посёлки Ликино и Дулёво официально слились в единый город — отсюда двойное имя.",
-    "Tripster предлагает экскурсии «Истории фарфорового города». Финиш — Станция «Ликино»: Электрички Казанского направления (через Куровскую) — уточняйте."
-   ],
-   "facts": [
-    {
-     "text": "В 1937 году Ликино и Дулёво слились в один город.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Есть экскурсии об истории фарфорового города.",
-     "sourceUrl": "https://experience.tripster.ru/experience/101767/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Ликино-Дулёво — в Орехово-Зуевском округе.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -461,44 +319,28 @@
    "url": "https://riamo.ru/articles/istorii/predaniya-noginska-ekaterina-velikaya-geroj-vojny-1812-goda-i-pushkin-xl/"
   },
   {
-   "title": "История Электростали — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/elektrostal/istoriia"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9D%D0%BE%D0%B3%D0%B8%D0%BD%D1%81%D0%BA%D0%B0"
   },
   {
-   "title": "Электросталь — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/31935"
+   "title": "Источник: kp.ru",
+   "url": "https://www.kp.ru/russia/noginsk/"
   },
   {
-   "title": "Bolshiye Dvory — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Bolshiye_Dvory"
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/noginsk"
   },
   {
-   "title": "Павловопосадский платок — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BE%D0%BF%D0%BE%D1%81%D0%B0%D0%B4%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BB%D0%B0%D1%82%D0%BE%D0%BA"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/articles/istorii/zdes-byl-ya-ohota-na-fazana-i-samaya-vysokaya-kolokolnya-v-noginske-xl"
   },
   {
-   "title": "Павловский Посад — Tripster",
-   "url": "https://experience.tripster.ru/articles/pavlovsky-posad/"
-  },
-  {
-   "title": "Дрезна — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0"
-  },
-  {
-   "title": "Дрезна — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/"
-  },
-  {
-   "title": "Дулёвский фарфоровый завод — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%B0%D1%80%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4"
-  },
-  {
-   "title": "История — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/noginsk/points/cathedrals/bogoiavlenskii_sobor"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -508,56 +350,56 @@
      55.87
     ],
     [
-     38.444408,
-     55.79
+     38.415147,
+     55.868428
     ],
     [
-     38.445157,
-     55.788428
+     38.433149,
+     55.851428
     ],
     [
-     38.447204,
-     55.787277
+     38.435199,
+     55.850277
     ],
     [
-     38.617207,
-     55.747277
+     38.438,
+     55.849856
     ],
     [
-     38.62,
-     55.746856
+     38.441,
+     55.849856
     ],
     [
-     38.949,
-     55.705856
+     38.443801,
+     55.850277
     ],
     [
-     38.95179,
-     55.706277
+     38.444301,
+     55.850477
     ],
     [
-     38.953833,
-     55.707428
+     38.446351,
+     55.851628
     ],
     [
-     38.959834,
-     55.713428
+     38.464852,
+     55.863428
     ],
     [
-     38.960581,
-     55.715
+     38.465603,
+     55.865
     ],
     [
-     38.959834,
-     55.716572
+     38.464852,
+     55.866572
     ],
     [
-     38.957791,
-     55.717723
+     38.462801,
+     55.867723
     ],
     [
-     38.422802,
-     55.872723
+     38.46,
+     55.868144
     ],
     [
      38.42,

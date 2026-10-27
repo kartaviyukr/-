@@ -13,8 +13,8 @@
   "Дмитров — ровесник Москвы. По преданию, его заложил Юрий Долгорукий в 1154 году и назвал в честь новорождённого сына Всеволода, крещённого Дмитрием; в летописи город впервые упомянут в 1180 году.",
   "Крепость должна была защищать Суздальскую землю с северо-запада. В 1364 году Дмитров вошёл в Московское княжество.",
   "Главное — кремль: земляной вал и ров XII века, внутри — Успенский собор, построенный, по одному источнику, в 1509–1533 годах.",
-  "Свои места маршрута: «Кремлёвский вал», «Город князей». По пути маршрут заходит и к соседям: Яхрома — «Суконная фабрика», «Шлюз № 3»; Деденево — «Спасо-Влахернский монастырь», «Берег канала»; Икша — «Посёлок Икша», «Шлюз № 6»; Лобня — «Озеро Киово и церковь Спаса».",
-  "Маршрут линейный, около 58 км и 9 точек. Финиш — Станция «Лобня» (Электрички Савёловского направления / МЦД-1), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Борисоглебский монастырь», «Кремлёвский вал», «Успенский собор», «Город князей», «Памятник Юрию Долгорукому». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Станция «Дмитров» (Электрички Савёловского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Дмитров»",
@@ -25,24 +25,60 @@
   "transport": "Электрички Савёловского направления"
  },
  "endPoint": {
-  "name": "Станция «Лобня»",
+  "name": "Станция «Дмитров»",
   "coords": {
-   "lat": 56.0125,
-   "lon": 37.4745
+   "lat": 56.3442,
+   "lon": 37.5205
   },
-  "transport": "Электрички Савёловского направления / МЦД-1"
+  "transport": "Электрички Савёловского направления"
  },
  "route": {
-  "distanceKm": 58.0,
-  "durationH": 7.1,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.5,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "dmitrov-borisoglebskiy",
+   "name": "Борисоглебский монастырь",
+   "coords": {
+    "lat": 56.338,
+    "lon": 37.525
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Борисоглебский мужской монастырь — одна из самых посещаемых достопримечательностей Дмитрова. Собор Бориса и Глеба, по мнению историков, построен в середине XVI века.",
+    "Легенда связывает основание с Юрием Долгоруким и 1154 годом, но первое письменное упоминание — в завещании князя Юрия Васильевича 1472 года. В начале XVII века пожар уничтожил деревянные постройки и архивы."
+   ],
+   "facts": [
+    {
+     "text": "Собор Бориса и Глеба построен, по мнению историков, в середине XVI века.",
+     "sourceUrl": "https://tonkosti.ru/Борисоглебский_монастырь_Дмитрова",
+     "verified": true
+    },
+    {
+     "text": "Монастырь упоминается в завещании князя Юрия Васильевича 1472 года.",
+     "sourceUrl": "https://tonkosti.ru/Борисоглебский_монастырь_Дмитрова",
+     "verified": true
+    },
+    {
+     "text": "В начале XVII века пожар уничтожил деревянные постройки и архивы.",
+     "sourceUrl": "https://tonkosti.ru/Борисоглебский_монастырь_Дмитрова",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "dmitrov-val",
    "name": "Кремлёвский вал",
@@ -55,7 +91,7 @@
    "guideStory": [
     "Дмитровский кремль — крепость XII века с земляным валом и рвом. По преданию, город заложил Юрий Долгорукий в 1154 году; первое летописное упоминание — 1180 год.",
     "Крепость защищала Суздальскую землю с северо-запада. В конце XVI — начале XVII века город сильно пострадал, а деревянные укрепления кремля были разрушены; остались валы.",
-    "Объезжаем вал по кругу и заходим внутрь. Следующая точка маршрута — «Город князей»."
+    "Объезжаем вал по кругу и заходим внутрь. Следующая точка маршрута — «Успенский собор»."
    ],
    "facts": [
     {
@@ -87,8 +123,57 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "dmitrov-sobor",
+   "name": "Успенский собор",
+   "coords": {
+    "lat": 56.3445,
+    "lon": 37.523
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Успенский собор — главный храм кремля. По одному источнику, он построен в 1509–1533 годах; другой относит его к первой половине XVI века, когда город переживал расцвет.",
+    "Город назван в честь сына Долгорукого, Всеволода Большое Гнездо, крещённого Дмитрием.",
+    "Храм действующий — скромная одежда и тишина. Следующая точка маршрута — «Город князей»."
+   ],
+   "facts": [
+    {
+     "text": "Успенский собор построен в 1509–1533 годах — по одному источнику.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-dmitrova:-chto-posmotret-i-kak",
+     "verified": false
+    },
+    {
+     "text": "Собор относят к первой половине XVI века.",
+     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
+     "verified": true
+    },
+    {
+     "text": "Город назван в честь Всеволода, крещённого Дмитрием.",
+     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
+     "verified": true
+    },
+    {
+     "text": "Дмитров описан в паломническом справочнике.",
+     "sourceUrl": "https://azbyka.ru/palomnik/Дмитров",
+     "verified": true
+    },
+    {
+     "text": "Координаты собора приблизительные.",
+     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "dmitrov-knyazya",
@@ -133,341 +218,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "dmitrov-fabrika",
-   "name": "Суконная фабрика",
+   "id": "dmitrov-dolgorukiy",
+   "name": "Памятник Юрию Долгорукому",
    "coords": {
-    "lat": 56.29,
-    "lon": 37.48
+    "lat": 56.3445,
+    "lon": 37.5205
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 10,
    "guideStory": [
-    "По одной версии, история Яхромы как города начинается в 1841 году, когда здесь основали суконную фабрику. Вскоре её купил и модернизировал московский купец Иван Лямин.",
-    "Поселения на этих землях существовали и раньше, так что дата условна."
+    "Бронзовый памятник основателю города поставили в 2001 году на Советской площади, перед входом в кремль.",
+    "Дмитровский кремль — крепость XII века с земляным валом и рвом; территория открыта круглосуточно. Финиш — Станция «Дмитров»: Электрички Савёловского направления."
    ],
    "facts": [
     {
-     "text": "В 1841 году основана суконная фабрика — по одной версии, начало истории города.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Фабрику купил и модернизировал купец Иван Лямин.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
+     "text": "Памятник Юрию Долгорукому установлен на Советской площади в 2001 году.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-dmitrova:-chto-posmotret-i-kak",
      "verified": true
     },
     {
-     "text": "Поселения здесь существовали и раньше.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Состояние фабричных корпусов не проверено.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "dmitrov-shlyuz",
-   "name": "Шлюз № 3",
-   "coords": {
-    "lat": 56.287,
-    "lon": 37.49
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Шлюз № 3 канала имени Москвы — однокамерный судоходный шлюз в Яхроме. Его строили с 1932 по 1936 год, а официально приняли в эксплуатацию 15 июля 1937 года.",
-    "Вместе со шлюзом № 4 в Деденеве он образует Яхромский гидроузел. Следующая точка маршрута — «Спасо-Влахернский монастырь»."
-   ],
-   "facts": [
-    {
-     "text": "Шлюз № 3 — однокамерный судоходный шлюз в Яхроме.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Строили с 1932 по 1936 год.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Принят в эксплуатацию 15 июля 1937 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Вместе со шлюзом № 4 образует Яхромский гидроузел.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Координаты шлюза приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Гидросооружение: не заходить на охраняемую территорию."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "dmitrov-monastyr",
-   "name": "Спасо-Влахернский монастырь",
-   "coords": {
-    "lat": 56.245,
-    "lon": 37.515
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "С XVIII века Деденевом владели Головины; здесь была их усадьба. С этим родом связывают основание Спасо-Влахернского женского монастыря.",
-    "Монастырь действующий: вход в скромной одежде, женщинам — в платке, фото — с разрешения. Следующая точка маршрута — «Берег канала»."
-   ],
-   "facts": [
-    {
-     "text": "С XVIII века село принадлежало Головиным, здесь была их усадьба.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Основателями монастыря называют представителей рода Головиных.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Спасо-Влахернский монастырь находится в Деденеве.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": true
-    },
-    {
-     "text": "Монастырь действующий, женский.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    },
-    {
-     "text": "Координаты монастыря приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "dmitrov-kanal",
-   "name": "Берег канала",
-   "coords": {
-    "lat": 56.24,
-    "lon": 37.525
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Деденево стоит на берегу канала имени Москвы. Отсюда видно, как проходят суда по пути между Волгой и Москвой.",
-    "Холмы вокруг Деденева — часть Клинско-Дмитровской гряды; на склонах зимой катаются на лыжах. Это общая информация, конкретные трассы мы не проверяли."
-   ],
-   "facts": [
-    {
-     "text": "Посёлок стоит на берегу канала имени Москвы.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Холмы вокруг — часть Клинско-Дмитровской гряды.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Горнолыжные трассы не проверены.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "До посёлка удобно ехать до станции «Турист».",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "dmitrov-posyolok",
-   "name": "Посёлок Икша",
-   "coords": {
-    "lat": 56.17,
-    "lon": 37.5
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Икша — рабочий посёлок; до 2018 года он был центром городского поселения Икша. Краеведы, собравшие сборник по местной истории, пишут, что окрестные деревни упоминаются в межевой грамоте Ивана III дмитровскому князю Юрию Ивановичу.",
-    "Река Икша в Подмосковье — правый приток Волгуши. Происхождение названия посёлка мы в источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "Икша — рабочий посёлок Дмитровского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Городское поселение Икша упразднено в 2018 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Окрестные деревни упоминаются в грамотах 1496 и 1504 годов.",
-     "sourceUrl": "https://books.yandex.ru/books/AAmnUscU/read-online",
-     "verified": true
-    },
-    {
-     "text": "Река Икша — правый приток Волгуши.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "В округе определили задачи по развитию посёлка.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-dmitrovskom-okruge-opredelili-zadachi-po-razvitiju-poselka-iksha/",
+     "text": "Дмитровский кремль — крепость XII века с земляным валом и рвом.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-dmitrova:-chto-posmotret-i-kak",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "dmitrov-shlyuz-2",
-   "name": "Шлюз № 6",
-   "coords": {
-    "lat": 56.165,
-    "lon": 37.51
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Шлюз № 6 канала имени Москвы стоит неподалёку от Икши. Автором его архитектуры назван Г. Г. Вегман.",
-    "Канал строили с 1932 по 1936 год, чтобы дать Москве волжскую воду и судоходство. Первые суда прошли через шлюзы 1 мая 1937 года, официальный ввод — 15 июля 1937 года.",
-    "Шлюз — охраняемое сооружение; смотрим с общедоступных мест. Следующая точка маршрута — «Озеро Киово и церковь Спаса»."
-   ],
-   "facts": [
-    {
-     "text": "Шлюз № 6 находится неподалёку от посёлка Икша.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Автор проекта — архитектор Г. Г. Вегман.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Канал строили с 1932 по 1936 год.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Первые суда прошли 1 мая 1937 года, ввод — 15 июля 1937 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Канал строили, чтобы дать Москве воду Волги и судоходство.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Гидросооружение: не заходить на охраняемую территорию."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "dmitrov-kiovo",
-   "name": "Озеро Киово и церковь Спаса",
-   "coords": {
-    "lat": 56.023,
-    "lon": 37.495
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Озеро Киово — природная гордость Лобни: здесь гнездятся чайки, и чайка изображена на гербе города.",
-    "Мало кто знает, что Киово когда-то было усадьбой. Церковь Спаса Нерукотворного Образа в Киове в 1930-е закрывали, а богослужения возобновили в 1988 году."
-   ],
-   "facts": [
-    {
-     "text": "Чайка изображена на гербе Лобни, в территорию которой входит Киово.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Киово было усадьбой.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Церковь Спаса Нерукотворного Образа в 1930-е закрывали, службы возобновили в 1988 году.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Название Лобни связывают с речкой Лобненкой.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": false
-    },
-    {
-     "text": "Озеро Киово — место гнездования чаек.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/lobnia",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "warnings": [
-    "У озера — колония птиц: не шумим и не подходим к гнёздам."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -504,83 +287,63 @@
    "url": "https://www.kupibilet.ru/gid/rossiia/dmitrov/istoriia"
   },
   {
-   "title": "Перемиловская высота — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/Борисоглебский_монастырь_Дмитрова"
   },
   {
-   "title": "Шлюз № 3 — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963"
+   "title": "Источник: advantour.com",
+   "url": "https://www.advantour.com/rus/russia/dmitrov.htm"
   },
   {
-   "title": "«Турист» хана Деденя — За рулём",
-   "url": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/"
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/blog/dostoprimechatelnosti-dmitrova:-chto-posmotret-i-kak"
   },
   {
-   "title": "Деденево — knls.net",
-   "url": "https://knls.net/?p=13068"
-  },
-  {
-   "title": "Шлюз № 6 — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)"
-  },
-  {
-   "title": "Шлюзы канала — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B"
-  },
-  {
-   "title": "Лобня — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F"
-  },
-  {
-   "title": "Лобня — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/"
-  },
-  {
-   "title": "Лобня — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/lobnay/"
+   "title": "Источник: azbyka.ru",
+   "url": "https://azbyka.ru/palomnik/Дмитров"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.468876,
-     56.0125
+     37.514327,
+     56.345
     ],
     [
-     37.469629,
-     56.010928
+     37.514327,
+     56.344
     ],
     [
-     37.471688,
-     56.009777
+     37.515087,
+     56.342428
     ],
     [
-     37.4745,
-     56.009356
+     37.520088,
+     56.336428
     ],
     [
-     37.477312,
-     56.009777
+     37.522164,
+     56.335277
     ],
     [
-     37.497813,
-     56.020277
+     37.525,
+     56.334856
     ],
     [
-     37.499872,
-     56.021428
+     37.527836,
+     56.335277
     ],
     [
-     37.500626,
-     56.023
+     37.529912,
+     56.336428
     ],
     [
-     37.530658,
-     56.24
+     37.530672,
+     56.338
     ],
     [
      37.530673,
@@ -593,6 +356,10 @@
     [
      37.527837,
      56.346723
+    ],
+    [
+     37.525837,
+     56.347223
     ],
     [
      37.522837,
@@ -611,16 +378,8 @@
      56.346572
     ],
     [
-     37.475094,
-     56.291572
-    ],
-    [
-     37.474335,
-     56.29
-    ],
-    [
-     37.468876,
-     56.0125
+     37.514327,
+     56.345
     ]
    ]
   ]
