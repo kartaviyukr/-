@@ -13,8 +13,8 @@
   "Бронницы — старинный город на Москве-реке. Большая российская энциклопедия называет годом первого упоминания 1451-й; другие источники — 1453-й, духовную грамоту Софьи Витовтовны.",
   "5 октября 1781 года указом Екатерины II Бронницы стали уездным городом.",
   "Главный памятник — собор Михаила Архангела, построенный в 1696–1705 годах на средства прихожан и перестроенный в 1862–1865 годах. Здесь похоронен Иван Пущин, лицейский друг Пушкина и декабрист.",
-  "Свои места маршрута: «Собор Михаила Архангела», «Город на Москве-реке». По пути маршрут заходит и к соседям: Белоозёрский — «Город у платформы»; Раменское — «Раменская мануфактура»; Кратово — «Кратовское озеро», «Профессорские дачи»; Быково — «Дворец на холме»; Малаховка — «Летний театр», «Малаховское озеро».",
-  "Маршрут линейный, около 68 км и 9 точек. Финиш — Станция «Малаховка» (Электрички Казанского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Аллея славы воинов-автомобилистов», «Город на Москве-реке», «Старая дорога на Коломну», «Могила Ивана Пущина», «Собор Михаила Архангела». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Остановка «Бронницы, центр» (Автобусы от Москвы по Новорязанскому шоссе — уточняйте). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Бронницы, центр»",
@@ -25,72 +25,54 @@
   "transport": "Автобусы от Москвы по Новорязанскому шоссе — уточняйте"
  },
  "endPoint": {
-  "name": "Станция «Малаховка»",
+  "name": "Остановка «Бронницы, центр»",
   "coords": {
-   "lat": 55.646,
-   "lon": 38.022
+   "lat": 55.4252,
+   "lon": 38.2645
   },
-  "transport": "Электрички Казанского направления / МЦД-3"
+  "transport": "Автобусы до Москвы"
  },
  "route": {
-  "distanceKm": 68.0,
-  "durationH": 8.0,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.6,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "bronnitsy-sobor",
-   "name": "Собор Михаила Архангела",
+   "id": "bronnitsy-alleya",
+   "name": "Аллея славы воинов-автомобилистов",
    "coords": {
-    "lat": 55.426,
-    "lon": 38.264
+    "lat": 55.422,
+    "lon": 38.26
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
    "guideStory": [
-    "Собор Михаила Архангела построен в 1696–1705 годах на средства прихожан; летопись храма называет годом освящения 1705-й.",
-    "В 1862–1865 годах собор перестраивали на средства московского фабриканта Н. Д. Полтавцева. Вокруг сложился храмовый комплекс.",
-    "Храм действующий — скромная одежда и тишина. Следующая точка маршрута — «Город на Москве-реке»."
+    "Среди памятников Бронниц — мемориал «Аллея славы воинов-автомобилистов».",
+    "Из Москвы в Бронницы ходит автобус № 324 от автовокзала Выхино. Следующая точка маршрута — «Город на Москве-реке». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "Собор построен в 1696–1705 годах на средства прихожан.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
+     "text": "В Бронницах есть мемориал «Аллея славы воинов-автомобилистов».",
+     "sourceUrl": "https://101hotels.com/recreation/russia/bronnitsi/points",
      "verified": true
     },
     {
-     "text": "Храм освящён в 1705 году.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%BE-%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_(%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "В 1862–1865 годах собор перестраивали на средства Н. Д. Полтавцева.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
-     "verified": true
-    },
-    {
-     "text": "Вокруг собора сложился храмовый комплекс.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
-     "verified": true
-    },
-    {
-     "text": "Координаты собора приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
+     "text": "Из Москвы до Бронниц ходит автобус № 324 от Выхина.",
+     "sourceUrl": "https://vk.ru/@gorod_bronnitsy-ladno-poehali-smotret-bronnicy",
      "verified": false
     }
    ],
-   "warnings": [
-    "Действующий храм."
-   ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "bronnitsy-reka",
@@ -136,346 +118,134 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "bronnitsy-gorod",
-   "name": "Город у платформы",
+   "id": "bronnitsy-doroga",
+   "name": "Старая дорога на Коломну",
    "coords": {
-    "lat": 55.46,
-    "lon": 38.44
+    "lat": 55.427,
+    "lon": 38.265
    },
    "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "Белоозёрский вырос у железнодорожной платформы. По одному источнику, его основали в 1960-х как посёлок для рабочих; по другому — как жилой посёлок авиационной испытательной базы.",
-    "В 2006–2019 годах здесь было городское поселение Белоозёрский, а в 2019 году посёлок стал городом."
+    "Через Бронницы проходила древняя дорога на Коломну, Рязань и дальше к Астрахани.",
+    "По одной из версий, по речке Кожурновке когда-то проходила граница Московского и Рязанского княжеств. Следующая точка маршрута — «Могила Ивана Пущина»."
    ],
    "facts": [
     {
-     "text": "Посёлок основан в 1960-х — по одному источнику.",
-     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Посёлок связан с авиационной испытательной базой — по другому источнику.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
-     "verified": false
-    },
-    {
-     "text": "Городское поселение существовало в 2006–2019 годах.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "text": "Через Бронницы проходила древняя дорога на Коломну и Рязань.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/bronnitsi/points",
      "verified": true
     },
     {
-     "text": "С 2019 года Белоозёрский — город.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "text": "По версии, по Кожурновке проходила граница Московского и Рязанского княжеств.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/bronnitsi/points",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "bronnitsy-fabrika",
-   "name": "Раменская мануфактура",
+   "id": "bronnitsy-pushchin",
+   "name": "Могила Ивана Пущина",
    "coords": {
-    "lat": 55.565,
-    "lon": 38.235
+    "lat": 55.4262,
+    "lon": 38.2635
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Расширение Раменской бумагопрядильной мануфактуры купцами Малютиными превратило село в мощный индустриальный центр.",
-    "Даты основания фабрики мы в найденных источниках не нашли — смотрим корпуса и не придумываем цифры. Следующая точка маршрута — «Кратовское озеро»."
+    "Иван Пущин — лицейский друг Пушкина и декабрист. В Бронницах он одно время жил и здесь же похоронен.",
+    "Путеводители упоминают некрополь декабристов в Бронницах. Место захоронения — у собора; уточните на месте. Следующая точка маршрута — «Собор Михаила Архангела»."
    ],
    "facts": [
     {
-     "text": "Купцы Малютины расширили Раменскую бумагопрядильную мануфактуру.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Иван Пущин жил в Бронницах и похоронен здесь.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B",
      "verified": true
     },
     {
-     "text": "Мануфактура превратила село в индустриальный центр.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Пущин — лицейский друг Пушкина и декабрист.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B",
      "verified": true
     },
     {
-     "text": "Дата основания фабрики не найдена.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "В Бронницах упоминается некрополь декабристов.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/bronnitsi/",
+     "verified": true
+    },
+    {
+     "text": "Точное место могилы у собора нами не сверено.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B",
      "verified": false
     },
     {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Раменское описано в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "bronnitsy-ozero",
-   "name": "Кратовское озеро",
-   "coords": {
-    "lat": 55.6,
-    "lon": 38.168
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Озеро — любимое место отдыха кратовских дачников в жаркие дни.",
-    "Вокруг — сосны, которые и делают Кратово одним из самых приятных дачных посёлков Казанского направления.",
-    "От озера по тенистым дачным улицам возвращаемся к станции, где маршрут и заканчивается."
-   ],
-   "facts": [
-    {
-     "text": "Кратово окружено сосновым лесом.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Посёлку посвящён материал «Смотрим».",
-     "sourceUrl": "https://smotrim.ru/journal/2594072",
-     "verified": true
-    },
-    {
-     "text": "История озера в найденных источниках не раскрыта.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": false
-    },
-    {
-     "text": "Кратово — дачный посёлок Раменского округа.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": false
-    },
-    {
-     "text": "Летом в Кратове жили семьи учёных.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "bronnitsy-dachi",
-   "name": "Профессорские дачи",
-   "coords": {
-    "lat": 55.602,
-    "lon": 38.155
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 25,
-   "guideStory": [
-    "До 1930 года посёлок назывался Прозоровским — по князьям Голицыным-Прозоровским. Дачной местностью он был ещё в XIX веке.",
-    "В советское время здесь появились десятки тенистых дач, где отдыхали учёные и работники культуры. Mel.fm собирал воспоминания о «профессорских дачах»: сосны, мопеды, детские игры и местные легенды."
-   ],
-   "facts": [
-    {
-     "text": "До 1930 года посёлок назывался Прозоровским.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Название связано с князьями Голицыными-Прозоровскими.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "На дачах Кратова летом жили советские учёные и деятели культуры.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Московский комсомолец называет Кратово среди интересных мест для покупки дачи.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": true
-    },
-    {
-     "text": "Конкретные дачи известных людей мы не сверяли.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "bronnitsy-dvorets",
-   "name": "Дворец на холме",
+   "id": "bronnitsy-sobor",
+   "name": "Собор Михаила Архангела",
    "coords": {
-    "lat": 55.625,
-    "lon": 38.082
+    "lat": 55.426,
+    "lon": 38.264
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
    "guideStory": [
-    "Генерал-майор Михаил Измайлов получил щедрые награды от Екатерины II после переворота 1762 года и пригласил Баженова спланировать новую усадьбу.",
-    "В комплекс входили дворец на холме, Эрмитаж, церковь, грот и мостик к беседке на острове. Примерно через десять лет Баженов впал в немилость, и, вероятно, не всё было достроено. Баженовский Эрмитаж не сохранился."
+    "Собор Михаила Архангела построен в 1696–1705 годах на средства прихожан; летопись храма называет годом освящения 1705-й.",
+    "В 1862–1865 годах собор перестраивали на средства московского фабриканта Н. Д. Полтавцева. Вокруг сложился храмовый комплекс.",
+    "Храм действующий — скромная одежда и тишина. Финиш — Остановка «Бронницы, центр»: Автобусы до Москвы."
    ],
    "facts": [
     {
-     "text": "Владелец Михаил Измайлов был награждён Екатериной II после переворота 1762 года.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
+     "text": "Собор построен в 1696–1705 годах на средства прихожан.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
      "verified": true
     },
     {
-     "text": "Измайлов пригласил Баженова для планировки усадьбы.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
+     "text": "Храм освящён в 1705 году.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%BE-%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_(%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B)",
      "verified": true
     },
     {
-     "text": "В комплекс входили дворец, Эрмитаж, церковь, грот и мостик к беседке на острове.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
+     "text": "В 1862–1865 годах собор перестраивали на средства Н. Д. Полтавцева.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
      "verified": true
     },
     {
-     "text": "Баженовский Эрмитаж не сохранился.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
+     "text": "Вокруг собора сложился храмовый комплекс.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
      "verified": true
     },
     {
-     "text": "Усадьба перешла к Воронцовым-Дашковым, в 1890-х её продали инженеру.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Утверждение о «масонском стиле» усадьбы не подтверждено.",
-     "sourceUrl": "https://lomonosov.msu.ru/archive/Lomonosov_2024/data/32768/172096_uid348645_report.pdf",
+     "text": "Координаты собора приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85",
      "verified": false
     }
    ],
    "warnings": [
-    "Доступ к дворцу может быть ограничен — уточняйте."
+    "Действующий храм."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "bronnitsy-teatr",
-   "name": "Летний театр",
-   "coords": {
-    "lat": 55.643,
-    "lon": 38.028
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Летний театр появился в начале XX века; на его сцене выступали Фаина Раневская и Алиса Коонен.",
-    "С 1934 года театр стал кинотеатром, в середине 1950-х здесь ещё играл джаз-оркестр Леонида Утёсова. В 1966 году сильный снегопад разрушил крышу и часть стен.",
-    "Деревянное здание называют «свидетелем беспокойного века». Рядом после реконструкции открыли Летний парк с кинопоказами под открытым небом."
-   ],
-   "facts": [
-    {
-     "text": "Летний театр появился в начале XX века; на сцене выступали Раневская и Коонен.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "С 1934 года театр стал кинотеатром.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В середине 1950-х здесь выступал джаз-оркестр Леонида Утёсова.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В 1966 году снегопад разрушил крышу и часть стен театра.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "После реконструкции в Летнем парке организовали кинопоказы под открытым небом.",
-     "sourceUrl": "https://360.ru/news/mosobl/kinopokazy-pod-otkrytym-nebom-organizovali-v-letnem-parke-v-ljubertsah/",
-     "verified": true
-    },
-    {
-     "text": "Московский комсомолец называл театр «деревянным свидетелем беспокойного века».",
-     "sourceUrl": "https://www.mk.ru/mosobl/2013/06/18/871030-derevyannyiy-svidetel-bespokoynogo-veka.html",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "bronnitsy-ozero-2",
-   "name": "Малаховское озеро",
-   "coords": {
-    "lat": 55.64,
-    "lon": 38.018
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Главный центр притяжения посёлка — живописное озеро. На его берегах отдыхали дачники, среди которых были Суриков, Шаляпин, Шагал и Бунин.",
-    "Шагал приехал в Малаховку в 1920 году вместе с женой. Дачная Малаховка была местом, где встречалась художественная Москва."
-   ],
-   "facts": [
-    {
-     "text": "Главным центром притяжения посёлка является озеро.",
-     "sourceUrl": "https://teletype.in/@apfound/cGcJG4OYOc3",
-     "verified": true
-    },
-    {
-     "text": "В Малаховке жили Суриков, Шаляпин, Шагал и Бунин.",
-     "sourceUrl": "https://iz.ru/export/google/amp/636363",
-     "verified": true
-    },
-    {
-     "text": "Шагал переехал в Малаховку в 1920 году.",
-     "sourceUrl": "https://iz.ru/export/google/amp/636363",
-     "verified": true
-    },
-    {
-     "text": "Малаховка помнит Лилю Брик и Фёдора Шаляпина.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/actual/2020/09/02/mesto-kotoroe-pomnit/",
-     "verified": true
-    },
-    {
-     "text": "История самого озера в найденных источниках не раскрыта.",
-     "sourceUrl": "https://teletype.in/@apfound/cGcJG4OYOc3",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -516,79 +286,47 @@
    "url": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85"
   },
   {
-   "title": "Белоозёрский — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/bronnitsi/points"
   },
   {
-   "title": "Поселение Белоозёрский — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9"
+   "title": "Источник: vk.ru",
+   "url": "https://vk.ru/@gorod_bronnitsy-ladno-poehali-smotret-bronnicy"
   },
   {
-   "title": "История Раменского — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B"
   },
   {
-   "title": "Раменское — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/47154"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/bronnitsi/"
   },
   {
-   "title": "Кратово — Мел",
-   "url": "https://mel.fm/dacha/6703185-kratovo"
-  },
-  {
-   "title": "Интересные места для дачи — МК",
-   "url": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html"
-  },
-  {
-   "title": "Усадьба Быково — Рамблер",
-   "url": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo"
-  },
-  {
-   "title": "Владимирская церковь — KudaGo",
-   "url": "https://kudago.com/msk/place/vladimirskoy/"
-  },
-  {
-   "title": "Быково — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%91%D1%8B%D0%BA%D0%BE%D0%B2%D0%BE"
-  },
-  {
-   "title": "Летний театр в Малаховке — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5"
-  },
-  {
-   "title": "Малаховка — Известия",
-   "url": "https://iz.ru/export/google/amp/636363"
-  },
-  {
-   "title": "Малаховка — Мир квартир",
-   "url": "https://www.mirkvartir.ru/journal/actual/2020/09/02/mesto-kotoroe-pomnit/"
+   "title": "Источник: azbyka.ru",
+   "url": "https://azbyka.ru/palomnik/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB%D0%BE-%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_(%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D1%8B)"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.012429,
-     55.64
+     38.25446,
+     55.422
     ],
     [
-     38.013176,
-     55.638428
+     38.255202,
+     55.420428
     ],
     [
-     38.259202,
-     55.423428
-    ],
-    [
-     38.26123,
-     55.422277
-    ],
-    [
-     38.26723,
+     38.25723,
      55.419277
+    ],
+    [
+     38.26,
+     55.418856
     ],
     [
      38.27,
@@ -599,52 +337,48 @@
      55.419277
     ],
     [
-     38.442773,
-     55.457277
+     38.274798,
+     55.420428
     ],
     [
-     38.444802,
-     55.458428
+     38.27554,
+     55.422
     ],
     [
-     38.445545,
-     55.46
+     38.274798,
+     55.423572
     ],
     [
-     38.444802,
-     55.461572
+     38.269798,
+     55.428572
     ],
     [
-     38.442773,
-     55.462723
+     38.26777,
+     55.429723
     ],
     [
-     38.170783,
-     55.602723
+     38.265,
+     55.430144
     ],
     [
-     38.024786,
-     55.648723
+     38.26223,
+     55.429723
     ],
     [
-     38.022,
-     55.649144
+     38.26073,
+     55.428923
     ],
     [
-     38.019214,
-     55.648723
+     38.258702,
+     55.427772
     ],
     [
-     38.017175,
-     55.647572
+     38.255202,
+     55.423572
     ],
     [
-     38.013176,
-     55.641572
-    ],
-    [
-     38.012429,
-     55.64
+     38.25446,
+     55.422
     ]
    ]
   ]

@@ -13,8 +13,8 @@
   "Раменское — город в 30 км к юго-востоку от Москвы. Название связывают со словом «раменье» — опушка леса. Впервые местность упоминается как «Раменье» в 1328 году, в духовной грамоте Ивана Калиты.",
   "В 1725–1730 годах на берегу Борисоглебского озера граф Мусин-Пушкин построил каменную Троицкую церковь с приделами Бориса и Глеба; в 1770-х Михаил Волконский устроил здесь охотничий дом с парком.",
   "Село превратилось в промышленный центр благодаря Раменской бумагопрядильной мануфактуре купцов Малютиных. Статус города — с 1926 года.",
-  "Свои места маршрута: «Борисоглебское озеро и Троицкая церковь», «Раменская мануфактура», «Центр города». По пути маршрут заходит и к соседям: Кратово — «Кратовское озеро», «Профессорские дачи»; Быково — «Дворец на холме»; Малаховка — «Летний театр», «Малаховское озеро»; Томилино — «Улицы посёлка», «Вертолётный завод имени Миля»; Некрасовка — «Бывшие поля орошения и станция аэрации», «Новая Некрасовка у метро».",
-  "Маршрут линейный, около 43 км и 12 точек. Финиш — Метро «Некрасовка» (Метро «Некрасовка», Некрасовская линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Церковь Иоанна Богослова», «Раменская мануфактура», «Памятник героям мультфильмов», «Парк имени Гагарина», «Борисоглебское озеро и Троицкая церковь», «Историко-художественный музей», «Центр города». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Станция «Раменское» (Электрички Казанского направления / МЦД-3). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Раменское»",
@@ -25,24 +25,163 @@
   "transport": "Электрички Казанского направления / МЦД-3"
  },
  "endPoint": {
-  "name": "Метро «Некрасовка»",
+  "name": "Станция «Раменское»",
   "coords": {
-   "lat": 55.7031,
-   "lon": 37.9285
+   "lat": 55.567,
+   "lon": 38.23
   },
-  "transport": "Метро «Некрасовка», Некрасовская линия"
+  "transport": "Электрички Казанского направления / МЦД-3"
  },
  "route": {
-  "distanceKm": 43.0,
-  "durationH": 6.2,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 3.4,
+  "durationH": 1.6,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "ramenskoe-ioann",
+   "name": "Церковь Иоанна Богослова",
+   "coords": {
+    "lat": 55.567,
+    "lon": 38.231
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "На центральной площади города стоит церковь Иоанна Богослова XIX века — одна из архитектурных жемчужин Раменского.",
+    "С неё удобно начинать знакомство с городом. Следующая точка маршрута — «Раменская мануфактура». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Иоанна Богослова стоит на центральной площади.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Церковь построена в XIX веке.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "ramenskoe-fabrika",
+   "name": "Раменская мануфактура",
+   "coords": {
+    "lat": 55.565,
+    "lon": 38.235
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Расширение Раменской бумагопрядильной мануфактуры купцами Малютиными превратило село в мощный индустриальный центр.",
+    "Даты основания фабрики мы в найденных источниках не нашли — смотрим корпуса и не придумываем цифры. Следующая точка маршрута — «Памятник героям мультфильмов»."
+   ],
+   "facts": [
+    {
+     "text": "Купцы Малютины расширили Раменскую бумагопрядильную мануфактуру.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Мануфактура превратила село в индустриальный центр.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Дата основания фабрики не найдена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты фабрики приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Раменское описано в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "ramenskoe-gena",
+   "name": "Памятник героям мультфильмов",
+   "coords": {
+    "lat": 55.565,
+    "lon": 38.225
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Один из любимых памятников Раменского — героям мультфильма с Крокодилом Геной, вышедшего в 1969 году.",
+    "Детям здесь обязательно нужен фотостоп. Следующая точка маршрута — «Парк имени Гагарина». Формат остановки — «смотреть снаружи», заложите на неё около 5 минут."
+   ],
+   "facts": [
+    {
+     "text": "Памятник Крокодилу Гене — один из любимых памятников города.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Мультфильм с Крокодилом Геной вышел в 1969 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "ramenskoe-park-gagarina",
+   "name": "Парк имени Гагарина",
+   "coords": {
+    "lat": 55.57,
+    "lon": 38.22
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Парк имени Юрия Гагарина — место для прогулок с аттракционами для детей и взрослых.",
+    "Хорошее место для привала на маршруте. Следующая точка маршрута — «Борисоглебское озеро и Троицкая церковь». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Раменском есть парк имени Гагарина с аттракционами.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Парк рассчитан и на детей, и на взрослых.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
   {
    "id": "ramenskoe-ozero",
    "name": "Борисоглебское озеро и Троицкая церковь",
@@ -87,54 +226,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "ramenskoe-fabrika",
-   "name": "Раменская мануфактура",
+   "id": "ramenskoe-muzey",
+   "name": "Историко-художественный музей",
    "coords": {
-    "lat": 55.565,
-    "lon": 38.235
+    "lat": 55.568,
+    "lon": 38.228
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
    "guideStory": [
-    "Расширение Раменской бумагопрядильной мануфактуры купцами Малютиными превратило село в мощный индустриальный центр.",
-    "Даты основания фабрики мы в найденных источниках не нашли — смотрим корпуса и не придумываем цифры. Следующая точка маршрута — «Центр города»."
+    "Самый известный музей Раменского района — историко-художественный, на улице Воровского, 7.",
+    "Первое письменное упоминание о Раменском относится к XIV веку. Следующая точка маршрута — «Центр города». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
    ],
    "facts": [
     {
-     "text": "Купцы Малютины расширили Раменскую бумагопрядильную мануфактуру.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Историко-художественный музей находится на ул. Воровского, 7.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
      "verified": true
     },
     {
-     "text": "Мануфактура превратила село в индустриальный центр.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Дата основания фабрики не найдена.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Раменское описано в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "text": "Первое письменное упоминание о Раменском относится к XIV веку.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 60,
+   "coordsVerified": false
   },
   {
    "id": "ramenskoe-gorod",
@@ -180,444 +304,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "ramenskoe-ozero-2",
-   "name": "Кратовское озеро",
-   "coords": {
-    "lat": 55.6,
-    "lon": 38.168
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Озеро — любимое место отдыха кратовских дачников в жаркие дни.",
-    "Вокруг — сосны, которые и делают Кратово одним из самых приятных дачных посёлков Казанского направления.",
-    "От озера по тенистым дачным улицам возвращаемся к станции, где маршрут и заканчивается."
-   ],
-   "facts": [
-    {
-     "text": "Кратово окружено сосновым лесом.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Посёлку посвящён материал «Смотрим».",
-     "sourceUrl": "https://smotrim.ru/journal/2594072",
-     "verified": true
-    },
-    {
-     "text": "История озера в найденных источниках не раскрыта.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": false
-    },
-    {
-     "text": "Кратово — дачный посёлок Раменского округа.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": false
-    },
-    {
-     "text": "Летом в Кратове жили семьи учёных.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "ramenskoe-dachi",
-   "name": "Профессорские дачи",
-   "coords": {
-    "lat": 55.602,
-    "lon": 38.155
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 25,
-   "guideStory": [
-    "До 1930 года посёлок назывался Прозоровским — по князьям Голицыным-Прозоровским. Дачной местностью он был ещё в XIX веке.",
-    "В советское время здесь появились десятки тенистых дач, где отдыхали учёные и работники культуры. Mel.fm собирал воспоминания о «профессорских дачах»: сосны, мопеды, детские игры и местные легенды."
-   ],
-   "facts": [
-    {
-     "text": "До 1930 года посёлок назывался Прозоровским.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Название связано с князьями Голицыными-Прозоровскими.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "На дачах Кратова летом жили советские учёные и деятели культуры.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Московский комсомолец называет Кратово среди интересных мест для покупки дачи.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": true
-    },
-    {
-     "text": "Конкретные дачи известных людей мы не сверяли.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "ramenskoe-dvorets",
-   "name": "Дворец на холме",
-   "coords": {
-    "lat": 55.625,
-    "lon": 38.082
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Генерал-майор Михаил Измайлов получил щедрые награды от Екатерины II после переворота 1762 года и пригласил Баженова спланировать новую усадьбу.",
-    "В комплекс входили дворец на холме, Эрмитаж, церковь, грот и мостик к беседке на острове. Примерно через десять лет Баженов впал в немилость, и, вероятно, не всё было достроено. Баженовский Эрмитаж не сохранился."
-   ],
-   "facts": [
-    {
-     "text": "Владелец Михаил Измайлов был награждён Екатериной II после переворота 1762 года.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Измайлов пригласил Баженова для планировки усадьбы.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "В комплекс входили дворец, Эрмитаж, церковь, грот и мостик к беседке на острове.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Баженовский Эрмитаж не сохранился.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Усадьба перешла к Воронцовым-Дашковым, в 1890-х её продали инженеру.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Утверждение о «масонском стиле» усадьбы не подтверждено.",
-     "sourceUrl": "https://lomonosov.msu.ru/archive/Lomonosov_2024/data/32768/172096_uid348645_report.pdf",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Доступ к дворцу может быть ограничен — уточняйте."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "ramenskoe-teatr",
-   "name": "Летний театр",
-   "coords": {
-    "lat": 55.643,
-    "lon": 38.028
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Летний театр появился в начале XX века; на его сцене выступали Фаина Раневская и Алиса Коонен.",
-    "С 1934 года театр стал кинотеатром, в середине 1950-х здесь ещё играл джаз-оркестр Леонида Утёсова. В 1966 году сильный снегопад разрушил крышу и часть стен.",
-    "Деревянное здание называют «свидетелем беспокойного века». Рядом после реконструкции открыли Летний парк с кинопоказами под открытым небом."
-   ],
-   "facts": [
-    {
-     "text": "Летний театр появился в начале XX века; на сцене выступали Раневская и Коонен.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "С 1934 года театр стал кинотеатром.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В середине 1950-х здесь выступал джаз-оркестр Леонида Утёсова.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В 1966 году снегопад разрушил крышу и часть стен театра.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "После реконструкции в Летнем парке организовали кинопоказы под открытым небом.",
-     "sourceUrl": "https://360.ru/news/mosobl/kinopokazy-pod-otkrytym-nebom-organizovali-v-letnem-parke-v-ljubertsah/",
-     "verified": true
-    },
-    {
-     "text": "Московский комсомолец называл театр «деревянным свидетелем беспокойного века».",
-     "sourceUrl": "https://www.mk.ru/mosobl/2013/06/18/871030-derevyannyiy-svidetel-bespokoynogo-veka.html",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "ramenskoe-ozero-3",
-   "name": "Малаховское озеро",
-   "coords": {
-    "lat": 55.64,
-    "lon": 38.018
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Главный центр притяжения посёлка — живописное озеро. На его берегах отдыхали дачники, среди которых были Суриков, Шаляпин, Шагал и Бунин.",
-    "Шагал приехал в Малаховку в 1920 году вместе с женой. Дачная Малаховка была местом, где встречалась художественная Москва."
-   ],
-   "facts": [
-    {
-     "text": "Главным центром притяжения посёлка является озеро.",
-     "sourceUrl": "https://teletype.in/@apfound/cGcJG4OYOc3",
-     "verified": true
-    },
-    {
-     "text": "В Малаховке жили Суриков, Шаляпин, Шагал и Бунин.",
-     "sourceUrl": "https://iz.ru/export/google/amp/636363",
-     "verified": true
-    },
-    {
-     "text": "Шагал переехал в Малаховку в 1920 году.",
-     "sourceUrl": "https://iz.ru/export/google/amp/636363",
-     "verified": true
-    },
-    {
-     "text": "Малаховка помнит Лилю Брик и Фёдора Шаляпина.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/actual/2020/09/02/mesto-kotoroe-pomnit/",
-     "verified": true
-    },
-    {
-     "text": "История самого озера в найденных источниках не раскрыта.",
-     "sourceUrl": "https://teletype.in/@apfound/cGcJG4OYOc3",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "ramenskoe-posyolok",
-   "name": "Улицы посёлка",
-   "coords": {
-    "lat": 55.662,
-    "lon": 37.945
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Томилино — посёлок, где живут инженеры и лётчики-испытатели вертолётов.",
-    "Посёлок стоит на Казанской дороге в окружении других дачных мест — Малаховки, Красково, Люберец.",
-    "Посёлок невелик, поэтому обратный путь к станции займёт всего несколько минут спокойной езды."
-   ],
-   "facts": [
-    {
-     "text": "Томилино описано в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.com/wiki/Tomilino",
-     "verified": true
-    },
-    {
-     "text": "Штаб-квартира вертолётной компании Миля находится в Томилине.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant",
-     "verified": true
-    },
-    {
-     "text": "Состав жителей посёлка (инженеры, лётчики) — оценка составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant",
-     "verified": false
-    },
-    {
-     "text": "Томилино входит в Люберецкий городской округ.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
-     "verified": true
-    },
-    {
-     "text": "История застройки посёлка в найденных источниках не раскрыта.",
-     "sourceUrl": "https://en.wikipedia.com/wiki/Tomilino",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "ramenskoe-mil",
-   "name": "Вертолётный завод имени Миля",
-   "coords": {
-    "lat": 55.658,
-    "lon": 37.93
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Московский вертолётный завод имени М. Л. Миля расположен в Томилине. Его создал в 1947 году генеральный конструктор Михаил Миль.",
-    "Завод включает ОКБ, опытное производство, экспериментально-исследовательский комплекс и лётно-испытательную базу. Компания проектирует и производит вертолёты и входит в «Вертолёты России».",
-    "Это режимное предприятие: смотрим только снаружи. Если повезёт, в небе пролетит вертолёт."
-   ],
-   "facts": [
-    {
-     "text": "Завод имени Миля расположен в посёлке Томилино Люберецкого района.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
-     "verified": true
-    },
-    {
-     "text": "Завод создан генеральным конструктором Михаилом Милем в 1947 году.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
-     "verified": true
-    },
-    {
-     "text": "В состав входят ОКБ, опытное производство, исследовательский комплекс и лётно-испытательная база.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
-     "verified": true
-    },
-    {
-     "text": "Компания входит в холдинг «Вертолёты России».",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant",
-     "verified": true
-    },
-    {
-     "text": "Календарь событий рассказывает о биографии Михаила Миля.",
-     "sourceUrl": "https://www.calend.ru/persons/212/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Режимное предприятие: не фотографировать проходные и ограждение."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "ramenskoe-aeratsiya",
-   "name": "Бывшие поля орошения и станция аэрации",
-   "coords": {
-    "lat": 55.695,
-    "lon": 37.91
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1962 году построили Люберецкую станцию аэрации мощностью 1,5 млн м³ в сутки. После этого Некрасовка из обычного посёлка стала посёлком городского типа.",
-    "Поля орошения десятилетиями очищали стоки Москвы. Сегодня часть их застроена, но станция по-прежнему работает — это действующий инженерный объект."
-   ],
-   "facts": [
-    {
-     "text": "В 1962 году построили Люберецкую станцию аэрации мощностью 1,5 млн м³ в сутки.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2024/10/29/74259551/",
-     "verified": true
-    },
-    {
-     "text": "После постройки станции Некрасовка стала посёлком городского типа.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2024/10/29/74259551/",
-     "verified": true
-    },
-    {
-     "text": "Люберецкие поля орошения появились к 1915 году.",
-     "sourceUrl": "https://moskvichmag.ru/?p=77547",
-     "verified": true
-    },
-    {
-     "text": "Т—Ж описывает Некрасовку как район с особой историей и инфраструктурой.",
-     "sourceUrl": "https://t-j.ru/nekrasovka/",
-     "verified": true
-    },
-    {
-     "text": "Текущая мощность станции в найденных источниках не обновлялась.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2024/10/29/74259551/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий инженерный объект: на территорию не заходим, ограждения не фотографируем."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 110
-  },
-  {
-   "id": "ramenskoe-metro",
-   "name": "Новая Некрасовка у метро",
-   "coords": {
-    "lat": 55.7031,
-    "lon": 37.9285
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Начинаем у метро — символа новой Некрасовки. Некрасовская линия связала с центром район, который ещё недавно был окраиной за МКАД.",
-    "Новые кварталы выросли в 2010-х на месте бывших полей аэрации. Район начал активно заселяться только в начале десятилетия."
-   ],
-   "facts": [
-    {
-     "text": "Некрасовская линия московского метро обслуживает район.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Nekrasovskaya_line",
-     "verified": true
-    },
-    {
-     "text": "По одному источнику, район начал активно заселяться только в 2011 году.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2024/10/29/74259551/",
-     "verified": true
-    },
-    {
-     "text": "В начале 2010-х к району присоединили бывшие Люберецкие поля аэрации и начали их застраивать.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2023/02/21/72073490/",
-     "verified": true
-    },
-    {
-     "text": "Самостоятельным районом Москвы Некрасовка стала в 1995 году.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2024/10/29/74259551/",
-     "verified": true
-    },
-    {
-     "text": "Жители по-разному оценивают жизнь в районе — РИАМО собирало их мнения.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/kupit-tut-kvartiru-samaya-bolshaya-oshibka-v-zhizni-moskvichi-o-zhizni-v-nekrasovke-xl/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 120
+   "order": 70,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -625,8 +313,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Раменского нет. Тематическая замена — пикник у озера в честь охотничьего дома Волконского. Это выбор составителя.",
   "story": [
-   "Волконский устроил на берегу Борисоглебского озера охотничий дом.",
-   "Возьмите еду и сделайте привал у воды. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Волконский устроил на берегу Борисоглебского озера охотничий дом. Возьмите еду и сделайте привал у воды. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -654,87 +341,43 @@
    "url": "https://dic.academic.ru/dic.nsf/ruwiki/47154"
   },
   {
-   "title": "Кратово — Мел",
-   "url": "https://mel.fm/dacha/6703185-kratovo"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5"
   },
   {
-   "title": "Интересные места для дачи — МК",
-   "url": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html"
+   "title": "Источник: cyclowiki.org",
+   "url": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5"
   },
   {
-   "title": "Усадьба Быково — Рамблер",
-   "url": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo"
-  },
-  {
-   "title": "Владимирская церковь — KudaGo",
-   "url": "https://kudago.com/msk/place/vladimirskoy/"
-  },
-  {
-   "title": "Быково — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%91%D1%8B%D0%BA%D0%BE%D0%B2%D0%BE"
-  },
-  {
-   "title": "Летний театр в Малаховке — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5"
-  },
-  {
-   "title": "Малаховка — Известия",
-   "url": "https://iz.ru/export/google/amp/636363"
-  },
-  {
-   "title": "Малаховка — Мир квартир",
-   "url": "https://www.mirkvartir.ru/journal/actual/2020/09/02/mesto-kotoroe-pomnit/"
-  },
-  {
-   "title": "Завод имени Миля — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/55839"
-  },
-  {
-   "title": "Mil Moscow Helicopter Plant — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant"
-  },
-  {
-   "title": "Некрасовка — Т—Ж",
-   "url": "https://t-j.ru/nekrasovka/"
-  },
-  {
-   "title": "История Некрасовки — MSK1",
-   "url": "https://msk1.ru/text/gorod/2024/10/29/74259551/"
-  },
-  {
-   "title": "Некрасовка — Moskvich Mag",
-   "url": "https://moskvichmag.ru/?p=77547"
+   "title": "Источник: znanierussia.ru",
+   "url": "https://znanierussia.ru/articles/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.904421,
-     55.695
+     38.214439,
+     55.57
     ],
     [
-     37.905169,
-     55.693428
+     38.215184,
+     55.568428
     ],
     [
-     37.925173,
-     55.656428
+     38.220185,
+     55.563428
     ],
     [
-     37.927213,
-     55.655277
-    ],
-    [
-     38.22522,
-     55.564277
-    ],
-    [
-     38.23222,
+     38.22222,
      55.562277
+    ],
+    [
+     38.225,
+     55.561856
     ],
     [
      38.235,
@@ -761,32 +404,28 @@
      55.567723
     ],
     [
-     38.170783,
-     55.602723
+     38.22778,
+     55.572723
     ],
     [
-     37.93129,
-     55.705823
+     38.225,
+     55.573144
     ],
     [
-     37.9285,
-     55.706244
+     38.22,
+     55.573144
     ],
     [
-     37.92571,
-     55.705823
+     38.21722,
+     55.572723
     ],
     [
-     37.907211,
-     55.697723
+     38.215184,
+     55.571572
     ],
     [
-     37.905169,
-     55.696572
-    ],
-    [
-     37.904421,
-     55.695
+     38.214439,
+     55.57
     ]
    ]
   ]

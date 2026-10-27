@@ -13,8 +13,8 @@
   "Электросталь — город металлургов. В 1916 году промышленник Николай Второв выбрал урочище Затишье в Богородском уезде для первого в России завода высококачественной легированной стали; посёлок при стройке назывался Затишье.",
   "Тогда же заложили и Богородский снаряжательный завод. Первые изделия выпустили в 1917 году. По одному справочнику, в 1923 году здесь выплавили первую в стране нержавеющую сталь.",
   "26 декабря 1938 года посёлок стал городом областного подчинения. В годы войны предприятия выпускали боеприпасы, в том числе снаряды для «катюш».",
-  "Свои места маршрута: «Завод «Электросталь»», «Проспект Ленина и мемориал Второву», «Музей имени Алексеева». По пути маршрут заходит и к соседям: Ногинск — «Богородск», «Глуховская мануфактура»; Лосино-Петровский и Глинки — «Собор Николая Чудотворца»; Монино (музей ВВС) — «Посёлок Монино», «Центральный музей ВВС».",
-  "Маршрут линейный, около 46 км и 8 точек. Финиш — Станция «Монино» (Электрички с Ярославского вокзала до станции Монино), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Парк имени Ленина», «Завод «Электросталь»», «Урочище Затишье», «Проспект Ленина и мемориал Второву», «Сквер с памятником зенитчикам», «Музей имени Алексеева». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Станция «Электросталь» (Электрички Горьковского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Электросталь»",
@@ -25,24 +25,55 @@
   "transport": "Электрички Горьковского направления"
  },
  "endPoint": {
-  "name": "Станция «Монино»",
+  "name": "Станция «Электросталь»",
   "coords": {
-   "lat": 55.842,
-   "lon": 38.196
+   "lat": 55.7852,
+   "lon": 38.4455
   },
-  "transport": "Электрички с Ярославского вокзала до станции Монино"
+  "transport": "Электрички Горьковского направления"
  },
  "route": {
-  "distanceKm": 46.0,
-  "durationH": 6.7,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 4.0,
+  "durationH": 1.6,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "elektrostal-park-lenina",
+   "name": "Парк имени Ленина",
+   "coords": {
+    "lat": 55.787,
+    "lon": 38.442
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Городской парк имени Ленина — зелёный центр Электростали.",
+    "Рядом стоит храм Святителя Николая Чудотворца, построенный в начале XXI века. Следующая точка маршрута — «Завод «Электросталь»». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Электростали есть парк имени Ленина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D1%82%D0%B0%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Храм Николая Чудотворца построен в начале XXI века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D1%82%D0%B0%D0%BB%D1%8C",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "elektrostal-zavod",
    "name": "Завод «Электросталь»",
@@ -88,8 +119,49 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "elektrostal-zatishe",
+   "name": "Урочище Затишье",
+   "coords": {
+    "lat": 55.79,
+    "lon": 38.46
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "После открытия электрометаллургического и снаряжательного заводов здешнее место стали называть урочищем Затишье. Лесной массив тянулся на 10–13 км вдоль железнодорожной ветки Фрязево — Богородск.",
+    "В 1925 году станция получила название Электросталь; основателем города называют промышленника Николая Второва."
+   ],
+   "facts": [
+    {
+     "text": "Место называли урочищем Затишье после открытия заводов.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D1%82%D0%B0%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Лесной массив тянулся на 10–13 км вдоль ветки Фрязево — Богородск.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/elektrostal/history",
+     "verified": true
+    },
+    {
+     "text": "В 1925 году станция получила название Электросталь.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D1%82%D0%B0%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Основателем города называют промышленника Николая Второва.",
+     "sourceUrl": "https://fb.ru/article/440237/dostoprimechatelnosti-elektrostali-moskovskaya-oblast",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "elektrostal-prospekt",
@@ -134,8 +206,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "elektrostal-skver-347",
+   "name": "Сквер с памятником зенитчикам",
+   "coords": {
+    "lat": 55.783,
+    "lon": 38.45
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Главная достопримечательность сквера 1981 года — памятник бойцам 347-го зенитно-артиллерийского полка.",
+    "Короткая остановка памяти на маршруте по городу. Следующая точка маршрута — «Музей имени Алексеева». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В сквере 1981 года стоит памятник бойцам 347-го зенитно-артиллерийского полка.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/elektrostal/",
+     "verified": true
+    },
+    {
+     "text": "Сквер заложен в 1981 году.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/elektrostal/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
   },
   {
    "id": "elektrostal-muzey",
@@ -149,7 +252,7 @@
    "guideStory": [
     "В Электростали работает Историко-художественный музей имени И. И. Алексеева и муниципальный выставочный зал.",
     "Яндекс Путешествия включают музей в список того, что стоит посмотреть в городе.",
-    "Часы работы уточняйте; после музея возвращаемся к станции. Следующая точка маршрута — «Богородск»."
+    "Часы работы уточняйте; после музея возвращаемся к станции. Финиш — Станция «Электросталь»: Электрички Горьковского направления."
    ],
    "facts": [
     {
@@ -182,253 +285,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "elektrostal-tsentr",
-   "name": "Богородск",
-   "coords": {
-    "lat": 55.854,
-    "lon": 38.44
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По одной версии, история города начинается с 1389 года, когда на Владимирской дороге стояло село Рогожа: здесь меняли лошадей. С начала XVI века село называлось «Старый Рогожский Ям» и было ямской слободой.",
-    "В 1781 году по приказу Екатерины II его переименовали в Богородск по названию уезда; герб утвердили 20 декабря того же года. В 1930 году город получил имя Ногинск.",
-    "РИАМО собирало предания Ногинска — о Екатерине Великой, герое войны 1812 года и Пушкине."
-   ],
-   "facts": [
-    {
-     "text": "История города начинается с 1389 года и села Рогожа — по одной версии.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
-     "verified": false
-    },
-    {
-     "text": "С начала XVI века село называлось «Старый Рогожский Ям».",
-     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
-     "verified": true
-    },
-    {
-     "text": "В 1781 году село переименовано в Богородск.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
-     "verified": true
-    },
-    {
-     "text": "Герб Богородска утверждён в декабре 1781 года.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/noginsk",
-     "verified": true
-    },
-    {
-     "text": "В 1930 году Богородск переименован в Ногинск.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "РИАМО собирало предания Ногинска.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/predaniya-noginska-ekaterina-velikaya-geroj-vojny-1812-goda-i-pushkin-xl/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "elektrostal-glukhovo",
-   "name": "Глуховская мануфактура",
-   "coords": {
-    "lat": 55.87,
-    "lon": 38.42
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1842 году Захар Морозов купил село Глухово — с этого начинают историю Богородско-Глуховской мануфактуры. Другой источник датирует основание 1847 годом. Сыновья Захара Морозова расширили производство.",
-    "В советское время на базе мануфактуры вырос один из крупнейших и старейших текстильных комбинатов СССР."
-   ],
-   "facts": [
-    {
-     "text": "В 1842 году Захар Морозов купил село Глухово.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Другой источник датирует основание мануфактуры 1847 годом.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/noginsk",
-     "verified": false
-    },
-    {
-     "text": "Сыновья Захара Морозова расширили производство.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Комбинат стал одним из крупнейших текстильных предприятий СССР.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Территория фабрики может быть закрыта.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "elektrostal-sobor",
-   "name": "Собор Николая Чудотворца",
-   "coords": {
-    "lat": 55.871,
-    "lon": 38.2
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Город назван по Лосиной кожевенной фабрике Петра I — казённому предприятию, шившему амуницию для армии. Вокруг фабрики выросла рабочая слобода.",
-    "По одной из версий, рабочие ходатайствовали перед Александром I о строительстве нового храма. Классический собор Николая Чудотворца освятил Иоанн Кронштадтский."
-   ],
-   "facts": [
-    {
-     "text": "Название города связано с казённой Лосиной кожевенной фабрикой Петра I.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "В XIX веке кожевенное производство сменили текстильные предприятия.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "По одной из версий, рабочие ходатайствовали перед Александром I о новой церкви.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": false
-    },
-    {
-     "text": "Собор Николая Чудотворца освятил Иоанн Кронштадтский.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
-     "verified": true
-    },
-    {
-     "text": "Лосино-Петровский стоит на Клязьме.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "elektrostal-posyolok",
-   "name": "Посёлок Монино",
-   "coords": {
-    "lat": 55.84,
-    "lon": 38.19
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Монино — посёлок при академии и аэродроме. До музея ВВС добираются электричкой с Ярославского вокзала до станции Монино.",
-    "Посёлок живёт рядом с военной академией и аэродромом, поэтому часть территорий здесь закрыта, а дорогу к музею лучше выбирать по указателям."
-   ],
-   "facts": [
-    {
-     "text": "До музея можно добраться на электричке от Ярославского вокзала до станции Монино.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Музей находится на территории Военно-воздушной академии имени Гагарина.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Музей ВВС — главная достопримечательность Монина.",
-     "sourceUrl": "https://t-j.ru/must-see-muzei-vvs/",
-     "verified": true
-    },
-    {
-     "text": "Границы закрытых территорий посёлка мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Монино — рабочий посёлок в Щёлковском округе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Территория академии — режимная: только по разрешённым маршрутам."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "elektrostal-muzey-2",
-   "name": "Центральный музей ВВС",
-   "coords": {
-    "lat": 55.838,
-    "lon": 38.17
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 120,
-   "guideStory": [
-    "Центральный музей ВВС создан 28 ноября 1958 года и принял первых посетителей 23 февраля 1960 года. Под открытым небом и в ангарах стоят самолёты от первых аэропланов до реактивных истребителей.",
-    "Фонды насчитывают десятки тысяч единиц: «Коммерсант» писал о 37 тысячах, а «Новая газета» в 2016 году — о более чем 50 тысячах. Музей принимал свыше 200 тысяч человек в год.",
-    "В 2018 году предлагали перевезти экспозицию в парк «Патриот», и авиаконструкторы предупреждали, что самолёты могут этого не пережить. Что с музеем сейчас и как он работает — проверьте заранее."
-   ],
-   "facts": [
-    {
-     "text": "Музей создан 28 ноября 1958 года, первых посетителей принял 23 февраля 1960 года.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": true
-    },
-    {
-     "text": "Фонды музея — более 37 тысяч единиц (по данным «Коммерсанта»).",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
-     "verified": true
-    },
-    {
-     "text": "В 2016 году писали о собрании более 50 тысяч единиц хранения.",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": false
-    },
-    {
-     "text": "Музей принимал более 200 тысяч посетителей в год (данные 2016 года).",
-     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
-     "verified": true
-    },
-    {
-     "text": "В 2018 году обсуждался перенос музея в парк «Патриот».",
-     "sourceUrl": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov",
-     "verified": true
-    },
-    {
-     "text": "В административном здании музея был пожар, часть моделей первых самолётов сгорела.",
-     "sourceUrl": "https://www.kommersant.ru/doc/602688",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Режим работы и доступ меняются — проверьте на сайте музея перед поездкой.",
-   "ticketNote": "Билеты — по правилам музея; уточняйте.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -465,63 +323,51 @@
    "url": "https://dic.academic.ru/dic.nsf/ruwiki/31935"
   },
   {
-   "title": "История Ногинска — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/noginsk/history"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D1%81%D1%82%D0%B0%D0%BB%D1%8C"
   },
   {
-   "title": "Богородско-Глуховская мануфактура — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0"
+   "title": "Источник: cian.ru",
+   "url": "https://www.cian.ru/stati-elektrostal-216529/"
   },
   {
-   "title": "Предания Ногинска — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/predaniya-noginska-ekaterina-velikaya-geroj-vojny-1812-goda-i-pushkin-xl/"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/elektrostal/history"
   },
   {
-   "title": "Усадьба Глинки — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8"
+   "title": "Источник: fb.ru",
+   "url": "https://fb.ru/article/440237/dostoprimechatelnosti-elektrostali-moskovskaya-oblast"
   },
   {
-   "title": "Лосино-Петровский — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrostal/"
   },
   {
-   "title": "Экскурсия «Брюс всемогущий» — Sputnik8",
-   "url": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/elektrostal/"
   },
   {
-   "title": "Музей ВВС — Новая газета",
-   "url": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi"
-  },
-  {
-   "title": "Музей ВВС — Коммерсантъ",
-   "url": "https://www.kommersant.ru/doc/602688"
-  },
-  {
-   "title": "Перенос музея — Meduza",
-   "url": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov"
-  },
-  {
-   "title": "Монино — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE"
+   "title": "Источник: travel.yandex.ru",
+   "url": "https://travel.yandex.ru/journal/chto-posmotret-v-elektrostali/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.164401,
-     55.838
+     38.436408,
+     55.787
     ],
     [
-     38.165151,
-     55.836428
+     38.437157,
+     55.785428
     ],
     [
-     38.1672,
-     55.835277
+     38.443158,
+     55.781428
     ],
     [
      38.445204,
@@ -532,64 +378,56 @@
      55.779856
     ],
     [
-     38.450796,
+     38.45,
+     55.779856
+    ],
+    [
+     38.452796,
      55.780277
     ],
     [
-     38.452842,
+     38.454842,
      55.781428
     ],
     [
-     38.454842,
-     55.783428
+     38.464843,
+     55.788428
     ],
     [
-     38.455591,
-     55.785
-    ],
-    [
-     38.455592,
+     38.465592,
      55.79
     ],
     [
-     38.445601,
-     55.854
+     38.464843,
+     55.791572
     ],
     [
-     38.444851,
-     55.855572
+     38.462796,
+     55.792723
     ],
     [
-     38.424853,
-     55.871572
+     38.46,
+     55.793144
     ],
     [
-     38.422802,
-     55.872723
+     38.45,
+     55.793144
     ],
     [
-     38.42,
-     55.873144
+     38.447204,
+     55.792723
     ],
     [
-     38.2,
-     55.874144
+     38.439204,
+     55.789723
     ],
     [
-     38.197198,
-     55.873723
+     38.437157,
+     55.788572
     ],
     [
-     38.195147,
-     55.872572
-    ],
-    [
-     38.165151,
-     55.839572
-    ],
-    [
-     38.164401,
-     55.838
+     38.436408,
+     55.787
     ]
    ]
   ]
