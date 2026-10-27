@@ -13,33 +13,33 @@
   "Высоковск — маленький город Клинского округа, выросший вокруг крупной текстильной мануфактуры. Его характер — связь фабрики, рабочих казарм, общественных зданий и пруда.",
   "Часть фабричных зданий, по одному источнику, превратили в музейные и арт-пространства. Активные или закрытые цеха — не туристические объекты.",
   "Даты основания и имена владельцев мануфактуры мы в найденных источниках не нашли.",
-  "Свои места маршрута: «Текстильная мануфактура», «Пруд и казармы». По пути маршрут заходит и к соседям: Боблово (усадьба Менделеева) — «Пейзажный парк и вязовая аллея»; Шахматово и Тараканово — «Дом Бекетовых», «Тараканово»; Солнечногорск и озеро Сенеж — «Озеро Сенеж», «Путевой дворец», «Солнечная Гора».",
-  "Маршрут линейный, около 63 км и 8 точек. Финиш — Станция «Подсолнечная» (Электрички Ленинградского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Текстильная мануфактура», «Церковь Николая Чудотворца над Лутосней», «Парк «Берёзовый» у Холодного пруда», «Пруд и казармы», «Фабричные арт-пространства». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Высоковск, центр (До ближайшей станции — Станция «Клин», около 10 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Клин»",
+  "name": "Высоковск, центр",
   "coords": {
-   "lat": 56.336,
-   "lon": 36.716
+   "lat": 56.317,
+   "lon": 36.551
   },
-  "transport": "Электрички Ленинградского направления"
+  "transport": "До ближайшей станции — Станция «Клин», около 10 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Подсолнечная»",
+  "name": "Высоковск, центр",
   "coords": {
-   "lat": 56.1852,
-   "lon": 36.9775
+   "lat": 56.317,
+   "lon": 36.551
   },
-  "transport": "Электрички Ленинградского направления"
+  "transport": "До ближайшей станции — Станция «Клин», около 10 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 63.0,
-  "durationH": 7.6,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.9,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -54,7 +54,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Высоковск вырос вокруг крупной текстильной мануфактуры. Действующие, закрытые или ветхие корпуса — не туристические объекты, смотрим снаружи.",
-    "Даты основания мануфактуры и имена владельцев мы в источниках не нашли. Следующая точка маршрута — «Пруд и казармы»."
+    "Даты основания мануфактуры и имена владельцев мы в источниках не нашли. Следующая точка маршрута — «Церковь Николая Чудотворца над Лутосней»."
    ],
    "facts": [
     {
@@ -86,8 +86,70 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "vysokovsk-nikolay",
+   "name": "Церковь Николая Чудотворца над Лутосней",
+   "coords": {
+    "lat": 56.3155,
+    "lon": 36.548
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Главная достопримечательность Высоковска — церковь Николая Чудотворца 1914 года на холме над рекой Лутосней.",
+    "Город вырос вокруг крупной текстильной мануфактуры и входит в округ Клин. Следующая точка маршрута — «Парк «Берёзовый» у Холодного пруда»."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Николая Чудотворца построена в 1914 году на холме над Лутосней.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Высоковск вырос вокруг текстильной мануфактуры.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "vysokovsk-berezovyy",
+   "name": "Парк «Берёзовый» у Холодного пруда",
+   "coords": {
+    "lat": 56.3195,
+    "lon": 36.5565
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Для отдыха путеводитель советует парк «Берёзовый» у Холодного пруда.",
+    "Фабричный ансамбль лучше смотреть снаружи, с улицы Ленина: действующие и аварийные корпуса — не туристический объект. Следующая точка маршрута — «Пруд и казармы»."
+   ],
+   "facts": [
+    {
+     "text": "Парк «Берёзовый» находится у Холодного пруда.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": true
+    },
+    {
+     "text": "Фабричный ансамбль смотрят снаружи, с улицы Ленина.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "vysokovsk-prud",
@@ -100,7 +162,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Облик города складывается из фабрики, рабочих казарм, общественных зданий и пруда.",
-    "Такие ансамбли — типичный пример подмосковного фабричного посёлка. Следующая точка маршрута — «Пейзажный парк и вязовая аллея». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Такие ансамбли — типичный пример подмосковного фабричного посёлка. Следующая точка маршрута — «Фабричные арт-пространства». Формат остановки — «проезжаем», заложите на неё около 15 минут."
    ],
    "facts": [
     {
@@ -133,288 +195,54 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "vysokovsk-park",
-   "name": "Пейзажный парк и вязовая аллея",
+   "id": "vysokovsk-art",
+   "name": "Фабричные арт-пространства",
    "coords": {
-    "lat": 56.2395,
-    "lon": 36.759
+    "lat": 56.3175,
+    "lon": 36.552
    },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Сохранились пейзажный парк с прудом и вязовая аллея. Mel.fm включает Боблово в список малоизвестных усадеб вокруг Москвы.",
-    "Музей-заповедник объединяет три усадьбы: Боблово, Шахматово и Тараканово — у Шахматова в спирали свой маршрут."
+    "По одному источнику, часть старых фабричных зданий превратили в музеи и арт-пространства, где рассказывают о текстильном прошлом.",
+    "Работают ли они сейчас — уточняйте заранее. Финиш — Высоковск, центр: До ближайшей станции — Станция «Клин», около 10 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
    ],
    "facts": [
     {
-     "text": "Сохранились пейзажный парк с прудом и вязовая аллея.",
-     "sourceUrl": "https://www.culture.ru/institutes/14108/boblovo",
+     "text": "Часть фабричных зданий стали музеями и арт-пространствами.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Режим работы не проверен.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Высоковск описан в Календаре путешествий.",
+     "sourceUrl": "https://www.calend.ru/travel/561/",
      "verified": true
     },
     {
-     "text": "Музей-заповедник объединяет Боблово, Шахматово и Тараканово.",
-     "sourceUrl": "https://mel.fm/zhizn/razvlecheniya/1534970-7-maloizvestnykh-usadeb-vokrug-moskvy-edem-v-gosti-k-prishvinu-bloku-mendeleyevu-i-drugim",
-     "verified": true
-    },
-    {
-     "text": "Mel.fm включил Боблово в список малоизвестных усадеб.",
-     "sourceUrl": "https://mel.fm/zhizn/razvlecheniya/1534970-7-maloizvestnykh-usadeb-vokrug-moskvy-edem-v-gosti-k-prishvinu-bloku-mendeleyevu-i-drugim",
-     "verified": true
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
+     "verified": false
     },
     {
      "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://www.culture.ru/institutes/14108/boblovo",
-     "verified": false
-    },
-    {
-     "text": "Координаты парка приблизительные.",
-     "sourceUrl": "https://www.culture.ru/institutes/14108/boblovo",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "vysokovsk-dom",
-   "name": "Дом Бекетовых",
-   "coords": {
-    "lat": 56.21,
-    "lon": 36.86
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "Шахматово купил Андрей Бекетов, дед поэта. Блок проводил здесь каждое лето с 1881 по 1916 год — от младенчества почти до конца жизни.",
-    "В главном доме работает экспозиция о жизни и творчестве Блока и семьи Бекетовых. Один туристический источник называет Шахматово очень древним — это сомнительно, и мы на это не опираемся."
-   ],
-   "facts": [
-    {
-     "text": "Шахматово купил А. Н. Бекетов, дед Блока.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
-     "verified": true
-    },
-    {
-     "text": "Блок проводил здесь каждое лето с 1881 по 1916 год.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
-     "verified": true
-    },
-    {
-     "text": "В доме экспозиция о Блоке и Бекетовых.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
-     "verified": true
-    },
-    {
-     "text": "Утверждение о древности усадьбы сомнительно.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
-     "verified": false
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "vysokovsk-tarakanovo",
-   "name": "Тараканово",
-   "coords": {
-    "lat": 56.205,
-    "lon": 36.88
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Тараканово — третья усадьба музея-заповедника. По традиции, в здешней церкви венчались Александр Блок и Любовь Менделеева; сведения о венчании мы знаем по туристическим источникам.",
-    "Боблово и Шахматово называют «местами-свидетелями любви Блока и его Прекрасной Дамы»."
-   ],
-   "facts": [
-    {
-     "text": "Музей-заповедник включает Шахматово, Боблово и Тараканово.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
-     "verified": true
-    },
-    {
-     "text": "Венчание Блока в Тараканове — по туристическим источникам.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
-     "verified": false
-    },
-    {
-     "text": "Боблово и Шахматово — места любви Блока и Менделеевой.",
-     "sourceUrl": "https://www.calend.ru/calendar/tema/shahmatovo-i-boblovo-mesta-svideteli-lyubvi-aleksandra-bloka-i-ego-prekrasnoj-damy/",
-     "verified": true
-    },
-    {
-     "text": "Координаты Тараканова приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
-     "verified": false
-    },
-    {
-     "text": "Состояние церкви мы не проверяли.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "vysokovsk-senezh",
-   "name": "Озеро Сенеж",
-   "coords": {
-    "lat": 56.2,
-    "lon": 36.98
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Озеро Сенеж площадью около 8,5 кв. км — фактически водохранилище. Его создали для питания Екатерининского канала между реками Сестрой и Истрой, который строили в первой половине XIX века.",
-    "«Тинькофф Журнал» рассказывал о Сенеже как о месте отдыха. Купаться — только в разрешённых местах."
-   ],
-   "facts": [
-    {
-     "text": "Сенеж — фактически водохранилище для питания Екатерининского канала.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "Площадь озера около 8,5 кв. км.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "Канал строили в первой половине XIX века.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "Т—Ж рассказывал об отдыхе на Сенеже.",
-     "sourceUrl": "https://t-j.ru/senezh/",
-     "verified": true
-    },
-    {
-     "text": "Места для купания не проверены.",
-     "sourceUrl": "https://t-j.ru/senezh/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "vysokovsk-dvorets",
-   "name": "Путевой дворец",
-   "coords": {
-    "lat": 56.183,
-    "lon": 36.99
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "В XVIII веке на Петербургском тракте возникло село Гомзино — вторая почтовая станция на пути из Москвы в Петербург.",
-    "Сохранившийся Путевой дворец сегодня занимает музейно-выставочный центр: экспозиция «Мир русской провинции», художественные выставки и музыкальный салон."
-   ],
-   "facts": [
-    {
-     "text": "Гомзино упомянуто в писцовых книгах XVII века.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/solnechnogorsk/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Село стало второй почтовой станцией на пути в Петербург.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "В Путевом дворце работает музейно-выставочный центр.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "В центре есть экспозиция «Мир русской провинции».",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "vysokovsk-nazvanie",
-   "name": "Солнечная Гора",
-   "coords": {
-    "lat": 56.184,
-    "lon": 36.985
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "По популярному преданию, название «Солнечная Гора» дала Екатерина II, восхитившаяся видом с холма. Это легенда, а не документ.",
-    "В 1851 году на Николаевской железной дороге появилась станция Подсолнечная и посёлок при ней. Дата получения статуса города в источниках расходится — 1938 год по одному из них."
-   ],
-   "facts": [
-    {
-     "text": "Название связывают с Екатериной II — это предание.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/solnechnogorsk/istoriia",
-     "verified": false
-    },
-    {
-     "text": "В 1851 году появилась станция Подсолнечная.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "Солнечногорск стал городом в 1938 году — по одному источнику.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": false
-    },
-    {
-     "text": "Другой источник называет датой основания 1767 год.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/solnechnogorsk/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Солнечногорск описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Solnechnogorsk",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -450,127 +278,79 @@
    "url": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA"
   },
   {
-   "title": "Боблово — Культура.РФ",
-   "url": "https://www.culture.ru/institutes/14108/boblovo"
-  },
-  {
-   "title": "Опыты Менделеева — Интерфакс",
-   "url": "https://www.interfax.ru/russia/432043"
-  },
-  {
-   "title": "Шахматово — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor"
-  },
-  {
-   "title": "Шахматово и Боблово — Календарь",
-   "url": "https://www.calend.ru/calendar/tema/shahmatovo-i-boblovo-mesta-svideteli-lyubvi-aleksandra-bloka-i-ego-prekrasnoj-damy/"
-  },
-  {
-   "title": "Солнечногорск — teletype",
-   "url": "https://teletype.in/@apfound/FNVjr3N4bkT"
-  },
-  {
-   "title": "История — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/solnechnogorsk/istoriia"
-  },
-  {
-   "title": "Сенеж — Т—Ж",
-   "url": "https://t-j.ru/senezh/"
+   "title": "Источник: calend.ru",
+   "url": "https://www.calend.ru/travel/561/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.545331,
-     56.317
+     36.542331,
+     56.3155
     ],
     [
-     36.54609,
-     56.315428
+     36.543091,
+     56.313928
     ],
     [
-     36.548165,
-     56.314277
+     36.545166,
+     56.312777
     ],
     [
-     36.756171,
-     56.236777
+     36.548,
+     56.312356
     ],
     [
-     36.857173,
-     56.207277
+     36.550834,
+     56.312777
     ],
     [
-     36.877174,
-     56.202277
+     36.559335,
+     56.316777
     ],
     [
-     36.974675,
-     56.182477
+     36.56141,
+     56.317928
     ],
     [
-     36.987175,
-     56.180277
+     36.56217,
+     56.3195
     ],
     [
-     36.99,
-     56.179856
+     36.56141,
+     56.321072
     ],
     [
-     36.992825,
-     56.180277
+     36.559335,
+     56.322223
     ],
     [
-     36.994892,
-     56.181428
+     36.5565,
+     56.322644
     ],
     [
-     36.995649,
-     56.183
-    ],
-    [
-     36.994892,
-     56.184572
-    ],
-    [
-     36.984895,
-     56.201572
-    ],
-    [
-     36.982826,
-     56.202723
-    ],
-    [
-     36.718836,
-     56.338723
-    ],
-    [
-     36.716,
-     56.339144
-    ],
-    [
-     36.553,
-     56.321144
+     36.553665,
+     56.322223
     ],
     [
      36.550165,
      56.320723
     ],
     [
-     36.548165,
-     56.319723
+     36.545166,
+     56.318223
     ],
     [
-     36.54609,
-     56.318572
+     36.543091,
+     56.317072
     ],
     [
-     36.545331,
-     56.317
+     36.542331,
+     56.3155
     ]
    ]
   ]

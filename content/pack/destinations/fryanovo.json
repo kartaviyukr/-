@@ -13,8 +13,8 @@
   "Фряново — посёлок с усадьбой и старинной шёлковой фабрикой. По статье о роде Лазаревых, в 1735 году Лазарь Лазарев основал здесь шёлковую мануфактуру и стал поставщиком императорского двора. Другой источник связывает основание фабрики с И. Ф. Шериманом.",
   "Господский дом, по одному источнику, построил в 1797 году придворный ювелир Иван Лазарев. Фряново — одна из немногих сохранившихся деревянных усадеб.",
   "Сегодня в усадьбе — отдел Щёлковского музея: залы о Лазаревых, основателях имения, и о Залогиных, последних владельцах.",
-  "Свои места маршрута: «Посёлок Фряново», «Усадьба Лазаревых», «Шёлковая фабрика». По пути маршрут заходит и к соседям: Черноголовка — «Научный центр», «Город в лесу»; Красноармейск — «Новый город», «Вознесенская мануфактура»; Гребнево — «Храм и пруды».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Фрязино-Пассажирская» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Посёлок», «Шёлковая фабрика», «Краеведческий музей в господском доме», «Усадьба Лазаревых». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Остановка «Фряново» (Автобусы от Щёлкова — уточняйте). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Фряново»",
@@ -25,27 +25,27 @@
   "transport": "Автобусы от Щёлкова — уточняйте"
  },
  "endPoint": {
-  "name": "Станция «Фрязино-Пассажирская»",
+  "name": "Остановка «Фряново»",
   "coords": {
-   "lat": 55.9592,
-   "lon": 38.0505
+   "lat": 56.1302,
+   "lon": 38.4505
   },
-  "transport": "Электрички Ярославского направления"
+  "transport": "Автобусы до Щёлкова"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.0,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.5,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
    "id": "fryanovo-posyolok",
-   "name": "Посёлок Фряново",
+   "name": "Посёлок",
    "coords": {
     "lat": 56.13,
     "lon": 38.448
@@ -54,7 +54,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "РИАМО рассказывало о прогулке по усадьбам Щёлковского района, включая дома «мага и металлургического короля».",
-    "Фряново — тихий посёлок, где история фабрики видна в застройке. Следующая точка маршрута — «Усадьба Лазаревых». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Фряново — тихий посёлок, где история фабрики видна в застройке. Следующая точка маршрута — «Шёлковая фабрика». Формат остановки — «проезжаем», заложите на неё около 15 минут."
    ],
    "facts": [
     {
@@ -86,8 +86,90 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "fryanovo-fabrika",
+   "name": "Шёлковая фабрика",
+   "coords": {
+    "lat": 56.129,
+    "lon": 38.455
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "По статье о Лазаревых, в 1735 году Лазарь Назарович Лазарев основал во Фрянове шёлковую мануфактуру и вскоре стал поставщиком императорского двора. Другой источник называет основателем фабрики И. Ф. Шеримана.",
+    "Лазаревы получили российское дворянство в 1776 году. Иван Лазаревич был придворным ювелиром Екатерины II."
+   ],
+   "facts": [
+    {
+     "text": "Лазарь Лазарев основал шёлковую мануфактуру во Фрянове в 1735 году.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
+     "verified": false
+    },
+    {
+     "text": "Другой источник связывает фабрику с И. Ф. Шериманом.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A4%D1%80%D1%8F%D0%BD%D0%BE%D0%B2%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Лазаревы получили дворянство в 1776 году.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "Иван Лазаревич был придворным ювелиром Екатерины II.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "Выставка показывала развитие Фряновской шелкоткацкой фабрики.",
+     "sourceUrl": "https://riamo.ru/news/kultura/vystavka-o-dinastii-lazarevyh-otkroetsja-v-usadbe-frjanovo-5-avgusta/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "fryanovo-muzey",
+   "name": "Краеведческий музей в господском доме",
+   "coords": {
+    "lat": 56.1316,
+    "lon": 38.4528
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Деревянный господский дом построил в 1797 году придворный ювелир И. Л. Лазарев; это одна из немногих уцелевших деревянных усадеб.",
+    "Внутри — краеведческий музей из 12 экспозиций: о Лазаревых, последних владельцах Залогиных, текстиле и композиторах здешних мест; вход свободный."
+   ],
+   "facts": [
+    {
+     "text": "Господский дом построен в 1797 году И. Л. Лазаревым.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A4%D1%80%D1%8F%D0%BD%D0%BE%D0%B2%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "В музее 12 экспозиций, вход свободный.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A4%D1%80%D1%8F%D0%BD%D0%BE%D0%B2%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Шёлковую мануфактуру основал Лазарь Лазарев в 1735 году.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "fryanovo-usadba",
@@ -133,288 +215,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "fryanovo-fabrika",
-   "name": "Шёлковая фабрика",
-   "coords": {
-    "lat": 56.129,
-    "lon": 38.455
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По статье о Лазаревых, в 1735 году Лазарь Назарович Лазарев основал во Фрянове шёлковую мануфактуру и вскоре стал поставщиком императорского двора. Другой источник называет основателем фабрики И. Ф. Шеримана.",
-    "Лазаревы получили российское дворянство в 1776 году. Иван Лазаревич был придворным ювелиром Екатерины II."
-   ],
-   "facts": [
-    {
-     "text": "Лазарь Лазарев основал шёлковую мануфактуру во Фрянове в 1735 году.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    },
-    {
-     "text": "Другой источник связывает фабрику с И. Ф. Шериманом.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A4%D1%80%D1%8F%D0%BD%D0%BE%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Лазаревы получили дворянство в 1776 году.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
-     "verified": true
-    },
-    {
-     "text": "Иван Лазаревич был придворным ювелиром Екатерины II.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
-     "verified": true
-    },
-    {
-     "text": "Выставка показывала развитие Фряновской шелкоткацкой фабрики.",
-     "sourceUrl": "https://riamo.ru/news/kultura/vystavka-o-dinastii-lazarevyh-otkroetsja-v-usadbe-frjanovo-5-avgusta/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "fryanovo-nauka",
-   "name": "Научный центр",
-   "coords": {
-    "lat": 56.012,
-    "lon": 38.385
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Черноголовка возникла в 1956 году как экспериментальная база Института химической физики. Энциклопедия называет дату основания «1956 (1958)», вторая дата, вероятно, относится к оформлению.",
-    "Полигоном по поручению Семёнова руководил Фёдор Дубовицкий, будущий член-корреспондент АН СССР. В 1962 году начали строить второй институт, позже их стало семь."
-   ],
-   "facts": [
-    {
-     "text": "Черноголовка основана в 1956 году как база Института химической физики.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
-     "verified": true
-    },
-    {
-     "text": "Место выбрали Семёнов и Дубовицкий.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
-     "verified": true
-    },
-    {
-     "text": "Энциклопедия указывает дату основания «1956 (1958)».",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    },
-    {
-     "text": "В 1962 году началось строительство второго института.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": true
-    },
-    {
-     "text": "Сейчас в Черноголовке семь научных институтов.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Территории институтов закрыты."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "fryanovo-les",
-   "name": "Город в лесу",
-   "coords": {
-    "lat": 56.008,
-    "lon": 38.375
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Черноголовку называют городом модернистской архитектуры: жилые кварталы стоят прямо в лесу.",
-    "Афиша писала, что сюда стоит ехать на выходные — на астрофестиваль и science art. Один туристический источник называет 2008 год годом получения статуса наукограда; другие даты в источниках отличаются."
-   ],
-   "facts": [
-    {
-     "text": "Черноголовку называют городом модернистской архитектуры.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
-     "verified": true
-    },
-    {
-     "text": "В Черноголовке проходят астрофестиваль и science art.",
-     "sourceUrl": "https://daily.afisha.ru/cities/26052-astrofestival-i-science-art-zachem-ehat-v-chernogolovku-na-vyhodnye/",
-     "verified": true
-    },
-    {
-     "text": "Статус наукограда — 2008 год, по туристическому источнику.",
-     "sourceUrl": "https://teletype.in/@apfound/ykuzfeGdsI2",
-     "verified": false
-    },
-    {
-     "text": "Даты статусов города в источниках различаются.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "fryanovo-gorod",
-   "name": "Новый город",
-   "coords": {
-    "lat": 56.104,
-    "lon": 38.14
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "12 марта 1947 года посёлок стал городом Красноармейском. Город рос вместе с оборонной промышленностью страны.",
-    "7 сентября 1992 года Красноармейск получил статус города областного подчинения. Текстильная и оборонная линии, по описанию путеводителя, читаются в разных кварталах."
-   ],
-   "facts": [
-    {
-     "text": "12 марта 1947 года посёлок преобразован в город.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "Город рос вместе с оборонной промышленностью.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "7 сентября 1992 года — статус города областного подчинения.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "Текстильные и оборонные кварталы читаются в облике города.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA",
-     "verified": false
-    },
-    {
-     "text": "Координаты центра приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "fryanovo-manufaktura",
-   "name": "Вознесенская мануфактура",
-   "coords": {
-    "lat": 56.11,
-    "lon": 38.13
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Город вырос вокруг Вознесенской бумагопрядильной мануфактуры на реке Воре; энциклопедическая статья начинает историю с 1834 года, но подробности в найденном тексте обрываются.",
-    "Корпуса фабрики формируют облик старой части города. Внутрь не заходим — территория может быть закрыта."
-   ],
-   "facts": [
-    {
-     "text": "Город вырос из села Муромцево, Вознесенской мануфактуры и посёлка при полигоне.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "История города в энциклопедии начинается с 1834 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": false
-    },
-    {
-     "text": "Мануфактура стоит на реке Воре.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "Доступ на территорию фабрики не проверен.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA",
-     "verified": false
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "fryanovo-prudy",
-   "name": "Храм и пруды",
-   "coords": {
-    "lat": 55.9495,
-    "lon": 38.161
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "У усадьбы есть храм; его историю мы в найденных источниках не нашли и поэтому не пересказываем.",
-    "В Гребневе бывал Державин, а Александр Грин приезжал сюда поправить здоровье. Вокруг — пруды усадебного парка. Финиш — Станция «Фрязино-Пассажирская»: Электрички Ярославского направления."
-   ],
-   "facts": [
-    {
-     "text": "В усадьбе бывал Державин.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "Александр Грин приезжал сюда поправить здоровье.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "История храма в найденных источниках не раскрыта.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Гребнево описано на KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты прудов приблизительные.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -451,75 +253,51 @@
    "url": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)"
   },
   {
-   "title": "Черноголовке — 70 — Сноб",
-   "url": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/articles/istorii/progulka-po-usadbam-schelkovskogo-rajona-doma-maga-i-metallurgicheskogo-korolya-xl/"
   },
   {
-   "title": "Музей Семёнова — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/"
+   "title": "Источник: ru.ruwiki.ru",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%A4%D1%80%D1%8F%D0%BD%D0%BE%D0%B2%D0%BE"
   },
   {
-   "title": "Черноголовка — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/kultura/vystavka-o-dinastii-lazarevyh-otkroetsja-v-usadbe-frjanovo-5-avgusta/"
   },
   {
-   "title": "Красноармейск — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/30760"
-  },
-  {
-   "title": "Красноармейск — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
-  },
-  {
-   "title": "Гребнево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
-  },
-  {
-   "title": "Судьба Гребнева — 360",
-   "url": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/"
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/mosobl/v-schelkovskom-muzee-otkroetsja-ekspozitsija-o-dinastii-lazarevyh/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.044883,
-     55.9592
+     38.442358,
+     56.13
     ],
     [
-     38.045636,
-     55.957628
+     38.443114,
+     56.128428
     ],
     [
-     38.047692,
-     55.956477
+     38.445179,
+     56.127277
     ],
     [
-     38.0505,
-     55.956056
+     38.448,
+     56.126856
     ],
     [
-     38.161,
-     55.946356
+     38.455,
+     56.125856
     ],
     [
-     38.163808,
-     55.946777
-    ],
-    [
-     38.377812,
-     56.005277
-    ],
-    [
-     38.387812,
-     56.009277
-    ],
-    [
-     38.389871,
-     56.010428
+     38.457821,
+     56.126277
     ],
     [
      38.459886,
@@ -534,36 +312,32 @@
      56.130572
     ],
     [
-     38.456886,
-     56.132572
+     38.457686,
+     56.133172
     ],
     [
-     38.454821,
-     56.133723
+     38.455621,
+     56.134323
     ],
     [
-     38.452,
-     56.134144
+     38.4528,
+     56.134744
     ],
     [
-     38.13,
-     56.113144
+     38.449979,
+     56.134323
     ],
     [
-     38.127181,
-     56.112723
+     38.445179,
+     56.132723
     ],
     [
-     38.125117,
-     56.111572
+     38.443114,
+     56.131572
     ],
     [
-     38.045636,
-     55.960772
-    ],
-    [
-     38.044883,
-     55.9592
+     38.442358,
+     56.13
     ]
    ]
   ]
