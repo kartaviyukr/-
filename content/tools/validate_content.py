@@ -152,10 +152,8 @@ def check_destination(d, fname, spiral_ids):
     v2 = ver in (2, 3)
     if v3:
         LONG_ROUTES.append(did)
-    elif ver == 2:
-        warn(w, "маршрут версии 2 заезжает к соседям — переписать на версию 3 (только свои точки)")
     else:
-        err(w, "старый короткий маршрут (routeVersion 1)")
+        err(w, f"маршрут версии {ver} — нужна версия 3: только свои точки места, без заездов к соседям")
     start = end = None
     for key in ("startPoint", "endPoint"):
         rp = need(d, key, dict, w)
