@@ -13,10 +13,18 @@
   "Химки — город у северо-западной границы Москвы, связанный с обороной столицы, авиацией, космосом и каналом имени Москвы.",
   "Главный символ — монумент «Противотанковые ежи» на 23-м километре Ленинградского шоссе. Его открыли 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой: три стальных ежа высотой около 6 метров стоят на рубеже обороны 1941 года.",
   "Местные рассказы называют это место последним рубежом, до которого дошёл враг; другие источники замечают, что наземных боёв здесь не было. Памятник поставили как символ обороны всей Москвы.",
-  "Свои места маршрута: «Центр Химок», «Мемориал «Противотанковые ежи»». По пути маршрут заходит и к соседям: Молжаниново, Новосёлки, Черкизово — «Деревенские улицы», «Поля у Шереметьева»; Мемориал «Штыки» — «Мемориал «Штыки»», «Последний рубеж»; Крюково — «Матушкино», «Бывший посёлок Крюково»; Андреевка — «Лес между Зеленоградом и Андреевкой», «Посёлок Андреевка»; Менделеево — «Институт времени», «Верховья Клязьмы».",
-  "Маршрут линейный, около 61 км и 12 точек. Финиш — Станция «Крюково» (Электрички Ленинградского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Центр Химок», «Мемориал «Противотанковые ежи»», «Парк имени Льва Толстого», «Берег Химкинского водохранилища», «Петропавловская церковь в Старых Химках». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 11 км: старт и финиш — Станция «Химки» (Электрички Ленинградского направления / МЦД-3). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Станция «Химки»",
+  "coords": {
+   "lat": 55.889,
+   "lon": 37.444
+  },
+  "transport": "Электрички Ленинградского направления / МЦД-3"
+ },
+ "endPoint": {
   "name": "Станция «Химки»",
   "coords": {
    "lat": 55.889,
@@ -24,22 +32,14 @@
   },
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
- "endPoint": {
-  "name": "Станция «Крюково»",
-  "coords": {
-   "lat": 55.9802,
-   "lon": 37.1725
-  },
-  "transport": "Электрички Ленинградского направления / МЦД-3"
- },
  "route": {
-  "distanceKm": 61.0,
-  "durationH": 7.5,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 10.9,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "khimki-i-memorial-ezhi-ezhi",
@@ -139,480 +139,111 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "khimki-i-memorial-ezhi-derevni",
-   "name": "Деревенские улицы",
+   "id": "khimki-i-memorial-ezhi-park-tolstogo",
+   "name": "Парк имени Льва Толстого",
    "coords": {
-    "lat": 55.932,
-    "lon": 37.37
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Молжаниново, Новосёлки и Черкизово — деревни, оказавшиеся в черте Москвы. Здесь частные дома и огороды соседствуют с аэропортом и трассами.",
-    "Историю деревень мы не нашли в открытых источниках; если знаете её — это хороший повод поговорить с местными."
-   ],
-   "facts": [
-    {
-     "text": "Деревни находятся в черте Москвы.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "История деревень в найденных источниках не раскрыта.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Район соседствует с аэропортом Шереметьево.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Москва расширялась в 2012 году за счёт Новой Москвы, но Молжаниново входило в неё раньше.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "khimki-i-memorial-ezhi-polya",
-   "name": "Поля у Шереметьева",
-   "coords": {
-    "lat": 55.938,
-    "lon": 37.38
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По краю района — поля и перелески, над которыми заходят на посадку самолёты.",
-    "Это редкое место в Москве, где огромный город выглядит как настоящая деревня.",
-    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Следующая точка маршрута — «Мемориал «Штыки»»."
-   ],
-   "facts": [
-    {
-     "text": "Над районом заходят на посадку самолёты.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Описание ландшафта — наблюдение составителя.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Район находится на севере Москвы.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Новая Москва описана в Рувики.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "khimki-i-memorial-ezhi-memorial",
-   "name": "Мемориал «Штыки»",
-   "coords": {
-    "lat": 55.97,
-    "lon": 37.3
+    "lat": 55.893,
+    "lon": 37.446
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 20,
    "guideStory": [
-    "Мемориал стоит на 40-м километре Ленинградского шоссе. Строительство шло с 1973 года, монумент установлен 24 июня 1974 года.",
-    "В братской могиле похоронены останки 760 бойцов, найденных во время строительства Зеленограда. Памятник — объект культурного наследия регионального значения.",
-    "Подходим пешком по безопасной дорожке и минуту молчим. Следующая точка маршрута — «Последний рубеж»."
+    "Главный городской парк Химок — парк имени Льва Толстого на Ленинском проспекте. Аллеи, площадки и пруд, по которому можно покататься на лодке.",
+    "Хорошее место начать знакомство с городом и передохнуть в середине маршрута. Следующая точка маршрута — «Берег Химкинского водохранилища»."
    ],
    "facts": [
     {
-     "text": "Мемориал находится на 40-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "Знакомство с Химками путеводитель советует начать с парка им. Льва Толстого.",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
      "verified": true
     },
     {
-     "text": "Монумент установлен 24 июня 1974 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "В парке можно покататься на лодке.",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
      "verified": true
     },
     {
-     "text": "В братской могиле — останки 760 бойцов.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": false
-    },
-    {
-     "text": "Мемориал посвящён погибшим при обороне Москвы в 1941 году.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": true
-    },
-    {
-     "text": "Памятник — объект культурного наследия регионального значения.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "text": "Адрес парка — Ленинский проспект, 2б.",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
      "verified": true
     }
    ],
-   "warnings": [
-    "Мемориал: тишина и уважение."
-   ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "khimki-i-memorial-ezhi-rubezh",
-   "name": "Последний рубеж",
+   "id": "khimki-i-memorial-ezhi-vodokhranilishche",
+   "name": "Берег Химкинского водохранилища",
    "coords": {
-    "lat": 55.975,
-    "lon": 37.25
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
-    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Следующая точка маршрута — «Матушкино»."
-   ],
-   "facts": [
-    {
-     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
-     "verified": true
-    },
-    {
-     "text": "Шли бои за деревню Матушкино.",
-     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
-     "verified": true
-    },
-    {
-     "text": "Матушкино освобождено 8 декабря 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
-     "verified": false
-    },
-    {
-     "text": "Ленинградское шоссе — плотное движение.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Ленинградское шоссе: не выезжать на проезжую часть."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "khimki-i-memorial-ezhi-matushkino",
-   "name": "Матушкино",
-   "coords": {
-    "lat": 55.99,
-    "lon": 37.19
+    "lat": 55.878,
+    "lon": 37.472
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Деревня Матушкино на короткое время оказалась оккупирована, но 8 декабря 1941 года её освободили.",
-    "На землях бывших деревень Матушкино и Савёлки и посёлка Крюково позже построили Зеленоград.",
-    "От Матушкина через новые кварталы возвращаемся к станции Крюково."
+    "Химкинское водохранилище — популярное место отдыха на канале имени Москвы. На его берегах — памятник «Мать-Москва» и Северный речной вокзал.",
+    "При водохранилище работает музей истории канала Москва — Волга. Химкинский берег — тихий: здесь удобно посидеть у воды."
    ],
    "facts": [
     {
-     "text": "Матушкино освобождено 8 декабря 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
+     "text": "Вдоль водохранилища — памятник «Мать-Москва» и Северный речной вокзал.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/khimki-reservoir/info",
      "verified": true
     },
     {
-     "text": "Зеленоград построен на землях Матушкина, Савёлок и Крюкова.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "Матушкино — район Зеленограда.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": false
-    },
-    {
-     "text": "Детали боёв за деревню мы не приводим.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "khimki-i-memorial-ezhi-posyolok",
-   "name": "Бывший посёлок Крюково",
-   "coords": {
-    "lat": 55.975,
-    "lon": 37.165
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1970 году северную часть посёлка Крюково до железной дороги передали городу Зеленограду; другие населённые пункты присоединили в 1970–1980-х.",
-    "Сегодня Старое Крюково — отдельный район Зеленограда со своей историей. Следующая точка маршрута — «Лес между Зеленоградом и Андреевкой»."
-   ],
-   "facts": [
-    {
-     "text": "В 1970 году северная часть Крюкова передана Зеленограду.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "В 1970–1980-х к городу присоединили другие населённые пункты.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": true
-    },
-    {
-     "text": "Старое Крюково — район Зеленограда.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/staroe-kryukovo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/staroe-kryukovo/",
-     "verified": false
-    },
-    {
-     "text": "Состав присоединённых пунктов мы не перечисляем.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/927481",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "khimki-i-memorial-ezhi-les",
-   "name": "Лес между Зеленоградом и Андреевкой",
-   "coords": {
-    "lat": 55.99,
-    "lon": 37.16
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "От станции Крюково едем на запад, к Андреевке. Дорога идёт через лес и новые районы Зеленограда, мимо жилых кварталов.",
-    "Тропы мы на месте не проверяли — держитесь асфальта и накатанных дорожек. Следующая точка маршрута — «Посёлок Андреевка»."
-   ],
-   "facts": [
-    {
-     "text": "Андреевка — рядом с Зеленоградом.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "Тропы не проверены.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Андреевка — в Солнечногорском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "khimki-i-memorial-ezhi-posyolok-2",
-   "name": "Посёлок Андреевка",
-   "coords": {
-    "lat": 56.0,
-    "lon": 37.15
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Андреевка — рабочий посёлок Солнечногорского округа; статус его закреплён областным законом 2013 года.",
-    "Сегодня здесь строятся жилые комплексы — например, «Андреевский квартал». Следующая точка маршрута — «Институт времени». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Статус Андреевки закреплён областным законом.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "В Андреевке строится ЖК «Андреевский квартал».",
-     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_andreevskiy_kvartal",
-     "verified": true
-    },
-    {
-     "text": "История посёлка не найдена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Координаты посёлка приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Андреевка — рабочий посёлок.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast",
+     "text": "На водохранилище есть музей истории канала Москва — Волга.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/khimki-reservoir/info",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 100
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "khimki-i-memorial-ezhi-institut",
-   "name": "Институт времени",
+   "id": "khimki-i-memorial-ezhi-petropavlovskaya",
+   "name": "Петропавловская церковь в Старых Химках",
    "coords": {
-    "lat": 56.035,
-    "lon": 37.23
+    "lat": 55.885,
+    "lon": 37.452
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Всероссийский научно-исследовательский институт физико-технических и радиотехнических измерений (ВНИИФТРИ) Росстандарта называют расположенным в Солнечногорске; РИАМО писало о нём как об «институте времени».",
-    "Что институт находится именно в Менделееве — по нашим источникам вывод косвенный, поэтому этот факт помечен как непроверенный."
+    "Храм апостолов Петра и Павла стоит в Старых Химках, недалеко от стадиона «Родина». В XVI веке на этом месте была усадьба князей Татевых.",
+    "Усадьба много раз меняла владельцев и из деревянного дома превратилась в кирпичное здание в стиле ампир."
    ],
    "facts": [
     {
-     "text": "ВНИИФТРИ Росстандарта — метрологический институт в Солнечногорском округе.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
+     "text": "Петропавловская церковь расположена в Старых Химках, недалеко от стадиона «Родина».",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
      "verified": true
     },
     {
-     "text": "РИАМО называло институт в Солнечногорском округе «институтом времени».",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/",
+     "text": "В XVI веке на этом месте стояла усадьба князей Татевых.",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
      "verified": true
     },
     {
-     "text": "Расположение института именно в Менделееве не проверено.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Территория института закрыта.",
-     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
+     "text": "Усадьба превратилась из деревянного дома в кирпичное здание в стиле ампир.",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
+     "verified": true
     }
    ],
-   "warnings": [
-    "Режимная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 110
-  },
-  {
-   "id": "khimki-i-memorial-ezhi-klyazma",
-   "name": "Верховья Клязьмы",
-   "coords": {
-    "lat": 56.045,
-    "lon": 37.215
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Менделеево стоит в верховьях Клязьмы — той самой реки, что дальше течёт через Щёлково и Ногинск к Владимиру.",
-    "Здесь Клязьма ещё совсем небольшая речка. Тропы вдоль неё мы на месте не проверяли.",
-    "По тихим улицам посёлка возвращаемся к остановке на шоссе. Финиш — Станция «Крюково»: Электрички Ленинградского направления / МЦД-3."
-   ],
-   "facts": [
-    {
-     "text": "Посёлок расположен в верховьях Клязьмы.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Клязьма течёт через Щёлково и Ногинск.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
-    },
-    {
-     "text": "Тропы вдоль реки не проверены.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
-    },
-    {
-     "text": "Менделеево соседствует с Зеленоградом.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 120
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -653,119 +284,103 @@
    "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/"
   },
   {
-   "title": "Церковь в Черкизове — sobory.ru",
-   "url": "https://sobory.ru/photo/11000"
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh"
   },
   {
-   "title": "Штыки — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/khimki/"
   },
   {
-   "title": "Мемориал «Штыки» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB"
   },
   {
-   "title": "Крюково — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/kryukovo/"
+   "title": "Источник: en.wikipedia.org",
+   "url": "https://en.wikipedia.org/wiki/Khimki_War_Memorial"
   },
   {
-   "title": "Экскурсии — Музей Зеленограда",
-   "url": "https://mosmuseum.ru/association/zelenograd/tours"
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/mosobl/godovschinu-ustanovki-monumenta-protivotankovye-ezhi-otmetili-v-himkah/"
   },
   {
-   "title": "Andreyevka — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast"
-  },
-  {
-   "title": "Менделеево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
-  },
-  {
-   "title": "Институт времени — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/"
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/khimki-reservoir/info"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.144377,
-     56.0
+     37.419392,
+     55.902
     ],
     [
-     37.145131,
-     55.998428
+     37.420143,
+     55.900428
     ],
     [
-     37.160134,
-     55.973428
-    ],
-    [
-     37.162191,
-     55.972277
+     37.435145,
+     55.887428
     ],
     [
      37.437197,
      55.886277
     ],
     [
-     37.44,
-     55.885856
+     37.469198,
+     55.875277
     ],
     [
-     37.445,
-     55.885856
+     37.472,
+     55.874856
     ],
     [
-     37.447803,
-     55.886277
+     37.474802,
+     55.875277
     ],
     [
-     37.449855,
-     55.887428
+     37.476854,
+     55.876428
     ],
     [
-     37.450606,
-     55.889
+     37.477605,
+     55.878
     ],
     [
-     37.449855,
-     55.890572
+     37.476854,
+     55.879572
     ],
     [
-     37.384861,
-     55.939572
+     37.450856,
+     55.894572
     ],
     [
-     37.219875,
-     56.046572
+     37.448804,
+     55.895723
     ],
     [
-     37.217815,
-     56.047723
+     37.427804,
+     55.904723
     ],
     [
-     37.215,
-     56.048144
+     37.425,
+     55.905144
     ],
     [
-     37.212185,
-     56.047723
+     37.422196,
+     55.904723
     ],
     [
-     37.210125,
-     56.046572
+     37.420143,
+     55.903572
     ],
     [
-     37.145131,
-     56.001572
-    ],
-    [
-     37.144377,
-     56.0
+     37.419392,
+     55.902
     ]
    ]
   ]

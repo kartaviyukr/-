@@ -13,33 +13,33 @@
   "Марфино — одна из лучших неоготических усадеб Подмосковья: дворец на холме отражается в большом пруду, а въезд ведёт через двухарочный псевдоготический мост с зубцами.",
   "Владельцами усадьбы в разные времена были Голицыны, Салтыковы, Орловы и Панины. Название, по одной версии, связано с княгиней Марфой, дочерью Голицына, но есть и другие объяснения.",
   "После революции усадьбу национализировали, ценности и библиотеку вывезли в музеи, а с 1944 года здесь работает военный санаторий. В 1990–2009 годах здания отреставрировали; фасады стали терракотовыми, хотя изначально были розовыми.",
-  "Свои места маршрута: «Псевдоготический мост», «Парк и церкви усадьбы». По пути маршрут заходит и к соседям: Лобня — «Красная Поляна и мемориал «Катюшки»», «Музей истории города и противотанковый ров»; Жостово — «Жостовская фабрика декоративной росписи»; Долгопрудный — «Долгие пруды», «МФТИ (Физтех)»; Химки и мемориал «Ежи» — «Мемориал «Противотанковые ежи»», «Центр Химок»; Путилково — «Долина Сходни», «Бывшая деревенская часть».",
-  "Маршрут линейный, около 49 км и 11 точек. Финиш — Метро «Планерная» (Таганско-Краснопресненская линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Псевдоготический мост», «Дворец над прудом», «Военный санаторий», «Парк и церкви усадьбы», «Церковь 1701–1707 годов». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Остановка «Марфино» (Автобусы до Мытищ и Лобни). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Марфино»",
   "coords": {
-   "lat": 56.028,
-   "lon": 37.416
+   "lat": 56.0282,
+   "lon": 37.4165
   },
-  "transport": "Автобусы от Мытищ и Лобни — уточняйте расписание"
+  "transport": "Автобусы до Мытищ и Лобни"
  },
  "endPoint": {
-  "name": "Метро «Планерная»",
+  "name": "Остановка «Марфино»",
   "coords": {
-   "lat": 55.86,
-   "lon": 37.437
+   "lat": 56.0282,
+   "lon": 37.4165
   },
-  "transport": "Таганско-Краснопресненская линия"
+  "transport": "Автобусы до Мытищ и Лобни"
  },
  "route": {
-  "distanceKm": 49.0,
-  "durationH": 6.9,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 1.7,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -88,8 +88,98 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "marfino-dvorets",
+   "name": "Дворец над прудом",
+   "coords": {
+    "lat": 56.03,
+    "lon": 37.42
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Псевдоготический дворец стоит на холме и отражается в большом пруду. Вокруг — церкви, беседки, фигуры грифонов.",
+    "Владельцами были Голицыны, Салтыковы, Орловы и Панины. После 1918 года усадьбу национализировали, ценности и библиотеку вывезли, а с 1944 года здесь военный санаторий Минобороны.",
+    "В 1990–2009 годах здания отреставрировали по оригинальному проекту, но фасады покрасили в терракотовый цвет вместо исходного розового."
+   ],
+   "facts": [
+    {
+     "text": "С 1944 года в усадьбе военный санаторий, который принадлежит Минобороны.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/usadba-marfino/info",
+     "verified": true
+    },
+    {
+     "text": "В 1990–2009 годах здания отреставрировали; фасады стали терракотовыми вместо розовых.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/usadba-marfino/info",
+     "verified": true
+    },
+    {
+     "text": "Среди владельцев — Голицыны, Салтыковы, Орловы и Панины.",
+     "sourceUrl": "https://experience.tripster.ru/experience/103300/",
+     "verified": true
+    },
+    {
+     "text": "После революции ценности и библиотеку усадьбы вывезли в музеи.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/usadba-marfino/info",
+     "verified": true
+    },
+    {
+     "text": "Название связывают с княгиней Марфой, дочерью Голицына, но есть и другие версии.",
+     "sourceUrl": "https://experience.tripster.ru/experience/103300/",
+     "verified": false
+    },
+    {
+     "text": "Попасть на территорию можно только по пропуску или с экскурсией.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/usadba-marfino/info",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Санаторий Минобороны: на территорию — только по пропуску или с экскурсией."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "marfino-sanatoriy",
+   "name": "Военный санаторий",
+   "coords": {
+    "lat": 56.031,
+    "lon": 37.419
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Марфино оставалось во владении Паниных до 1917 года. С 1944 года в усадьбе работает военный санаторий — сейчас он принадлежит Министерству обороны.",
+    "В 1990–2009 годах исторические здания отреставрировали по оригинальному проекту. На территорию пускают в часы работы парка — уточняйте заранее."
+   ],
+   "facts": [
+    {
+     "text": "Усадьба принадлежала Паниным до 1917 года.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/074/020.htm",
+     "verified": true
+    },
+    {
+     "text": "С 1944 года в Марфине работает военный санаторий, сейчас — Минобороны.",
+     "sourceUrl": "https://t-j.ru/must-see-marfino-estate/",
+     "verified": true
+    },
+    {
+     "text": "В 1990–2009 годах здания отреставрировали.",
+     "sourceUrl": "https://t-j.ru/must-see-marfino-estate/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "marfino-park",
@@ -134,440 +224,44 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "marfino-krasnaya-polyana",
-   "name": "Красная Поляна и мемориал «Катюшки»",
+   "id": "marfino-tserkov-1707",
+   "name": "Церковь 1701–1707 годов",
    "coords": {
-    "lat": 56.001,
-    "lon": 37.457
+    "lat": 56.029,
+    "lon": 37.423
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Красная Поляна — бывшее село, где зимой 1941 года фронт подошёл ближе всего к Москве с севера. В 1975 году рабочий посёлок Красная Поляна вошёл в черту Лобни.",
-    "Мемориальный комплекс «Катюшки» посвящён героям Великой Отечественной войны."
-   ],
-   "facts": [
-    {
-     "text": "В 1975 году рабочий посёлок Красная Поляна вошёл в черту Лобни.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": true
-    },
-    {
-     "text": "Мемориальный комплекс «Катюшки» посвящён героям Великой Отечественной войны.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Лобня — один из ключевых рубежей обороны Москвы зимой 1941–1942 годов.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Точное расположение мемориала мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": false
-    },
-    {
-     "text": "Город сформировался из посёлка при станции и окрестных селений.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "marfino-muzey",
-   "name": "Музей истории города и противотанковый ров",
-   "coords": {
-    "lat": 56.008,
-    "lon": 37.49
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Музей истории Лобни создали в 1981 году как Музей боевой и трудовой славы. Он стоит на месте, где в 1941 году горожане рыли противотанковый ров, — остатки рва видны до сих пор.",
-    "Здесь рассказывают, как в районе Красной Поляны остановили наступление на Москву с севера. Это одна из самых важных точек всей обороны столицы."
-   ],
-   "facts": [
-    {
-     "text": "Музей истории Лобни создан в 1981 году как Музей боевой и трудовой славы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Музей стоит на месте противотанкового рва 1941 года, остатки которого видны сегодня.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "В районе Красной Поляны было остановлено наступление немецких войск на северном направлении.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Часы работы музея мы не проверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": false
-    },
-    {
-     "text": "В Лобне есть художественно-краеведческий отдел музея-заповедника «Абрамцево».",
-     "sourceUrl": "https://www.komandirovka.ru/sights/lobnay/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Часы работы не проверены — уточняйте.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "marfino-fabrika",
-   "name": "Жостовская фабрика декоративной росписи",
-   "coords": {
-    "lat": 55.9645,
-    "lon": 37.557
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 40,
-   "guideStory": [
-    "В деревне Жостово до сих пор работает фабрика, где расписывают подносы. Традиционно её историю ведут с 1825 года — тогда Осип Вишняков открыл лаковое производство; этот год значился даже в прейскуранте мастерских.",
-    "Жостовская роспись — свободные букеты, написанные в несколько слоёв по чёрному или цветному лаку. Мастера пишут без предварительного рисунка, от руки."
-   ],
-   "facts": [
-    {
-     "text": "Традиционная дата основания промысла — 1825 год, когда Осип Вишняков открыл лаковое производство.",
-     "sourceUrl": "https://conf.msu.ru/archive/Lomonosov_2015/data/7077/uid68147_report.pdf",
-     "verified": true
-    },
-    {
-     "text": "Год 1825 значился в прейскуранте мастерских Вишняковых.",
-     "sourceUrl": "https://conf.msu.ru/archive/Lomonosov_2015/data/7077/uid68147_report.pdf",
-     "verified": true
-    },
-    {
-     "text": "В деревне Жостово до сих пор работает фабрика по производству расписных изделий.",
-     "sourceUrl": "https://osnmedia.ru/1000/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "Тарас, Егор и Филипп Вишняковы организовали производство лаковых табакерок в начале 1810-х годов.",
-     "sourceUrl": "https://lgz.ru/article/tsarskie-bukety-zhostovo",
-     "verified": false
-    },
-    {
-     "text": "В Подмосковье проходила выставка «Жостово. Вызывающе красиво».",
-     "sourceUrl": "https://riamo.ru/news/kultura/v-podmoskove-otkrylas-vystavka-zhostovo-vyzyvajusche-krasivo/",
-     "verified": true
-    },
-    {
-     "text": "Работают ли при фабрике магазин и музей, мы не проверяли.",
-     "sourceUrl": "https://osnmedia.ru/1000/zhostovskaya-rospis/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующее производство: на территорию — только при открытом магазине или экскурсии."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "marfino-prudy",
-   "name": "Долгие пруды",
-   "coords": {
-    "lat": 55.942,
-    "lon": 37.505
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Город назван по Долгим прудам — они существуют здесь около четырёх веков. Вытянутая цепочка воды и дала имя станции, посёлку и городу.",
-    "Когда в 1931 году искали место для дирижаблестроительной верфи, выбрали площадку недалеко от этих прудов."
-   ],
-   "facts": [
-    {
-     "text": "Город получил название от Долгих прудов, существующих около четырёх веков.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "Место для «Дирижаблестроя» выбрали недалеко от Долгих прудов.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/03/03.RTF",
-     "verified": true
-    },
-    {
-     "text": "Долгопрудный — город в Московской области.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Возраст прудов назван приблизительно.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": false
-    },
-    {
-     "text": "Город известен как спутник Москвы с собственной историей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-dolgoprudnyj-216379/",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "marfino-fiztekh",
-   "name": "МФТИ (Физтех)",
-   "coords": {
-    "lat": 55.9298,
-    "lon": 37.52
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Сегодня Долгопрудный знают прежде всего по МФТИ — Московскому физико-техническому институту. Отсюда вышли многие известные физики и инженеры.",
-    "Город рос вместе со своими предприятиями и институтом: в 1957 году он стал городом районного подчинения, а в 1963-м — областного.",
-    "От Физтеха — к станции Новодачная, финишу маршрута. Следующая точка маршрута — «Мемориал «Противотанковые ежи»»."
-   ],
-   "facts": [
-    {
-     "text": "В 1953 году Долгопрудный стал районным центром Краснополянского района.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "В 1957 году Долгопрудный получил статус города районного подчинения.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "С 1963 года Долгопрудный — город областного подчинения.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "МФТИ находится в Долгопрудном.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-dolgoprudnyj-216379/",
-     "verified": true
-    },
-    {
-     "text": "Год основания МФТИ в найденных источниках не указан.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "marfino-ezhi",
-   "name": "Мемориал «Противотанковые ежи»",
-   "coords": {
-    "lat": 55.902,
-    "lon": 37.425
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Монумент «Ежи» открыли 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой. Он стоит на 23-м километре Ленинградского шоссе.",
-    "Три стальных противотанковых ежа высотой до 6 метров, по данным путеводителей, сделаны из балок, предназначавшихся для Дворца Советов. У подножия — каменный подиум с картой обороны столицы."
-   ],
-   "facts": [
-    {
-     "text": "Монумент «Ежи» открыт 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой.",
-     "sourceUrl": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/",
-     "verified": true
-    },
-    {
-     "text": "Мемориал стоит на 23-м километре Ленинградского шоссе.",
-     "sourceUrl": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi",
-     "verified": true
-    },
-    {
-     "text": "Высота ежей — около 6 метров; у подножия подиум с картой обороны столицы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
-     "verified": true
-    },
-    {
-     "text": "Ежи изготовили из стальных балок, предназначавшихся для Дворца Советов.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
-     "verified": false
-    },
-    {
-     "text": "Местные источники называют это место последним рубежом, до которого дошёл враг; другие отмечают, что боёв здесь не было.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Khimki_War_Memorial",
-     "verified": false
-    },
-    {
-     "text": "Годовщину установки монумента ежегодно отмечают в Химках.",
-     "sourceUrl": "https://360.ru/news/mosobl/godovschinu-ustanovki-monumenta-protivotankovye-ezhi-otmetili-v-himkah/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориал у оживлённого шоссе: подходим пешком по безопасной дорожке."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "marfino-gorod",
-   "name": "Центр Химок",
-   "coords": {
-    "lat": 55.889,
-    "lon": 37.44
-   },
-   "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Химки путеводители описывают как город обороны Москвы, авиации, космоса и канала имени Москвы — все эти слои здесь переплетены.",
-    "В городе и рядом немало памятников; главный — у Ленинградского шоссе, на месте рубежа обороны 1941 года."
+    "Старейшая постройка усадьбы — церковь 1701–1707 годов работы крепостного архитектора В. Белозёрова.",
+    "После разорения 1812 года усадьбу восстанавливал крепостной архитектор Ф. Тугаров, а в 1832–1846 годах М. Д. Быковский перестроил центр в формах английской готики."
    ],
    "facts": [
     {
-     "text": "Химки связаны с обороной Москвы, авиацией, космосом и каналом имени Москвы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "text": "Церковь построена в 1701–1707 годах крепостным архитектором В. Белозёровым.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/074/020.htm",
      "verified": true
     },
     {
-     "text": "Путеводитель Путевка.ком предлагает маршрут по главным достопримечательностям Химок.",
-     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
+     "text": "После 1812 года усадьбу восстановил крепостной архитектор Ф. Тугаров.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/074/020.htm",
      "verified": true
     },
     {
-     "text": "Список достопримечательностей Химок ведёт командировка.ру.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/khimki/",
-     "verified": true
-    },
-    {
-     "text": "Год получения статуса города в найденных источниках не указан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
-     "verified": false
-    },
-    {
-     "text": "Химки граничат с Москвой.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "text": "В 1832–1846 годах центральную часть реконструировал М. Д. Быковский.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/074/020.htm",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "marfino-skhodnya",
-   "name": "Долина Сходни",
-   "coords": {
-    "lat": 55.87,
-    "lon": 37.405
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "По одной из версий, название Путилково связано с древним торговым путём по речке Сходне.",
-    "Первое письменное упоминание Путилкова — 1576 год, описание границ Спас-Тушинской монастырской вотчины. Тушино с его историей Смуты — совсем рядом, ниже по Сходне."
-   ],
-   "facts": [
-    {
-     "text": "Название по одной версии связано с древним торговым путём по Сходне.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Первое письменное упоминание — 1576 год, при описании границ Спас-Тушинской вотчины.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сходня течёт к Тушину.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково расположено у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Версия о торговом пути не подтверждена документами.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "marfino-staroe",
-   "name": "Бывшая деревенская часть",
-   "coords": {
-    "lat": 55.863,
-    "lon": 37.395
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "От старой деревни почти ничего не осталось: на её месте выросли многоэтажки, и сохранилось ли что-то от старой застройки, мы не проверяли.",
-    "И всё же Путилково живёт под деревенским именем, напоминая о временах, когда здесь были избы, а не микрорайоны.",
-    "Маршрут Путилкова завершён — короткий, но любопытный: от записи 1576 года до одного из крупнейших «негородов» страны."
-   ],
-   "facts": [
-    {
-     "text": "Путилково выросло из деревни, упомянутой в 1576 году.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сегодня это крупный населённый пункт у МКАД.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Сохранность старой застройки мы не проверяли.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": false
-    },
-    {
-     "text": "Путилково входит в городской округ Красногорск.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
-     "verified": true
-    },
-    {
-     "text": "Понятие «деревня» в России определяется статусом, а не размером.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 110
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -608,119 +302,63 @@
    "url": "https://t-j.ru/must-see-marfino-estate/"
   },
   {
-   "title": "Лобня — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F"
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/experience/103300/"
   },
   {
-   "title": "Лобня — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/"
+   "title": "Источник: booksite.ru",
+   "url": "https://booksite.ru/FullText/1/001/008/074/020.htm"
   },
   {
-   "title": "Лобня — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/lobnay/"
-  },
-  {
-   "title": "Жостовская роспись — ОСН",
-   "url": "https://osnmedia.ru/1000/zhostovskaya-rospis/"
-  },
-  {
-   "title": "Жостовская роспись — culture.ru",
-   "url": "https://culture.ru/s/slovo-dnya/zhostovskaya-rospis/"
-  },
-  {
-   "title": "Царские букеты Жостова — ЛГ",
-   "url": "https://lgz.ru/article/tsarskie-bukety-zhostovo"
-  },
-  {
-   "title": "Долгопрудный и его окрестности — краеведческий сборник",
-   "url": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF"
-  },
-  {
-   "title": "История ДМЗ",
-   "url": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/03/03.RTF"
-  },
-  {
-   "title": "Долгопрудный — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9"
-  },
-  {
-   "title": "Монумент «Ежи» — culture.ru",
-   "url": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi"
-  },
-  {
-   "title": "Мемориал «Ежи» — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/"
-  },
-  {
-   "title": "Химки — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/"
-  },
-  {
-   "title": "Путилково — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/cities/putilkovo/"
-  },
-  {
-   "title": "Деревня — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F"
+   "title": "Источник: msk1.ru",
+   "url": "https://msk1.ru/text/gorod/2025/12/19/76173300/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.389397,
-     55.863
+     37.410873,
+     56.0282
     ],
     [
-     37.390148,
-     55.861428
+     37.411627,
+     56.026628
     ],
     [
-     37.392199,
-     55.860277
+     37.413687,
+     56.025477
     ],
     [
-     37.395,
-     55.859856
+     37.4165,
+     56.025056
     ],
     [
-     37.437,
-     55.856856
+     37.423,
+     56.025856
     ],
     [
-     37.439801,
-     55.857277
+     37.425813,
+     56.026277
     ],
     [
-     37.441852,
-     55.858428
+     37.427873,
+     56.027428
     ],
     [
-     37.52486,
-     55.928228
+     37.428627,
+     56.029
     ],
     [
-     37.561865,
-     55.962928
+     37.427873,
+     56.030572
     ],
     [
-     37.562617,
-     55.9645
-    ],
-    [
-     37.561865,
-     55.966072
-    ],
-    [
-     37.49487,
-     56.009572
-    ],
-    [
-     37.492812,
-     56.010723
+     37.426873,
+     56.032572
     ],
     [
      37.424814,
@@ -731,28 +369,24 @@
      56.034144
     ],
     [
-     37.419186,
+     37.419,
+     56.034144
+    ],
+    [
+     37.416186,
      56.033723
     ],
     [
-     37.415687,
-     56.032223
+     37.414127,
+     56.032572
     ],
     [
-     37.413627,
-     56.031072
+     37.411627,
+     56.029772
     ],
     [
-     37.411127,
-     56.029572
-    ],
-    [
-     37.410373,
-     56.028
-    ],
-    [
-     37.389397,
-     55.863
+     37.410873,
+     56.0282
     ]
    ]
   ]

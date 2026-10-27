@@ -13,10 +13,18 @@
   "Пушкино — старое село и дачный город на Ярославской дороге. Его упоминают в писцовых книгах 1499 года, а название чаще всего связывают с боярином Григорием Морхининым по прозвищу «Пушка», владевшим землёй во второй половине XIV века.",
   "Город вырос у Московско-Ярославской железной дороги как популярное дачное место. Статус города Пушкино получило 17 августа 1925 года, когда объединили дачный посёлок и часть села.",
   "Самая известная дачная история — Маяковский на Акуловой горе. Дом поэта утрачен, но на его месте восстановили музейную дачу.",
-  "Свои места маршрута: «Дача Маяковского на Акуловой горе», «Церковь Николая Чудотворца», «Музей художественных изделий». По пути маршрут заходит и к соседям: Ивантеевка — «Трикотажный комбинат», «Река Уча и старые фабрики»; Фрязино — «Центр наукограда»; Щёлково — «Набережная Клязьмы»; Гребнево — «Село Бохова стана».",
-  "Маршрут линейный, около 59 км и 8 точек. Финиш — Станция «Фрязино-Пассажирская» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Водонапорная башня 1903 года», «Музей художественных изделий», «Дача Рабенек — Михайлова», «Церковь Николая Чудотворца», «Дача Маяковского на Акуловой горе», «Река Серебрянка». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 8 км: старт и финиш — Станция «Пушкино» (Электрички Ярославского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Станция «Пушкино»",
+  "coords": {
+   "lat": 56.0108,
+   "lon": 37.8475
+  },
+  "transport": "Электрички Ярославского направления"
+ },
+ "endPoint": {
   "name": "Станция «Пушкино»",
   "coords": {
    "lat": 56.0105,
@@ -24,116 +32,47 @@
   },
   "transport": "Электрички Ярославского направления"
  },
- "endPoint": {
-  "name": "Станция «Фрязино-Пассажирская»",
-  "coords": {
-   "lat": 55.9592,
-   "lon": 38.0505
-  },
-  "transport": "Электрички Ярославского направления"
- },
  "route": {
-  "distanceKm": 59.0,
-  "durationH": 7.2,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 7.5,
+  "durationH": 2.4,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "pushkino-akulova-gora",
-   "name": "Дача Маяковского на Акуловой горе",
+   "id": "pushkino-bashnya",
+   "name": "Водонапорная башня 1903 года",
    "coords": {
-    "lat": 56.018,
-    "lon": 37.832
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Акулова гора — главный литературный адрес Пушкина. Здесь летом жил Владимир Маяковский.",
-    "Дом не сохранился; музейную площадку на Акуловой горе восстановили после утраты дома. Реконструированная дача-музей работает по ограниченному расписанию — проверяйте заранее."
-   ],
-   "facts": [
-    {
-     "text": "Музейная площадка на Акуловой горе восстановлена после утраты дома Маяковского.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/pushkino/",
-     "verified": true
-    },
-    {
-     "text": "Дача-музей Маяковского работает по ограниченному расписанию.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/pushkino/",
-     "verified": true
-    },
-    {
-     "text": "Связь поэмы «Необычайное приключение…» с Пушкином в найденных источниках не подтверждена.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino",
-     "verified": false
-    },
-    {
-     "text": "Пушкино — популярное дачное место с XIX века.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Рядом с Акуловой горой находится церковь Николая Чудотворца.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/pushkino/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Ограниченное расписание — проверяйте перед поездкой.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "pushkino-nikolskaya",
-   "name": "Церковь Николая Чудотворца",
-   "coords": {
-    "lat": 56.017,
-    "lon": 37.864
+    "lat": 56.011,
+    "lon": 37.849
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Церковь Николая Чудотворца — один из храмов старого Пушкина, напоминание о селе, существовавшем задолго до дач.",
-    "Село упоминается в писцовых книгах 1499 года, а его имя связывают с боярином по прозвищу «Пушка». Источники расходятся в датах, но история села явно старше пяти веков."
+    "Водонапорную башню построили у станции Пушкино в 1903 году, чтобы снабжать водой паровозы. Сегодня это символ города.",
+    "Пушкино выросло у Московско-Ярославской железной дороги — и башня напоминает, с чего начинался дачный город. Следующая точка маршрута — «Музей художественных изделий»."
    ],
    "facts": [
     {
-     "text": "Церковь Николая Чудотворца указана среди ближайших объектов к Акуловой горе.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/pushkino/",
+     "text": "Башня построена у станции Пушкино в 1903 году для снабжения водой поездов.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%BE",
      "verified": true
     },
     {
-     "text": "Село Пушкино упоминается в писцовых книгах 1499 года.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino/istoriia",
+     "text": "Водонапорная башня — символ Пушкина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%BE",
      "verified": true
-    },
-    {
-     "text": "Название связывают с боярином Григорием Морхининым по прозвищу «Пушка».",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Год постройки храма в найденных источниках не указан.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/pushkino/",
-     "verified": false
-    },
-    {
-     "text": "Датировки упоминаний села в источниках расходятся.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/pushkino/history",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "pushkino-muzey",
@@ -178,241 +117,162 @@
    "openingHoursNote": "Часы работы не проверены.",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "pushkino-kombinat",
-   "name": "Трикотажный комбинат",
+   "id": "pushkino-rabenek",
+   "name": "Дача Рабенек — Михайлова",
    "coords": {
-    "lat": 55.97,
-    "lon": 37.915
+    "lat": 56.015,
+    "lon": 37.855
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Местный краеведческий музей занимает дом дачной усадьбы Рабенек — Михайлова 1910 года.",
+    "Дачи — главный жанр Пушкина: город, выросший у железной дороги, жил дачной культурой. Следующая точка маршрута — «Церковь Николая Чудотворца». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "Краеведческий музей расположен в доме дачной усадьбы Рабенек — Михайлова 1910 года.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Пушкино выросло у Московско-Ярославской железной дороги и связано с дачной культурой.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/pushkino/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "pushkino-nikolskaya",
+   "name": "Церковь Николая Чудотворца",
+   "coords": {
+    "lat": 56.017,
+    "lon": 37.864
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Трикотажная фабрика — одно из главных предприятий XX века. Путеводители связывают трикотажную фабрику имени Дзержинского с 1931 годом.",
-    "В 1928 году фабричный центр объединили с соседними деревнями в рабочий посёлок Ивантеевка, а в 1938 году он стал городом."
+    "Церковь Николая Чудотворца — один из храмов старого Пушкина, напоминание о селе, существовавшем задолго до дач.",
+    "Село упоминается в писцовых книгах 1499 года, а его имя связывают с боярином по прозвищу «Пушка». Источники расходятся в датах, но история села явно старше пяти веков."
    ],
    "facts": [
     {
-     "text": "Трикотажную фабрику имени Дзержинского путеводитель связывает с 1931 годом.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia",
+     "text": "Церковь Николая Чудотворца указана среди ближайших объектов к Акуловой горе.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/pushkino/",
+     "verified": true
+    },
+    {
+     "text": "Село Пушкино упоминается в писцовых книгах 1499 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Название связывают с боярином Григорием Морхининым по прозвищу «Пушка».",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Год постройки храма в найденных источниках не указан.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/pushkino/",
      "verified": false
     },
     {
-     "text": "Ивантеевский трикотажный комбинат описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D1%80%D0%B8%D0%BA%D0%BE%D1%82%D0%B0%D0%B6%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B0%D1%82",
-     "verified": true
-    },
-    {
-     "text": "В 1928 году образован рабочий посёлок Ивантеевка.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Кроме фабрик, в Ивантеевке был селекционный лесопитомник.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/",
-     "verified": true
-    },
-    {
-     "text": "Работает ли комбинат сейчас, мы не проверяли.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%82%D1%80%D0%B8%D0%BA%D0%BE%D1%82%D0%B0%D0%B6%D0%BD%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B0%D1%82",
+     "text": "Датировки упоминаний села в источниках расходятся.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/pushkino/history",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "pushkino-ucha",
-   "name": "Река Уча и старые фабрики",
+   "id": "pushkino-akulova-gora",
+   "name": "Дача Маяковского на Акуловой горе",
    "coords": {
-    "lat": 55.976,
-    "lon": 37.93
+    "lat": 56.018,
+    "lon": 37.832
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Акулова гора — главный литературный адрес Пушкина. Здесь летом жил Владимир Маяковский.",
+    "Дом не сохранился; музейную площадку на Акуловой горе восстановили после утраты дома. Реконструированная дача-музей работает по ограниченному расписанию — проверяйте заранее."
+   ],
+   "facts": [
+    {
+     "text": "Музейная площадка на Акуловой горе восстановлена после утраты дома Маяковского.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/pushkino/",
+     "verified": true
+    },
+    {
+     "text": "Дача-музей Маяковского работает по ограниченному расписанию.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/pushkino/",
+     "verified": true
+    },
+    {
+     "text": "Связь поэмы «Необычайное приключение…» с Пушкином в найденных источниках не подтверждена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino",
+     "verified": false
+    },
+    {
+     "text": "Пушкино — популярное дачное место с XIX века.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushkino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Рядом с Акуловой горой находится церковь Николая Чудотворца.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/pushkino/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "Ограниченное расписание — проверяйте перед поездкой.",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
+  {
+   "id": "pushkino-serebryanka",
+   "name": "Река Серебрянка",
+   "coords": {
+    "lat": 56.005,
+    "lon": 37.84
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Промышленная история Ивантеевки связана с рекой: по данным краеведов, бумажную мельницу на Уче построили ещё в середине XVI века.",
-    "В 1831 году имение Баташёвых вместе с тремя фабриками купил купец И. А. Щёкин и построил бумагопрядильную фабрику. В 1875 году появилась красильно-аппретурная фабрика."
-   ],
-   "facts": [
-    {
-     "text": "Музейная экспозиция связывает начало промышленной истории с бумажной мельницей на Уче середины XVI века.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/",
-     "verified": true
-    },
-    {
-     "text": "В 1831 году имение Баташёвых с тремя фабриками было продано купцу И. А. Щёкину.",
-     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёкин построил бумагопрядильную фабрику.",
-     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "В 1875 году построили красильно-аппретурную фабрику.",
-     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Точное место первой бумажной мельницы мы не сверяли.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "pushkino-tsentr",
-   "name": "Центр наукограда",
-   "coords": {
-    "lat": 55.962,
-    "lon": 38.042
-   },
-   "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Институтские кварталы Фрязина выросли после войны вокруг НИИ; в 1951 году посёлок стал городом.",
-    "29 декабря 2003 года Фрязину присвоили статус наукограда. Название связывают с «фрягами» — итальянцами-строителями Кремля, но это лишь предположение."
+    "Прогулку у Серебрянки путеводители называют частью удачного дня в Пушкине.",
+    "Никольский храм на высоком берегу Учи виден издалека; его полностью восстановили только в 2007 году. Финиш — Станция «Пушкино»: Электрички Ярославского направления."
    ],
    "facts": [
     {
-     "text": "В 1951 году Фрязино получило статус города.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
+     "text": "Прогулка у Серебрянки — часть удачного дня в Пушкине.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/pushkino/",
      "verified": true
     },
     {
-     "text": "29 декабря 2003 года Фрязину присвоен статус наукограда.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/16521",
-     "verified": true
-    },
-    {
-     "text": "Связь названия с «фрягами» — гипотеза, не подтверждённая источниками.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Вокруг НИИ выросли институтские кварталы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
-     "verified": true
-    },
-    {
-     "text": "Фрязино — наукоград Российской Федерации.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/16521",
+     "text": "Храм Николая Чудотворца полностью восстановили в 2007 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%BE",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "pushkino-klyazma",
-   "name": "Набережная Клязьмы",
-   "coords": {
-    "lat": 55.924,
-    "lon": 38.005
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Щёлково стоит на берегах Клязьмы — река отражена и в символике городского флага.",
-    "Река давала фабрикам воду для промывки и окраски тканей, а теперь даёт горожанам место для прогулок и рыбалки.",
-    "Вдоль Клязьмы возвращаемся к станции: петля по фабричному городу замкнута, и река проводит нас до самой железной дороги."
-   ],
-   "facts": [
-    {
-     "text": "Город расположен на Клязьме, что отражено в символике флага.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — промышленный город с текстильной историей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-schelkovo-216393/",
-     "verified": true
-    },
-    {
-     "text": "Набережная — место прогулок горожан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/schyolkovo/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Щёлкова описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — центр городского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "pushkino-istoriya",
-   "name": "Село Бохова стана",
-   "coords": {
-    "lat": 55.9505,
-    "lon": 38.159
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Гребнево появилось в XVI веке как село Бохова стана. В писцовых книгах 1584–1586 годов его связывают с Богданом Бельским.",
-    "Затем селом владели Воронцовы и Трубецкие. Князь Дмитрий Тимофеевич Трубецкой, сподвижник Пожарского, строил здесь на реке Любосеевке. Порядок и даты владения в источниках расходятся."
-   ],
-   "facts": [
-    {
-     "text": "Гребнево известно с XVI века как село Бохова стана.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "В 1584–1586 годах его связывают с Богданом Бельским.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Позже селом владели Воронцовы и Трубецкие.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Даты владения в источниках расходятся.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Усадьба стоит на реке Любосеевке.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -453,52 +313,28 @@
    "url": "https://www.komandirovka.ru/sights/pushkino/"
   },
   {
-   "title": "История Ивантеевки — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/ivanteevka/istoriia"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD%D0%BE"
   },
   {
-   "title": "Ивантеевка — Циклопедия",
-   "url": "https://www.cyclowiki.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD%D1%82%D0%B5%D0%B5%D0%B2%D0%BA%D0%B0"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/pushkino/muzey-hudojestvennyih-izdeliy/"
   },
   {
-   "title": "Ивантеевка — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ivanteevka/"
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/pushkino"
   },
   {
-   "title": "История Фрязина — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/articles/istorii/zhit-v-pushkine-ezdit-v-abramtsevo-i-ne-boyatsya-hodit-po-nocham-xl/"
   },
   {
-   "title": "Фрязино — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/"
-  },
-  {
-   "title": "НПП «Исток» — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB"
-  },
-  {
-   "title": "История Щёлкова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia"
-  },
-  {
-   "title": "Щёлково — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/shchelkovo/history"
-  },
-  {
-   "title": "Флаг Щёлкова — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0"
-  },
-  {
-   "title": "Гребнево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
-  },
-  {
-   "title": "Судьба Гребнева — 360",
-   "url": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/pushkino/history"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -512,44 +348,36 @@
      56.016428
     ],
     [
-     37.910135,
-     55.968428
+     37.83513,
+     56.003428
     ],
     [
-     37.912191,
-     55.967277
+     37.837188,
+     56.002277
     ],
     [
-     38.002194,
-     55.921277
+     37.84,
+     56.001856
     ],
     [
-     38.005,
-     55.920856
+     37.842812,
+     56.002277
     ],
     [
-     38.007806,
-     55.921277
+     37.866813,
+     56.014277
     ],
     [
-     38.161808,
-     55.947777
+     37.868871,
+     56.015428
     ],
     [
-     38.163863,
-     55.948928
+     37.869625,
+     56.017
     ],
     [
-     38.164615,
-     55.9505
-    ],
-    [
-     38.163863,
-     55.952072
-    ],
-    [
-     38.161808,
-     55.953223
+     37.868871,
+     56.018572
     ],
     [
      37.866813,

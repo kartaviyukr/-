@@ -13,8 +13,8 @@
   "Долгопрудный — город дирижаблей и Физтеха. Своё имя он получил от Долгих прудов, которые существуют в этой местности около четырёх веков.",
   "В 1931 году при Управлении гражданского воздушного флота создали «Дирижаблестрой» и выбрали для него место у Долгих прудов. В 1936 году его производственную базу передали Наркомату тяжёлой промышленности — так появился машиностроительный завод.",
   "Посёлок рос вокруг стройки: в 1953 году он стал районным центром Краснополянского района, в 1957-м — городом районного подчинения, а с 1963 года — областного.",
-  "Свои места маршрута: «Долгие пруды», «Бывший «Дирижаблестрой»», «МФТИ (Физтех)». По пути маршрут заходит и к соседям: Жостово — «Деревня мастеров»; Федоскино — «Село Федоскино», «Данилково — начало промысла»; Марфино — «Парк и церкви усадьбы»; Лобня — «Красная Поляна и мемориал «Катюшки»», «Озеро Киово и церковь Спаса»; Молжаниново, Новосёлки, Черкизово — «Поля у Шереметьева».",
-  "Маршрут линейный, около 58 км и 10 точек. Финиш — Станция «Новоподрезково» (Электрички Ленинградского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Историко-художественный музей», «Аллея Славы и бюст Циолковскому», «Долгие пруды», «Бывший «Дирижаблестрой»», «Храм Казанской иконы Божией Матери», «МФТИ (Физтех)», «Парк «Новые Водники»». Все они — в самом городе или рядом с ним.",
+  "Маршрут линейный, около 6 км: старт — Станция «Долгопрудная», финиш — Станция «Новодачная» (Электрички Савёловского направления / МЦД-1). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Долгопрудная»",
@@ -25,24 +25,86 @@
   "transport": "Электрички Савёловского направления / МЦД-1"
  },
  "endPoint": {
-  "name": "Станция «Новоподрезково»",
+  "name": "Станция «Новодачная»",
   "coords": {
-   "lat": 55.9352,
-   "lon": 37.3505
+   "lat": 55.925,
+   "lon": 37.524
   },
-  "transport": "Электрички Ленинградского направления / МЦД-3"
+  "transport": "Электрички Савёловского направления / МЦД-1"
  },
  "route": {
-  "distanceKm": 58.0,
-  "durationH": 7.1,
-  "difficulty": "сложный",
+  "distanceKm": 5.7,
+  "durationH": 1.9,
+  "difficulty": "лёгкий",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "dolgoprudnyy-muzey",
+   "name": "Историко-художественный музей",
+   "coords": {
+    "lat": 55.938,
+    "lon": 37.508
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Долгопрудненский историко-художественный музей работает на улице Циолковского, 34. По данным справочника, он был создан ещё в 1958 году.",
+    "История города — от дирижаблей до Физтеха — здесь хорошо собрана в одном месте. Следующая точка маршрута — «Аллея Славы и бюст Циолковскому»."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится на ул. Циолковского, 34.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/dolgoprudnyi/points",
+     "verified": true
+    },
+    {
+     "text": "Музей был создан в 1958 году.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/dolgoprudnyi/points",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "dolgoprudnyy-alleya-slavy",
+   "name": "Аллея Славы и бюст Циолковскому",
+   "coords": {
+    "lat": 55.94,
+    "lon": 37.51
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Аллея Славы посвящена героям Великой Отечественной войны. На площади у кинотеатра стоит бюст Циолковскому — город дирижаблей и науки чтит его особо.",
+    "Короткая остановка в центре по пути к набережной. Следующая точка маршрута — «Долгие пруды»."
+   ],
+   "facts": [
+    {
+     "text": "Аллея Славы посвящена героям Великой Отечественной войны.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dolgoprudny/",
+     "verified": true
+    },
+    {
+     "text": "Бюст Циолковскому стоит на площади возле кинотеатра.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dolgoprudny/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
   {
    "id": "dolgoprudnyy-prudy",
    "name": "Долгие пруды",
@@ -87,8 +149,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "dolgoprudnyy-dirizhablestroy",
@@ -135,8 +197,39 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "dolgoprudnyy-kazanskaya",
+   "name": "Храм Казанской иконы Божией Матери",
+   "coords": {
+    "lat": 55.933,
+    "lon": 37.5
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Храм Казанской иконы Божией Матери — архитектурная достопримечательность Долгопрудного, построенная в начале XX века.",
+    "История города началась позже — в 1931 году, с дирижаблестроительного завода, так что храм старше самого города. Следующая точка маршрута — «МФТИ (Физтех)»."
+   ],
+   "facts": [
+    {
+     "text": "Храм Казанской иконы построен в начале XX века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
+     "verified": false
+    },
+    {
+     "text": "История Долгопрудного началась в 1931 году с основания дирижаблестроительного завода.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
   },
   {
    "id": "dolgoprudnyy-fiztekh",
@@ -150,7 +243,7 @@
    "guideStory": [
     "Сегодня Долгопрудный знают прежде всего по МФТИ — Московскому физико-техническому институту. Отсюда вышли многие известные физики и инженеры.",
     "Город рос вместе со своими предприятиями и институтом: в 1957 году он стал городом районного подчинения, а в 1963-м — областного.",
-    "От Физтеха — к станции Новодачная, финишу маршрута. Следующая точка маршрута — «Деревня мастеров»."
+    "От Физтеха — к станции Новодачная, финишу маршрута. Следующая точка маршрута — «Парк «Новые Водники»»."
    ],
    "facts": [
     {
@@ -182,336 +275,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 60,
+   "coordsVerified": false
   },
   {
-   "id": "dolgoprudnyy-derevnya",
-   "name": "Деревня мастеров",
+   "id": "dolgoprudnyy-novye-vodniki",
+   "name": "Парк «Новые Водники»",
    "coords": {
-    "lat": 55.962,
-    "lon": 37.552
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В начале XIX века в нескольких деревнях Троицкой волости, и в Жостове тоже, появились мастерские, где расписывали лакированные изделия из папье-маше.",
-    "Постепенно от папье-маше перешли к металлическим подносам — они прочнее и дешевле, а роспись на них не менее нарядна. На стиль повлияли федоскинская миниатюра и уральская роспись по металлу.",
-    "Проезжаем по деревне и выезжаем к соседним селениям. Следующая точка маршрута — «Село Федоскино»."
-   ],
-   "facts": [
-    {
-     "text": "В начале XIX века в деревнях Троицкой волости появились мастерские росписи папье-маше.",
-     "sourceUrl": "https://osnmedia.ru/1000/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "На жостовскую роспись повлияли федоскинская миниатюра и уральская роспись по металлу.",
-     "sourceUrl": "https://osnmedia.ru/1000/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "Вишняковы выпускали подносы, сухарницы, шкатулки и другие лакированные предметы.",
-     "sourceUrl": "https://culture.ru/s/slovo-dnya/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "Жостовская роспись — «слово дня» на портале «Культура.РФ».",
-     "sourceUrl": "https://culture.ru/s/slovo-dnya/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "Точные адреса старых мастерских не сохранились в найденных источниках.",
-     "sourceUrl": "https://osnmedia.ru/1000/zhostovskaya-rospis/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "dolgoprudnyy-selo",
-   "name": "Село Федоскино",
-   "coords": {
-    "lat": 56.0,
-    "lon": 37.532
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Само село — тихое подмосковное место над рекой, где мастера несколько поколений передают друг другу ремесло.",
-    "Лаковая миниатюра — один из главных русских промыслов, наряду с палехской, мстёрской и холуйской, и Федоскино среди них самое старое и единственное подмосковное."
-   ],
-   "facts": [
-    {
-     "text": "Федоскино географически стоит особняком среди центров лаковой миниатюры.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Fedoskino_miniature",
-     "verified": true
-    },
-    {
-     "text": "Русская лаковая миниатюра — отдельное направление декоративного искусства.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Russian_lacquer_art",
-     "verified": true
-    },
-    {
-     "text": "Федоскинская миниатюра — одна из четырёх школ русской лаковой миниатюры.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Russian_lacquer_art",
-     "verified": true
-    },
-    {
-     "text": "Федоскино — село в Мытищинском округе.",
-     "sourceUrl": "https://www.mos.ru/news/item/93773073/",
-     "verified": false
-    },
-    {
-     "text": "Изделия федоскинских мастеров — шкатулки, ларцы, коробки.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A4%D0%B5%D0%B4%D0%BE%D1%81%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D0%B0",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "dolgoprudnyy-danilkovo",
-   "name": "Данилково — начало промысла",
-   "coords": {
-    "lat": 56.006,
-    "lon": 37.5
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Промысел начался не в самом Федоскине, а в соседнем Данилкове. Здесь в 1795 году купец Коробов наладил выпуск армейских лаковых козырьков.",
-    "Затем он перенял в Брауншвейге технику миниатюрной живописи на папье-маше — и от козырьков перешёл к шкатулкам. Позже производство перенесли в Федоскино."
-   ],
-   "facts": [
-    {
-     "text": "Федоскинская лаковая миниатюра возникла в 1795 году благодаря купцу П. И. Коробову.",
-     "sourceUrl": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/",
-     "verified": true
-    },
-    {
-     "text": "Сначала в Данилкове изготавливали армейские лаковые козырьки.",
-     "sourceUrl": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/",
-     "verified": true
-    },
-    {
-     "text": "Коробов перенял технику миниатюрной живописи на папье-маше в Брауншвейге.",
-     "sourceUrl": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/",
-     "verified": true
-    },
-    {
-     "text": "Промысел позже перенесли из Данилкова в Федоскино.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A4%D0%B5%D0%B4%D0%BE%D1%81%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Федоскинская миниатюра отмечала 230 лет со дня основания.",
-     "sourceUrl": "https://riamo.ru/news/kultura/fedoskinskaja-lakovaja-miniatjura-otmechaet-230-let-so-dnja-osnovanija/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "dolgoprudnyy-park",
-   "name": "Парк и церкви усадьбы",
-   "coords": {
-    "lat": 56.031,
-    "lon": 37.422
+    "lat": 55.928,
+    "lon": 37.525
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Усадебный ансамбль — это не только дворец: церкви, пруды, беседки и грифоны создают цельную романтическую картину XIX века.",
-    "Учреждение «Усадьба Марфино» описано на портале «Культура.РФ»; экскурсии позволяют увидеть то, что закрыто для свободного входа."
-   ],
-   "facts": [
-    {
-     "text": "На территории — церкви, пруды, беседки и фигуры грифонов.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/usadba-marfino/info",
-     "verified": true
-    },
-    {
-     "text": "Усадьба представлена на портале «Культура.РФ».",
-     "sourceUrl": "https://www.culture.ru/institutes/13959/usadba-marfino",
-     "verified": true
-    },
-    {
-     "text": "Экскурсии по Марфину проводят частные гиды.",
-     "sourceUrl": "https://experience.tripster.ru/experience/103300/",
-     "verified": true
-    },
-    {
-     "text": "Усадьбу называют «императорской резиденцией» в литературе — это художественный образ.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2025/12/19/76173300/",
-     "verified": false
-    },
-    {
-     "text": "Т—Ж включает Марфино в список обязательных к посещению усадеб.",
-     "sourceUrl": "https://t-j.ru/must-see-marfino-estate/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "dolgoprudnyy-krasnaya-polyana",
-   "name": "Красная Поляна и мемориал «Катюшки»",
-   "coords": {
-    "lat": 56.001,
-    "lon": 37.457
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Красная Поляна — бывшее село, где зимой 1941 года фронт подошёл ближе всего к Москве с севера. В 1975 году рабочий посёлок Красная Поляна вошёл в черту Лобни.",
-    "Мемориальный комплекс «Катюшки» посвящён героям Великой Отечественной войны."
-   ],
-   "facts": [
-    {
-     "text": "В 1975 году рабочий посёлок Красная Поляна вошёл в черту Лобни.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": true
-    },
-    {
-     "text": "Мемориальный комплекс «Катюшки» посвящён героям Великой Отечественной войны.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Лобня — один из ключевых рубежей обороны Москвы зимой 1941–1942 годов.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Точное расположение мемориала мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": false
-    },
-    {
-     "text": "Город сформировался из посёлка при станции и окрестных селений.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "dolgoprudnyy-kiovo",
-   "name": "Озеро Киово и церковь Спаса",
-   "coords": {
-    "lat": 56.023,
-    "lon": 37.495
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Озеро Киово — природная гордость Лобни: здесь гнездятся чайки, и чайка изображена на гербе города.",
-    "Мало кто знает, что Киово когда-то было усадьбой. Церковь Спаса Нерукотворного Образа в Киове в 1930-е закрывали, а богослужения возобновили в 1988 году."
-   ],
-   "facts": [
-    {
-     "text": "Чайка изображена на гербе Лобни, в территорию которой входит Киово.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Киово было усадьбой.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Церковь Спаса Нерукотворного Образа в 1930-е закрывали, службы возобновили в 1988 году.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Название Лобни связывают с речкой Лобненкой.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": false
-    },
-    {
-     "text": "Озеро Киово — место гнездования чаек.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/lobnia",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "warnings": [
-    "У озера — колония птиц: не шумим и не подходим к гнёздам."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "dolgoprudnyy-polya",
-   "name": "Поля у Шереметьева",
-   "coords": {
-    "lat": 55.938,
-    "lon": 37.38
-   },
-   "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "По краю района — поля и перелески, над которыми заходят на посадку самолёты.",
-    "Это редкое место в Москве, где огромный город выглядит как настоящая деревня.",
-    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Финиш — Станция «Новоподрезково»: Электрички Ленинградского направления / МЦД-3."
+    "Парк «Новые Водники» тянется вдоль набережной канала имени Москвы.",
+    "В городе есть и парк культуры и отдыха с озером, где катаются на лодках, — Долгопрудный вообще город воды: пруды, канал, водохранилище. Финиш — Станция «Новодачная»: Электрички Савёловского направления / МЦД-1."
    ],
    "facts": [
     {
-     "text": "Над районом заходят на посадку самолёты.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Описание ландшафта — наблюдение составителя.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Район находится на севере Москвы.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
+     "text": "В Долгопрудном есть парк «Новые Водники» на набережной.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
      "verified": true
     },
     {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/11000",
-     "verified": false
-    },
-    {
-     "text": "Новая Москва описана в Рувики.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
+     "text": "В парке культуры и отдыха можно покататься на лодке по озеру.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
      "verified": true
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 100
+   "order": 70,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -552,139 +348,115 @@
    "url": "https://znanierussia.ru/articles/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9"
   },
   {
-   "title": "Жостовская роспись — ОСН",
-   "url": "https://osnmedia.ru/1000/zhostovskaya-rospis/"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/dolgoprudnyi/points"
   },
   {
-   "title": "Жостовская роспись — culture.ru",
-   "url": "https://culture.ru/s/slovo-dnya/zhostovskaya-rospis/"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/dolgoprudny/"
   },
   {
-   "title": "Царские букеты Жостова — ЛГ",
-   "url": "https://lgz.ru/article/tsarskie-bukety-zhostovo"
+   "title": "Источник: cian.ru",
+   "url": "https://www.cian.ru/stati-goroda-podmoskovja-dolgoprudnyj-216379/"
   },
   {
-   "title": "Федоскинская миниатюра — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A4%D0%B5%D0%B4%D0%BE%D1%81%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D0%B0"
+   "title": "Источник: kamushki.duckdns.org",
+   "url": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/17/04.RTF"
   },
   {
-   "title": "Fedoskino miniature — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Fedoskino_miniature"
+   "title": "Источник: teletype.in",
+   "url": "https://teletype.in/@apfound/cPMm-ocAQjq"
   },
   {
-   "title": "Федоскинская миниатюра — ОСН",
-   "url": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/"
-  },
-  {
-   "title": "Усадьба Марфино — Sputnik8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/usadba-marfino/info"
-  },
-  {
-   "title": "Усадьба Марфино — culture.ru",
-   "url": "https://www.culture.ru/institutes/13959/usadba-marfino"
-  },
-  {
-   "title": "Марфино — Т—Ж",
-   "url": "https://t-j.ru/must-see-marfino-estate/"
-  },
-  {
-   "title": "Лобня — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F"
-  },
-  {
-   "title": "Лобня — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/"
-  },
-  {
-   "title": "Лобня — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/lobnay/"
-  },
-  {
-   "title": "Церковь в Черкизове — sobory.ru",
-   "url": "https://sobory.ru/photo/11000"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.344887,
-     55.9352
+     37.494386,
+     55.938
     ],
     [
-     37.345639,
-     55.933628
+     37.494387,
+     55.933
     ],
     [
-     37.347693,
-     55.932477
+     37.495139,
+     55.931428
     ],
     [
-     37.3505,
-     55.932056
+     37.497194,
+     55.930277
     ],
     [
-     37.52,
-     55.926656
+     37.521194,
+     55.922277
     ],
     [
-     37.522806,
-     55.927077
+     37.524,
+     55.921856
     ],
     [
-     37.52486,
-     55.928228
+     37.526806,
+     55.922277
     ],
     [
-     37.556864,
-     55.960428
+     37.52886,
+     55.923428
     ],
     [
-     37.557617,
-     55.962
+     37.529612,
+     55.925
     ],
     [
-     37.556864,
-     55.963572
+     37.530612,
+     55.928
     ],
     [
-     37.536869,
-     56.001572
+     37.52986,
+     55.929572
     ],
     [
-     37.499872,
-     56.024572
+     37.519861,
+     55.938572
     ],
     [
-     37.497813,
-     56.025723
+     37.514862,
+     55.941572
     ],
     [
-     37.495,
-     56.026144
+     37.512807,
+     55.942723
     ],
     [
-     37.422,
-     56.034144
+     37.507807,
+     55.944723
     ],
     [
-     37.419186,
-     56.033723
+     37.505,
+     55.945144
     ],
     [
-     37.417127,
-     56.032572
+     37.502193,
+     55.944723
     ],
     [
-     37.345639,
-     55.936772
+     37.500138,
+     55.943572
     ],
     [
-     37.344887,
-     55.9352
+     37.495139,
+     55.939572
+    ],
+    [
+     37.494386,
+     55.938
     ]
    ]
   ]
