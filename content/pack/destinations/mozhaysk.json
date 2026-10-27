@@ -13,8 +13,8 @@
   "Можайск впервые упоминается в летописи под 1231 годом; сначала он входил в Смоленское княжество.",
   "Первую крепость на Никольской горе, по одному источнику, построили ещё в XII веке; первые каменные постройки — Никольский собор, Никольские ворота и Воздвиженская церковь — появились в XIV веке. От кремля остались въездные ворота и 11-метровый участок стены; при Екатерине II крепость разбирали на кирпич.",
   "Лужецкий монастырь основан в 1408 году преподобным Ферапонтом — это единственная сохранившаяся древняя обитель Можайска. В 1812 году в нём был штаб французских войск.",
-  "Свои места маршрута: «Никольская гора и собор», «Лужецкий монастырь», «Город после крепости». По пути маршрут заходит и к соседям: Бородинское поле — «Багратионовы флеши», «Спасо-Бородинский монастырь», «Батарея Раевского»; Колоцкий монастырь — «Обретение иконы»; Уваровка — «Посёлок Уваровых».",
-  "Маршрут линейный, около 55 км и 8 точек. Финиш — Станция «Уваровка» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Город после крепости», «Никольская гора и собор», «Лужецкий монастырь», «Городская усадьба Хлебникова», «Дом-музей Сергея Герасимова». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 7 км: старт и финиш — Станция «Можайск» (Электрички Белорусского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Можайск»",
@@ -25,24 +25,70 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Уваровка»",
+  "name": "Станция «Можайск»",
   "coords": {
-   "lat": 55.5302,
-   "lon": 35.6105
+   "lat": 55.5052,
+   "lon": 36.0335
   },
   "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 55.0,
-  "durationH": 7.0,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 7.3,
+  "durationH": 2.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "mozhaysk-upadok",
+   "name": "Город после крепости",
+   "coords": {
+    "lat": 55.505,
+    "lon": 36.03
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Упадок крепости начался после 1686 года, а при Екатерине II её начали разбирать на кирпичи.",
+    "Можайск — ворота к Бородинскому полю, у которого в спирали свой маршрут. Следующая точка маршрута — «Никольская гора и собор». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Упадок начался после 1686 года.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "Бородинское поле — рядом с Можайском.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "Можайск описан на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "mozhaysk-nikolskaya",
    "name": "Никольская гора и собор",
@@ -86,8 +132,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "mozhaysk-luzhetsky",
@@ -101,7 +147,7 @@
    "guideStory": [
     "Лужецкий монастырь основан в 1408 году преподобным Ферапонтом. Это единственная древняя можайская обитель, сохранившаяся до наших дней.",
     "В 1812 году монастырь сильно пострадал: французские войска устроили здесь штаб.",
-    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Город после крепости»."
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Городская усадьба Хлебникова»."
    ],
    "facts": [
     {
@@ -135,288 +181,70 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "mozhaysk-upadok",
-   "name": "Город после крепости",
+   "id": "mozhaysk-khlebnikov",
+   "name": "Городская усадьба Хлебникова",
    "coords": {
-    "lat": 55.505,
-    "lon": 36.03
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Упадок крепости начался после 1686 года, а при Екатерине II её начали разбирать на кирпичи.",
-    "Можайск — ворота к Бородинскому полю, у которого в спирали свой маршрут. Следующая точка маршрута — «Багратионовы флеши». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Упадок начался после 1686 года.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Бородинское поле — рядом с Можайском.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "Можайск описан на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "mozhaysk-fleshi",
-   "name": "Багратионовы флеши",
-   "coords": {
-    "lat": 55.51,
-    "lon": 35.825
+    "lat": 55.5068,
+    "lon": 36.0322
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 25,
+   "visitMinutes": 10,
    "guideStory": [
-    "Сражение произошло 26 августа (7 сентября) 1812 года у села Бородино. Багратионовы флеши — земляные укрепления, за которые шли ожесточённые бои.",
-    "На центральном укреплении флешей погиб генерал Александр Тучков. Итог сражения остаётся предметом споров: ни одна из сторон не достигла поставленных целей.",
-    "По полю ездят и на электромобилях с экскурсией. Следующая точка маршрута — «Спасо-Бородинский монастырь»."
+    "Городская усадьба Хлебникова входит в список главных достопримечательностей Можайска вместе с Лужецким монастырём и Ново-Никольским собором.",
+    "Первую крепость на Никольской горе поставили ещё в XII веке; упадок кремля начался в 1686 году."
    ],
    "facts": [
     {
-     "text": "Сражение произошло 26 августа (7 сентября) 1812 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
+     "text": "Усадьба Хлебникова — среди главных достопримечательностей города.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Mozhaysk/",
      "verified": true
     },
     {
-     "text": "Ни одна из сторон не добилась своих целей.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
+     "text": "Первая крепость на Никольской горе — XII век; упадок с 1686 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/mozhaiskii-kreml",
      "verified": true
-    },
-    {
-     "text": "Генерал Тучков погиб на центральном укреплении флешей.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "По полю проводят экскурсии на электромобилях.",
-     "sourceUrl": "https://www.culture.ru/events/5906675/ekskursiya-na-elektromobile-po-borodinskomu-polyu",
-     "verified": true
-    },
-    {
-     "text": "Координаты флешей приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "mozhaysk-monastyr",
-   "name": "Спасо-Бородинский монастырь",
+   "id": "mozhaysk-gerasimov",
+   "name": "Дом-музей Сергея Герасимова",
    "coords": {
-    "lat": 55.508,
-    "lon": 35.82
+    "lat": 55.5035,
+    "lon": 36.0405
    },
    "kind": "заходим внутрь",
    "visitMinutes": 30,
    "guideStory": [
-    "Маргарита Тучкова в память о муже построила церковь Спаса Нерукотворного на месте его гибели; вокруг вырос Спасо-Бородинский женский монастырь.",
-    "В 1941 году на Бородинском поле снова шли бои — уже с немецкими войсками. Следующая точка маршрута — «Батарея Раевского»."
+    "В небольшом парке с бюстом художника Сергея Герасимова стоит двухэтажный деревянный дом — его бывшая мастерская, внутри собраны личные вещи.",
+    "Адрес — улица Герасимова, 5. Финиш — Станция «Можайск»: Электрички Белорусского направления."
    ],
    "facts": [
     {
-     "text": "Монастырь основала Маргарита Тучкова в память о муже.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "Церковь Спаса Нерукотворного построена на месте гибели Тучкова.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "В 1941 году на поле шли бои с немецкими войсками.",
+     "text": "Дом-музей Герасимова — деревянный двухэтажный дом, бывшая мастерская.",
      "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
      "verified": true
     },
     {
-     "text": "Монастырь — женский.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "mozhaysk-raevsky",
-   "name": "Батарея Раевского",
-   "coords": {
-    "lat": 55.522,
-    "lon": 35.818
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Батарея Раевского на Курганной высоте — одна из ключевых точек сражения. Здесь стоит главный монумент воинам русской армии.",
-    "В 1839 году на Курганной высоте по указу Николая I установили первый памятник героям — с этого и начался музей. Под музей тогда отвели каменную сторожку у монумента."
-   ],
-   "facts": [
-    {
-     "text": "Музей-заповедник основан в 1839 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
+     "text": "Музей находится на улице Герасимова, 5.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
      "verified": true
-    },
-    {
-     "text": "Первый памятник героям поставлен на Курганной высоте по указу Николая I.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Под музей отвели каменную сторожку у монумента.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Батарея Раевского — главный монумент русской армии.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "Комплекс включает братские могилы, храмы, укрепления и памятники.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "mozhaysk-ikona",
-   "name": "Обретение иконы",
-   "coords": {
-    "lat": 55.58,
-    "lon": 35.79
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По преданию, в 1412 году местный крестьянин Лука нашёл чудотворный образ Богородицы. К 1413 году князь Андрей Дмитриевич, сын Дмитрия Донского, основал здесь обитель, а Лука стал монахом.",
-    "Эту историю мы знаем по одному туристическому источнику. Следующая точка маршрута — «Посёлок Уваровых»."
-   ],
-   "facts": [
-    {
-     "text": "В 1412 году крестьянин Лука нашёл икону — по одному источнику.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Монастырь основан к 1413 году князем Андреем Дмитриевичем.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Андрей Дмитриевич — сын Дмитрия Донского.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Лука стал монахом.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "mozhaysk-posyolok",
-   "name": "Посёлок Уваровых",
-   "coords": {
-    "lat": 55.532,
-    "lon": 35.615
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Уваровка — один из самых западных посёлков Московской области, недалеко от границы со Смоленщиной.",
-    "В Можайске открывалась выставка «Золотой век Уваровых» — о роде, давшем имя посёлку. Финиш — Станция «Уваровка»: Электрички Белорусского направления."
-   ],
-   "facts": [
-    {
-     "text": "В Можайске открывалась выставка «Золотой век Уваровых».",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-mozhajske-otkrylas-vystavka-pod-nazvaniem-zolotoj-vek-uvarovyh/",
-     "verified": true
-    },
-    {
-     "text": "Уваровка — у западной границы области — по наблюдению составителя.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
-     "verified": false
-    },
-    {
-     "text": "Уваровка — в Можайском округе.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
-     "verified": true
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -453,51 +281,43 @@
    "url": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia"
   },
   {
-   "title": "Бородинское сражение — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA"
   },
   {
-   "title": "Музей-заповедник — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA"
+   "title": "Источник: azbyka.ru",
+   "url": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA"
   },
   {
-   "title": "Колоцкий монастырь — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/attractions/Mozhaysk/"
   },
   {
-   "title": "Флаг Уваровки — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0"
-  },
-  {
-   "title": "Уваровке 157 лет — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/"
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/mozhaiskii-kreml"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     35.604945,
-     55.5302
+     35.999448,
+     55.51
     ],
     [
-     35.605689,
-     55.528628
+     36.000192,
+     55.508428
     ],
     [
-     35.607722,
-     55.527477
+     36.002224,
+     55.507277
     ],
     [
-     35.6105,
-     55.527056
-    ],
-    [
-     35.82,
-     55.504856
+     36.022225,
+     55.497277
     ],
     [
      36.025,
@@ -508,52 +328,48 @@
      55.497277
     ],
     [
-     36.029807,
-     55.498428
+     36.043276,
+     55.500777
     ],
     [
-     36.037808,
-     55.503428
+     36.045308,
+     55.501928
     ],
     [
-     36.038552,
-     55.505
+     36.046051,
+     55.5035
     ],
     [
-     36.037808,
-     55.506572
+     36.045308,
+     55.505072
     ],
     [
-     36.035776,
-     55.507723
+     36.043276,
+     55.506223
     ],
     [
-     35.792781,
-     55.582723
+     36.034976,
+     55.509523
     ],
     [
-     35.79,
-     55.583144
+     36.0322,
+     55.509944
     ],
     [
-     35.787219,
-     55.582723
+     36.005,
+     55.513144
     ],
     [
-     35.612222,
-     55.534723
+     36.002224,
+     55.512723
     ],
     [
-     35.607722,
-     55.532923
+     36.000192,
+     55.511572
     ],
     [
-     35.605689,
-     55.531772
-    ],
-    [
-     35.604945,
-     55.5302
+     35.999448,
+     55.51
     ]
    ]
   ]

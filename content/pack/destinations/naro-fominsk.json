@@ -13,8 +13,8 @@
   "Наро-Фоминск — город воинской славы на реке Наре. Село Фоминское известно с XIV века: один источник ссылается на грамоту Ивана Калиты 1339 года, другой — 1328 года; единой даты нет.",
   "Посёлок Нара вырос вокруг бумагопрядильной фабрики, основанной в 1840 году; в XIX веке здесь был один из крупных центров шелкоткачества. Городом Наро-Фоминск стал в 1926 году.",
   "В октябре — декабре 1941 года на Наро-Фоминском рубеже шли ожесточённые бои, линия фронта проходила прямо по улицам. В 2009 году город получил звание «Город воинской славы».",
-  "Свои места маршрута: «Фабрика на Наре», «Наро-Фоминский рубеж», «Берег Нары». По пути маршрут заходит и к соседям: Калининец — «Таманская дивизия»; Селятино — «Посёлок «Гидромонтажа»»; Апрелевка — «Музей истории завода»; Голицыно — «Вокзал Кекушева»; Захарово — «Пушкинская тропа», «Пруд и детство поэта».",
-  "Маршрут линейный, около 66 км и 9 точек. Финиш — Станция «Голицыно» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Фабрика на Наре», «Наро-Фоминский рубеж», «Парк Победы на набережной Нары», «Берег Нары», «Историко-краеведческий музей», «Стела «Город воинской славы»». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Станция «Нара» (Электрички Киевского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Нара»",
@@ -25,21 +25,21 @@
   "transport": "Электрички Киевского направления"
  },
  "endPoint": {
-  "name": "Станция «Голицыно»",
+  "name": "Станция «Нара»",
   "coords": {
-   "lat": 55.6152,
-   "lon": 36.9855
+   "lat": 55.3862,
+   "lon": 36.7345
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "Электрички Киевского направления"
  },
  "route": {
-  "distanceKm": 66.0,
-  "durationH": 7.7,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.9,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "naro-fominsk-rubezh",
@@ -132,8 +132,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "naro-fominsk-park-pobedy",
+   "name": "Парк Победы на набережной Нары",
+   "coords": {
+    "lat": 55.3898,
+    "lon": 36.7318
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Парк Победы тянется вдоль набережной реки Нары в центре города.",
+    "Ещё один зелёный уголок города — парк «Сосновый бор». Следующая точка маршрута — «Берег Нары». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Парк Победы находится на набережной реки Нары.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9D%D0%B0%D1%80%D0%BE-%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "В городе есть парк «Сосновый бор».",
+     "sourceUrl": "https://tonkosti.ru/%D0%9D%D0%B0%D1%80%D0%BE-%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D1%81%D0%BA",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "naro-fominsk-nara",
@@ -179,290 +210,70 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "naro-fominsk-divisiya",
-   "name": "Таманская дивизия",
-   "coords": {
-    "lat": 55.47,
-    "lon": 36.88
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "2-я гвардейская Таманская мотострелковая дивизия — одна из самых известных дивизий Сухопутных войск России.",
-    "Её подразделения занимают большой комплекс к северу и северо-западу от Апрелевки. Калининец связан с этой дивизией.",
-    "Военная территория: не фотографировать КПП и объекты. Следующая точка маршрута — «Посёлок «Гидромонтажа»»."
-   ],
-   "facts": [
-    {
-     "text": "Таманская дивизия — одна из самых известных в Сухопутных войсках.",
-     "sourceUrl": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division",
-     "verified": true
-    },
-    {
-     "text": "Подразделения дивизии расположены к северу и северо-западу от Апрелевки.",
-     "sourceUrl": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division",
-     "verified": true
-    },
-    {
-     "text": "Связь Калининца с дивизией — по совокупности источников.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Военная территория закрыта.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Военная территория: не фотографировать."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "naro-fominsk-gidromontazh",
-   "name": "Посёлок «Гидромонтажа»",
-   "coords": {
-    "lat": 55.515,
-    "lon": 36.975
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
-    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Посёлок отмечал 66-й день рождения.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Подробности о работе треста не найдены.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Селятино находится в Наро-Фоминском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "naro-fominsk-muzey",
-   "name": "Музей истории завода",
+   "name": "Историко-краеведческий музей",
    "coords": {
-    "lat": 55.548,
-    "lon": 37.072
+    "lat": 55.3882,
+    "lon": 36.7385
    },
    "kind": "заходим внутрь",
-   "visitMinutes": 40,
+   "visitMinutes": 30,
    "guideStory": [
-    "В Апрелевке работает частный музей истории завода грампластинок; его организовал предприниматель Борис Чухонцев.",
-    "Музей принимает гостей, в том числе делегации; программы музея анонсирует Культура.РФ.",
-    "Часы работы и возможность экскурсии уточняйте заранее. Следующая точка маршрута — «Вокзал Кекушева»."
+    "Музей открыли 9 мая 1973 года; до 1991 года он работал в здании Старо-Никольской церкви.",
+    "В экспозиции — Великая Отечественная, археологические находки и этнография. Следующая точка маршрута — «Стела «Город воинской славы»». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
    ],
    "facts": [
     {
-     "text": "Частный музей истории завода организовал Борис Чухонцев.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "text": "Музей открыт 9 мая 1973 года и до 1991 года был в Старо-Никольской церкви.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/naro-fominsk/",
      "verified": true
     },
     {
-     "text": "Музей принимает делегации.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "text": "В музее есть экспозиции о Великой Отечественной войне.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/naro-fominsk/",
      "verified": true
-    },
-    {
-     "text": "Программы музея анонсирует Культура.РФ.",
-     "sourceUrl": "https://www.culture.ru/events/6203287/programma-aprelevskii-zavod-grammplastinok",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
-     "verified": false
     }
    ],
-   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "naro-fominsk-vokzal",
-   "name": "Вокзал Кекушева",
+   "id": "naro-fominsk-stela",
+   "name": "Стела «Город воинской славы»",
    "coords": {
-    "lat": 55.615,
-    "lon": 36.985
+    "lat": 55.3858,
+    "lon": 36.7372
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Станция на Московско-Смоленской линии стала ядром поселения. Сохранившееся здание начала XX века связывают с архитектором Львом Кекушевым.",
-    "Кекушев — один из главных мастеров московского модерна. Авторство вокзала мы знаем по туристическому источнику и отмечаем это."
+    "Мраморную стелу высотой 12 метров с гербом России поставили на площади Победы в 2010 году — через год после присвоения городу звания.",
+    "В декабре 1941 года наступление немцев остановила на Наре 33-я армия. Финиш — Станция «Нара»: Электрички Киевского направления."
    ],
    "facts": [
     {
-     "text": "Город сформировался вокруг станции на Московско-Смоленской линии.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "text": "Стела высотой 12 м установлена в 2010 году.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/naro-fominsk/",
      "verified": true
     },
     {
-     "text": "Здание вокзала начала XX века связывают с Кекушевым.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Голицыно — город Одинцовского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "text": "Наступление остановила на Наре 33-я армия.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/naro-fominsk/",
      "verified": true
-    },
-    {
-     "text": "Станция носит название Голицыно.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Кекушев — мастер московского модерна.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "naro-fominsk-tropa",
-   "name": "Пушкинская тропа",
-   "coords": {
-    "lat": 55.64,
-    "lon": 36.98
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 2020 году объявили о создании Пушкинской тропы, которая, по описаниям, начинается от Захарова.",
-    "Сноб включает пушкинские усадьбы в идеи для летнего отдыха в Подмосковье. Маршрут тропы на месте мы не проверяли. Следующая точка маршрута — «Пруд и детство поэта»."
-   ],
-   "facts": [
-    {
-     "text": "О создании Пушкинской тропы объявили в 2020 году.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
-     "verified": true
-    },
-    {
-     "text": "Тропа начинается от Захарова — по описаниям.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
-     "verified": false
-    },
-    {
-     "text": "Сноб включает пушкинские места в идеи летнего отдыха.",
-     "sourceUrl": "https://snob.ru/travel/goroda-usadby-zapovedniki-i-festivali-idei-dlya-letnego-otdyha-v-podmoskove/",
-     "verified": true
-    },
-    {
-     "text": "Маршрут тропы не проверен.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
-     "verified": false
-    },
-    {
-     "text": "Координаты тропы приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "naro-fominsk-prud",
-   "name": "Пруд и детство поэта",
-   "coords": {
-    "lat": 55.6445,
-    "lon": 36.971
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Захарово — место, где прошло лучшее, по общему мнению биографов, время детства Пушкина. «Рамблер» рассказывал о «поэте с кудрявой головой» и его детстве.",
-    "Экскурсии обычно объединяют Захарово с Вязёмами: дворец Голицыных Пушкин описал в «Евгении Онегине» — так утверждает экскурсионный источник."
-   ],
-   "facts": [
-    {
-     "text": "Детство Пушкина связано с Захаровом.",
-     "sourceUrl": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/",
-     "verified": true
-    },
-    {
-     "text": "Связь дворца Голицыных с «Онегиным» — по экскурсионному источнику.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
-     "verified": false
-    },
-    {
-     "text": "Экскурсии объединяют Захарово и Вязёмы.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
-     "verified": true
-    },
-    {
-     "text": "«Вечерняя Москва» писала о малоизвестных фактах жизни Пушкина.",
-     "sourceUrl": "https://vm.ru/society/1057553-vstrecha-so-smertyu-i-uchitel-gannibal-pyat-faktov-o-zhizni-pushkina-kotorye-ne-rasskazhut-v-shkole/amp",
-     "verified": true
-    },
-    {
-     "text": "Координаты пруда приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -498,52 +309,32 @@
    "url": "https://www.kupibilet.ru/gid/rossiia/naro-fominsk"
   },
   {
-   "title": "Kalininets — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kalininets"
+   "title": "Источник: teletype.in",
+   "url": "https://teletype.in/@apfound/XyK9Nc7Tsuo"
   },
   {
-   "title": "Tamanskaya Division — Military Wiki",
-   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/kultura/v-naro-fominskom-okruge-otkryli-vystavku-k-100-letiju-goroda-2/"
   },
   {
-   "title": "Selyatino — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Selyatino"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9D%D0%B0%D1%80%D0%BE-%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D1%81%D0%BA"
   },
   {
-   "title": "Селятино 66 лет — Рамблер",
-   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
+   "title": "Источник: booksite.ru",
+   "url": "https://booksite.ru/FullText/1/001/008/067/856.htm"
   },
   {
-   "title": "Апрелевский завод грампластинок — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
+   "title": "Источник: calend.ru",
+   "url": "https://www.calend.ru/travel/7366"
   },
   {
-   "title": "Апрелевский завод — БРЭ",
-   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
-  },
-  {
-   "title": "Апрелевка — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
-  },
-  {
-   "title": "Голицыно — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
-  },
-  {
-   "title": "Голицыно — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
-  },
-  {
-   "title": "Детство гения: Захарово — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina"
-  },
-  {
-   "title": "Детство Пушкина — Рамблер",
-   "url": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/naro-fominsk/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -569,52 +360,48 @@
      55.381856
     ],
     [
-     36.732767,
-     55.382277
+     36.7372,
+     55.382656
     ],
     [
-     36.736767,
-     55.383277
+     36.739967,
+     55.383077
     ],
     [
-     37.074779,
-     55.545277
+     36.741993,
+     55.384228
     ],
     [
-     37.076813,
-     55.546428
+     36.743294,
+     55.386628
     ],
     [
-     37.077558,
-     55.548
+     36.744035,
+     55.3882
     ],
     [
-     37.076813,
-     55.549572
+     36.743294,
+     55.389772
     ],
     [
-     36.984824,
-     55.641572
+     36.741268,
+     55.390923
     ],
     [
-     36.982785,
-     55.642723
+     36.734568,
+     55.392523
     ],
     [
-     36.973786,
-     55.647223
+     36.7318,
+     55.392944
     ],
     [
-     36.971,
-     55.647644
+     36.729032,
+     55.392523
     ],
     [
-     36.968214,
-     55.647223
-    ],
-    [
-     36.966175,
-     55.646072
+     36.722232,
+     55.389723
     ],
     [
      36.720206,
