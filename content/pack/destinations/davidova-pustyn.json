@@ -13,243 +13,36 @@
   "Вознесенская Давидова пустынь — мужской монастырь в посёлке Новый Быт Чеховского округа. Его основал в 1515 году преподобный Давид — по одному источнику, выходец из рода князей Вяземских.",
   "Уже в пожилом возрасте Давид с помощниками возвёл церкви, келью и трапезную. Древнейшее здание — каменный Вознесенский собор XVI века, позднее перестроенный.",
   "В 1619 году монастырь сожгли казаки, в 1929 году закрыли, а братию репрессировали. С 1995 года обитель восстанавливают; в 2025 году она отметила 510-летие.",
-  "Свои места маршрута: «Вознесенский собор». По пути маршрут заходит и к соседям: Чехов и Лопасня-Зачатьевское — «Центр Чехова», «Усадьба Лопасня-Зачатьевское»; Мелихово — «Новосёлки: ещё одна чеховская школа», «Сад и выставки», «Талеж: школа Чехова и источник»; Серпухов — «Соборная гора», «Историко-художественный музей».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Серпухов» (Электрички Курского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Вознесенский собор», «Берег Лопасни», «Святой источник «Валентиновский»», «Собор Спаса Всемилостивого», «Липовая аллея». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Давидова пустынь, центр (До ближайшей станции — Станция «Чехов», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Чехов»",
+  "name": "Давидова пустынь, центр",
   "coords": {
-   "lat": 55.143,
-   "lon": 37.466
+   "lat": 55.07,
+   "lon": 37.48
   },
-  "transport": "Электрички Курского направления"
+  "transport": "До ближайшей станции — Станция «Чехов», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Серпухов»",
+  "name": "Давидова пустынь, центр",
   "coords": {
-   "lat": 54.913,
-   "lon": 37.412
+   "lat": 55.07,
+   "lon": 37.48
   },
-  "transport": "Электрички Курского направления"
+  "transport": "До ближайшей станции — Станция «Чехов», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.3,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.7,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "davidova-pustyn-tsentr",
-   "name": "Центр Чехова",
-   "coords": {
-    "lat": 55.145,
-    "lon": 37.47
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Чехов — город, названный в честь писателя, жившего неподалёку.",
-    "Отсюда удобно продолжить путь к Мелихову и Давидовой пустыни — у них отдельные маршруты. Следующая точка маршрута — «Усадьба Лопасня-Зачатьевское». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Город назван в честь писателя.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Мелихово — недалеко от города.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Мелихово",
-     "verified": true
-    },
-    {
-     "text": "Координаты центра приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Давидова пустынь — в Чеховском округе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "davidova-pustyn-usadba",
-   "name": "Усадьба Лопасня-Зачатьевское",
-   "coords": {
-    "lat": 55.148,
-    "lon": 37.48
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Музей-усадьба «Лопасня-Зачатьевское» находится в городе Чехове. Имение принадлежало родственникам Петра Ланского — второго мужа Натальи Гончаровой, вдовы Пушкина.",
-    "Подробную историю владельцев и построек мы в найденных источниках не сверили."
-   ],
-   "facts": [
-    {
-     "text": "В Чехове есть музей-усадьба «Лопасня-Зачатьевское».",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Имение принадлежало родственникам П. Ланского.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Ланской — второй муж Натальи Гончаровой-Пушкиной.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "История построек не сверена.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "davidova-pustyn-novoselki",
-   "name": "Новосёлки: ещё одна чеховская школа",
-   "coords": {
-    "lat": 55.125,
-    "lon": 37.69
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В Новосёлках стояла третья из школ, построенных при участии Чехова. Писатель был здесь и врачом, и попечителем, и строителем: за мелиховские годы — три школы, дорога и почта.",
-    "Это короткая остановка «по пути»: посмотреть на село, ради которого автор «Чайки» хлопотал о кирпиче и учителях, и ехать дальше."
-   ],
-   "facts": [
-    {
-     "text": "Одна из трёх чеховских школ построена в Новосёлках.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "За семь лет в Мелихове Чехов построил три школы, дорогу и почту.",
-     "sourceUrl": "https://www.culture.ru/institutes/14384/melikhovo",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 30,
-   "coordsVerified": false
-  },
-  {
-   "id": "davidova-pustyn-sad",
-   "name": "Сад и выставки",
-   "coords": {
-    "lat": 55.1048,
-    "lon": 37.6475
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Музей-усадьба рассказал о своей 75-летней истории в фотовыставке; здесь отмечают и день рождения Чехова.",
-    "Сад — хорошее место для паузы перед долгим обратным путём к станции Чехов. Следующая точка маршрута — «Талеж: школа Чехова и источник»."
-   ],
-   "facts": [
-    {
-     "text": "Музей показал 75-летнюю историю в фотовыставке.",
-     "sourceUrl": "https://360.ru/news/kultura/melihovo-25412/",
-     "verified": true
-    },
-    {
-     "text": "В музее отмечают день рождения Чехова.",
-     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-antona-chehova-otmetili-v-muzee-zapovednike-melihovo/",
-     "verified": true
-    },
-    {
-     "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Координаты сада приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Мелихово — музей-заповедник.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "davidova-pustyn-talezh",
-   "name": "Талеж: школа Чехова и источник",
-   "coords": {
-    "lat": 55.07,
-    "lon": 37.59
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Талеж — одно из сёл, где Чехов-помещик строил школы. За семь мелиховских лет при его участии появились три школы «примерного образца»: в Талеже, Новосёлках и самом Мелихове.",
-    "Ещё Талеж известен родником, освящённым во имя преподобного Давида: у него семь ключей и много местных рассказов о чудесных огнях. У источника обычно людно — велосипеды оставляйте у ограды."
-   ],
-   "facts": [
-    {
-     "text": "При Чехове построены три школы примерного образца — в Талеже, Новосёлках и Мелихове.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "Чехов купил Мелихово в 1892 году и прожил там семь лет.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "Талежский родник освящён во имя преподобного Давида и известен семью ключами.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/79627-teatr-v-tsvetuschem-sadu-melihovo-muzey-usadba-a-p-chehova-talezh",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 50,
-   "coordsVerified": false
-  },
   {
    "id": "davidova-pustyn-sobor",
    "name": "Вознесенский собор",
@@ -295,84 +88,146 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "davidova-pustyn-gora",
-   "name": "Соборная гора",
+   "id": "davidova-pustyn-lopasnya",
+   "name": "Берег Лопасни",
    "coords": {
-    "lat": 54.92,
-    "lon": 37.41
+    "lat": 55.0688,
+    "lon": 37.4818
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "visitMinutes": 10,
    "guideStory": [
-    "Серпухов был укреплением Московского княжества на южной границе. От кремля на Соборной горе остались в основном фрагменты каменной кладки, а на месте кремля сегодня гуляют туристы.",
-    "Белокаменный собор на горе в советские годы закрыли, а в конце советской эпохи в нём открыли филиал краеведческого музея."
+    "Монастырь стоит на берегу Лопасни у посёлка Новый Быт; основание относят к 1515 году, хотя эта дата может быть неточной.",
+    "В Смутное время обитель разграбили литовцы, но со временем она восстановилась. Следующая точка маршрута — «Святой источник «Валентиновский»»."
    ],
    "facts": [
     {
-     "text": "Серпухов — укрепление Московского княжества.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "text": "Монастырь стоит на берегу Лопасни у Нового Быта.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
      "verified": true
     },
     {
-     "text": "От кремля остались фрагменты кладки на Соборной горе.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
+     "text": "Дата основания 1515 год может быть неточной.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
      "verified": true
-    },
-    {
-     "text": "Белокаменный собор закрыли в советские годы.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": true
-    },
-    {
-     "text": "В соборе открыли филиал музея.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": true
-    },
-    {
-     "text": "Датировка кремля 1556 годом не подтверждена.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/serpukhov.htm",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "davidova-pustyn-muzey",
-   "name": "Историко-художественный музей",
+   "id": "davidova-pustyn-istochnik",
+   "name": "Святой источник «Валентиновский»",
    "coords": {
-    "lat": 54.918,
-    "lon": 37.402
+    "lat": 55.073,
+    "lon": 37.4842
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
    "guideStory": [
-    "Серпуховский историко-художественный музей — одно из богатейших собраний Подмосковья: русское, западноевропейское и восточное искусство, всего более 40 тысяч предметов.",
-    "Музей занимает купеческий особняк в центре. После него логично подняться на Соборную гору, где от белокаменного кремля 1556 года сохранились Троицкий собор и небольшой участок стены."
+    "Рядом с монастырём — святой источник «Валентиновский»; набрать воды и помолиться можно ежедневно.",
+    "Основателем обители называют Давида Серпуховского: с четырьмя помощниками он построил две деревянные церкви, келью и трапезную. Следующая точка маршрута — «Собор Спаса Всемилостивого»."
    ],
    "facts": [
     {
-     "text": "В собрании музея более 40 тысяч экспонатов русского, западноевропейского и восточного искусства.",
-     "sourceUrl": "https://tonkosti.ru/Серпухов",
-     "verified": false
+     "text": "Источник «Валентиновский» открыт ежедневно.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA_%C2%AB%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%C2%BB_(%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9_%D0%91%D1%8B%D1%82)",
+     "verified": true
     },
     {
-     "text": "Белокаменный кремль Серпухова построен в 1556 году; сохранились Троицкий собор и участок стены.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/serpukhov.htm",
+     "text": "Давид с четырьмя помощниками построил две церкви, келью и трапезную.",
+     "sourceUrl": "https://www.putevka.com/moskva/serpukhov/sight/davidova-pustyn",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 80,
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "davidova-pustyn-spas",
+   "name": "Собор Спаса Всемилостивого",
+   "coords": {
+    "lat": 55.0706,
+    "lon": 37.4788
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Второй собор обители освящён в честь Спаса Всемилостивого.",
+    "Расцвет монастыря пришёлся на XIX век; после революции его закрыли, а сегодня он отреставрирован. Следующая точка маршрута — «Липовая аллея». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Давидовой пустыни есть собор Спаса Всемилостивого.",
+     "sourceUrl": "https://sobory.ru/photo/414059",
+     "verified": true
+    },
+    {
+     "text": "Расцвет обители — XIX век; после революции закрыта.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "davidova-pustyn-alleya",
+   "name": "Липовая аллея",
+   "coords": {
+    "lat": 55.0698,
+    "lon": 37.4795
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "По преданию, преподобный Давид посадил здесь липы корнями вверх — и они выросли. Это народное предание, а не документальный факт.",
+    "Монастырь описан на KudaGo; его 510-летие помогали готовить волонтёры. Финиш — Давидова пустынь, центр: До ближайшей станции — Станция «Чехов», около 8 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Предание о липах, посаженных корнями вверх, — легенда.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "verified": false
+    },
+    {
+     "text": "Монастырь описан на KudaGo.",
+     "sourceUrl": "https://kudago.com/msk/place/voznesenskaya-davidova-pustyn/",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "verified": false
+    },
+    {
+     "text": "Координаты аллеи приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "verified": false
+    },
+    {
+     "text": "В монастыре действует православная школа.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
    "coordsVerified": false
   }
  ],
@@ -406,111 +261,99 @@
    "url": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C"
   },
   {
-   "title": "510-летие — 360",
-   "url": "https://360.ru/news/mosobl/voznesenskaja-davidova-pustyn-v-chehove-otmetila-510-letie/"
+   "title": "Источник: azbyka.ru",
+   "url": "https://www.azbyka.ru/otechnik/Spravochniki/russkij-biograficheskij-slovar-tom-6/17"
   },
   {
-   "title": "Мелихово и Лопасня — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info"
+   "title": "Источник: azbyka.ru",
+   "url": "https://azbyka.ru/palomnik/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA_%C2%AB%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%C2%BB_(%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9_%D0%91%D1%8B%D1%82)"
   },
   {
-   "title": "Мелихово — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info"
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/moskva/serpukhov/sight/davidova-pustyn"
   },
   {
-   "title": "Мелихово — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/414059"
   },
   {
-   "title": "Гид по Серпухову — Халва",
-   "url": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda"
-  },
-  {
-   "title": "Высоцкий монастырь — Спутник8",
-   "url": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr"
+   "title": "Источник: kudago.com",
+   "url": "https://kudago.com/msk/place/voznesenskaya-davidova-pustyn/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.39653,
-     54.918
+     37.473309,
+     55.0706
     ],
     [
-     37.397263,
-     54.916428
+     37.474044,
+     55.069028
     ],
     [
-     37.399265,
-     54.915277
+     37.474745,
+     55.068228
     ],
     [
-     37.409265,
-     54.910277
+     37.476754,
+     55.067077
     ],
     [
-     37.412,
-     54.909856
+     37.479055,
+     55.066077
     ],
     [
-     37.414735,
-     54.910277
+     37.4818,
+     55.065656
     ],
     [
-     37.416737,
-     54.911428
+     37.484545,
+     55.066077
     ],
     [
-     37.694762,
-     55.123428
+     37.486555,
+     55.067228
     ],
     [
-     37.695499,
-     55.125
+     37.488956,
+     55.071428
     ],
     [
-     37.694762,
-     55.126572
+     37.489692,
+     55.073
     ],
     [
-     37.692749,
-     55.127723
+     37.488956,
+     55.074572
     ],
     [
-     37.69,
-     55.128144
+     37.486946,
+     55.075723
     ],
     [
-     37.48,
-     55.151144
+     37.4842,
+     55.076144
     ],
     [
-     37.477249,
-     55.150723
+     37.481454,
+     55.075723
     ],
     [
-     37.467249,
-     55.147723
+     37.476054,
+     55.073323
     ],
     [
-     37.463249,
-     55.145723
+     37.474044,
+     55.072172
     ],
     [
-     37.461236,
-     55.144572
-    ],
-    [
-     37.460499,
-     55.143
-    ],
-    [
-     37.39653,
-     54.918
+     37.473309,
+     55.0706
     ]
    ]
   ]
