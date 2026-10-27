@@ -11,10 +11,9 @@
  },
  "intro": [
   "Михнево — рабочий посёлок городского округа Ступино, примерно в 57 км к югу от Москвы. Здесь Павелецкое направление пересекается с Большим кольцом Московской железной дороги.",
-  "Первое упоминание — 1572 год. Название связано с дворянским родом Михневых, чей основатель жил в соседнем Астафьеве; позже Михневы скупили земли соседних деревень.",
   "В 1722 году по указу Петра I здесь основали казённый завод по выпуску ткани для армии. В 1874 году деревянную церковь заменили каменной — Спасо-Преображенской. Посёлок — рабочий с 1957 года.",
-  "Свои места маршрута: «Спасо-Преображенская церковь», «Земли Михневых». По пути маршрут заходит и к соседям: Мелихово — «Новосёлки: ещё одна чеховская школа»; Чехов и Лопасня-Зачатьевское — «Усадьба Лопасня-Зачатьевское», «Центр Чехова»; Давидова пустынь — «Испытания обители»; Серпухов — «Соборная гора», «Особняк Мараевых».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Серпухов» (Электрички Курского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция на пересечении», «Земли Михневых», «Старое Михнево», «Спасо-Преображенская церковь». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Станция «Михнево» (Электрички Павелецкого направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Михнево»",
@@ -25,24 +24,147 @@
   "transport": "Электрички Павелецкого направления"
  },
  "endPoint": {
-  "name": "Станция «Серпухов»",
+  "name": "Станция «Михнево»",
   "coords": {
-   "lat": 54.9132,
-   "lon": 37.4125
+   "lat": 55.1302,
+   "lon": 37.9405
   },
-  "transport": "Электрички Курского направления"
+  "transport": "Электрички Павелецкого направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.1,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.9,
+  "durationH": 0.7,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "mikhnevo-stantsiya",
+   "name": "Станция на пересечении",
+   "coords": {
+    "lat": 55.13,
+    "lon": 37.94
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Станция Михнево стоит на пересечении Павелецкого направления и Большого кольца Московской железной дороги.",
+    "Посёлок — около 57 км к югу от Москвы; по данным 2021 года, здесь жило около 37,5 тысячи человек. Следующая точка маршрута — «Земли Михневых»."
+   ],
+   "facts": [
+    {
+     "text": "Станция Михнево — на пересечении Павелецкого направления и Большого кольца.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Посёлок примерно в 57 км к югу от Москвы.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Население в 2021 году — 37 530 человек.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    },
+    {
+     "text": "Михнево — рабочий посёлок с 1957 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Координаты станции приблизительные.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "mikhnevo-posyolok",
+   "name": "Земли Михневых",
+   "coords": {
+    "lat": 55.132,
+    "lon": 37.938
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Первое упоминание Михнева — 1572 год. Название связано с дворянским родом Михневых: основатель рода жил в соседнем Астафьеве, а потом семья скупила земли соседних деревень.",
+    "Сегодня в посёлке работают кирпичный завод, завод электроизделий и ремонтно-механический завод."
+   ],
+   "facts": [
+    {
+     "text": "Первое упоминание — 1572 год.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Название связано с дворянским родом Михневых.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Основатель рода жил в соседнем Астафьеве.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "В посёлке работают кирпичный и другие заводы.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "mikhnevo-kazennyy-zavod",
+   "name": "Старое Михнево",
+   "coords": {
+    "lat": 55.134,
+    "lon": 37.943
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 5,
+   "guideStory": [
+    "В 1722 году по указу Петра I здесь основали казённый завод; тогда же стояла деревянная церковь Николая Чудотворца.",
+    "Каменный Спасо-Преображенский храм на Садовой улице, 7, строили в 1866–1874 годах на месте деревянного. Следующая точка маршрута — «Спасо-Преображенская церковь»."
+   ],
+   "facts": [
+    {
+     "text": "В 1722 году по указу Петра I основан казённый завод.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Каменная церковь строилась в 1866–1874 годах.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
   {
    "id": "mikhnevo-tserkov",
    "name": "Спасо-Преображенская церковь",
@@ -88,318 +210,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "mikhnevo-posyolok",
-   "name": "Земли Михневых",
-   "coords": {
-    "lat": 55.132,
-    "lon": 37.938
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Первое упоминание Михнева — 1572 год. Название связано с дворянским родом Михневых: основатель рода жил в соседнем Астафьеве, а потом семья скупила земли соседних деревень.",
-    "Сегодня в посёлке работают кирпичный завод, завод электроизделий и ремонтно-механический завод."
-   ],
-   "facts": [
-    {
-     "text": "Первое упоминание — 1572 год.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Название связано с дворянским родом Михневых.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Основатель рода жил в соседнем Астафьеве.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "В посёлке работают кирпичный и другие заводы.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "mikhnevo-novoselki",
-   "name": "Новосёлки: ещё одна чеховская школа",
-   "coords": {
-    "lat": 55.125,
-    "lon": 37.69
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В Новосёлках стояла третья из школ, построенных при участии Чехова. Писатель был здесь и врачом, и попечителем, и строителем: за мелиховские годы — три школы, дорога и почта.",
-    "Это короткая остановка «по пути»: посмотреть на село, ради которого автор «Чайки» хлопотал о кирпиче и учителях, и ехать дальше."
-   ],
-   "facts": [
-    {
-     "text": "Одна из трёх чеховских школ построена в Новосёлках.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "За семь лет в Мелихове Чехов построил три школы, дорогу и почту.",
-     "sourceUrl": "https://www.culture.ru/institutes/14384/melikhovo",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 30,
+   "order": 40,
    "coordsVerified": false
-  },
-  {
-   "id": "mikhnevo-usadba",
-   "name": "Усадьба Лопасня-Зачатьевское",
-   "coords": {
-    "lat": 55.148,
-    "lon": 37.48
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Музей-усадьба «Лопасня-Зачатьевское» находится в городе Чехове. Имение принадлежало родственникам Петра Ланского — второго мужа Натальи Гончаровой, вдовы Пушкина.",
-    "Подробную историю владельцев и построек мы в найденных источниках не сверили."
-   ],
-   "facts": [
-    {
-     "text": "В Чехове есть музей-усадьба «Лопасня-Зачатьевское».",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Имение принадлежало родственникам П. Ланского.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Ланской — второй муж Натальи Гончаровой-Пушкиной.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "История построек не сверена.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "mikhnevo-tsentr",
-   "name": "Центр Чехова",
-   "coords": {
-    "lat": 55.145,
-    "lon": 37.47
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Чехов — город, названный в честь писателя, жившего неподалёку.",
-    "Отсюда удобно продолжить путь к Мелихову и Давидовой пустыни — у них отдельные маршруты. Следующая точка маршрута — «Испытания обители». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Город назван в честь писателя.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Мелихово — недалеко от города.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Мелихово",
-     "verified": true
-    },
-    {
-     "text": "Координаты центра приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Давидова пустынь — в Чеховском округе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "mikhnevo-istoriya",
-   "name": "Испытания обители",
-   "coords": {
-    "lat": 55.0702,
-    "lon": 37.4805
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1619 году монастырь сожгли казаки гетмана Сагайдачного. При Петре I у обители изъяли почти все доходы.",
-    "В 1929 году пустынь закрыли, братию репрессировали; в здании устроили сельскохозяйственный техникум. С 1995 года идёт восстановление, сегодня здесь более 20 насельников и православная школа."
-   ],
-   "facts": [
-    {
-     "text": "В 1619 году монастырь сожжён казаками.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "В 1929 году монастырь закрыт, братия репрессирована.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Монастырь переоборудовали под сельскохозяйственный техникум.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "С 1995 года идёт восстановление.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "В 2025 году монастырь отметил 510-летие.",
-     "sourceUrl": "https://360.ru/news/mosobl/voznesenskaja-davidova-pustyn-v-chehove-otmetila-510-letie/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "mikhnevo-gora",
-   "name": "Соборная гора",
-   "coords": {
-    "lat": 54.92,
-    "lon": 37.41
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Серпухов был укреплением Московского княжества на южной границе. От кремля на Соборной горе остались в основном фрагменты каменной кладки, а на месте кремля сегодня гуляют туристы.",
-    "Белокаменный собор на горе в советские годы закрыли, а в конце советской эпохи в нём открыли филиал краеведческого музея."
-   ],
-   "facts": [
-    {
-     "text": "Серпухов — укрепление Московского княжества.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": true
-    },
-    {
-     "text": "От кремля остались фрагменты кладки на Соборной горе.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": true
-    },
-    {
-     "text": "Белокаменный собор закрыли в советские годы.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": true
-    },
-    {
-     "text": "В соборе открыли филиал музея.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": true
-    },
-    {
-     "text": "Датировка кремля 1556 годом не подтверждена.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/serpukhov.htm",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "mikhnevo-maraevy",
-   "name": "Особняк Мараевых",
-   "coords": {
-    "lat": 54.915,
-    "lon": 37.413
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Купеческий особняк Мараевых хранит богатые художественные собрания — здесь работает музей.",
-    "КП советует в Серпухове смотреть остатки древнего кремля, Музей павлина и зубров рядом в заповеднике.",
-    "Часы работы уточняйте; затем — к станции. Финиш — Станция «Серпухов»: Электрички Курского направления."
-   ],
-   "facts": [
-    {
-     "text": "В особняке Мараевых хранятся художественные собрания.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": true
-    },
-    {
-     "text": "КП советует остатки кремля, Музей павлина и зубров.",
-     "sourceUrl": "https://www.kp.ru/russia/serpuhov/",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda",
-     "verified": false
-    },
-    {
-     "text": "Достопримечательности Серпухова — advantour.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/serpukhov.htm",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
   }
  ],
  "dish": {
@@ -433,73 +245,45 @@
   {
    "title": "Церковь Спаса Преображения — Рувики",
    "url": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)"
-  },
-  {
-   "title": "Мелихово — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info"
-  },
-  {
-   "title": "Мелихово — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)"
-  },
-  {
-   "title": "Мелихово и Лопасня — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info"
-  },
-  {
-   "title": "Давидова пустынь — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C"
-  },
-  {
-   "title": "510-летие — 360",
-   "url": "https://360.ru/news/mosobl/voznesenskaja-davidova-pustyn-v-chehove-otmetila-510-letie/"
-  },
-  {
-   "title": "Гид по Серпухову — Халва",
-   "url": "https://media.halvacard.ru/travel/gid-po-serpukhovu-dostoprimechatelnosti-goroda"
-  },
-  {
-   "title": "Высоцкий монастырь — Спутник8",
-   "url": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.404529,
-     54.92
+     37.9325,
+     55.132
     ],
     [
-     37.40703,
-     54.9132
+     37.933237,
+     55.130428
     ],
     [
-     37.407763,
-     54.911628
+     37.935237,
+     55.128428
     ],
     [
-     37.409765,
-     54.910477
+     37.93725,
+     55.127277
     ],
     [
-     37.4125,
-     54.910056
-    ],
-    [
-     37.415235,
-     54.910477
+     37.94,
+     55.126856
     ],
     [
      37.94275,
      55.127277
     ],
     [
-     37.944763,
-     55.128428
+     37.94325,
+     55.127477
+    ],
+    [
+     37.945263,
+     55.128628
     ],
     [
      37.949763,
@@ -522,28 +306,20 @@
      55.138144
     ],
     [
-     37.48,
-     55.151144
+     37.94225,
+     55.137723
     ],
     [
-     37.477249,
-     55.150723
+     37.93525,
+     55.134723
     ],
     [
-     37.467249,
-     55.147723
+     37.933237,
+     55.133572
     ],
     [
-     37.465236,
-     55.146572
-    ],
-    [
-     37.464499,
-     55.145
-    ],
-    [
-     37.404529,
-     54.92
+     37.9325,
+     55.132
     ]
    ]
   ]
