@@ -13,8 +13,8 @@
   "Остафьево называют «Русским Парнасом». Усадьбу построили в конце XVIII века при князе Андрее Вяземском — предположительно по проекту Ивана Старова.",
   "Здесь двенадцать лет жил Николай Карамзин, женатый на дочери Вяземского, и написал восемь томов «Истории государства Российского». Его кабинет называли «святилищем русской истории».",
   "При Петре Андреевиче Вяземском в Остафьеве бывали Пушкин, Жуковский, Батюшков, Денис Давыдов, Грибоедов, Гоголь и Мицкевич. До 1898 года имение было у Вяземских, затем перешло к графам Шереметевым. Сегодня здесь музей-заповедник.",
-  "Свои места маршрута: «Главный дом», «Карамзинская роща». По пути маршрут заходит и к соседям: Дубровицы — «Усадебный дом над слиянием рек»; Подольск — «Троицкий собор», «Набережная Пахры и усадьба Ивановское»; Климовск — «Климовский машиностроительный»; Красная Пахра — «Берег Пахры»; Михайловское — «Парк над рекой».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Апрелевка» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Карамзинская роща», «Аллея «Русский Парнас»», «Главный дом», «Древнее Остафьево», «Бюст Петра Вяземского». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 12 км: старт и финиш — Станция «Щербинка» (Электрички Курского направления / МЦД-2). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Щербинка»",
@@ -25,72 +25,24 @@
   "transport": "Электрички Курского направления / МЦД-2"
  },
  "endPoint": {
-  "name": "Станция «Апрелевка»",
+  "name": "Станция «Щербинка»",
   "coords": {
-   "lat": 55.545,
-   "lon": 37.073
+   "lat": 55.51,
+   "lon": 37.564
   },
-  "transport": "Электрички Киевского направления / МЦД-4"
+  "transport": "Электрички Курского направления / МЦД-2"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.2,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 12.4,
+  "durationH": 2.4,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "ostafevo-dom",
-   "name": "Главный дом",
-   "coords": {
-    "lat": 55.5,
-    "lon": 37.498
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
-   "guideStory": [
-    "Главный дом построили в конце XVIII века при князе Андрее Вяземском — предположительно по проекту Ивана Старова. Внутри — Овальный зал с расписным плафоном и экспозиции по истории имения.",
-    "В доме выделены мемориальные комнаты Карамзина, Пушкина и Вяземского. Кабинет Карамзина называют «святилищем русской истории»: здесь были написаны восемь томов его главного труда.",
-    "Легенды, которые рассказывают экскурсоводы, мы не проверяли. Билеты и часы — на сайте музея."
-   ],
-   "facts": [
-    {
-     "text": "Усадьбу строили в конце XVIII века при князе Андрее Вяземском.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Авторство Ивана Старова — предположение.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Карамзин написал в Остафьеве восемь томов «Истории государства Российского».",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/istoricheskuyu-berezovuyu-roschu-vosstanovyat-v-muzee-usadbe-ostafevo-v-moskve-xl/",
-     "verified": true
-    },
-    {
-     "text": "В доме есть мемориальные комнаты Карамзина, Пушкина и Вяземского.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "В доме — Овальный зал с расписным плафоном.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/61321-russkiy-parnas-ostafevo-dubrovitsy",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "ostafevo-roshcha",
    "name": "Карамзинская роща",
@@ -136,292 +88,175 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "ostafevo-usadba",
-   "name": "Усадебный дом над слиянием рек",
+   "id": "ostafevo-parnas",
+   "name": "Аллея «Русский Парнас»",
    "coords": {
-    "lat": 55.441,
-    "lon": 37.493
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Рядом с храмом — усадебный дом Дубровиц, стоящий на высоком мысу над слиянием Пахры и Десны.",
-    "До каменного храма в Дубровицах стояла деревянная Ильинская церковь; в 1690 году её перенесли в соседнее Лемешево. Следующая точка маршрута — «Троицкий собор»."
-   ],
-   "facts": [
-    {
-     "text": "Деревянную Ильинскую церковь в 1690 году перенесли в Лемешево.",
-     "sourceUrl": "https://experience.tripster.ru/sights/37321-hram-znameniya/",
-     "verified": true
-    },
-    {
-     "text": "Усадьба стоит у слияния Пахры и Десны.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D1%86%D1%8B_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Доступ в усадебный дом мы не проверяли.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D1%86%D1%8B_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Усадьба Дубровицы описана в Знании.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D1%86%D1%8B_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "РИАМО включает Дубровицы в путешествие по Подольскому району.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-podolskij-rajon-hram-s-koronoj-i-usadby-dlya-brakosochetanij-xl/",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "ostafevo-sobor",
-   "name": "Троицкий собор",
-   "coords": {
-    "lat": 55.428,
-    "lon": 37.547
+    "lat": 55.499,
+    "lon": 37.497
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 20,
    "guideStory": [
-    "Троицкий собор — главный православный храм города. По одному источнику, он построен в 1832 году в честь победы над Наполеоном; эту дату мы не сверили с другими источниками.",
-    "Герб Подольска, утверждённый 20 декабря 1781 года, изображает два золотых инструмента каменотёсов на голубом поле — «в знак того, что жители сим промыслом набогащаются»."
+    "При Петре Андреевиче Вяземском, друге Пушкина, усадьба стала местом встреч литераторов. Здесь бывали Пушкин, Жуковский, Батюшков, Денис Давыдов, Грибоедов, Гоголь и Мицкевич.",
+    "В парке — мемориальная аллея «Русский Парнас» с памятниками тем, кто сюда приезжал.",
+    "Вяземские владели усадьбой до 1898 года, затем она перешла к графам Шереметевым."
    ],
    "facts": [
     {
-     "text": "Троицкий собор — главный православный храм Подольска.",
-     "sourceUrl": "https://experience.tripster.ru/journal/articles/podolsk/",
+     "text": "В Остафьеве бывали Пушкин, Жуковский, Батюшков, Давыдов, Грибоедов, Гоголь и Мицкевич.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
      "verified": true
     },
     {
-     "text": "По одному источнику, собор построен в 1832 году в честь победы над Наполеоном.",
-     "sourceUrl": "https://experience.tripster.ru/journal/articles/podolsk/",
-     "verified": false
-    },
-    {
-     "text": "Герб утверждён 20 декабря 1781 года, на нём два инструмента каменотёсов.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/",
+     "text": "В парке есть мемориальная аллея «Русский Парнас».",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/61321-russkiy-parnas-ostafevo-dubrovitsy",
      "verified": true
     },
     {
-     "text": "Подольские жители занимались добычей белого камня.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/",
+     "text": "Имение оставалось у Вяземских до 1898 года, затем перешло к Шереметевым.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
      "verified": true
     },
     {
-     "text": "Достопримечательности Подольска собраны на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "ostafevo-ivanovskoe",
-   "name": "Набережная Пахры и усадьба Ивановское",
-   "coords": {
-    "lat": 55.442,
-    "lon": 37.555
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Пахра — река, на которой стоял старый Подол. По берегу едем к усадьбе Ивановское — классическому дворянскому имению рубежа XVIII–XIX веков.",
-    "По одному описанию, двести лет назад вокруг усадьбы был лес, а рядом текла Пахра. Сегодня Ивановское внутри города; часы доступа на территорию мы не уточняли."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба Ивановское — дворянское имение рубежа XVIII–XIX веков.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
+     "text": "Остафьево называют «Русским Парнасом».",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/61321-russkiy-parnas-ostafevo-dubrovitsy",
      "verified": true
     },
     {
-     "text": "Подольск стоит на реке Пахре.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/podolsk/history",
-     "verified": true
-    },
-    {
-     "text": "Часы работы усадьбы мы не проверяли.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/podolsk/",
-     "verified": false
-    },
-    {
-     "text": "Рядом с Подольском — усадьбы Дубровицы и Плещеево.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Описание леса вокруг усадьбы — по туристическому источнику.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "ostafevo-kmz",
-   "name": "Климовский машиностроительный",
-   "coords": {
-    "lat": 55.365,
-    "lon": 37.535
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Завод открылся в 1882 году как Московское товарищество механических изделий (МТМИ), позже стал Климовским машиностроительным заводом. Он работал до 2002 года.",
-    "КМЗ выпускал ткацкое оборудование и был флагманом текстильного машиностроения СССР. В войну здесь делали 82-мм мины и корпуса реактивных снарядов для «катюш»."
-   ],
-   "facts": [
-    {
-     "text": "Завод открылся в 1882 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/klimovsk/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Начинал как Московское товарищество механических изделий.",
-     "sourceUrl": "https://vk.ru/@498603575-flagman-tekstilnogo-mashinostroeniya-v-sssr",
-     "verified": true
-    },
-    {
-     "text": "КМЗ работал с 1882 по 2002 год.",
-     "sourceUrl": "https://vk.ru/@498603575-flagman-tekstilnogo-mashinostroeniya-v-sssr",
-     "verified": false
-    },
-    {
-     "text": "КМЗ — флагман текстильного машиностроения СССР.",
-     "sourceUrl": "https://vk.ru/@498603575-flagman-tekstilnogo-mashinostroeniya-v-sssr",
-     "verified": true
-    },
-    {
-     "text": "В войну завод выпускал мины и корпуса снарядов для «катюш».",
-     "sourceUrl": "https://vk.ru/@498603575-flagman-tekstilnogo-mashinostroeniya-v-sssr",
+     "text": "«За рулём» писал об Остафьеве в материале «Оставь его!».",
+     "sourceUrl": "https://www.zr.ru/content/articles/100717-ostav_jego/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "ostafevo-pakhra",
-   "name": "Берег Пахры",
+   "id": "ostafevo-dom",
+   "name": "Главный дом",
    "coords": {
-    "lat": 55.415,
-    "lon": 37.28
+    "lat": 55.5,
+    "lon": 37.498
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "Главный дом построили в конце XVIII века при князе Андрее Вяземском — предположительно по проекту Ивана Старова. Внутри — Овальный зал с расписным плафоном и экспозиции по истории имения.",
+    "В доме выделены мемориальные комнаты Карамзина, Пушкина и Вяземского. Кабинет Карамзина называют «святилищем русской истории»: здесь были написаны восемь томов его главного труда.",
+    "Легенды, которые рассказывают экскурсоводы, мы не проверяли. Билеты и часы — на сайте музея."
+   ],
+   "facts": [
+    {
+     "text": "Усадьбу строили в конце XVIII века при князе Андрее Вяземском.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Авторство Ивана Старова — предположение.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "verified": false
+    },
+    {
+     "text": "Карамзин написал в Остафьеве восемь томов «Истории государства Российского».",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/istoricheskuyu-berezovuyu-roschu-vosstanovyat-v-muzee-usadbe-ostafevo-v-moskve-xl/",
+     "verified": true
+    },
+    {
+     "text": "В доме есть мемориальные комнаты Карамзина, Пушкина и Вяземского.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "В доме — Овальный зал с расписным плафоном.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/61321-russkiy-parnas-ostafevo-dubrovitsy",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "ostafevo-lyapunov",
+   "name": "Древнее Остафьево",
+   "coords": {
+    "lat": 55.502,
+    "lon": 37.498
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Пахра прикрывала отход армии Кутузова от Москвы к Подольску. Здесь, на Старой Калужской дороге, армия свернула к Тарутину.",
-    "Сегодня Красная Пахра — часть Троицкого округа Москвы.",
-    "От реки по улицам села возвращаемся к остановке на шоссе. Следующая точка маршрута — «Парк над рекой»."
+    "Первое упоминание о поместье относят к 1340 году. В XVII веке им владел Прокопий Ляпунов — создатель народного ополчения.",
+    "Нынешний усадебный дом построен в конце XVIII века при князе Андрее Вяземском, предположительно по проекту Ивана Старова."
    ],
    "facts": [
     {
-     "text": "Армия отходила под прикрытием Пахры.",
-     "sourceUrl": "https://booksite.ru/FullText/1/001/008/067/856.htm",
+     "text": "Первое упоминание о поместье относится к 1340 году.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100717-ostav_jego/",
      "verified": true
     },
     {
-     "text": "Красная Пахра — в Троицком округе Москвы.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
+     "text": "В XVII веке владельцем был Прокопий Ляпунов.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100717-ostav_jego/",
      "verified": true
     },
     {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": false
-    },
-    {
-     "text": "Старая Калужская дорога проходит через село.",
-     "sourceUrl": "https://booksite.ru/FullText/1/001/008/067/856.htm",
+     "text": "Усадьба построена в конце XVIII века при Андрее Вяземском.",
+     "sourceUrl": "https://www.mos.ru/news/item/40508073/",
      "verified": true
-    },
-    {
-     "text": "Тропы вдоль реки мы не проверяли.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": false
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "ostafevo-park",
-   "name": "Парк над рекой",
+   "id": "ostafevo-vyazemsky",
+   "name": "Бюст Петра Вяземского",
    "coords": {
-    "lat": 55.4005,
-    "lon": 37.201
+    "lat": 55.505,
+    "lon": 37.503
    },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
    "guideStory": [
-    "Усадьба стоит над Пахрой, и с берега открывается вид на речную долину.",
-    "Историю парка и дальнейших владельцев мы в найденных источниках не нашли — это честный пробел, а не повод для выдумок.",
-    "Обратно к Красной Пахре едем той же дорогой вдоль реки. Финиш — Станция «Апрелевка»: Электрички Киевского направления / МЦД-4."
+    "Российское историческое общество подарило музею-заповеднику бюст Петра Вяземского — поэта и хозяина Остафьева.",
+    "Остафьево называли «Русским Парнасом»: здесь бывали Пушкин, Жуковский, Гоголь, а Карамзин писал «Историю государства Российского»."
    ],
    "facts": [
     {
-     "text": "Усадьба стоит над Пахрой.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "text": "Российское историческое общество подарило усадьбе бюст Петра Вяземского.",
+     "sourceUrl": "https://riamo.ru/news/kultura/rossijskoe-istoricheskoe-obschestvo-podarilo-byust-petra-vyazemskogo-usadbe-ostafevo-xl/",
      "verified": true
     },
     {
-     "text": "История парка в источниках не раскрыта.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Владельцы после Кречетникова не установлены.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Координаты парка приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Михайловское — подмосковная усадьба.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "text": "Здесь вдохновлялись Пушкин, Жуковский и Гоголь.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100717-ostav_jego/",
      "verified": true
+    },
+    {
+     "text": "В Остафьеве Карамзин написал восемь томов «Истории государства Российского».",
+     "sourceUrl": "https://www.zr.ru/content/articles/100717-ostav_jego/",
+     "verified": false
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -462,95 +297,59 @@
    "url": "https://www.sputnik8.com/ru/moscow/activities/61321-russkiy-parnas-ostafevo-dubrovitsy"
   },
   {
-   "title": "Дубровицы — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D1%86%D1%8B_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE"
   },
   {
-   "title": "Дубровицы — Культура.РФ",
-   "url": "https://www.culture.ru/institutes/14257/dubrovicy"
+   "title": "Источник: zr.ru",
+   "url": "https://www.zr.ru/content/articles/100717-ostav_jego/"
   },
   {
-   "title": "Храм с короной — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-podolskij-rajon-hram-s-koronoj-i-usadby-dlya-brakosochetanij-xl/"
+   "title": "Источник: mos.ru",
+   "url": "https://www.mos.ru/news/item/40508073/"
   },
   {
-   "title": "Подольск — ЦИАН",
-   "url": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/"
-  },
-  {
-   "title": "История Подольска — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/podolsk/history"
-  },
-  {
-   "title": "Подольск — Tripster",
-   "url": "https://experience.tripster.ru/journal/articles/podolsk/"
-  },
-  {
-   "title": "История Климовска — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/klimovsk/istoriia"
-  },
-  {
-   "title": "Флагман текстильного машиностроения — VK",
-   "url": "https://vk.ru/@498603575-flagman-tekstilnogo-mashinostroeniya-v-sssr"
-  },
-  {
-   "title": "Краснопахорский — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/krasnopakhorskij/"
-  },
-  {
-   "title": "Тарутинский манёвр — booksite.ru",
-   "url": "https://booksite.ru/FullText/1/001/008/067/856.htm"
-  },
-  {
-   "title": "Михайловское — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/kultura/rossijskoe-istoricheskoe-obschestvo-podarilo-byust-petra-vyazemskogo-usadbe-ostafevo-xl/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.067443,
-     55.545
+     37.491449,
+     55.499
     ],
     [
-     37.068187,
-     55.543428
+     37.492193,
+     55.497428
     ],
     [
-     37.196205,
-     55.398928
+     37.494225,
+     55.496277
     ],
     [
-     37.198232,
-     55.397777
+     37.498225,
+     55.495277
     ],
     [
-     37.201,
-     55.397356
+     37.501,
+     55.494856
     ],
     [
-     37.535,
-     55.361856
+     37.503775,
+     55.495277
     ],
     [
-     37.537766,
-     55.362277
+     37.566776,
+     55.507277
     ],
     [
-     37.539791,
-     55.363428
-    ],
-    [
-     37.540532,
-     55.365
-    ],
-    [
-     37.560543,
-     55.442
+     37.568808,
+     55.508428
     ],
     [
      37.569552,
@@ -569,20 +368,28 @@
      55.513144
     ],
     [
-     37.073,
-     55.548144
+     37.503,
+     55.508144
     ],
     [
-     37.070221,
-     55.547723
+     37.500224,
+     55.507723
     ],
     [
-     37.068187,
-     55.546572
+     37.498192,
+     55.506572
     ],
     [
-     37.067443,
-     55.545
+     37.493192,
+     55.503572
+    ],
+    [
+     37.492449,
+     55.502
+    ],
+    [
+     37.491449,
+     55.499
     ]
    ]
   ]
