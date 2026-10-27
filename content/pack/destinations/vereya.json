@@ -13,7 +13,8 @@
   "Верея — один из древних городов Московской земли. Официальная дата первого упоминания — 1371 год, в связи с походом литовского князя Ольгерда на Москву. В конце XIV века здесь создали укреплённое городище с валами и деревянной крепостью.",
   "В 1812 году город заняли вестфальцы; по поручению Кутузова генерал Иван Дорохов освободил Верею. Дорохова считают прототипом Долохова из «Войны и мира». Дата штурма в источниках расходится.",
   "На валу кремля над Протвой стоит Рождественский собор, построенный в 1552 году в честь взятия Казани, и памятник Дорохову.",
-  "Маршрут: Дорохово, дорога на юг и Верея."
+  "Свои места маршрута: «Историко-краеведческий музей», «Кремлёвский вал», «Богоявленский храм в Заречье», «Ильинская церковь». По пути маршрут заходит и к соседям: Дорохово — «Память освобождения»; Можайск — «Город после крепости», «Лужецкий монастырь», «Никольская гора и собор».",
+  "Маршрут линейный, около 68 км и 8 точек. Финиш — Верея, автостанция (Автобусы до Дорохова и Москвы — уточняйте), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Дорохово»",
@@ -32,16 +33,239 @@
   "transport": "Автобусы до Дорохова и Москвы — уточняйте"
  },
  "route": {
-  "distanceKm": 30.0,
-  "durationH": 3.5,
-  "difficulty": "средний",
+  "distanceKm": 68.0,
+  "durationH": 7.9,
+  "difficulty": "сложный",
   "shape": "линейный",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "vereya-memorial",
+   "name": "Память освобождения",
+   "coords": {
+    "lat": 55.552,
+    "lon": 36.365
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "13 января жители Рузского округа чтят память защитников в День освобождения Дорохова.",
+    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести». Следующая точка маршрута — «Город после крепости»."
+   ],
+   "facts": [
+    {
+     "text": "День освобождения Дорохова отмечают 13 января.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": true
+    },
+    {
+     "text": "В 2016 году — звание «Населённый пункт воинской доблести».",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "Год освобождения мы не сверили.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": false
+    },
+    {
+     "text": "Координаты мемориала приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": false
+    },
+    {
+     "text": "Жители чтят память защитников.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 10
+  },
+  {
+   "id": "vereya-upadok",
+   "name": "Город после крепости",
+   "coords": {
+    "lat": 55.505,
+    "lon": 36.03
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Упадок крепости начался после 1686 года, а при Екатерине II её начали разбирать на кирпичи.",
+    "Можайск — ворота к Бородинскому полю, у которого в спирали свой маршрут. Следующая точка маршрута — «Лужецкий монастырь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Упадок начался после 1686 года.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "Бородинское поле — рядом с Можайском.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "Можайск описан на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "vereya-luzhetsky",
+   "name": "Лужецкий монастырь",
+   "coords": {
+    "lat": 55.51,
+    "lon": 36.005
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Лужецкий монастырь основан в 1408 году преподобным Ферапонтом. Это единственная древняя можайская обитель, сохранившаяся до наших дней.",
+    "В 1812 году монастырь сильно пострадал: французские войска устроили здесь штаб.",
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Никольская гора и собор»."
+   ],
+   "facts": [
+    {
+     "text": "Лужецкий монастырь основан в 1408 году Ферапонтом.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "Это единственная сохранившаяся древняя обитель Можайска.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "В 1812 году здесь был французский штаб.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "Монастырь описан в паломническом справочнике.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "vereya-nikolskaya",
+   "name": "Никольская гора и собор",
+   "coords": {
+    "lat": 55.5,
+    "lon": 36.025
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Можайск впервые упоминается в летописи под 1231 годом и сначала входил в Смоленское княжество. Крепость на Никольской горе, по одному источнику, строили ещё в XII веке.",
+    "Первыми каменными постройками в XIV веке стали Никольский собор, Никольские ворота и Воздвиженская церковь. Сегодняшний собор — красивое неоготическое здание. От кремля сохранились въездные ворота и 11-метровый участок стены."
+   ],
+   "facts": [
+    {
+     "text": "Можайск впервые упомянут под 1231 годом.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Город входил в Смоленское княжество.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Крепость на Никольской горе — XII век, по одному источнику.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": false
+    },
+    {
+     "text": "От кремля сохранились ворота и 11-метровый участок стены.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    },
+    {
+     "text": "При Екатерине II крепость разбирали на кирпич.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "vereya-muzey",
+   "name": "Историко-краеведческий музей",
+   "coords": {
+    "lat": 55.345,
+    "lon": 36.183
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Верейский историко-краеведческий музей основан в 1996 году и занимает старый дом купца Митюшина на берегу Протвы. В нём три зала — историко-этнографический и два выставочных.",
+    "Рядом восстановленные торговые ряды начала XIX века — центр Вереи компактный, около 5 квадратных километров."
+   ],
+   "facts": [
+    {
+     "text": "Музей основан в 1996 году и находится в доме купца Митюшина на берегу Протвы.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B5%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "В музее три зала: историко-этнографический и два выставочных.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B5%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "В городе восстановлены торговые ряды начала XIX века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B5%D0%B8",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
   {
    "id": "vereya-val",
    "name": "Кремлёвский вал",
@@ -53,8 +277,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Городище стоит на высоком мысу, образованном Протвой и оврагами. Можно подняться на шестиметровые валы древнего кремля.",
-    "Первое упоминание Вереи — 1371 год, поход Ольгерда на Москву. В конце XIV века здесь появились валы и деревянная крепость.",
-    "Идём к собору. Следующая точка маршрута — «Рождественский собор». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+    "Первое упоминание Вереи — 1371 год, поход Ольгерда на Москву. В конце XIV века здесь появились валы и деревянная крепость."
    ],
    "facts": [
     {
@@ -86,103 +309,74 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 60
   },
   {
-   "id": "vereya-sobor",
-   "name": "Рождественский собор",
+   "id": "vereya-bogoyavlenskiy",
+   "name": "Богоявленский храм в Заречье",
    "coords": {
-    "lat": 55.3445,
-    "lon": 36.1855
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Рождественский собор построен в 1552 году в честь взятия Казани. В соборе был похоронен генерал Дорохов; в 1918 году захоронение разорили, а храм позже закрыли.",
-    "По одному источнику, в 2000 году в восстановленном храме прошла первая служба и перезахоронили останки Дорохова. Даты источники приводят по-разному.",
-    "Храм действующий. Следующая точка маршрута — «Памятник Дорохову»."
-   ],
-   "facts": [
-    {
-     "text": "Собор построен в 1552 году в честь взятия Казани.",
-     "sourceUrl": "https://teletype.in/@apfound/8XPGzwsMqPM",
-     "verified": true
-    },
-    {
-     "text": "Генерал Дорохов был похоронен в соборе.",
-     "sourceUrl": "https://teletype.in/@apfound/8XPGzwsMqPM",
-     "verified": true
-    },
-    {
-     "text": "Захоронение разорили в 1918 году.",
-     "sourceUrl": "https://teletype.in/@apfound/8XPGzwsMqPM",
-     "verified": false
-    },
-    {
-     "text": "В 2000 году останки перезахоронили — по одному источнику.",
-     "sourceUrl": "https://teletype.in/@apfound/8XPGzwsMqPM",
-     "verified": false
-    },
-    {
-     "text": "360.ru называл Верею «городом дня».",
-     "sourceUrl": "https://360.ru/news/obschestvo/gorod-dnja---vereja-13606/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
-  },
-  {
-   "id": "vereya-dorokhov",
-   "name": "Памятник Дорохову",
-   "coords": {
-    "lat": 55.3442,
-    "lon": 36.1848
+    "lat": 55.34,
+    "lon": 36.179
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "В 1812 году Верею занял батальон вестфальцев. Кутузов поручил генералу Ивану Дорохову вернуть город; по энциклопедии, это исполнили с потерей всего 30 человек. Дата штурма в источниках — 28 или 2 сентября.",
-    "Памятник Дорохову поставили в 1912 году на деньги верейцев; в Гражданскую войну его разрушили и в 1956 году восстановили по фотографиям. Он стоит на валу над Протвой.",
-    "Финиш у автостанции. Финиш — Верея, автостанция: Автобусы до Дорохова и Москвы — уточняйте."
+    "На правом берегу Протвы, в историческом районе Заречье, стоит Богоявленский храм — образец провинциального барокко XVIII века.",
+    "С моста через Протву открывается вид на обе части города: холм со старым центром и низкое Заречье. Следующая точка маршрута — «Ильинская церковь»."
    ],
    "facts": [
     {
-     "text": "Кутузов поручил Дорохову освободить Верею.",
-     "sourceUrl": "https://ru.wikisource.org/wiki/%D0%92%D0%AD/%D0%92%D0%A2/%D0%94%D0%BE%D1%80%D0%BE%D1%85%D0%BE%D0%B2,_%D0%98%D0%B2%D0%B0%D0%BD_%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87",
+     "text": "Богоявленский храм — образец провинциального барокко XVIII века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B5%D0%B8",
      "verified": true
     },
     {
-     "text": "Город взят с потерей около 30 человек — по энциклопедии.",
-     "sourceUrl": "https://ru.wikisource.org/wiki/%D0%92%D0%AD/%D0%92%D0%A2/%D0%94%D0%BE%D1%80%D0%BE%D1%85%D0%BE%D0%B2,_%D0%98%D0%B2%D0%B0%D0%BD_%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87",
+     "text": "Храм стоит в историческом районе Заречье на правом берегу Протвы.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B5%D0%B8",
      "verified": true
-    },
-    {
-     "text": "Дата штурма расходится.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/vereya/",
-     "verified": false
-    },
-    {
-     "text": "Памятник поставлен в 1912 году и восстановлен в 1956-м.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/vereya/",
-     "verified": true
-    },
-    {
-     "text": "Дорохов — прототип Долохова — по одному источнику.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/vereya/",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
+   "order": 70,
+   "coordsVerified": false
+  },
+  {
+   "id": "vereya-ilinskaya",
+   "name": "Ильинская церковь",
+   "coords": {
+    "lat": 55.3415,
+    "lon": 36.1905
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Церковь Илии Пророка построена в 1722 году и действует до сих пор. Она стоит в Кустарном переулке, в стороне от главной площади.",
+    "Верея сохранила планировку XVIII века, утверждённую при Екатерине II, и Ильинская церковь хорошо показывает, каким был город до наполеоновского 1812 года."
+   ],
+   "facts": [
+    {
+     "text": "Ильинская церковь в Верее построена в 1722 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%98%D0%BB%D1%8C%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%B2_%D0%92%D0%B5%D1%80%D0%B5%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Адрес храма — Кустарный переулок, 4.",
+     "sourceUrl": "https://sobory.ru/article/?object=01125",
+     "verified": true
+    },
+    {
+     "text": "Город сохранил планировку XVIII века, утверждённую Екатериной II.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%92%D0%B5%D1%80%D0%B5%D0%B8",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 80,
    "coordsVerified": false
   }
  ],
@@ -217,76 +411,97 @@
   {
    "title": "Дорохов — Военная энциклопедия",
    "url": "https://ru.wikisource.org/wiki/%D0%92%D0%AD/%D0%92%D0%A2/%D0%94%D0%BE%D1%80%D0%BE%D1%85%D0%BE%D0%B2,_%D0%98%D0%B2%D0%B0%D0%BD_%D0%A1%D0%B5%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"
+  },
+  {
+   "title": "Дорохово — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./"
+  },
+  {
+   "title": "День освобождения — РИАМО",
+   "url": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/"
+  },
+  {
+   "title": "Можайск — Путёвка",
+   "url": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret"
+  },
+  {
+   "title": "История — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.179271,
-     55.3442
+     35.999448,
+     55.51
     ],
     [
-     36.180012,
-     55.342628
+     36.000192,
+     55.508428
     ],
     [
-     36.181212,
-     55.341428
+     36.174212,
+     55.338428
     ],
     [
-     36.183236,
-     55.340277
+     36.176236,
+     55.337277
     ],
     [
-     36.186,
-     55.339856
+     36.179,
+     55.336856
     ],
     [
-     36.188764,
-     55.340277
+     36.1905,
+     55.338356
     ],
     [
-     36.190788,
-     55.341428
+     36.193264,
+     55.338777
     ],
     [
-     36.364813,
-     55.548428
+     36.195288,
+     55.339928
     ],
     [
-     36.365558,
-     55.55
+     36.369814,
+     55.550428
     ],
     [
-     36.364813,
-     55.551572
+     36.370558,
+     55.552
     ],
     [
-     36.362779,
-     55.552723
+     36.369814,
+     55.553572
     ],
     [
-     36.36,
-     55.553144
+     36.367779,
+     55.554723
     ],
     [
-     36.357221,
-     55.552723
+     36.365,
+     55.555144
     ],
     [
-     36.355187,
-     55.551572
+     36.005,
+     55.513144
     ],
     [
-     36.180012,
-     55.345772
+     36.002224,
+     55.512723
     ],
     [
-     36.179271,
-     55.3442
+     36.000192,
+     55.511572
+    ],
+    [
+     35.999448,
+     55.51
     ]
    ]
   ]

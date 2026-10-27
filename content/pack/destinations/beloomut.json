@@ -13,7 +13,8 @@
   "Белоомут — посёлок на Оке с рыбацкими традициями. Здесь проходит межрегиональный фестиваль «Царская уха».",
   "До середины XIX века здесь было имение революционера-демократа Николая Огарёва, который за 15 лет до реформы 1861 года дал вольную своим крестьянам.",
   "Подробную историю посёлка мы в найденных источниках не нашли.",
-  "Маршрут: Луховицы, дорога к Оке и Белоомут."
+  "Свои места маршрута: «Рыбацкий берег Оки», «Имение Огарёва», «Гидроузел «Белоомут» на Оке». По пути маршрут заходит и к соседям: Луховицы — «Праздник огурца», «Луховицкий авиазавод», «Памятник огурцу»; Дединово — «Село на Оке», «Корабль «Орёл»».",
+  "Маршрут кольцевой, около 70 км и 8 точек. Финиш — Станция «Луховицы» (Электрички Казанского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Луховицы»",
@@ -26,68 +27,196 @@
  "endPoint": {
   "name": "Станция «Луховицы»",
   "coords": {
-   "lat": 54.9652,
-   "lon": 39.0255
+   "lat": 54.965,
+   "lon": 39.025
   },
   "transport": "Электрички Казанского направления"
  },
  "route": {
-  "distanceKm": 44.0,
-  "durationH": 4.0,
+  "distanceKm": 70.0,
+  "durationH": 7.6,
   "difficulty": "сложный",
   "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "beloomut-ogarev",
-   "name": "Имение Огарёва",
+   "id": "beloomut-prazdnik",
+   "name": "Праздник огурца",
    "coords": {
-    "lat": 54.94,
-    "lon": 39.33
+    "lat": 54.966,
+    "lon": 39.028
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "kind": "проезжаем",
+   "visitMinutes": 10,
    "guideStory": [
-    "До середины XIX века в Белоомуте было имение Николая Огарёва — поэта, публициста и друга Герцена.",
-    "Огарёв дал вольную своим крестьянам за 15 лет до Крестьянской реформы 1861 года.",
-    "Едем к Оке. Следующая точка маршрута — «Рыбацкий берег Оки». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+    "Летом в Луховицах проходит семейный фестиваль «Луховицкий огурец»; его организуют администрация округа и Дом культуры «Старт».",
+    "Промысел в пойме Оки, по «Рамблеру», развивается с 1930-х годов. Следующая точка маршрута — «Луховицкий авиазавод»."
    ],
    "facts": [
     {
-     "text": "В Белоомуте было имение Николая Огарёва.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "text": "В Луховицах проходит фестиваль «Луховицкий огурец».",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
      "verified": true
     },
     {
-     "text": "Огарёв дал вольную крестьянам за 15 лет до реформы 1861 года.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "text": "Организаторы — администрация и ДК «Старт».",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
      "verified": true
     },
     {
-     "text": "Огарёв — друг Герцена — общеизвестный факт, здесь не сверен.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
-     "verified": false
+     "text": "Промысел развивается с 1930-х — по Рамблеру.",
+     "sourceUrl": "https://weekend.rambler.ru/items/37259587-zhiteli-i-gosti-luhovits-otmetili-prazdnik-ogurtsa/",
+     "verified": true
     },
     {
-     "text": "Местоположение имения не установлено.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "text": "Даты праздника меняются.",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
      "verified": false
     },
     {
      "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
+   "coordsVerified": false,
+   "order": 10
+  },
+  {
+   "id": "beloomut-aviazavod",
+   "name": "Луховицкий авиазавод",
+   "coords": {
+    "lat": 54.982,
+    "lon": 39.045
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Луховицкий авиастроительный завод имени П. А. Воронина основан в 1953 году. Сегодня это филиал Объединённой авиастроительной корпорации; территория закрыта, смотрим снаружи.",
+    "В разные годы здесь собирали Ил-14, Ил-18, Як-25, Су-9, МиГ-21, МиГ-23 и МиГ-29. Город на огуречных грядках оказался ещё и городом самолётов."
+   ],
+   "facts": [
+    {
+     "text": "Луховицкий авиастроительный завод имени П. А. Воронина основан в 1953 году.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "На заводе выпускали Ил-14, Ил-18, Як-25, Су-9, МиГ-21, МиГ-23 и МиГ-29.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Сейчас завод — филиал ПАО «ОАК».",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
    "coordsVerified": false
+  },
+  {
+   "id": "beloomut-selo",
+   "name": "Село на Оке",
+   "coords": {
+    "lat": 54.9895,
+    "lon": 39.3695
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Судьба «Орла» описана по-разному: по одной версии, его сожгли в 1670 году, по другой — он простоял в протоке Кутум, пришёл в негодность и был разобран в 1680-м.",
+    "Музей военно-морского флота отмечает дату указа о строительстве «Орла» как памятную.",
+    "Обратный путь к Луховицам долгий — рассчитайте силы. Следующая точка маршрута — «Корабль «Орёл»»."
+   ],
+   "facts": [
+    {
+     "text": "Версии о судьбе «Орла» расходятся.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    },
+    {
+     "text": "Военно-морской музей отмечает дату указа о строительстве.",
+     "sourceUrl": "https://eng.navalmuseum.ru/news/memorable?id=714",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "beloomut-oryol",
+   "name": "Корабль «Орёл»",
+   "coords": {
+    "lat": 54.9905,
+    "lon": 39.3705
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "«Орёл» построен в Дединове в 1667–1669 годах для охраны русских судов на Каспии. Имя он получил по указу 4 апреля 1669 года, в честь герба.",
+    "Даты спуска на воду и число пушек в источниках расходятся. Корабль захватили восставшие Разина в Астрахани."
+   ],
+   "facts": [
+    {
+     "text": "«Орёл» построен в 1667–1669 годах.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": true
+    },
+    {
+     "text": "Корабль предназначался для охраны судов на Каспии.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": true
+    },
+    {
+     "text": "Имя получено по указу 4 апреля 1669 года.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": true
+    },
+    {
+     "text": "«Орёл» считают первым военным кораблём России.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Russian_frigate_Oryol_(1668)",
+     "verified": true
+    },
+    {
+     "text": "Даты спуска и вооружение в источниках расходятся.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Russian_frigate_Oryol_(1668)",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
   },
   {
    "id": "beloomut-oka",
@@ -100,8 +229,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Белоомут связан с рыбацкими традициями. Здесь проходит межрегиональный фестиваль «Царская уха».",
-    "Даты фестиваля меняются — уточняйте заранее.",
-    "Привал на берегу. Следующая точка маршрута — «Обратно к Луховицам». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+    "Даты фестиваля меняются — уточняйте заранее. Следующая точка маршрута — «Имение Огарёва». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
    ],
    "facts": [
     {
@@ -134,31 +262,40 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 50
   },
   {
-   "id": "beloomut-obratno",
-   "name": "Обратно к Луховицам",
+   "id": "beloomut-ogarev",
+   "name": "Имение Огарёва",
    "coords": {
-    "lat": 54.95,
-    "lon": 39.2
+    "lat": 54.94,
+    "lon": 39.33
    },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Возвращаемся к Луховицам через поля огуречного края.",
-    "Путь длинный — рассчитайте силы до заката.",
-    "Финиш — станция Луховицы. Финиш — Станция «Луховицы»: Электрички Казанского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+    "До середины XIX века в Белоомуте было имение Николая Огарёва — поэта, публициста и друга Герцена.",
+    "Огарёв дал вольную своим крестьянам за 15 лет до Крестьянской реформы 1861 года. Следующая точка маршрута — «Гидроузел «Белоомут» на Оке»."
    ],
    "facts": [
     {
-     "text": "Луховицы — огуречный край.",
+     "text": "В Белоомуте было имение Николая Огарёва.",
      "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
      "verified": true
     },
     {
-     "text": "Протяжённость оценена приблизительно.",
+     "text": "Огарёв дал вольную крестьянам за 15 лет до реформы 1861 года.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": true
+    },
+    {
+     "text": "Огарёв — друг Герцена — общеизвестный факт, здесь не сверен.",
+     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "verified": false
+    },
+    {
+     "text": "Местоположение имения не установлено.",
      "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
      "verified": false
     },
@@ -166,23 +303,95 @@
      "text": "Координаты приблизительные.",
      "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
      "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "beloomut-gidrouzel",
+   "name": "Гидроузел «Белоомут» на Оке",
+   "coords": {
+    "lat": 54.945,
+    "lon": 39.28
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Гидроузел «Белоомут» поддерживает судоходные глубины на Оке и работает с 1915 года. Одна газета писала, что шлюзы построили немцы ещё в 1913-м, — даты в источниках расходятся.",
+    "В конце 2010-х гидроузел перестроили: старый шлюз засыпали, а столетнюю плотину после постройки новой железобетонной разобрали. Смотрим с берега — на сооружения не заходим."
+   ],
+   "facts": [
+    {
+     "text": "Гидроузел «Белоомут» функционирует с 1915 года.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/gidrouzel-beloomut-v-luhovitsah-moderniziruyut-k-2019-godu-xl/",
+     "verified": true
     },
     {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
+     "text": "По сообщению газеты, шлюзы построили немцы в 1913 году.",
+     "sourceUrl": "https://www.mk.ru/old/article/2002/09/09/162373-ne-niagara.html",
      "verified": false
     },
     {
-     "text": "Белоомут — в округе Луховицы.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/festival-uhi-sostoitsya-26-iyulya-v-luhovitskom-rajone-podmoskovya-xl/",
+     "text": "Старый шлюз засыпали, а столетнюю плотину демонтировали после постройки новой.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/gidrouzel-beloomut-v-luhovitsah-moderniziruyut-k-2019-godu-xl/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
+   "order": 70,
    "coordsVerified": false
+  },
+  {
+   "id": "beloomut-ogurets",
+   "name": "Памятник огурцу",
+   "coords": {
+    "lat": 54.967,
+    "lon": 39.03
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В центре Луховиц стоит памятник огурцу. «Луховицкие огурцы» изначально — собирательное понятие: так называли разные сорта, хорошо плодоносящие в окрестностях города.",
+    "Расцвет огуречного производства пришёлся на 1970-е годы; фермерских хозяйств здесь много и сегодня."
+   ],
+   "facts": [
+    {
+     "text": "В центре города стоит памятник огурцу.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
+     "verified": true
+    },
+    {
+     "text": "«Луховицкие огурцы» — собирательное название сортов.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
+     "verified": true
+    },
+    {
+     "text": "Расцвет пришёлся на 1970-е годы.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
+     "verified": true
+    },
+    {
+     "text": "Луховицы называют огуречной столицей России.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Координаты памятника приблизительные.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -216,9 +425,26 @@
   {
    "title": "«Царская уха» — РИАМО",
    "url": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/"
+  },
+  {
+   "title": "Луховицкие огурцы — mos.ru",
+   "url": "https://www.mos.ru/news/item/170885073/"
+  },
+  {
+   "title": "Луховицы — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B"
+  },
+  {
+   "title": "Верфь и «Орёл» — Календарь",
+   "url": "https://www.calend.ru/events/4581/"
+  },
+  {
+   "title": "Frigate Oryol — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Russian_frigate_Oryol_(1668)"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -240,10 +466,6 @@
      54.961856
     ],
     [
-     39.2,
-     54.946856
-    ],
-    [
      39.33,
      54.936856
     ],
@@ -260,32 +482,36 @@
      54.940428
     ],
     [
-     39.340474,
-     54.942
+     39.375246,
+     54.988928
     ],
     [
-     39.33974,
-     54.943572
+     39.37598,
+     54.9905
     ],
     [
-     39.337737,
-     54.944723
+     39.375246,
+     54.992072
     ],
     [
-     39.335,
-     54.945144
+     39.37324,
+     54.993223
     ],
     [
-     39.0255,
-     54.968344
+     39.3705,
+     54.993644
     ],
     [
-     39.022762,
-     54.967923
+     39.045,
+     54.985144
     ],
     [
-     39.022262,
-     54.967723
+     39.04226,
+     54.984723
+    ],
+    [
+     39.040255,
+     54.983572
     ],
     [
      39.020257,
