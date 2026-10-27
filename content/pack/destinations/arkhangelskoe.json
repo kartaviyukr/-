@@ -13,7 +13,8 @@
   "Архангельское называют «подмосковным Версалем». Место известно с 1584 года, а имя получило в 1646 году по местной церкви Михаила Архангела.",
   "В XVII веке имением владели Одоевские и Черкасские, с начала XVIII века — Голицыны. В 1810 году усадьбу купил князь Николай Борисович Юсупов, и при нём она достигла расцвета: он собрал более 540 картин западноевропейских мастеров и десятки мраморных скульптур.",
   "Юсуповы владели Архангельским до 1917 года. После революции усадьбу национализировали, а в 1919 году здесь открыли государственный музей.",
-  "Маршрут: дворец, регулярный парк с террасами и церковь Михаила Архангела над Москвой-рекой."
+  "Сначала — свои места: «Большой дворец», «Церковь Михаила Архангела». Дальше маршрут идёт по соседним местам: Красногорск — «Музей немецких антифашистов», «Центр и история города»; Путилково — «Бывшая деревенская часть», «Долина Сходни»; Химки и мемориал «Ежи» — «Центр Химок», «Мемориал «Противотанковые ежи»»; Молжаниново, Новосёлки, Черкизово — «Деревенские улицы», «Поля у Шереметьева»; Мемориал «Штыки» — «Мемориал «Штыки»», «Последний рубеж».",
+  "Маршрут линейный, около 50 км и 12 точек. Финиш — Станция «Фирсановская» (Электрички Ленинградского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Санаторий Архангельское»",
@@ -24,21 +25,21 @@
   "transport": "Автобусы от метро «Тушинская» — уточняйте"
  },
  "endPoint": {
-  "name": "Остановка «Санаторий Архангельское»",
+  "name": "Станция «Фирсановская»",
   "coords": {
-   "lat": 55.7852,
-   "lon": 37.2905
+   "lat": 55.9622,
+   "lon": 37.2495
   },
-  "transport": "Автобусы до метро «Тушинская»"
+  "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "route": {
-  "distanceKm": 5.0,
-  "durationH": 3.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 50.0,
+  "durationH": 7.2,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -87,56 +88,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "arkhangelskoe-park",
-   "name": "Парк и террасы",
-   "coords": {
-    "lat": 55.784,
-    "lon": 37.286
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 30,
-   "guideStory": [
-    "От дворца к Москве-реке спускается регулярный парк с террасами, скульптурами и партерами.",
-    "Первые упоминания места относятся к 1584 году; с начала XVIII века имением владели Голицыны — по одному источнику, с 1703 по 1810 год. При них и сложился парадный облик усадьбы, который Юсупов потом развил.",
-    "Велосипед ведём рядом в пределах музейной территории — уточните правила у входа."
-   ],
-   "facts": [
-    {
-     "text": "Первые упоминания об Архангельском — 1584 год.",
-     "sourceUrl": "https://tonkosti.ru/Архангельское",
-     "verified": true
-    },
-    {
-     "text": "Голицыны владели усадьбой с 1703 по 1810 год.",
-     "sourceUrl": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe",
-     "verified": false
-    },
-    {
-     "text": "В XVII веке владельцами были Одоевские и Черкасские.",
-     "sourceUrl": "https://tonkosti.ru/Архангельское",
-     "verified": true
-    },
-    {
-     "text": "Парк с террасами спускается к Москве-реке.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    },
-    {
-     "text": "Усадьба описана в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "arkhangelskoe-tserkov",
@@ -149,8 +102,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Название «Архангельское» закрепилось за усадьбой в 1646 году, при Шереметевых, — по церкви Михаила Архангела.",
-    "Храм стоит на высоком берегу Москвы-реки; от него открываются виды на пойму. Датировку храма мы в найденных источниках не сверяли.",
-    "Отсюда возвращаемся к остановке через парк. Финиш — Остановка «Санаторий Архангельское»: Автобусы до метро «Тушинская»."
+    "Храм стоит на высоком берегу Москвы-реки; от него открываются виды на пойму. Датировку храма мы в найденных источниках не сверяли."
    ],
    "facts": [
     {
@@ -182,8 +134,485 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "arkhangelskoe-muzey",
+   "name": "Музей немецких антифашистов",
+   "coords": {
+    "lat": 55.825,
+    "lon": 37.315
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Мемориальный музей немецких антифашистов находится на улице Народного Ополчения, 15. Он рассказывает об антифашистском движении немцев в годы войны.",
+    "В коллекции — немецкие знаки и награды, листовки антифашистских организаций, газеты и униформа. По данным справочника, музей ежегодно принимает более 8000 посетителей."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится на ул. Народного Ополчения, 15.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "В коллекции — знаки, награды, листовки, газеты и униформа.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "Музей принимает более 8000 посетителей в год.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    },
+    {
+     "text": "Музей — филиал Музея Победы.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "arkhangelskoe-tsentr",
+   "name": "Центр и история города",
+   "coords": {
+    "lat": 55.831,
+    "lon": 37.32
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Город вырос вокруг предприятий оптики. Дата основания спорна: 1932 год по одному источнику и объединение деревень в начале XX века — по другому.",
+    "В годы войны в городе создали батальоны народного ополчения, истребительный батальон и трудовые отряды."
+   ],
+   "facts": [
+    {
+     "text": "Красногорск связан с оптическими предприятиями.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Дата основания города в источниках расходится.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    },
+    {
+     "text": "В войну создавались батальоны народного ополчения.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Куда сходить в Красногорске — подборка KudaGo.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": true
+    },
+    {
+     "text": "Красногорск граничит с Москвой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "arkhangelskoe-staroe",
+   "name": "Бывшая деревенская часть",
+   "coords": {
+    "lat": 55.863,
+    "lon": 37.395
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "От старой деревни почти ничего не осталось: на её месте выросли многоэтажки, и сохранилось ли что-то от старой застройки, мы не проверяли.",
+    "И всё же Путилково живёт под деревенским именем, напоминая о временах, когда здесь были избы, а не микрорайоны.",
+    "Маршрут Путилкова завершён — короткий, но любопытный: от записи 1576 года до одного из крупнейших «негородов» страны."
+   ],
+   "facts": [
+    {
+     "text": "Путилково выросло из деревни, упомянутой в 1576 году.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сегодня это крупный населённый пункт у МКАД.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сохранность старой застройки мы не проверяли.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    },
+    {
+     "text": "Путилково входит в городской округ Красногорск.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Понятие «деревня» в России определяется статусом, а не размером.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "arkhangelskoe-skhodnya",
+   "name": "Долина Сходни",
+   "coords": {
+    "lat": 55.87,
+    "lon": 37.405
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "По одной из версий, название Путилково связано с древним торговым путём по речке Сходне.",
+    "Первое письменное упоминание Путилкова — 1576 год, описание границ Спас-Тушинской монастырской вотчины. Тушино с его историей Смуты — совсем рядом, ниже по Сходне."
+   ],
+   "facts": [
+    {
+     "text": "Название по одной версии связано с древним торговым путём по Сходне.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Первое письменное упоминание — 1576 год, при описании границ Спас-Тушинской вотчины.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сходня течёт к Тушину.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    },
+    {
+     "text": "Путилково расположено у МКАД.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Версия о торговом пути не подтверждена документами.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "arkhangelskoe-gorod",
+   "name": "Центр Химок",
+   "coords": {
+    "lat": 55.889,
+    "lon": 37.44
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Химки путеводители описывают как город обороны Москвы, авиации, космоса и канала имени Москвы — все эти слои здесь переплетены.",
+    "В городе и рядом немало памятников; главный — у Ленинградского шоссе, на месте рубежа обороны 1941 года."
+   ],
+   "facts": [
+    {
+     "text": "Химки связаны с обороной Москвы, авиацией, космосом и каналом имени Москвы.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "verified": true
+    },
+    {
+     "text": "Путеводитель Путевка.ком предлагает маршрут по главным достопримечательностям Химок.",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
+     "verified": true
+    },
+    {
+     "text": "Список достопримечательностей Химок ведёт командировка.ру.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/khimki/",
+     "verified": true
+    },
+    {
+     "text": "Год получения статуса города в найденных источниках не указан.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "verified": false
+    },
+    {
+     "text": "Химки граничат с Москвой.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "arkhangelskoe-ezhi",
+   "name": "Мемориал «Противотанковые ежи»",
+   "coords": {
+    "lat": 55.902,
+    "lon": 37.425
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Монумент «Ежи» открыли 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой. Он стоит на 23-м километре Ленинградского шоссе.",
+    "Три стальных противотанковых ежа высотой до 6 метров, по данным путеводителей, сделаны из балок, предназначавшихся для Дворца Советов. У подножия — каменный подиум с картой обороны столицы."
+   ],
+   "facts": [
+    {
+     "text": "Монумент «Ежи» открыт 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой.",
+     "sourceUrl": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/",
+     "verified": true
+    },
+    {
+     "text": "Мемориал стоит на 23-м километре Ленинградского шоссе.",
+     "sourceUrl": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi",
+     "verified": true
+    },
+    {
+     "text": "Высота ежей — около 6 метров; у подножия подиум с картой обороны столицы.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
+     "verified": true
+    },
+    {
+     "text": "Ежи изготовили из стальных балок, предназначавшихся для Дворца Советов.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
+     "verified": false
+    },
+    {
+     "text": "Местные источники называют это место последним рубежом, до которого дошёл враг; другие отмечают, что боёв здесь не было.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Khimki_War_Memorial",
+     "verified": false
+    },
+    {
+     "text": "Годовщину установки монумента ежегодно отмечают в Химках.",
+     "sourceUrl": "https://360.ru/news/mosobl/godovschinu-ustanovki-monumenta-protivotankovye-ezhi-otmetili-v-himkah/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Мемориал у оживлённого шоссе: подходим пешком по безопасной дорожке."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "arkhangelskoe-derevni",
+   "name": "Деревенские улицы",
+   "coords": {
+    "lat": 55.932,
+    "lon": 37.37
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Молжаниново, Новосёлки и Черкизово — деревни, оказавшиеся в черте Москвы. Здесь частные дома и огороды соседствуют с аэропортом и трассами.",
+    "Историю деревень мы не нашли в открытых источниках; если знаете её — это хороший повод поговорить с местными."
+   ],
+   "facts": [
+    {
+     "text": "Деревни находятся в черте Москвы.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "История деревень в найденных источниках не раскрыта.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Район соседствует с аэропортом Шереметьево.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Москва расширялась в 2012 году за счёт Новой Москвы, но Молжаниново входило в неё раньше.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
+  },
+  {
+   "id": "arkhangelskoe-polya",
+   "name": "Поля у Шереметьева",
+   "coords": {
+    "lat": 55.938,
+    "lon": 37.38
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "По краю района — поля и перелески, над которыми заходят на посадку самолёты.",
+    "Это редкое место в Москве, где огромный город выглядит как настоящая деревня.",
+    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Следующая точка маршрута — «Мемориал «Штыки»»."
+   ],
+   "facts": [
+    {
+     "text": "Над районом заходят на посадку самолёты.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Описание ландшафта — наблюдение составителя.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Район находится на севере Москвы.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Новая Москва описана в Рувики.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 100
+  },
+  {
+   "id": "arkhangelskoe-memorial",
+   "name": "Мемориал «Штыки»",
+   "coords": {
+    "lat": 55.97,
+    "lon": 37.3
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Мемориал стоит на 40-м километре Ленинградского шоссе. Строительство шло с 1973 года, монумент установлен 24 июня 1974 года.",
+    "В братской могиле похоронены останки 760 бойцов, найденных во время строительства Зеленограда. Памятник — объект культурного наследия регионального значения.",
+    "Подходим пешком по безопасной дорожке и минуту молчим. Следующая точка маршрута — «Последний рубеж»."
+   ],
+   "facts": [
+    {
+     "text": "Мемориал находится на 40-м километре Ленинградского шоссе.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    },
+    {
+     "text": "Монумент установлен 24 июня 1974 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    },
+    {
+     "text": "В братской могиле — останки 760 бойцов.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": false
+    },
+    {
+     "text": "Мемориал посвящён погибшим при обороне Москвы в 1941 году.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
+     "verified": true
+    },
+    {
+     "text": "Памятник — объект культурного наследия регионального значения.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Мемориал: тишина и уважение."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 110
+  },
+  {
+   "id": "arkhangelskoe-rubezh",
+   "name": "Последний рубеж",
+   "coords": {
+    "lat": 55.975,
+    "lon": 37.25
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
+    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Финиш — Станция «Фирсановская»: Электрички Ленинградского направления / МЦД-3."
+   ],
+   "facts": [
+    {
+     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
+    },
+    {
+     "text": "Шли бои за деревню Матушкино.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
+    },
+    {
+     "text": "Матушкино освобождено 8 декабря 1941 года.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": false
+    },
+    {
+     "text": "Ленинградское шоссе — плотное движение.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Ленинградское шоссе: не выезжать на проезжую часть."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 120
   }
  ],
  "dish": {
@@ -222,13 +651,62 @@
   {
    "title": "Музей-усадьба — Tripster",
    "url": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe"
+  },
+  {
+   "title": "История Красногорска — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
+  },
+  {
+   "title": "Музей немецких антифашистов — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
+  },
+  {
+   "title": "Знаменское-Губайлово — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
+  },
+  {
+   "title": "Путилково — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/putilkovo/"
+  },
+  {
+   "title": "Деревня — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F"
+  },
+  {
+   "title": "Монумент «Ежи» — culture.ru",
+   "url": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi"
+  },
+  {
+   "title": "Мемориал «Ежи» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/"
+  },
+  {
+   "title": "Химки — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/"
+  },
+  {
+   "title": "Церковь в Черкизове — sobory.ru",
+   "url": "https://sobory.ru/photo/11000"
+  },
+  {
+   "title": "Штыки — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)"
+  },
+  {
+   "title": "Мемориал «Штыки» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
+    [
+     37.243883,
+     55.9622
+    ],
     [
      37.275409,
      55.783
@@ -250,56 +728,64 @@
      55.780277
     ],
     [
-     37.288796,
-     55.781277
-    ],
-    [
      37.292796,
      55.782277
     ],
     [
-     37.293296,
-     55.782477
+     37.294842,
+     55.783428
     ],
     [
-     37.295342,
-     55.783628
+     37.444855,
+     55.887428
     ],
     [
-     37.296092,
-     55.7852
+     37.445606,
+     55.889
     ],
     [
-     37.295342,
-     55.786772
+     37.444855,
+     55.890572
     ],
     [
-     37.293296,
-     55.787923
+     37.429857,
+     55.903572
     ],
     [
-     37.2905,
-     55.788344
+     37.384861,
+     55.939572
     ],
     [
-     37.284,
-     55.788144
+     37.382807,
+     55.940723
     ],
     [
-     37.281204,
-     55.787723
+     37.302809,
+     55.972723
     ],
     [
-     37.279158,
-     55.786572
+     37.3,
+     55.973144
     ],
     [
-     37.276158,
-     55.784572
+     37.25,
+     55.978144
     ],
     [
-     37.275409,
-     55.783
+     37.247191,
+     55.977723
+    ],
+    [
+     37.245134,
+     55.976572
+    ],
+    [
+     37.244381,
+     55.975
+    ],
+    [
+     37.243883,
+     55.9622
     ]
    ]
   ]

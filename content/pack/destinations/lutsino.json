@@ -12,7 +12,9 @@
  "intro": [
   "Луцино — деревня к западу от Звенигорода, известная высокими берегами Москвы-реки. Это маршрут на природу: лес, долина реки и крутые склоны.",
   "Статус памятника природы и подробную историю деревни мы в найденных источниках не подтвердили и честно об этом говорим.",
-  "Через южный микрорайон Звенигорода проходит Луцинское шоссе, ведущее к реке. Маршрут: Звенигород, шоссе и берег Москвы-реки."
+  "Через южный микрорайон Звенигорода проходит Луцинское шоссе, ведущее к реке. Маршрут: Звенигород, шоссе и берег Москвы-реки.",
+  "Сначала — свои места: «Высокий берег Москвы-реки», «Деревня Луцино». Дальше маршрут идёт по соседним местам: Звенигород — «Саввино-Сторожевский монастырь», «Успенский собор на Городке»; Захарово — «Дом Марии Ганнибал»; Голицыно — «Дорога к Вязёмам», «Центр Голицына»; Апрелевка — «Завод грампластинок».",
+  "Маршрут линейный, около 58 км и 8 точек. Финиш — Станция «Апрелевка» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Звенигород»",
@@ -23,71 +25,24 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Звенигород»",
+  "name": "Станция «Апрелевка»",
   "coords": {
-   "lat": 55.7302,
-   "lon": 36.8555
+   "lat": 55.5452,
+   "lon": 37.0735
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 20.0,
-  "durationH": 3.0,
-  "difficulty": "средний",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 58.0,
+  "durationH": 7.3,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "lutsino-shosse",
-   "name": "Луцинское шоссе",
-   "coords": {
-    "lat": 55.715,
-    "lon": 36.84
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Луцинское шоссе проходит через южный микрорайон Звенигорода; от него до Москвы-реки — несколько сотен метров.",
-    "По шоссе выезжаем из города в сторону Луцина. Движение может быть плотным — держитесь обочины.",
-    "Дальше — сельская дорога на запад. Следующая точка маршрута — «Высокий берег Москвы-реки». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Луцинское шоссе проходит через южный микрорайон Звенигорода.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": true
-    },
-    {
-     "text": "От шоссе до Москвы-реки несколько сотен метров.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": true
-    },
-    {
-     "text": "Звенигород описан в материале ЦИАН.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/",
-     "verified": true
-    },
-    {
-     "text": "Интенсивность движения не проверена.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.putevka.com/moskva/zvenigorod/zvenigorod-otel/transfer",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
   {
    "id": "lutsino-bereg",
    "name": "Высокий берег Москвы-реки",
@@ -99,8 +54,7 @@
    "visitMinutes": 30,
    "guideStory": [
     "У Луцина Москва-река течёт в глубокой долине с высокими берегами. Будьте осторожны у края — склоны крутые.",
-    "Жители окрестностей собирали подписи против застройки этих земель — значит, ценность места понимают и местные.",
-    "Привал у реки — лучшая часть маршрута. Следующая точка маршрута — «Деревня Луцино». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
+    "Жители окрестностей собирали подписи против застройки этих земель — значит, ценность места понимают и местные. Следующая точка маршрута — «Деревня Луцино»."
    ],
    "facts": [
     {
@@ -135,8 +89,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "lutsino-derevnya",
@@ -149,8 +103,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Луцино — небольшая деревня Одинцовского округа. Её историю мы в найденных источниках не нашли.",
-    "Отсюда возвращаемся в Звенигород той же дорогой; если устали — можно поискать автобус до города.",
-    "Финиш — станция Звенигород. Финиш — Станция «Звенигород»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Отсюда возвращаемся в Звенигород той же дорогой; если устали — можно поискать автобус до города. Следующая точка маршрута — «Саввино-Сторожевский монастырь»."
    ],
    "facts": [
     {
@@ -182,8 +135,291 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "lutsino-monastyr",
+   "name": "Саввино-Сторожевский монастырь",
+   "coords": {
+    "lat": 55.728,
+    "lon": 36.815
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Саввино-Сторожевский монастырь стоит на горе Сторожевской. Его основание связывают с преподобным Саввой Сторожевским около 1398 года — эту дату мы не нашли в проверенных источниках.",
+    "Рождественский собор монастыря построен в начале XV века и тоже связан с именем Рублёва. С 2016 года в нём идёт научная реставрация, храм в лесах."
+   ],
+   "facts": [
+    {
+     "text": "Рождественский собор монастыря построен в начале XV века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Собор связывают с именем Рублёва.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "С 2016 года в соборе идёт научная реставрация.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Основание монастыря около 1398 года не подтверждено найденными источниками.",
+     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/044/951.htm",
+     "verified": false
+    },
+    {
+     "text": "360.ru советует, что посмотреть в Звенигороде на выходных.",
+     "sourceUrl": "https://360.ru/news/mosobl/chto-posmotret-na-vyhodnyh-v-zvenigorode/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь: правила посещения."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "lutsino-sobor",
+   "name": "Успенский собор на Городке",
+   "coords": {
+    "lat": 55.7285,
+    "lon": 36.834
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Успенский собор датируют концом XIV века. Это один из немногих сохранившихся белокаменных храмов московской традиции.",
+    "В 1918 году во время реставрации в храме обнаружили три образа, приписываемых Андрею Рублёву: «Апостол Павел», «Архангел Михаил» и «Спас Вседержитель». Сегодня они в Третьяковской галерее."
+   ],
+   "facts": [
+    {
+     "text": "Успенский собор датируют концом XIV века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Это один из немногих сохранившихся белокаменных храмов московской традиции.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "В 1918 году в храме нашли три иконы, приписываемые Рублёву.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Звенигородский чин хранится в Третьяковской галерее.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Точную дату постройки собора мы не сверяли.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "lutsino-dom",
+   "name": "Дом Марии Ганнибал",
+   "coords": {
+    "lat": 55.645,
+    "lon": 36.97
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Бабушка поэта Мария Алексеевна Ганнибал купила Захарово в 1804 году. Мать охотно отправляла сюда маленького Сашу и его сестру, и он проводил здесь каждое лето, пока не уехал в лицей.",
+    "Подлинный дом не сохранился. В 1999 году, к 200-летию Пушкина, его воссоздали по сохранившимся изображениям и описаниям.",
+    "Сегодня здесь проходят ежегодные Пушкинские праздники поэзии."
+   ],
+   "facts": [
+    {
+     "text": "Мария Ганнибал купила Захарово в 1804 году.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "Пушкин проводил здесь каждое лето до отъезда в лицей.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "Оригинальный дом не сохранился.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "Дом воссоздан в 1999 году к 200-летию Пушкина.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
+     "verified": true
+    },
+    {
+     "text": "В Захарове проходят Пушкинские праздники поэзии.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "lutsino-okraina",
+   "name": "Дорога к Вязёмам",
+   "coords": {
+    "lat": 55.625,
+    "lon": 36.99
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Отсюда начинается дорога к Большим Вязёмам и Захарову — пушкинским местам, о которых рассказывают отдельные маршруты спирали.",
+    "Туристические сайты советуют использовать Голицыно как отправную точку для поездок по окрестным усадьбам."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с Голицыном — Большие Вязёмы и Захарово.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Захарово связано с детством Пушкина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Голицыно — удобная отправная точка для усадеб.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Голицыно описано в Знании.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "lutsino-tsentr",
+   "name": "Центр Голицына",
+   "coords": {
+    "lat": 55.617,
+    "lon": 36.99
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Голицыно — небольшой город; его центр складывался вокруг станции.",
+    "Дату основания и происхождение названия мы в найденных источниках не нашли. Не будем гадать, связано ли оно с князьями Голицыными, владевшими соседними Вязёмами. Следующая точка маршрута — «Завод грампластинок»."
+   ],
+   "facts": [
+    {
+     "text": "Центр города сложился вокруг станции.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Происхождение названия не установлено.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Достопримечательности Голицына собраны на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/golicino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты центра приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "lutsino-zavod",
+   "name": "Завод грампластинок",
+   "coords": {
+    "lat": 55.55,
+    "lon": 37.07
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
+    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
+    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
+   ],
+   "facts": [
+    {
+     "text": "Завод основан в 1910 году Б. Моллем.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "verified": true
+    },
+    {
+     "text": "Первые пластинки выпущены в декабре 1910 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "С 1964 года завод входил в фирму «Мелодия».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -214,9 +450,50 @@
   {
    "title": "Звенигород — ЦИАН",
    "url": "https://www.cian.ru/stati-goroda-podmoskovja-zvenigorod-216391/"
+  },
+  {
+   "title": "Звенигород — booksite.ru",
+   "url": "https://booksite.ru/fulltext/1/001/008/044/951.htm"
+  },
+  {
+   "title": "Успенский собор — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_%D0%B2_%D0%97%D0%B2%D0%B5%D0%BD%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B5"
+  },
+  {
+   "title": "Достопримечательности — Tripster",
+   "url": "https://experience.tripster.ru/experience/Zvenigorod/sights"
+  },
+  {
+   "title": "Детство гения: Захарово — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina"
+  },
+  {
+   "title": "Детство Пушкина — Рамблер",
+   "url": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/"
+  },
+  {
+   "title": "Голицыно — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
+   "title": "Голицыно — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
+   "title": "Апрелевский завод грампластинок — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
+  },
+  {
+   "title": "Апрелевский завод — БРЭ",
+   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
+  },
+  {
+   "title": "Апрелевка — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -234,40 +511,48 @@
      55.727277
     ],
     [
-     36.73,
-     55.726856
+     37.070721,
+     55.542477
     ],
     [
-     36.84,
-     55.711856
+     37.0735,
+     55.542056
     ],
     [
-     36.842791,
-     55.712277
+     37.076279,
+     55.542477
     ],
     [
-     36.844834,
-     55.713428
+     37.078313,
+     55.543628
     ],
     [
-     36.860336,
-     55.728628
+     37.079057,
+     55.5452
     ],
     [
-     36.861084,
-     55.7302
+     37.078313,
+     55.546772
     ],
     [
-     36.860336,
-     55.731772
+     37.074813,
+     55.551572
     ],
     [
-     36.858292,
-     55.732923
+     36.974825,
+     55.646572
     ],
     [
-     36.8555,
-     55.733344
+     36.859836,
+     55.731572
+    ],
+    [
+     36.857792,
+     55.732723
+    ],
+    [
+     36.855,
+     55.733144
     ],
     [
      36.735,

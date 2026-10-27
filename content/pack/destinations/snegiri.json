@@ -13,7 +13,8 @@
   "Снегири — посёлок на Волоколамском шоссе, где в 1941 году остановили наступление немецких войск на Москву.",
   "30 ноября 1941 года на 42-м километре шоссе шли бои; здесь стояла 78-я стрелковая дивизия под командованием Афанасия Белобородова.",
   "9 мая 1967 года местные жители открыли Ленино-Снегирёвский военно-исторический музей. Его основатель — инженер Игорь Усаневич, ставший директором музея.",
-  "Маршрут: станция, мемориал на 41-м километре и музей."
+  "Сначала — свои места: «Рубеж обороны», «Ленино-Снегирёвский музей». Дальше маршрут идёт по соседним местам: Дедовск — «Рабочий посёлок», «Прядильно-ткацкая фабрика»; Нахабино — «Старое село», «Полигон и первые ракеты»; Архангельское — «Большой дворец»; Красногорск — «Музей немецких антифашистов», «Центр и история города»; Путилково — «Бывшая деревенская часть», «Долина Сходни».",
+  "Маршрут линейный, около 52 км и 11 точек. Финиш — Метро «Планерная» (Таганско-Краснопресненская линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Снегири»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Рижского направления"
  },
  "endPoint": {
-  "name": "Станция «Снегири»",
+  "name": "Метро «Планерная»",
   "coords": {
-   "lat": 55.8912,
-   "lon": 37.0285
+   "lat": 55.86,
+   "lon": 37.437
   },
-  "transport": "Электрички Рижского направления"
+  "transport": "Таганско-Краснопресненская линия"
  },
  "route": {
-  "distanceKm": 6.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 52.0,
+  "durationH": 7.4,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "В 1941 году на Волоколамском шоссе близ Снегирей было остановлено наступление немецких войск на Москву.",
-    "30 ноября на 42-м километре шоссе шли бои, в которых участвовала 78-я стрелковая дивизия Афанасия Белобородова.",
-    "Вдоль шоссе едем осторожно: движение плотное, держитесь обочины или параллельных дорог. Следующая точка маршрута — «Ленино-Снегирёвский музей»."
+    "30 ноября на 42-м километре шоссе шли бои, в которых участвовала 78-я стрелковая дивизия Афанасия Белобородова. Следующая точка маршрута — «Ленино-Снегирёвский музей»."
    ],
    "facts": [
     {
@@ -88,8 +88,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "snegiri-muzey",
@@ -102,8 +102,7 @@
    "visitMinutes": 45,
    "guideStory": [
     "Музей основан 9 мая 1967 года в память об обороне Москвы. Создали его местные жители во главе с Игорем Усаневичем, инженером НПО «Алмаз», который стал директором музея и погиб в 2000 году.",
-    "Музей разместился в здании бывшей школы. В 2010 году «Московский комсомолец» писал, что военный музей восстановят силами ветеранов после пожара; связь той новости именно с этим музеем мы не проверили.",
-    "Часы работы и билеты уточняйте заранее. Следующая точка маршрута — «Минута памяти»."
+    "Музей разместился в здании бывшей школы. В 2010 году «Московский комсомолец» писал, что военный музей восстановят силами ветеранов после пожара; связь той новости именно с этим музеем мы не проверили."
    ],
    "facts": [
     {
@@ -136,55 +135,432 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
-   "id": "snegiri-pamyat",
-   "name": "Минута памяти",
+   "id": "snegiri-posyolok",
+   "name": "Рабочий посёлок",
    "coords": {
-    "lat": 55.889,
-    "lon": 37.029
+    "lat": 55.868,
+    "lon": 37.12
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
+   "kind": "проезжаем",
+   "visitMinutes": 15,
    "guideStory": [
-    "Здесь, у Снегирей, проходил один из последних рубежей перед Москвой. Музей создавали не историки, а жители посёлка — в этом его особенность.",
-    "Остановитесь на минуту и вспомните тех, кто воевал на этом рубеже.",
-    "После минуты памяти спокойно возвращаемся к станции Снегири. Финиш — Станция «Снегири»: Электрички Рижского направления."
+    "Рядом с фабрикой вырос рабочий посёлок Дедовский: строили дома, школу, ясли.",
+    "Название города, вероятно, связано с деревней Дедово, но точной истории названия мы в источниках не нашли.",
+    "По улицам бывшего рабочего посёлка возвращаемся к станции Гучково."
    ],
    "facts": [
     {
-     "text": "Музей создали местные жители.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "text": "При фабрике был рабочий посёлок Дедовский со школой и яслями.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
      "verified": true
     },
     {
-     "text": "Снегири связаны с обороной Москвы 1941 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Белобородов командовал 78-й стрелковой дивизией.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "text": "Происхождение названия не проверено.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
      "verified": false
     },
     {
-     "text": "Музей находится в Истринском округе.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "text": "Промышленность определила развитие города.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Дедовск — город районного подчинения.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": false
+    },
+    {
+     "text": "Достопримечательности Дедовска собраны на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "snegiri-fabrika",
+   "name": "Прядильно-ткацкая фабрика",
+   "coords": {
+    "lat": 55.865,
+    "lon": 37.13
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Фабрику основало российско-французское акционерное общество: по одним данным в 1911 году, по другим — в 1913-м. Её называли одной из самых крупных и современных мануфактур того времени.",
+    "В 1940-х годах фабрику преобразовали в кордную. Промышленность надолго стала градообразующей для Дедовска."
+   ],
+   "facts": [
+    {
+     "text": "Фабрику основало российско-французское акционерное общество.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Год основания — 1911 или 1913, источники расходятся.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": false
+    },
+    {
+     "text": "Фабрику описывают как одну из самых крупных мануфактур своего времени.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "verified": true
+    },
+    {
+     "text": "В 1940-х фабрику преобразовали в кордную.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Флаг Дедовска описан в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B0",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Промышленная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "snegiri-selo",
+   "name": "Старое село",
+   "coords": {
+    "lat": 55.835,
+    "lon": 37.175
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Нахабино известно с 1482 года: тогда село принадлежало боярам Плещеевым. В 1534 году оно перешло к Троице-Сергиеву монастырю.",
+    "В посёлке есть храм, описанный в паломническом справочнике «Азбуки веры», — Максимовский. Его историю мы не сверяли."
+   ],
+   "facts": [
+    {
+     "text": "Нахабино известно с 1482 года как владение бояр Плещеевых.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "В 1534 году село перешло к Троице-Сергиеву монастырю.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "В Нахабине есть Максимовский храм.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "История храма нами не проверена.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "snegiri-poligon",
+   "name": "Полигон и первые ракеты",
+   "coords": {
+    "lat": 55.83,
+    "lon": 37.19
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Нахабино известно как полигон инженерных войск. По Циклопедии, в 1933 году здесь запустили первые советские ракеты; туристический справочник пишет, что ракеты испытывали тут ещё до войны.",
+    "Полигон — закрытая военная территория. Смотрим только с общественных дорог и не фотографируем охраняемые объекты."
+   ],
+   "facts": [
+    {
+     "text": "В Нахабине в 1933 году запустили первые советские ракеты.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Нахабино — полигон инженерных войск.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": true
+    },
+    {
+     "text": "До войны здесь испытывали первые советские ракеты.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": true
+    },
+    {
+     "text": "Полигон — закрытая территория.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": false
+    },
+    {
+     "text": "Точное место запусков мы не устанавливали.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Военная территория: не фотографировать охраняемые объекты."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "snegiri-dvorets",
+   "name": "Большой дворец",
+   "coords": {
+    "lat": 55.785,
+    "lon": 37.284
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "В 1810 году Архангельское купил князь Николай Борисович Юсупов — коллекционер и вельможа. Он превратил усадьбу в музей своей эпохи: по одному источнику, в его коллекции было более 540 полотен западноевропейских живописцев и десятки мраморных скульптур.",
+    "После революции имение национализировали, и уже в 1919 году здесь открылся государственный музей. Послевоенную реставрацию вели по сохранившимся фотографиям и архивам.",
+    "Музей платный; часы работы и правила прохода с велосипедом уточняйте у входа."
+   ],
+   "facts": [
+    {
+     "text": "Усадьбу в 1810 году купил князь Николай Юсупов.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
+     "verified": true
+    },
+    {
+     "text": "В коллекции Юсупова было более 540 полотен и десятки скульптур.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
+     "verified": false
+    },
+    {
+     "text": "Юсуповы владели усадьбой с 1810 по 1917 год.",
+     "sourceUrl": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe",
+     "verified": true
+    },
+    {
+     "text": "Государственный музей открылся в 1919 году.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
+     "verified": true
+    },
+    {
+     "text": "Архангельское называют «подмосковным Версалем».",
+     "sourceUrl": "https://www.kommersant.ru/gallery/4094761",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "snegiri-muzey-2",
+   "name": "Музей немецких антифашистов",
+   "coords": {
+    "lat": 55.825,
+    "lon": 37.315
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Мемориальный музей немецких антифашистов находится на улице Народного Ополчения, 15. Он рассказывает об антифашистском движении немцев в годы войны.",
+    "В коллекции — немецкие знаки и награды, листовки антифашистских организаций, газеты и униформа. По данным справочника, музей ежегодно принимает более 8000 посетителей."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится на ул. Народного Ополчения, 15.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "В коллекции — знаки, награды, листовки, газеты и униформа.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "Музей принимает более 8000 посетителей в год.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    },
+    {
+     "text": "Музей — филиал Музея Победы.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "snegiri-tsentr",
+   "name": "Центр и история города",
+   "coords": {
+    "lat": 55.831,
+    "lon": 37.32
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Город вырос вокруг предприятий оптики. Дата основания спорна: 1932 год по одному источнику и объединение деревень в начале XX века — по другому.",
+    "В годы войны в городе создали батальоны народного ополчения, истребительный батальон и трудовые отряды."
+   ],
+   "facts": [
+    {
+     "text": "Красногорск связан с оптическими предприятиями.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Дата основания города в источниках расходится.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    },
+    {
+     "text": "В войну создавались батальоны народного ополчения.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Куда сходить в Красногорске — подборка KudaGo.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": true
+    },
+    {
+     "text": "Красногорск граничит с Москвой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
+  },
+  {
+   "id": "snegiri-staroe",
+   "name": "Бывшая деревенская часть",
+   "coords": {
+    "lat": 55.863,
+    "lon": 37.395
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "От старой деревни почти ничего не осталось: на её месте выросли многоэтажки, и сохранилось ли что-то от старой застройки, мы не проверяли.",
+    "И всё же Путилково живёт под деревенским именем, напоминая о временах, когда здесь были избы, а не микрорайоны.",
+    "Маршрут Путилкова завершён — короткий, но любопытный: от записи 1576 года до одного из крупнейших «негородов» страны."
+   ],
+   "facts": [
+    {
+     "text": "Путилково выросло из деревни, упомянутой в 1576 году.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сегодня это крупный населённый пункт у МКАД.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сохранность старой застройки мы не проверяли.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    },
+    {
+     "text": "Путилково входит в городской округ Красногорск.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Понятие «деревня» в России определяется статусом, а не размером.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 100
+  },
+  {
+   "id": "snegiri-skhodnya",
+   "name": "Долина Сходни",
+   "coords": {
+    "lat": 55.87,
+    "lon": 37.405
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "По одной из версий, название Путилково связано с древним торговым путём по речке Сходне.",
+    "Первое письменное упоминание Путилкова — 1576 год, описание границ Спас-Тушинской монастырской вотчины. Тушино с его историей Смуты — совсем рядом, ниже по Сходне."
+   ],
+   "facts": [
+    {
+     "text": "Название по одной версии связано с древним торговым путём по Сходне.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Первое письменное упоминание — 1576 год, при описании границ Спас-Тушинской вотчины.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сходня течёт к Тушину.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    },
+    {
+     "text": "Путилково расположено у МКАД.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Версия о торговом пути не подтверждена документами.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 110
   }
  ],
  "dish": {
@@ -215,9 +591,58 @@
   {
    "title": "Ленино-Снегирёвский музей — Циклопедия",
    "url": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9"
+  },
+  {
+   "title": "Дедовск — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/30938"
+  },
+  {
+   "title": "Достопримечательности Дедовска — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/dedovsk/"
+  },
+  {
+   "title": "Нахабино — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE"
+  },
+  {
+   "title": "Nakhabino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Nakhabino"
+  },
+  {
+   "title": "Архангельское — 360",
+   "url": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/"
+  },
+  {
+   "title": "Архангельское — tonkosti.ru",
+   "url": "https://tonkosti.ru/Архангельское"
+  },
+  {
+   "title": "Музей-усадьба — Tripster",
+   "url": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe"
+  },
+  {
+   "title": "История Красногорска — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
+  },
+  {
+   "title": "Музей немецких антифашистов — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
+  },
+  {
+   "title": "Знаменское-Губайлово — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
+  },
+  {
+   "title": "Путилково — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/putilkovo/"
+  },
+  {
+   "title": "Деревня — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -229,10 +654,6 @@
     [
      37.023144,
      55.889428
-    ],
-    [
-     37.024145,
-     55.887428
     ],
     [
      37.025145,
@@ -247,40 +668,48 @@
      55.882277
     ],
     [
-     37.035,
-     55.881856
+     37.281204,
+     55.782277
     ],
     [
-     37.037803,
-     55.882277
+     37.284,
+     55.781856
     ],
     [
-     37.039855,
-     55.883428
+     37.286796,
+     55.782277
     ],
     [
-     37.040606,
-     55.885
+     37.439801,
+     55.857277
     ],
     [
-     37.039855,
-     55.886572
+     37.441852,
+     55.858428
     ],
     [
-     37.033356,
-     55.892772
+     37.442602,
+     55.86
     ],
     [
-     37.031303,
-     55.893923
+     37.441852,
+     55.861572
     ],
     [
-     37.0285,
-     55.894344
+     37.439801,
+     55.862723
     ],
     [
-     37.025697,
-     55.893923
+     37.407802,
+     55.872723
+    ],
+    [
+     37.405,
+     55.873144
+    ],
+    [
+     37.028,
+     55.894144
     ],
     [
      37.025197,

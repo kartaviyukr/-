@@ -13,7 +13,8 @@
   "Климовск — бывший город, сегодня микрорайон Подольска. Он вырос вокруг завода, открытого в 1882 году: Московское товарищество механических изделий, позже Климовский машиностроительный завод.",
   "Завод выпускал ткацкое оборудование и был флагманом текстильного машиностроения СССР. В войну здесь делали 82-мм мины и корпуса реактивных снарядов для «катюш». В 1940 году посёлок получил статус города и имя Климовск.",
   "В советское время здесь работал ЦНИИточмаш — разработчик стрелкового оружия; с 1936 года действует патронный завод.",
-  "Маршрут: станция, заводская часть и центр."
+  "Сначала — свои места: «Климовский машиностроительный», «ЦНИИточмаш и патронный завод», «Центр Климовска». Дальше маршрут идёт по соседним местам: Подольск — «Троицкий собор», «Набережная Пахры и усадьба Ивановское»; Дубровицы — «Храм Знамения Пресвятой Богородицы»; Остафьево — «Карамзинская роща»; Щербинка — «Завод лифтов и испытательное кольцо», «Центр Щербинки»; Бутово (полигон, Знаменское-Садки) — «Бутовский полигон», «Усадьба Знаменское-Садки».",
+  "Маршрут линейный, около 51 км и 11 точек. Финиш — Станция «Битца» или метро «Битцевский парк» (Метро и МЦД-2 — уточняйте), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Климовск»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Курского направления / МЦД-2"
  },
  "endPoint": {
-  "name": "Станция «Климовск»",
+  "name": "Станция «Битца» или метро «Битцевский парк»",
   "coords": {
-   "lat": 55.3632,
-   "lon": 37.5305
+   "lat": 55.585,
+   "lon": 37.555
   },
-  "transport": "Электрички Курского направления / МЦД-2"
+  "transport": "Метро и МЦД-2 — уточняйте"
  },
  "route": {
-  "distanceKm": 5.0,
-  "durationH": 1.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 51.0,
+  "durationH": 7.0,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Завод открылся в 1882 году как Московское товарищество механических изделий (МТМИ), позже стал Климовским машиностроительным заводом. Он работал до 2002 года.",
-    "КМЗ выпускал ткацкое оборудование и был флагманом текстильного машиностроения СССР. В войну здесь делали 82-мм мины и корпуса реактивных снарядов для «катюш».",
-    "Смотрим заводские корпуса снаружи. Следующая точка маршрута — «ЦНИИточмаш и патронный завод»."
+    "КМЗ выпускал ткацкое оборудование и был флагманом текстильного машиностроения СССР. В войну здесь делали 82-мм мины и корпуса реактивных снарядов для «катюш»."
    ],
    "facts": [
     {
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "klimovsk-tochmash",
@@ -101,7 +101,7 @@
    "guideStory": [
     "В советское время в Климовске работал ЦНИИточмаш — институт, разрабатывавший стрелковое оружие.",
     "С 1936 года здесь существует специализированный патронный завод. Обе территории закрыты.",
-    "От закрытых территорий едем в центр бывшего города, к станции. Следующая точка маршрута — «Центр Климовска». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+    "От закрытых территорий едем в центр бывшего города, к станции."
    ],
    "facts": [
     {
@@ -135,8 +135,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "klimovsk-tsentr",
@@ -149,8 +149,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "В 1940 году рабочий посёлок получил статус города и название Климовск. Позже город вошёл в состав Подольска.",
-    "В Подольске отпраздновали 200-летие улицы Климовской — это напоминает, что история этих мест старше завода.",
-    "Возвращаемся к станции. Финиш — Станция «Климовск»: Электрички Курского направления / МЦД-2. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "В Подольске отпраздновали 200-летие улицы Климовской — это напоминает, что история этих мест старше завода. Следующая точка маршрута — «Троицкий собор»."
    ],
    "facts": [
     {
@@ -182,8 +181,401 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "klimovsk-sobor",
+   "name": "Троицкий собор",
+   "coords": {
+    "lat": 55.428,
+    "lon": 37.547
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Троицкий собор — главный православный храм города. По одному источнику, он построен в 1832 году в честь победы над Наполеоном; эту дату мы не сверили с другими источниками.",
+    "Герб Подольска, утверждённый 20 декабря 1781 года, изображает два золотых инструмента каменотёсов на голубом поле — «в знак того, что жители сим промыслом набогащаются»."
+   ],
+   "facts": [
+    {
+     "text": "Троицкий собор — главный православный храм Подольска.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/podolsk/",
+     "verified": true
+    },
+    {
+     "text": "По одному источнику, собор построен в 1832 году в честь победы над Наполеоном.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/podolsk/",
+     "verified": false
+    },
+    {
+     "text": "Герб утверждён 20 декабря 1781 года, на нём два инструмента каменотёсов.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/",
+     "verified": true
+    },
+    {
+     "text": "Подольские жители занимались добычей белого камня.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/",
+     "verified": true
+    },
+    {
+     "text": "Достопримечательности Подольска собраны на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "klimovsk-ivanovskoe",
+   "name": "Набережная Пахры и усадьба Ивановское",
+   "coords": {
+    "lat": 55.442,
+    "lon": 37.555
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Пахра — река, на которой стоял старый Подол. По берегу едем к усадьбе Ивановское — классическому дворянскому имению рубежа XVIII–XIX веков.",
+    "По одному описанию, двести лет назад вокруг усадьбы был лес, а рядом текла Пахра. Сегодня Ивановское внутри города; часы доступа на территорию мы не уточняли."
+   ],
+   "facts": [
+    {
+     "text": "Усадьба Ивановское — дворянское имение рубежа XVIII–XIX веков.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Подольск стоит на реке Пахре.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/podolsk/history",
+     "verified": true
+    },
+    {
+     "text": "Часы работы усадьбы мы не проверяли.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/podolsk/",
+     "verified": false
+    },
+    {
+     "text": "Рядом с Подольском — усадьбы Дубровицы и Плещеево.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Описание леса вокруг усадьбы — по туристическому источнику.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "klimovsk-khram",
+   "name": "Храм Знамения Пресвятой Богородицы",
+   "coords": {
+    "lat": 55.44,
+    "lon": 37.495
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Храм заложен 22 июля 1690 года во имя иконы Знамения Богородицы. Его основателем и первым старостой стал князь Борис Голицын. Один источник называет 1697 год временем постройки — даты расходятся.",
+    "Храм связывают с возвращением Голицына к царю после опалы 1689 года. На стройку, по рассказам, приезжал сам Пётр, а хоры из морёного дуба, с которых он, по преданию, смотрел освящение, сохранились.",
+    "Историк, на чьё письмо ссылается сайт ВШЭ, считает часть «петровских» сюжетов о Дубровицах поздней путаницей. Храм действующий — ведите себя тихо."
+   ],
+   "facts": [
+    {
+     "text": "Храм заложен 22 июля 1690 года во имя иконы Знамения Богородицы.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D1%86%D1%8B_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Основатель храма — князь Борис Голицын, воспитатель Петра I.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D1%86%D1%8B_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Голицын стал хозяином усадьбы в 1688 году.",
+     "sourceUrl": "https://experience.tripster.ru/sights/37321-hram-znameniya/",
+     "verified": true
+    },
+    {
+     "text": "Один источник называет годом постройки 1697-й.",
+     "sourceUrl": "https://kudago.com/msk/place/znamenskaya-cerkov-v-sele-dubrovicy/",
+     "verified": false
+    },
+    {
+     "text": "По преданию, хоры, с которых Пётр смотрел освящение, сохранились.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-podolskij-rajon-hram-s-koronoj-i-usadby-dlya-brakosochetanij-xl/",
+     "verified": false
+    },
+    {
+     "text": "Часть преданий о Петре в Дубровицах оспаривается.",
+     "sourceUrl": "https://spb.hse.ru/humart/history/peter/biochronic/244234921",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "klimovsk-roshcha",
+   "name": "Карамзинская роща",
+   "coords": {
+    "lat": 55.498,
+    "lon": 37.501
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Берёзовую рощу, где любил гулять Карамзин, назвали Карамзинской. По одному источнику, её высадили в 1808 году.",
+    "Историческую берёзовую рощу в музее-заповеднике собираются восстановить.",
+    "Через рощу выезжаем к дороге и по ней возвращаемся к станции Щербинка, где маршрут замыкается."
+   ],
+   "facts": [
+    {
+     "text": "Берёзовая роща, где гулял Карамзин, называется Карамзинской.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/istoricheskuyu-berezovuyu-roschu-vosstanovyat-v-muzee-usadbe-ostafevo-v-moskve-xl/",
+     "verified": true
+    },
+    {
+     "text": "Роща высажена в 1808 году — по одному источнику.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/istoricheskuyu-berezovuyu-roschu-vosstanovyat-v-muzee-usadbe-ostafevo-v-moskve-xl/",
+     "verified": false
+    },
+    {
+     "text": "Историческую рощу планируют восстановить.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/istoricheskuyu-berezovuyu-roschu-vosstanovyat-v-muzee-usadbe-ostafevo-v-moskve-xl/",
+     "verified": true
+    },
+    {
+     "text": "Карамзин жил в усадьбе 12 лет.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/istoricheskuyu-berezovuyu-roschu-vosstanovyat-v-muzee-usadbe-ostafevo-v-moskve-xl/",
+     "verified": true
+    },
+    {
+     "text": "Остафьево находится в Новой Москве.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "klimovsk-lifty",
+   "name": "Завод лифтов и испытательное кольцо",
+   "coords": {
+    "lat": 55.505,
+    "lon": 37.55
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Щербинка известна как место производства лифтов и как испытательная площадка для железнодорожного транспорта.",
+    "Новые поезда и вагоны испытывают на специальном железнодорожном кольце; территория закрыта, и подробности мы не проверяли."
+   ],
+   "facts": [
+    {
+     "text": "Щербинка известна производством лифтов и испытаниями железнодорожного транспорта.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/scherbinka/",
+     "verified": true
+    },
+    {
+     "text": "Детали испытательного кольца мы не проверяли.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/scherbinka/",
+     "verified": false
+    },
+    {
+     "text": "Территории предприятий закрыты для посетителей.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/scherbinka/",
+     "verified": false
+    },
+    {
+     "text": "Координаты остановки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/scherbinka/",
+     "verified": false
+    },
+    {
+     "text": "Щербинка — промежуточная станция Курского направления.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B8%D0%BD%D0%BA%D0%B0_(%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Промышленные территории закрыты."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "klimovsk-tsentr-2",
+   "name": "Центр Щербинки",
+   "coords": {
+    "lat": 55.5,
+    "lon": 37.56
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "По одной версии, деревня получила название по прозвищу владельца XIV века — боярина Щербы. Документального подтверждения этой версии мы не нашли.",
+    "Посёлок у станции стал рабочим в 1939 году, а в 1975 году Щербинка получила статус города. В 2024 году появился район Щербинка в составе Москвы."
+   ],
+   "facts": [
+    {
+     "text": "Название, по одной версии, связано с боярином Щербой (XIV век).",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/",
+     "verified": false
+    },
+    {
+     "text": "Посёлок получил статус рабочего в 1939 году.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/",
+     "verified": true
+    },
+    {
+     "text": "С 1975 года Щербинка — город.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/",
+     "verified": true
+    },
+    {
+     "text": "Район Щербинка создан в 2024 году объединением поселения и соседних территорий.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/scherbinka/",
+     "verified": true
+    },
+    {
+     "text": "Щербинка описана в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B8%D0%BD%D0%BA%D0%B0_(%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
+  },
+  {
+   "id": "klimovsk-poligon",
+   "name": "Бутовский полигон",
+   "coords": {
+    "lat": 55.537,
+    "lon": 37.585
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "В 1935 году на территории бывшего имения коннозаводчика Зимина устроили стрелковый полигон «Бутово». Приговоры выносила внесудебная «тройка» УНКВД по Московской области; осуждённых привозили в основном из московских тюрем.",
+    "С августа 1937 по октябрь 1938 года здесь расстреляли около 20,8 тысячи человек. Обнаружено 13 рвов на площади около 5 гектаров. Имена 20 765 человек установлены по следственным делам; общее число погибших неизвестно. Среди них — более 300 священнослужителей, позже канонизированных.",
+    "В 1993 году поставили первый памятный знак, в 1996 году — деревянную церковь, в 2007 году — белокаменный храм Новомучеников и Исповедников Российских. Здесь не фотографируются «на память» и не шумят."
+   ],
+   "facts": [
+    {
+     "text": "В 1935 году на территории имения И. И. Зимина устроен стрелковый полигон «Бутово».",
+     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
+     "verified": true
+    },
+    {
+     "text": "С августа 1937 по октябрь 1938 года здесь расстреляли и похоронили около 20,8 тыс. человек.",
+     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
+     "verified": true
+    },
+    {
+     "text": "Обнаружено 13 рвов на площади около 5 га.",
+     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
+     "verified": true
+    },
+    {
+     "text": "Установлены имена 20 765 человек; общее число погибших неизвестно.",
+     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
+     "verified": true
+    },
+    {
+     "text": "Более 300 расстрелянных здесь священников канонизированы.",
+     "sourceUrl": "https://azbyka.ru/days/sv-sobor-novomuchenikov-v-butove-postradavshih",
+     "verified": true
+    },
+    {
+     "text": "Деревянная церковь построена в 1996 году, каменный храм — в 2007 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%83%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%BB%D0%B8%D0%B3%D0%BE%D0%BD",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Мемориальное место: тишина, уважение, без развлекательных фото."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 100
+  },
+  {
+   "id": "klimovsk-sadki",
+   "name": "Усадьба Знаменское-Садки",
+   "coords": {
+    "lat": 55.575,
+    "lon": 37.56
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "На месте усадьбы раньше была деревня Садки; жители ловили рыбу в речке Обитце. В начале XVII века землями владели Ладыженские, потом Урусовы, а с середины XVIII века — князья Трубецкие.",
+    "По справочнику, в имении Трубецких бывали Екатерина II и Пушкин, хозяйничали наполеоновские войска, а позже Катковы устроили здесь суконное производство. Эти сведения мы видели в одном источнике."
+   ],
+   "facts": [
+    {
+     "text": "Владельцы: Ладыженские, Урусовы, с середины XVIII века — Трубецкие.",
+     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
+     "verified": true
+    },
+    {
+     "text": "На месте усадьбы была деревня Садки, жители ловили рыбу в Обитце.",
+     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
+     "verified": true
+    },
+    {
+     "text": "В имении бывали Екатерина II и Пушкин.",
+     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
+     "verified": false
+    },
+    {
+     "text": "Катковы производили здесь сукно.",
+     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
+     "verified": false
+    },
+    {
+     "text": "Москва изъяла участок 57 га в пользу парка «Битцевский лес»; спор рассматривал арбитражный суд.",
+     "sourceUrl": "https://pravo.ru/news/view/6612/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Доступ на территорию усадьбы может быть закрыт."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 110
   }
  ],
  "dish": {
@@ -218,13 +610,74 @@
   {
    "title": "Флагман текстильного машиностроения — VK",
    "url": "https://vk.ru/@498603575-flagman-tekstilnogo-mashinostroeniya-v-sssr"
+  },
+  {
+   "title": "Подольск — ЦИАН",
+   "url": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/"
+  },
+  {
+   "title": "История Подольска — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/podolsk/history"
+  },
+  {
+   "title": "Подольск — Tripster",
+   "url": "https://experience.tripster.ru/journal/articles/podolsk/"
+  },
+  {
+   "title": "Дубровицы — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%B1%D1%80%D0%BE%D0%B2%D0%B8%D1%86%D1%8B_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
+  },
+  {
+   "title": "Дубровицы — Культура.РФ",
+   "url": "https://www.culture.ru/institutes/14257/dubrovicy"
+  },
+  {
+   "title": "Храм с короной — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-podolskij-rajon-hram-s-koronoj-i-usadby-dlya-brakosochetanij-xl/"
+  },
+  {
+   "title": "Остафьево — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%9E%D1%81%D1%82%D0%B0%D1%84%D1%8C%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
+  },
+  {
+   "title": "Карамзинская роща — РИАМО",
+   "url": "https://riamo.ru/news/obschestvo/istoricheskuyu-berezovuyu-roschu-vosstanovyat-v-muzee-usadbe-ostafevo-v-moskve-xl/"
+  },
+  {
+   "title": "Русский Парнас — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/61321-russkiy-parnas-ostafevo-dubrovitsy"
+  },
+  {
+   "title": "Щербинка (станция) — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B8%D0%BD%D0%BA%D0%B0_(%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)"
+  },
+  {
+   "title": "Район Щербинка — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/scherbinka/"
+  },
+  {
+   "title": "Бутовский полигон — БРЭ",
+   "url": "https://bigenc.ru/c/butovskii-poligon-a7de44"
+  },
+  {
+   "title": "Собор новомучеников в Бутове — Азбука веры",
+   "url": "https://azbyka.ru/days/sv-sobor-novomuchenikov-v-butove-postradavshih"
+  },
+  {
+   "title": "Знаменское-Садки — КП",
+   "url": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
+    [
+     37.489457,
+     55.44
+    ],
     [
      37.524468,
      55.363
@@ -258,36 +711,44 @@
      55.36
     ],
     [
-     37.54479,
-     55.361572
+     37.590556,
+     55.537
     ],
     [
-     37.539791,
-     55.366572
+     37.589812,
+     55.538572
     ],
     [
-     37.537766,
-     55.367723
+     37.559818,
+     55.586572
     ],
     [
-     37.535,
-     55.368144
+     37.557781,
+     55.587723
     ],
     [
-     37.532234,
-     55.367723
+     37.555,
+     55.588144
     ],
     [
-     37.527234,
-     55.365723
+     37.552219,
+     55.587723
     ],
     [
-     37.525209,
-     55.364572
+     37.550182,
+     55.586572
     ],
     [
-     37.524468,
-     55.363
+     37.496193,
+     55.499572
+    ],
+    [
+     37.495449,
+     55.498
+    ],
+    [
+     37.489457,
+     55.44
     ]
    ]
   ]

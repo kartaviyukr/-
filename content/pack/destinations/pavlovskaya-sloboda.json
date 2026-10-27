@@ -13,7 +13,8 @@
   "Павловская Слобода — старинное село на Истре. Под именем Павловское оно впервые упоминается в грамоте Ивана III 1504 года, а на берегу реки сохранились славянские курганы XI–XIII веков.",
   "Расцвет села связан с боярином Борисом Морозовым, воспитателем царя Алексея Михайловича: при нём здесь работали железоделательные заводы и лили пушки. Позже царь держал село как подмосковную охотничью вотчину.",
   "С 1730 года имением владел граф Павел Ягужинский, сподвижник Петра I, построивший суконную фабрику. Двойное название «Павловская Слобода» закрепилось около 1864 года.",
-  "Маршрут: станция Нахабино, дорога вдоль Истры, Благовещенская церковь и курганы."
+  "Сначала — свои места: «Благовещенская церковь», «Курганы на Истре». Дальше маршрут идёт по соседним местам: Снегири — «Рубеж обороны»; Дедовск — «Рабочий посёлок», «Прядильно-ткацкая фабрика»; Нахабино — «Старое село», «Полигон и первые ракеты»; Архангельское — «Большой дворец».",
+  "Маршрут линейный, около 60 км и 8 точек. Финиш — Станция «Красногорская» (Электрички Рижского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Нахабино»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Рижского направления / МЦД-2"
  },
  "endPoint": {
-  "name": "Павловская Слобода, центр",
+  "name": "Станция «Красногорская»",
   "coords": {
-   "lat": 55.81,
-   "lon": 37.08
+   "lat": 55.818,
+   "lon": 37.334
   },
-  "transport": "Автобусы до Нахабина и Москвы — уточняйте"
+  "transport": "Электрички Рижского направления / МЦД-2"
  },
  "route": {
-  "distanceKm": 10.0,
-  "durationH": 2.5,
-  "difficulty": "средний",
+  "distanceKm": 60.0,
+  "durationH": 7.2,
+  "difficulty": "сложный",
   "shape": "линейный",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Благовещенская церковь — главный памятник села. Её архивная фотография 1915 года хранится в проекте «Летопись русской усадьбы».",
-    "Датировку храма мы в найденных источниках не сверили и не приводим, чтобы не ошибиться.",
-    "Храм действующий; от него идём к истории села и боярина Морозова. Следующая точка маршрута — «Село боярина Морозова»."
+    "Датировку храма мы в найденных источниках не сверили и не приводим, чтобы не ошибиться. Следующая точка маршрута — «Курганы на Истре»."
    ],
    "facts": [
     {
@@ -88,55 +88,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "pavlovskaya-sloboda-morozov",
-   "name": "Село боярина Морозова",
-   "coords": {
-    "lat": 55.81,
-    "lon": 37.08
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Село Павловское впервые упомянуто в грамоте Ивана III 1504 года. Расцвет пришёлся на время боярина Бориса Морозова, воспитателя и ближайшего советника царя Алексея Михайловича.",
-    "При Морозове Павловское стало промысловым поселением с железоделательными заводами и литьём пушек. Позже царь долго держал село как подмосковную охотничью вотчину.",
-    "С 1730 года имение принадлежало графу Павлу Ягужинскому, при котором построили суконную фабрику."
-   ],
-   "facts": [
-    {
-     "text": "Село упоминается в грамоте Ивана III 1504 года.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "При Борисе Морозове здесь действовали железоделательные заводы и лили пушки.",
-     "sourceUrl": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/",
-     "verified": false
-    },
-    {
-     "text": "С 1730 года имением владел граф Павел Ягужинский.",
-     "sourceUrl": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/",
-     "verified": false
-    },
-    {
-     "text": "При Ягужинском построили суконную фабрику.",
-     "sourceUrl": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/",
-     "verified": false
-    },
-    {
-     "text": "Название «Павловская Слобода» закрепилось около 1864 года.",
-     "sourceUrl": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "pavlovskaya-sloboda-kurgany",
@@ -185,8 +138,293 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "pavlovskaya-sloboda-rubezh",
+   "name": "Рубеж обороны",
+   "coords": {
+    "lat": 55.885,
+    "lon": 37.035
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 1941 году на Волоколамском шоссе близ Снегирей было остановлено наступление немецких войск на Москву.",
+    "30 ноября на 42-м километре шоссе шли бои, в которых участвовала 78-я стрелковая дивизия Афанасия Белобородова. Следующая точка маршрута — «Рабочий посёлок»."
+   ],
+   "facts": [
+    {
+     "text": "В 1941 году у Снегирей остановлено наступление на Москву.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "verified": true
+    },
+    {
+     "text": "30 ноября 1941 года на 42-м километре шли бои.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "verified": true
+    },
+    {
+     "text": "Здесь действовала 78-я стрелковая дивизия Белобородова.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "verified": true
+    },
+    {
+     "text": "Координаты рубежа приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "verified": false
+    },
+    {
+     "text": "Номер мемориального километра мы не сверяли.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Волоколамское шоссе — плотное движение."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "pavlovskaya-sloboda-posyolok",
+   "name": "Рабочий посёлок",
+   "coords": {
+    "lat": 55.868,
+    "lon": 37.12
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Рядом с фабрикой вырос рабочий посёлок Дедовский: строили дома, школу, ясли.",
+    "Название города, вероятно, связано с деревней Дедово, но точной истории названия мы в источниках не нашли.",
+    "По улицам бывшего рабочего посёлка возвращаемся к станции Гучково."
+   ],
+   "facts": [
+    {
+     "text": "При фабрике был рабочий посёлок Дедовский со школой и яслями.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "verified": true
+    },
+    {
+     "text": "Происхождение названия не проверено.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": false
+    },
+    {
+     "text": "Промышленность определила развитие города.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Дедовск — город районного подчинения.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": false
+    },
+    {
+     "text": "Достопримечательности Дедовска собраны на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "pavlovskaya-sloboda-fabrika",
+   "name": "Прядильно-ткацкая фабрика",
+   "coords": {
+    "lat": 55.865,
+    "lon": 37.13
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Фабрику основало российско-французское акционерное общество: по одним данным в 1911 году, по другим — в 1913-м. Её называли одной из самых крупных и современных мануфактур того времени.",
+    "В 1940-х годах фабрику преобразовали в кордную. Промышленность надолго стала градообразующей для Дедовска."
+   ],
+   "facts": [
+    {
+     "text": "Фабрику основало российско-французское акционерное общество.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Год основания — 1911 или 1913, источники расходятся.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": false
+    },
+    {
+     "text": "Фабрику описывают как одну из самых крупных мануфактур своего времени.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "verified": true
+    },
+    {
+     "text": "В 1940-х фабрику преобразовали в кордную.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Флаг Дедовска описан в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B0",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Промышленная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "pavlovskaya-sloboda-selo",
+   "name": "Старое село",
+   "coords": {
+    "lat": 55.835,
+    "lon": 37.175
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Нахабино известно с 1482 года: тогда село принадлежало боярам Плещеевым. В 1534 году оно перешло к Троице-Сергиеву монастырю.",
+    "В посёлке есть храм, описанный в паломническом справочнике «Азбуки веры», — Максимовский. Его историю мы не сверяли."
+   ],
+   "facts": [
+    {
+     "text": "Нахабино известно с 1482 года как владение бояр Плещеевых.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "В 1534 году село перешло к Троице-Сергиеву монастырю.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "В Нахабине есть Максимовский храм.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "История храма нами не проверена.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "pavlovskaya-sloboda-poligon",
+   "name": "Полигон и первые ракеты",
+   "coords": {
+    "lat": 55.83,
+    "lon": 37.19
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Нахабино известно как полигон инженерных войск. По Циклопедии, в 1933 году здесь запустили первые советские ракеты; туристический справочник пишет, что ракеты испытывали тут ещё до войны.",
+    "Полигон — закрытая военная территория. Смотрим только с общественных дорог и не фотографируем охраняемые объекты."
+   ],
+   "facts": [
+    {
+     "text": "В Нахабине в 1933 году запустили первые советские ракеты.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Нахабино — полигон инженерных войск.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": true
+    },
+    {
+     "text": "До войны здесь испытывали первые советские ракеты.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": true
+    },
+    {
+     "text": "Полигон — закрытая территория.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": false
+    },
+    {
+     "text": "Точное место запусков мы не устанавливали.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Военная территория: не фотографировать охраняемые объекты."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "pavlovskaya-sloboda-dvorets",
+   "name": "Большой дворец",
+   "coords": {
+    "lat": 55.785,
+    "lon": 37.284
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "В 1810 году Архангельское купил князь Николай Борисович Юсупов — коллекционер и вельможа. Он превратил усадьбу в музей своей эпохи: по одному источнику, в его коллекции было более 540 полотен западноевропейских живописцев и десятки мраморных скульптур.",
+    "После революции имение национализировали, и уже в 1919 году здесь открылся государственный музей. Послевоенную реставрацию вели по сохранившимся фотографиям и архивам.",
+    "Музей платный; часы работы и правила прохода с велосипедом уточняйте у входа."
+   ],
+   "facts": [
+    {
+     "text": "Усадьбу в 1810 году купил князь Николай Юсупов.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
+     "verified": true
+    },
+    {
+     "text": "В коллекции Юсупова было более 540 полотен и десятки скульптур.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
+     "verified": false
+    },
+    {
+     "text": "Юсуповы владели усадьбой с 1810 по 1917 год.",
+     "sourceUrl": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe",
+     "verified": true
+    },
+    {
+     "text": "Государственный музей открылся в 1919 году.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
+     "verified": true
+    },
+    {
+     "text": "Архангельское называют «подмосковным Версалем».",
+     "sourceUrl": "https://www.kommersant.ru/gallery/4094761",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -221,16 +459,53 @@
   {
    "title": "История Павловской Слободы — Истра сегодня",
    "url": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/"
+  },
+  {
+   "title": "Ленино-Снегирёвский музей — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9"
+  },
+  {
+   "title": "Дедовск — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/30938"
+  },
+  {
+   "title": "Достопримечательности Дедовска — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/dedovsk/"
+  },
+  {
+   "title": "Нахабино — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE"
+  },
+  {
+   "title": "Nakhabino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Nakhabino"
+  },
+  {
+   "title": "Архангельское — 360",
+   "url": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/"
+  },
+  {
+   "title": "Архангельское — tonkosti.ru",
+   "url": "https://tonkosti.ru/Архангельское"
+  },
+  {
+   "title": "Музей-усадьба — Tripster",
+   "url": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.069406,
-     55.805
+     37.029394,
+     55.885
+    ],
+    [
+     37.030145,
+     55.883428
     ],
     [
      37.070155,
@@ -245,56 +520,56 @@
      55.801856
     ],
     [
-     37.077797,
-     55.802277
+     37.284,
+     55.781856
     ],
     [
-     37.1858,
-     55.838277
+     37.286796,
+     55.782277
     ],
     [
-     37.187849,
-     55.839428
+     37.288842,
+     55.783428
     ],
     [
-     37.1886,
-     55.841
+     37.338846,
+     55.816428
     ],
     [
-     37.187849,
-     55.842572
+     37.339596,
+     55.818
     ],
     [
-     37.1858,
-     55.843723
+     37.338846,
+     55.819572
     ],
     [
-     37.183,
-     55.844144
+     37.336798,
+     55.820723
     ],
     [
-     37.1802,
-     55.843723
+     37.122802,
+     55.870723
     ],
     [
-     37.079202,
-     55.813723
+     37.037803,
+     55.887723
     ],
     [
-     37.077202,
-     55.812723
+     37.035,
+     55.888144
     ],
     [
-     37.075155,
-     55.811572
+     37.032197,
+     55.887723
     ],
     [
-     37.070155,
-     55.806572
+     37.030145,
+     55.886572
     ],
     [
-     37.069406,
-     55.805
+     37.029394,
+     55.885
     ]
    ]
   ]

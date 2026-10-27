@@ -13,7 +13,8 @@
   "Павловский Посад — родина знаменитых павловопосадских платков. Город вырос из села Вохна (Павлово), вокруг которого объединились соседние селения; Вохну, по одному источнику, упоминают ещё грамоты Ивана Калиты.",
   "Днём рождения города называют 2 июня 1844 года, когда Николай I подписал соответствующий документ.",
   "Платочное производство началось с предприятия, которое в 1795 году основал крестьянин Иван Лабзин. Его правнук Яков Лабзин вместе с Василием Грязновым перевёл фабрику на шерстяные шали с набивным рисунком — первые такие шали появились в начале 1860-х.",
-  "Маршрут: станция, Музей платка и шали, фабрика и центр."
+  "Сначала — свои места: «Музей платка и шали», «Платочная мануфактура», «Вохна и центр». Дальше маршрут идёт по соседним местам: Большие Дворы — «Дорога из Павловского Посада», «Посёлок»; Электросталь — «Проспект Ленина и мемориал Второву»; Ногинск — «Богородск», «Глуховская мануфактура»; Лосино-Петровский и Глинки — «Собор Николая Чудотворца».",
+  "Маршрут линейный, около 63 км и 9 точек. Финиш — Станция «Монино» (Электрички до Ярославского вокзала), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Павловский Посад»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Горьковского направления"
  },
  "endPoint": {
-  "name": "Станция «Павловский Посад»",
+  "name": "Станция «Монино»",
   "coords": {
-   "lat": 55.7822,
-   "lon": 38.6505
+   "lat": 55.8423,
+   "lon": 38.1965
   },
-  "transport": "Электрички Горьковского направления"
+  "transport": "Электрички до Ярославского вокзала"
  },
  "route": {
-  "distanceKm": 5.0,
-  "durationH": 2.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 63.0,
+  "durationH": 7.4,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 40,
    "guideStory": [
     "Музей русского платка и шали открылся в 2002 году по инициативе местного коллекционера Владимира Шишенина. В нём более четырёхсот экспонатов, старейшие — XVIII века.",
-    "Выставка платков есть и в Павлово-Посадском краеведческом музее.",
-    "Билеты и часы работы уточняйте. Следующая точка маршрута — «Платочная мануфактура». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+    "Выставка платков есть и в Павлово-Посадском краеведческом музее. Следующая точка маршрута — «Платочная мануфактура»."
    ],
    "facts": [
     {
@@ -87,8 +87,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "pavlovskiy-posad-fabrika",
@@ -134,8 +134,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "pavlovskiy-posad-vokhna",
@@ -148,8 +148,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Город вырос из села Вохна, которое называли и Павловым; вокруг него объединились соседние селения. Один источник относит первые упоминания Вохны к грамотам Ивана Калиты начала XIV века.",
-    "Днём рождения города считают 2 июня 1844 года. В 1990 году Павловский Посад получил статус исторического города.",
-    "Возвращаемся к станции. Финиш — Станция «Павловский Посад»: Электрички Горьковского направления."
+    "Днём рождения города считают 2 июня 1844 года. В 1990 году Павловский Посад получил статус исторического города."
    ],
    "facts": [
     {
@@ -181,8 +180,290 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "pavlovskiy-posad-doroga",
+   "name": "Дорога из Павловского Посада",
+   "coords": {
+    "lat": 55.765,
+    "lon": 38.635
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "От Павловского Посада едем на запад к Большим Дворам. Это населённый пункт округа, а не квартал города.",
+    "Дорогу мы на месте не проверяли — держитесь обочины. Следующая точка маршрута — «Посёлок». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Большие Дворы — населённый пункт округа, а не квартал Павловского Посада.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pavlovskii-posad/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Дорога не проверена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pavlovskii-posad/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bolshiye_Dvory",
+     "verified": false
+    },
+    {
+     "text": "Посёлок в Павлово-Посадском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bolshiye_Dvory",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bolshiye_Dvory",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "pavlovskiy-posad-posyolok",
+   "name": "Посёлок",
+   "coords": {
+    "lat": 55.7505,
+    "lon": 38.6205
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Большие Дворы — рабочий посёлок; история его основания в найденных источниках не раскрыта.",
+    "Маршрут — честный переход по спирали: не каждая точка обязана быть знаменитой. Следующая точка маршрута — «Проспект Ленина и мемориал Второву»."
+   ],
+   "facts": [
+    {
+     "text": "История посёлка не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bolshiye_Dvory",
+     "verified": false
+    },
+    {
+     "text": "Большие Дворы описаны в англоязычной Википедии.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bolshiye_Dvory",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bolshiye_Dvory",
+     "verified": false
+    },
+    {
+     "text": "Посёлок рядом с Павловским Посадом.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pavlovskii-posad/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Bolshiye_Dvory",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "pavlovskiy-posad-prospekt",
+   "name": "Проспект Ленина и мемориал Второву",
+   "coords": {
+    "lat": 55.785,
+    "lon": 38.45
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "На проспекте Ленина стоят мемориалы основателю города Николаю Второву и работникам военных лет.",
+    "26 декабря 1938 года указом Президиума Верховного Совета РСФСР Электросталь стала городом областного подчинения. В войну здесь делали боеприпасы, в том числе реактивные снаряды для «катюш»."
+   ],
+   "facts": [
+    {
+     "text": "В городе есть мемориалы Второву и работникам военных лет.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrostal/",
+     "verified": true
+    },
+    {
+     "text": "26 декабря 1938 года Электросталь стала городом.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrostal-216529/",
+     "verified": true
+    },
+    {
+     "text": "В войну предприятия выпускали снаряды для «катюш».",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/elektrostal/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Дата начала истории города спорна: 1914, 1916 или 1917.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/31935",
+     "verified": false
+    },
+    {
+     "text": "Координаты мемориала приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrostal/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "pavlovskiy-posad-tsentr",
+   "name": "Богородск",
+   "coords": {
+    "lat": 55.854,
+    "lon": 38.44
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "По одной версии, история города начинается с 1389 года, когда на Владимирской дороге стояло село Рогожа: здесь меняли лошадей. С начала XVI века село называлось «Старый Рогожский Ям» и было ямской слободой.",
+    "В 1781 году по приказу Екатерины II его переименовали в Богородск по названию уезда; герб утвердили 20 декабря того же года. В 1930 году город получил имя Ногинск.",
+    "РИАМО собирало предания Ногинска — о Екатерине Великой, герое войны 1812 года и Пушкине."
+   ],
+   "facts": [
+    {
+     "text": "История города начинается с 1389 года и села Рогожа — по одной версии.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
+     "verified": false
+    },
+    {
+     "text": "С начала XVI века село называлось «Старый Рогожский Ям».",
+     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
+     "verified": true
+    },
+    {
+     "text": "В 1781 году село переименовано в Богородск.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/noginsk/history",
+     "verified": true
+    },
+    {
+     "text": "Герб Богородска утверждён в декабре 1781 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/noginsk",
+     "verified": true
+    },
+    {
+     "text": "В 1930 году Богородск переименован в Ногинск.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "РИАМО собирало предания Ногинска.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/predaniya-noginska-ekaterina-velikaya-geroj-vojny-1812-goda-i-pushkin-xl/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "pavlovskiy-posad-glukhovo",
+   "name": "Глуховская мануфактура",
+   "coords": {
+    "lat": 55.87,
+    "lon": 38.42
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 1842 году Захар Морозов купил село Глухово — с этого начинают историю Богородско-Глуховской мануфактуры. Другой источник датирует основание 1847 годом. Сыновья Захара Морозова расширили производство.",
+    "В советское время на базе мануфактуры вырос один из крупнейших и старейших текстильных комбинатов СССР."
+   ],
+   "facts": [
+    {
+     "text": "В 1842 году Захар Морозов купил село Глухово.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Другой источник датирует основание мануфактуры 1847 годом.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/noginsk",
+     "verified": false
+    },
+    {
+     "text": "Сыновья Захара Морозова расширили производство.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Комбинат стал одним из крупнейших текстильных предприятий СССР.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Территория фабрики может быть закрыта.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "pavlovskiy-posad-sobor",
+   "name": "Собор Николая Чудотворца",
+   "coords": {
+    "lat": 55.871,
+    "lon": 38.2
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Город назван по Лосиной кожевенной фабрике Петра I — казённому предприятию, шившему амуницию для армии. Вокруг фабрики выросла рабочая слобода.",
+    "По одной из версий, рабочие ходатайствовали перед Александром I о строительстве нового храма. Классический собор Николая Чудотворца освятил Иоанн Кронштадтский."
+   ],
+   "facts": [
+    {
+     "text": "Название города связано с казённой Лосиной кожевенной фабрикой Петра I.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
+     "verified": true
+    },
+    {
+     "text": "В XIX веке кожевенное производство сменили текстильные предприятия.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
+     "verified": true
+    },
+    {
+     "text": "По одной из версий, рабочие ходатайствовали перед Александром I о новой церкви.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
+     "verified": false
+    },
+    {
+     "text": "Собор Николая Чудотворца освятил Иоанн Кронштадтский.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/",
+     "verified": true
+    },
+    {
+     "text": "Лосино-Петровский стоит на Клязьме.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
   }
  ],
  "dish": {
@@ -217,36 +498,81 @@
   {
    "title": "Павловский Посад — Tripster",
    "url": "https://experience.tripster.ru/articles/pavlovsky-posad/"
+  },
+  {
+   "title": "Bolshiye Dvory — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Bolshiye_Dvory"
+  },
+  {
+   "title": "История Электростали — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/elektrostal/istoriia"
+  },
+  {
+   "title": "Электросталь — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/31935"
+  },
+  {
+   "title": "История Ногинска — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/noginsk/history"
+  },
+  {
+   "title": "Богородско-Глуховская мануфактура — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE-%D0%93%D0%BB%D1%83%D1%85%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B0%D0%BD%D1%83%D1%84%D0%B0%D0%BA%D1%82%D1%83%D1%80%D0%B0"
+  },
+  {
+   "title": "Предания Ногинска — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/predaniya-noginska-ekaterina-velikaya-geroj-vojny-1812-goda-i-pushkin-xl/"
+  },
+  {
+   "title": "Усадьба Глинки — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8"
+  },
+  {
+   "title": "Лосино-Петровский — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/"
+  },
+  {
+   "title": "Экскурсия «Брюс всемогущий» — Sputnik8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.644409,
-     55.782
+     38.1909,
+     55.8423
     ],
     [
-     38.645158,
-     55.780428
+     38.191651,
+     55.840728
     ],
     [
-     38.647204,
-     55.779277
+     38.1937,
+     55.839577
     ],
     [
-     38.652205,
-     55.777277
+     38.447204,
+     55.782277
     ],
     [
-     38.655,
-     55.776856
+     38.617707,
+     55.747777
     ],
     [
-     38.657795,
-     55.777277
+     38.6205,
+     55.747356
+    ],
+    [
+     38.623293,
+     55.747777
+    ],
+    [
+     38.625338,
+     55.748928
     ],
     [
      38.659842,
@@ -269,28 +595,32 @@
      55.787723
     ],
     [
-     38.66,
-     55.788144
+     38.422802,
+     55.872723
     ],
     [
-     38.657204,
-     55.787723
+     38.42,
+     55.873144
     ],
     [
-     38.647704,
-     55.784923
+     38.2,
+     55.874144
     ],
     [
-     38.647204,
-     55.784723
+     38.197198,
+     55.873723
     ],
     [
-     38.645158,
-     55.783572
+     38.195147,
+     55.872572
     ],
     [
-     38.644409,
-     55.782
+     38.194396,
+     55.871
+    ],
+    [
+     38.1909,
+     55.8423
     ]
    ]
   ]

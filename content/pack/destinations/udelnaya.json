@@ -12,7 +12,9 @@
  "intro": [
   "Удельная — дачный посёлок Раменского округа на Казанском направлении, между Малаховкой и Быковом. Таких посёлков вдоль Казанской дороги много: все они выросли у платформ после постройки железной дороги.",
   "Дачный посёлок в России — особый тип поселения из домов, изначально не рассчитанных на круглогодичную жизнь; у него статус посёлка городского типа.",
-  "Подробной истории самой Удельной мы в открытых источниках не нашли и не будем её придумывать. Маршрут знакомит с тем, что есть: тихие дачные улицы, санаторный парк с прудом и платформа МЦД-3."
+  "Подробной истории самой Удельной мы в открытых источниках не нашли и не будем её придумывать. Маршрут знакомит с тем, что есть: тихие дачные улицы, санаторный парк с прудом и платформа МЦД-3.",
+  "Сначала — свои места: «Дачные улицы», «Санаторный парк и пруд». Дальше маршрут идёт по соседним местам: Жуковский — «Центр наукограда и ЛИИ», «ЦАГИ»; Раменское — «Борисоглебское озеро и Троицкая церковь», «Раменская мануфактура»; Гжель — «Фарфор на Дорке», «Гжельский завод и музей»; Электроугли — «Каменка — старое ядро».",
+  "Маршрут линейный, около 53 км и 9 точек. Финиш — Станция «Электроугли» (Электрички Горьковского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Удельная»",
@@ -23,71 +25,24 @@
   "transport": "Электрички Казанского направления / МЦД-3"
  },
  "endPoint": {
-  "name": "Станция «Удельная»",
+  "name": "Станция «Электроугли»",
   "coords": {
-   "lat": 55.6322,
-   "lon": 38.0255
+   "lat": 55.717,
+   "lon": 38.22
   },
-  "transport": "Электрички Казанского направления / МЦД-3"
+  "transport": "Электрички Горьковского направления"
  },
  "route": {
-  "distanceKm": 4.0,
-  "durationH": 1.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 53.0,
+  "durationH": 6.8,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "udelnaya-stantsiya",
-   "name": "Платформа Удельная",
-   "coords": {
-    "lat": 55.632,
-    "lon": 38.025
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Сюда ходят электрички МЦД-3 до станции «Удельная» и автобусы до одноимённой остановки.",
-    "Дачные посёлки Казанского направления — Малаховка, Удельная, Быково, Кратово — выросли после постройки частной Московско-Рязанской железной дороги в XIX веке.",
-    "От платформы едем по дачным улицам. Следующая точка маршрута — «Дачные улицы»."
-   ],
-   "facts": [
-    {
-     "text": "До Удельной ходят электрички МЦД-3 и автобусы.",
-     "sourceUrl": "https://360.ru/news/mosobl/imuschestvennyj-kompleks-pod-stroitelstvo-bazy-otdyha-vystavili-na-torgi-pod-ramenskom/",
-     "verified": true
-    },
-    {
-     "text": "Удельная — дачный посёлок в Раменском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Udelnaya,_Moscow_Oblast",
-     "verified": true
-    },
-    {
-     "text": "Соседняя Малаховка возникла после строительства Московско-Рязанской железной дороги.",
-     "sourceUrl": "https://teletype.in/@apfound/cGcJG4OYOc3",
-     "verified": true
-    },
-    {
-     "text": "Дату появления платформы Удельная мы не нашли.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Udelnaya,_Moscow_Oblast",
-     "verified": false
-    },
-    {
-     "text": "Название посёлка встречается в России многократно — Удельная, Удельный, Удельное.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Udelnaya,_Moscow_Oblast",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
   {
    "id": "udelnaya-ulitsy",
    "name": "Дачные улицы",
@@ -99,8 +54,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Центральная часть посёлка — частные дома и старые участки среди сосен.",
-    "Дачный посёлок — это дома, не рассчитанные изначально на жизнь круглый год; в России такие посёлки имеют статус посёлков городского типа. Сегодня многие дачи стали постоянным жильём.",
-    "Едем к санаторному парку. Следующая точка маршрута — «Санаторный парк и пруд»."
+    "Дачный посёлок — это дома, не рассчитанные изначально на жизнь круглый год; в России такие посёлки имеют статус посёлков городского типа. Сегодня многие дачи стали постоянным жильём."
    ],
    "facts": [
     {
@@ -132,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "udelnaya-sanatoriy",
@@ -147,7 +101,7 @@
    "guideStory": [
     "Рядом с центром посёлка — санаторий с парком и прудом, зелёное сердце Удельной.",
     "Территория санатория может быть закрыта; смотрим снаружи и гуляем по общедоступным дорожкам.",
-    "По тихим улицам посёлка возвращаемся к платформе МЦД-3, где маршрут и заканчивается. Финиш — Станция «Удельная»: Электрички Казанского направления / МЦД-3."
+    "По тихим улицам посёлка возвращаемся к платформе МЦД-3, где маршрут и заканчивается."
    ],
    "facts": [
     {
@@ -181,8 +135,343 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "udelnaya-tsentr",
+   "name": "Центр наукограда и ЛИИ",
+   "coords": {
+    "lat": 55.599,
+    "lon": 38.118
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 25,
+   "guideStory": [
+    "В 1940 году утвердили проект Лётно-исследовательского института, предложенный шеф-пилотом ЦАГИ, Героем Советского Союза Михаилом Громовым. В 1941 году он стал директором ЛИИ, а в 1947-м при институте создали школу лётчиков-испытателей.",
+    "С 1993 года на аэродроме ЛИИ имени Громова проходит Международный авиационно-космический салон МАКС. В 2007 году Жуковский получил статус наукограда."
+   ],
+   "facts": [
+    {
+     "text": "В 1940 году утвердили проект ЛИИ, представленный Михаилом Громовым.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Громов назначен директором ЛИИ в 1941 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Школа лётчиков-испытателей при ЛИИ создана в 1947 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Первый МАКС прошёл в 1993 году на аэродроме ЛИИ имени Громова.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 2007 году Жуковский стал наукоградом.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%96%D1%83%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "ЛИИ имени Громова описан в Большой российской энциклопедии.",
+     "sourceUrl": "https://bigenc.ru/c/liotno-issledovatel-skii-institut-imeni-m-m-gromova-cf862b",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Аэродром ЛИИ — режимный объект."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "udelnaya-tsagi",
+   "name": "ЦАГИ",
+   "coords": {
+    "lat": 55.59,
+    "lon": 38.122
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "ЦАГИ — Центральный аэрогидродинамический институт, где испытывают модели самолётов в аэродинамических трубах. Его основателем считается Николай Жуковский, в честь которого назван город.",
+    "23 апреля 1947 года, к 100-летию со дня рождения учёного, посёлок Стаханово получил статус города и имя Жуковский."
+   ],
+   "facts": [
+    {
+     "text": "23 апреля 1947 года, к 100-летию Н. Е. Жуковского, посёлок получил статус города и имя Жуковский.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Н. Е. Жуковского называют основателем ЦАГИ.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Площадка ЦАГИ утверждена в 1933 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Один источник называет годом областного подчинения 1952-й.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/zhukovskiy/history",
+     "verified": false
+    },
+    {
+     "text": "День основания города отмечают в Жуковском.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-osnovanija-goroda-otmetili-v-zhukovskom/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Режимный институт: не фотографировать проходные."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "udelnaya-ozero",
+   "name": "Борисоглебское озеро и Троицкая церковь",
+   "coords": {
+    "lat": 55.57,
+    "lon": 38.225
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Местность впервые упоминается как «Раменье» в 1328 году в духовной грамоте Ивана Калиты. Эту дату считают и первым упоминанием озера, названного по церкви.",
+    "В 1725–1730 годах граф Мусин-Пушкин построил на берегу каменную Троицкую церковь с приделами Бориса и Глеба. В 1770-х годах Михаил Волконский выкупил землю и устроил охотничий дом с обширным парком."
+   ],
+   "facts": [
+    {
+     "text": "«Раменье» упомянуто в 1328 году в грамоте Ивана Калиты.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Название связывают со словом «раменье» — опушка леса.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 1725–1730 годах Мусин-Пушкин построил Троицкую церковь.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 1770-х Михаил Волконский устроил здесь охотничий дом с парком.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Озеро получило название по церкви.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "udelnaya-fabrika",
+   "name": "Раменская мануфактура",
+   "coords": {
+    "lat": 55.565,
+    "lon": 38.235
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Расширение Раменской бумагопрядильной мануфактуры купцами Малютиными превратило село в мощный индустриальный центр.",
+    "Даты основания фабрики мы в найденных источниках не нашли — смотрим корпуса и не придумываем цифры. Следующая точка маршрута — «Фарфор на Дорке»."
+   ],
+   "facts": [
+    {
+     "text": "Купцы Малютины расширили Раменскую бумагопрядильную мануфактуру.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Мануфактура превратила село в индустриальный центр.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Дата основания фабрики не найдена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты фабрики приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Раменское описано в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "udelnaya-dorka",
+   "name": "Фарфор на Дорке",
+   "coords": {
+    "lat": 55.61,
+    "lon": 38.315
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1810 году Яков Кузнецов открыл первую фарфоровую мастерскую на реке Дорке, а в 1820 году Афанасий Киселёв разработал технологию тонкого фаянса.",
+    "В 1830–1840-х годах почти половина фарфорово-фаянсовых предприятий России находилась в Гжели. 360.ru включает её в список живых промыслов Подмосковья вместе с Клином и Жостовом."
+   ],
+   "facts": [
+    {
+     "text": "В 1810 году Яков Кузнецов открыл фарфоровую мастерскую на Дорке.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": true
+    },
+    {
+     "text": "В 1820 году Афанасий Киселёв разработал технологию тонкого фаянса.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": true
+    },
+    {
+     "text": "В 1830–1840-х почти половина фарфорово-фаянсовых предприятий была в Гжели.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": false
+    },
+    {
+     "text": "360.ru пишет о живых промыслах Подмосковья, включая Гжель.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/ot-gzheli-do-klina-i-zhostova-gde-zhivut-legendarnye-promysly-podmoskovja/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "udelnaya-zavod",
+   "name": "Гжельский завод и музей",
+   "coords": {
+    "lat": 55.62,
+    "lon": 38.3
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Главная музейная точка — музей Гжельского художественно-промышленного завода: история промысла, старинные изделия и современные работы. Экскурсии на завод проводят по записи.",
+    "В XX веке гжельская сине-белая роспись стала национальным брендом. Возрождение промысла началось в середине века, после долгого упадка.",
+    "Часы работы и запись на экскурсию уточняйте заранее. Следующая точка маршрута — «Каменка — старое ядро»."
+   ],
+   "facts": [
+    {
+     "text": "Музей завода показывает историю промысла и старинные изделия.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Экскурсии на гжельский завод проводятся.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/gzhel",
+     "verified": true
+    },
+    {
+     "text": "Возрождение промысла началось в середине XX века.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
+     "verified": true
+    },
+    {
+     "text": "Сине-белая роспись стала национальным брендом.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
+     "verified": true
+    },
+    {
+     "text": "Часы работы музея не проверены.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "udelnaya-kamenka",
+   "name": "Каменка — старое ядро",
+   "coords": {
+    "lat": 55.715,
+    "lon": 38.215
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Центральная часть города — бывшее сельцо Каменка; первые упоминания о нём встречаются в документах 1623 года.",
+    "Так что Электроугли старше своего заводского имени почти на три века: сначала была деревня, потом станция, потом завод и город."
+   ],
+   "facts": [
+    {
+     "text": "Первые упоминания о сельце Каменка относятся к 1623 году.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Каменка — центральная часть современного города.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Электроугли с 2006 года — административный центр городского поселения.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Старой застройки Каменки мы не проверяли.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": false
+    },
+    {
+     "text": "Город назван по заводу электрических углей.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
   }
  ],
  "dish": {
@@ -217,9 +506,54 @@
   {
    "title": "Дачный посёлок — Рувики",
    "url": "https://ru.ruwiki.ru/wiki/%D0%94%D0%B0%D1%87%D0%BD%D1%8B%D0%B9_%D0%BF%D0%BE%D1%81%D1%91%D0%BB%D0%BE%D0%BA"
+  },
+  {
+   "title": "История Жуковского — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/zhukovskii/istoriia"
+  },
+  {
+   "title": "Жуковский — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%96%D1%83%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
+  },
+  {
+   "title": "ЛИИ им. Громова — БРЭ",
+   "url": "https://bigenc.ru/c/liotno-issledovatel-skii-institut-imeni-m-m-gromova-cf862b"
+  },
+  {
+   "title": "История Раменского — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia"
+  },
+  {
+   "title": "Раменское — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/47154"
+  },
+  {
+   "title": "История Гжели — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/gzhel/history"
+  },
+  {
+   "title": "Экскурсии по Гжели — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8"
+  },
+  {
+   "title": "Промыслы Подмосковья — 360",
+   "url": "https://360.ru/tekst/mosobl/ot-gzheli-do-klina-i-zhostova-gde-zhivut-legendarnye-promysly-podmoskovja/"
+  },
+  {
+   "title": "Электроугли — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/"
+  },
+  {
+   "title": "Электроугли — ЦИАН",
+   "url": "https://www.cian.ru/stati-elektrougli-216552/"
+  },
+  {
+   "title": "АО «НИИЭИ» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -237,44 +571,56 @@
      55.629277
     ],
     [
-     38.032215,
-     55.625277
+     38.119218,
+     55.587277
     ],
     [
-     38.035,
-     55.624856
+     38.23222,
+     55.562277
     ],
     [
-     38.037785,
-     55.625277
+     38.235,
+     55.561856
     ],
     [
-     38.039823,
-     55.626428
+     38.23778,
+     55.562277
     ],
     [
-     38.040569,
-     55.628
+     38.317783,
+     55.607277
     ],
     [
-     38.039823,
-     55.629572
+     38.319821,
+     55.608428
     ],
     [
-     38.037785,
-     55.630723
+     38.320567,
+     55.61
     ],
     [
-     38.028285,
-     55.634923
+     38.319821,
+     55.611572
     ],
     [
-     38.0255,
-     55.635344
+     38.224834,
+     55.718572
     ],
     [
-     38.022715,
-     55.634923
+     38.222791,
+     55.719723
+    ],
+    [
+     38.22,
+     55.720144
+    ],
+    [
+     38.217209,
+     55.719723
+    ],
+    [
+     38.212209,
+     55.717723
     ],
     [
      38.022215,

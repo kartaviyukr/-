@@ -13,7 +13,8 @@
   "Константиново — подмосковная вотчина князей Ромодановских на высоком берегу реки Рожайки, сейчас в границах Домодедовского округа.",
   "В 1670-х годах на средства князя Юрия Ивановича Ромодановского построили вотчинный храм Смоленской Богоматери. В августе 1683 года десятилетний Пётр I два дня гостил здесь у Фёдора Ромодановского.",
   "В XIX веке, по туристическим источникам, усадьба связана с семьёй Пржевальских: в 1882 году ею владел брат путешественника. Позже усадьба была заброшена; сейчас её реставрируют и, по данным РИАМО, превращают в комплекс паллиативной помощи детям.",
-  "Маршрут: станция Домодедово, дорога к Рожайке, усадьба и Смоленская церковь."
+  "Сначала — свои места: «Усадьба над Рожайкой», «Берег Рожайки». Дальше маршрут идёт по соседним местам: Белые Столбы — «Госфильмофонд», «Посёлок»; Домодедово — «Центр и парк»; Горки Ленинские — «Музейный комплекс заповедника»; Видное и Екатерининский монастырь — «Расторгуево», «Центр Видного».",
+  "Маршрут линейный, около 66 км и 8 точек. Финиш — Станция «Расторгуево» (Электрички Павелецкого направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Домодедово»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Павелецкого направления"
  },
  "endPoint": {
-  "name": "Станция «Домодедово»",
+  "name": "Станция «Расторгуево»",
   "coords": {
-   "lat": 55.4402,
-   "lon": 37.7665
+   "lat": 55.546,
+   "lon": 37.725
   },
   "transport": "Электрички Павелецкого направления"
  },
  "route": {
-  "distanceKm": 18.0,
-  "durationH": 3.0,
-  "difficulty": "средний",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 66.0,
+  "durationH": 7.3,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -54,7 +55,7 @@
    "guideStory": [
     "Константиново — вотчина князей Ромодановских на высоком берегу Рожайки. В августе 1683 года юный Пётр два дня гостил здесь у Фёдора Ромодановского, будущего «князя-кесаря».",
     "В 1882 году, по новостной публикации, усадьбой владел брат путешественника Пржевальского. Туристические сайты называют её «усадьбой Пржевальского».",
-    "Сейчас на территории ведут реставрацию; внутрь не заходим. Следующая точка маршрута — «Церковь Смоленской иконы»."
+    "Сейчас на территории ведут реставрацию; внутрь не заходим. Следующая точка маршрута — «Берег Рожайки»."
    ],
    "facts": [
     {
@@ -88,55 +89,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "konstantinovo-tserkov",
-   "name": "Церковь Смоленской иконы",
-   "coords": {
-    "lat": 55.401,
-    "lon": 37.859
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "На средства князя Юрия Ивановича Ромодановского в 1670-х годах построили вотчинный храм Смоленской Богоматери. Датировка первого храма в источниках расходится — 1670 или 1680 год.",
-    "Церковь построена в стиле московской школы второй половины XVII века; в 1930 году её закрыли и сильно перестроили.",
-    "От храма возвращаемся к Рожайке. Следующая точка маршрута — «Берег Рожайки»."
-   ],
-   "facts": [
-    {
-     "text": "Храм Смоленской Богоматери построен в 1670-х на средства Ю. И. Ромодановского.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Датировка первого храма — 1670 или 1680 год.",
-     "sourceUrl": "https://www.komandirovka.ru/hotels/domodedovo/sight/smolenskiy-hram-v-konstantinovo/",
-     "verified": false
-    },
-    {
-     "text": "В 1930 году церковь закрыли и перестроили.",
-     "sourceUrl": "https://www.komandirovka.ru/hotels/domodedovo/sight/smolenskiy-hram-v-konstantinovo/",
-     "verified": true
-    },
-    {
-     "text": "Храм в стиле московской школы второй половины XVII века.",
-     "sourceUrl": "https://sobory.ru/article/?object=02033",
-     "verified": true
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://www.komandirovka.ru/hotels/domodedovo/sight/smolenskiy-hram-v-konstantinovo/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "konstantinovo-rozhayka",
@@ -149,8 +103,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Усадьба стоит на высоком берегу Рожайки — притока Пахры. Отсюда видно, почему князья выбрали это место.",
-    "Константиново — отдельная точка спирали от Домодедова: город остаётся за спиной, впереди — поля и река.",
-    "Обратно к станции Домодедово едем той же дорогой. Финиш — Станция «Домодедово»: Электрички Павелецкого направления."
+    "Константиново — отдельная точка спирали от Домодедова: город остаётся за спиной, впереди — поля и река. Следующая точка маршрута — «Госфильмофонд»."
    ],
    "facts": [
     {
@@ -183,8 +136,288 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "konstantinovo-fond",
+   "name": "Госфильмофонд",
+   "coords": {
+    "lat": 55.335,
+    "lon": 37.865
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Госфильмофонд основан в 1948 году в Белых Столбах. Это одна из самых крупных в мире коллекций художественных и научно-популярных фильмов и архивных киноматериалов.",
+    "Поначалу плёнки часто складировали прямо на полу. Но архив был первым специализированным учреждением такого рода, и со временем здесь сложился научный подход к хранению кино.",
+    "Территория архива закрыта; смотрим снаружи. Следующая точка маршрута — «Посёлок»."
+   ],
+   "facts": [
+    {
+     "text": "Госфильмофонд основан в 1948 году в Белых Столбах.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/enc3p/107798",
+     "verified": true
+    },
+    {
+     "text": "Это одна из крупнейших в мире коллекций фильмов.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/enc3p/107798",
+     "verified": true
+    },
+    {
+     "text": "Поначалу условия хранения были далеки от идеала.",
+     "sourceUrl": "https://www.culture.ru/institutes/10133/gosfilmofond-rossii",
+     "verified": true
+    },
+    {
+     "text": "Это было первое специализированное учреждение такого рода.",
+     "sourceUrl": "https://www.culture.ru/institutes/10133/gosfilmofond-rossii",
+     "verified": true
+    },
+    {
+     "text": "Территория архива закрыта.",
+     "sourceUrl": "https://www.culture.ru/institutes/10133/gosfilmofond-rossii",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Режимная территория архива."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "konstantinovo-posyolok",
+   "name": "Посёлок",
+   "coords": {
+    "lat": 55.33,
+    "lon": 37.855
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Происхождение названия «Белые Столбы» мы в найденных источниках не нашли и не будем придумывать.",
+    "Посёлок живёт рядом с архивом: здесь работают те, кто сохраняет фильмы. Хорошая идея — после маршрута посмотреть старый фильм. Следующая точка маршрута — «Центр и парк»."
+   ],
+   "facts": [
+    {
+     "text": "Происхождение названия не найдено.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/enc3p/107798",
+     "verified": false
+    },
+    {
+     "text": "Посёлок связан с Госфильмофондом.",
+     "sourceUrl": "https://www.culture.ru/institutes/10133/gosfilmofond-rossii",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.culture.ru/institutes/10133/gosfilmofond-rossii",
+     "verified": false
+    },
+    {
+     "text": "Архив хранит научно-популярные фильмы.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/enc3p/107798",
+     "verified": true
+    },
+    {
+     "text": "История посёлка в источниках не раскрыта.",
+     "sourceUrl": "https://www.mk.ru/daily/nashe-podmoskove/article/2014/02/26/991040-vremya-nazad.html",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "konstantinovo-tsentr",
+   "name": "Центр и парк",
+   "coords": {
+    "lat": 55.438,
+    "lon": 37.77
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В центре — городской парк и площади, где отдыхают горожане. Подборку мест для прогулок можно найти на KudaGo.",
+    "Аэропорт Домодедово, один из крупнейших в стране, находится в стороне от города и связан с Москвой своей железнодорожной веткой. Его оператор основан в 1962 году; историю самого аэродрома мы не проверяли."
+   ],
+   "facts": [
+    {
+     "text": "Аэропорт расположен вне центральной застройки и связан с Москвой отдельной веткой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/domodedovo",
+     "verified": true
+    },
+    {
+     "text": "Оператор аэропорта называет годом основания 1962-й.",
+     "sourceUrl": "https://www.calend.ru/orgs/80/",
+     "verified": true
+    },
+    {
+     "text": "Аэропорт носит имя М. В. Ломоносова.",
+     "sourceUrl": "https://www.calend.ru/orgs/80/",
+     "verified": true
+    },
+    {
+     "text": "The Moscow Times рассказывала историю смены владельцев аэропорта.",
+     "sourceUrl": "https://ru.themoscowtimes.com/2026/02/02/otbirali-otbirali-i-nakonets-otobrali-istoriya-aeroporta-domodedovo-a186076",
+     "verified": true
+    },
+    {
+     "text": "Название городского парка мы не уточняли.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-domodedovo/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "konstantinovo-muzey",
+   "name": "Музейный комплекс заповедника",
+   "coords": {
+    "lat": 55.507,
+    "lon": 37.769
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Музей-заповедник «Горки Ленинские» учреждён в 1972 году. Сегодня это крупный комплекс: усадьба, парк, выставочные павильоны и несколько музейных зданий.",
+    "По одному туристическому источнику, в начале XX века имением владел промышленник Зимин, перестроивший дом в неоклассическом стиле. Это расходится с другими источниками, и мы оставляем вопрос открытым."
+   ],
+   "facts": [
+    {
+     "text": "Музей-заповедник учреждён в 1972 году.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Комплекс включает усадьбу, парк, выставочные павильоны и музейные здания.",
+     "sourceUrl": "https://tonkosti.ru/Горки_Ленинские",
+     "verified": true
+    },
+    {
+     "text": "Версия о владельце Зимине расходится с другими источниками.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    },
+    {
+     "text": "Последовательность владельцев в источниках различается.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    },
+    {
+     "text": "Горки — усадьба XVIII века.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "konstantinovo-rastorguevo",
+   "name": "Расторгуево",
+   "coords": {
+    "lat": 55.546,
+    "lon": 37.725
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Расторгуево — дачный посёлок, ставший частью Видного. По одному источнику, его включили в город в 1965 году.",
+    "В 1902 году здесь основали коммерческое общество для устройства дачного посёлка — это называют началом будущего города. Следующая точка маршрута — «Центр Видного»."
+   ],
+   "facts": [
+    {
+     "text": "В 1902 году основано общество для устройства дачного посёлка.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Расторгуево вошло в состав Видного в 1965 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Видное образовано из нескольких посёлков и деревень.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "Состав посёлков, вошедших в город, в источниках различается.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": false
+    },
+    {
+     "text": "Усадьба Видное известна с начала XIX века.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/vidnoe/history",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "konstantinovo-tsentr-2",
+   "name": "Центр Видного",
+   "coords": {
+    "lat": 55.553,
+    "lon": 37.705
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1937 году начали строить Московский коксогазовый завод. Война остановила работы, а в 1949 году стройка возобновилась вместе с постоянным рабочим посёлком.",
+    "13 января 1965 года указом Президиума Верховного Совета РСФСР Видное получило статус города областного подчинения."
+   ],
+   "facts": [
+    {
+     "text": "Строительство Московского коксогазового завода начато в 1937 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 1949 году возобновилось строительство завода и рабочего посёлка.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "13 января 1965 года Видное стало городом областного подчинения.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "Название связано с усадьбой Видное.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "Город — центр Ленинского городского округа.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -219,40 +452,93 @@
   {
    "title": "Константиново — РИАМО",
    "url": "https://riamo.ru/news/obschestvo/kompleks-palliativnoj-pomoschi-detyam-otkroetsya-v-usadbe-v-domodedove-v-kontse-oseni-xl/"
+  },
+  {
+   "title": "Госфильмофонд — Культура.РФ",
+   "url": "https://www.culture.ru/institutes/10133/gosfilmofond-rossii"
+  },
+  {
+   "title": "Госфильмофонд — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/enc3p/107798"
+  },
+  {
+   "title": "История Домодедова — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/domodedovo/istoriia"
+  },
+  {
+   "title": "Аэропорт Домодедово — Календарь",
+   "url": "https://www.calend.ru/orgs/80/"
+  },
+  {
+   "title": "Горки Ленинские — 360",
+   "url": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/"
+  },
+  {
+   "title": "Музей-заповедник — Tripster",
+   "url": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/"
+  },
+  {
+   "title": "Боярский обед — РГ",
+   "url": "https://rg.ru/2023/03/14/rasprobovat-istoriiu-v-muzee-zapovednike-gorki-leninskie-vodiat-po-kuhonnomu-zakulisiu-i-ugoshchaiut-boiarskim-obedom.html"
+  },
+  {
+   "title": "История Видного — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia"
+  },
+  {
+   "title": "Видное — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
+  },
+  {
+   "title": "Екатерининский монастырь — tonkosti.ru",
+   "url": "https://tonkosti.ru/Свято-Екатерининский_монастырь_в_Видном"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.760457,
-     55.44
+     37.699442,
+     55.553
+    ],
+    [
+     37.700186,
+     55.551428
     ],
     [
      37.7612,
      55.438428
     ],
     [
-     37.763229,
-     55.437277
+     37.850213,
+     55.328428
     ],
     [
-     37.857232,
-     55.397277
+     37.852236,
+     55.327277
     ],
     [
-     37.86,
-     55.396856
+     37.855,
+     55.326856
     ],
     [
-     37.862768,
-     55.397277
+     37.857764,
+     55.327277
     ],
     [
-     37.864795,
-     55.398428
+     37.867764,
+     55.332277
+    ],
+    [
+     37.869787,
+     55.333428
+    ],
+    [
+     37.870528,
+     55.335
     ],
     [
      37.865537,
@@ -263,36 +549,36 @@
      55.401572
     ],
     [
-     37.859796,
-     55.406572
+     37.773808,
+     55.508572
     ],
     [
-     37.857769,
-     55.407723
+     37.729813,
+     55.547572
     ],
     [
-     37.769271,
-     55.442923
+     37.727779,
+     55.548723
     ],
     [
-     37.7665,
-     55.443344
+     37.707779,
+     55.555723
     ],
     [
-     37.763729,
-     55.442923
+     37.705,
+     55.556144
     ],
     [
-     37.763229,
-     55.442723
+     37.702221,
+     55.555723
     ],
     [
-     37.7612,
-     55.441572
+     37.700186,
+     55.554572
     ],
     [
-     37.760457,
-     55.44
+     37.699442,
+     55.553
     ]
    ]
   ]

@@ -13,7 +13,8 @@
   "Селятино — посёлок Наро-Фоминского округа на Киевском направлении. Его история тесно связана с трестом «Гидромонтаж», который в 1957 году стал градообразующим предприятием.",
   "В посёлке работает Институт русско-славянских исследований имени Н. Я. Данилевского и стоит Серафимовский храм. У поселения есть свои герб и флаг.",
   "Происхождение названия «Селятино» мы в найденных источниках не нашли и не придумываем.",
-  "Маршрут короткий: станция, центр посёлка, храм и институт Данилевского."
+  "Сначала — свои места: «Посёлок «Гидромонтажа»», «Серафимовский храм», «Институт Данилевского». Дальше маршрут идёт по соседним местам: Калининец — «Тарасково», «Посёлок»; Парк «Патриот» — «Танковый музей»; Кубинка — «Вокзал Кубинка-1»; Тучково — «Аллея Славы».",
+  "Маршрут линейный, около 62 км и 8 точек. Финиш — Станция «Тучково» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Селятино»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "endPoint": {
-  "name": "Станция «Селятино»",
+  "name": "Станция «Тучково»",
   "coords": {
-   "lat": 55.5152,
-   "lon": 36.9805
+   "lat": 55.6002,
+   "lon": 36.4705
   },
-  "transport": "Электрички Киевского направления / МЦД-4"
+  "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 5.0,
-  "durationH": 1.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 62.0,
+  "durationH": 7.1,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
-    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли.",
-    "Едем к храму. Следующая точка маршрута — «Серафимовский храм»."
+    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
    ],
    "facts": [
     {
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "selyatino-khram",
@@ -101,7 +101,7 @@
    "guideStory": [
     "В Селятине стоит Серафимовский храм; в 2010 году на нём освятили кресты.",
     "Храм описан в паломническом справочнике «Азбуки веры». Его историю мы подробно не сверяли.",
-    "Храм действующий; от него едем по посёлку к институту. Следующая точка маршрута — «Институт Данилевского». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+    "Храм действующий; от него едем по посёлку к институту. Следующая точка маршрута — «Институт Данилевского»."
    ],
    "facts": [
     {
@@ -135,8 +135,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "selyatino-institut",
@@ -149,8 +149,7 @@
    "visitMinutes": 10,
    "guideStory": [
     "В Селятине расположен Институт русско-славянских исследований имени Н. Я. Данилевского — философа и естествоиспытателя XIX века, автора книги «Россия и Европа».",
-    "У городского поселения Селятино есть флаг, составленный на основе его герба.",
-    "Возвращаемся к станции. Финиш — Станция «Селятино»: Электрички Киевского направления / МЦД-4. Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+    "У городского поселения Селятино есть флаг, составленный на основе его герба."
    ],
    "facts": [
     {
@@ -182,8 +181,242 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "selyatino-taraskovo",
+   "name": "Тарасково",
+   "coords": {
+    "lat": 55.49,
+    "lon": 36.9
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
+    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок»."
+   ],
+   "facts": [
+    {
+     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Посёлок связан с военным городком.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец находится недалеко от станции Голицыно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "selyatino-posyolok",
+   "name": "Посёлок",
+   "coords": {
+    "lat": 55.471,
+    "lon": 36.881
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Калининец — посёлок, где живут семьи военнослужащих. Здесь есть остановки автобусов на Голицыно и Селятино.",
+    "Больше подробностей мы в открытых источниках не нашли. Маршрут заканчивается здесь.",
+    "Обратно — автобусом или своим ходом к Селятину. Следующая точка маршрута — «Танковый музей»."
+   ],
+   "facts": [
+    {
+     "text": "Автобусы ходят из Калининца в Голицыно и Селятино.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Состав жителей — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "История посёлка в источниках не раскрыта.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец — в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "selyatino-tanki",
+   "name": "Танковый музей",
+   "coords": {
+    "lat": 55.56,
+    "lon": 36.825
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "Танковый музей (Технический центр) — одно из крупнейших собраний бронетехники. Музей разделён на семь павильонов: справа от аллеи — зарубежная техника, слева — российская.",
+    "В проекте парка предусматривались также интерактивный музей с симуляторами управления и музеи ВКС, ВДВ и ВМФ.",
+    "Музей платный; по туристическим данным, парк работает со вторника по воскресенье — проверьте перед поездкой."
+   ],
+   "facts": [
+    {
+     "text": "Танковый музей разделён на семь павильонов.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": true
+    },
+    {
+     "text": "Справа от аллеи — зарубежная техника, слева — российская.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": true
+    },
+    {
+     "text": "Проект парка включал интерактивный музей бронетехники с симуляторами.",
+     "sourceUrl": "https://realty.rbc.ru/news/577d215f9a7947a78ce913ad",
+     "verified": true
+    },
+    {
+     "text": "Парк работает вт–вс — по туристическому сайту.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "selyatino-vokzal",
+   "name": "Вокзал Кубинка-1",
+   "coords": {
+    "lat": 55.577,
+    "lon": 36.695
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В южной части города стоит здание вокзала у станции Кубинка-1. Историю станции мы в найденных источниках не нашли.",
+    "Кубинка — примерно в 60 км к западу от центра Москвы. Следующая точка маршрута — «Аллея Славы». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "У станции Кубинка-1 есть здание вокзала.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": true
+    },
+    {
+     "text": "Кубинка — примерно в 60 км к западу от центра Москвы.",
+     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "verified": true
+    },
+    {
+     "text": "История станции не найдена.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": false
+    },
+    {
+     "text": "Кубинка описана на travelto.ru.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "selyatino-slava",
+   "name": "Аллея Славы",
+   "coords": {
+    "lat": 55.6,
+    "lon": 36.48
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Тучкове торжественно открыли мемориал «Аллея Славы».",
+    "МЧС упоминало годовщину освобождения посёлка от немецко-фашистских захватчиков — значит, в 1941 году Тучково было оккупировано. Финиш — Станция «Тучково»: Электрички Белорусского направления."
+   ],
+   "facts": [
+    {
+     "text": "В Тучкове открыли мемориал «Аллея Славы».",
+     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "verified": true
+    },
+    {
+     "text": "Тучково было освобождено от оккупации.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": true
+    },
+    {
+     "text": "Дату освобождения мы не сверили.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": false
+    },
+    {
+     "text": "Координаты мемориала приблизительные.",
+     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "verified": false
+    },
+    {
+     "text": "Тучково — в Рузском округе.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -218,32 +451,69 @@
   {
    "title": "Селятино 66 лет — Рамблер",
    "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
+  },
+  {
+   "title": "Kalininets — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kalininets"
+  },
+  {
+   "title": "Tamanskaya Division — Military Wiki",
+   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
+  },
+  {
+   "title": "Парк «Патриот» — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
+  },
+  {
+   "title": "Парк «Патриот» — Яндекс Путешествия",
+   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
+  },
+  {
+   "title": "Авиабаза Кубинка — migflug",
+   "url": "https://migflug.com/ru/авиабазы/кубинка/"
+  },
+  {
+   "title": "Kubinka air base — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
+  },
+  {
+   "title": "Генералы Тучковы — Проза",
+   "url": "https://proza.ru/2021/07/05/291"
+  },
+  {
+   "title": "Аллея Славы — 360",
+   "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.969447,
-     55.515
+     36.464935,
+     55.6002
     ],
     [
-     36.970191,
-     55.513428
+     36.46568,
+     55.598628
     ],
     [
-     36.973191,
-     55.511428
+     36.467717,
+     55.597477
     ],
     [
-     36.975224,
-     55.510277
+     36.878227,
+     55.468277
     ],
     [
-     36.978,
-     55.509856
+     36.881,
+     55.467856
+    ],
+    [
+     36.883773,
+     55.468277
     ],
     [
      36.980776,
@@ -270,24 +540,36 @@
      55.518723
     ],
     [
-     36.982,
-     55.519144
+     36.82778,
+     55.562723
     ],
     [
-     36.975,
-     55.518144
+     36.825,
+     55.563144
     ],
     [
-     36.972223,
-     55.517723
+     36.695,
+     55.580144
     ],
     [
-     36.970191,
-     55.516572
+     36.48,
+     55.603144
     ],
     [
-     36.969447,
-     55.515
+     36.4705,
+     55.603344
+    ],
+    [
+     36.467717,
+     55.602923
+    ],
+    [
+     36.46568,
+     55.601772
+    ],
+    [
+     36.464935,
+     55.6002
     ]
    ]
   ]

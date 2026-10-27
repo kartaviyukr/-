@@ -13,7 +13,8 @@
   "Крюково — станция и посёлок, ставшие в конце 1941 года одним из рубежей обороны Москвы. Музей Зеленограда водит экскурсии, посвящённые ожесточённым боям за станцию Крюково.",
   "В декабре 1941 года немецкие войска заняли почти всю территорию нынешнего района Крюково. Основные бои здесь вела 8-я гвардейская стрелковая дивизия имени Панфилова. Деревня Матушкино была освобождена 8 декабря 1941 года.",
   "В 1970 году северную часть посёлка Крюково до железной дороги передали Зеленограду.",
-  "Маршрут: станция Крюково, бывший посёлок и место боёв у Матушкина."
+  "Сначала — свои места: «Бывший посёлок Крюково», «Матушкино». Дальше маршрут идёт по соседним местам: Менделеево — «Институт времени», «Верховья Клязьмы»; Мемориал «Штыки» — «Последний рубеж»; Молжаниново, Новосёлки, Черкизово — «Церковь Рождества Христова в Черкизове»; Куркино — «Церковь Владимирской иконы», «Долина Сходни».",
+  "Маршрут линейный, около 51 км и 8 точек. Финиш — Станция «Химки» (Электрички Ленинградского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Крюково»",
@@ -24,71 +25,24 @@
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "endPoint": {
-  "name": "Станция «Крюково»",
+  "name": "Станция «Химки»",
   "coords": {
-   "lat": 55.9802,
-   "lon": 37.1725
+   "lat": 55.889,
+   "lon": 37.445
   },
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "route": {
-  "distanceKm": 7.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 51.0,
+  "durationH": 6.0,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "kryukovo-stantsiya",
-   "name": "Станция Крюково",
-   "coords": {
-    "lat": 55.98,
-    "lon": 37.172
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "За станцию Крюково и одноимённый посёлок в конце 1941 года шли ожесточённые бои. Музей Зеленограда проводит экскурсии об этих событиях.",
-    "В декабре 1941 года противник занял почти всю территорию нынешнего района Крюково. Основные бои здесь вела 8-я гвардейская стрелковая дивизия имени Панфилова.",
-    "От станции едем по бывшему посёлку. Следующая точка маршрута — «Бывший посёлок Крюково»."
-   ],
-   "facts": [
-    {
-     "text": "За станцию Крюково в конце 1941 года шли ожесточённые бои.",
-     "sourceUrl": "https://mosmuseum.ru/association/zelenograd/tours",
-     "verified": true
-    },
-    {
-     "text": "В декабре 1941 года была занята почти вся территория района.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kryukovo/",
-     "verified": true
-    },
-    {
-     "text": "Основные бои вела 8-я гвардейская дивизия имени Панфилова.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kryukovo/",
-     "verified": true
-    },
-    {
-     "text": "Музей Зеленограда проводит экскурсии о боях.",
-     "sourceUrl": "https://mosmuseum.ru/association/zelenograd/tours",
-     "verified": true
-    },
-    {
-     "text": "Координаты станции приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kryukovo/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
   {
    "id": "kryukovo-posyolok",
    "name": "Бывший посёлок Крюково",
@@ -100,8 +54,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "В 1970 году северную часть посёлка Крюково до железной дороги передали городу Зеленограду; другие населённые пункты присоединили в 1970–1980-х.",
-    "Сегодня Старое Крюково — отдельный район Зеленограда со своей историей.",
-    "Дальше по улицам района едем к бывшей деревне Матушкино. Следующая точка маршрута — «Матушкино»."
+    "Сегодня Старое Крюково — отдельный район Зеленограда со своей историей. Следующая точка маршрута — «Матушкино»."
    ],
    "facts": [
     {
@@ -133,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "kryukovo-matushkino",
@@ -148,7 +101,7 @@
    "guideStory": [
     "Деревня Матушкино на короткое время оказалась оккупирована, но 8 декабря 1941 года её освободили.",
     "На землях бывших деревень Матушкино и Савёлки и посёлка Крюково позже построили Зеленоград.",
-    "От Матушкина через новые кварталы возвращаемся к станции Крюково. Финиш — Станция «Крюково»: Электрички Ленинградского направления / МЦД-3."
+    "От Матушкина через новые кварталы возвращаемся к станции Крюково."
    ],
    "facts": [
     {
@@ -180,8 +133,296 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "kryukovo-institut",
+   "name": "Институт времени",
+   "coords": {
+    "lat": 56.035,
+    "lon": 37.23
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Всероссийский научно-исследовательский институт физико-технических и радиотехнических измерений (ВНИИФТРИ) Росстандарта называют расположенным в Солнечногорске; РИАМО писало о нём как об «институте времени».",
+    "Что институт находится именно в Менделееве — по нашим источникам вывод косвенный, поэтому этот факт помечен как непроверенный."
+   ],
+   "facts": [
+    {
+     "text": "ВНИИФТРИ Росстандарта — метрологический институт в Солнечногорском округе.",
+     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
+     "verified": true
+    },
+    {
+     "text": "РИАМО называло институт в Солнечногорском округе «институтом времени».",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/",
+     "verified": true
+    },
+    {
+     "text": "Расположение института именно в Менделееве не проверено.",
+     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
+     "verified": false
+    },
+    {
+     "text": "Территория института закрыта.",
+     "sourceUrl": "https://360.ru/news/mosobl/federalnaja-delegatsija-posetila-metrologicheskij-institut-v-solnechnogorske/",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Режимная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "kryukovo-klyazma",
+   "name": "Верховья Клязьмы",
+   "coords": {
+    "lat": 56.045,
+    "lon": 37.215
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Менделеево стоит в верховьях Клязьмы — той самой реки, что дальше течёт через Щёлково и Ногинск к Владимиру.",
+    "Здесь Клязьма ещё совсем небольшая речка. Тропы вдоль неё мы на месте не проверяли.",
+    "По тихим улицам посёлка возвращаемся к остановке на шоссе. Следующая точка маршрута — «Последний рубеж»."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок расположен в верховьях Клязьмы.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": true
+    },
+    {
+     "text": "Клязьма течёт через Щёлково и Ногинск.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": false
+    },
+    {
+     "text": "Тропы вдоль реки не проверены.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": false
+    },
+    {
+     "text": "Менделеево соседствует с Зеленоградом.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "kryukovo-rubezh",
+   "name": "Последний рубеж",
+   "coords": {
+    "lat": 55.975,
+    "lon": 37.25
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
+    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Следующая точка маршрута — «Церковь Рождества Христова в Черкизове»."
+   ],
+   "facts": [
+    {
+     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
+    },
+    {
+     "text": "Шли бои за деревню Матушкино.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
+    },
+    {
+     "text": "Матушкино освобождено 8 декабря 1941 года.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": false
+    },
+    {
+     "text": "Ленинградское шоссе — плотное движение.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Ленинградское шоссе: не выезжать на проезжую часть."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "kryukovo-tserkov",
+   "name": "Церковь Рождества Христова в Черкизове",
+   "coords": {
+    "lat": 55.93,
+    "lon": 37.36
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Церковь Рождества Христова в Черкизове находится в Молжаниновском районе Москвы; её также называют храмом в Новоподрезкове.",
+    "Датировку и историю храма мы в найденных источниках не нашли — фотографии собраны на sobory.ru. Следующая точка маршрута — «Церковь Владимирской иконы»."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Рождества Христова в Черкизове — в Молжаниновском районе.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": true
+    },
+    {
+     "text": "Храм также называют храмом в Новоподрезкове.",
+     "sourceUrl": "https://sobory.ru/photo/453558",
+     "verified": true
+    },
+    {
+     "text": "Датировка храма не найдена.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Район относится к Северному округу.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "kryukovo-tserkov-2",
+   "name": "Церковь Владимирской иконы",
+   "coords": {
+    "lat": 55.892,
+    "lon": 37.387
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 1678 году в селе построили церковь во имя Владимирской иконы Божией Матери. Её архивная фотография 1950-х годов хранится на sobory.ru.",
+    "В 1908 году в селе организовали Куркинское кредитное товарищество — пример деревенской кооперации начала XX века."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Владимирской иконы построена в 1678 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kurkino/",
+     "verified": true
+    },
+    {
+     "text": "В 1908 году организовано Куркинское кредитное товарищество.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kurkino/",
+     "verified": true
+    },
+    {
+     "text": "Фото церкви 1950-х годов есть на sobory.ru.",
+     "sourceUrl": "https://sobory.ru/photo/12492",
+     "verified": true
+    },
+    {
+     "text": "Храм действующий.",
+     "sourceUrl": "https://sobory.ru/photo/12492",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/12492",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "kryukovo-skhodnya",
+   "name": "Долина Сходни",
+   "coords": {
+    "lat": 55.885,
+    "lon": 37.4
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Куркино стоит у долины реки Сходни — зелёного природного коридора на северо-западе Москвы.",
+    "Тропы вдоль реки мы на месте не проверяли; выбирайте накатанные дорожки.",
+    "Вдоль зелёной долины, а затем по улицам района возвращаемся к метро «Планерная»."
+   ],
+   "facts": [
+    {
+     "text": "Куркино — район Москвы.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kurkino_District",
+     "verified": true
+    },
+    {
+     "text": "Район расположен у реки Сходни.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kurkino_District",
+     "verified": false
+    },
+    {
+     "text": "Тропы вдоль реки не проверены.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kurkino/",
+     "verified": false
+    },
+    {
+     "text": "Куркино — бывшее село.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kurkino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kurkino/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -216,9 +457,38 @@
   {
    "title": "Экскурсии — Музей Зеленограда",
    "url": "https://mosmuseum.ru/association/zelenograd/tours"
+  },
+  {
+   "title": "Менделеево — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
+  },
+  {
+   "title": "Институт времени — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-solnechnogorsk-institut-vremeni-i-sanatorij-dlya-stalina-xl/"
+  },
+  {
+   "title": "Штыки — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)"
+  },
+  {
+   "title": "Мемориал «Штыки» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
+  },
+  {
+   "title": "Церковь в Черкизове — sobory.ru",
+   "url": "https://sobory.ru/photo/11000"
+  },
+  {
+   "title": "Куркино — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/kurkino/"
+  },
+  {
+   "title": "Kurkino District — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kurkino_District"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -236,48 +506,56 @@
      55.972277
     ],
     [
-     37.165,
-     55.971856
+     37.397197,
+     55.882277
     ],
     [
-     37.167809,
-     55.972277
+     37.4,
+     55.881856
     ],
     [
-     37.169866,
-     55.973428
+     37.445,
+     55.885856
     ],
     [
-     37.194868,
-     55.988428
+     37.447803,
+     55.886277
     ],
     [
-     37.195621,
-     55.99
+     37.449855,
+     55.887428
     ],
     [
-     37.194868,
-     55.991572
+     37.450606,
+     55.889
     ],
     [
-     37.192811,
-     55.992723
+     37.449855,
+     55.890572
     ],
     [
-     37.19,
-     55.993144
+     37.234874,
+     56.036572
     ],
     [
-     37.187189,
-     55.992723
+     37.219875,
+     56.046572
     ],
     [
-     37.16919,
-     55.982723
+     37.217815,
+     56.047723
     ],
     [
-     37.167133,
-     55.981572
+     37.215,
+     56.048144
+    ],
+    [
+     37.212185,
+     56.047723
+    ],
+    [
+     37.210125,
+     56.046572
     ],
     [
      37.160134,

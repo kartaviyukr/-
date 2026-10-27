@@ -13,7 +13,8 @@
   "Захарово — имение бабушки Пушкина, Марии Алексеевны Ганнибал. Она купила его в 1804 году, и маленький Саша проводил здесь каждое лето — до отъезда в Царскосельский лицей.",
   "Подлинный дом не сохранился. В 1999 году, к 200-летию поэта, его воссоздали по изображениям и описаниям. Сегодня здесь проходят ежегодные Пушкинские праздники поэзии.",
   "Захарово вместе с Большими Вязёмами входит в музей-заповедник Пушкина. В 2020 году объявили о создании Пушкинской тропы, которая начинается отсюда.",
-  "Маршрут: станция Голицыно, Вязёмы по пути, Захарово и пруд."
+  "Сначала — свои места: «Дом Марии Ганнибал», «Пушкинская тропа». Дальше маршрут идёт по соседним местам: Большие Вязёмы — «Дворец Голицыных»; Голицыно — «Дорога к Вязёмам», «Центр Голицына»; Апрелевка — «Завод грампластинок»; Селятино — «Институт Данилевского»; Калининец — «Тарасково», «Посёлок».",
+  "Маршрут линейный, около 57 км и 9 точек. Финиш — Станция «Селятино» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Голицыно»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Голицыно»",
+  "name": "Станция «Селятино»",
   "coords": {
-   "lat": 55.6152,
-   "lon": 36.9855
+   "lat": 55.515,
+   "lon": 36.98
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 10.0,
-  "durationH": 2.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 57.0,
+  "durationH": 6.9,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -87,56 +88,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "zakharovo-prud",
-   "name": "Пруд и детство поэта",
-   "coords": {
-    "lat": 55.6445,
-    "lon": 36.971
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Захарово — место, где прошло лучшее, по общему мнению биографов, время детства Пушкина. «Рамблер» рассказывал о «поэте с кудрявой головой» и его детстве.",
-    "Экскурсии обычно объединяют Захарово с Вязёмами: дворец Голицыных Пушкин описал в «Евгении Онегине» — так утверждает экскурсионный источник.",
-    "Обходим пруд и выезжаем на Пушкинскую тропу. Следующая точка маршрута — «Пушкинская тропа»."
-   ],
-   "facts": [
-    {
-     "text": "Детство Пушкина связано с Захаровом.",
-     "sourceUrl": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/",
-     "verified": true
-    },
-    {
-     "text": "Связь дворца Голицыных с «Онегиным» — по экскурсионному источнику.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
-     "verified": false
-    },
-    {
-     "text": "Экскурсии объединяют Захарово и Вязёмы.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
-     "verified": true
-    },
-    {
-     "text": "«Вечерняя Москва» писала о малоизвестных фактах жизни Пушкина.",
-     "sourceUrl": "https://vm.ru/society/1057553-vstrecha-so-smertyu-i-uchitel-gannibal-pyat-faktov-o-zhizni-pushkina-kotorye-ne-rasskazhut-v-shkole/amp",
-     "verified": true
-    },
-    {
-     "text": "Координаты пруда приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "zakharovo-tropa",
@@ -149,8 +102,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "В 2020 году объявили о создании Пушкинской тропы, которая, по описаниям, начинается от Захарова.",
-    "Сноб включает пушкинские усадьбы в идеи для летнего отдыха в Подмосковье. Маршрут тропы на месте мы не проверяли.",
-    "По тропе и дорогам возвращаемся через Вязёмы к станции Голицыно. Финиш — Станция «Голицыно»: Электрички Белорусского направления."
+    "Сноб включает пушкинские усадьбы в идеи для летнего отдыха в Подмосковье. Маршрут тропы на месте мы не проверяли. Следующая точка маршрута — «Дворец Голицыных»."
    ],
    "facts": [
     {
@@ -182,8 +134,334 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "zakharovo-dvorets",
+   "name": "Дворец Голицыных",
+   "coords": {
+    "lat": 55.6355,
+    "lon": 36.994
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Главная постройка ансамбля — Голицынский дворец с флигелями. Его называют «Дворцом Пиковой дамы»; на экскурсии показывают парадные гостиные, кабинет Дмитрия Голицына и масонскую комнату.",
+    "В 1994 году на территории Больших Вязём и Захарова создали музей-заповедник А. С. Пушкина."
+   ],
+   "facts": [
+    {
+     "text": "Главная постройка — Голицынский дворец с флигелями.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Дворец называют «Дворцом Пиковой дамы».",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": true
+    },
+    {
+     "text": "В дворце есть масонская комната.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": true
+    },
+    {
+     "text": "Музей-заповедник создан в 1994 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Хронология владения Голицыных не раскрыта в найденных источниках.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "zakharovo-okraina",
+   "name": "Дорога к Вязёмам",
+   "coords": {
+    "lat": 55.625,
+    "lon": 36.99
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Отсюда начинается дорога к Большим Вязёмам и Захарову — пушкинским местам, о которых рассказывают отдельные маршруты спирали.",
+    "Туристические сайты советуют использовать Голицыно как отправную точку для поездок по окрестным усадьбам."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с Голицыном — Большие Вязёмы и Захарово.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Захарово связано с детством Пушкина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Голицыно — удобная отправная точка для усадеб.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Голицыно описано в Знании.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "zakharovo-tsentr",
+   "name": "Центр Голицына",
+   "coords": {
+    "lat": 55.617,
+    "lon": 36.99
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Голицыно — небольшой город; его центр складывался вокруг станции.",
+    "Дату основания и происхождение названия мы в найденных источниках не нашли. Не будем гадать, связано ли оно с князьями Голицыными, владевшими соседними Вязёмами. Следующая точка маршрута — «Завод грампластинок»."
+   ],
+   "facts": [
+    {
+     "text": "Центр города сложился вокруг станции.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Происхождение названия не установлено.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Достопримечательности Голицына собраны на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/golicino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты центра приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "zakharovo-zavod",
+   "name": "Завод грампластинок",
+   "coords": {
+    "lat": 55.55,
+    "lon": 37.07
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
+    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
+    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
+   ],
+   "facts": [
+    {
+     "text": "Завод основан в 1910 году Б. Моллем.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "verified": true
+    },
+    {
+     "text": "Первые пластинки выпущены в декабре 1910 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "С 1964 года завод входил в фирму «Мелодия».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "zakharovo-institut",
+   "name": "Институт Данилевского",
+   "coords": {
+    "lat": 55.516,
+    "lon": 36.982
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В Селятине расположен Институт русско-славянских исследований имени Н. Я. Данилевского — философа и естествоиспытателя XIX века, автора книги «Россия и Европа».",
+    "У городского поселения Селятино есть флаг, составленный на основе его герба."
+   ],
+   "facts": [
+    {
+     "text": "В Селятине расположен Институт русско-славянских исследований имени Данилевского.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Данилевский — автор книги «Россия и Европа».",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Флаг Селятина составлен на основе герба.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Координаты института приблизительные.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Селятино — посёлок на Киевском направлении.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "zakharovo-taraskovo",
+   "name": "Тарасково",
+   "coords": {
+    "lat": 55.49,
+    "lon": 36.9
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
+    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок»."
+   ],
+   "facts": [
+    {
+     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Посёлок связан с военным городком.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец находится недалеко от станции Голицыно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "zakharovo-posyolok",
+   "name": "Посёлок",
+   "coords": {
+    "lat": 55.471,
+    "lon": 36.881
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Калининец — посёлок, где живут семьи военнослужащих. Здесь есть остановки автобусов на Голицыно и Селятино.",
+    "Больше подробностей мы в открытых источниках не нашли. Маршрут заканчивается здесь.",
+    "Обратно — автобусом или своим ходом к Селятину. Финиш — Станция «Селятино»: Электрички Киевского направления / МЦД-4."
+   ],
+   "facts": [
+    {
+     "text": "Автобусы ходят из Калининца в Голицыно и Селятино.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Состав жителей — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "История посёлка в источниках не раскрыта.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец — в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
   }
  ],
  "dish": {
@@ -218,60 +496,101 @@
   {
    "title": "Детство Пушкина — Рамблер",
    "url": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/"
+  },
+  {
+   "title": "Большие Вязёмы — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B"
+  },
+  {
+   "title": "Большие Вязёмы — 360",
+   "url": "https://360.ru/news/zima/usadba-bolshie-vjazemy/"
+  },
+  {
+   "title": "Голицыно — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
+   "title": "Голицыно — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
+   "title": "Апрелевский завод грампластинок — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
+  },
+  {
+   "title": "Апрелевский завод — БРЭ",
+   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
+  },
+  {
+   "title": "Апрелевка — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
+  },
+  {
+   "title": "Selyatino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Selyatino"
+  },
+  {
+   "title": "Селятино 66 лет — Рамблер",
+   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
+  },
+  {
+   "title": "Kalininets — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kalininets"
+  },
+  {
+   "title": "Tamanskaya Division — Military Wiki",
+   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.964429,
-     55.645
+     36.875453,
+     55.471
     ],
     [
-     36.965175,
-     55.643428
+     36.876196,
+     55.469428
     ],
     [
-     36.980179,
-     55.613428
+     36.878227,
+     55.468277
     ],
     [
-     36.982216,
-     55.612277
+     36.881,
+     55.467856
     ],
     [
-     36.985,
-     55.611856
+     36.883773,
+     55.468277
     ],
     [
-     36.987784,
-     55.612277
+     37.072779,
+     55.547277
     ],
     [
-     36.988284,
-     55.612477
+     37.074813,
+     55.548428
     ],
     [
-     36.990321,
-     55.613628
+     37.075558,
+     55.55
     ],
     [
-     36.991067,
-     55.6152
+     37.074813,
+     55.551572
     ],
     [
-     36.985571,
-     55.64
+     36.998824,
+     55.637072
     ],
     [
-     36.984824,
-     55.641572
-    ],
-    [
-     36.982785,
-     55.642723
+     36.996785,
+     55.638223
     ],
     [
      36.972786,
@@ -290,8 +609,12 @@
      55.646572
     ],
     [
-     36.964429,
-     55.645
+     36.876196,
+     55.472572
+    ],
+    [
+     36.875453,
+     55.471
     ]
    ]
   ]

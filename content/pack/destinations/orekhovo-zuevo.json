@@ -13,7 +13,8 @@
   "Орехово-Зуево — город Морозовых. Официально он стал городом в 1917 году, когда объединили село Орехово, деревню Зуево и фабричное местечко Никольское.",
   "Здесь работала Никольская мануфактура «Саввы Морозова сын и Ко». Морозовы, по одному источнику, добились в 1857 году, чтобы железная дорога на Нижний Новгород прошла через Орехово-Зуево, а не через Павловский Посад.",
   "С 7 по 17 января 1885 года на мануфактуре прошла Морозовская стачка — одно из крупнейших и организованных выступлений рабочих в империи. А ещё Орехово-Зуево считают одной из колыбелей российского футбола.",
-  "Маршрут: станция, Никольская мануфактура и центр."
+  "Сначала — свои места: «Никольская мануфактура», «Колыбель футбола». Дальше маршрут идёт по соседним местам: Дрезна — «Фабричный пруд»; Ликино-Дулёво — «ЛиАЗ», «Два посёлка — один город»; Гуслицы (Давыдово) — «Гуслицкое письмо»; Куровское — «Гуслицкий монастырь», «Старообрядческий край».",
+  "Маршрут линейный, около 52 км и 8 точек. Финиш — Станция «Куровская» (Электрички Казанского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Орехово-Зуево»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Горьковского направления"
  },
  "endPoint": {
-  "name": "Станция «Орехово-Зуево»",
+  "name": "Станция «Куровская»",
   "coords": {
-   "lat": 55.8062,
-   "lon": 38.9625
+   "lat": 55.5792,
+   "lon": 38.9215
   },
-  "transport": "Электрички Горьковского направления"
+  "transport": "Электрички Казанского направления"
  },
  "route": {
-  "distanceKm": 6.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 52.0,
+  "durationH": 6.1,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Никольская мануфактура принадлежала ветви Морозовых — Тимофеевичам. Её кирпичная фабричная архитектура до сих пор определяет облик города.",
-    "Морозовы, по одному источнику, в 1857 году добились, чтобы линия Московско-Нижегородской железной дороги прошла через Орехово-Зуево.",
-    "Смотрим корпуса снаружи. Следующая точка маршрута — «Морозовская стачка»."
+    "Морозовы, по одному источнику, в 1857 году добились, чтобы линия Московско-Нижегородской железной дороги прошла через Орехово-Зуево."
    ],
    "facts": [
     {
@@ -86,55 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "orekhovo-zuevo-stachka",
-   "name": "Морозовская стачка",
-   "coords": {
-    "lat": 55.809,
-    "lon": 38.968
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "С 7 по 17 января 1885 года на фабрике «Товарищества Никольской мануфактуры Саввы Морозова, сына и Ко» прошла Морозовская стачка. К ней присоединились почти все 6,3 тысячи рабочих и служащих.",
-    "Её называют одним из крупнейших и наиболее организованных выступлений рабочих в Российской империи.",
-    "Едем в центр. Следующая точка маршрута — «Колыбель футбола»."
-   ],
-   "facts": [
-    {
-     "text": "Морозовская стачка прошла с 7 по 17 января 1885 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%87%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Стачка была на фабрике в посёлке Никольское.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%87%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "К стачке присоединились почти все 6,3 тысячи работников.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%87%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Это одно из крупнейших выступлений рабочих в империи.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%87%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D1%82%D0%B0%D1%87%D0%BA%D0%B0",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "orekhovo-zuevo-futbol",
@@ -147,8 +100,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Орехово-Зуево считают одним из мест, где начинался российский футбол; краевед Владимир Лизунов писал об этой истории. Точные даты первых матчей мы не сверили.",
-    "Город официально появился в 1917 году объединением Орехова, Зуева и Никольского.",
-    "Возвращаемся к станции. Финиш — Станция «Орехово-Зуево»: Электрички Горьковского направления."
+    "Город официально появился в 1917 году объединением Орехова, Зуева и Никольского."
    ],
    "facts": [
     {
@@ -180,8 +132,288 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "orekhovo-zuevo-prud",
+   "name": "Фабричный пруд",
+   "coords": {
+    "lat": 55.747,
+    "lon": 38.852
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Фабричный пруд — часть производственного ансамбля; такие пруды давали воду для производства.",
+    "Сегодня это тихое место в центре маленького города. Следующая точка маршрута — «ЛиАЗ». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Дрезне сохранился фабричный пруд.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
+     "verified": true
+    },
+    {
+     "text": "Назначение пруда — общее для фабрик того времени.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
+     "verified": false
+    },
+    {
+     "text": "Координаты пруда приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
+     "verified": false
+    },
+    {
+     "text": "Дрезна описана на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "orekhovo-zuevo-liaz",
+   "name": "ЛиАЗ",
+   "coords": {
+    "lat": 55.715,
+    "lon": 38.955
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Ликинский автобусный завод ведёт историю с 1933 года, а автобусы выпускает с 1959 года. Жёлтые и зелёные ЛиАЗы ездят по всей стране.",
+    "Территория завода закрыта — смотрим снаружи. Следующая точка маршрута — «Два посёлка — один город»."
+   ],
+   "facts": [
+    {
+     "text": "История ЛиАЗа восходит к 1933 году.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
+     "verified": true
+    },
+    {
+     "text": "Производство автобусов начато в 1959 году.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
+     "verified": true
+    },
+    {
+     "text": "Территория закрыта.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
+     "verified": false
+    },
+    {
+     "text": "Цвета автобусов — наблюдение составителя.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/likino-dulyovo.htm",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "orekhovo-zuevo-gorod",
+   "name": "Два посёлка — один город",
+   "coords": {
+    "lat": 55.709,
+    "lon": 38.949
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1937 году посёлки Ликино и Дулёво официально слились в единый город — отсюда двойное имя.",
+    "Tripster предлагает экскурсии «Истории фарфорового города». Следующая точка маршрута — «Гуслицкое письмо». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В 1937 году Ликино и Дулёво слились в один город.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Есть экскурсии об истории фарфорового города.",
+     "sourceUrl": "https://experience.tripster.ru/experience/101767/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Ликино-Дулёво — в Орехово-Зуевском округе.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "orekhovo-zuevo-knigi",
+   "name": "Гуслицкое письмо",
+   "coords": {
+    "lat": 55.6205,
+    "lon": 38.8905
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Гуслицкие мастера были известны как переписчики певческих книг и иконописцы. Книги с гуслицкой росписью заставок встречаются в старообрядческих храмах по всей России; Рязанский кремль показывал певческие рукописи гуслицкого письма.",
+    "Историю давыдовской моленной мы в найденных источниках не нашли."
+   ],
+   "facts": [
+    {
+     "text": "Гуслицкие мастера переписывали певческие книги и писали иконы.",
+     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
+     "verified": true
+    },
+    {
+     "text": "Гуслицкие книги встречаются по всей России.",
+     "sourceUrl": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf",
+     "verified": true
+    },
+    {
+     "text": "Рязанский кремль рассказывал о рукописях гуслицкого письма.",
+     "sourceUrl": "https://vk.ru/@ryazankreml-pevcheskie-rukopisi-guslickogo-pisma",
+     "verified": true
+    },
+    {
+     "text": "История моленной в Давыдове не найдена.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%94%D0%B0%D0%B2%D1%8B%D0%B4%D0%BE%D0%B2%D0%BE_(%D0%9E%D1%80%D0%B5%D1%85%D0%BE%D0%B2%D0%BE-%D0%97%D1%83%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3)",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%94%D0%B0%D0%B2%D1%8B%D0%B4%D0%BE%D0%B2%D0%BE_(%D0%9E%D1%80%D0%B5%D1%85%D0%BE%D0%B2%D0%BE-%D0%97%D1%83%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3)",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "orekhovo-zuevo-monastyr",
+   "name": "Гуслицкий монастырь",
+   "coords": {
+    "lat": 55.6,
+    "lon": 38.94
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Спасо-Преображенский Гуслицкий монастырь основан на рубеже 1858–1859 годов по инициативе Александра II и с благословения митрополита Филарета (Дроздова), у древнего погоста Спас на Мошеве.",
+    "Вокруг жили старообрядцы, и церковь создавала здесь миссионерский центр против раскола. В 1922 году монастырь закрыли, святыни вывезли; сегодня он снова действует.",
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Старообрядческий край»."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь основан в 1858–1859 годах по инициативе Александра II.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Основан с благословения митрополита Филарета.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Монастырь стоит у погоста Спас на Мошеве.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Монастырь был миссионерским центром против раскола.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/spaso-preobrazhenskij-guslitskij-muzhskoj-monastyr/",
+     "verified": true
+    },
+    {
+     "text": "В 1922 году монастырь закрыт.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/spaso-preobrazhenskij-guslitskij-muzhskoj-monastyr/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь: правила посещения."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "orekhovo-zuevo-staroobryadtsy",
+   "name": "Старообрядческий край",
+   "coords": {
+    "lat": 55.59,
+    "lon": 38.93
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Исторические Гуслицы со старообрядческой традицией шире самого Куровского; разные церковные общины нельзя смешивать.",
+    "Куровское — хорошая отправная точка для Гуслиц и Давыдова, у которых в спирали свой маршрут. Финиш — Станция «Куровская»: Электрички Казанского направления."
+   ],
+   "facts": [
+    {
+     "text": "Гуслицы шире Куровского.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Общины нельзя смешивать.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Монастырь описан на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -219,44 +451,85 @@
   {
    "title": "История — kupibilet.ru",
    "url": "https://www.kupibilet.ru/gid/rossiia/orekhovo-zuevo/istoriia"
+  },
+  {
+   "title": "Дрезна — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%94%D1%80%D0%B5%D0%B7%D0%BD%D0%B0"
+  },
+  {
+   "title": "Дрезна — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/drezna/"
+  },
+  {
+   "title": "Дулёвский фарфоровый завод — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%94%D1%83%D0%BB%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%84%D0%B0%D1%80%D1%84%D0%BE%D1%80%D0%BE%D0%B2%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4"
+  },
+  {
+   "title": "История — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/likino-dulevo/istoriia"
+  },
+  {
+   "title": "Давыдово — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%94%D0%B0%D0%B2%D1%8B%D0%B4%D0%BE%D0%B2%D0%BE_(%D0%9E%D1%80%D0%B5%D1%85%D0%BE%D0%B2%D0%BE-%D0%97%D1%83%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3)"
+  },
+  {
+   "title": "Гуслицы — СПЖ",
+   "url": "https://fehu.philology.nsc.ru/journals/spj/pdf/2009_1/02.pdf"
+  },
+  {
+   "title": "Гуслицкий монастырь — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D1%83%D1%81%D0%BB%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
+  },
+  {
+   "title": "Куровское — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kurovskoe/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.956406,
-     55.806
+     38.846414,
+     55.747
     ],
     [
-     38.957155,
-     55.804428
+     38.884932,
+     55.6205
     ],
     [
-     38.959203,
-     55.803277
+     38.885678,
+     55.618928
     ],
     [
-     38.962,
-     55.802856
+     38.916683,
+     55.577628
     ],
     [
-     38.964797,
-     55.803277
+     38.918719,
+     55.576477
     ],
     [
-     38.967797,
-     55.804277
+     38.9215,
+     55.576056
     ],
     [
-     38.969845,
-     55.805428
+     38.924281,
+     55.576477
     ],
     [
-     38.974845,
-     55.808428
+     38.926317,
+     55.577628
+    ],
+    [
+     38.94482,
+     55.598428
+    ],
+    [
+     38.945565,
+     55.6
     ],
     [
      38.975595,
@@ -283,12 +556,16 @@
      55.808723
     ],
     [
-     38.957155,
-     55.807572
+     38.849207,
+     55.749723
     ],
     [
-     38.956406,
-     55.806
+     38.847162,
+     55.748572
+    ],
+    [
+     38.846414,
+     55.747
     ]
    ]
   ]

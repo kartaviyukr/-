@@ -13,7 +13,8 @@
   "Кратово — профессорский дачный посёлок в соснах. До 1930 года он назывался Прозоровским — по князьям Голицыным-Прозоровским, владевшим этими землями.",
   "В 1910 году территорию выкупил Николай фон Мекк, владелец Московско-Казанской железной дороги. Он задумал современный город-сад для служащих дороги со школами, церковью и больницей и привлёк известных архитекторов, включая Алексея Щусева.",
   "Город-сад до конца не построили. Вместо него появились десятки тенистых дач, где летом жили советские учёные и деятели культуры с семьями.",
-  "Маршрут: станция, дачные улицы и Кратовское озеро."
+  "Сначала — свои места: «Профессорские дачи», «Кратовское озеро». Дальше маршрут идёт по соседним местам: Раменское — «Борисоглебское озеро и Троицкая церковь», «Раменская мануфактура»; Гжель — «Фарфор на Дорке», «Гжельский завод и музей»; Электроугли — «Каменка — старое ядро»; Старая Купавна — «Купавинская фабрика и пруд».",
+  "Маршрут линейный, около 61 км и 8 точек. Финиш — Станция «Монино» (Электрички с Ярославского вокзала до станции Монино), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Кратово»",
@@ -24,71 +25,24 @@
   "transport": "Электрички Казанского направления / МЦД-3"
  },
  "endPoint": {
-  "name": "Станция «Кратово»",
+  "name": "Станция «Монино»",
   "coords": {
-   "lat": 55.5982,
-   "lon": 38.1585
+   "lat": 55.842,
+   "lon": 38.196
   },
-  "transport": "Электрички Казанского направления / МЦД-3"
+  "transport": "Электрички с Ярославского вокзала до станции Монино"
  },
  "route": {
-  "distanceKm": 5.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 61.0,
+  "durationH": 7.3,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "kratovo-stantsiya",
-   "name": "Станция Кратово и город-сад фон Мекка",
-   "coords": {
-    "lat": 55.598,
-    "lon": 38.158
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В 1910 году землю выкупил Николай фон Мекк, хозяин Московско-Казанской железной дороги. Его мечтой был город-сад для железнодорожников с собственными школами, церковью и больницей.",
-    "К проекту привлекали известных архитекторов, включая Алексея Щусева. Задумка полностью не осуществилась, но улицы и сосны дачного посёлка напоминают о ней.",
-    "От станции едем вглубь посёлка, к профессорским дачам. Следующая точка маршрута — «Профессорские дачи»."
-   ],
-   "facts": [
-    {
-     "text": "В 1910 году территорию выкупил Николай фон Мекк, владелец Московско-Казанской железной дороги.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Фон Мекк задумывал город-сад для служащих дороги со школами, церковью и больницей.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "К проекту привлекали Алексея Щусева.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Город-сад полностью не был построен.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Рекламный источник называет годом основания посёлка 1899-й.",
-     "sourceUrl": "https://www.cian.ru/sale/suburban/332687071/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
   {
    "id": "kratovo-dachi",
    "name": "Профессорские дачи",
@@ -100,8 +54,7 @@
    "visitMinutes": 25,
    "guideStory": [
     "До 1930 года посёлок назывался Прозоровским — по князьям Голицыным-Прозоровским. Дачной местностью он был ещё в XIX веке.",
-    "В советское время здесь появились десятки тенистых дач, где отдыхали учёные и работники культуры. Mel.fm собирал воспоминания о «профессорских дачах»: сосны, мопеды, детские игры и местные легенды.",
-    "Едем по тихим улицам к озеру. Следующая точка маршрута — «Кратовское озеро»."
+    "В советское время здесь появились десятки тенистых дач, где отдыхали учёные и работники культуры. Mel.fm собирал воспоминания о «профессорских дачах»: сосны, мопеды, детские игры и местные легенды."
    ],
    "facts": [
     {
@@ -133,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "kratovo-ozero",
@@ -148,7 +101,7 @@
    "guideStory": [
     "Озеро — любимое место отдыха кратовских дачников в жаркие дни.",
     "Вокруг — сосны, которые и делают Кратово одним из самых приятных дачных посёлков Казанского направления.",
-    "От озера по тенистым дачным улицам возвращаемся к станции, где маршрут и заканчивается. Финиш — Станция «Кратово»: Электрички Казанского направления / МЦД-3."
+    "От озера по тенистым дачным улицам возвращаемся к станции, где маршрут и заканчивается."
    ],
    "facts": [
     {
@@ -181,8 +134,290 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "kratovo-ozero-2",
+   "name": "Борисоглебское озеро и Троицкая церковь",
+   "coords": {
+    "lat": 55.57,
+    "lon": 38.225
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Местность впервые упоминается как «Раменье» в 1328 году в духовной грамоте Ивана Калиты. Эту дату считают и первым упоминанием озера, названного по церкви.",
+    "В 1725–1730 годах граф Мусин-Пушкин построил на берегу каменную Троицкую церковь с приделами Бориса и Глеба. В 1770-х годах Михаил Волконский выкупил землю и устроил охотничий дом с обширным парком."
+   ],
+   "facts": [
+    {
+     "text": "«Раменье» упомянуто в 1328 году в грамоте Ивана Калиты.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Название связывают со словом «раменье» — опушка леса.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 1725–1730 годах Мусин-Пушкин построил Троицкую церковь.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 1770-х Михаил Волконский устроил здесь охотничий дом с парком.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Озеро получило название по церкви.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "kratovo-fabrika",
+   "name": "Раменская мануфактура",
+   "coords": {
+    "lat": 55.565,
+    "lon": 38.235
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Расширение Раменской бумагопрядильной мануфактуры купцами Малютиными превратило село в мощный индустриальный центр.",
+    "Даты основания фабрики мы в найденных источниках не нашли — смотрим корпуса и не придумываем цифры. Следующая точка маршрута — «Фарфор на Дорке»."
+   ],
+   "facts": [
+    {
+     "text": "Купцы Малютины расширили Раменскую бумагопрядильную мануфактуру.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Мануфактура превратила село в индустриальный центр.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Дата основания фабрики не найдена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты фабрики приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Раменское описано в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "kratovo-dorka",
+   "name": "Фарфор на Дорке",
+   "coords": {
+    "lat": 55.61,
+    "lon": 38.315
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1810 году Яков Кузнецов открыл первую фарфоровую мастерскую на реке Дорке, а в 1820 году Афанасий Киселёв разработал технологию тонкого фаянса.",
+    "В 1830–1840-х годах почти половина фарфорово-фаянсовых предприятий России находилась в Гжели. 360.ru включает её в список живых промыслов Подмосковья вместе с Клином и Жостовом."
+   ],
+   "facts": [
+    {
+     "text": "В 1810 году Яков Кузнецов открыл фарфоровую мастерскую на Дорке.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": true
+    },
+    {
+     "text": "В 1820 году Афанасий Киселёв разработал технологию тонкого фаянса.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": true
+    },
+    {
+     "text": "В 1830–1840-х почти половина фарфорово-фаянсовых предприятий была в Гжели.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": false
+    },
+    {
+     "text": "360.ru пишет о живых промыслах Подмосковья, включая Гжель.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/ot-gzheli-do-klina-i-zhostova-gde-zhivut-legendarnye-promysly-podmoskovja/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "kratovo-zavod",
+   "name": "Гжельский завод и музей",
+   "coords": {
+    "lat": 55.62,
+    "lon": 38.3
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Главная музейная точка — музей Гжельского художественно-промышленного завода: история промысла, старинные изделия и современные работы. Экскурсии на завод проводят по записи.",
+    "В XX веке гжельская сине-белая роспись стала национальным брендом. Возрождение промысла началось в середине века, после долгого упадка.",
+    "Часы работы и запись на экскурсию уточняйте заранее. Следующая точка маршрута — «Каменка — старое ядро»."
+   ],
+   "facts": [
+    {
+     "text": "Музей завода показывает историю промысла и старинные изделия.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Экскурсии на гжельский завод проводятся.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/gzhel",
+     "verified": true
+    },
+    {
+     "text": "Возрождение промысла началось в середине XX века.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
+     "verified": true
+    },
+    {
+     "text": "Сине-белая роспись стала национальным брендом.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
+     "verified": true
+    },
+    {
+     "text": "Часы работы музея не проверены.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "kratovo-kamenka",
+   "name": "Каменка — старое ядро",
+   "coords": {
+    "lat": 55.715,
+    "lon": 38.215
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Центральная часть города — бывшее сельцо Каменка; первые упоминания о нём встречаются в документах 1623 года.",
+    "Так что Электроугли старше своего заводского имени почти на три века: сначала была деревня, потом станция, потом завод и город."
+   ],
+   "facts": [
+    {
+     "text": "Первые упоминания о сельце Каменка относятся к 1623 году.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Каменка — центральная часть современного города.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Электроугли с 2006 года — административный центр городского поселения.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    },
+    {
+     "text": "Старой застройки Каменки мы не проверяли.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": false
+    },
+    {
+     "text": "Город назван по заводу электрических углей.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "kratovo-fabrika-2",
+   "name": "Купавинская фабрика и пруд",
+   "coords": {
+    "lat": 55.808,
+    "lon": 38.179
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "С XVIII века в Купавне работала шёлковая, а затем суконная мануфактура. Она сформировала фабричную слободу и пруд, которые видны и сегодня.",
+    "Кто именно основал суконное производство, источники спорят; подробную историю купавинских фабрик разбирает статья в журнале МАРХИ."
+   ],
+   "facts": [
+    {
+     "text": "С XVIII века Купавна стала центром шёлкового, затем суконного производства.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Мануфактура сформировала фабричную слободу и пруд.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": true
+    },
+    {
+     "text": "История купавинских фабрик разобрана в журнале МАРХИ.",
+     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
+     "verified": true
+    },
+    {
+     "text": "Кто основал суконное производство, источники оспаривают.",
+     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
+     "verified": false
+    },
+    {
+     "text": "Купавинская фабрика и пруд — уличная часть маршрута по городу.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Территория фабрики — частная: смотрим снаружи."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -217,9 +452,54 @@
   {
    "title": "Интересные места для дачи — МК",
    "url": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html"
+  },
+  {
+   "title": "История Раменского — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia"
+  },
+  {
+   "title": "Раменское — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/47154"
+  },
+  {
+   "title": "История Гжели — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/gzhel/history"
+  },
+  {
+   "title": "Экскурсии по Гжели — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8"
+  },
+  {
+   "title": "Промыслы Подмосковья — 360",
+   "url": "https://360.ru/tekst/mosobl/ot-gzheli-do-klina-i-zhostova-gde-zhivut-legendarnye-promysly-podmoskovja/"
+  },
+  {
+   "title": "Электроугли — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/"
+  },
+  {
+   "title": "Электроугли — ЦИАН",
+   "url": "https://www.cian.ru/stati-elektrougli-216552/"
+  },
+  {
+   "title": "АО «НИИЭИ» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/"
+  },
+  {
+   "title": "История Старой Купавны — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia"
+  },
+  {
+   "title": "Старая Купавна — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/"
+  },
+  {
+   "title": "Купавинские фабрики — МАРХИ",
+   "url": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -241,48 +521,60 @@
      55.595277
     ],
     [
-     38.158,
-     55.594856
+     38.23222,
+     55.562277
     ],
     [
-     38.160782,
-     55.595277
+     38.235,
+     55.561856
     ],
     [
-     38.170783,
-     55.597277
+     38.23778,
+     55.562277
     ],
     [
-     38.17282,
-     55.598428
+     38.317783,
+     55.607277
     ],
     [
-     38.173565,
-     55.6
+     38.319821,
+     55.608428
     ],
     [
-     38.17282,
-     55.601572
+     38.320567,
+     55.61
     ],
     [
-     38.170783,
-     55.602723
+     38.319821,
+     55.611572
     ],
     [
-     38.157783,
-     55.604723
+     38.200849,
+     55.843572
     ],
     [
-     38.155,
-     55.605144
+     38.1988,
+     55.844723
     ],
     [
-     38.152217,
-     55.604723
+     38.196,
+     55.845144
     ],
     [
-     38.15018,
-     55.603572
+     38.1932,
+     55.844723
+    ],
+    [
+     38.191151,
+     55.843572
+    ],
+    [
+     38.174155,
+     55.809572
+    ],
+    [
+     38.173405,
+     55.808
     ],
     [
      38.149435,

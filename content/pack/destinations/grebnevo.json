@@ -13,7 +13,8 @@
   "Гребнево — усадьба на реке Любосеевке у Фрязина. Село Бохова стана известно с XVI века; в писцовых книгах 1584–1586 годов его связывают с Богданом Бельским, позже им владели Воронцовы и Трубецкие.",
   "Основные постройки связаны с генералом Г. И. Бибиковым, шурином Кутузова, и с князем С. М. Голицыным. В усадьбе бывал Державин, а Александр Грин приезжал сюда поправить здоровье.",
   "В 2018 году усадьбу передали в частные руки на 49 лет; главный дом и флигели, по сообщениям СМИ, скорее напоминают руины.",
-  "Маршрут: станция Фрязино, главный дом снаружи, храм и пруды."
+  "Сначала — свои места: «Главный дом». Дальше маршрут идёт по соседним местам: Лосино-Петровский и Глинки — «Усадьба Глинки Якова Брюса», «Клязьма у Глинок»; Монино (музей ВВС) — «Посёлок Монино», «Центральный музей ВВС»; Старая Купавна — «Музей в центре культуры «Акрихин»», «Купавинская фабрика и пруд»; Электроугли — «Завод электроугольных изделий».",
+  "Маршрут линейный, около 51 км и 8 точек. Финиш — Станция «Электроугли» (Электрички Горьковского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Фрязино-Пассажирская»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Ярославского направления"
  },
  "endPoint": {
-  "name": "Станция «Фрязино-Пассажирская»",
+  "name": "Станция «Электроугли»",
   "coords": {
-   "lat": 55.9592,
-   "lon": 38.0505
+   "lat": 55.7172,
+   "lon": 38.2205
   },
-  "transport": "Электрички Ярославского направления"
+  "transport": "Электрички Горьковского направления"
  },
  "route": {
-  "distanceKm": 16.0,
-  "durationH": 2.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 51.0,
+  "durationH": 7.3,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -54,7 +55,7 @@
    "guideStory": [
     "Основные здания усадьбы связаны с генералом Г. И. Бибиковым, шурином Кутузова, и с князем С. М. Голицыным. Расцвет пришёлся на эпоху Просвещения.",
     "В 2018 году усадьбу передали в частные руки на 49 лет. По сообщениям СМИ, главный дом и флигели сейчас скорее похожи на руины; «Рамблер» писал, что восстановление обойдётся в 3 млрд рублей.",
-    "Внутрь не заходим — опасно. Смотрим снаружи. Следующая точка маршрута — «Село Бохова стана»."
+    "Внутрь не заходим — опасно. Смотрим снаружи. Следующая точка маршрута — «Усадьба Глинки Якова Брюса»."
    ],
    "facts": [
     {
@@ -88,94 +89,101 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
-   "id": "grebnevo-istoriya",
-   "name": "Село Бохова стана",
+   "id": "grebnevo-glinki",
+   "name": "Усадьба Глинки Якова Брюса",
    "coords": {
-    "lat": 55.9505,
-    "lon": 38.159
+    "lat": 55.885,
+    "lon": 38.172
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В 1727 году Яков Брюс, сподвижник Петра I и обер-комендант Петербурга, ушёл в отставку и купил участок между Клязьмой и Ворей у села Глинково.",
+    "Глинки считаются одной из старейших усадеб Подмосковья, памятником архитектуры XVIII века. Брюс, по рассказам, много времени проводил, наблюдая звёзды; первая в России обсерватория при этом связана с ним, но находилась в Сухаревой башне в Москве.",
+    "Народ считал Брюса колдуном, и усадьбу до сих пор включают в списки «домов с привидениями». В 2016 году жители собирали подписи за её спасение; текущее состояние уточняйте."
+   ],
+   "facts": [
+    {
+     "text": "В 1727 году Яков Брюс ушёл в отставку и купил участок у села Глинково.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Глинки — памятник архитектуры XVIII века, одна из старейших усадеб Подмосковья.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Первая в России обсерватория при участии Брюса была в Сухаревой башне в Москве.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Усадьбу включают в подборки «домов с привидениями».",
+     "sourceUrl": "https://www.vokrugsveta.ru/articles/obiteli-dukhov-7-samykh-zhutkikh-domov-s-privideniyami-v-rossii-id901310/",
+     "verified": true
+    },
+    {
+     "text": "Экскурсии «Брюс всемогущий» проходят по соборам и усадьбе в Глинках.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah",
+     "verified": true
+    },
+    {
+     "text": "Состояние усадьбы после 2016 года мы не проверяли.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Доступ на территорию усадьбы может быть ограничен — уточняйте."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "grebnevo-klyazma",
+   "name": "Клязьма у Глинок",
+   "coords": {
+    "lat": 55.88,
+    "lon": 38.18
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Гребнево появилось в XVI веке как село Бохова стана. В писцовых книгах 1584–1586 годов его связывают с Богданом Бельским.",
-    "Затем селом владели Воронцовы и Трубецкие. Князь Дмитрий Тимофеевич Трубецкой, сподвижник Пожарского, строил здесь на реке Любосеевке. Порядок и даты владения в источниках расходятся.",
-    "Идём к храму усадьбы. Следующая точка маршрута — «Храм и пруды»."
+    "Усадьба Брюса стоит между двумя реками — Клязьмой и Ворей. Место выбрано не случайно: тихий угол для учёного в отставке.",
+    "Отсюда по просёлкам и улицам едем к платформе Монино — следующей точке спирали.",
+    "Маршрут Лосино-Петровского и Глинок завершён у железной дороги: от фабрики Петра к усадьбе его сподвижника."
    ],
    "facts": [
     {
-     "text": "Гребнево известно с XVI века как село Бохова стана.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "text": "Брюс купил землю между Клязьмой и Ворей.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
      "verified": true
     },
     {
-     "text": "В 1584–1586 годах его связывают с Богданом Бельским.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "text": "Лосино-Петровский — город на Клязьме.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
      "verified": true
     },
     {
-     "text": "Позже селом владели Воронцовы и Трубецкие.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "text": "Глинково — населённый пункт в Московской области.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
      "verified": true
     },
     {
-     "text": "Даты владения в источниках расходятся.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE",
+     "text": "Удобство места для наблюдений Брюса — версия, а не факт.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8",
      "verified": false
     },
     {
-     "text": "Усадьба стоит на реке Любосеевке.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
-  },
-  {
-   "id": "grebnevo-prudy",
-   "name": "Храм и пруды",
-   "coords": {
-    "lat": 55.9495,
-    "lon": 38.161
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "У усадьбы есть храм; его историю мы в найденных источниках не нашли и поэтому не пересказываем.",
-    "В Гребневе бывал Державин, а Александр Грин приезжал сюда поправить здоровье. Вокруг — пруды усадебного парка.",
-    "От прудов возвращаемся к станции Фрязино. Финиш — Станция «Фрязино-Пассажирская»: Электрички Ярославского направления."
-   ],
-   "facts": [
-    {
-     "text": "В усадьбе бывал Державин.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "Александр Грин приезжал сюда поправить здоровье.",
-     "sourceUrl": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/",
-     "verified": true
-    },
-    {
-     "text": "История храма в найденных источниках не раскрыта.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Гребнево описано на KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты прудов приблизительные.",
-     "sourceUrl": "https://kudago.com/msk/place/usadba-grebnevo/",
+     "text": "Рядом находится Монино.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Losino-Petrovsky",
      "verified": false
     }
    ],
@@ -183,8 +191,251 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "grebnevo-posyolok",
+   "name": "Посёлок Монино",
+   "coords": {
+    "lat": 55.84,
+    "lon": 38.19
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Монино — посёлок при академии и аэродроме. До музея ВВС добираются электричкой с Ярославского вокзала до станции Монино.",
+    "Посёлок живёт рядом с военной академией и аэродромом, поэтому часть территорий здесь закрыта, а дорогу к музею лучше выбирать по указателям."
+   ],
+   "facts": [
+    {
+     "text": "До музея можно добраться на электричке от Ярославского вокзала до станции Монино.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Музей находится на территории Военно-воздушной академии имени Гагарина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Музей ВВС — главная достопримечательность Монина.",
+     "sourceUrl": "https://t-j.ru/must-see-muzei-vvs/",
+     "verified": true
+    },
+    {
+     "text": "Границы закрытых территорий посёлка мы не сверяли.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Монино — рабочий посёлок в Щёлковском округе.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Территория академии — режимная: только по разрешённым маршрутам."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "grebnevo-muzey",
+   "name": "Центральный музей ВВС",
+   "coords": {
+    "lat": 55.838,
+    "lon": 38.17
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 120,
+   "guideStory": [
+    "Центральный музей ВВС создан 28 ноября 1958 года и принял первых посетителей 23 февраля 1960 года. Под открытым небом и в ангарах стоят самолёты от первых аэропланов до реактивных истребителей.",
+    "Фонды насчитывают десятки тысяч единиц: «Коммерсант» писал о 37 тысячах, а «Новая газета» в 2016 году — о более чем 50 тысячах. Музей принимал свыше 200 тысяч человек в год.",
+    "В 2018 году предлагали перевезти экспозицию в парк «Патриот», и авиаконструкторы предупреждали, что самолёты могут этого не пережить. Что с музеем сейчас и как он работает — проверьте заранее."
+   ],
+   "facts": [
+    {
+     "text": "Музей создан 28 ноября 1958 года, первых посетителей принял 23 февраля 1960 года.",
+     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
+     "verified": true
+    },
+    {
+     "text": "Фонды музея — более 37 тысяч единиц (по данным «Коммерсанта»).",
+     "sourceUrl": "https://www.kommersant.ru/doc/602688",
+     "verified": true
+    },
+    {
+     "text": "В 2016 году писали о собрании более 50 тысяч единиц хранения.",
+     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
+     "verified": false
+    },
+    {
+     "text": "Музей принимал более 200 тысяч посетителей в год (данные 2016 года).",
+     "sourceUrl": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi",
+     "verified": true
+    },
+    {
+     "text": "В 2018 году обсуждался перенос музея в парк «Патриот».",
+     "sourceUrl": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov",
+     "verified": true
+    },
+    {
+     "text": "В административном здании музея был пожар, часть моделей первых самолётов сгорела.",
+     "sourceUrl": "https://www.kommersant.ru/doc/602688",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "Режим работы и доступ меняются — проверьте на сайте музея перед поездкой.",
+   "ticketNote": "Билеты — по правилам музея; уточняйте.",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "grebnevo-akrikhin",
+   "name": "Музей в центре культуры «Акрихин»",
+   "coords": {
+    "lat": 55.812,
+    "lon": 38.17
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "В XX веке рядом с текстильной слободой выросло химико-фармацевтическое предприятие «Акрихин».",
+    "Городской музей в центре культуры «Акрихин» вырос из заводского музея трудовой славы и рассказывает о шёлке, сукне и лекарствах — трёх профессиях Купавны."
+   ],
+   "facts": [
+    {
+     "text": "В XX веке рядом выросло химико-фармацевтическое предприятие «Акрихин».",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": true
+    },
+    {
+     "text": "Городской музей находится в центре культуры «Акрихин».",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": true
+    },
+    {
+     "text": "Музей вырос из заводского музея трудовой славы.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы музея мы не проверяли.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": false
+    },
+    {
+     "text": "Население города — около 20 тысяч человек.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%8F_%D0%9A%D1%83%D0%BF%D0%B0%D0%B2%D0%BD%D0%B0",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "Часы работы не проверены.",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "grebnevo-fabrika",
+   "name": "Купавинская фабрика и пруд",
+   "coords": {
+    "lat": 55.808,
+    "lon": 38.179
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "С XVIII века в Купавне работала шёлковая, а затем суконная мануфактура. Она сформировала фабричную слободу и пруд, которые видны и сегодня.",
+    "Кто именно основал суконное производство, источники спорят; подробную историю купавинских фабрик разбирает статья в журнале МАРХИ."
+   ],
+   "facts": [
+    {
+     "text": "С XVIII века Купавна стала центром шёлкового, затем суконного производства.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Мануфактура сформировала фабричную слободу и пруд.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": true
+    },
+    {
+     "text": "История купавинских фабрик разобрана в журнале МАРХИ.",
+     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
+     "verified": true
+    },
+    {
+     "text": "Кто основал суконное производство, источники оспаривают.",
+     "sourceUrl": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf",
+     "verified": false
+    },
+    {
+     "text": "Купавинская фабрика и пруд — уличная часть маршрута по городу.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Территория фабрики — частная: смотрим снаружи."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "grebnevo-zavod",
+   "name": "Завод электроугольных изделий",
+   "coords": {
+    "lat": 55.719,
+    "lon": 38.225
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Опытный завод электроугольных изделий выпускает около 30 марок электрощёток для электрических машин общепромышленного назначения.",
+    "В городе есть и научно-исследовательский институт электроугольных изделий — наследник того самого завода «электрических углей»."
+   ],
+   "facts": [
+    {
+     "text": "Опытный завод выпускает 30 марок электрощёток для электрических машин.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/",
+     "verified": true
+    },
+    {
+     "text": "В Электроуглях работает АО «НИИЭИ».",
+     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/",
+     "verified": true
+    },
+    {
+     "text": "Завод — наследник производства электрических углей 1899 года.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
+     "verified": false
+    },
+    {
+     "text": "Достопримечательности города перечисляет командировка.ру.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/",
+     "verified": true
+    },
+    {
+     "text": "Электроугли с 2006 года — центр городского поселения.",
+     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующее предприятие: не фотографировать проходные."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -219,9 +470,62 @@
   {
    "title": "Судьба Гребнева — 360",
    "url": "https://360.ru/news/kultura/sudba-polurazrushennoj-usadby-grebnevo-mozhet-reshitsja-uzhe-vesnoj/"
+  },
+  {
+   "title": "Усадьба Глинки — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BB%D0%B8%D0%BD%D0%BA%D0%B8"
+  },
+  {
+   "title": "Лосино-Петровский — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/losino-petrovskii/"
+  },
+  {
+   "title": "Экскурсия «Брюс всемогущий» — Sputnik8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/61261-bryus-vsemoguschiy-ekskursiya-po-soboram-i-usadbe-v-glinkah"
+  },
+  {
+   "title": "Музей ВВС — Новая газета",
+   "url": "https://novayagazeta.ru/amp/articles/2016/10/26/70307-vozdushnye-boi"
+  },
+  {
+   "title": "Музей ВВС — Коммерсантъ",
+   "url": "https://www.kommersant.ru/doc/602688"
+  },
+  {
+   "title": "Перенос музея — Meduza",
+   "url": "https://meduza.io/feature/2018/11/14/shoygu-hochet-perevezti-podmoskovnyy-muzey-aviatsii-v-park-patriot-eto-unichtozhit-desyatki-unikalnyh-istoricheskih-samoletov"
+  },
+  {
+   "title": "Монино — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9C%D0%BE%D0%BD%D0%B8%D0%BD%D0%BE"
+  },
+  {
+   "title": "История Старой Купавны — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/staraia-kupavna/istoriia"
+  },
+  {
+   "title": "Старая Купавна — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/staraya-kupavna/"
+  },
+  {
+   "title": "Купавинские фабрики — МАРХИ",
+   "url": "https://marhi.ru/AMIT/2022/3kvart22/PDF/02_malaya.pdf"
+  },
+  {
+   "title": "Электроугли — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/"
+  },
+  {
+   "title": "Электроугли — ЦИАН",
+   "url": "https://www.cian.ru/stati-elektrougli-216552/"
+  },
+  {
+   "title": "АО «НИИЭИ» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -235,52 +539,56 @@
      55.957428
     ],
     [
-     38.047192,
-     55.956277
+     38.215666,
+     55.715628
+    ],
+    [
+     38.217709,
+     55.714477
+    ],
+    [
+     38.2205,
+     55.714056
+    ],
+    [
+     38.223291,
+     55.714477
+    ],
+    [
+     38.227791,
+     55.716277
+    ],
+    [
+     38.229834,
+     55.717428
+    ],
+    [
+     38.230582,
+     55.719
+    ],
+    [
+     38.185605,
+     55.88
+    ],
+    [
+     38.165615,
+     55.95
+    ],
+    [
+     38.164863,
+     55.951572
+    ],
+    [
+     38.162808,
+     55.952723
+    ],
+    [
+     38.16,
+     55.953144
     ],
     [
      38.05,
-     55.955856
-    ],
-    [
-     38.161,
-     55.946356
-    ],
-    [
-     38.163808,
-     55.946777
-    ],
-    [
-     38.165863,
-     55.947928
-    ],
-    [
-     38.166615,
-     55.9495
-    ],
-    [
-     38.165863,
-     55.951072
-    ],
-    [
-     38.163808,
-     55.952223
-    ],
-    [
-     38.161808,
-     55.953223
-    ],
-    [
-     38.159,
-     55.953644
-    ],
-    [
-     38.0505,
-     55.962344
-    ],
-    [
-     38.047692,
-     55.961923
+     55.962144
     ],
     [
      38.047192,

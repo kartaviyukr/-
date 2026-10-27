@@ -12,7 +12,8 @@
  "intro": [
   "Андреевка — посёлок Солнечногорского округа рядом с Зеленоградом. Сегодня здесь строятся новые жилые кварталы.",
   "Подробную историю посёлка мы в открытых источниках не нашли — честно оставляем этот раздел пустым, чтобы ничего не придумывать.",
-  "Маршрут короткий: от Зеленограда до Андреевки и обратно, через лес."
+  "Сначала — свои места: «Лес между Зеленоградом и Андреевкой», «Посёлок Андреевка», «Обратный путь». Дальше маршрут идёт по соседним местам: Середниково — «Главный дом»; Мемориал «Штыки» — «Последний рубеж», «Мемориал «Штыки»»; Молжаниново, Новосёлки, Черкизово — «Церковь Рождества Христова в Черкизове», «Поля у Шереметьева»; Химки и мемориал «Ежи» — «Мемориал «Противотанковые ежи»», «Центр Химок»; Путилково — «Долина Сходни», «Бывшая деревенская часть».",
+  "Маршрут линейный, около 48 км и 12 точек. Финиш — Метро «Планерная» (Таганско-Краснопресненская линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Крюково»",
@@ -23,21 +24,21 @@
   "transport": "Электрички Ленинградского направления / МЦД-3"
  },
  "endPoint": {
-  "name": "Станция «Крюково»",
+  "name": "Метро «Планерная»",
   "coords": {
-   "lat": 55.9802,
-   "lon": 37.1725
+   "lat": 55.86,
+   "lon": 37.437
   },
-  "transport": "Электрички Ленинградского направления / МЦД-3"
+  "transport": "Таганско-Краснопресненская линия"
  },
  "route": {
-  "distanceKm": 12.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 48.0,
+  "durationH": 6.7,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -52,8 +53,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "От станции Крюково едем на запад, к Андреевке. Дорога идёт через лес и новые районы Зеленограда, мимо жилых кварталов.",
-    "Тропы мы на месте не проверяли — держитесь асфальта и накатанных дорожек.",
-    "Впереди — посёлок. Следующая точка маршрута — «Посёлок Андреевка». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Тропы мы на месте не проверяли — держитесь асфальта и накатанных дорожек. Следующая точка маршрута — «Посёлок Андреевка»."
    ],
    "facts": [
     {
@@ -85,8 +85,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "andreevka-posyolok",
@@ -99,8 +99,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Андреевка — рабочий посёлок Солнечногорского округа; статус его закреплён областным законом 2013 года.",
-    "Сегодня здесь строятся жилые комплексы — например, «Андреевский квартал».",
-    "Неспешно едем по улицам посёлка. Следующая точка маршрута — «Обратный путь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Сегодня здесь строятся жилые комплексы — например, «Андреевский квартал». Следующая точка маршрута — «Обратный путь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
    ],
    "facts": [
     {
@@ -132,8 +131,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "andreevka-obratno",
@@ -146,8 +145,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Возвращаемся в Зеленоград другой дорогой, если она есть, или той же.",
-    "Андреевка — честный пример места на спирали, о котором мало пишут. Если вы знаете его историю — расскажите о ней местным краеведам.",
-    "Финиш — станция Крюково. Финиш — Станция «Крюково»: Электрички Ленинградского направления / МЦД-3. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Андреевка — честный пример места на спирали, о котором мало пишут. Если вы знаете его историю — расскажите о ней местным краеведам. Следующая точка маршрута — «Главный дом»."
    ],
    "facts": [
     {
@@ -179,8 +177,441 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "andreevka-dom",
+   "name": "Главный дом",
+   "coords": {
+    "lat": 55.98,
+    "lon": 37.24
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Имение перешло к Столыпиным, родне бабушки Лермонтова; по одному источнику, они владели им с 1825 по 1869 год. Юный Лермонтов провёл у родственников всего два лета, но именно они определяют судьбу усадьбы.",
+    "В 1990-х имение получил Лермонтовский фонд, созданный потомком поэта. Сегодня в доме — экспозиции, а усадьба принимает экскурсии."
+   ],
+   "facts": [
+    {
+     "text": "Усадьба принадлежала Столыпиным, родне бабушки Лермонтова.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": true
+    },
+    {
+     "text": "Столыпины владели имением с 1825 по 1869 год — по одному источнику.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": false
+    },
+    {
+     "text": "Лермонтов провёл здесь два лета.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": true
+    },
+    {
+     "text": "В 1990-х имение получил Лермонтовский фонд.",
+     "sourceUrl": "https://www.afisha.ru/msk/museum/serednikovo-7556/",
+     "verified": true
+    },
+    {
+     "text": "Потомок Лермонтова рассказывал о наследии поэта.",
+     "sourceUrl": "https://www.interfax.ru/russia/780569",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "andreevka-rubezh",
+   "name": "Последний рубеж",
+   "coords": {
+    "lat": 55.975,
+    "lon": 37.25
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В декабре 1941 года по этим местам проходил последний рубеж обороны Москвы. Шли жестокие бои за деревню Матушкино.",
+    "Матушкино ненадолго оказалось занято противником и было освобождено 8 декабря 1941 года. Следующая точка маршрута — «Мемориал «Штыки»»."
+   ],
+   "facts": [
+    {
+     "text": "В декабре 1941 года здесь проходил последний рубеж обороны Москвы.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
+    },
+    {
+     "text": "Шли бои за деревню Матушкино.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2020/01/Viktorina-854.pdf",
+     "verified": true
+    },
+    {
+     "text": "Матушкино освобождено 8 декабря 1941 года.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/matushkino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": false
+    },
+    {
+     "text": "Ленинградское шоссе — плотное движение.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Ленинградское шоссе: не выезжать на проезжую часть."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "andreevka-memorial",
+   "name": "Мемориал «Штыки»",
+   "coords": {
+    "lat": 55.97,
+    "lon": 37.3
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Мемориал стоит на 40-м километре Ленинградского шоссе. Строительство шло с 1973 года, монумент установлен 24 июня 1974 года.",
+    "В братской могиле похоронены останки 760 бойцов, найденных во время строительства Зеленограда. Памятник — объект культурного наследия регионального значения.",
+    "Подходим пешком по безопасной дорожке и минуту молчим. Следующая точка маршрута — «Церковь Рождества Христова в Черкизове»."
+   ],
+   "facts": [
+    {
+     "text": "Мемориал находится на 40-м километре Ленинградского шоссе.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    },
+    {
+     "text": "Монумент установлен 24 июня 1974 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    },
+    {
+     "text": "В братской могиле — останки 760 бойцов.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": false
+    },
+    {
+     "text": "Мемориал посвящён погибшим при обороне Москвы в 1941 году.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/",
+     "verified": true
+    },
+    {
+     "text": "Памятник — объект культурного наследия регионального значения.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Мемориал: тишина и уважение."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "andreevka-tserkov",
+   "name": "Церковь Рождества Христова в Черкизове",
+   "coords": {
+    "lat": 55.93,
+    "lon": 37.36
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Церковь Рождества Христова в Черкизове находится в Молжаниновском районе Москвы; её также называют храмом в Новоподрезкове.",
+    "Датировку и историю храма мы в найденных источниках не нашли — фотографии собраны на sobory.ru. Следующая точка маршрута — «Поля у Шереметьева»."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Рождества Христова в Черкизове — в Молжаниновском районе.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": true
+    },
+    {
+     "text": "Храм также называют храмом в Новоподрезкове.",
+     "sourceUrl": "https://sobory.ru/photo/453558",
+     "verified": true
+    },
+    {
+     "text": "Датировка храма не найдена.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Район относится к Северному округу.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "andreevka-polya",
+   "name": "Поля у Шереметьева",
+   "coords": {
+    "lat": 55.938,
+    "lon": 37.38
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "По краю района — поля и перелески, над которыми заходят на посадку самолёты.",
+    "Это редкое место в Москве, где огромный город выглядит как настоящая деревня.",
+    "Вдоль полей и деревенских улиц возвращаемся к станции Новоподрезково. Следующая точка маршрута — «Мемориал «Противотанковые ежи»»."
+   ],
+   "facts": [
+    {
+     "text": "Над районом заходят на посадку самолёты.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Описание ландшафта — наблюдение составителя.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Район находится на севере Москвы.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/11000",
+     "verified": false
+    },
+    {
+     "text": "Новая Москва описана в Рувики.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "andreevka-ezhi",
+   "name": "Мемориал «Противотанковые ежи»",
+   "coords": {
+    "lat": 55.902,
+    "lon": 37.425
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Монумент «Ежи» открыли 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой. Он стоит на 23-м километре Ленинградского шоссе.",
+    "Три стальных противотанковых ежа высотой до 6 метров, по данным путеводителей, сделаны из балок, предназначавшихся для Дворца Советов. У подножия — каменный подиум с картой обороны столицы."
+   ],
+   "facts": [
+    {
+     "text": "Монумент «Ежи» открыт 6 декабря 1966 года, к 25-летию начала контрнаступления под Москвой.",
+     "sourceUrl": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/",
+     "verified": true
+    },
+    {
+     "text": "Мемориал стоит на 23-м километре Ленинградского шоссе.",
+     "sourceUrl": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi",
+     "verified": true
+    },
+    {
+     "text": "Высота ежей — около 6 метров; у подножия подиум с картой обороны столицы.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
+     "verified": true
+    },
+    {
+     "text": "Ежи изготовили из стальных балок, предназначавшихся для Дворца Советов.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA_%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B8%D0%B2%D0%BE%D1%82%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5_%D0%B5%D0%B6%D0%B8%C2%BB",
+     "verified": false
+    },
+    {
+     "text": "Местные источники называют это место последним рубежом, до которого дошёл враг; другие отмечают, что боёв здесь не было.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Khimki_War_Memorial",
+     "verified": false
+    },
+    {
+     "text": "Годовщину установки монумента ежегодно отмечают в Химках.",
+     "sourceUrl": "https://360.ru/news/mosobl/godovschinu-ustanovki-monumenta-protivotankovye-ezhi-otmetili-v-himkah/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Мемориал у оживлённого шоссе: подходим пешком по безопасной дорожке."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 90
+  },
+  {
+   "id": "andreevka-gorod",
+   "name": "Центр Химок",
+   "coords": {
+    "lat": 55.889,
+    "lon": 37.44
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Химки путеводители описывают как город обороны Москвы, авиации, космоса и канала имени Москвы — все эти слои здесь переплетены.",
+    "В городе и рядом немало памятников; главный — у Ленинградского шоссе, на месте рубежа обороны 1941 года."
+   ],
+   "facts": [
+    {
+     "text": "Химки связаны с обороной Москвы, авиацией, космосом и каналом имени Москвы.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "verified": true
+    },
+    {
+     "text": "Путеводитель Путевка.ком предлагает маршрут по главным достопримечательностям Химок.",
+     "sourceUrl": "https://www.putevka.com/blog/chto-posmotret-v-khimkakh",
+     "verified": true
+    },
+    {
+     "text": "Список достопримечательностей Химок ведёт командировка.ру.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/khimki/",
+     "verified": true
+    },
+    {
+     "text": "Год получения статуса города в найденных источниках не указан.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "verified": false
+    },
+    {
+     "text": "Химки граничат с Москвой.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 100
+  },
+  {
+   "id": "andreevka-skhodnya",
+   "name": "Долина Сходни",
+   "coords": {
+    "lat": 55.87,
+    "lon": 37.405
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "По одной из версий, название Путилково связано с древним торговым путём по речке Сходне.",
+    "Первое письменное упоминание Путилкова — 1576 год, описание границ Спас-Тушинской монастырской вотчины. Тушино с его историей Смуты — совсем рядом, ниже по Сходне."
+   ],
+   "facts": [
+    {
+     "text": "Название по одной версии связано с древним торговым путём по Сходне.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Первое письменное упоминание — 1576 год, при описании границ Спас-Тушинской вотчины.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сходня течёт к Тушину.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    },
+    {
+     "text": "Путилково расположено у МКАД.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Версия о торговом пути не подтверждена документами.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 110
+  },
+  {
+   "id": "andreevka-staroe",
+   "name": "Бывшая деревенская часть",
+   "coords": {
+    "lat": 55.863,
+    "lon": 37.395
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "От старой деревни почти ничего не осталось: на её месте выросли многоэтажки, и сохранилось ли что-то от старой застройки, мы не проверяли.",
+    "И всё же Путилково живёт под деревенским именем, напоминая о временах, когда здесь были избы, а не микрорайоны.",
+    "Маршрут Путилкова завершён — короткий, но любопытный: от записи 1576 года до одного из крупнейших «негородов» страны."
+   ],
+   "facts": [
+    {
+     "text": "Путилково выросло из деревни, упомянутой в 1576 году.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сегодня это крупный населённый пункт у МКАД.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Сохранность старой застройки мы не проверяли.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": false
+    },
+    {
+     "text": "Путилково входит в городской округ Красногорск.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/putilkovo/",
+     "verified": true
+    },
+    {
+     "text": "Понятие «деревня» в России определяется статусом, а не размером.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 120
   }
  ],
  "dish": {
@@ -211,9 +642,50 @@
   {
    "title": "Andreyevka — Wikipedia",
    "url": "https://en.wikipedia.org/wiki/Andreyevka,_Solnechnogorsky_District,_Moscow_Oblast"
+  },
+  {
+   "title": "Середниково — Афиша",
+   "url": "https://www.afisha.ru/msk/museum/serednikovo-7556/"
+  },
+  {
+   "title": "Усадьбы и храмы — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/61262-usadby-i-hramy-moskovskogo-severa"
+  },
+  {
+   "title": "Штыки — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%A8%D1%82%D1%8B%D0%BA%D0%B8_(%D0%BC%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB)"
+  },
+  {
+   "title": "Мемориал «Штыки» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/zelenograd/memorialnyiy-kompleks-shtyiki/"
+  },
+  {
+   "title": "Церковь в Черкизове — sobory.ru",
+   "url": "https://sobory.ru/photo/11000"
+  },
+  {
+   "title": "Монумент «Ежи» — culture.ru",
+   "url": "https://www.culture.ru/institutes/11748/monument-zashitnikam-moskvy-ezhi"
+  },
+  {
+   "title": "Мемориал «Ежи» — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/hotels/khimki/sight/memorial-protivotankovyie-eji/"
+  },
+  {
+   "title": "Химки — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/himki/"
+  },
+  {
+   "title": "Путилково — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/putilkovo/"
+  },
+  {
+   "title": "Деревня — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%94%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -239,32 +711,52 @@
      55.977277
     ],
     [
-     37.172,
-     55.976856
+     37.392199,
+     55.860277
     ],
     [
-     37.17481,
-     55.977277
+     37.395,
+     55.859856
     ],
     [
-     37.17531,
-     55.977477
+     37.437,
+     55.856856
     ],
     [
-     37.177367,
-     55.978628
+     37.439801,
+     55.857277
     ],
     [
-     37.17812,
-     55.9802
+     37.441852,
+     55.858428
     ],
     [
-     37.177367,
-     55.981772
+     37.442602,
+     55.86
     ],
     [
-     37.154869,
-     56.001572
+     37.445606,
+     55.889
+    ],
+    [
+     37.444855,
+     55.890572
+    ],
+    [
+     37.429857,
+     55.903572
+    ],
+    [
+     37.384861,
+     55.939572
+    ],
+    [
+     37.382807,
+     55.940723
+    ],
+    [
+     37.302809,
+     55.972723
     ],
     [
      37.152811,

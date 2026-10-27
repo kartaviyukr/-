@@ -13,7 +13,8 @@
   "Мещерский — небольшой посёлок на западе Москвы, у Солнцева, известный прежде всего лесопарком. Парк «Мещерский» — большая лесная зона с прудами, спортплощадками и кафе, удобная для велопрогулок.",
   "Имя посёлка созвучно фамилии князей Мещерских — старинного рода, происходящего от правителей племени мещера. Связь посёлка с родом в найденных источниках не подтверждена, поэтому мы её только упоминаем.",
   "Новый символ посёлка — храм Казанской иконы Божией Матери, освящённый в 2019 году патриархом Кириллом.",
-  "Маршрут — петля по Мещерскому парку и к храму."
+  "Сначала — свои места: «Парк «Мещерский»», «Посёлок Мещерский», «Храм Казанской иконы в Мещерском». Дальше маршрут идёт по соседним местам: Переделкино — «Дом творчества и музеи Евтушенко и Окуджавы»; Одинцово — «Новая Трёхгорка: муралы Urban Morphogenesis», «Арка «Старая Смоленская дорога»»; Немчиновка — «Улицы старых дач», «Место захоронения Малевича»; Архангельское — «Парк и террасы»; Красногорск — «Музей немецких антифашистов», «Центр и история города».",
+  "Маршрут линейный, около 47 км и 11 точек. Финиш — Станция «Красногорская» (Электрички Рижского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Вход в парк «Мещерский»",
@@ -24,21 +25,21 @@
   "transport": "Автобусы от метро «Солнцево» и «Говорово»"
  },
  "endPoint": {
-  "name": "Вход в парк «Мещерский»",
+  "name": "Станция «Красногорская»",
   "coords": {
-   "lat": 55.6672,
-   "lon": 37.4135
+   "lat": 55.8182,
+   "lon": 37.3345
   },
-  "transport": "Автобусы до метро «Солнцево»"
+  "transport": "Электрички Рижского направления / МЦД-2"
  },
  "route": {
-  "distanceKm": 7.0,
-  "durationH": 2.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 47.0,
+  "durationH": 6.9,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 40,
    "guideStory": [
     "Главная достопримечательность парка «Мещерский» — лесная зона. Здесь есть спортивные площадки, пруды, где можно купаться, и кафе.",
-    "Парк любят велосипедисты: велодорожка связывает его с зоной отдыха у Мещерских прудов и с посёлком.",
-    "Проедем по лесным дорожкам к посёлку, держась основных аллей и уступая дорогу пешеходам."
+    "Парк любят велосипедисты: велодорожка связывает его с зоной отдыха у Мещерских прудов и с посёлком. Следующая точка маршрута — «Посёлок Мещерский»."
    ],
    "facts": [
     {
@@ -87,8 +87,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "meshcherskiy-posyolok",
@@ -101,8 +101,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Посёлок Мещерский — тихие улицы частных домов внутри Москвы, почти деревня в черте мегаполиса.",
-    "Имя созвучно фамилии князей Мещерских: род происходит от средневековых правителей мещеры, а княжеский титул подтвердил Павел I в 1798 году. Была ли связь рода с посёлком, источники не говорят.",
-    "Дальше — к храму на Воскресенской улице."
+    "Имя созвучно фамилии князей Мещерских: род происходит от средневековых правителей мещеры, а княжеский титул подтвердил Павел I в 1798 году. Была ли связь рода с посёлком, источники не говорят."
    ],
    "facts": [
     {
@@ -134,8 +133,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "meshcherskiy-hram",
@@ -148,8 +147,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Храм Казанской иконы Божией Матери стоит на Воскресенской улице, 1/37.",
-    "Его малое освящение состоялось 30 декабря 2018 года, а великое освящение совершил патриарх Кирилл 14 июля 2019 года — это один из самых новых храмов на нашей спирали.",
-    "От храма возвращаемся по улицам посёлка к входу в парк — петля по Мещерскому завершена."
+    "Его малое освящение состоялось 30 декабря 2018 года, а великое освящение совершил патриарх Кирилл 14 июля 2019 года — это один из самых новых храмов на нашей спирали."
    ],
    "facts": [
     {
@@ -183,8 +181,406 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "meshcherskiy-dom-tvorchestva",
+   "name": "Дом творчества и музеи Евтушенко и Окуджавы",
+   "coords": {
+    "lat": 55.654,
+    "lon": 37.348
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В городке работают Дом творчества, а также дома-музеи Евгения Евтушенко и Булата Окуджавы.",
+    "Создание городка совпало с утверждением соцреализма: с 1932 года из культуры вытесняли авангард. Часть имён первых поселенцев стёрли репрессии."
+   ],
+   "facts": [
+    {
+     "text": "В городке есть Дом творчества и дома-музеи Евтушенко и Окуджавы.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8%D0%BD%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BA_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9)",
+     "verified": true
+    },
+    {
+     "text": "Создание городка совпало с утверждением соцреализма.",
+     "sourceUrl": "https://skillbox.ru/media/design/peredelkino-gorodok-pisatelej/",
+     "verified": true
+    },
+    {
+     "text": "Часть имён первых поселенцев стёрлась из-за репрессий.",
+     "sourceUrl": "https://skillbox.ru/media/design/peredelkino-gorodok-pisatelej/",
+     "verified": true
+    },
+    {
+     "text": "Проводятся экскурсии «Переделкино: история поверх заборов».",
+     "sourceUrl": "https://kudago.com/msk/event/ekskursiya-peredelkino-istoriya-poverh-zaborov/",
+     "verified": true
+    },
+    {
+     "text": "Координаты музеев приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8%D0%BD%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BA_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9)",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "meshcherskiy-trehgorka",
+   "name": "Новая Трёхгорка: муралы Urban Morphogenesis",
+   "coords": {
+    "lat": 55.6905,
+    "lon": 37.32
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 40,
+   "daylightOnly": true,
+   "openingHoursNote": "Жилой квартал — смотрим с улиц.",
+   "bikeParkingNote": "Двигаемся по дворовым проездам шагом.",
+   "guideStory": [
+    "Новая Трёхгорка — обычный спальный район, который в 2019 году стал, по заявлению организаторов, крупнейшим в мире музеем граффити под открытым небом. Фестиваль Urban Morphogenesis собрал больше 80 художников из 26 стран, и они расписали 52 фасада домов, школ и технических зданий — больше 38 тысяч квадратных метров.",
+    "Ищите 65-метровый портрет Юрия Гагарина работы итальянского художника Jorit и мурал Бреро Весоды — его в 2019 году включали в лучшие работы месяца по версии Street Art Today. Среди участников были испанец Окуда Сан-Мигель и швейцарец BOOGIE. Сами журналисты оговаривались, что точнее говорить не «граффити», а «мурал»."
+   ],
+   "facts": [
+    {
+     "text": "Фестиваль Urban Morphogenesis в 2019 году расписал 52 фасада в микрорайоне Новая Трёхгорка.",
+     "sourceUrl": "https://360.ru/news/kultura/jarkie-kraski-vnesli-v-zhizn-novoj-trehgorki-kak-prohodit-festival-ulichnogo-iskusstva-urban-morphogenesis/",
+     "verified": true
+    },
+    {
+     "text": "В фестивале участвовали более 80 художников из 26 стран, площадь росписей превысила 38 тысяч квадратных метров.",
+     "sourceUrl": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html",
+     "verified": true
+    },
+    {
+     "text": "Организаторы называли проект крупнейшим в мире музеем граффити под открытым небом и планировали заявку в Книгу рекордов Гиннесса.",
+     "sourceUrl": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html",
+     "verified": true
+    },
+    {
+     "text": "Среди работ — 65-метровый портрет Юрия Гагарина художника Jorit.",
+     "sourceUrl": "https://360.ru/tekst/obschestvo/strit-art-iz-odintsova/",
+     "verified": true
+    },
+    {
+     "text": "Мурал Бреро Весоды попал в топ-7 муралов августа 2019 года по версии Street Art Today.",
+     "sourceUrl": "https://360.ru/tekst/obschestvo/strit-art-iz-odintsova/",
+     "verified": true
+    },
+    {
+     "text": "Среди приглашённых художников — Окуда Сан-Мигель и BOOGIE.",
+     "sourceUrl": "https://360.ru/news/kultura/nastojaschij-muzej-ulichnogo-iskusstva-mezhdunarodnyj-festival-graffiti-morfogenezis-startoval-v-odintsove/",
+     "verified": true
+    },
+    {
+     "text": "В 2015 году в Одинцове обсуждали открытие школы граффити, чтобы легализовать уличных художников.",
+     "sourceUrl": "https://www.m24.ru/articles/12062015/76246",
+     "verified": true
+    },
+    {
+     "text": "Состояние росписей после 2019 года не проверялось.",
+     "sourceUrl": "https://360.ru/news/kultura/jarkie-kraski-vnesli-v-zhizn-novoj-trehgorki-kak-prohodit-festival-ulichnogo-iskusstva-urban-morphogenesis/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Жилой квартал: не заезжайте на газоны и во дворы с детскими площадками."
+   ],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "meshcherskiy-arka",
+   "name": "Арка «Старая Смоленская дорога»",
+   "coords": {
+    "lat": 55.687,
+    "lon": 37.305
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Фото — с тротуара, на проезжую часть не выходим.",
+   "guideStory": [
+    "Эта арка встречает тех, кто въезжает в Одинцово. Её поставили на месте, откуда, как пишут краеведы, с XIV века начинался старейший путь из Европы в Московию — Старая Смоленская дорога. Сначала это был водно-сухопутный маршрут, со временем ставший полностью сухопутным.",
+    "По этой дороге веками шли посольства, купцы и войска. Год установки самой арки нам подтвердить не удалось. В городе есть и вторая арка — на развилке Можайского и Минского шоссе."
+   ],
+   "facts": [
+    {
+     "text": "Арка на въезде в Одинцово — одна из двух арок города; вторая стоит на развилке Можайского и Минского шоссе.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": true
+    },
+    {
+     "text": "Арка установлена там, где с XIV века начинался старейший путь из Европы в Московию.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": true
+    },
+    {
+     "text": "Старая Смоленская дорога сначала была водно-сухопутным маршрутом, а затем стала полностью сухопутной.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": true
+    },
+    {
+     "text": "Станция Одинцово открылась в 1870 году на линии Москва — Смоленск.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/odintsovo/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Год установки арки в найденных источниках не указан.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Можайское шоссе — оживлённая трасса: только тротуары и переходы."
+   ],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "meshcherskiy-dachi",
+   "name": "Улицы старых дач",
+   "coords": {
+    "lat": 55.717,
+    "lon": 37.365
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Немчиновка — редкий пример сохранившейся дачной застройки у самой Москвы: деревянные дома, заборы, сосны.",
+    "Здесь Малевич провёл годы жизни и работы; посёлок вдохновлял и других художников. Какая именно дача была его, мы по источникам не проверяли, поэтому только проезжаем по улицам."
+   ],
+   "facts": [
+    {
+     "text": "Жизнь в стародачной Немчиновке и цены на дома описывает журнал «Мир квартир».",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    },
+    {
+     "text": "Немчиновка знаменита прежде всего тем, что здесь жил Малевич.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": true
+    },
+    {
+     "text": "Конкретный адрес дачи Малевича в найденных источниках не указан.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": false
+    },
+    {
+     "text": "В посёлке жил архитектор Фёдор Шехтель.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    },
+    {
+     "text": "В посёлке жил режиссёр Сергей Эйзенштейн.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "meshcherskiy-malevich",
+   "name": "Место захоронения Малевича",
+   "coords": {
+    "lat": 55.723,
+    "lon": 37.357
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Малевич завещал похоронить себя под дубом в Немчиновке. 21 мая 1935 года урну опустили в землю, над могилой поставили деревянный куб с чёрным квадратом работы Суетина.",
+    "В годы войны могилу разрушили, поле распахали. Точное место нашли энтузиасты, в том числе внучатый племянник художника Станислав Богданов, с помощью геодезических исследований и георадаров.",
+    "На месте захоронения установили закладную плиту будущего памятника — мраморный чёрный квадрат размером с картину из Третьяковской галереи. Состояние памятного места сейчас мы не проверяли."
+   ],
+   "facts": [
+    {
+     "text": "21 мая 1935 года урну с прахом Малевича опустили в землю в Немчиновке.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": true
+    },
+    {
+     "text": "Над могилой установили деревянный куб работы ученика Суетина с чёрным квадратом.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": true
+    },
+    {
+     "text": "Могила была уничтожена в годы войны, поле распахали.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
+     "verified": true
+    },
+    {
+     "text": "Место нашли с помощью геодезических исследований и георадаров.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
+     "verified": true
+    },
+    {
+     "text": "Установлена закладная плита — мраморный чёрный квадрат размером с картину в Третьяковке.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
+     "verified": true
+    },
+    {
+     "text": "Памятник планировали установить в Ромашкове; текущее состояние не проверено.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/pamyatnik-hudozhniku-kazimiru-malevichu-planiruyut-ustanovit-v-odintsove-xl/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "meshcherskiy-park-2",
+   "name": "Парк и террасы",
+   "coords": {
+    "lat": 55.784,
+    "lon": 37.286
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 30,
+   "guideStory": [
+    "От дворца к Москве-реке спускается регулярный парк с террасами, скульптурами и партерами.",
+    "Первые упоминания места относятся к 1584 году; с начала XVIII века имением владели Голицыны — по одному источнику, с 1703 по 1810 год. При них и сложился парадный облик усадьбы, который Юсупов потом развил.",
+    "Велосипед ведём рядом в пределах музейной территории — уточните правила у входа."
+   ],
+   "facts": [
+    {
+     "text": "Первые упоминания об Архангельском — 1584 год.",
+     "sourceUrl": "https://tonkosti.ru/Архангельское",
+     "verified": true
+    },
+    {
+     "text": "Голицыны владели усадьбой с 1703 по 1810 год.",
+     "sourceUrl": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe",
+     "verified": false
+    },
+    {
+     "text": "В XVII веке владельцами были Одоевские и Черкасские.",
+     "sourceUrl": "https://tonkosti.ru/Архангельское",
+     "verified": true
+    },
+    {
+     "text": "Парк с террасами спускается к Москве-реке.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": false
+    },
+    {
+     "text": "Усадьба описана в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
+  },
+  {
+   "id": "meshcherskiy-muzey",
+   "name": "Музей немецких антифашистов",
+   "coords": {
+    "lat": 55.825,
+    "lon": 37.315
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Мемориальный музей немецких антифашистов находится на улице Народного Ополчения, 15. Он рассказывает об антифашистском движении немцев в годы войны.",
+    "В коллекции — немецкие знаки и награды, листовки антифашистских организаций, газеты и униформа. По данным справочника, музей ежегодно принимает более 8000 посетителей."
+   ],
+   "facts": [
+    {
+     "text": "Музей находится на ул. Народного Ополчения, 15.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "В коллекции — знаки, награды, листовки, газеты и униформа.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": true
+    },
+    {
+     "text": "Музей принимает более 8000 посетителей в год.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    },
+    {
+     "text": "Музей — филиал Музея Победы.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 100
+  },
+  {
+   "id": "meshcherskiy-tsentr",
+   "name": "Центр и история города",
+   "coords": {
+    "lat": 55.831,
+    "lon": 37.32
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Город вырос вокруг предприятий оптики. Дата основания спорна: 1932 год по одному источнику и объединение деревень в начале XX века — по другому.",
+    "В годы войны в городе создали батальоны народного ополчения, истребительный батальон и трудовые отряды."
+   ],
+   "facts": [
+    {
+     "text": "Красногорск связан с оптическими предприятиями.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Дата основания города в источниках расходится.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    },
+    {
+     "text": "В войну создавались батальоны народного ополчения.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": true
+    },
+    {
+     "text": "Куда сходить в Красногорске — подборка KudaGo.",
+     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
+     "verified": true
+    },
+    {
+     "text": "Красногорск граничит с Москвой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 110
   }
  ],
  "dish": {
@@ -219,32 +615,113 @@
   {
    "title": "Храм в Мещерском — ГБУ МАЦ",
    "url": "https://qr.gbumac.ru/?p=19724"
+  },
+  {
+   "title": "Городок писателей — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8%D0%BD%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BA_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9)"
+  },
+  {
+   "title": "Переделкино — Skillbox",
+   "url": "https://skillbox.ru/media/design/peredelkino-gorodok-pisatelej/"
+  },
+  {
+   "title": "Переделкино — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/peredelkino/info"
+  },
+  {
+   "title": "История Одинцова — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/odintsovo/istoriia"
+  },
+  {
+   "title": "Одинцово — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/odintcovo/history"
+  },
+  {
+   "title": "Достопримечательности Одинцова — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/odintsovo/"
+  },
+  {
+   "title": "Гребневский храм — Азбука паломника",
+   "url": "https://azbyka.ru/palomnik/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9E%D0%B4%D0%B8%D0%BD%D1%86%D0%BE%D0%B2%D0%BE)"
+  },
+  {
+   "title": "Urban Morphogenesis — «Российская газета»",
+   "url": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html"
+  },
+  {
+   "title": "Одинцовская кондитерская фабрика — Retail.ru",
+   "url": "https://www.retail.ru/news/mars-prekratil-vypusk-shokoladnykh-plitok-brendov-dove-i-korkunov-25-iyulya-2025-267201/"
+  },
+  {
+   "title": "Немчиновка и Малевич — КП",
+   "url": "https://www.kp.ru/daily/26307.4/3185386/"
+  },
+  {
+   "title": "Малевич — Новая газета",
+   "url": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda"
+  },
+  {
+   "title": "Стародачная Немчиновка — Мир квартир",
+   "url": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/"
+  },
+  {
+   "title": "Архангельское — 360",
+   "url": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/"
+  },
+  {
+   "title": "Архангельское — tonkosti.ru",
+   "url": "https://tonkosti.ru/Архангельское"
+  },
+  {
+   "title": "Музей-усадьба — Tripster",
+   "url": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe"
+  },
+  {
+   "title": "История Красногорска — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
+  },
+  {
+   "title": "Музей немецких антифашистов — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
+  },
+  {
+   "title": "Знаменское-Губайлово — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.407425,
-     55.667
+     37.280409,
+     55.784
     ],
     [
-     37.408172,
-     55.665428
+     37.299423,
+     55.687
     ],
     [
-     37.410213,
-     55.664277
+     37.30017,
+     55.685428
     ],
     [
-     37.413,
-     55.663856
+     37.343174,
+     55.652428
     ],
     [
-     37.415787,
-     55.664277
+     37.345214,
+     55.651277
+    ],
+    [
+     37.348,
+     55.650856
+    ],
+    [
+     37.350786,
+     55.651277
     ],
     [
      37.420787,
@@ -267,28 +744,40 @@
      55.671572
     ],
     [
-     37.422788,
-     55.672723
+     37.339346,
+     55.819772
     ],
     [
-     37.42,
-     55.673144
+     37.324848,
+     55.832572
     ],
     [
-     37.417212,
-     55.672723
+     37.322799,
+     55.833723
     ],
     [
-     37.410213,
-     55.669723
+     37.32,
+     55.834144
     ],
     [
-     37.408172,
-     55.668572
+     37.317201,
+     55.833723
     ],
     [
-     37.407425,
-     55.667
+     37.315152,
+     55.832572
+    ],
+    [
+     37.310153,
+     55.826572
+    ],
+    [
+     37.281158,
+     55.785572
+    ],
+    [
+     37.280409,
+     55.784
     ]
    ]
   ]

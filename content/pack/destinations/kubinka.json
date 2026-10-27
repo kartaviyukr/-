@@ -12,7 +12,8 @@
  "intro": [
   "Кубинка — город военных лётчиков. Аэродром в 5 км к северо-западу от города открылся в 1935 году; с 1938 года здесь испытывали новые истребители — Як-1 и ЛаГГ-3.",
   "После войны здесь базировались истребительные дивизии; 324-я в ноябре 1950 года отправилась на Корейскую войну. Сегодня в Кубинке базируются знаменитые пилотажные группы «Стрижи» и «Русские витязи».",
-  "Маршрут: станция Кубинка-1, город и дорога к аэродрому. Аэродром — военный объект, внутрь не попасть."
+  "Сначала — свои места: «Вокзал Кубинка-1», «Аэродром Кубинка», «Небо «Витязей» и «Стрижей»». Дальше маршрут идёт по соседним местам: Парк «Патриот» — «Главный храм Вооружённых сил»; Калининец — «Тарасково»; Селятино — «Посёлок «Гидромонтажа»»; Апрелевка — «Музей истории завода»; Голицыно — «Вокзал Кекушева».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Голицыно» (Электрички Белорусского направления; далее автобус — уточняйте), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Кубинка-1»",
@@ -23,21 +24,21 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Кубинка-1»",
+  "name": "Станция «Голицыно»",
   "coords": {
-   "lat": 55.5772,
-   "lon": 36.6955
+   "lat": 55.615,
+   "lon": 36.985
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "Электрички Белорусского направления; далее автобус — уточняйте"
  },
  "route": {
-  "distanceKm": 10.0,
-  "durationH": 1.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 70.0,
+  "durationH": 8.2,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -52,8 +53,7 @@
    "visitMinutes": 10,
    "guideStory": [
     "В южной части города стоит здание вокзала у станции Кубинка-1. Историю станции мы в найденных источниках не нашли.",
-    "Кубинка — примерно в 60 км к западу от центра Москвы.",
-    "Едем через город к аэродрому. Следующая точка маршрута — «Аэродром Кубинка». Формат остановки — «проезжаем», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+    "Кубинка — примерно в 60 км к западу от центра Москвы. Следующая точка маршрута — «Аэродром Кубинка». Формат остановки — «проезжаем», заложите на неё около 10 минут."
    ],
    "facts": [
     {
@@ -85,8 +85,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "kubinka-aerodrom",
@@ -134,8 +134,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "kubinka-vityazi",
@@ -148,8 +148,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "В Кубинке базируются пилотажные группы «Стрижи» и «Русские витязи». Если повезёт, в небе можно увидеть их тренировку.",
-    "Altapress писал о планах сделать из аэродрома бизнес-терминал — статус этих планов мы не проверяли.",
-    "Возвращаемся к станции. Финиш — Станция «Кубинка-1»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Altapress писал о планах сделать из аэродрома бизнес-терминал — статус этих планов мы не проверяли. Следующая точка маршрута — «Главный храм Вооружённых сил»."
    ],
    "facts": [
     {
@@ -181,8 +180,243 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "kubinka-khram",
+   "name": "Главный храм Вооружённых сил",
+   "coords": {
+    "lat": 55.565,
+    "lon": 36.82
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "Главный храм Вооружённых сил — одна из ключевых точек парка. Рядом — музейный комплекс «Дорога памяти».",
+    "Дату освящения храма мы в найденных источниках не сверили и поэтому не приводим.",
+    "Билеты в музейный комплекс и режим посещения храма уточняйте на официальном сайте парка."
+   ],
+   "facts": [
+    {
+     "text": "Главный храм ВС РФ и комплекс «Дорога памяти» — главные объекты парка.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": true
+    },
+    {
+     "text": "Парк расположен на 43-м километре Минского шоссе.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": true
+    },
+    {
+     "text": "Парк открыт в 2015 году.",
+     "sourceUrl": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/",
+     "verified": true
+    },
+    {
+     "text": "Дата освящения храма нами не сверена.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "kubinka-taraskovo",
+   "name": "Тарасково",
+   "coords": {
+    "lat": 55.49,
+    "lon": 36.9
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
+    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок «Гидромонтажа»»."
+   ],
+   "facts": [
+    {
+     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Посёлок связан с военным городком.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец находится недалеко от станции Голицыно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "kubinka-gidromontazh",
+   "name": "Посёлок «Гидромонтажа»",
+   "coords": {
+    "lat": 55.515,
+    "lon": 36.975
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
+    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
+   ],
+   "facts": [
+    {
+     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Посёлок отмечал 66-й день рождения.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Подробности о работе треста не найдены.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Селятино находится в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "kubinka-muzey",
+   "name": "Музей истории завода",
+   "coords": {
+    "lat": 55.548,
+    "lon": 37.072
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "В Апрелевке работает частный музей истории завода грампластинок; его организовал предприниматель Борис Чухонцев.",
+    "Музей принимает гостей, в том числе делегации; программы музея анонсирует Культура.РФ.",
+    "Часы работы и возможность экскурсии уточняйте заранее. Следующая точка маршрута — «Вокзал Кекушева»."
+   ],
+   "facts": [
+    {
+     "text": "Частный музей истории завода организовал Борис Чухонцев.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Музей принимает делегации.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": true
+    },
+    {
+     "text": "Программы музея анонсирует Культура.РФ.",
+     "sourceUrl": "https://www.culture.ru/events/6203287/programma-aprelevskii-zavod-grammplastinok",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "kubinka-vokzal-2",
+   "name": "Вокзал Кекушева",
+   "coords": {
+    "lat": 55.615,
+    "lon": 36.985
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Станция на Московско-Смоленской линии стала ядром поселения. Сохранившееся здание начала XX века связывают с архитектором Львом Кекушевым.",
+    "Кекушев — один из главных мастеров московского модерна. Авторство вокзала мы знаем по туристическому источнику и отмечаем это."
+   ],
+   "facts": [
+    {
+     "text": "Город сформировался вокруг станции на Московско-Смоленской линии.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Здание вокзала начала XX века связывают с Кекушевым.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Голицыно — город Одинцовского округа.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Станция носит название Голицыно.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Кекушев — мастер московского модерна.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -190,7 +424,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Кубинки нет. Тематическая замена — «лётный паёк» в честь пилотажных групп. Это шутка составителя.",
   "story": [
-   "Кубинка живёт авиацией. Перекусите у станции — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Кубинка живёт авиацией. Перекусите у станции — кафе мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -216,9 +450,54 @@
   {
    "title": "Kubinka air base — Wikipedia",
    "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
+  },
+  {
+   "title": "Парк «Патриот» — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
+  },
+  {
+   "title": "Парк «Патриот» — Яндекс Путешествия",
+   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
+  },
+  {
+   "title": "Kalininets — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kalininets"
+  },
+  {
+   "title": "Tamanskaya Division — Military Wiki",
+   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
+  },
+  {
+   "title": "Selyatino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Selyatino"
+  },
+  {
+   "title": "Селятино 66 лет — Рамблер",
+   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
+  },
+  {
+   "title": "Апрелевский завод грампластинок — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
+  },
+  {
+   "title": "Апрелевский завод — БРЭ",
+   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
+  },
+  {
+   "title": "Апрелевка — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
+  },
+  {
+   "title": "Голицыно — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
+   "title": "Голицыно — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -240,40 +519,48 @@
      55.574277
     ],
     [
-     36.695,
-     55.573856
+     36.897225,
+     55.487277
     ],
     [
-     36.697781,
-     55.574277
+     36.9,
+     55.486856
     ],
     [
-     36.698281,
-     55.574477
+     36.902775,
+     55.487277
     ],
     [
-     36.700317,
-     55.575628
+     36.977777,
+     55.512277
     ],
     [
-     36.701062,
-     55.5772
+     37.074779,
+     55.545277
     ],
     [
-     36.700317,
-     55.578772
+     37.076813,
+     55.546428
     ],
     [
-     36.67482,
-     55.601572
+     37.077558,
+     55.548
     ],
     [
-     36.672783,
-     55.602723
+     37.076813,
+     55.549572
     ],
     [
-     36.652783,
-     55.612723
+     36.989821,
+     55.616572
+    ],
+    [
+     36.987784,
+     55.617723
+    ],
+    [
+     36.985,
+     55.618144
     ],
     [
      36.65,

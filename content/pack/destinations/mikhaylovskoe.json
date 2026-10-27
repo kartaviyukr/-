@@ -13,7 +13,8 @@
   "Михайловское — усадьба на берегу Пахры, построенная генералом Михаилом Кречетниковым, тульским и рязанским наместником. С 2012 года это Троицкий округ Москвы.",
   "Двухэтажный дом с мезонином выстроен на средства Кречетникова. В 1784 году здесь побывал известный агроном и мемуарист Андрей Болотов.",
   "Подробности более поздней истории мы в найденных источниках не нашли и не придумываем.",
-  "Маршрут: Красная Пахра, дорога вдоль реки и усадьба."
+  "Сначала — свои места: «Дом Кречетникова». Дальше маршрут идёт по соседним местам: Вороново — «Уцелевший храм»; Красная Пахра — «Берег Пахры»; Троицк — «Научный городок», «Центр Троицка»; Московский — «Филимонки и сгоревшая усадьба»; Внуково — «Аэропорт Внуково», «История аэродрома».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Внуково» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Красная Пахра»",
@@ -24,71 +25,24 @@
   "transport": "Автобусы по Калужскому шоссе — уточняйте"
  },
  "endPoint": {
-  "name": "Остановка «Красная Пахра»",
+  "name": "Станция «Внуково»",
   "coords": {
-   "lat": 55.4202,
-   "lon": 37.2805
+   "lat": 55.638,
+   "lon": 37.32
   },
-  "transport": "Автобусы по Калужскому шоссе"
+  "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 14.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 70.0,
+  "durationH": 7.7,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "mikhaylovskoe-doroga",
-   "name": "Дорога вдоль Пахры",
-   "coords": {
-    "lat": 55.41,
-    "lon": 37.24
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "От Красной Пахры едем на запад вдоль реки. Пахра — главная река этих мест: на ней стоят и Красная Пахра, и Михайловское.",
-    "Дорога проходит по Троицкому округу Москвы — бывшим подмосковным землям, вошедшим в город в 2012 году.",
-    "Впереди — усадьба Кречетникова. Следующая точка маршрута — «Дом Кречетникова»."
-   ],
-   "facts": [
-    {
-     "text": "Михайловское стоит на берегу Пахры.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "С 2012 года это Троицкий округ Москвы.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Красная Пахра также стоит на Пахре.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Дорогу вдоль реки мы не проверяли.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
   {
    "id": "mikhaylovskoe-dom",
    "name": "Дом Кречетникова",
@@ -101,7 +55,7 @@
    "guideStory": [
     "Двухэтажный дом с мезонином выстроен на средства тульского и рязанского наместника генерала Михаила Кречетникова.",
     "В 1784 году усадьбу посетил Андрей Болотов — агроном, писатель и мемуарист, оставивший записки о своей эпохе.",
-    "Доступ на территорию мы не проверяли — смотрим снаружи. Следующая точка маршрута — «Парк над рекой»."
+    "Доступ на территорию мы не проверяли — смотрим снаружи. Следующая точка маршрута — «Уцелевший храм»."
    ],
    "facts": [
     {
@@ -135,56 +89,339 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
-   "id": "mikhaylovskoe-park",
-   "name": "Парк над рекой",
+   "id": "mikhaylovskoe-khram",
+   "name": "Уцелевший храм",
    "coords": {
-    "lat": 55.4005,
-    "lon": 37.201
+    "lat": 55.323,
+    "lon": 37.187
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В пожаре 1812 года уцелел только храм усадьбы. Его называют главным уцелевшим свидетелем ростопчинской эпохи.",
+    "Датировку храма мы в найденных источниках не сверили и поэтому не приводим.",
+    "От храма неспешно идём к усадебным прудам. Следующая точка маршрута — «Берег Пахры»."
+   ],
+   "facts": [
+    {
+     "text": "В пожаре 1812 года уцелел только храм.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": true
+    },
+    {
+     "text": "Датировка храма нами не проверена.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": false
+    },
+    {
+     "text": "Вороново — в составе Новой Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба описана в Большой российской энциклопедии.",
+     "sourceUrl": "https://bigenc.ru/c/voronovo-3f93b1",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "mikhaylovskoe-pakhra",
+   "name": "Берег Пахры",
+   "coords": {
+    "lat": 55.415,
+    "lon": 37.28
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Усадьба стоит над Пахрой, и с берега открывается вид на речную долину.",
-    "Историю парка и дальнейших владельцев мы в найденных источниках не нашли — это честный пробел, а не повод для выдумок.",
-    "Обратно к Красной Пахре едем той же дорогой вдоль реки. Финиш — Остановка «Красная Пахра»: Автобусы по Калужскому шоссе."
+    "Пахра прикрывала отход армии Кутузова от Москвы к Подольску. Здесь, на Старой Калужской дороге, армия свернула к Тарутину.",
+    "Сегодня Красная Пахра — часть Троицкого округа Москвы.",
+    "От реки по улицам села возвращаемся к остановке на шоссе. Следующая точка маршрута — «Научный городок»."
    ],
    "facts": [
     {
-     "text": "Усадьба стоит над Пахрой.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "text": "Армия отходила под прикрытием Пахры.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/067/856.htm",
      "verified": true
     },
     {
-     "text": "История парка в источниках не раскрыта.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Владельцы после Кречетникова не установлены.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Координаты парка приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Михайловское — подмосковная усадьба.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
+     "text": "Красная Пахра — в Троицком округе Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
      "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
+     "verified": false
+    },
+    {
+     "text": "Старая Калужская дорога проходит через село.",
+     "sourceUrl": "https://booksite.ru/FullText/1/001/008/067/856.htm",
+     "verified": true
+    },
+    {
+     "text": "Тропы вдоль реки мы не проверяли.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/krasnopakhorskij/",
+     "verified": false
     }
    ],
    "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "mikhaylovskoe-nauka",
+   "name": "Научный городок",
+   "coords": {
+    "lat": 55.48,
+    "lon": 37.295
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В конце 1944 года в Троицке разместился НИИЗМ — институт земного магнетизма. Позже появились институты Академии наук: подразделения ФИАН, институты высоких давлений, ядерных исследований, спектроскопии.",
+    "С 1940-х годов параллельно строили научную базу и жильё. К 1970-м посёлок стал развитым городом научно-производственного профиля."
+   ],
+   "facts": [
+    {
+     "text": "В конце 1944 года в Троицке разместился НИИЗМ.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "verified": true
+    },
+    {
+     "text": "В Троицке работают ФИАН и институты РАН — ИФВД, ИЯИ, ИСАН.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "verified": true
+    },
+    {
+     "text": "К 1970-м Троицк стал городом научно-производственного профиля.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "verified": true
+    },
+    {
+     "text": "«Вечерняя Москва»: Троицк начинался с обсерватории.",
+     "sourceUrl": "https://vm.ru/society/209502-troick-nachinalsya-s-observatorii/amp",
+     "verified": true
+    },
+    {
+     "text": "Территории институтов закрыты для посетителей.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Территории институтов закрыты."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "mikhaylovskoe-tsentr",
+   "name": "Центр Троицка",
+   "coords": {
+    "lat": 55.485,
+    "lon": 37.305
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Долго фабричный посёлок и научный городок существовали как бы независимо друг от друга, а потом срослись в один город.",
+    "Статус города Троицк получил в 1977 году. По данным 2021 года, в нём жило около 65 тысяч человек. Следующая точка маршрута — «Филимонки и сгоревшая усадьба»."
+   ],
+   "facts": [
+    {
+     "text": "Фабричный посёлок и научный городок долго существовали независимо.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "verified": true
+    },
+    {
+     "text": "В 1977 году Троицку присвоен статус города.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/",
+     "verified": true
+    },
+    {
+     "text": "Население по данным 2021 года — 65 043 человека.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Городской округ образован в 2005 году.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "В 2024 году территория округа значительно расширена.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "mikhaylovskoe-filimonki",
+   "name": "Филимонки и сгоревшая усадьба",
+   "coords": {
+    "lat": 55.57,
+    "lon": 37.33
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В 1929 году образовали Филимонковский сельсовет в Краснопахорском районе; в 1954 году к нему присоединили земли Передельцевского сельсовета.",
+    "Усадьбу в Филимонках, основанную, по Moskvich Mag, князем Голицыным в 1801 году, уничтожил пожар 2006 года. Теперь её собираются восстанавливать."
+   ],
+   "facts": [
+    {
+     "text": "Филимонковский сельсовет образован в 1929 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/filimonkovskoe/",
+     "verified": true
+    },
+    {
+     "text": "В 1954 году включены территории Передельцевского сельсовета.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/filimonkovskoe/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба в Филимонках сгорела в 2006 году.",
+     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба основана в 1801 году князем Голицыным.",
+     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
+     "verified": false
+    },
+    {
+     "text": "Власти объявили о подготовке к реставрации.",
+     "sourceUrl": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Руины: внутрь не заходить."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "mikhaylovskoe-aeroport",
+   "name": "Аэропорт Внуково",
+   "coords": {
+    "lat": 55.605,
+    "lon": 37.286
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В сентябре 1945 года решили перевести Центральный московский аэропорт с Ходынского поля во Внуково, и он стал главной гражданской авиагаванью столицы.",
+    "Сегодня Внуково — старейший действующий аэропорт Москвы. Зона аэропорта охраняется; с велосипедом в терминал не заходят."
+   ],
+   "facts": [
+    {
+     "text": "В сентябре 1945 года Центральный аэропорт перевели с Ходынского поля во Внуково.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Внуково — старейший действующий аэропорт Москвы.",
+     "sourceUrl": "https://news.mail.ru/card/1549/",
+     "verified": true
+    },
+    {
+     "text": "Велосипед в терминал не заносят — правило составителя.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": false
+    },
+    {
+     "text": "Внуково называют главной гражданской авиагаванью послевоенной Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Аэропорт описан в карточке Mail.ru.",
+     "sourceUrl": "https://news.mail.ru/card/1549/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Охраняемая зона аэропорта."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "mikhaylovskoe-istoriya",
+   "name": "История аэродрома",
+   "coords": {
+    "lat": 55.615,
+    "lon": 37.295
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1937 году правительство утвердило план нового аэродрома, чтобы разгрузить московский авиаузел. Работы начались в 1938 году, первую очередь приняли в 1941-м.",
+    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года."
+   ],
+   "facts": [
+    {
+     "text": "План аэродрома утверждён в 1937 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Работы начаты в 1938 году, первая очередь принята в 1941 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Открытие планировали на 18 августа 1941 года.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Аэропорт открыт досрочно, 2 июля 1941 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Внукову исполнилось 80 лет в 2021 году.",
+     "sourceUrl": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -215,80 +452,149 @@
   {
    "title": "Михайловское — Рувики",
    "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
+  },
+  {
+   "title": "Вороново — БРЭ",
+   "url": "https://bigenc.ru/c/voronovo-3f93b1"
+  },
+  {
+   "title": "Вороново — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/voronovo/"
+  },
+  {
+   "title": "Краснопахорский — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/krasnopakhorskij/"
+  },
+  {
+   "title": "Тарутинский манёвр — booksite.ru",
+   "url": "https://booksite.ru/FullText/1/001/008/067/856.htm"
+  },
+  {
+   "title": "Троицк — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0)"
+  },
+  {
+   "title": "Троицк — ЦИАН",
+   "url": "https://www.cian.ru/stati-goroda-podmoskovja-troitsk-216367/"
+  },
+  {
+   "title": "Троицк начинался с обсерватории — ВМ",
+   "url": "https://vm.ru/society/209502-troick-nachinalsya-s-observatorii/amp"
+  },
+  {
+   "title": "Московский — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/moskovskij/"
+  },
+  {
+   "title": "Филимонковское — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/filimonkovskoe/"
+  },
+  {
+   "title": "Усадьба в Филимонках — Moskvich Mag",
+   "url": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/"
+  },
+  {
+   "title": "Внуково — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/vnukovo/"
+  },
+  {
+   "title": "История Внукова — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia"
+  },
+  {
+   "title": "Внукову 80 лет — Вокруг света",
+   "url": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
+     37.181474,
+     55.323
+    ],
+    [
+     37.182214,
+     55.321428
+    ],
+    [
+     37.184237,
+     55.320277
+    ],
+    [
+     37.187,
+     55.319856
+    ],
+    [
+     37.189763,
+     55.320277
+    ],
+    [
+     37.191786,
+     55.321428
+    ],
+    [
+     37.284797,
+     55.413428
+    ],
+    [
+     37.285539,
+     55.415
+    ],
+    [
+     37.310549,
+     55.485
+    ],
+    [
+     37.335561,
+     55.57
+    ],
+    [
+     37.32557,
+     55.638
+    ],
+    [
+     37.324824,
+     55.639572
+    ],
+    [
+     37.322785,
+     55.640723
+    ],
+    [
+     37.32,
+     55.641144
+    ],
+    [
+     37.317215,
+     55.640723
+    ],
+    [
+     37.315176,
+     55.639572
+    ],
+    [
+     37.290179,
+     55.616572
+    ],
+    [
+     37.28118,
+     55.606572
+    ],
+    [
+     37.280434,
+     55.605
+    ],
+    [
      37.194463,
      55.4
     ],
     [
-     37.195205,
-     55.398428
-    ],
-    [
-     37.197232,
-     55.397277
-    ],
-    [
-     37.2,
-     55.396856
-    ],
-    [
-     37.202768,
-     55.397277
-    ],
-    [
-     37.28277,
-     55.417277
-    ],
-    [
-     37.28327,
-     55.417477
-    ],
-    [
-     37.285298,
-     55.418628
-    ],
-    [
-     37.28604,
-     55.4202
-    ],
-    [
-     37.285298,
-     55.421772
-    ],
-    [
-     37.28327,
-     55.422923
-    ],
-    [
-     37.2805,
-     55.423344
-    ],
-    [
-     37.27773,
-     55.422923
-    ],
-    [
-     37.198232,
-     55.403223
-    ],
-    [
-     37.197232,
-     55.402723
-    ],
-    [
-     37.195205,
-     55.401572
-    ],
-    [
-     37.194463,
-     55.4
+     37.181474,
+     55.323
     ]
    ]
   ]

@@ -13,7 +13,8 @@
   "Внуково — посёлок и старейший действующий аэропорт Москвы. В 1937 году утвердили план нового аэродрома, работы начали в 1938-м, первую очередь приняли в 1941 году.",
   "Открытие планировали на 18 августа 1941 года, но из-за войны аэропорт открыли досрочно — по одному источнику, 2 июля 1941 года.",
   "Одновременно строили посёлок для рабочих и лётчиков; в 1947 году Внуково стало рабочим посёлком. В сентябре 1945 года сюда перевели Центральный аэропорт с Ходынского поля.",
-  "Маршрут: посёлок, станция и вид на аэропорт."
+  "Сначала — свои места: «Посёлок Внуково», «История аэродрома», «Аэропорт Внуково». Дальше маршрут идёт по соседним местам: Московский — «Институт Чумакова», «Центр Московского»; Солнцево — «Центр Солнцева», «Мещерский пруд»; Одинцово — «Новая Трёхгорка: муралы Urban Morphogenesis», «Арка «Старая Смоленская дорога»»; Немчиновка — «Улицы старых дач», «Место захоронения Малевича».",
+  "Маршрут линейный, около 45 км и 11 точек. Финиш — Платформа «Немчиновка» (Электрички Белорусского направления / МЦД-1), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Внуково»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "endPoint": {
-  "name": "Аэропорт Внуково",
+  "name": "Платформа «Немчиновка»",
   "coords": {
-   "lat": 55.605,
-   "lon": 37.286
+   "lat": 55.7135,
+   "lon": 37.3705
   },
-  "transport": "Аэроэкспресс и автобусы до метро"
+  "transport": "Электрички Белорусского направления / МЦД-1"
  },
  "route": {
-  "distanceKm": 8.0,
-  "durationH": 1.5,
-  "difficulty": "лёгкий",
+  "distanceKm": 45.0,
+  "durationH": 6.0,
+  "difficulty": "средний",
   "shape": "линейный",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Посёлок строили одновременно с аэропортом — для рабочих и лётчиков. В 1947 году Внуково преобразовали в рабочий посёлок.",
-    "Известных дачников Внукова в найденных источниках мы не нашли, поэтому о них не рассказываем.",
-    "От посёлка по дороге едем к аэропорту, история которого начинается ещё до войны. Следующая точка маршрута — «История аэродрома»."
+    "Известных дачников Внукова в найденных источниках мы не нашли, поэтому о них не рассказываем. Следующая точка маршрута — «История аэродрома»."
    ],
    "facts": [
     {
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "vnukovo-istoriya",
@@ -100,8 +100,7 @@
    "visitMinutes": 10,
    "guideStory": [
     "В 1937 году правительство утвердило план нового аэродрома, чтобы разгрузить московский авиаузел. Работы начались в 1938 году, первую очередь приняли в 1941-м.",
-    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года.",
-    "Едем к терминалам. Следующая точка маршрута — «Аэропорт Внуково»."
+    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года."
    ],
    "facts": [
     {
@@ -133,8 +132,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "vnukovo-aeroport",
@@ -147,8 +146,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "В сентябре 1945 года решили перевести Центральный московский аэропорт с Ходынского поля во Внуково, и он стал главной гражданской авиагаванью столицы.",
-    "Сегодня Внуково — старейший действующий аэропорт Москвы. Зона аэропорта охраняется; с велосипедом в терминал не заходят.",
-    "Здесь маршрут заканчивается — можно смотреть на взлёты. Финиш — Аэропорт Внуково: Аэроэкспресс и автобусы до метро."
+    "Сегодня Внуково — старейший действующий аэропорт Москвы. Зона аэропорта охраняется; с велосипедом в терминал не заходят."
    ],
    "facts": [
     {
@@ -182,8 +180,407 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "vnukovo-chumakov",
+   "name": "Институт Чумакова",
+   "coords": {
+    "lat": 55.598,
+    "lon": 37.34
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1955 году здесь открыли комплекс Института полиомиелита и вирусных энцефалитов. Руководил им академик Михаил Чумаков.",
+    "Сегодня институт носит имя Чумакова. Территория закрыта — смотрим снаружи.",
+    "Дальше по дороге едем на юг, к посёлку Филимонки и сгоревшей усадьбе."
+   ],
+   "facts": [
+    {
+     "text": "В 1955 году открыт комплекс Института полиомиелита и вирусных энцефалитов.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Руководил институтом академик Михаил Чумаков.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Территория института закрыта.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Институт носит имя Чумакова.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Это научно-производственный комплекс.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Режимная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "vnukovo-tsentr",
+   "name": "Центр Московского",
+   "coords": {
+    "lat": 55.6,
+    "lon": 37.355
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Посёлок Московский начал развиваться в 1955 году вокруг научно-производственного комплекса института.",
+    "С 2012 года Московский — часть Москвы в Новомосковском округе. Историю его городского статуса мы в источниках не нашли и не придумываем."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок Московский начал развиваться в 1955 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Развитие связано с институтом полиомиелита.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Дата получения статуса города нами не проверена.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Новая Москва присоединена 1 июля 2012 года.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/filimonki/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "vnukovo-tsentr-2",
+   "name": "Центр Солнцева",
+   "coords": {
+    "lat": 55.649,
+    "lon": 37.4
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1971 году Солнцево получило статус города областного подчинения, а в мае 1984 года вошло в состав Москвы.",
+    "В 2012 году муниципальное образование Солнцево стало муниципальным округом. Сегодня в районе живёт больше 125 тысяч человек — население большого города."
+   ],
+   "facts": [
+    {
+     "text": "В 1971 году Солнцево стало городом областного подчинения.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/solntsevo/",
+     "verified": true
+    },
+    {
+     "text": "В 1984 году Солнцево включено в состав Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/solntsevo/",
+     "verified": true
+    },
+    {
+     "text": "Вхождение в Москву произошло в мае 1984 года.",
+     "sourceUrl": "https://www.hamichlol.org.il/%D7%A8%D7%95%D7%91%D7%A2_%D7%A1%D7%95%D7%9C%D7%A0%D7%A6%D7%91%D7%95",
+     "verified": false
+    },
+    {
+     "text": "В районе живёт более 125 тысяч человек.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/solntsevo/",
+     "verified": true
+    },
+    {
+     "text": "У муниципального округа Солнцево есть свой флаг.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%BC%D1%83%D0%BD%D0%B8%D1%86%D0%B8%D0%BF%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%BA%D1%80%D1%83%D0%B3%D0%B0_%D0%A1%D0%BE%D0%BB%D0%BD%D1%86%D0%B5%D0%B2%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "vnukovo-prud",
+   "name": "Мещерский пруд",
+   "coords": {
+    "lat": 55.655,
+    "lon": 37.406
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "На берегу Мещерского пруда построили двухэтажную поисково-спасательную станцию «Мещерская» — пруд используют для купания летом.",
+    "Вокруг прудов благоустроили зону отдыха: садовые диваны, экотропы, больше 170 фонарей, а велодорожка соединяет её с парком «Мещерский» и посёлком."
+   ],
+   "facts": [
+    {
+     "text": "На берегу Мещерского пруда построили поисково-спасательную станцию «Мещерская».",
+     "sourceUrl": "https://www.mos.ru/news/item/32924073/",
+     "verified": true
+    },
+    {
+     "text": "Вокруг прудов предусмотрены садовые диваны, экотропы и более 170 фонарей.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-moskve-blagoustroyat-territoriyu-vokrug-mescherskih-prudov-xl/",
+     "verified": true
+    },
+    {
+     "text": "Велодорожка соединяет парк «Мещерский» с зоной отдыха и посёлком.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-moskve-blagoustroyat-territoriyu-vokrug-mescherskih-prudov-xl/",
+     "verified": true
+    },
+    {
+     "text": "Число садовых диванов (49) указано в плане благоустройства.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-moskve-blagoustroyat-territoriyu-vokrug-mescherskih-prudov-xl/",
+     "verified": false
+    },
+    {
+     "text": "Пруд относится к району Солнцево.",
+     "sourceUrl": "https://www.mos.ru/news/item/32924073/",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "vnukovo-trehgorka",
+   "name": "Новая Трёхгорка: муралы Urban Morphogenesis",
+   "coords": {
+    "lat": 55.6905,
+    "lon": 37.32
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 40,
+   "daylightOnly": true,
+   "openingHoursNote": "Жилой квартал — смотрим с улиц.",
+   "bikeParkingNote": "Двигаемся по дворовым проездам шагом.",
+   "guideStory": [
+    "Новая Трёхгорка — обычный спальный район, который в 2019 году стал, по заявлению организаторов, крупнейшим в мире музеем граффити под открытым небом. Фестиваль Urban Morphogenesis собрал больше 80 художников из 26 стран, и они расписали 52 фасада домов, школ и технических зданий — больше 38 тысяч квадратных метров.",
+    "Ищите 65-метровый портрет Юрия Гагарина работы итальянского художника Jorit и мурал Бреро Весоды — его в 2019 году включали в лучшие работы месяца по версии Street Art Today. Среди участников были испанец Окуда Сан-Мигель и швейцарец BOOGIE. Сами журналисты оговаривались, что точнее говорить не «граффити», а «мурал»."
+   ],
+   "facts": [
+    {
+     "text": "Фестиваль Urban Morphogenesis в 2019 году расписал 52 фасада в микрорайоне Новая Трёхгорка.",
+     "sourceUrl": "https://360.ru/news/kultura/jarkie-kraski-vnesli-v-zhizn-novoj-trehgorki-kak-prohodit-festival-ulichnogo-iskusstva-urban-morphogenesis/",
+     "verified": true
+    },
+    {
+     "text": "В фестивале участвовали более 80 художников из 26 стран, площадь росписей превысила 38 тысяч квадратных метров.",
+     "sourceUrl": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html",
+     "verified": true
+    },
+    {
+     "text": "Организаторы называли проект крупнейшим в мире музеем граффити под открытым небом и планировали заявку в Книгу рекордов Гиннесса.",
+     "sourceUrl": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html",
+     "verified": true
+    },
+    {
+     "text": "Среди работ — 65-метровый портрет Юрия Гагарина художника Jorit.",
+     "sourceUrl": "https://360.ru/tekst/obschestvo/strit-art-iz-odintsova/",
+     "verified": true
+    },
+    {
+     "text": "Мурал Бреро Весоды попал в топ-7 муралов августа 2019 года по версии Street Art Today.",
+     "sourceUrl": "https://360.ru/tekst/obschestvo/strit-art-iz-odintsova/",
+     "verified": true
+    },
+    {
+     "text": "Среди приглашённых художников — Окуда Сан-Мигель и BOOGIE.",
+     "sourceUrl": "https://360.ru/news/kultura/nastojaschij-muzej-ulichnogo-iskusstva-mezhdunarodnyj-festival-graffiti-morfogenezis-startoval-v-odintsove/",
+     "verified": true
+    },
+    {
+     "text": "В 2015 году в Одинцове обсуждали открытие школы граффити, чтобы легализовать уличных художников.",
+     "sourceUrl": "https://www.m24.ru/articles/12062015/76246",
+     "verified": true
+    },
+    {
+     "text": "Состояние росписей после 2019 года не проверялось.",
+     "sourceUrl": "https://360.ru/news/kultura/jarkie-kraski-vnesli-v-zhizn-novoj-trehgorki-kak-prohodit-festival-ulichnogo-iskusstva-urban-morphogenesis/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Жилой квартал: не заезжайте на газоны и во дворы с детскими площадками."
+   ],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "vnukovo-arka",
+   "name": "Арка «Старая Смоленская дорога»",
+   "coords": {
+    "lat": 55.687,
+    "lon": 37.305
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Фото — с тротуара, на проезжую часть не выходим.",
+   "guideStory": [
+    "Эта арка встречает тех, кто въезжает в Одинцово. Её поставили на месте, откуда, как пишут краеведы, с XIV века начинался старейший путь из Европы в Московию — Старая Смоленская дорога. Сначала это был водно-сухопутный маршрут, со временем ставший полностью сухопутным.",
+    "По этой дороге веками шли посольства, купцы и войска. Год установки самой арки нам подтвердить не удалось. В городе есть и вторая арка — на развилке Можайского и Минского шоссе."
+   ],
+   "facts": [
+    {
+     "text": "Арка на въезде в Одинцово — одна из двух арок города; вторая стоит на развилке Можайского и Минского шоссе.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": true
+    },
+    {
+     "text": "Арка установлена там, где с XIV века начинался старейший путь из Европы в Московию.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": true
+    },
+    {
+     "text": "Старая Смоленская дорога сначала была водно-сухопутным маршрутом, а затем стала полностью сухопутной.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": true
+    },
+    {
+     "text": "Станция Одинцово открылась в 1870 году на линии Москва — Смоленск.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/odintsovo/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Год установки арки в найденных источниках не указан.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Можайское шоссе — оживлённая трасса: только тротуары и переходы."
+   ],
+   "coordsVerified": false,
+   "order": 90
+  },
+  {
+   "id": "vnukovo-dachi",
+   "name": "Улицы старых дач",
+   "coords": {
+    "lat": 55.717,
+    "lon": 37.365
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Немчиновка — редкий пример сохранившейся дачной застройки у самой Москвы: деревянные дома, заборы, сосны.",
+    "Здесь Малевич провёл годы жизни и работы; посёлок вдохновлял и других художников. Какая именно дача была его, мы по источникам не проверяли, поэтому только проезжаем по улицам."
+   ],
+   "facts": [
+    {
+     "text": "Жизнь в стародачной Немчиновке и цены на дома описывает журнал «Мир квартир».",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    },
+    {
+     "text": "Немчиновка знаменита прежде всего тем, что здесь жил Малевич.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": true
+    },
+    {
+     "text": "Конкретный адрес дачи Малевича в найденных источниках не указан.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": false
+    },
+    {
+     "text": "В посёлке жил архитектор Фёдор Шехтель.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    },
+    {
+     "text": "В посёлке жил режиссёр Сергей Эйзенштейн.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 100
+  },
+  {
+   "id": "vnukovo-malevich",
+   "name": "Место захоронения Малевича",
+   "coords": {
+    "lat": 55.723,
+    "lon": 37.357
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Малевич завещал похоронить себя под дубом в Немчиновке. 21 мая 1935 года урну опустили в землю, над могилой поставили деревянный куб с чёрным квадратом работы Суетина.",
+    "В годы войны могилу разрушили, поле распахали. Точное место нашли энтузиасты, в том числе внучатый племянник художника Станислав Богданов, с помощью геодезических исследований и георадаров.",
+    "На месте захоронения установили закладную плиту будущего памятника — мраморный чёрный квадрат размером с картину из Третьяковской галереи. Состояние памятного места сейчас мы не проверяли."
+   ],
+   "facts": [
+    {
+     "text": "21 мая 1935 года урну с прахом Малевича опустили в землю в Немчиновке.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": true
+    },
+    {
+     "text": "Над могилой установили деревянный куб работы ученика Суетина с чёрным квадратом.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": true
+    },
+    {
+     "text": "Могила была уничтожена в годы войны, поле распахали.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
+     "verified": true
+    },
+    {
+     "text": "Место нашли с помощью геодезических исследований и георадаров.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
+     "verified": true
+    },
+    {
+     "text": "Установлена закладная плита — мраморный чёрный квадрат размером с картину в Третьяковке.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
+     "verified": true
+    },
+    {
+     "text": "Памятник планировали установить в Ромашкове; текущее состояние не проверено.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/pamyatnik-hudozhniku-kazimiru-malevichu-planiruyut-ustanovit-v-odintsove-xl/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 110
   }
  ],
  "dish": {
@@ -222,9 +619,70 @@
   {
    "title": "Внукову 80 лет — Вокруг света",
    "url": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375"
+  },
+  {
+   "title": "Московский — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/moskovskij/"
+  },
+  {
+   "title": "Филимонковское — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/filimonkovskoe/"
+  },
+  {
+   "title": "Усадьба в Филимонках — Moskvich Mag",
+   "url": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/"
+  },
+  {
+   "title": "Солнцево — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/solntsevo/"
+  },
+  {
+   "title": "Как Солнцево получило название — АиФ",
+   "url": "https://aif.ru/my_area/solntsevo/v_etot_den_bylo_solnechno_kak_rayon_solncevo_poluchil_svoyo_nazvanie"
+  },
+  {
+   "title": "Мещерские пруды — РИАМО",
+   "url": "https://riamo.ru/news/obschestvo/v-moskve-blagoustroyat-territoriyu-vokrug-mescherskih-prudov-xl/"
+  },
+  {
+   "title": "История Одинцова — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/odintsovo/istoriia"
+  },
+  {
+   "title": "Одинцово — 101hotels",
+   "url": "https://101hotels.com/recreation/russia/odintcovo/history"
+  },
+  {
+   "title": "Достопримечательности Одинцова — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/odintsovo/"
+  },
+  {
+   "title": "Гребневский храм — Азбука паломника",
+   "url": "https://azbyka.ru/palomnik/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9E%D0%B4%D0%B8%D0%BD%D1%86%D0%BE%D0%B2%D0%BE)"
+  },
+  {
+   "title": "Urban Morphogenesis — «Российская газета»",
+   "url": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html"
+  },
+  {
+   "title": "Одинцовская кондитерская фабрика — Retail.ru",
+   "url": "https://www.retail.ru/news/mars-prekratil-vypusk-shokoladnykh-plitok-brendov-dove-i-korkunov-25-iyulya-2025-267201/"
+  },
+  {
+   "title": "Немчиновка и Малевич — КП",
+   "url": "https://www.kp.ru/daily/26307.4/3185386/"
+  },
+  {
+   "title": "Малевич — Новая газета",
+   "url": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda"
+  },
+  {
+   "title": "Стародачная Немчиновка — Мир квартир",
+   "url": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -246,48 +704,64 @@
      55.601856
     ],
     [
-     37.288783,
-     55.602277
+     37.34,
+     55.594856
     ],
     [
-     37.29082,
-     55.603428
+     37.355,
+     55.596856
     ],
     [
-     37.324824,
-     55.636428
+     37.357783,
+     55.597277
     ],
     [
-     37.32557,
-     55.638
+     37.35982,
+     55.598428
     ],
     [
-     37.324824,
-     55.639572
+     37.410826,
+     55.653428
     ],
     [
-     37.322785,
-     55.640723
+     37.411573,
+     55.655
     ],
     [
-     37.32,
-     55.641144
+     37.410826,
+     55.656572
     ],
     [
-     37.317215,
-     55.640723
+     37.375333,
+     55.715072
     ],
     [
-     37.297215,
-     55.632723
+     37.361835,
+     55.724572
     ],
     [
-     37.295177,
-     55.631572
+     37.359791,
+     55.725723
     ],
     [
-     37.28118,
-     55.606572
+     37.357,
+     55.726144
+    ],
+    [
+     37.354209,
+     55.725723
+    ],
+    [
+     37.352165,
+     55.724572
+    ],
+    [
+     37.30017,
+     55.688572
+    ],
+    [
+     37.299423,
+     55.687
     ],
     [
      37.280434,

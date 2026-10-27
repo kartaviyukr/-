@@ -13,7 +13,8 @@
   "Бутово — место, куда едут не за видами, а за памятью. Бутовский полигон у деревни Дрожжино — один из крупнейших мест массовых расстрелов и захоронений 1930-х годов.",
   "В 1935 году на месте бывшего имения коннозаводчика И. И. Зимина устроили стрелковый полигон НКВД. С августа 1937 по октябрь 1938 года здесь расстреляли и похоронили около 20,8 тысячи человек; имена 20 765 из них установлены.",
   "Вторая часть маршрута — усадьба Знаменское-Садки на краю Битцевского леса, у которой долгая дворянская история.",
-  "Маршрут спокойный: станция, мемориал и усадьба. Ведите себя тихо и уважительно."
+  "Сначала — свои места: «Бутовский полигон», «Усадьба Знаменское-Садки». Дальше маршрут идёт по соседним местам: Коммунарка — «Новый район», «Мемориал «Коммунарка»»; Валуево — «Парк и пруды»; Московский — «Центр Московского», «Институт Чумакова»; Внуково — «История аэродрома», «Аэропорт Внуково».",
+  "Маршрут линейный, около 44 км и 9 точек. Финиш — Станция «Внуково» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Бутово»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Курского направления / МЦД-2"
  },
  "endPoint": {
-  "name": "Станция «Битца» или метро «Битцевский парк»",
+  "name": "Станция «Внуково»",
   "coords": {
-   "lat": 55.585,
-   "lon": 37.555
+   "lat": 55.638,
+   "lon": 37.32
   },
-  "transport": "Метро и МЦД-2 — уточняйте"
+  "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 9.0,
-  "durationH": 3.0,
-  "difficulty": "лёгкий",
+  "distanceKm": 44.0,
+  "durationH": 6.0,
+  "difficulty": "средний",
   "shape": "линейный",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -93,55 +94,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "butovo-poligon-znamenskoe-sadki-pamyat",
-   "name": "День памяти",
-   "coords": {
-    "lat": 55.538,
-    "lon": 37.583
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Церковь отмечает День памяти новомучеников, в Бутове пострадавших, в четвёртую субботу после Пасхи.",
-    "30 октября проходит акция «Голос памяти»: люди по очереди читают вслух имена погибших. Если ваш маршрут выпал на эти дни, можно присоединиться.",
-    "От полигона едем на север, к Битцевскому лесу и усадьбе Знаменское-Садки. Следующая точка маршрута — «Усадьба Знаменское-Садки»."
-   ],
-   "facts": [
-    {
-     "text": "День памяти отмечается в четвёртую субботу после Пасхи.",
-     "sourceUrl": "https://azbyka.ru/days/sv-sobor-novomuchenikov-v-butove-postradavshih",
-     "verified": true
-    },
-    {
-     "text": "30 октября проходит акция с чтением имён жертв.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": false
-    },
-    {
-     "text": "Источники расходятся, относить ли полигон к Москве или Ленинскому округу.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": false
-    },
-    {
-     "text": "Полигон использовали для захоронений до начала 1950-х.",
-     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%83%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%BB%D0%B8%D0%B3%D0%BE%D0%BD",
-     "verified": false
-    },
-    {
-     "text": "Раскопки начались в 1997 году.",
-     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%83%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%BB%D0%B8%D0%B3%D0%BE%D0%BD",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "butovo-poligon-znamenskoe-sadki-sadki",
@@ -154,8 +108,7 @@
    "visitMinutes": 25,
    "guideStory": [
     "На месте усадьбы раньше была деревня Садки; жители ловили рыбу в речке Обитце. В начале XVII века землями владели Ладыженские, потом Урусовы, а с середины XVIII века — князья Трубецкие.",
-    "По справочнику, в имении Трубецких бывали Екатерина II и Пушкин, хозяйничали наполеоновские войска, а позже Катковы устроили здесь суконное производство. Эти сведения мы видели в одном источнике.",
-    "Часть территории передали природно-историческому парку «Битцевский лес», о чём спорили в арбитражном суде. Смотрим снаружи и едем к станции."
+    "По справочнику, в имении Трубецких бывали Екатерина II и Пушкин, хозяйничали наполеоновские войска, а позже Катковы устроили здесь суконное производство. Эти сведения мы видели в одном источнике."
    ],
    "facts": [
     {
@@ -189,8 +142,345 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki-rayon",
+   "name": "Новый район",
+   "coords": {
+    "lat": 55.57,
+    "lon": 37.475
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В XVII веке на этой земле уже были сёла Саврасово и Поповка. После Великой Отечественной войны территория вошла в Никольско-Хованский сельсовет.",
+    "Совхоз «Николо-Хованское» стал частью совхоза «Коммунарка», от которого и пошло название. В 2012 году эти места вошли в состав Москвы."
+   ],
+   "facts": [
+    {
+     "text": "В XVII веке существовали сёла Саврасово и Поповка.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "verified": true
+    },
+    {
+     "text": "После войны территория вошла в Никольско-Хованский сельсовет.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "verified": true
+    },
+    {
+     "text": "Совхоз «Николо-Хованское» стал частью совхоза «Коммунарка».",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "verified": true
+    },
+    {
+     "text": "В 2012 году территория вошла в состав Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "verified": true
+    },
+    {
+     "text": "Координаты остановки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki-memorial",
+   "name": "Мемориал «Коммунарка»",
+   "coords": {
+    "lat": 55.56,
+    "lon": 37.462
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "В конце 1920-х в глухом лесу у совхоза, на берегу Ордынки, построили дачу заместителя председателя ОГПУ, затем наркома НКВД Генриха Ягоды. В 1937 году его арестовали, в 1938-м расстреляли.",
+    "После ареста Ягоды дачу передали НКВД. С 1937 года сюда по ночам привозили тела расстрелянных из Лубянской, Лефортовской, Бутырской и Сухановской тюрем. Территорию около 20 гектаров обнесли забором с колючей проволокой.",
+    "Поиски захоронений начались в годы перестройки; археологи находят новые расстрельные ямы. Это место скорби: тишина и уважение."
+   ],
+   "facts": [
+    {
+     "text": "Дача Ягоды построена в конце 1920-х в лесу у совхоза «Коммунарка», на речке Ордынке.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
+     "verified": true
+    },
+    {
+     "text": "Ягода арестован в марте 1937 года и расстрелян в марте 1938 года.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
+     "verified": true
+    },
+    {
+     "text": "После ареста Ягоды дачу передали НКВД.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
+     "verified": true
+    },
+    {
+     "text": "Сюда привозили тела расстрелянных из нескольких московских тюрем.",
+     "sourceUrl": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/",
+     "verified": true
+    },
+    {
+     "text": "Территория около 20 га была обнесена забором.",
+     "sourceUrl": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/",
+     "verified": true
+    },
+    {
+     "text": "Археологи обнаружили новые расстрельные ямы.",
+     "sourceUrl": "https://theins.ru/news/242047",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Мемориальное место: тишина и уважение. Часы доступа уточняйте."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki-park",
+   "name": "Парк и пруды",
+   "coords": {
+    "lat": 55.579,
+    "lon": 37.392
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Вокруг дома — усадебный парк с прудами, где удобно сделать привал и посидеть у воды.",
+    "Экскурсии в Валуево часто объединяют с романо-готическими постройками соседних Филимонок.",
+    "Не спеша обходим парк вокруг прудов и возвращаемся к остановке автобуса."
+   ],
+   "facts": [
+    {
+     "text": "Экскурсии объединяют Валуево с романо-готикой в Филимонках.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/93731-usadba-valuevo-romano-gotika-v-filimonkah",
+     "verified": true
+    },
+    {
+     "text": "Описание парка и прудов — по туристическим источникам.",
+     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
+     "verified": false
+    },
+    {
+     "text": "Валуево — в Новой Москве.",
+     "sourceUrl": "https://moskvichmag.ru/gorod/dom-nedeli-usadba-valuevo-v-novoj-moskve/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точек приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
+     "verified": false
+    },
+    {
+     "text": "Усадьба — объект наследия федерального значения.",
+     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki-tsentr",
+   "name": "Центр Московского",
+   "coords": {
+    "lat": 55.6,
+    "lon": 37.355
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Посёлок Московский начал развиваться в 1955 году вокруг научно-производственного комплекса института.",
+    "С 2012 года Московский — часть Москвы в Новомосковском округе. Историю его городского статуса мы в источниках не нашли и не придумываем."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок Московский начал развиваться в 1955 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Развитие связано с институтом полиомиелита.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Дата получения статуса города нами не проверена.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Новая Москва присоединена 1 июля 2012 года.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/filimonki/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki-chumakov",
+   "name": "Институт Чумакова",
+   "coords": {
+    "lat": 55.598,
+    "lon": 37.34
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1955 году здесь открыли комплекс Института полиомиелита и вирусных энцефалитов. Руководил им академик Михаил Чумаков.",
+    "Сегодня институт носит имя Чумакова. Территория закрыта — смотрим снаружи.",
+    "Дальше по дороге едем на юг, к посёлку Филимонки и сгоревшей усадьбе."
+   ],
+   "facts": [
+    {
+     "text": "В 1955 году открыт комплекс Института полиомиелита и вирусных энцефалитов.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Руководил институтом академик Михаил Чумаков.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    },
+    {
+     "text": "Территория института закрыта.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Институт носит имя Чумакова.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": false
+    },
+    {
+     "text": "Это научно-производственный комплекс.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Режимная территория."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki-istoriya",
+   "name": "История аэродрома",
+   "coords": {
+    "lat": 55.615,
+    "lon": 37.295
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1937 году правительство утвердило план нового аэродрома, чтобы разгрузить московский авиаузел. Работы начались в 1938 году, первую очередь приняли в 1941-м.",
+    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года."
+   ],
+   "facts": [
+    {
+     "text": "План аэродрома утверждён в 1937 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Работы начаты в 1938 году, первая очередь принята в 1941 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Открытие планировали на 18 августа 1941 года.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Аэропорт открыт досрочно, 2 июля 1941 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Внукову исполнилось 80 лет в 2021 году.",
+     "sourceUrl": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "butovo-poligon-znamenskoe-sadki-aeroport",
+   "name": "Аэропорт Внуково",
+   "coords": {
+    "lat": 55.605,
+    "lon": 37.286
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В сентябре 1945 года решили перевести Центральный московский аэропорт с Ходынского поля во Внуково, и он стал главной гражданской авиагаванью столицы.",
+    "Сегодня Внуково — старейший действующий аэропорт Москвы. Зона аэропорта охраняется; с велосипедом в терминал не заходят."
+   ],
+   "facts": [
+    {
+     "text": "В сентябре 1945 года Центральный аэропорт перевели с Ходынского поля во Внуково.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Внуково — старейший действующий аэропорт Москвы.",
+     "sourceUrl": "https://news.mail.ru/card/1549/",
+     "verified": true
+    },
+    {
+     "text": "Велосипед в терминал не заносят — правило составителя.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": false
+    },
+    {
+     "text": "Внуково называют главной гражданской авиагаванью послевоенной Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Аэропорт описан в карточке Mail.ru.",
+     "sourceUrl": "https://news.mail.ru/card/1549/",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Охраняемая зона аэропорта."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 90
   }
  ],
  "dish": {
@@ -229,32 +519,73 @@
   {
    "title": "Знаменское-Садки — КП",
    "url": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/"
+  },
+  {
+   "title": "Котлован — Новая газета",
+   "url": "https://novayagazeta.ru/articles/2021/07/25/kotlovan"
+  },
+  {
+   "title": "Расстрельные полигоны — Рамблер",
+   "url": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/"
+  },
+  {
+   "title": "Коммунарка — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/kommunarka/"
+  },
+  {
+   "title": "Усадьба Валуево — tonkosti.ru",
+   "url": "https://tonkosti.ru/Усадьба_Валуево"
+  },
+  {
+   "title": "Дом недели: Валуево — Moskvich Mag",
+   "url": "https://moskvichmag.ru/gorod/dom-nedeli-usadba-valuevo-v-novoj-moskve/"
+  },
+  {
+   "title": "Московский — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/moskovskij/"
+  },
+  {
+   "title": "Филимонковское — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/filimonkovskoe/"
+  },
+  {
+   "title": "Усадьба в Филимонках — Moskvich Mag",
+   "url": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/"
+  },
+  {
+   "title": "Внуково — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/vnukovo/"
+  },
+  {
+   "title": "История Внукова — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia"
+  },
+  {
+   "title": "Внукову 80 лет — Вокруг света",
+   "url": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.549437,
-     55.585
+     37.280434,
+     55.605
     ],
     [
-     37.550182,
-     55.583428
+     37.28118,
+     55.603428
     ],
     [
-     37.555184,
-     55.573428
+     37.283217,
+     55.602277
     ],
     [
-     37.578188,
-     55.536428
-    ],
-    [
-     37.580222,
-     55.535277
+     37.45922,
+     55.557277
     ],
     [
      37.582222,
@@ -281,28 +612,44 @@
      55.538572
     ],
     [
-     37.559818,
-     55.586572
+     37.582813,
+     55.549572
     ],
     [
-     37.557781,
-     55.587723
+     37.564816,
+     55.576572
     ],
     [
-     37.555,
-     55.588144
+     37.562781,
+     55.577723
     ],
     [
-     37.552219,
-     55.587723
+     37.322785,
+     55.640723
     ],
     [
-     37.550182,
-     55.586572
+     37.32,
+     55.641144
     ],
     [
-     37.549437,
-     55.585
+     37.317215,
+     55.640723
+    ],
+    [
+     37.315176,
+     55.639572
+    ],
+    [
+     37.290179,
+     55.616572
+    ],
+    [
+     37.28118,
+     55.606572
+    ],
+    [
+     37.280434,
+     55.605
     ]
    ]
   ]

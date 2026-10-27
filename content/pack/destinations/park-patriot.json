@@ -12,7 +12,8 @@
  "intro": [
   "Парк «Патриот» — военно-патриотический парк на 43-м километре Минского шоссе в Одинцовском округе. Он открыт в 2015 году и постепенно объединил несколько музейных объектов.",
   "Главные точки — Главный храм Вооружённых сил с музейным комплексом «Дорога памяти» и танковый музей (Технический центр) — одно из крупнейших собраний бронетехники, разделённое на семь павильонов.",
-  "Маршрут: станция Кубинка, дорога к парку, храм и танковый музей. Режим работы уточняйте перед поездкой."
+  "Сначала — свои места: «Главный храм Вооружённых сил», «Танковый музей». Дальше маршрут идёт по соседним местам: Калининец — «Тарасково»; Селятино — «Посёлок «Гидромонтажа»»; Апрелевка — «Музей истории завода»; Лесной Городок — «Лесная петля»; Внуково — «Посёлок Внуково», «История аэродрома».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Внуково» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Кубинка-1»",
@@ -23,21 +24,21 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Кубинка-1»",
+  "name": "Станция «Внуково»",
   "coords": {
-   "lat": 55.5772,
-   "lon": 36.6955
+   "lat": 55.638,
+   "lon": 37.32
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 28.0,
-  "durationH": 5.0,
-  "difficulty": "средний",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 70.0,
+  "durationH": 8.7,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,7 +54,7 @@
    "guideStory": [
     "Главный храм Вооружённых сил — одна из ключевых точек парка. Рядом — музейный комплекс «Дорога памяти».",
     "Дату освящения храма мы в найденных источниках не сверили и поэтому не приводим.",
-    "Билеты в музейный комплекс и режим посещения храма уточняйте на официальном сайте парка. Следующая точка маршрута — «Танковый музей». Формат остановки — «заходим внутрь», заложите на неё около 60 минут."
+    "Билеты в музейный комплекс и режим посещения храма уточняйте на официальном сайте парка."
    ],
    "facts": [
     {
@@ -86,8 +87,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "park-patriot-tanki",
@@ -134,57 +135,288 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
-   "id": "park-patriot-doroga",
-   "name": "Дорога вдоль Минского шоссе",
+   "id": "park-patriot-taraskovo",
+   "name": "Тарасково",
    "coords": {
-    "lat": 55.57,
-    "lon": 36.75
+    "lat": 55.49,
+    "lon": 36.9
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
+    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок «Гидромонтажа»»."
+   ],
+   "facts": [
+    {
+     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Посёлок связан с военным городком.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец находится недалеко от станции Голицыно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "park-patriot-gidromontazh",
+   "name": "Посёлок «Гидромонтажа»",
+   "coords": {
+    "lat": 55.515,
+    "lon": 36.975
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
+    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
+   ],
+   "facts": [
+    {
+     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Посёлок отмечал 66-й день рождения.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Подробности о работе треста не найдены.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Селятино находится в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "park-patriot-muzey",
+   "name": "Музей истории завода",
+   "coords": {
+    "lat": 55.548,
+    "lon": 37.072
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "В Апрелевке работает частный музей истории завода грампластинок; его организовал предприниматель Борис Чухонцев.",
+    "Музей принимает гостей, в том числе делегации; программы музея анонсирует Культура.РФ.",
+    "Часы работы и возможность экскурсии уточняйте заранее. Следующая точка маршрута — «Лесная петля»."
+   ],
+   "facts": [
+    {
+     "text": "Частный музей истории завода организовал Борис Чухонцев.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Музей принимает делегации.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": true
+    },
+    {
+     "text": "Программы музея анонсирует Культура.РФ.",
+     "sourceUrl": "https://www.culture.ru/events/6203287/programma-aprelevskii-zavod-grammplastinok",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "park-patriot-les",
+   "name": "Лесная петля",
+   "coords": {
+    "lat": 55.638,
+    "lon": 37.22
    },
    "kind": "проезжаем",
    "visitMinutes": 20,
    "guideStory": [
-    "От Кубинки до парка — около 14 км в одну сторону. Минское шоссе — скоростная трасса; выбирайте параллельные дороги и не выезжайте на проезжую часть.",
-    "Кубинка известна своим аэродромом и военной историей; описание окрестностей есть на travelto.ru.",
-    "Обратно к станции Кубинка-1 едем той же дорогой. Финиш — Станция «Кубинка-1»: Электрички Белорусского направления."
+    "Название посёлка говорит само за себя: вокруг лес. Пройдёмся по лесной петле и вернёмся к станции.",
+    "Конкретные лесные тропы мы на месте не проверяли — держитесь накатанных дорожек и не заезжайте в болотистые места. Следующая точка маршрута — «Посёлок Внуково»."
    ],
    "facts": [
     {
-     "text": "Минское шоссе — скоростная трасса.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
+     "text": "Вокруг посёлка — лес.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
      "verified": false
     },
     {
-     "text": "Расстояние от Кубинки оценено приблизительно.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
+     "text": "Тропы на месте не проверены.",
+     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
      "verified": false
     },
     {
-     "text": "Кубинка описана на travelto.ru.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "Станция находится в Одинцовском округе.",
+     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
      "verified": true
     },
     {
-     "text": "До парка можно добраться от станции Кубинка.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
+     "text": "Рядом с посёлком строятся новые кварталы.",
+     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_lesnoy_gorodok",
      "verified": true
     },
     {
-     "text": "Координаты дороги приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
+     "text": "Координаты петли приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
      "verified": false
     }
    ],
-   "warnings": [
-    "Не выезжать на Минское шоссе."
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "park-patriot-posyolok",
+   "name": "Посёлок Внуково",
+   "coords": {
+    "lat": 55.63,
+    "lon": 37.3
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Посёлок строили одновременно с аэропортом — для рабочих и лётчиков. В 1947 году Внуково преобразовали в рабочий посёлок.",
+    "Известных дачников Внукова в найденных источниках мы не нашли, поэтому о них не рассказываем. Следующая точка маршрута — «История аэродрома»."
+   ],
+   "facts": [
+    {
+     "text": "Посёлок строили для рабочих и лётчиков одновременно с аэропортом.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "В 1947 году Внуково стало рабочим посёлком.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Сведения об известных дачниках не найдены.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": false
+    },
+    {
+     "text": "Внуково — район Москвы.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": false
+    }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 30,
-   "coordsVerified": false
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "park-patriot-istoriya",
+   "name": "История аэродрома",
+   "coords": {
+    "lat": 55.615,
+    "lon": 37.295
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1937 году правительство утвердило план нового аэродрома, чтобы разгрузить московский авиаузел. Работы начались в 1938 году, первую очередь приняли в 1941-м.",
+    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года."
+   ],
+   "facts": [
+    {
+     "text": "План аэродрома утверждён в 1937 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Работы начаты в 1938 году, первая очередь принята в 1941 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Открытие планировали на 18 августа 1941 года.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
+     "verified": true
+    },
+    {
+     "text": "Аэропорт открыт досрочно, 2 июля 1941 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Внукову исполнилось 80 лет в 2021 году.",
+     "sourceUrl": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -219,9 +451,58 @@
   {
    "title": "Парк «Патриот» — Яндекс Путешествия",
    "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
+  },
+  {
+   "title": "Kalininets — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kalininets"
+  },
+  {
+   "title": "Tamanskaya Division — Military Wiki",
+   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
+  },
+  {
+   "title": "Selyatino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Selyatino"
+  },
+  {
+   "title": "Селятино 66 лет — Рамблер",
+   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
+  },
+  {
+   "title": "Апрелевский завод грампластинок — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
+  },
+  {
+   "title": "Апрелевский завод — БРЭ",
+   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
+  },
+  {
+   "title": "Апрелевка — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
+  },
+  {
+   "title": "Lesnoy Gorodok — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok"
+  },
+  {
+   "title": "МЦД Лесной Городок — РИАМО",
+   "url": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/"
+  },
+  {
+   "title": "Внуково — mos.ru",
+   "url": "https://www.mos.ru/moi-raion/vnukovo/"
+  },
+  {
+   "title": "История Внукова — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia"
+  },
+  {
+   "title": "Внукову 80 лет — Вокруг света",
+   "url": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -239,48 +520,52 @@
      55.574277
     ],
     [
+     36.897225,
+     55.487277
+    ],
+    [
+     36.9,
+     55.486856
+    ],
+    [
+     36.902775,
+     55.487277
+    ],
+    [
+     37.297784,
+     55.612277
+    ],
+    [
+     37.299821,
+     55.613428
+    ],
+    [
+     37.324824,
+     55.636428
+    ],
+    [
+     37.32557,
+     55.638
+    ],
+    [
+     37.324824,
+     55.639572
+    ],
+    [
+     37.322785,
+     55.640723
+    ],
+    [
+     37.32,
+     55.641144
+    ],
+    [
+     37.22,
+     55.641144
+    ],
+    [
      36.695,
-     55.573856
-    ],
-    [
-     36.825,
-     55.556856
-    ],
-    [
-     36.82778,
-     55.557277
-    ],
-    [
-     36.829815,
-     55.558428
-    ],
-    [
-     36.830559,
-     55.56
-    ],
-    [
-     36.829815,
-     55.561572
-    ],
-    [
-     36.824815,
-     55.566572
-    ],
-    [
-     36.82278,
-     55.567723
-    ],
-    [
-     36.82,
-     55.568144
-    ],
-    [
-     36.6955,
-     55.580344
-    ],
-    [
-     36.692719,
-     55.579923
+     55.580144
     ],
     [
      36.692219,

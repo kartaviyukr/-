@@ -13,7 +13,8 @@
   "Апрелевка — город грампластинок в 28 км к юго-западу от Москвы. Основана в 1899 году, город — с 1961-го. По одной версии, название не связано с апрелем: местный ручей назывался Прелым.",
   "В 1910 году прусский подданный Б. Молль с немецкими специалистами А. Кибартом и А. Фогтом основал здесь завод грампластинок; первые диски вышли в декабре 1910 года, а в 1911-м — около 400 тысяч дисков «Метрополь-рекорд».",
   "С 1930-х годов это крупнейший производитель грампластинок в СССР, с 1964 года — в составе «Мелодии». Производство прекратили в 1995 году (по другим данным — в 2002-м). Сегодня работает частный музей истории завода.",
-  "Маршрут короткий: станция, корпуса завода и частный музей его истории."
+  "Сначала — свои места: «Завод грампластинок», «Музей истории завода», «Город и ручей Прелый». Дальше маршрут идёт по соседним местам: Селятино — «Институт Данилевского»; Калининец — «Тарасково», «Посёлок»; Парк «Патриот» — «Танковый музей»; Кубинка — «Вокзал Кубинка-1».",
+  "Маршрут линейный, около 51 км и 8 точек. Финиш — Станция «Кубинка-1» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Апрелевка»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "endPoint": {
-  "name": "Станция «Апрелевка»",
+  "name": "Станция «Кубинка-1»",
   "coords": {
-   "lat": 55.5452,
-   "lon": 37.0735
+   "lat": 55.577,
+   "lon": 36.695
   },
-  "transport": "Электрички Киевского направления / МЦД-4"
+  "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 5.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 51.0,
+  "durationH": 6.3,
+  "difficulty": "средний",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -86,8 +87,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "aprelevka-muzey",
@@ -134,8 +135,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "aprelevka-gorod",
@@ -148,8 +149,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
-    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки.",
-    "Возвращаемся к станции. Финиш — Станция «Апрелевка»: Электрички Киевского направления / МЦД-4."
+    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Следующая точка маршрута — «Институт Данилевского»."
    ],
    "facts": [
     {
@@ -181,8 +181,242 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "aprelevka-institut",
+   "name": "Институт Данилевского",
+   "coords": {
+    "lat": 55.516,
+    "lon": 36.982
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В Селятине расположен Институт русско-славянских исследований имени Н. Я. Данилевского — философа и естествоиспытателя XIX века, автора книги «Россия и Европа».",
+    "У городского поселения Селятино есть флаг, составленный на основе его герба."
+   ],
+   "facts": [
+    {
+     "text": "В Селятине расположен Институт русско-славянских исследований имени Данилевского.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Данилевский — автор книги «Россия и Европа».",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Флаг Селятина составлен на основе герба.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Координаты института приблизительные.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Селятино — посёлок на Киевском направлении.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "aprelevka-taraskovo",
+   "name": "Тарасково",
+   "coords": {
+    "lat": 55.49,
+    "lon": 36.9
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
+    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок»."
+   ],
+   "facts": [
+    {
+     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Посёлок связан с военным городком.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец находится недалеко от станции Голицыно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "aprelevka-posyolok",
+   "name": "Посёлок",
+   "coords": {
+    "lat": 55.471,
+    "lon": 36.881
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Калининец — посёлок, где живут семьи военнослужащих. Здесь есть остановки автобусов на Голицыно и Селятино.",
+    "Больше подробностей мы в открытых источниках не нашли. Маршрут заканчивается здесь.",
+    "Обратно — автобусом или своим ходом к Селятину. Следующая точка маршрута — «Танковый музей»."
+   ],
+   "facts": [
+    {
+     "text": "Автобусы ходят из Калининца в Голицыно и Селятино.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Состав жителей — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "История посёлка в источниках не раскрыта.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец — в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "aprelevka-tanki",
+   "name": "Танковый музей",
+   "coords": {
+    "lat": 55.56,
+    "lon": 36.825
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "Танковый музей (Технический центр) — одно из крупнейших собраний бронетехники. Музей разделён на семь павильонов: справа от аллеи — зарубежная техника, слева — российская.",
+    "В проекте парка предусматривались также интерактивный музей с симуляторами управления и музеи ВКС, ВДВ и ВМФ.",
+    "Музей платный; по туристическим данным, парк работает со вторника по воскресенье — проверьте перед поездкой."
+   ],
+   "facts": [
+    {
+     "text": "Танковый музей разделён на семь павильонов.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": true
+    },
+    {
+     "text": "Справа от аллеи — зарубежная техника, слева — российская.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": true
+    },
+    {
+     "text": "Проект парка включал интерактивный музей бронетехники с симуляторами.",
+     "sourceUrl": "https://realty.rbc.ru/news/577d215f9a7947a78ce913ad",
+     "verified": true
+    },
+    {
+     "text": "Парк работает вт–вс — по туристическому сайту.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "aprelevka-vokzal",
+   "name": "Вокзал Кубинка-1",
+   "coords": {
+    "lat": 55.577,
+    "lon": 36.695
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В южной части города стоит здание вокзала у станции Кубинка-1. Историю станции мы в найденных источниках не нашли.",
+    "Кубинка — примерно в 60 км к западу от центра Москвы. Финиш — Станция «Кубинка-1»: Электрички Белорусского направления."
+   ],
+   "facts": [
+    {
+     "text": "У станции Кубинка-1 есть здание вокзала.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": true
+    },
+    {
+     "text": "Кубинка — примерно в 60 км к западу от центра Москвы.",
+     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "verified": true
+    },
+    {
+     "text": "История станции не найдена.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": false
+    },
+    {
+     "text": "Кубинка описана на travelto.ru.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -221,36 +455,69 @@
   {
    "title": "Апрелевка — Знание",
    "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
+  },
+  {
+   "title": "Selyatino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Selyatino"
+  },
+  {
+   "title": "Селятино 66 лет — Рамблер",
+   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
+  },
+  {
+   "title": "Kalininets — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kalininets"
+  },
+  {
+   "title": "Tamanskaya Division — Military Wiki",
+   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
+  },
+  {
+   "title": "Парк «Патриот» — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
+  },
+  {
+   "title": "Парк «Патриот» — Яндекс Путешествия",
+   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
+  },
+  {
+   "title": "Авиабаза Кубинка — migflug",
+   "url": "https://migflug.com/ru/авиабазы/кубинка/"
+  },
+  {
+   "title": "Kubinka air base — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.064442,
-     55.55
+     36.689438,
+     55.577
     ],
     [
-     37.065187,
-     55.548428
+     36.690183,
+     55.575428
     ],
     [
-     37.068187,
-     55.543428
+     36.876196,
+     55.469428
     ],
     [
-     37.070221,
-     55.542277
+     36.878227,
+     55.468277
     ],
     [
-     37.073,
-     55.541856
+     36.881,
+     55.467856
     ],
     [
-     37.075,
-     55.541856
+     36.883773,
+     55.468277
     ],
     [
      37.077779,
@@ -281,16 +548,20 @@
      55.553144
     ],
     [
-     37.067221,
-     55.552723
+     36.695,
+     55.580144
     ],
     [
-     37.065187,
-     55.551572
+     36.692219,
+     55.579723
     ],
     [
-     37.064442,
-     55.55
+     36.690183,
+     55.578572
+    ],
+    [
+     36.689438,
+     55.577
     ]
    ]
   ]
