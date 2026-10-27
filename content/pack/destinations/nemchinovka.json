@@ -13,8 +13,8 @@
   "Немчиновка — старый дачный посёлок у западной границы Москвы, известный с 1870-х годов. Здесь жили Казимир Малевич, Фёдор Шехтель и Сергей Эйзенштейн.",
   "Малевич любил Немчиновку настолько, что завещал похоронить себя под любимым дубом. 21 мая 1935 года урну с его прахом опустили в землю, а над могилой поставили деревянный куб с чёрным квадратом работы ученика Николая Суетина.",
   "Во время войны могилу разрушили, поле распахали, и место надолго потерялось. Энтузиасты во главе с внучатым племянником художника нашли его с помощью геодезии и георадаров; в Ромашкове установили закладную плиту — мраморный чёрный квадрат.",
-  "Свои места маршрута: «Улицы старых дач», «Место захоронения Малевича». По пути маршрут заходит и к соседям: Одинцово — «Новая Трёхгорка: муралы Urban Morphogenesis», «Арка «Старая Смоленская дорога»»; Переделкино — «Дом-музей Чуковского»; Внуково — «Посёлок Внуково», «История аэродрома»; Лесной Городок — «Лесная петля»; Московский — «Институт Чумакова».",
-  "Маршрут линейный, около 51 км и 9 точек. Финиш — Метро «Филатов Луг» (Сокольническая линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Немчиновка», «Памятный «Чёрный квадрат»», «Место захоронения Малевича», «Улицы старых дач». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Платформа «Немчиновка» (Электрички Белорусского направления / МЦД-1). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Платформа «Немчиновка»",
@@ -25,69 +25,105 @@
   "transport": "Электрички Белорусского направления / МЦД-1"
  },
  "endPoint": {
-  "name": "Метро «Филатов Луг»",
+  "name": "Платформа «Немчиновка»",
   "coords": {
-   "lat": 55.601,
-   "lon": 37.408
+   "lat": 55.7135,
+   "lon": 37.3705
   },
-  "transport": "Сокольническая линия"
+  "transport": "Электрички Белорусского направления / МЦД-1"
  },
  "route": {
-  "distanceKm": 51.0,
-  "durationH": 6.5,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 4.2,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "nemchinovka-dachi",
-   "name": "Улицы старых дач",
+   "id": "nemchinovka-stantsiya",
+   "name": "Станция Немчиновка",
    "coords": {
-    "lat": 55.717,
-    "lon": 37.365
+    "lat": 55.713,
+    "lon": 37.37
    },
    "kind": "проезжаем",
-   "visitMinutes": 20,
+   "visitMinutes": 5,
    "guideStory": [
-    "Немчиновка — редкий пример сохранившейся дачной застройки у самой Москвы: деревянные дома, заборы, сосны.",
-    "Здесь Малевич провёл годы жизни и работы; посёлок вдохновлял и других художников. Какая именно дача была его, мы по источникам не проверяли, поэтому только проезжаем по улицам."
+    "Немчиновка известна с 1870-х годов и выросла как дачный посёлок у железной дороги.",
+    "Дачи здесь ценили художники и архитекторы: в посёлке жили Малевич, Шехтель и Эйзенштейн. Немчиновка стала одним из тех подмосковных посёлков, где летом собиралась творческая Москва."
    ],
    "facts": [
     {
-     "text": "Жизнь в стародачной Немчиновке и цены на дома описывает журнал «Мир квартир».",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
-     "verified": true
-    },
-    {
-     "text": "Немчиновка знаменита прежде всего тем, что здесь жил Малевич.",
+     "text": "Немчиновка известна с 1870-х годов.",
      "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
      "verified": true
     },
     {
-     "text": "Конкретный адрес дачи Малевича в найденных источниках не указан.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
-     "verified": false
-    },
-    {
-     "text": "В посёлке жил архитектор Фёдор Шехтель.",
+     "text": "В Немчиновке жили Малевич, Шехтель и Эйзенштейн.",
      "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
      "verified": true
     },
     {
-     "text": "В посёлке жил режиссёр Сергей Эйзенштейн.",
+     "text": "Посёлок называют «стародачным».",
      "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    },
+    {
+     "text": "Немчиновка относится к Одинцовскому округу.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": true
+    },
+    {
+     "text": "Год открытия платформы в найденных источниках не указан.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "nemchinovka-chernyy-kvadrat",
+   "name": "Памятный «Чёрный квадрат»",
+   "coords": {
+    "lat": 55.713,
+    "lon": 37.36
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Казимира Малевича в 1935 году похоронили под дубом в Немчиновке. Точное место со временем утратили, а позже рядом построили жилой комплекс.",
+    "В 2015 году примерно в 60 метрах от прежнего места положили закладную плиту будущего памятника — мраморный чёрный квадрат тех же размеров, что и картина в Третьяковке."
+   ],
+   "facts": [
+    {
+     "text": "В 1935 году Малевича похоронили под дубом на его даче в Немчиновке.",
+     "sourceUrl": "https://www.theartnewspaper.com/2001/10/01/moscow-property-development-threatens-site-of-malevich-grave",
+     "verified": true
+    },
+    {
+     "text": "В 2015 году установили мраморный чёрный квадрат в размер картины.",
+     "sourceUrl": "https://novayagazeta.ru/articles/2015/12/01/66617-kazimir-malevich-sensatsii-2015-goda",
+     "verified": true
+    },
+    {
+     "text": "Министерство культуры области обещало сделать место доступным для посещения.",
+     "sourceUrl": "https://riamo.ru/articles/lyudi/rozhnov-mesto-zahoroneniya-malevicha-budet-dostupno-dlya-vseh-zhelayuschih-xl/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "nemchinovka-malevich",
@@ -139,355 +175,54 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "nemchinovka-trehgorka",
-   "name": "Новая Трёхгорка: муралы Urban Morphogenesis",
+   "id": "nemchinovka-dachi",
+   "name": "Улицы старых дач",
    "coords": {
-    "lat": 55.6905,
-    "lon": 37.32
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 40,
-   "daylightOnly": true,
-   "openingHoursNote": "Жилой квартал — смотрим с улиц.",
-   "bikeParkingNote": "Двигаемся по дворовым проездам шагом.",
-   "guideStory": [
-    "Новая Трёхгорка — обычный спальный район, который в 2019 году стал, по заявлению организаторов, крупнейшим в мире музеем граффити под открытым небом. Фестиваль Urban Morphogenesis собрал больше 80 художников из 26 стран, и они расписали 52 фасада домов, школ и технических зданий — больше 38 тысяч квадратных метров.",
-    "Ищите 65-метровый портрет Юрия Гагарина работы итальянского художника Jorit и мурал Бреро Весоды — его в 2019 году включали в лучшие работы месяца по версии Street Art Today. Среди участников были испанец Окуда Сан-Мигель и швейцарец BOOGIE. Сами журналисты оговаривались, что точнее говорить не «граффити», а «мурал»."
-   ],
-   "facts": [
-    {
-     "text": "Фестиваль Urban Morphogenesis в 2019 году расписал 52 фасада в микрорайоне Новая Трёхгорка.",
-     "sourceUrl": "https://360.ru/news/kultura/jarkie-kraski-vnesli-v-zhizn-novoj-trehgorki-kak-prohodit-festival-ulichnogo-iskusstva-urban-morphogenesis/",
-     "verified": true
-    },
-    {
-     "text": "В фестивале участвовали более 80 художников из 26 стран, площадь росписей превысила 38 тысяч квадратных метров.",
-     "sourceUrl": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html",
-     "verified": true
-    },
-    {
-     "text": "Организаторы называли проект крупнейшим в мире музеем граффити под открытым небом и планировали заявку в Книгу рекордов Гиннесса.",
-     "sourceUrl": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html",
-     "verified": true
-    },
-    {
-     "text": "Среди работ — 65-метровый портрет Юрия Гагарина художника Jorit.",
-     "sourceUrl": "https://360.ru/tekst/obschestvo/strit-art-iz-odintsova/",
-     "verified": true
-    },
-    {
-     "text": "Мурал Бреро Весоды попал в топ-7 муралов августа 2019 года по версии Street Art Today.",
-     "sourceUrl": "https://360.ru/tekst/obschestvo/strit-art-iz-odintsova/",
-     "verified": true
-    },
-    {
-     "text": "Среди приглашённых художников — Окуда Сан-Мигель и BOOGIE.",
-     "sourceUrl": "https://360.ru/news/kultura/nastojaschij-muzej-ulichnogo-iskusstva-mezhdunarodnyj-festival-graffiti-morfogenezis-startoval-v-odintsove/",
-     "verified": true
-    },
-    {
-     "text": "В 2015 году в Одинцове обсуждали открытие школы граффити, чтобы легализовать уличных художников.",
-     "sourceUrl": "https://www.m24.ru/articles/12062015/76246",
-     "verified": true
-    },
-    {
-     "text": "Состояние росписей после 2019 года не проверялось.",
-     "sourceUrl": "https://360.ru/news/kultura/jarkie-kraski-vnesli-v-zhizn-novoj-trehgorki-kak-prohodit-festival-ulichnogo-iskusstva-urban-morphogenesis/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Жилой квартал: не заезжайте на газоны и во дворы с детскими площадками."
-   ],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "nemchinovka-arka",
-   "name": "Арка «Старая Смоленская дорога»",
-   "coords": {
-    "lat": 55.687,
-    "lon": 37.305
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Фото — с тротуара, на проезжую часть не выходим.",
-   "guideStory": [
-    "Эта арка встречает тех, кто въезжает в Одинцово. Её поставили на месте, откуда, как пишут краеведы, с XIV века начинался старейший путь из Европы в Московию — Старая Смоленская дорога. Сначала это был водно-сухопутный маршрут, со временем ставший полностью сухопутным.",
-    "По этой дороге веками шли посольства, купцы и войска. Год установки самой арки нам подтвердить не удалось. В городе есть и вторая арка — на развилке Можайского и Минского шоссе."
-   ],
-   "facts": [
-    {
-     "text": "Арка на въезде в Одинцово — одна из двух арок города; вторая стоит на развилке Можайского и Минского шоссе.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
-     "verified": true
-    },
-    {
-     "text": "Арка установлена там, где с XIV века начинался старейший путь из Европы в Московию.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
-     "verified": true
-    },
-    {
-     "text": "Старая Смоленская дорога сначала была водно-сухопутным маршрутом, а затем стала полностью сухопутной.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
-     "verified": true
-    },
-    {
-     "text": "Станция Одинцово открылась в 1870 году на линии Москва — Смоленск.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/odintsovo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Год установки арки в найденных источниках не указан.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/odintsovo/arka-staraya-smolenskaya-doroga/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Можайское шоссе — оживлённая трасса: только тротуары и переходы."
-   ],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "nemchinovka-chukovsky",
-   "name": "Дом-музей Чуковского",
-   "coords": {
-    "lat": 55.652,
-    "lon": 37.342
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Корней Чуковский жил в Переделкине, его дача стала домом-музеем. Здесь также дачи Евтушенко, Ахмадулиной и других известных авторов.",
-    "Городок задумывался как дачный кооператив: в 1930 году его предложил Борис Пильняк, а в 1932 году на встрече у Горького со Сталиным и Кагановичем замысел получил поддержку."
-   ],
-   "facts": [
-    {
-     "text": "На территории есть дом-музей Корнея Чуковского.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8%D0%BD%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BA_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "Здесь располагаются дачи Чуковского, Евтушенко, Ахмадулиной.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/peredelkino/info",
-     "verified": true
-    },
-    {
-     "text": "В 1930 году Пильняк предложил создать дачный кооператив.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8%D0%BD%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BA_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "В октябре 1932 года у Горького прошла встреча Сталина и Кагановича с литераторами.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8%D0%BD%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BA_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "Skillbox рассказывал о городке писателей как об архитектурном явлении.",
-     "sourceUrl": "https://skillbox.ru/media/design/peredelkino-gorodok-pisatelej/",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "nemchinovka-posyolok",
-   "name": "Посёлок Внуково",
-   "coords": {
-    "lat": 55.63,
-    "lon": 37.3
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Посёлок строили одновременно с аэропортом — для рабочих и лётчиков. В 1947 году Внуково преобразовали в рабочий посёлок.",
-    "Известных дачников Внукова в найденных источниках мы не нашли, поэтому о них не рассказываем. Следующая точка маршрута — «История аэродрома»."
-   ],
-   "facts": [
-    {
-     "text": "Посёлок строили для рабочих и лётчиков одновременно с аэропортом.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "В 1947 году Внуково стало рабочим посёлком.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Сведения об известных дачниках не найдены.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": false
-    },
-    {
-     "text": "Внуково — район Москвы.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "nemchinovka-istoriya",
-   "name": "История аэродрома",
-   "coords": {
-    "lat": 55.615,
-    "lon": 37.295
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В 1937 году правительство утвердило план нового аэродрома, чтобы разгрузить московский авиаузел. Работы начались в 1938 году, первую очередь приняли в 1941-м.",
-    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года."
-   ],
-   "facts": [
-    {
-     "text": "План аэродрома утверждён в 1937 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Работы начаты в 1938 году, первая очередь принята в 1941 году.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Открытие планировали на 18 августа 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Аэропорт открыт досрочно, 2 июля 1941 года.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Внукову исполнилось 80 лет в 2021 году.",
-     "sourceUrl": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "nemchinovka-les",
-   "name": "Лесная петля",
-   "coords": {
-    "lat": 55.638,
-    "lon": 37.22
+    "lat": 55.717,
+    "lon": 37.365
    },
    "kind": "проезжаем",
    "visitMinutes": 20,
    "guideStory": [
-    "Название посёлка говорит само за себя: вокруг лес. Пройдёмся по лесной петле и вернёмся к станции.",
-    "Конкретные лесные тропы мы на месте не проверяли — держитесь накатанных дорожек и не заезжайте в болотистые места. Следующая точка маршрута — «Институт Чумакова»."
+    "Немчиновка — редкий пример сохранившейся дачной застройки у самой Москвы: деревянные дома, заборы, сосны.",
+    "Здесь Малевич провёл годы жизни и работы; посёлок вдохновлял и других художников. Какая именно дача была его, мы по источникам не проверяли, поэтому только проезжаем по улицам."
    ],
    "facts": [
     {
-     "text": "Вокруг посёлка — лес.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
-     "verified": false
-    },
-    {
-     "text": "Тропы на месте не проверены.",
-     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
-     "verified": false
-    },
-    {
-     "text": "Станция находится в Одинцовском округе.",
-     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
+     "text": "Жизнь в стародачной Немчиновке и цены на дома описывает журнал «Мир квартир».",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
      "verified": true
     },
     {
-     "text": "Рядом с посёлком строятся новые кварталы.",
-     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_lesnoy_gorodok",
+     "text": "Немчиновка знаменита прежде всего тем, что здесь жил Малевич.",
+     "sourceUrl": "https://www.kp.ru/daily/26307.4/3185386/",
      "verified": true
     },
     {
-     "text": "Координаты петли приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
+     "text": "Конкретный адрес дачи Малевича в найденных источниках не указан.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
      "verified": false
+    },
+    {
+     "text": "В посёлке жил архитектор Фёдор Шехтель.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
+    },
+    {
+     "text": "В посёлке жил режиссёр Сергей Эйзенштейн.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/",
+     "verified": true
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "nemchinovka-chumakov",
-   "name": "Институт Чумакова",
-   "coords": {
-    "lat": 55.598,
-    "lon": 37.34
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1955 году здесь открыли комплекс Института полиомиелита и вирусных энцефалитов. Руководил им академик Михаил Чумаков.",
-    "Сегодня институт носит имя Чумакова. Территория закрыта — смотрим снаружи.",
-    "Дальше по дороге едем на юг, к посёлку Филимонки и сгоревшей усадьбе."
-   ],
-   "facts": [
-    {
-     "text": "В 1955 году открыт комплекс Института полиомиелита и вирусных энцефалитов.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    },
-    {
-     "text": "Руководил институтом академик Михаил Чумаков.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    },
-    {
-     "text": "Территория института закрыта.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": false
-    },
-    {
-     "text": "Институт носит имя Чумакова.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": false
-    },
-    {
-     "text": "Это научно-производственный комплекс.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Режимная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -528,127 +263,67 @@
    "url": "https://www.mirkvartir.ru/journal/reviews/2020/12/05/starodach/"
   },
   {
-   "title": "История Одинцова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/odintsovo/istoriia"
+   "title": "Источник: theartnewspaper.com",
+   "url": "https://www.theartnewspaper.com/2001/10/01/moscow-property-development-threatens-site-of-malevich-grave"
   },
   {
-   "title": "Одинцово — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/odintcovo/history"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/articles/lyudi/rozhnov-mesto-zahoroneniya-malevicha-budet-dostupno-dlya-vseh-zhelayuschih-xl/"
   },
   {
-   "title": "Достопримечательности Одинцова — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/odintsovo/"
-  },
-  {
-   "title": "Гребневский храм — Азбука паломника",
-   "url": "https://azbyka.ru/palomnik/%D0%93%D1%80%D0%B5%D0%B1%D0%BD%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9E%D0%B4%D0%B8%D0%BD%D1%86%D0%BE%D0%B2%D0%BE)"
-  },
-  {
-   "title": "Urban Morphogenesis — «Российская газета»",
-   "url": "https://rg.ru/2019/08/28/reg-cfo/v-podmoskove-poiavilsia-krupnejshij-muzej-graffiti-pod-otkrytym-nebom.html"
-  },
-  {
-   "title": "Одинцовская кондитерская фабрика — Retail.ru",
-   "url": "https://www.retail.ru/news/mars-prekratil-vypusk-shokoladnykh-plitok-brendov-dove-i-korkunov-25-iyulya-2025-267201/"
-  },
-  {
-   "title": "Городок писателей — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%BA%D0%B8%D0%BD%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%BE%D0%BA_%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9)"
-  },
-  {
-   "title": "Переделкино — Skillbox",
-   "url": "https://skillbox.ru/media/design/peredelkino-gorodok-pisatelej/"
-  },
-  {
-   "title": "Переделкино — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/peredelkino/info"
-  },
-  {
-   "title": "Внуково — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/vnukovo/"
-  },
-  {
-   "title": "История Внукова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia"
-  },
-  {
-   "title": "Внукову 80 лет — Вокруг света",
-   "url": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375"
-  },
-  {
-   "title": "Lesnoy Gorodok — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok"
-  },
-  {
-   "title": "МЦД Лесной Городок — РИАМО",
-   "url": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/"
-  },
-  {
-   "title": "Московский — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/moskovskij/"
-  },
-  {
-   "title": "Филимонковское — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/filimonkovskoe/"
-  },
-  {
-   "title": "Усадьба в Филимонках — Moskvich Mag",
-   "url": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/pamyatnik-hudozhniku-kazimiru-malevichu-planiruyut-ustanovit-v-odintsove-xl/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.21443,
-     55.638
+     37.351417,
+     55.723
     ],
     [
-     37.215176,
-     55.636428
-    ],
-    [
-     37.217215,
-     55.635277
-    ],
-    [
-     37.337218,
-     55.595277
-    ],
-    [
-     37.34,
-     55.594856
-    ],
-    [
-     37.408,
-     55.597856
-    ],
-    [
-     37.410783,
-     55.598277
-    ],
-    [
-     37.41282,
-     55.599428
-    ],
-    [
-     37.413565,
-     55.601
-    ],
-    [
-     37.375581,
+     37.354419,
      55.713
     ],
     [
-     37.374833,
-     55.714572
+     37.355167,
+     55.711428
     ],
     [
-     37.369834,
-     55.718572
+     37.357209,
+     55.710277
+    ],
+    [
+     37.36,
+     55.709856
+    ],
+    [
+     37.37,
+     55.709856
+    ],
+    [
+     37.372791,
+     55.710277
+    ],
+    [
+     37.374833,
+     55.711428
+    ],
+    [
+     37.375333,
+     55.711928
+    ],
+    [
+     37.376081,
+     55.7135
+    ],
+    [
+     37.375333,
+     55.715072
     ],
     [
      37.361835,
@@ -671,12 +346,8 @@
      55.724572
     ],
     [
-     37.215176,
-     55.639572
-    ],
-    [
-     37.21443,
-     55.638
+     37.351417,
+     55.723
     ]
    ]
   ]

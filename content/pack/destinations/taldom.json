@@ -13,8 +13,8 @@
   "Талдом — столица «башмачной страны». Первое упоминание — 1677 год, когда Талдом был деревней.",
   "К началу XX века здесь процветал обувной промысел; Савёловская железная дорога, проведённая в 1901 году, помогла ему. Перед Первой мировой кустари выпускали, по РИАМО, около 10 миллионов пар обуви в год. Сапожок изображён на гербе.",
   "Историко-литературный музей в доме купца Волкова рассказывает о «башмачной стране» и писателях края; рядом — памятник Салтыкову-Щедрину. Краеведческий музей хранит коллекцию старинной обуви.",
-  "Свои места маршрута: «Центр Талдома», «Историко-литературный музей», «Церковь Михаила Архангела», «Торговые ряды и дом купца Киселёва», «Спас-Угол, родина Салтыкова-Щедрина», «Башмачная страна». По пути маршрут заходит и к соседям: Журавлиная родина — «Дорога через поля», «Болота Дубненской низины», «Скопление журавлей».",
-  "Маршрут кольцевой, около 57 км и 9 точек. Финиш — Станция «Талдом» (Электрички Савёловского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Центр Талдома», «Историко-литературный музей», «Церковь Михаила Архангела», «Башмачная страна», «Торговые ряды и дом купца Киселёва». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 1 км: старт и финиш — Станция «Талдом» (Электрички Савёловского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Талдом»",
@@ -27,19 +27,19 @@
  "endPoint": {
   "name": "Станция «Талдом»",
   "coords": {
-   "lat": 56.731,
-   "lon": 37.528
+   "lat": 56.7312,
+   "lon": 37.5285
   },
   "transport": "Электрички Савёловского направления"
  },
  "route": {
-  "distanceKm": 57.0,
-  "durationH": 7.1,
-  "difficulty": "сложный",
+  "distanceKm": 1.0,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
   "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "taldom-muzey",
@@ -133,8 +133,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "taldom-mikhail",
@@ -170,220 +170,6 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "order": 30,
-   "coordsVerified": false
-  },
-  {
-   "id": "taldom-ryady",
-   "name": "Торговые ряды и дом купца Киселёва",
-   "coords": {
-    "lat": 56.731,
-    "lon": 37.529
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В центре сохранились здание торговых рядов и дом купца Киселёва 1907 года. Это следы времени, когда Талдом был богатым селом сапожников и торговцев.",
-    "Историко-литературный музей рядом занимает особняк купца Волкова в стиле модерн — ещё один дом из той же эпохи."
-   ],
-   "facts": [
-    {
-     "text": "В центре Талдома сохранились торговые ряды и дом купца Киселёва 1907 года.",
-     "sourceUrl": "https://teletype.in/@apfound/ZRL0uoEcKAr",
-     "verified": false
-    },
-    {
-     "text": "Историко-литературный музей находится в особняке купца Волкова в стиле модерн.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/taldom/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 40,
-   "coordsVerified": false
-  },
-  {
-   "id": "taldom-doroga",
-   "name": "Дорога через поля",
-   "coords": {
-    "lat": 56.76,
-    "lon": 37.63
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "От Талдома едем на северо-восток через поля и перелески. Это пришвинские места — так их называет Moskvich Mag.",
-    "Дорогу мы на месте не проверяли — держитесь обочины. Следующая точка маршрута — «Болота Дубненской низины». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Moskvich Mag связывает эти места с Пришвиным.",
-     "sourceUrl": "https://moskvichmag.ru/?p=475266",
-     "verified": true
-    },
-    {
-     "text": "Дорога не проверена.",
-     "sourceUrl": "https://moskvichmag.ru/?p=475266",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://moskvichmag.ru/?p=475266",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://moskvichmag.ru/?p=475266",
-     "verified": false
-    },
-    {
-     "text": "Заказник — в Талдомском округе.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "taldom-bolota",
-   "name": "Болота Дубненской низины",
-   "coords": {
-    "lat": 56.79,
-    "lon": 37.7
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Журавли собираются на болотах и полях — тишина и простор здесь важнее любых построек.",
-    "Обратный путь к Талдому долгий; рассчитайте силы до заката. Следующая точка маршрута — «Скопление журавлей». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Журавли собираются на болотах и полях.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
-     "verified": false
-    },
-    {
-     "text": "Название низины мы не сверили.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "taldom-zhuravli",
-   "name": "Скопление журавлей",
-   "coords": {
-    "lat": 56.8,
-    "lon": 37.73
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 40,
-   "guideStory": [
-    "«Журавлиная родина» — крупнейшее в Центральной России место предотлётного скопления серых журавлей. Лучшее время — осень.",
-    "РИАМО рассказывает об экскурсиях на болото. Смотрим с разрешённых площадок, с биноклем, тихо.",
-    "Не подходим к птицам и не уходим с дорог. Следующая точка маршрута — «Спас-Угол, родина Салтыкова-Щедрина»."
-   ],
-   "facts": [
-    {
-     "text": "Это крупнейшее в Центральной России место предотлётного скопления серых журавлей.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
-     "verified": true
-    },
-    {
-     "text": "Здесь проводят экскурсии на болото.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
-     "verified": true
-    },
-    {
-     "text": "Лучшее время — осень — оценка составителя.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
-     "verified": false
-    },
-    {
-     "text": "Правила посещения не проверены.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "warnings": [
-    "Особо охраняемая территория: только по дорогам."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "taldom-spas-ugol",
-   "name": "Спас-Угол, родина Салтыкова-Щедрина",
-   "coords": {
-    "lat": 56.854,
-    "lon": 37.735
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "В селе Спас-Угол в 1826 году родился Михаил Салтыков-Щедрин. Храм здесь достраивала мать писателя Ольга Михайловна, которая позже купила село.",
-    "Долгие годы музей писателя занимал половину этого храма, а потом получил отдельное здание. Музея-усадьбы нет — сама усадьба не сохранилась, поэтому смотрим храм, музей и деревенский пейзаж, который узнаётся в «Пошехонской старине»."
-   ],
-   "facts": [
-    {
-     "text": "Салтыков-Щедрин родился в селе Спас-Угол в 1826 году.",
-     "sourceUrl": "https://www.knls.net/?p=2150",
-     "verified": true
-    },
-    {
-     "text": "Храм в селе достраивала мать писателя Ольга Михайловна Салтыкова.",
-     "sourceUrl": "https://www.knls.net/?p=2150",
-     "verified": true
-    },
-    {
-     "text": "Музей Салтыкова-Щедрина в Спас-Угле получил отдельное здание.",
-     "sourceUrl": "https://360.ru/news/kultura/novyj-muzej-saltykovaschedrina-pojavilsja-v-podmoskove/",
-     "verified": true
-    },
-    {
-     "text": "Музея-усадьбы у писателя нет.",
-     "sourceUrl": "https://rg.ru/2019/09/25/reg-cfo/zachem-chinovnikam-sdavat-ekzamen-po-tvorchestvu-saltykova-shchedrina.html",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 80,
    "coordsVerified": false
   },
   {
@@ -429,8 +215,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "taldom-ryady",
+   "name": "Торговые ряды и дом купца Киселёва",
+   "coords": {
+    "lat": 56.731,
+    "lon": 37.529
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В центре сохранились здание торговых рядов и дом купца Киселёва 1907 года. Это следы времени, когда Талдом был богатым селом сапожников и торговцев.",
+    "Историко-литературный музей рядом занимает особняк купца Волкова в стиле модерн — ещё один дом из той же эпохи."
+   ],
+   "facts": [
+    {
+     "text": "В центре Талдома сохранились торговые ряды и дом купца Киселёва 1907 года.",
+     "sourceUrl": "https://teletype.in/@apfound/ZRL0uoEcKAr",
+     "verified": false
+    },
+    {
+     "text": "Историко-литературный музей находится в особняке купца Волкова в стиле модерн.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/taldom/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -466,16 +283,28 @@
    "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/taldom/"
   },
   {
-   "title": "Талдомский район — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD"
-  },
-  {
    "title": "Журавли и сапоги — РИАМО",
    "url": "https://riamo.ru/articles/istorii/progulki-po-taldomu-zhuravli-sapogi-i-ekskursii-na-boloto-xl/"
+  },
+  {
+   "title": "Источник: znanierussia.ru",
+   "url": "https://znanierussia.ru/articles/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC"
+  },
+  {
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/taldom/"
+  },
+  {
+   "title": "Источник: teletype.in",
+   "url": "https://teletype.in/@apfound/ZRL0uoEcKAr"
+  },
+  {
+   "title": "Источник: cyclowiki.org",
+   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BE%D0%BA%D1%80%D1%83%D0%B3%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -509,44 +338,40 @@
      56.727277
     ],
     [
-     37.632868,
-     56.757277
+     37.535963,
+     56.728428
     ],
     [
-     37.732871,
-     56.797277
+     37.536964,
+     56.729428
     ],
     [
-     37.734973,
-     56.798428
+     37.537731,
+     56.731
     ],
     [
-     37.735742,
-     56.8
+     37.536964,
+     56.732572
     ],
     [
-     37.74075,
-     56.854
+     37.534866,
+     56.733723
     ],
     [
-     37.73998,
-     56.855572
+     37.532,
+     56.734144
     ],
     [
-     37.737875,
-     56.856723
+     37.5285,
+     56.734344
     ],
     [
-     37.735,
-     56.857144
+     37.525634,
+     56.733923
     ],
     [
-     37.732125,
-     56.856723
-    ],
-    [
-     37.73002,
-     56.855572
+     37.525134,
+     56.733723
     ],
     [
      37.523036,

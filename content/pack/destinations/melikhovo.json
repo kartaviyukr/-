@@ -13,8 +13,8 @@
   "Мелихово — усадьба Антона Чехова. В 1892 году писатель купил запущенное имение у художника-декоратора Сорохтина и жил здесь с многочисленной роднёй до 1899 года.",
   "Сегодня это Государственный литературно-мемориальный музей-заповедник А. П. Чехова. Дом Чеховых восстановили в 1960-х годах по чертежам и фотографиям; в состав музея входят дом, писательский флигель и хозяйственные постройки.",
   "Коллекция — 20–30 тысяч экспонатов (источники расходятся). Музей отметил 75 лет со дня основания.",
-  "Свои места маршрута: «Талеж: школа Чехова и источник», «Дом Чеховых», «Новосёлки: ещё одна чеховская школа». По пути маршрут заходит и к соседям: Чехов и Лопасня-Зачатьевское — «Центр Чехова», «Усадьба Лопасня-Зачатьевское»; Давидова пустынь — «Испытания обители»; Михнево — «Земли Михневых», «Спасо-Преображенская церковь».",
-  "Маршрут линейный, около 62 км и 8 точек. Финиш — Станция «Михнево» (Электрички Павелецкого направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Новосёлки: ещё одна чеховская школа», «Писательский флигель», «Дом Чеховых», «Сад и выставки», «Талеж: школа Чехова и источник». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 47 км: старт и финиш — Станция «Чехов» (Электрички Курского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Чехов»",
@@ -25,162 +25,195 @@
   "transport": "Электрички Курского направления"
  },
  "endPoint": {
-  "name": "Станция «Михнево»",
+  "name": "Станция «Чехов»",
   "coords": {
-   "lat": 55.1302,
-   "lon": 37.9405
+   "lat": 55.143,
+   "lon": 37.466
   },
-  "transport": "Электрички Павелецкого направления"
+  "transport": "Электрички Курского направления"
  },
  "route": {
-  "distanceKm": 62.0,
-  "durationH": 7.4,
+  "distanceKm": 46.6,
+  "durationH": 5.1,
   "difficulty": "сложный",
-  "shape": "линейный",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "melikhovo-tsentr",
-   "name": "Центр Чехова",
+   "id": "melikhovo-novoselki",
+   "name": "Новосёлки: ещё одна чеховская школа",
    "coords": {
-    "lat": 55.145,
-    "lon": 37.47
+    "lat": 55.125,
+    "lon": 37.69
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Чехов — город, названный в честь писателя, жившего неподалёку.",
-    "Отсюда удобно продолжить путь к Мелихову и Давидовой пустыни — у них отдельные маршруты. Следующая точка маршрута — «Усадьба Лопасня-Зачатьевское». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "В Новосёлках стояла третья из школ, построенных при участии Чехова. Писатель был здесь и врачом, и попечителем, и строителем: за мелиховские годы — три школы, дорога и почта.",
+    "Это короткая остановка «по пути»: посмотреть на село, ради которого автор «Чайки» хлопотал о кирпиче и учителях, и ехать дальше."
    ],
    "facts": [
     {
-     "text": "Город назван в честь писателя.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Мелихово — недалеко от города.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Мелихово",
+     "text": "Одна из трёх чеховских школ построена в Новосёлках.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
      "verified": true
     },
     {
-     "text": "Координаты центра приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": false
-    },
-    {
-     "text": "Давидова пустынь — в Чеховском округе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "text": "За семь лет в Мелихове Чехов построил три школы, дорогу и почту.",
+     "sourceUrl": "https://www.culture.ru/institutes/14384/melikhovo",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "melikhovo-usadba",
-   "name": "Усадьба Лопасня-Зачатьевское",
+   "id": "melikhovo-fligel",
+   "name": "Писательский флигель",
    "coords": {
-    "lat": 55.148,
-    "lon": 37.48
+    "lat": 55.1052,
+    "lon": 37.6485
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
    "guideStory": [
-    "Музей-усадьба «Лопасня-Зачатьевское» находится в городе Чехове. Имение принадлежало родственникам Петра Ланского — второго мужа Натальи Гончаровой, вдовы Пушкина.",
-    "Подробную историю владельцев и построек мы в найденных источниках не сверили."
+    "В состав музея входят дом, писательский флигель и хозяйственные постройки. Во флигеле, по общему мнению биографов, Чехов работал над «Чайкой» — эту деталь мы не сверяли с найденными источниками.",
+    "Коллекция музея — по разным данным от 20 до 30 тысяч экспонатов."
    ],
    "facts": [
     {
-     "text": "В Чехове есть музей-усадьба «Лопасня-Зачатьевское».",
+     "text": "В музей входят дом, флигель и хозяйственные постройки.",
      "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
      "verified": true
     },
     {
-     "text": "Имение принадлежало родственникам П. Ланского.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Ланской — второй муж Натальи Гончаровой-Пушкиной.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "История построек не сверена.",
+     "text": "Работа над «Чайкой» во флигеле — не сверено.",
      "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
      "verified": false
     },
     {
-     "text": "Часы работы не проверены.",
+     "text": "Коллекция — 20–30 тысяч экспонатов, источники расходятся.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
+     "verified": false
+    },
+    {
+     "text": "Музей описан на Культура.РФ.",
+     "sourceUrl": "https://www.culture.ru/institutes/14384/melikhovo",
+     "verified": true
+    },
+    {
+     "text": "Координаты флигеля приблизительные.",
      "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
      "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "melikhovo-dom",
+   "name": "Дом Чеховых",
+   "coords": {
+    "lat": 55.105,
+    "lon": 37.648
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "В 1892 году Чехов купил имение у художника-декоратора Сорохтина; к моменту продажи оно было запущенным. Писатель жил здесь с семьёй до 1899 года.",
+    "Дом Чеховых восстановили в 1960-х по чертежам и фотографиям. Tripster описывает «дом с витражами и сиреневый сад».",
+    "Билеты и часы работы уточняйте на сайте музея. Следующая точка маршрута — «Сад и выставки»."
+   ],
+   "facts": [
+    {
+     "text": "Чехов купил Мелихово в 1892 году.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "Прежним владельцем был художник-декоратор Сорохтин.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "Чехов жил здесь до 1899 года.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": true
+    },
+    {
+     "text": "Дом восстановлен в 1960-х по чертежам и фотографиям.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
+     "verified": true
+    },
+    {
+     "text": "Tripster описывает дом с витражами и сиреневый сад.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/muzej-usadba-chehova-v-melihove/",
+     "verified": true
     }
    ],
    "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "melikhovo-istoriya",
-   "name": "Испытания обители",
+   "id": "melikhovo-sad",
+   "name": "Сад и выставки",
    "coords": {
-    "lat": 55.0702,
-    "lon": 37.4805
+    "lat": 55.1048,
+    "lon": 37.6475
    },
-   "kind": "смотреть снаружи",
+   "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "В 1619 году монастырь сожгли казаки гетмана Сагайдачного. При Петре I у обители изъяли почти все доходы.",
-    "В 1929 году пустынь закрыли, братию репрессировали; в здании устроили сельскохозяйственный техникум. С 1995 года идёт восстановление, сегодня здесь более 20 насельников и православная школа."
+    "Музей-усадьба рассказал о своей 75-летней истории в фотовыставке; здесь отмечают и день рождения Чехова.",
+    "Сад — хорошее место для паузы перед долгим обратным путём к станции Чехов. Следующая точка маршрута — «Талеж: школа Чехова и источник»."
    ],
    "facts": [
     {
-     "text": "В 1619 году монастырь сожжён казаками.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "text": "Музей показал 75-летнюю историю в фотовыставке.",
+     "sourceUrl": "https://360.ru/news/kultura/melihovo-25412/",
      "verified": true
     },
     {
-     "text": "В 1929 году монастырь закрыт, братия репрессирована.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
+     "text": "В музее отмечают день рождения Чехова.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-antona-chehova-otmetili-v-muzee-zapovednike-melihovo/",
      "verified": true
     },
     {
-     "text": "Монастырь переоборудовали под сельскохозяйственный техникум.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
     },
     {
-     "text": "С 1995 года идёт восстановление.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C",
-     "verified": true
+     "text": "Координаты сада приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
+     "verified": false
     },
     {
-     "text": "В 2025 году монастырь отметил 510-летие.",
-     "sourceUrl": "https://360.ru/news/mosobl/voznesenskaja-davidova-pustyn-v-chehove-otmetila-510-letie/",
+     "text": "Мелихово — музей-заповедник.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
      "verified": true
     }
    ],
+   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "melikhovo-talezh",
@@ -215,181 +248,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 40,
+   "order": 50,
    "coordsVerified": false
-  },
-  {
-   "id": "melikhovo-dom",
-   "name": "Дом Чеховых",
-   "coords": {
-    "lat": 55.105,
-    "lon": 37.648
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "В 1892 году Чехов купил имение у художника-декоратора Сорохтина; к моменту продажи оно было запущенным. Писатель жил здесь с семьёй до 1899 года.",
-    "Дом Чеховых восстановили в 1960-х по чертежам и фотографиям. Tripster описывает «дом с витражами и сиреневый сад».",
-    "Билеты и часы работы уточняйте на сайте музея. Следующая точка маршрута — «Новосёлки: ещё одна чеховская школа»."
-   ],
-   "facts": [
-    {
-     "text": "Чехов купил Мелихово в 1892 году.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Прежним владельцем был художник-декоратор Сорохтин.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Чехов жил здесь до 1899 года.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info",
-     "verified": true
-    },
-    {
-     "text": "Дом восстановлен в 1960-х по чертежам и фотографиям.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "Tripster описывает дом с витражами и сиреневый сад.",
-     "sourceUrl": "https://experience.tripster.ru/journal/articles/muzej-usadba-chehova-v-melihove/",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "melikhovo-novoselki",
-   "name": "Новосёлки: ещё одна чеховская школа",
-   "coords": {
-    "lat": 55.125,
-    "lon": 37.69
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В Новосёлках стояла третья из школ, построенных при участии Чехова. Писатель был здесь и врачом, и попечителем, и строителем: за мелиховские годы — три школы, дорога и почта.",
-    "Это короткая остановка «по пути»: посмотреть на село, ради которого автор «Чайки» хлопотал о кирпиче и учителях, и ехать дальше."
-   ],
-   "facts": [
-    {
-     "text": "Одна из трёх чеховских школ построена в Новосёлках.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9C%D0%B5%D0%BB%D0%B8%D1%85%D0%BE%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9)",
-     "verified": true
-    },
-    {
-     "text": "За семь лет в Мелихове Чехов построил три школы, дорогу и почту.",
-     "sourceUrl": "https://www.culture.ru/institutes/14384/melikhovo",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 60,
-   "coordsVerified": false
-  },
-  {
-   "id": "melikhovo-posyolok",
-   "name": "Земли Михневых",
-   "coords": {
-    "lat": 55.132,
-    "lon": 37.938
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Первое упоминание Михнева — 1572 год. Название связано с дворянским родом Михневых: основатель рода жил в соседнем Астафьеве, а потом семья скупила земли соседних деревень.",
-    "Сегодня в посёлке работают кирпичный завод, завод электроизделий и ремонтно-механический завод."
-   ],
-   "facts": [
-    {
-     "text": "Первое упоминание — 1572 год.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Название связано с дворянским родом Михневых.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Основатель рода жил в соседнем Астафьеве.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "В посёлке работают кирпичный и другие заводы.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "melikhovo-tserkov",
-   "name": "Спасо-Преображенская церковь",
-   "coords": {
-    "lat": 55.135,
-    "lon": 37.945
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1722 году по указу Петра I в селе основали казённый завод по выпуску ткани для армии. Тогда же упоминается деревянная церковь Святителя Николая.",
-    "В 1874 году её заменили каменным храмом Спаса Преображения — сегодня это объект культурного наследия регионального значения."
-   ],
-   "facts": [
-    {
-     "text": "В 1722 году по указу Петра I основан казённый завод тканей для армии.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Тогда упоминается деревянная церковь Святителя Николая.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "В 1874 году её заменили каменным храмом.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Храм — объект культурного наследия регионального значения.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
   }
  ],
  "dish": {
@@ -430,24 +290,28 @@
    "url": "https://www.sputnik8.com/ru/moscow/sights/melihovo/info"
   },
   {
-   "title": "Давидова пустынь — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D0%B0%D0%B2%D0%B8%D0%B4%D0%BE%D0%B2%D0%B0_%D0%BF%D1%83%D1%81%D1%82%D1%8B%D0%BD%D1%8C"
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/institutes/14384/melikhovo"
   },
   {
-   "title": "510-летие — 360",
-   "url": "https://360.ru/news/mosobl/voznesenskaja-davidova-pustyn-v-chehove-otmetila-510-letie/"
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/journal/articles/muzej-usadba-chehova-v-melihove/"
   },
   {
-   "title": "Михнево — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%A1%D1%82%D1%83%D0%BF%D0%B8%D0%BD%D0%BE)"
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/kultura/melihovo-25412/"
   },
   {
-   "title": "Церковь Спаса Преображения — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%A1%D0%BF%D0%B0%D1%81%D0%B0_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_(%D0%9C%D0%B8%D1%85%D0%BD%D0%B5%D0%B2%D0%BE)"
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/mosobl/den-rozhdenija-antona-chehova-otmetili-v-muzee-zapovednike-melihovo/"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/79627-teatr-v-tsvetuschem-sadu-melihovo-muzey-usadba-a-p-chehova-talezh"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -457,20 +321,16 @@
      55.143
     ],
     [
-     37.475009,
-     55.0702
+     37.461236,
+     55.141428
     ],
     [
-     37.475745,
-     55.068628
+     37.585245,
+     55.068428
     ],
     [
-     37.477754,
-     55.067477
-    ],
-    [
-     37.4805,
-     55.067056
+     37.587254,
+     55.067277
     ],
     [
      37.59,
@@ -481,44 +341,32 @@
      55.067277
     ],
     [
-     37.94325,
-     55.127477
+     37.692749,
+     55.122277
     ],
     [
-     37.945263,
-     55.128628
+     37.694762,
+     55.123428
     ],
     [
-     37.949763,
-     55.133428
+     37.695499,
+     55.125
     ],
     [
-     37.9505,
-     55.135
+     37.694762,
+     55.126572
     ],
     [
-     37.949763,
-     55.136572
+     37.692749,
+     55.127723
     ],
     [
-     37.94775,
-     55.137723
+     37.69,
+     55.128144
     ],
     [
-     37.945,
-     55.138144
-    ],
-    [
-     37.48,
-     55.151144
-    ],
-    [
-     37.477249,
-     55.150723
-    ],
-    [
-     37.467249,
-     55.147723
+     37.466,
+     55.146144
     ],
     [
      37.463249,

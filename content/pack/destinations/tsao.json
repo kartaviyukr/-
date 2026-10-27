@@ -10,34 +10,36 @@
   "lon": 37.6175
  },
  "intro": [
-  "Центральный округ — сердце Москвы и старт всей спирали. Этот маршрут не прогулка на пару часов, а большая велопетля по центру: Кремль и Зарядье, сталинская высотка на Котельнической, Андроников монастырь на Яузе, Третьяковка и Парк Горького, Новодевичий монастырь, Лужники и Воробьёвы горы, а затем Арбат, Патриаршие и Чистые пруды.",
-  "Едем в основном по набережным Москвы-реки — там есть велодорожки и пешеходные зоны, где велосипед ведём рядом.",
-  "Около 40 км с остановками — полный день. Лучше выходной утром, когда в центре меньше машин; Красную площадь, Зарядье и монастырь проходим пешком."
+  "Центральный административный округ — сердце Москвы и старт всей спирали. Здесь стоит Кремль, от которого отсчитываются расстояния до всех мест нашего путешествия, и здесь же сжато лежат все слои московской истории.",
+  "Москва впервые упомянута в летописи под 1147 годом: Юрий Долгорукий пригласил союзника на встречу «на Москов». Историки подчёркивают, что это упоминание уже существующего места, а не дата основания с нуля. Деревянная крепость на Боровицком холме выросла в Кремль, а нынешние кирпичные стены поднялись в конце XV века.",
+  "Вокруг Кремля город рос кольцами — та же логика, что у нашей спирали. Китай-город и Зарядье, Белый город с бульварами на месте стен, Земляной город с Садовым кольцом. Бульварное кольцо, по которому проедет маршрут, — бывшая линия крепостных стен.",
+  "Точки маршрута: «Кремль и Красная площадь», «Чистые пруды», «Высотка на Котельнической набережной», «Парк «Зарядье» и Парящий мост», «Третьяковская галерея», «Парк Горького и Музеон», «Храм Христа Спасителя», «Гоголевский бульвар и памятник Гоголю», «Старый Арбат», «Патриаршие пруды». Все они — в самом городе или рядом с ним.",
+  "Маршрут линейный, около 18 км: старт — Метро «Охотный Ряд», финиш — Метро «Маяковская» (Метро «Маяковская»). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Метро «Охотный Ряд»",
   "coords": {
    "lat": 55.7577,
-   "lon": 37.6156
+   "lon": 37.6157
   },
-  "transport": "Сокольническая линия"
+  "transport": "Метро «Охотный Ряд», «Театральная», «Площадь Революции»"
  },
  "endPoint": {
-  "name": "Метро «Китай-город»",
+  "name": "Метро «Маяковская»",
   "coords": {
-   "lat": 55.756,
-   "lon": 37.631
+   "lat": 55.7698,
+   "lon": 37.5963
   },
-  "transport": "Калужско-Рижская и Таганско-Краснопресненская линии"
+  "transport": "Метро «Маяковская»"
  },
  "route": {
-  "distanceKm": 40.0,
-  "durationH": 8.0,
-  "difficulty": "средний",
-  "shape": "петля",
+  "distanceKm": 18.0,
+  "durationH": 4.4,
+  "difficulty": "лёгкий",
+  "shape": "линейный",
   "surfaceNotes": "Асфальт, плитка набережных, велодорожки; в Зарядье, на Арбате и Красной площади — пешком.",
   "seasonNotes": "С апреля по октябрь; Третьяковка обычно закрыта по понедельникам — проверьте расписание.",
-  "safetyNotes": "Садовое кольцо и мосты — только по тротуарам и переходам; на набережных — по велодорожкам.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -96,8 +98,90 @@
     "Охраняемая территория: соблюдайте требования охраны, не фотографируйте посты."
    ],
    "openingHoursNote": "",
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "tsao-chistye",
+   "name": "Чистые пруды",
+   "coords": {
+    "lat": 55.762,
+    "lon": 37.645
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Прежде пруд называли Поганым. Версий несколько: из-за иноверцев, селившихся рядом, из-за легенды о боярине Кучке или из-за мясников с Мясницкой — последнюю историки считают сомнительной.",
+    "В начале XVIII века Александр Меншиков купил здесь землю и велел расчистить пруд — так он стал Чистым. Прудов по плану XVI века должно было быть три, сделали один, а название осталось во множественном числе."
+   ],
+   "facts": [
+    {
+     "text": "Прежде пруд назывался Поганым.",
+     "sourceUrl": "https://aif.ru/society/history/pochemu_nazyvayutsya_chistye_prudy_hotya_prud_odin",
+     "verified": true
+    },
+    {
+     "text": "Версии названия — иноверцы, боярин Кучка, мясники; последнюю историки ставят под сомнение.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/chistye-prudy/info",
+     "verified": true
+    },
+    {
+     "text": "Меншиков в начале XVIII века купил землю и велел очистить пруд.",
+     "sourceUrl": "https://aif.ru/society/history/pochemu_nazyvayutsya_chistye_prudy_hotya_prud_odin",
+     "verified": true
+    },
+    {
+     "text": "Прудов по плану было три, устроили один.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/chistye-prudy/info",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "tsao-kotelnicheskaya",
+   "name": "Высотка на Котельнической набережной",
+   "coords": {
+    "lat": 55.747,
+    "lon": 37.643
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Дом на Котельнической — одна из самых узнаваемых сталинских «семи сестёр». Он стоит на излучине Москвы-реки при впадении Яузы.",
+    "Проект в ходе работ меняли: отдельные строения объединили в корпуса, перестроили фасад и подняли центральную башню. Строить было трудно — неподходящий грунт, нехватка опыта и техники. Смотрим снаружи: это жилой дом."
+   ],
+   "facts": [
+    {
+     "text": "Высотка — одна из «семи сестёр» сталинской эпохи.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/vysotka-na-kotelnicheskoy/info",
+     "verified": true
+    },
+    {
+     "text": "Адрес — Котельническая набережная, 1/15.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/vysotka-na-kotelnicheskoy/info",
+     "verified": true
+    },
+    {
+     "text": "В ходе строительства меняли проект и увеличили этажность центральной башни.",
+     "sourceUrl": "https://www.vedomosti.ru/gorod/ourcity/articles/istoriya-odnogo-zdaniya-dom-na-kotelnicheskoi-naberezhnoi",
+     "verified": true
+    },
+    {
+     "text": "Высоток планировали больше — построили семь.",
+     "sourceUrl": "https://eksmo.ru/articles/vysotka-na-kotelnicheskoy-naberezhnoy-mify-i-fakty-02-25-ID15697049/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "tsao-zaryadye",
@@ -149,99 +233,6 @@
     "По парку и мосту велосипед ведём."
    ],
    "openingHoursNote": "",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "tsao-kotelnicheskaya",
-   "name": "Высотка на Котельнической набережной",
-   "coords": {
-    "lat": 55.747,
-    "lon": 37.643
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Дом на Котельнической — одна из самых узнаваемых сталинских «семи сестёр». Он стоит на излучине Москвы-реки при впадении Яузы.",
-    "Проект в ходе работ меняли: отдельные строения объединили в корпуса, перестроили фасад и подняли центральную башню. Строить было трудно — неподходящий грунт, нехватка опыта и техники. Смотрим снаружи: это жилой дом."
-   ],
-   "facts": [
-    {
-     "text": "Высотка — одна из «семи сестёр» сталинской эпохи.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/vysotka-na-kotelnicheskoy/info",
-     "verified": true
-    },
-    {
-     "text": "Адрес — Котельническая набережная, 1/15.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/vysotka-na-kotelnicheskoy/info",
-     "verified": true
-    },
-    {
-     "text": "В ходе строительства меняли проект и увеличили этажность центральной башни.",
-     "sourceUrl": "https://www.vedomosti.ru/gorod/ourcity/articles/istoriya-odnogo-zdaniya-dom-na-kotelnicheskoi-naberezhnoi",
-     "verified": true
-    },
-    {
-     "text": "Высоток планировали больше — построили семь.",
-     "sourceUrl": "https://eksmo.ru/articles/vysotka-na-kotelnicheskoy-naberezhnoy-mify-i-fakty-02-25-ID15697049/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 30,
-   "coordsVerified": false
-  },
-  {
-   "id": "tsao-andronikov",
-   "name": "Спасо-Андроников монастырь и музей Рублёва",
-   "coords": {
-    "lat": 55.748,
-    "lon": 37.672
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Монастырь на Яузе основал митрополит Алексий — по обету, данному во время шторма на пути из Константинополя; дату основания источники называют по-разному, 1357 или около 1360 года. Строить поручили Андронику, ученику Сергия Радонежского.",
-    "Здесь был монахом и похоронен Андрей Рублёв. Спасский собор XV века — самый древний из частично сохранившихся храмов Москвы вне Кремля. С 1947 года здесь музей древнерусской культуры имени Рублёва."
-   ],
-   "facts": [
-    {
-     "text": "Основателем считают митрополита Алексия.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/moscow/churches/andronikov-monastery.htm",
-     "verified": true
-    },
-    {
-     "text": "Дата основания — 1357 или около 1360 года, источники расходятся.",
-     "sourceUrl": "https://www.culture.ru/objects/2114/spaso-andronikov-monastir-v-moskve",
-     "verified": false
-    },
-    {
-     "text": "Первым настоятелем был Андроник, ученик Сергия Радонежского.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/moscow/churches/andronikov-monastery.htm",
-     "verified": true
-    },
-    {
-     "text": "Рублёв был монахом монастыря и похоронен здесь.",
-     "sourceUrl": "https://kudago.com/msk/place/andronikov-monastyr/",
-     "verified": true
-    },
-    {
-     "text": "Спасский собор — древнейший из частично сохранившихся храмов Москвы вне Кремля.",
-     "sourceUrl": "https://www.culture.ru/objects/2114/spaso-andronikov-monastir-v-moskve",
-     "verified": true
-    },
-    {
-     "text": "Заповедник имени Рублёва основан 10 декабря 1947 года.",
-     "sourceUrl": "https://moskvichmag.ru/?p=216461",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
    "order": 40,
    "coordsVerified": false
   },
@@ -363,86 +354,53 @@
     "Действующий храм: на территорию с велосипедом не заходим."
    ],
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "tsao-novodevichy",
-   "name": "Новодевичий монастырь",
-   "coords": {
-    "lat": 55.7263,
-    "lon": 37.5562
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Монастырь заложил в 1524 году великий князь Василий III — как крепость на дороге к Смоленску; основание связывают и с возвращением Смоленска.",
-    "В 2004 году ансамбль внесли в список Всемирного наследия ЮНЕСКО. У стен — пруд, лучшее место для фото."
-   ],
-   "facts": [
-    {
-     "text": "Монастырь заложен в 1524 году Василием III.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/moscow/churches/novodevichy-convent.htm",
-     "verified": true
-    },
-    {
-     "text": "Он был крепостью на дороге в Смоленск.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/moscow/churches/novodevichy-convent.htm",
-     "verified": true
-    },
-    {
-     "text": "В 2004 году монастырь внесён в список ЮНЕСКО.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/moscow/churches/novodevichy-convent.htm",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 80,
+   "order": 70,
    "coordsVerified": false
   },
   {
-   "id": "tsao-vorobyovy",
-   "name": "Воробьёвы горы и МГУ",
+   "id": "tsao-gogolevsky",
+   "name": "Гоголевский бульвар и памятник Гоголю",
    "coords": {
-    "lat": 55.7106,
-    "lon": 37.553
+    "lat": 55.7515,
+    "lon": 37.6005
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
+   "kind": "проезжаем",
+   "visitMinutes": 20,
    "guideStory": [
-    "Со смотровой площадки на Воробьёвых горах видна вся излучина Москвы-реки и стадион «Лужники», открытый 31 июля 1956 года — здесь прошёл финал чемпионата мира 2018 года. Позади — главное здание МГУ, самая высокая из семи высоток, достроенная в 1953 году.",
-    "По рассказам, здание сначала хотели поставить на краю гор, где сейчас смотровая; архитектор Борис Иофан спорил с переносом и был отстранён от стройки."
+    "Гоголевский бульвар — часть Бульварного кольца, проложенного на месте снесённых стен Белого города. Едем по нему от Пречистенских ворот к Арбатской площади.",
+    "В начале бульвара в 1909 году поставили памятник Гоголю работы Николая Андреева, созданный на собранные по всей стране деньги. В 1951 году его убрали, и в 1952-м на этом месте открыли новый памятник работы Николая Томского с надписью «От Советского правительства»."
    ],
    "facts": [
     {
-     "text": "«Лужники» открыты 31 июля 1956 года; здесь прошёл финал ЧМ-2018.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D1%83%D0%B6%D0%BD%D0%B8%D0%BA%D0%B8_(%D1%81%D1%82%D0%B0%D0%B4%D0%B8%D0%BE%D0%BD)",
+     "text": "Первый памятник Гоголю работы Николая Андреева установили в начале бульвара в 1909 году.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/points/monuments/pamyatnik_gogolyu",
      "verified": true
     },
     {
-     "text": "Главное здание МГУ — самое высокое из семи высоток, достроено в 1953 году.",
-     "sourceUrl": "https://aif.ru/realty/city/1355510",
+     "text": "В 1951 году памятник Андреева убрали, и на его месте появился монумент работы Николая Томского.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/points/monuments/pamyatnik_gogolyu",
      "verified": true
     },
     {
-     "text": "Здание сначала планировали поставить на краю Воробьёвых гор.",
-     "sourceUrl": "https://mel.fm/vuz/8276135-msu_fact",
+     "text": "Памятник Томского открыли в марте 1952 года, к столетию со дня смерти писателя (называют 2 и 4 марта).",
+     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/points/monuments/pamyatnik_gogolyu",
      "verified": true
     },
     {
-     "text": "Иофан возражал против переноса и был отстранён.",
-     "sourceUrl": "https://mel.fm/vuz/8276135-msu_fact",
+     "text": "Андреевский памятник перенесли в Донской монастырь, а затем во двор дома № 7 на Никитском бульваре.",
+     "sourceUrl": "https://www.mk.ru/daily/hotnews/article/2014/03/11/996661-pamyatnik-gogolyu-uberut-s-nikitskogo-bulvara.html",
+     "verified": true
+    },
+    {
+     "text": "Бульвары Москвы образуют кольцо на месте стен Белого города.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%D1%8B_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 90,
+   "order": 80,
    "coordsVerified": false
   },
   {
@@ -491,8 +449,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 100
+   "order": 90,
+   "coordsVerified": false
   },
   {
    "id": "tsao-patriki",
@@ -543,48 +501,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 110
-  },
-  {
-   "id": "tsao-chistye",
-   "name": "Чистые пруды",
-   "coords": {
-    "lat": 55.762,
-    "lon": 37.645
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Прежде пруд называли Поганым. Версий несколько: из-за иноверцев, селившихся рядом, из-за легенды о боярине Кучке или из-за мясников с Мясницкой — последнюю историки считают сомнительной.",
-    "В начале XVIII века Александр Меншиков купил здесь землю и велел расчистить пруд — так он стал Чистым. Прудов по плану XVI века должно было быть три, сделали один, а название осталось во множественном числе."
-   ],
-   "facts": [
-    {
-     "text": "Прежде пруд назывался Поганым.",
-     "sourceUrl": "https://aif.ru/society/history/pochemu_nazyvayutsya_chistye_prudy_hotya_prud_odin",
-     "verified": true
-    },
-    {
-     "text": "Версии названия — иноверцы, боярин Кучка, мясники; последнюю историки ставят под сомнение.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/chistye-prudy/info",
-     "verified": true
-    },
-    {
-     "text": "Меншиков в начале XVIII века купил землю и велел очистить пруд.",
-     "sourceUrl": "https://aif.ru/society/history/pochemu_nazyvayutsya_chistye_prudy_hotya_prud_odin",
-     "verified": true
-    },
-    {
-     "text": "Прудов по плану было три, устроили один.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/chistye-prudy/info",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 120,
+   "order": 100,
    "coordsVerified": false
   }
  ],
@@ -642,91 +559,107 @@
    "url": "https://www.kp.ru/russia/moskva/mesta/patriarshie-prudy/"
   },
   {
-   "title": "Новодевичий монастырь — advantour",
-   "url": "https://www.advantour.com/rus/russia/moscow/churches/novodevichy-convent.htm"
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/materials/38919"
   },
   {
-   "title": "Лужники — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9B%D1%83%D0%B6%D0%BD%D0%B8%D0%BA%D0%B8_(%D1%81%D1%82%D0%B0%D0%B4%D0%B8%D0%BE%D0%BD)"
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/moskva/istoriia"
+  },
+  {
+   "title": "Источник: netfreedom.org.ua",
+   "url": "https://netfreedom.org.ua/ru/koly-bula-zasnovana-moskva-istoriia-fakty-ta-lehendy/"
+  },
+  {
+   "title": "Источник: aif.ru",
+   "url": "https://aif.ru/society/history/pochemu_nazyvayutsya_chistye_prudy_hotya_prud_odin"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/chistye-prudy/info"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.547419,
-     55.7106
+     37.585914,
+     55.7495
     ],
     [
-     37.548167,
-     55.709028
+     37.586662,
+     55.747928
     ],
     [
-     37.55021,
-     55.707877
+     37.596164,
+     55.728228
     ],
     [
-     37.553,
-     55.707456
+     37.598208,
+     55.727077
     ],
     [
-     37.55579,
-     55.707877
+     37.601,
+     55.726656
     ],
     [
-     37.674793,
-     55.745277
+     37.603792,
+     55.727077
     ],
     [
-     37.676838,
-     55.746428
+     37.645793,
+     55.744277
     ],
     [
-     37.677586,
-     55.748
+     37.647838,
+     55.745428
     ],
     [
-     37.676838,
-     55.749572
+     37.648586,
+     55.747
     ],
     [
-     37.674793,
-     55.750723
+     37.650588,
+     55.762
+    ],
+    [
+     37.64984,
+     55.763572
     ],
     [
      37.647794,
      55.764723
     ],
     [
-     37.645,
-     55.765144
+     37.599095,
+     55.772523
     ],
     [
-     37.5925,
-     55.766744
+     37.5963,
+     55.772944
     ],
     [
-     37.589706,
-     55.766323
+     37.593505,
+     55.772523
+    ],
+    [
+     37.59146,
+     55.771372
     ],
     [
      37.58766,
      55.765172
     ],
     [
-     37.551365,
-     55.727872
+     37.586912,
+     55.7636
     ],
     [
-     37.550617,
-     55.7263
-    ],
-    [
-     37.547419,
-     55.7106
+     37.585914,
+     55.7495
     ]
    ]
   ]

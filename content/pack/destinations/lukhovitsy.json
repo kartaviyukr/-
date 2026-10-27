@@ -13,8 +13,8 @@
   "Луховицы — «огуречная столица России». «Луховицкие огурцы» — бренд и символ качества; изначально так называли разные сорта, хорошо родившие в окрестностях города.",
   "Огуречный промысел в пойме Оки развивается с 1930-х годов, расцвет пришёлся на 1970-е. В центре города стоит памятник огурцу, летом проходит праздник «Луховицкий огурец».",
   "Село долго оставалось малозаметным, пока в середине XIX века через него не прошла дорога Москва — Рязань; к началу XX века Луховицы стали важным пунктом.",
-  "Свои места маршрута: «Памятник огурцу», «Праздник огурца», «Станционный посёлок», «Луховицкий авиазавод». По пути маршрут заходит и к соседям: Коломна — «Слияние Москвы-реки и Оки», «Старо-Голутвин монастырь», «Успенский собор на Соборной площади»; Бобренев монастырь — «Обетная обитель».",
-  "Маршрут линейный, около 40 км и 8 точек. Финиш — Станция «Коломна» (Электрички Казанского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станционный посёлок», «Луховицкий авиазавод», «Памятник огурцу», «Праздник огурца». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 6 км: старт и финиш — Станция «Луховицы» (Электрички Казанского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Луховицы»",
@@ -25,116 +25,24 @@
   "transport": "Электрички Казанского направления"
  },
  "endPoint": {
-  "name": "Станция «Коломна»",
+  "name": "Станция «Луховицы»",
   "coords": {
-   "lat": 55.103,
-   "lon": 38.753
+   "lat": 54.9652,
+   "lon": 39.0255
   },
   "transport": "Электрички Казанского направления"
  },
  "route": {
-  "distanceKm": 40.0,
-  "durationH": 4.8,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 6.2,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "lukhovitsy-ogurets",
-   "name": "Памятник огурцу",
-   "coords": {
-    "lat": 54.967,
-    "lon": 39.03
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В центре Луховиц стоит памятник огурцу. «Луховицкие огурцы» изначально — собирательное понятие: так называли разные сорта, хорошо плодоносящие в окрестностях города.",
-    "Расцвет огуречного производства пришёлся на 1970-е годы; фермерских хозяйств здесь много и сегодня."
-   ],
-   "facts": [
-    {
-     "text": "В центре города стоит памятник огурцу.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": true
-    },
-    {
-     "text": "«Луховицкие огурцы» — собирательное название сортов.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": true
-    },
-    {
-     "text": "Расцвет пришёлся на 1970-е годы.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": true
-    },
-    {
-     "text": "Луховицы называют огуречной столицей России.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Координаты памятника приблизительные.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "lukhovitsy-prazdnik",
-   "name": "Праздник огурца",
-   "coords": {
-    "lat": 54.966,
-    "lon": 39.028
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Летом в Луховицах проходит семейный фестиваль «Луховицкий огурец»; его организуют администрация округа и Дом культуры «Старт».",
-    "Промысел в пойме Оки, по «Рамблеру», развивается с 1930-х годов. Следующая точка маршрута — «Станционный посёлок»."
-   ],
-   "facts": [
-    {
-     "text": "В Луховицах проходит фестиваль «Луховицкий огурец».",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": true
-    },
-    {
-     "text": "Организаторы — администрация и ДК «Старт».",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": true
-    },
-    {
-     "text": "Промысел развивается с 1930-х — по Рамблеру.",
-     "sourceUrl": "https://weekend.rambler.ru/items/37259587-zhiteli-i-gosti-luhovits-otmetili-prazdnik-ogurtsa/",
-     "verified": true
-    },
-    {
-     "text": "Даты праздника меняются.",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
   {
    "id": "lukhovitsy-stantsiya",
    "name": "Станционный посёлок",
@@ -178,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "lukhovitsy-aviazavod",
@@ -214,162 +122,99 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 40,
+   "order": 20,
    "coordsVerified": false
   },
   {
-   "id": "lukhovitsy-sliyanie",
-   "name": "Слияние Москвы-реки и Оки",
+   "id": "lukhovitsy-ogurets",
+   "name": "Памятник огурцу",
    "coords": {
-    "lat": 55.066,
-    "lon": 38.828
+    "lat": 54.967,
+    "lon": 39.03
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Здесь заканчивается Москва-река: у Коломны она впадает в Оку. Город возник именно на этой развилке водных путей, и первое летописное упоминание Коломны относят к 1177 году.",
-    "С берега хорошо видно, как меняется ширина и цвет воды. Ниже по течению — мосты через Оку; к воде спускайтесь только по тропинкам, берег местами обрывистый."
+    "В центре Луховиц стоит памятник огурцу. «Луховицкие огурцы» изначально — собирательное понятие: так называли разные сорта, хорошо плодоносящие в окрестностях города.",
+    "Расцвет огуречного производства пришёлся на 1970-е годы; фермерских хозяйств здесь много и сегодня."
    ],
    "facts": [
     {
-     "text": "Москва-река впадает в Оку у Коломны.",
-     "sourceUrl": "https://bigenc.ru/c/kolomna-ac301e",
+     "text": "В центре города стоит памятник огурцу.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
      "verified": true
     },
     {
-     "text": "Первое упоминание Коломны относят к 1177 году.",
-     "sourceUrl": "https://bigenc.ru/c/kolomna-ac301e",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 50,
-   "coordsVerified": false
-  },
-  {
-   "id": "lukhovitsy-staro-golutvin",
-   "name": "Старо-Голутвин монастырь",
-   "coords": {
-    "lat": 55.069,
-    "lon": 38.815
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Богоявленский монастырь стоит у места, где Москва-река впадает в Оку. По житийной традиции его основал Сергий Радонежский в 1385 году по просьбе князя Дмитрия и поставил игуменом своего ученика Григория.",
-    "В 1764 году монастырь упразднили, а в 1800-м митрополит Платон объединил его с Бобреневым монастырём на другом берегу. Сейчас это действующая мужская обитель: ведите себя тихо."
-   ],
-   "facts": [
-    {
-     "text": "По житийному тексту, Голутвин монастырь основал Сергий Радонежский в 1385 году по желанию князя Дмитрия.",
-     "sourceUrl": "https://www.azbyka.ru/otechnik/Mihail_Tolstoj/kniga-glagolemaja-opisanie-o-rossijskih-svjatyh-gde-i-v-kotorom-grade-ili-oblasti-ili-monastyre-i-pustyni-pozhive-i-chudesa-sotvori-vsjakogo-china-svjatyh/57",
+     "text": "«Луховицкие огурцы» — собирательное название сортов.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
      "verified": true
     },
     {
-     "text": "Игуменом Сергий поставил своего ученика Григория.",
-     "sourceUrl": "https://www.azbyka.ru/otechnik/Mihail_Tolstoj/kniga-glagolemaja-opisanie-o-rossijskih-svjatyh-gde-i-v-kotorom-grade-ili-oblasti-ili-monastyre-i-pustyni-pozhive-i-chudesa-sotvori-vsjakogo-china-svjatyh/57",
+     "text": "Расцвет пришёлся на 1970-е годы.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
      "verified": true
     },
     {
-     "text": "Монастырь упразднили в 1764 году, а в 1800-м объединили с Бобреневым.",
-     "sourceUrl": "https://www.azbyka.ru/otechnik/Mihail_Tolstoj/kniga-glagolemaja-opisanie-o-rossijskih-svjatyh-gde-i-v-kotorom-grade-ili-oblasti-ili-monastyre-i-pustyni-pozhive-i-chudesa-sotvori-vsjakogo-china-svjatyh/57",
+     "text": "Луховицы называют огуречной столицей России.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B",
      "verified": true
     },
     {
-     "text": "Точная дата основания неизвестна; летописи относят обитель к XIV веку.",
-     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/bogoyavlenskiy-staro-golutvin-muzhskoy-monastyr/info",
+     "text": "Координаты памятника приблизительные.",
+     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 60,
+   "order": 30,
    "coordsVerified": false
   },
   {
-   "id": "lukhovitsy-obet",
-   "name": "Обетная обитель",
+   "id": "lukhovitsy-prazdnik",
+   "name": "Праздник огурца",
    "coords": {
-    "lat": 55.0702,
-    "lon": 38.7905
+    "lat": 54.966,
+    "lon": 39.028
    },
-   "kind": "смотреть снаружи",
+   "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "Монастырь называют «Обетным». По одной версии, Боброк дал обет перед Куликовской битвой; по житию, Донской дал обет после победы, вернувшись в Коломну.",
-    "Мы приводим обе версии и не выбираем между ними. Следующая точка маршрута — «Успенский собор на Соборной площади»."
+    "Летом в Луховицах проходит семейный фестиваль «Луховицкий огурец»; его организуют администрация округа и Дом культуры «Старт».",
+    "Промысел в пойме Оки, по «Рамблеру», развивается с 1930-х годов. Финиш — Станция «Луховицы»: Электрички Казанского направления."
    ],
    "facts": [
     {
-     "text": "Монастырь называют «Обетным».",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "text": "В Луховицах проходит фестиваль «Луховицкий огурец».",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
      "verified": true
     },
     {
-     "text": "Версия об обете Боброка перед битвой.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
-     "verified": false
+     "text": "Организаторы — администрация и ДК «Старт».",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
+     "verified": true
     },
     {
-     "text": "Версия об обете Донского после победы — по житию.",
-     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info",
+     "text": "Промысел развивается с 1930-х — по Рамблеру.",
+     "sourceUrl": "https://weekend.rambler.ru/items/37259587-zhiteli-i-gosti-luhovits-otmetili-prazdnik-ogurtsa/",
+     "verified": true
+    },
+    {
+     "text": "Даты праздника меняются.",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
      "verified": false
     },
     {
      "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
+     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "lukhovitsy-uspensky",
-   "name": "Успенский собор на Соборной площади",
-   "coords": {
-    "lat": 55.103,
-    "lon": 38.753
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Главный храм Коломенского кремля стоит на Соборной площади. Первый собор здесь заложил Дмитрий Донской в 1379 году — по преданию, достраивали его уже после победы на Куликовом поле.",
-    "Нынешнее пятиглавое здание возвели заново в 1672–1682 годах на месте обветшавшего белокаменного предшественника. Рядом — Тихвинская церковь и шатровая колокольня: вместе они и образуют площадь."
-   ],
-   "facts": [
-    {
-     "text": "Успенский собор в Коломне заложен в 1379 году великим князем Дмитрием Донским.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_(%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%BD%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Пятиглавый собор заново отстроен в 1672–1682 годах.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/kolomna-kremlin.htm",
-     "verified": true
-    },
-    {
-     "text": "Собор достроили вскоре после победы на Куликовом поле — так пишет справочник паломника.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%81%D0%BE%D0%B1%D0%BE%D1%80_(%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D0%BD%D0%B0)",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 80,
+   "order": 40,
    "coordsVerified": false
   }
  ],
@@ -406,47 +251,35 @@
    "url": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B"
   },
   {
-   "title": "Маринкина башня — Спутник8",
-   "url": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info"
+   "title": "Источник: currenttime.tv",
+   "url": "https://www.currenttime.tv/a/unknown-russia/30639188.html"
   },
   {
-   "title": "Сувениры Коломны — Спутник8",
-   "url": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry"
+   "title": "Источник: cyclowiki.org",
+   "url": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0"
   },
   {
-   "title": "Коломна за день — РГ",
-   "url": "https://rg.ru/2023/08/30/reg-cfo/chto-posmotret-v-kolomne-za-odin-den.html"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/"
   },
   {
-   "title": "Бобренев монастырь — advantour",
-   "url": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm"
-  },
-  {
-   "title": "Бобренёв монастырь — Спутник8",
-   "url": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info"
+   "title": "Источник: weekend.rambler.ru",
+   "url": "https://weekend.rambler.ru/items/37259587-zhiteli-i-gosti-luhovits-otmetili-prazdnik-ogurtsa/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.747504,
-     55.103
+     39.019523,
+     54.965
     ],
     [
-     38.748241,
-     55.101428
-    ],
-    [
-     38.785745,
-     55.068628
-    ],
-    [
-     38.787754,
-     55.067477
+     39.020257,
+     54.963428
     ],
     [
      39.022262,
@@ -489,24 +322,24 @@
      54.984723
     ],
     [
-     38.755748,
-     55.105723
+     39.045,
+     54.985144
     ],
     [
-     38.753,
-     55.106144
+     39.04226,
+     54.984723
     ],
     [
-     38.750252,
-     55.105723
+     39.040255,
+     54.983572
     ],
     [
-     38.748241,
-     55.104572
+     39.020257,
+     54.966572
     ],
     [
-     38.747504,
-     55.103
+     39.019523,
+     54.965
     ]
    ]
   ]
