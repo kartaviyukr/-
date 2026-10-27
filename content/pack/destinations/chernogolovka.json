@@ -13,8 +13,8 @@
   "Черноголовка — город учёных в лесу, основанный в 1956 году как экспериментальная база Института химической физики на месте бывшего военного полигона.",
   "Место выбрали академик Николай Семёнов и его ученик Фёдор Дубовицкий — для опытов с взрывчатыми веществами и ракетными топливами. В том же 1956 году Семёнов получил Нобелевскую премию по химии вместе с Сирилом Хиншелвудом — за теорию цепных реакций.",
   "В 1962 году начали строить второй институт; со временем здесь появилось семь научных институтов. Сноб писал о Черноголовке как о городе модернистской архитектуры.",
-  "Свои места маршрута: «Научный центр», «Квартира-музей Семёнова», «Город в лесу». По пути маршрут заходит и к соседям: Фряново — «Шёлковая фабрика»; Радонеж — «Преображенская церковь»; Хотьково — «Монастырская жизнь»; Сергиев Посад — «Успенский собор», «Вид на лавру».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Сергиев Посад» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Мозаики и скульптуры наукограда», «Город в лесу», «Парк имени 40-летия ВЛКСМ», «Квартира-музей Семёнова», «Научный центр». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Остановка «Черноголовка» (Автобусы от метро «Щёлковская» — уточняйте). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Черноголовка»",
@@ -25,118 +25,59 @@
   "transport": "Автобусы от метро «Щёлковская» — уточняйте"
  },
  "endPoint": {
-  "name": "Станция «Сергиев Посад»",
+  "name": "Остановка «Черноголовка»",
   "coords": {
-   "lat": 56.3082,
-   "lon": 38.1385
+   "lat": 56.0102,
+   "lon": 38.3795
   },
-  "transport": "Электрички Ярославского направления"
+  "transport": "Автобусы до метро «Щёлковская»"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.8,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.8,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "chernogolovka-nauka",
-   "name": "Научный центр",
+   "id": "chernogolovka-mozaiki",
+   "name": "Мозаики и скульптуры наукограда",
    "coords": {
-    "lat": 56.012,
-    "lon": 38.385
+    "lat": 56.011,
+    "lon": 38.378
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Черноголовка возникла в 1956 году как экспериментальная база Института химической физики. Энциклопедия называет дату основания «1956 (1958)», вторая дата, вероятно, относится к оформлению.",
-    "Полигоном по поручению Семёнова руководил Фёдор Дубовицкий, будущий член-корреспондент АН СССР. В 1962 году начали строить второй институт, позже их стало семь."
+    "Черноголовка начиналась как полигон для опытов со взрывчаткой, а выросла в город-сад для учёных; почти все её достопримечательности связаны с наукой, по городу много мозаик, скульптур и муралов.",
+    "В 1956 году Семёнов получил Нобелевскую премию за теорию цепных реакций."
    ],
    "facts": [
     {
-     "text": "Черноголовка основана в 1956 году как база Института химической физики.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "text": "Черноголовка была полигоном для опытов со взрывчаткой.",
+     "sourceUrl": "https://daily.afisha.ru/cities/26052-astrofestival-i-science-art-zachem-ehat-v-chernogolovku-na-vyhodnye/",
      "verified": true
     },
     {
-     "text": "Место выбрали Семёнов и Дубовицкий.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "text": "В городе много мозаик, скульптур и муралов.",
+     "sourceUrl": "https://daily.afisha.ru/cities/26052-astrofestival-i-science-art-zachem-ehat-v-chernogolovku-na-vyhodnye/",
      "verified": true
     },
     {
-     "text": "Энциклопедия указывает дату основания «1956 (1958)».",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    },
-    {
-     "text": "В 1962 году началось строительство второго института.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "text": "Семёнов получил Нобелевскую премию в 1956 году.",
+     "sourceUrl": "https://daily.afisha.ru/cities/26052-astrofestival-i-science-art-zachem-ehat-v-chernogolovku-na-vyhodnye/",
      "verified": true
-    },
-    {
-     "text": "Сейчас в Черноголовке семь научных институтов.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
     }
    ],
-   "warnings": [
-    "Территории институтов закрыты."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "chernogolovka-semenov",
-   "name": "Квартира-музей Семёнова",
-   "coords": {
-    "lat": 56.01,
-    "lon": 38.382
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Академик Николай Семёнов — основатель Черноголовки и Института химической физики. В 1956 году он получил Нобелевскую премию вместе с Сирилом Хиншелвудом за теорию цепных реакций.",
-    "РИАМО писало о квартире нобелевского лауреата — музее академика Семёнова в Черноголовке."
-   ],
-   "facts": [
-    {
-     "text": "Семёнов — основатель Черноголовки.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
-     "verified": true
-    },
-    {
-     "text": "Семёнов получил Нобелевскую премию в 1956 году вместе с Хиншелвудом.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
-     "verified": true
-    },
-    {
-     "text": "Премия присуждена за теорию цепных реакций.",
-     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
-     "verified": true
-    },
-    {
-     "text": "В Черноголовке есть квартира-музей Семёнова.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/",
-     "verified": true
-    },
-    {
-     "text": "Часы работы музея не проверены.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "chernogolovka-les",
@@ -182,242 +123,134 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "chernogolovka-fabrika",
-   "name": "Шёлковая фабрика",
+   "id": "chernogolovka-park-vlksm",
+   "name": "Парк имени 40-летия ВЛКСМ",
    "coords": {
-    "lat": 56.129,
-    "lon": 38.455
+    "lat": 56.006,
+    "lon": 38.38
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "По статье о Лазаревых, в 1735 году Лазарь Назарович Лазарев основал во Фрянове шёлковую мануфактуру и вскоре стал поставщиком императорского двора. Другой источник называет основателем фабрики И. Ф. Шеримана.",
-    "Лазаревы получили российское дворянство в 1776 году. Иван Лазаревич был придворным ювелиром Екатерины II."
+    "Одна из главных достопримечательностей — парк имени 40-летия ВЛКСМ; летом по озеру можно покататься на лодке.",
+    "Город основали учёные Николай Семёнов и его ученик Фёдор Дубовицкий. Следующая точка маршрута — «Квартира-музей Семёнова»."
    ],
    "facts": [
     {
-     "text": "Лазарь Лазарев основал шёлковую мануфактуру во Фрянове в 1735 году.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    },
-    {
-     "text": "Другой источник связывает фабрику с И. Ф. Шериманом.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A4%D1%80%D1%8F%D0%BD%D0%BE%D0%B2%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Лазаревы получили дворянство в 1776 году.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
+     "text": "В парке имени 40-летия ВЛКСМ летом катаются на лодках по озеру.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0",
      "verified": true
     },
     {
-     "text": "Иван Лазаревич был придворным ювелиром Екатерины II.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)",
-     "verified": true
-    },
-    {
-     "text": "Выставка показывала развитие Фряновской шелкоткацкой фабрики.",
-     "sourceUrl": "https://riamo.ru/news/kultura/vystavka-o-dinastii-lazarevyh-otkroetsja-v-usadbe-frjanovo-5-avgusta/",
+     "text": "Город основали Николай Семёнов и Фёдор Дубовицкий.",
+     "sourceUrl": "https://daily.afisha.ru/cities/26052-astrofestival-i-science-art-zachem-ehat-v-chernogolovku-na-vyhodnye/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "chernogolovka-khram",
-   "name": "Преображенская церковь",
+   "id": "chernogolovka-semenov",
+   "name": "Квартира-музей Семёнова",
    "coords": {
-    "lat": 56.2405,
-    "lon": 38.0305
+    "lat": 56.01,
+    "lon": 38.382
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
    "guideStory": [
-    "В Радонеже стоит церковь Преображения Господня; в фотоархиве sobory.ru её фото собраны под адресом «Радонеж (Городок)».",
-    "Подробной истории постройки храма мы в найденных источниках не нашли.",
-    "Храм действующий; от него едем к валам древнего города. Следующая точка маршрута — «Монастырская жизнь»."
+    "Академик Николай Семёнов — основатель Черноголовки и Института химической физики. В 1956 году он получил Нобелевскую премию вместе с Сирилом Хиншелвудом за теорию цепных реакций.",
+    "РИАМО писало о квартире нобелевского лауреата — музее академика Семёнова в Черноголовке."
    ],
    "facts": [
     {
-     "text": "В Радонеже есть церковь Преображения Господня.",
-     "sourceUrl": "https://sobory.ru/photo/192923",
+     "text": "Семёнов — основатель Черноголовки.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
      "verified": true
     },
     {
-     "text": "История постройки храма не найдена.",
-     "sourceUrl": "https://sobory.ru/photo/192923",
-     "verified": false
-    },
-    {
-     "text": "КП включает храм в «намоленные места» Подмосковья.",
-     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
+     "text": "Семёнов получил Нобелевскую премию в 1956 году вместе с Хиншелвудом.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
      "verified": true
     },
     {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/192923",
+     "text": "Премия присуждена за теорию цепных реакций.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "В Черноголовке есть квартира-музей Семёнова.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы музея не проверены.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/kvartira-nobelevskogo-laureata-muzej-akademika-semenova-v-chernogolovke-xl/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "chernogolovka-nauka",
+   "name": "Научный центр",
+   "coords": {
+    "lat": 56.012,
+    "lon": 38.385
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Черноголовка возникла в 1956 году как экспериментальная база Института химической физики. Энциклопедия называет дату основания «1956 (1958)», вторая дата, вероятно, относится к оформлению.",
+    "Полигоном по поручению Семёнова руководил Фёдор Дубовицкий, будущий член-корреспондент АН СССР. В 1962 году начали строить второй институт, позже их стало семь."
+   ],
+   "facts": [
+    {
+     "text": "Черноголовка основана в 1956 году как база Института химической физики.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "Место выбрали Семёнов и Дубовицкий.",
+     "sourceUrl": "https://snob.ru/society/chernogolovke-70-gorod-uchenykh-modernistskoi-arkhitektury-i-nobelevskikh-istorii/",
+     "verified": true
+    },
+    {
+     "text": "Энциклопедия указывает дату основания «1956 (1958)».",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
      "verified": false
     },
     {
-     "text": "Храм действующий.",
-     "sourceUrl": "https://sobory.ru/photo/192923",
+     "text": "В 1962 году началось строительство второго института.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "verified": true
+    },
+    {
+     "text": "Сейчас в Черноголовке семь научных институтов.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
      "verified": false
     }
    ],
    "warnings": [
-    "Действующий храм."
+    "Территории институтов закрыты."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "chernogolovka-pansion",
-   "name": "Монастырская жизнь",
-   "coords": {
-    "lat": 56.2505,
-    "lon": 37.9955
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "При монастыре действуют детский пансион и гостиница для паломников.",
-    "Хотьково — начало пути «по Радонежской земле»: дальше — Радонеж и Сергиев Посад, у которых в спирали свои маршруты. Следующая точка маршрута — «Успенский собор». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
-   ],
-   "facts": [
-    {
-     "text": "При монастыре действуют детский пансион и гостиница для паломников.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Экскурсии по местам жизни Сергия включают Хотьково.",
-     "sourceUrl": "https://www.sputnik8.com/ru/sergiev-posad/activities/28236-ekskursiya-po-mestam-zhizni-i-prebyvaniem-prepodobnogo-sergiya-radonezhskogo",
-     "verified": true
-    },
-    {
-     "text": "Монастырь описан на Культура.РФ.",
-     "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Состав экскурсий может меняться.",
-     "sourceUrl": "https://www.sputnik8.com/ru/sergiev-posad/activities/28236-ekskursiya-po-mestam-zhizni-i-prebyvaniem-prepodobnogo-sergiya-radonezhskogo",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "chernogolovka-uspensky",
-   "name": "Успенский собор",
-   "coords": {
-    "lat": 56.31,
-    "lon": 38.131
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Крупнейшее сооружение монастыря — Успенский собор, построенный в 1559–1585 годах по образцу Успенского собора Московского Кремля.",
-    "В 1408 году монастырь разграбил и сжёг ордынский темник; большинство построек, включая деревянную церковь, погибло. В 1744 году указом Елизаветы Петровны монастырь стал лаврой.",
-    "После 1917 года лавру закрыли; в 1946 году началось её возрождение."
-   ],
-   "facts": [
-    {
-     "text": "Успенский собор построен в 1559–1585 годах по образцу кремлёвского.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2_%D0%9F%D0%BE%D1%81%D0%B0%D0%B4",
-     "verified": true
-    },
-    {
-     "text": "В 1408 году монастырь разграблен и сожжён.",
-     "sourceUrl": "https://www.pnp.ru/social/kak-sozdavalas-troice-sergieva-lavra.html",
-     "verified": true
-    },
-    {
-     "text": "В 1744 году монастырь получил звание лавры.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Лавру закрыли после 1917 года, возрождение началось в 1946-м.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/sergiev_posad/history",
-     "verified": true
-    },
-    {
-     "text": "Лавра — объект Всемирного наследия ЮНЕСКО.",
-     "sourceUrl": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "chernogolovka-vid",
-   "name": "Вид на лавру",
-   "coords": {
-    "lat": 56.312,
-    "lon": 38.127
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Город вырос вокруг монастыря, а не крепости или торговой площади. Датой основания принято считать 1337 год — эта дата условная, принятая традицией.",
-    "Со смотровых мест за пределами стен хорошо видна вся лавра. Выберите место у дороги и сделайте фото."
-   ],
-   "facts": [
-    {
-     "text": "Город сложился вокруг монастыря.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Датой основания принято считать 1337 год.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Дата 1337 год — принятая, а не доказанная.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Координаты смотровой точки приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Лавра описана на Культура.РФ.",
-     "sourceUrl": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -458,55 +291,27 @@
    "url": "https://znanierussia.ru/articles/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
   },
   {
-   "title": "Усадьба Фряново — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A4%D1%80%D1%8F%D0%BD%D0%BE%D0%B2%D0%BE"
+   "title": "Источник: daily.afisha.ru",
+   "url": "https://daily.afisha.ru/cities/26052-astrofestival-i-science-art-zachem-ehat-v-chernogolovku-na-vyhodnye/"
   },
   {
-   "title": "Лазаревы — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9B%D0%B0%D0%B7%D0%B0%D1%80%D0%B5%D0%B2%D1%8B_(%D0%B0%D1%80%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%BE%D0%B4)"
+   "title": "Источник: teletype.in",
+   "url": "https://teletype.in/@apfound/ykuzfeGdsI2"
   },
   {
-   "title": "Радонеж — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6"
-  },
-  {
-   "title": "Храм в Радонеже — КП",
-   "url": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/"
-  },
-  {
-   "title": "Покровский Хотьков монастырь — 360",
-   "url": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/"
-  },
-  {
-   "title": "Азбука паломника",
-   "url": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Троице-Сергиева лавра — Культура.РФ",
-   "url": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade"
-  },
-  {
-   "title": "Как создавалась лавра — ПНП",
-   "url": "https://www.pnp.ru/social/kak-sozdavalas-troice-sergieva-lavra.html"
-  },
-  {
-   "title": "Сергиев Посад — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2_%D0%9F%D0%BE%D1%81%D0%B0%D0%B4"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.989841,
-     56.2505
-    ],
-    [
-     37.990599,
-     56.248928
+     38.369376,
+     56.008
     ],
     [
      38.37013,
@@ -517,68 +322,60 @@
      56.005277
     ],
     [
-     38.375,
-     56.004856
+     38.377188,
+     56.003277
     ],
     [
-     38.377812,
-     56.005277
+     38.38,
+     56.002856
     ],
     [
-     38.384812,
-     56.007277
+     38.382812,
+     56.003277
     ],
     [
-     38.386871,
-     56.008428
+     38.38487,
+     56.004428
     ],
     [
      38.389871,
      56.010428
     ],
     [
-     38.459886,
-     56.127428
+     38.390624,
+     56.012
     ],
     [
-     38.460641,
-     56.129
+     38.389871,
+     56.013572
     ],
     [
-     38.459886,
-     56.130572
+     38.387812,
+     56.014723
     ],
     [
-     38.143408,
-     56.309772
+     38.385,
+     56.015144
     ],
     [
-     38.141334,
-     56.310923
+     38.378,
+     56.014144
     ],
     [
-     38.129834,
-     56.314723
+     38.375188,
+     56.013723
     ],
     [
-     38.127,
-     56.315144
+     38.373129,
+     56.012572
     ],
     [
-     38.124166,
-     56.314723
+     38.37013,
+     56.009572
     ],
     [
-     37.99267,
-     56.253223
-    ],
-    [
-     37.990599,
-     56.252072
-    ],
-    [
-     37.989841,
-     56.2505
+     38.369376,
+     56.008
     ]
    ]
   ]
