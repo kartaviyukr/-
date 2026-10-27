@@ -13,72 +13,72 @@
   "Красноармейск — город на реке Воре, выросший из села Муромцево, Вознесенской бумагопрядильной мануфактуры и посёлка при артиллерийском полигоне.",
   "До 1928 года он назывался Муромцево, до 1929-го — Краснофлотский, затем Красноармейский. 12 марта 1947 года посёлок стал городом Красноармейском, а в 1992 году — городом областного подчинения.",
   "Текстильная и научно-оборонная части, по описанию одного путеводителя, до сих пор читаются в разных кварталах. Маршрут: фабричная часть, берег Вори и новый город.",
-  "Свои места маршрута: «Вознесенская мануфактура», «Берег Вори», «Новый город». По пути маршрут заходит и к соседям: Фрязино — «Центр наукограда»; Щёлково — «Набережная Клязьмы»; Королёв — «Сквер Покорителей космоса»; Мытищи — «Памятник 200-летию водопровода», «Памятник Екатерине II».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Мытищи» (Электрички Ярославского направления, станция Мытищи), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Новый город», «Берег Вори», «Московские ворота», «Вознесенская мануфактура». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Красноармейск, центр (До ближайшей станции — Станция «Ашукинская», около 13 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Ашукинская»",
+  "name": "Красноармейск, центр",
   "coords": {
-   "lat": 56.144,
-   "lon": 37.948
+   "lat": 56.104,
+   "lon": 38.14
   },
-  "transport": "Электрички Ярославского направления; далее автобус — уточняйте"
+  "transport": "До ближайшей станции — Станция «Ашукинская», около 13 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Мытищи»",
+  "name": "Красноармейск, центр",
   "coords": {
-   "lat": 55.9105,
-   "lon": 37.734
+   "lat": 56.104,
+   "lon": 38.14
   },
-  "transport": "Электрички Ярославского направления, станция Мытищи"
+  "transport": "До ближайшей станции — Станция «Ашукинская», около 13 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.8,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.5,
+  "durationH": 0.9,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "krasnoarmeysk-manufaktura",
-   "name": "Вознесенская мануфактура",
+   "id": "krasnoarmeysk-gorod",
+   "name": "Новый город",
    "coords": {
-    "lat": 56.11,
-    "lon": 38.13
+    "lat": 56.104,
+    "lon": 38.14
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "kind": "проезжаем",
+   "visitMinutes": 15,
    "guideStory": [
-    "Город вырос вокруг Вознесенской бумагопрядильной мануфактуры на реке Воре; энциклопедическая статья начинает историю с 1834 года, но подробности в найденном тексте обрываются.",
-    "Корпуса фабрики формируют облик старой части города. Внутрь не заходим — территория может быть закрыта."
+    "12 марта 1947 года посёлок стал городом Красноармейском. Город рос вместе с оборонной промышленностью страны.",
+    "7 сентября 1992 года Красноармейск получил статус города областного подчинения. Текстильная и оборонная линии, по описанию путеводителя, читаются в разных кварталах."
    ],
    "facts": [
     {
-     "text": "Город вырос из села Муромцево, Вознесенской мануфактуры и посёлка при полигоне.",
+     "text": "12 марта 1947 года посёлок преобразован в город.",
      "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
      "verified": true
     },
     {
-     "text": "История города в энциклопедии начинается с 1834 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": false
+     "text": "Город рос вместе с оборонной промышленностью.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": true
     },
     {
-     "text": "Мануфактура стоит на реке Воре.",
+     "text": "7 сентября 1992 года — статус города областного подчинения.",
      "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
      "verified": true
     },
     {
-     "text": "Доступ на территорию фабрики не проверен.",
+     "text": "Текстильные и оборонные кварталы читаются в облике города.",
      "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA",
      "verified": false
     },
     {
-     "text": "Координаты фабрики приблизительные.",
+     "text": "Координаты центра приблизительные.",
      "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
      "verified": false
     }
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "krasnoarmeysk-vorya",
@@ -134,291 +134,85 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "krasnoarmeysk-gorod",
-   "name": "Новый город",
+   "id": "krasnoarmeysk-vorota",
+   "name": "Московские ворота",
    "coords": {
-    "lat": 56.104,
-    "lon": 38.14
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "12 марта 1947 года посёлок стал городом Красноармейском. Город рос вместе с оборонной промышленностью страны.",
-    "7 сентября 1992 года Красноармейск получил статус города областного подчинения. Текстильная и оборонная линии, по описанию путеводителя, читаются в разных кварталах."
-   ],
-   "facts": [
-    {
-     "text": "12 марта 1947 года посёлок преобразован в город.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "Город рос вместе с оборонной промышленностью.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "7 сентября 1992 года — статус города областного подчинения.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "Текстильные и оборонные кварталы читаются в облике города.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA",
-     "verified": false
-    },
-    {
-     "text": "Координаты центра приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "krasnoarmeysk-tsentr",
-   "name": "Центр наукограда",
-   "coords": {
-    "lat": 55.962,
-    "lon": 38.042
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Институтские кварталы Фрязина выросли после войны вокруг НИИ; в 1951 году посёлок стал городом.",
-    "29 декабря 2003 года Фрязину присвоили статус наукограда. Название связывают с «фрягами» — итальянцами-строителями Кремля, но это лишь предположение."
-   ],
-   "facts": [
-    {
-     "text": "В 1951 году Фрязино получило статус города.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
-     "verified": true
-    },
-    {
-     "text": "29 декабря 2003 года Фрязину присвоен статус наукограда.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/16521",
-     "verified": true
-    },
-    {
-     "text": "Связь названия с «фрягами» — гипотеза, не подтверждённая источниками.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Вокруг НИИ выросли институтские кварталы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
-     "verified": true
-    },
-    {
-     "text": "Фрязино — наукоград Российской Федерации.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/16521",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "krasnoarmeysk-klyazma",
-   "name": "Набережная Клязьмы",
-   "coords": {
-    "lat": 55.924,
-    "lon": 38.005
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Щёлково стоит на берегах Клязьмы — река отражена и в символике городского флага.",
-    "Река давала фабрикам воду для промывки и окраски тканей, а теперь даёт горожанам место для прогулок и рыбалки.",
-    "Вдоль Клязьмы возвращаемся к станции: петля по фабричному городу замкнута, и река проводит нас до самой железной дороги."
-   ],
-   "facts": [
-    {
-     "text": "Город расположен на Клязьме, что отражено в символике флага.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — промышленный город с текстильной историей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-schelkovo-216393/",
-     "verified": true
-    },
-    {
-     "text": "Набережная — место прогулок горожан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/schyolkovo/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Щёлкова описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — центр городского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "krasnoarmeysk-skver",
-   "name": "Сквер Покорителей космоса",
-   "coords": {
-    "lat": 55.919,
-    "lon": 37.846
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "На центральной площади наукограда — сквер Покорителей космоса с памятником Королёву и Гагарину: конструктор и первый космонавт вместе.",
-    "Отсюда начинается любая прогулка по Королёву: вокруг — улицы, названные в честь космонавтов и учёных."
-   ],
-   "facts": [
-    {
-     "text": "В сквере Покорителей космоса стоит памятник Королёву и Гагарину.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": true
-    },
-    {
-     "text": "Сквер расположен на центральной площади наукограда.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": true
-    },
-    {
-     "text": "Население Королёва в 2020 году — 224 348 человек.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": true
-    },
-    {
-     "text": "Интересные места Королёва перечисляет KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/list/interesnye-mesta-v-korolyove/",
-     "verified": true
-    },
-    {
-     "text": "Год установки памятника в найденных источниках не указан.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "krasnoarmeysk-vodoprovod",
-   "name": "Памятник 200-летию водопровода",
-   "coords": {
-    "lat": 55.912,
-    "lon": 37.75
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1779 году Екатерина II повелела найти источники чистой воды для Москвы. Их нашли у Мытищ, и 8 ноября 1804 года заработал Мытищинский водопровод — первый в России.",
-    "Строительством руководил военный инженер Фридрих Вильгельм Бауэр, а в перестройках участвовали Николай Зимин, Владимир Шухов и другие инженеры. До открытия канала имени Москвы в 1937 году водопровод оставался единственным источником воды для столицы."
-   ],
-   "facts": [
-    {
-     "text": "В 1779 году Екатерина II повелела найти источники чистой воды для Москвы.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "Мытищинский водопровод начал работать 8 ноября 1804 года.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "Строительство возглавлял военный инженер Фридрих Вильгельм Бауэр.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "До постройки канала имени Москвы в 1937 году водопровод был единственным источником воды для столицы.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "В перестройках участвовали Николай Зимин и Владимир Шухов.",
-     "sourceUrl": "https://moskvichmag.ru/?p=395137",
-     "verified": true
-    },
-    {
-     "text": "В Мытищах установлен памятник в честь 200-летия первого российского водопровода.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/mytitshi/pamyatnik-v-chest-200-letiya-pervogo-rossiyskogo-vodoprovoda/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "krasnoarmeysk-ekaterina",
-   "name": "Памятник Екатерине II",
-   "coords": {
-    "lat": 55.917,
-    "lon": 37.738
+    "lat": 56.1082,
+    "lon": 38.1322
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 10,
    "guideStory": [
-    "Памятник Екатерине II в Мытищах — благодарность императрице за водопровод: именно её указ 1779 года отправил инженеров искать чистую воду к северу от Москвы.",
-    "По преданию, сама Екатерина, проезжая через Мытищи, попробовала здешнюю воду и оценила её, но это именно предание."
+    "Кирпичные ворота 1878 года отмечают старый въезд на Вознесенскую бумагопрядильную мануфактуру; они изображены на гербе города.",
+    "Город вырос из села Муромцево, мануфактуры и посёлка при артиллерийском полигоне, которые объединились в 1947 году."
    ],
    "facts": [
     {
-     "text": "В Мытищах установлен памятник Екатерине II.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/mytitshi/pamyatnik-ekaterine-ii/",
+     "text": "Московские ворота построены в 1878 году и изображены на гербе.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/krasnoarmeyskqee/",
      "verified": true
     },
     {
-     "text": "Указ о поиске источников воды для Москвы Екатерина II издала в 1779 году.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "Предание о том, что Екатерина пробовала мытищинскую воду, в найденных источниках не подтверждено.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/mytitshi/pamyatnik-ekaterine-ii/",
-     "verified": false
-    },
-    {
-     "text": "Водопровод проектировал и строил Фридрих Бауэр.",
-     "sourceUrl": "https://moskvichmag.ru/?p=395137",
-     "verified": true
-    },
-    {
-     "text": "Путеводитель насчитывает в Мытищах десятки достопримечательностей, включая памятники.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9C%D1%8B%D1%82%D0%B8%D1%89",
+     "text": "Город сложился из Муромцева, мануфактуры и посёлка полигона в 1947 году.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnoarmeisk-542463/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnoarmeysk-manufaktura",
+   "name": "Вознесенская мануфактура",
+   "coords": {
+    "lat": 56.11,
+    "lon": 38.13
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Город вырос вокруг Вознесенской бумагопрядильной мануфактуры на реке Воре; энциклопедическая статья начинает историю с 1834 года, но подробности в найденном тексте обрываются.",
+    "Корпуса фабрики формируют облик старой части города. Внутрь не заходим — территория может быть закрыта."
+   ],
+   "facts": [
+    {
+     "text": "Город вырос из села Муромцево, Вознесенской мануфактуры и посёлка при полигоне.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
+     "verified": true
+    },
+    {
+     "text": "История города в энциклопедии начинается с 1834 года.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
+     "verified": false
+    },
+    {
+     "text": "Мануфактура стоит на реке Воре.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
+     "verified": true
+    },
+    {
+     "text": "Доступ на территорию фабрики не проверен.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Координаты фабрики приблизительные.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -455,95 +249,59 @@
    "url": "https://znanierussia.ru/articles/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
   },
   {
-   "title": "История Фрязина — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA"
   },
   {
-   "title": "Фрязино — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/"
+   "title": "Источник: znanierussia.ru",
+   "url": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)"
   },
   {
-   "title": "НПП «Исток» — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB"
+   "title": "Источник: en.wikipedia.org",
+   "url": "https://en.wikipedia.org/wiki/Krasnoarmeysk,_Moscow_Oblast"
   },
   {
-   "title": "История Щёлкова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/krasnoarmeyskqee/"
   },
   {
-   "title": "Щёлково — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/shchelkovo/history"
-  },
-  {
-   "title": "Флаг Щёлкова — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0"
-  },
-  {
-   "title": "Космические города — Вокруг света",
-   "url": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/"
-  },
-  {
-   "title": "ЦУП останется в Королёве — Хабр",
-   "url": "https://habr.com/ru/post/946620"
-  },
-  {
-   "title": "Промсектор Королёва — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/v-promsektore-koroleva-rabotaet-svyshe-23-tys-chelovek/"
-  },
-  {
-   "title": "Мытищинский водопровод — mos.ru",
-   "url": "https://www.mos.ru/news/item/77912073"
-  },
-  {
-   "title": "Мытищи — Большая российская энциклопедия",
-   "url": "https://bigenc.ru/c/mytishchi-cc250b"
-  },
-  {
-   "title": "Достопримечательности Мытищ — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9C%D1%8B%D1%82%D0%B8%D1%89"
-  },
-  {
-   "title": "Памятники Мытищ — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/mytitshi/monuments/"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnoarmeisk-542463/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.72839,
-     55.9105
+     38.124361,
+     56.11
     ],
     [
-     37.729142,
-     55.908928
+     38.125117,
+     56.108428
     ],
     [
-     37.731195,
-     55.907777
+     38.130117,
+     56.103428
     ],
     [
-     37.734,
-     55.907356
+     38.132181,
+     56.102277
     ],
     [
-     38.005,
-     55.920856
+     38.137181,
+     56.101277
     ],
     [
-     38.007806,
-     55.921277
+     38.14,
+     56.100856
     ],
     [
-     38.00986,
-     55.922428
-    ],
-    [
-     38.046864,
-     55.960428
+     38.142819,
+     56.101277
     ],
     [
      38.144882,
@@ -566,32 +324,20 @@
      56.112723
     ],
     [
-     37.950822,
-     56.146723
+     38.13,
+     56.113144
     ],
     [
-     37.948,
-     56.147144
+     38.127181,
+     56.112723
     ],
     [
-     37.945178,
-     56.146723
+     38.125117,
+     56.111572
     ],
     [
-     37.943113,
-     56.145572
-    ],
-    [
-     37.733141,
-     55.918572
-    ],
-    [
-     37.729142,
-     55.912072
-    ],
-    [
-     37.72839,
-     55.9105
+     38.124361,
+     56.11
     ]
    ]
   ]

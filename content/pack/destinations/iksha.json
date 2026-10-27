@@ -12,8 +12,8 @@
  "intro": [
   "Икша — рабочий посёлок Дмитровского округа на канале имени Москвы. Рядом стоят шлюзы № 5 и № 6, а местные деревни, по краеведческому сборнику, упоминаются ещё в межевых грамотах Ивана III 1496 и 1504 годов.",
   "Канал строили с 1932 по 1936 год, первые суда прошли через шлюзы 1 мая 1937 года, а официально их ввели в эксплуатацию 15 июля 1937 года.",
-  "Свои места маршрута: «Посёлок Икша», «Шлюз № 6», «Берег канала и шлюз № 5». По пути маршрут заходит и к соседям: Деденево — «Берег канала»; Яхрома — «Перемиловская высота», «Суконная фабрика»; Дмитров — «Город князей»; Николо-Пешношский монастырь — «Преображенская церковь».",
-  "Маршрут линейный, около 67 км и 8 точек. Финиш — Станция «Дмитров» (Электрички Савёловского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Посёлок Икша», «Берег канала и шлюз № 5», «Шлюз № 6», «Узловая станция Икша». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 6 км: старт и финиш — Станция «Икша» (Электрички Савёловского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Икша»",
@@ -24,21 +24,21 @@
   "transport": "Электрички Савёловского направления"
  },
  "endPoint": {
-  "name": "Станция «Дмитров»",
+  "name": "Станция «Икша»",
   "coords": {
-   "lat": 56.344,
-   "lon": 37.52
+   "lat": 56.1702,
+   "lon": 37.5005
   },
   "transport": "Электрички Савёловского направления"
  },
  "route": {
-  "distanceKm": 67.0,
-  "durationH": 7.3,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 5.8,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -85,8 +85,55 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "iksha-kanal",
+   "name": "Берег канала и шлюз № 5",
+   "coords": {
+    "lat": 56.155,
+    "lon": 37.515
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Рядом — шлюз № 5; его строили с 1932 по 1936 год и приняли в эксплуатацию 15 июля 1937 года.",
+    "Ещё при Николае I в 1825–1850 годах строили Екатерининский канал между Волгой и Москвой, но он просуществовал всего около десяти лет. Следующая точка маршрута — «Шлюз № 6»."
+   ],
+   "facts": [
+    {
+     "text": "Шлюз № 5 строили с 1932 по 1936 год.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": true
+    },
+    {
+     "text": "Шлюз № 5 принят в эксплуатацию 15 июля 1937 года.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": true
+    },
+    {
+     "text": "Екатерининский канал строили в 1825–1850 годах.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Екатерининский канал просуществовал около 10 лет.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Координаты шлюза № 5 приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "iksha-shlyuz",
@@ -100,7 +147,7 @@
    "guideStory": [
     "Шлюз № 6 канала имени Москвы стоит неподалёку от Икши. Автором его архитектуры назван Г. Г. Вегман.",
     "Канал строили с 1932 по 1936 год, чтобы дать Москве волжскую воду и судоходство. Первые суда прошли через шлюзы 1 мая 1937 года, официальный ввод — 15 июля 1937 года.",
-    "Шлюз — охраняемое сооружение; смотрим с общедоступных мест. Следующая точка маршрута — «Берег канала и шлюз № 5»."
+    "Шлюз — охраняемое сооружение; смотрим с общедоступных мест. Следующая точка маршрута — «Узловая станция Икша»."
    ],
    "facts": [
     {
@@ -134,289 +181,39 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "iksha-kanal",
-   "name": "Берег канала и шлюз № 5",
+   "id": "iksha-stantsiya",
+   "name": "Узловая станция Икша",
    "coords": {
-    "lat": 56.155,
-    "lon": 37.515
+    "lat": 56.1725,
+    "lon": 37.5045
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 5,
    "guideStory": [
-    "Рядом — шлюз № 5; его строили с 1932 по 1936 год и приняли в эксплуатацию 15 июля 1937 года.",
-    "Ещё при Николае I в 1825–1850 годах строили Екатерининский канал между Волгой и Москвой, но он просуществовал всего около десяти лет. Следующая точка маршрута — «Берег канала»."
+    "Икша — узловая станция: здесь Савёловское направление пересекается с Большим кольцом Московской железной дороги.",
+    "Селения вокруг упоминаются ещё в межевой грамоте Ивана III дмитровскому князю Юрию Ивановичу 1496 и 1504 годов. Финиш — Станция «Икша»: Электрички Савёловского направления."
    ],
    "facts": [
     {
-     "text": "Шлюз № 5 строили с 1932 по 1936 год.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "text": "Икша — узловая станция Савёловского направления и Большого кольца МЖД.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
      "verified": true
     },
     {
-     "text": "Шлюз № 5 принят в эксплуатацию 15 июля 1937 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Екатерининский канал строили в 1825–1850 годах.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Екатерининский канал просуществовал около 10 лет.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Координаты шлюза № 5 приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "iksha-kanal-2",
-   "name": "Берег канала",
-   "coords": {
-    "lat": 56.24,
-    "lon": 37.525
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Деденево стоит на берегу канала имени Москвы. Отсюда видно, как проходят суда по пути между Волгой и Москвой.",
-    "Холмы вокруг Деденева — часть Клинско-Дмитровской гряды; на склонах зимой катаются на лыжах. Это общая информация, конкретные трассы мы не проверяли."
-   ],
-   "facts": [
-    {
-     "text": "Посёлок стоит на берегу канала имени Москвы.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Холмы вокруг — часть Клинско-Дмитровской гряды.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Горнолыжные трассы не проверены.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "До посёлка удобно ехать до станции «Турист».",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "iksha-vysota",
-   "name": "Перемиловская высота",
-   "coords": {
-    "lat": 56.285,
-    "lon": 37.5
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Перемиловская высота названа по селу Перемилово на восточном берегу канала напротив Яхромы. С 27 ноября по 5 декабря 1941 года здесь шли бои: это один из рубежей, где остановили немецкие войска.",
-    "Подъём на высоту крутой — велосипед, возможно, придётся вести. Сверху виден канал и город.",
-    "Минуту помолчим у мемориала и вернёмся к станции. Следующая точка маршрута — «Суконная фабрика»."
-   ],
-   "facts": [
-    {
-     "text": "Название — по селу Перемилово на восточном берегу канала.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Бои шли с 27 ноября по 5 декабря 1941 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Это один из рубежей, где остановили наступление на Москву.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "На высоте есть мемориал.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Крутизна подъёма — оценка составителя.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Крутой подъём."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "iksha-fabrika",
-   "name": "Суконная фабрика",
-   "coords": {
-    "lat": 56.29,
-    "lon": 37.48
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "По одной версии, история Яхромы как города начинается в 1841 году, когда здесь основали суконную фабрику. Вскоре её купил и модернизировал московский купец Иван Лямин.",
-    "Поселения на этих землях существовали и раньше, так что дата условна."
-   ],
-   "facts": [
-    {
-     "text": "В 1841 году основана суконная фабрика — по одной версии, начало истории города.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Фабрику купил и модернизировал купец Иван Лямин.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Поселения здесь существовали и раньше.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Состояние фабричных корпусов не проверено.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
+     "text": "Окрестные селения упоминаются в межевой грамоте 1496 и 1504 годов.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "iksha-knyazya",
-   "name": "Город князей",
-   "coords": {
-    "lat": 56.345,
-    "lon": 37.52
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По одному источнику, в 1301 году в Дмитрове прошёл съезд четырёх князей. В 1364 году город вошёл в состав Московского княжества.",
-    "Tripster называет Дмитров «ровесником столицы» — Москва впервые упомянута в 1147 году, всего на семь лет раньше предания о Дмитрове."
-   ],
-   "facts": [
-    {
-     "text": "В 1301 году в Дмитрове прошёл съезд четырёх князей — по одному источнику.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    },
-    {
-     "text": "В 1364 году Дмитров вошёл в Московское княжество.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": true
-    },
-    {
-     "text": "Дмитров называют ровесником столицы.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": true
-    },
-    {
-     "text": "Москва впервые упомянута в 1147 году.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "iksha-preobrazhenie",
-   "name": "Преображенская церковь",
-   "coords": {
-    "lat": 56.4102,
-    "lon": 37.3905
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В монастыре стоит церковь Преображения Господня; в колокольне — церковь Мефодия Пешношского. Фотографии собраны на sobory.ru.",
-    "Название «Пешношский», по преданию, связано с тем, что Мефодий носил брёвна для обители на себе через реку."
-   ],
-   "facts": [
-    {
-     "text": "В монастыре есть церковь Преображения Господня.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
-     "verified": true
-    },
-    {
-     "text": "В колокольне — церковь Мефодия Пешношского.",
-     "sourceUrl": "https://sobory.ru/photo/99987",
-     "verified": true
-    },
-    {
-     "text": "Происхождение названия — по преданию.",
-     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
-     "verified": false
-    },
-    {
-     "text": "Датировку церквей мы не сверяли.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -453,48 +250,28 @@
    "url": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B"
   },
   {
-   "title": "«Турист» хана Деденя — За рулём",
-   "url": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/"
+   "title": "Источник: znanierussia.ru",
+   "url": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0"
   },
   {
-   "title": "Деденево — knls.net",
-   "url": "https://knls.net/?p=13068"
+   "title": "Источник: books.yandex.ru",
+   "url": "https://books.yandex.ru/books/AAmnUscU/read-online"
   },
   {
-   "title": "Перемиловская высота — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/v-dmitrovskom-okruge-opredelili-zadachi-po-razvitiju-poselka-iksha/"
   },
   {
-   "title": "Шлюз № 3 — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963"
-  },
-  {
-   "title": "Ровесник столицы — Tripster",
-   "url": "https://experience.tripster.ru/articles/dmitrov/"
-  },
-  {
-   "title": "История Дмитрова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/dmitrov/istoriia"
-  },
-  {
-   "title": "Мефодий Пешношский — Азбука веры",
-   "url": "https://azbyka.ru/days/sv-mefodij-peshnoshskij"
-  },
-  {
-   "title": "Описание монастыря — Калайдович",
-   "url": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/"
+   "title": "Источник: znanierussia.ru",
+   "url": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
-    [
-     37.384817,
-     56.4102
-    ],
     [
      37.494353,
      56.17
@@ -528,40 +305,40 @@
      56.155
     ],
     [
-     37.530658,
-     56.24
+     37.519889,
+     56.156572
     ],
     [
-     37.525673,
-     56.345
+     37.51489,
+     56.166572
     ],
     [
-     37.524913,
-     56.346572
+     37.509391,
+     56.174072
     ],
     [
-     37.522837,
-     56.347723
+     37.507324,
+     56.175223
     ],
     [
-     37.393342,
-     56.412923
+     37.5045,
+     56.175644
     ],
     [
-     37.3905,
-     56.413344
+     37.501676,
+     56.175223
     ],
     [
-     37.387658,
-     56.412923
+     37.497176,
+     56.172723
     ],
     [
-     37.385578,
-     56.411772
+     37.495109,
+     56.171572
     ],
     [
-     37.384817,
-     56.4102
+     37.494353,
+     56.17
     ]
    ]
   ]

@@ -13,8 +13,8 @@
   "Софрино — посёлок на Ярославской дороге, известный по художественно-производственному предприятию Русской православной церкви. Здесь делают церковную утварь, иконы, облачения, свечи и книги.",
   "По данным RTVI, предприятие появилось в 1980 году; на его сайте сказано, что это одно из крупнейших предприятий Подмосковья, где работает около трёх тысяч человек.",
   "Рядом — старое село Софрино с церковью Смоленской иконы Божией Матери. Историю села мы в найденных источниках не нашли и не придумываем.",
-  "Свои места маршрута: «Предприятие «Софрино»», «Церковь Всех Святых», «Село Софрино и Смоленская церковь». По пути маршрут заходит и к соседям: Абрамцево — «Парк над Ворей»; Радонеж — «Древний город»; Хотьково — «Покровский Хотьков монастырь»; Сергиев Посад — «Вид на лавру»; Богородское — «Бывшее поселение».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Сергиев Посад» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Софрино», «Предприятие «Софрино»», «Домовая церковь Серафима Саровского», «Церковь Всех Святых». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Станция «Софрино» (Электрички Ярославского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Софрино»",
@@ -25,24 +25,60 @@
   "transport": "Электрички Ярославского направления"
  },
  "endPoint": {
-  "name": "Станция «Сергиев Посад»",
+  "name": "Станция «Софрино»",
   "coords": {
-   "lat": 56.3082,
-   "lon": 38.1385
+   "lat": 56.1502,
+   "lon": 37.9305
   },
   "transport": "Электрички Ярославского направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.9,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 3.3,
+  "durationH": 0.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "sofrino-stantsiya",
+   "name": "Станция Софрино",
+   "coords": {
+    "lat": 56.1512,
+    "lon": 37.929
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Станцию открыли в 1862 году под названием Талицы; нынешнее имя она носит с 1904 года, электричка пришла в 1931-м.",
+    "Само место впервые упоминается в 1631 году как Сафарино; рабочим посёлком Софрино стало в 1958 году. Следующая точка маршрута — «Предприятие «Софрино»»."
+   ],
+   "facts": [
+    {
+     "text": "Станция открыта в 1862 году как Талицы и переименована в 1904 году.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%BE%D1%84%D1%80%D0%B8%D0%BD%D0%BE_(%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)",
+     "verified": true
+    },
+    {
+     "text": "Первое упоминание — 1631 год, Сафарино.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%BE%D1%84%D1%80%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Рабочий посёлок с 1958 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%BE%D1%84%D1%80%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "sofrino-predpriyatie",
    "name": "Предприятие «Софрино»",
@@ -86,8 +122,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "sofrino-serafim",
+   "name": "Домовая церковь Серафима Саровского",
+   "coords": {
+    "lat": 56.1566,
+    "lon": 37.9452
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "При художественно-производственном предприятии «Софрино» устроена домовая церковь Серафима Саровского.",
+    "Храм находится на третьем этаже здания. Следующая точка маршрута — «Церковь Всех Святых». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "При ХПП «Софрино» есть домовая церковь Серафима Саровского.",
+     "sourceUrl": "https://sobory.ru/photo/311015",
+     "verified": true
+    },
+    {
+     "text": "Церковь расположена на третьем этаже.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/sofrino/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "sofrino-vse-svyatye",
@@ -101,7 +168,7 @@
    "guideStory": [
     "В посёлке стоит церковь Всех Святых, в земле Российской просиявших. Её фотографии собраны на sobory.ru.",
     "Историю и датировку храма мы в найденных источниках не нашли и поэтому не приводим.",
-    "Отсюда по дороге через поля едем в старое село Софрино. Следующая точка маршрута — «Село Софрино и Смоленская церковь»."
+    "Отсюда по дороге через поля едем в старое село Софрино. Финиш — Станция «Софрино»: Электрички Ярославского направления."
    ],
    "facts": [
     {
@@ -135,289 +202,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "sofrino-selo",
-   "name": "Село Софрино и Смоленская церковь",
-   "coords": {
-    "lat": 56.16,
-    "lon": 37.91
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Старое село Софрино стоит в стороне от посёлка. Главный памятник — церковь Смоленской иконы Божией Матери.",
-    "Дату постройки храма и историю села мы по открытым источникам не установили. Если вам интересно — спросите у прихожан. Следующая точка маршрута — «Парк над Ворей»."
-   ],
-   "facts": [
-    {
-     "text": "В селе Софрино есть церковь Смоленской иконы Божией Матери.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": true
-    },
-    {
-     "text": "Дата постройки храма нами не установлена.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": false
-    },
-    {
-     "text": "История села в найденных источниках не раскрыта.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": false
-    },
-    {
-     "text": "Координаты села приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": false
-    },
-    {
-     "text": "Село относится к Пушкинскому округу.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "sofrino-vorya",
-   "name": "Парк над Ворей",
-   "coords": {
-    "lat": 56.233,
-    "lon": 37.965
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Музей-заповедник стоит на берегу реки Вори, примерно в 60 километрах от Москвы, рядом с Сергиевым Посадом.",
-    "В 1995 году указом президента он получил статус объекта наследия федерального значения; в собрании более 25 тысяч экспонатов."
-   ],
-   "facts": [
-    {
-     "text": "Абрамцево стоит на берегу Вори, примерно в 60 км от Москвы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "В 1995 году музей-заповедник получил статус федерального значения.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "В собрании более 25 тысяч экспонатов.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "«Известия» публиковали фотогалерею Абрамцева.",
-     "sourceUrl": "https://iz.ru/948952/gallery/abramtcevo",
-     "verified": true
-    },
-    {
-     "text": "Тропы парка мы не проверяли.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/abramtsevo/info",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "sofrino-gorodishche",
-   "name": "Древний город",
-   "coords": {
-    "lat": 56.2395,
-    "lon": 38.0295
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Радонеж стоял на Переяславском тракте. В древних рукописях упомянуты семь храмов и два монастыря, а население доходило до 4–5 тысяч человек — по меркам XIV века это немало.",
-    "В октябре 1989 года указом Президиума Верховного Совета РСФСР село Городок переименовали в Радонеж."
-   ],
-   "facts": [
-    {
-     "text": "Радонеж стоял на Переяславском тракте.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
-     "verified": true
-    },
-    {
-     "text": "В рукописях упомянуты 7 храмов и 2 монастыря.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
-     "verified": true
-    },
-    {
-     "text": "Население достигало 4–5 тысяч человек.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
-     "verified": false
-    },
-    {
-     "text": "В октябре 1989 года село Городок переименовано в Радонеж.",
-     "sourceUrl": "https://en.wikipedia.com/wiki/Radonezh",
-     "verified": true
-    },
-    {
-     "text": "Родство Рублёва с этими местами — мнение историков.",
-     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "sofrino-monastyr",
-   "name": "Покровский Хотьков монастырь",
-   "coords": {
-    "lat": 56.25,
-    "lon": 37.995
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Монастырь впервые упоминается в летописях в 1308 году; время его основания неизвестно.",
-    "Родители Сергия Радонежского, Кирилл и Мария, приняли здесь постриг в 1330-е годы и жили до смерти в 1337 году. В 1992 году их канонизировали. Монастырь закрыли в 1921 году и вернули Церкви в 1991-м.",
-    "Действующий женский монастырь: платок, юбка, тишина. Следующая точка маршрута — «Вид на лавру»."
-   ],
-   "facts": [
-    {
-     "text": "Монастырь впервые упомянут в летописях в 1308 году.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/",
-     "verified": true
-    },
-    {
-     "text": "Здесь похоронены Кирилл и Мария, родители Сергия.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Они приняли постриг в 1330-е и умерли в 1337 году.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/",
-     "verified": true
-    },
-    {
-     "text": "Кирилл и Мария канонизированы в 1992 году.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/",
-     "verified": true
-    },
-    {
-     "text": "Монастырь закрыт в 1921 году, возвращён в 1991-м.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "sofrino-vid",
-   "name": "Вид на лавру",
-   "coords": {
-    "lat": 56.312,
-    "lon": 38.127
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Город вырос вокруг монастыря, а не крепости или торговой площади. Датой основания принято считать 1337 год — эта дата условная, принятая традицией.",
-    "Со смотровых мест за пределами стен хорошо видна вся лавра. Выберите место у дороги и сделайте фото."
-   ],
-   "facts": [
-    {
-     "text": "Город сложился вокруг монастыря.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Датой основания принято считать 1337 год.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Дата 1337 год — принятая, а не доказанная.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Координаты смотровой точки приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Лавра описана на Культура.РФ.",
-     "sourceUrl": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "sofrino-poselenie",
-   "name": "Бывшее поселение",
-   "coords": {
-    "lat": 56.3895,
-    "lon": 38.2495
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Богородское было центром городского поселения; в него входили 11 сёл и деревень, в том числе Шубино и Муханово.",
-    "1 апреля 2019 года район и поселения объединили в Сергиево-Посадский городской округ. Финиш — Станция «Сергиев Посад»: Электрички Ярославского направления."
-   ],
-   "facts": [
-    {
-     "text": "В поселение входили посёлок и 11 сёл и деревень.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Среди них — Шубино и Муханово.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В 2019 году образован Сергиево-Посадский городской округ.",
-     "sourceUrl": "https://bigenc.ru/c/sergiev-posad-111975",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -454,67 +240,43 @@
    "url": "https://rtvi.com/news/stranger-things-in-sofrino/"
   },
   {
-   "title": "Абрамцево — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)"
+   "title": "Источник: ru.ruwiki.ru",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%BE%D1%84%D1%80%D0%B8%D0%BD%D0%BE_(%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)"
   },
   {
-   "title": "Абрамцево — Tripster",
-   "url": "https://experience.tripster.ru/journal/articles/usadba-abramcevo/"
+   "title": "Источник: ru.ruwiki.ru",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%BE%D1%84%D1%80%D0%B8%D0%BD%D0%BE"
   },
   {
-   "title": "Абрамцевский кружок — KudaGo",
-   "url": "https://kudago.com/all/news/abramtsevskij-kruzhok-art-/"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/311015"
   },
   {
-   "title": "Радонеж — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/sofrino/"
   },
   {
-   "title": "Храм в Радонеже — КП",
-   "url": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/"
-  },
-  {
-   "title": "Покровский Хотьков монастырь — 360",
-   "url": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/"
-  },
-  {
-   "title": "Азбука паломника",
-   "url": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Троице-Сергиева лавра — Культура.РФ",
-   "url": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade"
-  },
-  {
-   "title": "Как создавалась лавра — ПНП",
-   "url": "https://www.pnp.ru/social/kak-sozdavalas-troice-sergieva-lavra.html"
-  },
-  {
-   "title": "Сергиев Посад — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2_%D0%9F%D0%BE%D1%81%D0%B0%D0%B4"
-  },
-  {
-   "title": "Поселение Богородское — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/83617"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.904354,
-     56.16
+     37.923355,
+     56.1512
     ],
     [
-     37.90511,
-     56.158428
+     37.924112,
+     56.149628
     ],
     [
-     37.907177,
-     56.157277
+     37.925112,
+     56.148428
     ],
     [
      37.927178,
@@ -533,56 +295,48 @@
      56.149277
     ],
     [
-     37.939889,
-     56.150428
+     37.948023,
+     56.153877
     ],
     [
-     37.944889,
-     56.153428
+     37.950089,
+     56.155028
     ],
     [
-     38.254419,
-     56.387928
+     37.950845,
+     56.1566
     ],
     [
-     38.25518,
-     56.3895
+     37.950089,
+     56.158172
     ],
     [
-     38.254419,
-     56.391072
+     37.948023,
+     56.159323
     ],
     [
-     38.25234,
-     56.392223
+     37.9452,
+     56.159744
     ],
     [
-     38.2495,
-     56.392644
+     37.942377,
+     56.159323
     ],
     [
-     38.24666,
-     56.392223
+     37.937177,
+     56.157723
     ],
     [
-     37.99217,
-     56.252723
+     37.926178,
+     56.153923
     ],
     [
-     37.990099,
-     56.251572
+     37.924112,
+     56.152772
     ],
     [
-     37.960101,
-     56.234572
-    ],
-    [
-     37.90511,
-     56.161572
-    ],
-    [
-     37.904354,
-     56.16
+     37.923355,
+     56.1512
     ]
    ]
   ]
