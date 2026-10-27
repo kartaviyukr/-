@@ -13,8 +13,8 @@
   "Серебряные Пруды — посёлок на самом краю Московской области, на реке Осётр. Это последняя точка нашей спирали.",
   "Военное прошлое села известно с XVI века: в конце XVI–XVII веков край входил в Большую засечную черту, и Серебряные Пруды были острогом — форпостом защиты рубежей. В 1606–1607 годах здесь действовал Иван Болотников.",
   "С 1743 по 1917 год серебрянопрудскими землями владели Шереметевы.",
-  "Свои места маршрута: «Острог засечной черты», «Река Осётр», «Вотчина Серебряных, Черкасских и Шереметевых», «Узуново: Никольская церковь». По пути маршрут заходит и к соседям: Зарайск — «Святой источник «Белый колодец»», «Стены и башни кремля», «Памятник Фёдору, Евпраксии и Иоанну», «Никольский собор».",
-  "Маршрут линейный, около 59 км и 8 точек. Финиш — Зарайск, автостанция (Автобусы до Луховиц и Москвы), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Река Осётр», «Никольская церковь», «Острог засечной черты», «Вотчина Серебряных, Черкасских и Шереметевых». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Серебряные Пруды, автостанция (Автобусы от Москвы и Зарайска — уточняйте). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Серебряные Пруды, автостанция",
@@ -25,70 +25,24 @@
   "transport": "Автобусы от Москвы и Зарайска — уточняйте"
  },
  "endPoint": {
-  "name": "Зарайск, автостанция",
+  "name": "Серебряные Пруды, автостанция",
   "coords": {
-   "lat": 54.7622,
-   "lon": 38.8855
+   "lat": 54.4682,
+   "lon": 38.7235
   },
-  "transport": "Автобусы до Луховиц и Москвы"
+  "transport": "Автобусы до Москвы"
  },
  "route": {
-  "distanceKm": 59.0,
-  "durationH": 6.7,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 2.5,
+  "durationH": 0.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "serebryanye-prudy-ostrog",
-   "name": "Острог засечной черты",
-   "coords": {
-    "lat": 54.47,
-    "lon": 38.725
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В конце XVI–XVII веков край входил в Большую засечную черту. Серебряные Пруды стояли острогом — форпостом защиты рубежей от неприятеля.",
-    "В 1606–1607 годах село было оплотом крестьянского вождя Ивана Болотникова. Следующая точка маршрута — «Река Осётр»."
-   ],
-   "facts": [
-    {
-     "text": "Край входил в Большую засечную черту.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
-     "verified": true
-    },
-    {
-     "text": "Серебряные Пруды были острогом.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
-     "verified": true
-    },
-    {
-     "text": "В 1606–1607 годах здесь действовал Болотников.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
-     "verified": true
-    },
-    {
-     "text": "Военное прошлое известно с XVI века.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "serebryanye-prudy-osetr",
    "name": "Река Осётр",
@@ -100,7 +54,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Посёлок стоит на реке Осётр; на гербе — символ полноводной реки, сельского края и военного прошлого.",
-    "С 1743 по 1917 год этими землями владели Шереметевы. Следующая точка маршрута — «Вотчина Серебряных, Черкасских и Шереметевых». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+    "С 1743 по 1917 год этими землями владели Шереметевы. Следующая точка маршрута — «Никольская церковь». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
    ],
    "facts": [
     {
@@ -133,8 +87,85 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "serebryanye-prudy-nikolskaya",
+   "name": "Никольская церковь",
+   "coords": {
+    "lat": 54.469,
+    "lon": 38.7215
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Никольскую церковь на улице Павла Романова построили при графе Н. П. Шереметеве; её ценят за иконостасы и архитектуру.",
+    "Шереметевы владели этими землями с 1743 года до 1917-го; край называли «Шереметевской Сибирью». Следующая точка маршрута — «Острог засечной черты»."
+   ],
+   "facts": [
+    {
+     "text": "Никольская церковь построена при графе Н. П. Шереметеве.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Шереметевы владели землями с 1743 по 1917 год.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "serebryanye-prudy-ostrog",
+   "name": "Острог засечной черты",
+   "coords": {
+    "lat": 54.47,
+    "lon": 38.725
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В конце XVI–XVII веков край входил в Большую засечную черту. Серебряные Пруды стояли острогом — форпостом защиты рубежей от неприятеля.",
+    "В 1606–1607 годах село было оплотом крестьянского вождя Ивана Болотникова. Следующая точка маршрута — «Вотчина Серебряных, Черкасских и Шереметевых»."
+   ],
+   "facts": [
+    {
+     "text": "Край входил в Большую засечную черту.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Серебряные Пруды были острогом.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "В 1606–1607 годах здесь действовал Болотников.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Военное прошлое известно с XVI века.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "serebryanye-prudy-votchina",
@@ -164,200 +195,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
-  },
-  {
-   "id": "serebryanye-prudy-uzunovo",
-   "name": "Узуново: Никольская церковь",
-   "coords": {
-    "lat": 54.54,
-    "lon": 38.64
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В центре Узунова стояла Никольская церковь — в 1930-е её разрушили, а из кирпича построили школу. В 2008 году начала действовать новая Никольская церковь: поменьше прежней и на другом месте, но с тем же посвящением.",
-    "Узуново лежало на северной границе засек: здесь проходила оборонительная полоса, пересекавшая большую дорогу из Каширы в Серебряные Пруды."
-   ],
-   "facts": [
-    {
-     "text": "Никольскую церковь в Узунове разрушили в 1930-е годы, из её кирпича построили школу.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A3%D0%B7%D1%83%D0%BD%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "В 2008 году начала действовать вновь построенная Никольская церковь.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A3%D0%B7%D1%83%D0%BD%D0%BE%D0%B2%D0%BE_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
-     "verified": true
-    },
-    {
-     "text": "Северная граница засек проходила через Узуново и пересекала дорогу из Каширы в Серебряные Пруды.",
-     "sourceUrl": "https://svrt.ru/lib/hist_venev.pdf",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
    "order": 40,
    "coordsVerified": false
-  },
-  {
-   "id": "serebryanye-prudy-belyy-kolodets",
-   "name": "Святой источник «Белый колодец»",
-   "coords": {
-    "lat": 54.757,
-    "lon": 38.876
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Подземный ключ на набережной Осетра, рядом с местной Голгофой, освящён во имя Николая Чудотворца. Над ним — деревянный сруб с двумя купелями.",
-    "Место популярно у паломников, поэтому в выходные здесь людно. Спуск к реке крутой — велосипед лучше оставить наверху."
-   ],
-   "facts": [
-    {
-     "text": "Белый колодец — подземный ключ на набережной Осетра рядом с местной Голгофой.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-zarayska-putevoditel-po-starinnomu-gorodu",
-     "verified": true
-    },
-    {
-     "text": "В деревянном срубе две купели — мужская и женская.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-zarayska-putevoditel-po-starinnomu-gorodu",
-     "verified": true
-    },
-    {
-     "text": "Источник освящён во имя Николая Чудотворца.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-zarayska-putevoditel-po-starinnomu-gorodu",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 50,
-   "coordsVerified": false
-  },
-  {
-   "id": "serebryanye-prudy-steny",
-   "name": "Стены и башни кремля",
-   "coords": {
-    "lat": 54.7605,
-    "lon": 38.8835
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Зарайский кремль построили в 1528–1531 годах по приказу Василия III — это старейший кремль Подмосковья, сохранившийся почти целиком. Имя зодчего неизвестно, но в облике крепости видно итальянское влияние.",
-    "План почти прямоугольный, около 190 на 134 метра; башен семь, три из них проездные. Объехать стены по периметру — хороший способ почувствовать масштаб крепости засечной черты."
-   ],
-   "facts": [
-    {
-     "text": "Зарайский кремль построен в 1528–1531 годах по приказу Василия III.",
-     "sourceUrl": "https://welcome.mosreg.ru/museums/steny-hranasie-istoriu",
-     "verified": true
-    },
-    {
-     "text": "Кремль почти прямоугольный, около 190 на 134 метра, с семью башнями, три из них проездные.",
-     "sourceUrl": "https://vimpel-v.com/journey/moscow/4034-zarajsk.html",
-     "verified": true
-    },
-    {
-     "text": "Имя архитектора неизвестно; заметно итальянское влияние.",
-     "sourceUrl": "https://vimpel-v.com/journey/moscow/4034-zarajsk.html",
-     "verified": false
-    },
-    {
-     "text": "С 1 апреля 2025 года музей называется «Коломенско-Зарайский музей-заповедник».",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 60,
-   "coordsVerified": false
-  },
-  {
-   "id": "serebryanye-prudy-knyazyam",
-   "name": "Памятник Фёдору, Евпраксии и Иоанну",
-   "coords": {
-    "lat": 54.761,
-    "lon": 38.8845
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В кремле стоит памятник рязанскому князю Фёдору, его жене Евпраксии и сыну Иоанну. С их судьбой во время нашествия Батыя связана городская легенда о происхождении названия «Зарайск».",
-    "Само имя города в летописях появляется гораздо позже основания: первое упоминание местности относят к 1146 году. Памятник — повод вспомнить, что Зарайск древнее своего каменного кремля."
-   ],
-   "facts": [
-    {
-     "text": "В Зарайском кремле стоит памятник рязанским князьям Фёдору, Евпраксии и их сыну Иоанну.",
-     "sourceUrl": "https://vimpel-v.com/journey/moscow/4034-zarajsk.html",
-     "verified": true
-    },
-    {
-     "text": "Первое упоминание Зарайска в летописи относят к 1146 году.",
-     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/activities/21404-zaraysk-gorod-pamyatnikov-kreml-posad-i-belyy-kolodets-s-kupelyu",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 70,
-   "coordsVerified": false
-  },
-  {
-   "id": "serebryanye-prudy-nikola",
-   "name": "Никольский собор",
-   "coords": {
-    "lat": 54.7605,
-    "lon": 38.8855
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Главная святыня Никольского собора с XVII по начало XX века — икона Николы Заразского.",
-    "А. Б. Мазуров предлагает датировать её список 1528–1531 годами (раньше относили к 1513-му). Это список с утраченного византийского «корсунского» оригинала XIII века."
-   ],
-   "facts": [
-    {
-     "text": "Икона Николы Заразского — главная святыня собора с XVII по начало XX века.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Мазуров датирует список 1528–1531 годами.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Это список с утраченного «корсунского» оригинала XIII века.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Прежняя датировка — 1513 год.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
   }
  ],
  "dish": {
@@ -389,31 +228,19 @@
    "url": "https://www.zr.ru/content/articles/100878-zolotaja_rybka_iz_serebranogo_pruda/"
   },
   {
-   "title": "Serebryanye Prudy — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Serebryanye_Prudy"
-  },
-  {
-   "title": "Зарайский кремль — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C"
-  },
-  {
-   "title": "Икона Николы Заразского — Мазуров",
-   "url": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/"
+   "title": "Источник: ru.wikipedia.org",
+   "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%B5%D0%B1%D1%80%D1%8F%D0%BD%D1%8B%D0%B5_%D0%9F%D1%80%D1%83%D0%B4%D1%8B"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.63458,
-     54.54
-    ],
-    [
-     38.635307,
-     54.538428
+     38.71459,
+     54.465
     ],
     [
      38.715315,
@@ -440,48 +267,44 @@
      54.468428
     ],
     [
-     38.890219,
-     54.758928
+     38.73541,
+     54.47
     ],
     [
-     38.890949,
-     54.7605
+     38.734685,
+     54.471572
     ],
     [
-     38.890949,
-     54.7622
+     38.732705,
+     54.472723
     ],
     [
-     38.890219,
-     54.763772
+     38.73,
+     54.473144
     ],
     [
-     38.888225,
-     54.764923
+     38.725,
+     54.473144
     ],
     [
-     38.8855,
-     54.765344
+     38.722295,
+     54.472723
     ],
     [
-     38.882775,
-     54.764923
+     38.718795,
+     54.471723
     ],
     [
-     38.873276,
-     54.759723
+     38.716815,
+     54.470572
     ],
     [
-     38.871281,
-     54.758572
+     38.71609,
+     54.469
     ],
     [
-     38.635307,
-     54.541572
-    ],
-    [
-     38.63458,
-     54.54
+     38.71459,
+     54.465
     ]
    ]
   ]

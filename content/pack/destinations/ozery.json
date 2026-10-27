@@ -13,8 +13,8 @@
   "Озёры — текстильный город на левом берегу Оки. Предшественница города, деревня Озерки, упоминается в источниках конца XVI века.",
   "В XIX веке местные предприниматели создали ткацкие, отбельные и красильные производства; с 1835 года развивалось предприятие, позднее известное как текстильная фирма «Ока».",
   "Дату получения статуса города мы точно не сверили; город отмечает день рождения ежегодно.",
-  "Свои места маршрута: «Текстильная «Ока»», «Берег Оки», «Центр». По пути маршрут заходит и к соседям: Кашира — «Каширская ГРЭС», «Архитектура ГОЭЛРО»; Ступино — «Авиакомбинат № 150»; Ожерелье — «Город железнодорожников», «Узловая станция».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Ожерелье» (Электрички Павелецкого направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Центр», «Берег Оки», «Церковь Николая Чудотворца», «Краеведческий музей», «Текстильная «Ока»», «Памятник маршалу Катукову». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Остановка «Озёры, центр» (Автобусы от Коломны — уточняйте). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Озёры, центр»",
@@ -25,47 +25,52 @@
   "transport": "Автобусы от Коломны — уточняйте"
  },
  "endPoint": {
-  "name": "Станция «Ожерелье»",
+  "name": "Остановка «Озёры, центр»",
   "coords": {
-   "lat": 54.7902,
-   "lon": 38.2705
+   "lat": 54.8562,
+   "lon": 38.5565
   },
-  "transport": "Электрички Павелецкого направления"
+  "transport": "Автобусы до Коломны"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.6,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 3.1,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "ozery-fabrika",
-   "name": "Текстильная «Ока»",
+   "id": "ozery-tsentr",
+   "name": "Центр",
    "coords": {
-    "lat": 54.858,
-    "lon": 38.56
+    "lat": 54.856,
+    "lon": 38.556
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "kind": "проезжаем",
+   "visitMinutes": 10,
    "guideStory": [
-    "В XIX веке в Озёрах появились ткацкие, отбельные и красильные производства. С 1835 года развивалось предприятие, позднее известное как текстильная фирма «Ока».",
-    "Корпуса фабрики — главный памятник промышленной истории города. Следующая точка маршрута — «Берег Оки»."
+    "Деревня Озерки, предшественница города, упоминается в источниках конца XVI века.",
+    "Город отмечает день рождения ежегодно; точную дату получения статуса мы не сверили. Следующая точка маршрута — «Берег Оки». Формат остановки — «проезжаем», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "В XIX веке появились ткацкие, отбельные и красильные производства.",
+     "text": "Деревня Озерки упоминается в конце XVI века.",
      "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
      "verified": true
     },
     {
-     "text": "С 1835 года развивалось предприятие «Ока».",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "text": "Город ежегодно отмечает день рождения.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
      "verified": true
+    },
+    {
+     "text": "Дата статуса города не сверена.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
+     "verified": false
     },
     {
      "text": "Координаты приблизительные.",
@@ -73,21 +78,16 @@
      "verified": false
     },
     {
-     "text": "Состояние фабрики не проверено.",
+     "text": "Описание — оценка составителя.",
      "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
      "verified": false
-    },
-    {
-     "text": "Озёры описаны на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
-     "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "ozery-oka",
@@ -100,7 +100,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Озёры стоят на левом берегу Оки — одной из главных рек Подмосковья.",
-    "С берега видны широкие поймы и луга правого берега реки. Следующая точка маршрута — «Центр». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+    "С берега видны широкие поймы и луга правого берега реки. Следующая точка маршрута — «Церковь Николая Чудотворца». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
    ],
    "facts": [
     {
@@ -133,289 +133,147 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "ozery-tsentr",
-   "name": "Центр",
+   "id": "ozery-nikolay",
+   "name": "Церковь Николая Чудотворца",
    "coords": {
-    "lat": 54.856,
-    "lon": 38.556
+    "lat": 54.8545,
+    "lon": 38.553
    },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 10,
    "guideStory": [
-    "Деревня Озерки, предшественница города, упоминается в источниках конца XVI века.",
-    "Город отмечает день рождения ежегодно; точную дату получения статуса мы не сверили. Следующая точка маршрута — «Каширская ГРЭС». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+    "Церковь Николая Чудотворца 1822 года — одна из главных архитектурных достопримечательностей Озёр.",
+    "Первое упоминание — 1578 год, тогда здесь было село Озёрское. Следующая точка маршрута — «Краеведческий музей». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "Деревня Озерки упоминается в конце XVI века.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "text": "Церковь Николая Чудотворца построена в 1822 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
      "verified": true
     },
     {
-     "text": "Город ежегодно отмечает день рождения.",
-     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
+     "text": "Первые упоминания относятся к 1578 году, село Озёрское.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
      "verified": true
-    },
-    {
-     "text": "Дата статуса города не сверена.",
-     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "ozery-gres",
-   "name": "Каширская ГРЭС",
+   "id": "ozery-muzey",
+   "name": "Краеведческий музей",
    "coords": {
-    "lat": 54.85,
-    "lon": 38.24
+    "lat": 54.8572,
+    "lon": 38.5545
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
    "guideStory": [
-    "Каширская ГРЭС имени Г. М. Кржижановского — одна из первых районных электростанций плана ГОЭЛРО. Строительство началось в апреле 1919 года, первый агрегат мощностью 12 МВт заработал в 1922 году.",
-    "К 1932 году мощность выросла до 186 МВт — это была крупнейшая ТЭС СССР. Сегодня станцию модернизируют."
+    "Краеведческий музей Озёр рассказывает о текстильной истории города.",
+    "В XIX веке здесь развивалось мануфактурное производство вокруг текстильной фабрики. Следующая точка маршрута — «Текстильная «Ока»». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
    ],
    "facts": [
     {
-     "text": "Первый агрегат ГРЭС введён в 1922 году, мощность 12 МВт.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "text": "В Озёрах есть краеведческий музей.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
      "verified": true
     },
     {
-     "text": "Строительство началось в апреле 1919 года.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "text": "В XIX веке открылась текстильная фабрика.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
      "verified": true
-    },
-    {
-     "text": "К 1932 году мощность — 186 МВт.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": true
-    },
-    {
-     "text": "Открытие станции описано Президентской библиотекой.",
-     "sourceUrl": "https://www.prlib.ru/en/history/619289",
-     "verified": true
-    },
-    {
-     "text": "Станцию модернизируют.",
-     "sourceUrl": "https://www.interfax.ru/business/944337",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Промышленная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "ozery-chernyshev",
-   "name": "Архитектура ГОЭЛРО",
-   "coords": {
-    "lat": 54.848,
-    "lon": 38.235
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Одним из ранних объектов архитектора С. Е. Чернышёва по плану ГОЭЛРО была Каширская районная электростанция.",
-    "Первые электростанции ГОЭЛРО строили быстро и в разруху — Кашира и «Электропередача» в Электрогорске стали опорой новой энергосистемы."
-   ],
-   "facts": [
-    {
-     "text": "Ранний объект Чернышёва по ГОЭЛРО — Каширская ГРЭС.",
-     "sourceUrl": "https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-9f4a699d-e90e-49ac-9cc6-e05a77a886d1/c/cheredina.pdf",
-     "verified": true
-    },
-    {
-     "text": "«Электропередача» тоже опора энергосистемы.",
-     "sourceUrl": "https://habr.com/en/articles/916262",
-     "verified": true
-    },
-    {
-     "text": "Оценка — мнение составителя.",
-     "sourceUrl": "https://habr.com/en/articles/916262",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 50
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "ozery-aviakombinat",
-   "name": "Авиакомбинат № 150",
+   "id": "ozery-fabrika",
+   "name": "Текстильная «Ока»",
    "coords": {
-    "lat": 54.89,
-    "lon": 38.085
+    "lat": 54.858,
+    "lon": 38.56
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "В 1936 году комиссия под руководством Андрея Туполева нашла площадку пригодной для авиапроизводства, и «Электровозстрой» стал «Авиакомбинатом № 150».",
-    "В 1940 году в городе начал работать металлургический комбинат. РИАМО называет Ступино «чудом металлургов»."
+    "В XIX веке в Озёрах появились ткацкие, отбельные и красильные производства. С 1835 года развивалось предприятие, позднее известное как текстильная фирма «Ока».",
+    "Корпуса фабрики — главный памятник промышленной истории города. Следующая точка маршрута — «Памятник маршалу Катукову»."
    ],
    "facts": [
     {
-     "text": "В 1936 году комиссия Туполева выбрала площадку для авиапроизводства.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "text": "В XIX веке появились ткацкие, отбельные и красильные производства.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
      "verified": true
     },
     {
-     "text": "Стройка стала «Авиакомбинатом № 150».",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": true
-    },
-    {
-     "text": "В 1940 году заработал металлургический комбинат.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": true
-    },
-    {
-     "text": "РИАМО называет Ступино «чудом металлургов».",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
-     "verified": true
-    },
-    {
-     "text": "Территории закрыты.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Промышленные территории."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "ozery-gorod",
-   "name": "Город железнодорожников",
-   "coords": {
-    "lat": 54.792,
-    "lon": 38.275
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Ожерелье — город с 1958 года, в 10 км к югу от Каширы.",
-    "Деревня Ожерелье упоминается ещё с 1578 года.",
-    "Делаем небольшой круг по улицам города железнодорожников. Следующая точка маршрута — «Узловая станция». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Ожерелье — город с 1958 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Деревня упоминается с 1578 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Ожерелье — в 10 км к югу от Каширы.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "text": "С 1835 года развивалось предприятие «Ока».",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
      "verified": true
     },
     {
      "text": "Координаты приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
      "verified": false
     },
     {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "text": "Состояние фабрики не проверено.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
      "verified": false
+    },
+    {
+     "text": "Озёры описаны на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
+     "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "ozery-stantsiya",
-   "name": "Узловая станция",
+   "id": "ozery-katukov",
+   "name": "Памятник маршалу Катукову",
    "coords": {
-    "lat": 54.79,
-    "lon": 38.27
+    "lat": 54.8565,
+    "lon": 38.5585
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 5,
    "guideStory": [
-    "Станция Ожерелье работает с 1930 года; здесь сходятся линии Москва — Саратов и Москва — Донбасс.",
-    "Узел определил судьбу посёлка: город вырос вокруг станции. Финиш — Станция «Ожерелье»: Электрички Павелецкого направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+    "На центральной аллее Озёр стоит памятник маршалу бронетанковых войск Михаилу Катукову.",
+    "Город вырос из деревни Озерки в текстильный центр на левом берегу Оки. Финиш — Остановка «Озёры, центр»: Автобусы до Коломны. Формат остановки — «смотреть снаружи», заложите на неё около 5 минут."
    ],
    "facts": [
     {
-     "text": "Станция Ожерелье — с 1930 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "text": "Памятник Катукову стоит на центральной аллее.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
      "verified": true
     },
     {
-     "text": "Здесь сходятся линии Москва — Саратов и Москва — Донбасс.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": true
-    },
-    {
-     "text": "Город вырос вокруг станции — вывод составителя.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
-     "verified": false
-    },
-    {
-     "text": "Ожерелье — в 118 км к югу от Москвы.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "text": "Озёры выросли из деревни Озерки в текстильный центр.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -447,55 +305,39 @@
    "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/"
   },
   {
-   "title": "Kashira Power Plant — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kashira_Power_Plant"
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/"
   },
   {
-   "title": "Открытие ГРЭС — Президентская библиотека",
-   "url": "https://www.prlib.ru/en/history/619289"
+   "title": "Источник: calend.ru",
+   "url": "https://www.calend.ru/travel/862"
   },
   {
-   "title": "История Ступина — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/stupino/history"
-  },
-  {
-   "title": "Путешествие в Ступино — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/"
-  },
-  {
-   "title": "Ожерелье — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/27669"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.079533,
-     54.89
+     38.544539,
+     54.85
     ],
     [
-     38.080266,
-     54.888428
+     38.545271,
+     54.848428
     ],
     [
-     38.082267,
-     54.887277
+     38.547269,
+     54.847277
     ],
     [
-     38.267273,
-     54.787277
-    ],
-    [
-     38.27,
-     54.786856
-    ],
-    [
-     38.272727,
-     54.787277
+     38.55,
+     54.846856
     ],
     [
      38.552731,
@@ -504,6 +346,10 @@
     [
      38.554729,
      54.848428
+    ],
+    [
+     38.56323,
+     54.854928
     ],
     [
      38.56473,
@@ -526,20 +372,24 @@
      54.861144
     ],
     [
-     38.085,
-     54.893144
+     38.5545,
+     54.860344
     ],
     [
-     38.082267,
-     54.892723
+     38.551769,
+     54.859923
     ],
     [
-     38.080266,
-     54.891572
+     38.54977,
+     54.858772
     ],
     [
-     38.079533,
-     54.89
+     38.545271,
+     54.851572
+    ],
+    [
+     38.544539,
+     54.85
     ]
    ]
   ]
