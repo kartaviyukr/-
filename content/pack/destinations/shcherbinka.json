@@ -12,9 +12,8 @@
  "intro": [
   "Щербинка — бывший подмосковный город, а сегодня район Новомосковского округа Москвы. Её знают как место, где делают лифты и испытывают железнодорожную технику.",
   "По одной версии, история начинается в XIV веке с деревни, названной по прозвищу владельца — боярина Щербы. Станция Курской дороги открылась в 1895 году; посёлок рядом с ней стал рабочим в 1939-м, а городом — в 1975 году.",
-  "В 2024 году район Щербинка объединил прежнее поселение, части соседних поселений и территории Южного Бутова.",
-  "Свои места маршрута: «Центр Щербинки», «Завод лифтов и испытательное кольцо». По пути маршрут заходит и к соседям: Бутово (полигон, Знаменское-Садки) — «Бутовский полигон», «Усадьба Знаменское-Садки»; Коммунарка — «Новый район», «Мемориал «Коммунарка»»; Валуево — «Парк и пруды»; Московский — «Центр Московского», «Институт Чумакова».",
-  "Маршрут линейный, около 45 км и 9 точек. Финиш — Метро «Филатов Луг» (Сокольническая линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Заводы 1950-х», «Центр Щербинки», «Завод лифтов и испытательное кольцо», «Станция Щербинка». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 5 км: старт и финиш — Станция «Щербинка» (Электрички Курского направления / МЦД-2). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Щербинка»",
@@ -25,24 +24,60 @@
   "transport": "Электрички Курского направления / МЦД-2"
  },
  "endPoint": {
-  "name": "Метро «Филатов Луг»",
+  "name": "Станция «Щербинка»",
   "coords": {
-   "lat": 55.601,
-   "lon": 37.408
+   "lat": 55.51,
+   "lon": 37.564
   },
-  "transport": "Сокольническая линия"
+  "transport": "Электрички Курского направления / МЦД-2"
  },
  "route": {
-  "distanceKm": 45.0,
-  "durationH": 6.1,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 5.4,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "shcherbinka-zavody-1950",
+   "name": "Заводы 1950-х",
+   "coords": {
+    "lat": 55.496,
+    "lon": 37.566
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 5,
+   "guideStory": [
+    "В 1950-х годах в Щербинке открылись завод огнеупоров и лифтостроительный завод.",
+    "Деревня известна с XIV века и названа по прозвищу владельца — боярина Щербы; посёлок вырос у станции конца XIX века. Следующая точка маршрута — «Центр Щербинки»."
+   ],
+   "facts": [
+    {
+     "text": "В 1950-х открылись завод огнеупоров и лифтостроительный завод.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/",
+     "verified": true
+    },
+    {
+     "text": "Название — от прозвища боярина Щербы.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/",
+     "verified": true
+    },
+    {
+     "text": "Район Щербинка создан в 2024 году.",
+     "sourceUrl": "https://www.mos.ru/moi-raion/scherbinka/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "shcherbinka-tsentr",
    "name": "Центр Щербинки",
@@ -86,8 +121,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "shcherbinka-lifty",
@@ -134,353 +169,54 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "shcherbinka-poligon",
-   "name": "Бутовский полигон",
+   "id": "shcherbinka-stantsiya",
+   "name": "Станция Щербинка",
    "coords": {
-    "lat": 55.537,
-    "lon": 37.585
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "В 1935 году на территории бывшего имения коннозаводчика Зимина устроили стрелковый полигон «Бутово». Приговоры выносила внесудебная «тройка» УНКВД по Московской области; осуждённых привозили в основном из московских тюрем.",
-    "С августа 1937 по октябрь 1938 года здесь расстреляли около 20,8 тысячи человек. Обнаружено 13 рвов на площади около 5 гектаров. Имена 20 765 человек установлены по следственным делам; общее число погибших неизвестно. Среди них — более 300 священнослужителей, позже канонизированных.",
-    "В 1993 году поставили первый памятный знак, в 1996 году — деревянную церковь, в 2007 году — белокаменный храм Новомучеников и Исповедников Российских. Здесь не фотографируются «на память» и не шумят."
-   ],
-   "facts": [
-    {
-     "text": "В 1935 году на территории имения И. И. Зимина устроен стрелковый полигон «Бутово».",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "С августа 1937 по октябрь 1938 года здесь расстреляли и похоронили около 20,8 тыс. человек.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "Обнаружено 13 рвов на площади около 5 га.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "Установлены имена 20 765 человек; общее число погибших неизвестно.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "Более 300 расстрелянных здесь священников канонизированы.",
-     "sourceUrl": "https://azbyka.ru/days/sv-sobor-novomuchenikov-v-butove-postradavshih",
-     "verified": true
-    },
-    {
-     "text": "Деревянная церковь построена в 1996 году, каменный храм — в 2007 году.",
-     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%83%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%BB%D0%B8%D0%B3%D0%BE%D0%BD",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориальное место: тишина, уважение, без развлекательных фото."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "shcherbinka-sadki",
-   "name": "Усадьба Знаменское-Садки",
-   "coords": {
-    "lat": 55.575,
-    "lon": 37.56
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "На месте усадьбы раньше была деревня Садки; жители ловили рыбу в речке Обитце. В начале XVII века землями владели Ладыженские, потом Урусовы, а с середины XVIII века — князья Трубецкие.",
-    "По справочнику, в имении Трубецких бывали Екатерина II и Пушкин, хозяйничали наполеоновские войска, а позже Катковы устроили здесь суконное производство. Эти сведения мы видели в одном источнике."
-   ],
-   "facts": [
-    {
-     "text": "Владельцы: Ладыженские, Урусовы, с середины XVIII века — Трубецкие.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": true
-    },
-    {
-     "text": "На месте усадьбы была деревня Садки, жители ловили рыбу в Обитце.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": true
-    },
-    {
-     "text": "В имении бывали Екатерина II и Пушкин.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": false
-    },
-    {
-     "text": "Катковы производили здесь сукно.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": false
-    },
-    {
-     "text": "Москва изъяла участок 57 га в пользу парка «Битцевский лес»; спор рассматривал арбитражный суд.",
-     "sourceUrl": "https://pravo.ru/news/view/6612/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Доступ на территорию усадьбы может быть закрыт."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "shcherbinka-rayon",
-   "name": "Новый район",
-   "coords": {
-    "lat": 55.57,
-    "lon": 37.475
+    "lat": 55.51,
+    "lon": 37.564
    },
    "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "В XVII веке на этой земле уже были сёла Саврасово и Поповка. После Великой Отечественной войны территория вошла в Никольско-Хованский сельсовет.",
-    "Совхоз «Николо-Хованское» стал частью совхоза «Коммунарка», от которого и пошло название. В 2012 году эти места вошли в состав Москвы."
+    "Станция Щербинка Курского направления открыта в 1895 году; сегодня через неё ходят поезда МЦД-2.",
+    "В одном источнике сказано, что деревянное здание вокзала заменили каменным в 1889 году, — это раньше даты открытия станции, так что хронология противоречива, и мы её не сводим."
    ],
    "facts": [
     {
-     "text": "В XVII веке существовали сёла Саврасово и Поповка.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "text": "Станция Щербинка открыта в 1895 году.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B8%D0%BD%D0%BA%D0%B0_(%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)",
      "verified": true
     },
     {
-     "text": "После войны территория вошла в Никольско-Хованский сельсовет.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "text": "Станция входит в МЦД-2.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B8%D0%BD%D0%BA%D0%B0_(%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)",
      "verified": true
     },
     {
-     "text": "Совхоз «Николо-Хованское» стал частью совхоза «Коммунарка».",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
-     "verified": true
-    },
-    {
-     "text": "В 2012 году территория вошла в состав Москвы.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
-     "verified": true
-    },
-    {
-     "text": "Координаты остановки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
+     "text": "Версия о каменном вокзале 1889 года противоречит дате открытия станции.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/",
      "verified": false
+    },
+    {
+     "text": "Рядом со станцией вырос посёлок.",
+     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/",
+     "verified": true
+    },
+    {
+     "text": "Щербинка находится в Новомосковском округе Москвы.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B8%D0%BD%D0%BA%D0%B0_(%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F)",
+     "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "shcherbinka-memorial",
-   "name": "Мемориал «Коммунарка»",
-   "coords": {
-    "lat": 55.56,
-    "lon": 37.462
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "В конце 1920-х в глухом лесу у совхоза, на берегу Ордынки, построили дачу заместителя председателя ОГПУ, затем наркома НКВД Генриха Ягоды. В 1937 году его арестовали, в 1938-м расстреляли.",
-    "После ареста Ягоды дачу передали НКВД. С 1937 года сюда по ночам привозили тела расстрелянных из Лубянской, Лефортовской, Бутырской и Сухановской тюрем. Территорию около 20 гектаров обнесли забором с колючей проволокой.",
-    "Поиски захоронений начались в годы перестройки; археологи находят новые расстрельные ямы. Это место скорби: тишина и уважение."
-   ],
-   "facts": [
-    {
-     "text": "Дача Ягоды построена в конце 1920-х в лесу у совхоза «Коммунарка», на речке Ордынке.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
-     "verified": true
-    },
-    {
-     "text": "Ягода арестован в марте 1937 года и расстрелян в марте 1938 года.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
-     "verified": true
-    },
-    {
-     "text": "После ареста Ягоды дачу передали НКВД.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
-     "verified": true
-    },
-    {
-     "text": "Сюда привозили тела расстрелянных из нескольких московских тюрем.",
-     "sourceUrl": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/",
-     "verified": true
-    },
-    {
-     "text": "Территория около 20 га была обнесена забором.",
-     "sourceUrl": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/",
-     "verified": true
-    },
-    {
-     "text": "Археологи обнаружили новые расстрельные ямы.",
-     "sourceUrl": "https://theins.ru/news/242047",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориальное место: тишина и уважение. Часы доступа уточняйте."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "shcherbinka-park",
-   "name": "Парк и пруды",
-   "coords": {
-    "lat": 55.579,
-    "lon": 37.392
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Вокруг дома — усадебный парк с прудами, где удобно сделать привал и посидеть у воды.",
-    "Экскурсии в Валуево часто объединяют с романо-готическими постройками соседних Филимонок.",
-    "Не спеша обходим парк вокруг прудов и возвращаемся к остановке автобуса."
-   ],
-   "facts": [
-    {
-     "text": "Экскурсии объединяют Валуево с романо-готикой в Филимонках.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/93731-usadba-valuevo-romano-gotika-v-filimonkah",
-     "verified": true
-    },
-    {
-     "text": "Описание парка и прудов — по туристическим источникам.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
-     "verified": false
-    },
-    {
-     "text": "Валуево — в Новой Москве.",
-     "sourceUrl": "https://moskvichmag.ru/gorod/dom-nedeli-usadba-valuevo-v-novoj-moskve/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точек приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
-     "verified": false
-    },
-    {
-     "text": "Усадьба — объект наследия федерального значения.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "shcherbinka-tsentr-2",
-   "name": "Центр Московского",
-   "coords": {
-    "lat": 55.6,
-    "lon": 37.355
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Посёлок Московский начал развиваться в 1955 году вокруг научно-производственного комплекса института.",
-    "С 2012 года Московский — часть Москвы в Новомосковском округе. Историю его городского статуса мы в источниках не нашли и не придумываем."
-   ],
-   "facts": [
-    {
-     "text": "Посёлок Московский начал развиваться в 1955 году.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    },
-    {
-     "text": "Развитие связано с институтом полиомиелита.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    },
-    {
-     "text": "Дата получения статуса города нами не проверена.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": false
-    },
-    {
-     "text": "Новая Москва присоединена 1 июля 2012 года.",
-     "sourceUrl": "https://www.komandirovka.ru/cities/filimonki/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "shcherbinka-chumakov",
-   "name": "Институт Чумакова",
-   "coords": {
-    "lat": 55.598,
-    "lon": 37.34
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1955 году здесь открыли комплекс Института полиомиелита и вирусных энцефалитов. Руководил им академик Михаил Чумаков.",
-    "Сегодня институт носит имя Чумакова. Территория закрыта — смотрим снаружи.",
-    "Дальше по дороге едем на юг, к посёлку Филимонки и сгоревшей усадьбе."
-   ],
-   "facts": [
-    {
-     "text": "В 1955 году открыт комплекс Института полиомиелита и вирусных энцефалитов.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    },
-    {
-     "text": "Руководил институтом академик Михаил Чумаков.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    },
-    {
-     "text": "Территория института закрыта.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": false
-    },
-    {
-     "text": "Институт носит имя Чумакова.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": false
-    },
-    {
-     "text": "Это научно-производственный комплекс.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/moskovskij/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Режимная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -517,131 +253,83 @@
    "url": "https://www.mos.ru/moi-raion/scherbinka/"
   },
   {
-   "title": "Бутовский полигон — БРЭ",
-   "url": "https://bigenc.ru/c/butovskii-poligon-a7de44"
+   "title": "Источник: cian.ru",
+   "url": "https://www.cian.ru/stati-goroda-podmoskovja-scherbinka-216365/"
   },
   {
-   "title": "Собор новомучеников в Бутове — Азбука веры",
-   "url": "https://azbyka.ru/days/sv-sobor-novomuchenikov-v-butove-postradavshih"
-  },
-  {
-   "title": "Знаменское-Садки — КП",
-   "url": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/"
-  },
-  {
-   "title": "Котлован — Новая газета",
-   "url": "https://novayagazeta.ru/articles/2021/07/25/kotlovan"
-  },
-  {
-   "title": "Расстрельные полигоны — Рамблер",
-   "url": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/"
-  },
-  {
-   "title": "Коммунарка — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/kommunarka/"
-  },
-  {
-   "title": "Усадьба Валуево — tonkosti.ru",
-   "url": "https://tonkosti.ru/Усадьба_Валуево"
-  },
-  {
-   "title": "Дом недели: Валуево — Moskvich Mag",
-   "url": "https://moskvichmag.ru/gorod/dom-nedeli-usadba-valuevo-v-novoj-moskve/"
-  },
-  {
-   "title": "Московский — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/moskovskij/"
-  },
-  {
-   "title": "Филимонковское — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/filimonkovskoe/"
-  },
-  {
-   "title": "Усадьба в Филимонках — Moskvich Mag",
-   "url": "https://moskvichmag.ru/gorod/v-novoj-moskve-vosstanovyat-sgorevshuyu-usadbu-1801-goda-osnovannuyu-eshhe-knyazem-golitsynym/"
+   "title": "Источник: cyclowiki.org",
+   "url": "https://cyclowiki.org/wiki/%D0%A9%D0%B5%D1%80%D0%B1%D0%B8%D0%BD%D0%BA%D0%B0_(%D0%B2%D0%BD%D1%83%D1%82%D1%80%D0%B8%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.334435,
-     55.598
+     37.544448,
+     55.505
     ],
     [
-     37.335181,
-     55.596428
+     37.545192,
+     55.503428
     ],
     [
-     37.337218,
-     55.595277
+     37.547224,
+     55.502277
     ],
     [
-     37.557225,
-     55.497277
+     37.563225,
+     55.493277
     ],
     [
-     37.56,
-     55.496856
+     37.566,
+     55.492856
     ],
     [
-     37.562775,
-     55.497277
+     37.568775,
+     55.493277
     ],
     [
-     37.564807,
-     55.498428
+     37.570807,
+     55.494428
     ],
     [
-     37.589812,
-     55.535428
+     37.57155,
+     55.496
     ],
     [
-     37.590556,
-     55.537
+     37.569552,
+     55.51
     ],
     [
-     37.589812,
-     55.538572
+     37.568808,
+     55.511572
     ],
     [
-     37.564816,
-     55.576572
+     37.566776,
+     55.512723
     ],
     [
-     37.562781,
-     55.577723
+     37.564,
+     55.513144
     ],
     [
-     37.410783,
-     55.603723
+     37.561224,
+     55.512723
     ],
     [
-     37.408,
-     55.604144
+     37.547224,
+     55.507723
     ],
     [
-     37.355,
-     55.603144
+     37.545192,
+     55.506572
     ],
     [
-     37.34,
-     55.601144
-    ],
-    [
-     37.337218,
-     55.600723
-    ],
-    [
-     37.335181,
-     55.599572
-    ],
-    [
-     37.334435,
-     55.598
+     37.544448,
+     55.505
     ]
    ]
   ]

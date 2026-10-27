@@ -13,36 +13,235 @@
   "Горки — усадьба XVIII века, которую знают по последним годам жизни Ленина. Но до него у дома было несколько ярких хозяек.",
   "В начале XIX века имением владела Аграфена Дурасова, сестра и наследница московского богача Николая Дурасова: она скупала земли, разбила парк и перестроила дом. Потом усадьба перешла её зятю, генералу и литератору Александру Писареву.",
   "В 1909 году Горки купила Зинаида Морозова, вдова Саввы Морозова, — позже по второму мужу Морозова-Рейнбот. Интерьеры для неё делал Фёдор Шехтель, в доме были водопровод, электричество и телефон. С 1918 года здесь жил и лечился Ленин; музей-заповедник учреждён в 1972 году.",
-  "Свои места маршрута: «Усадебный парк», «Музейный комплекс заповедника». По пути маршрут заходит и к соседям: Видное и Екатерининский монастырь — «Расторгуево», «Центр Видного»; Бутово (полигон, Знаменское-Садки) — «Бутовский полигон», «Усадьба Знаменское-Садки»; Коммунарка — «Новый район», «Мемориал «Коммунарка»»; Валуево — «Парк и пруды».",
-  "Маршрут линейный, около 49 км и 9 точек. Финиш — Метро «Филатов Луг» (Сокольническая линия), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Музейный комплекс заповедника», «Мемориальный гараж», «Большой дом», «Музей Ленина Леонида Павлова», «Оранжереи Зинаиды Морозовой», «Усадебный парк». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Остановка «Горки Ленинские» (Автобусы до метро «Домодедовская»). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Горки Ленинские»",
   "coords": {
-   "lat": 55.505,
-   "lon": 37.77
+   "lat": 55.5052,
+   "lon": 37.7705
   },
-  "transport": "Автобусы от метро «Домодедовская» — уточняйте"
+  "transport": "Автобусы до метро «Домодедовская»"
  },
  "endPoint": {
-  "name": "Метро «Филатов Луг»",
+  "name": "Остановка «Горки Ленинские»",
   "coords": {
-   "lat": 55.601,
-   "lon": 37.408
+   "lat": 55.5052,
+   "lon": 37.7705
   },
-  "transport": "Сокольническая линия"
+  "transport": "Автобусы до метро «Домодедовская»"
  },
  "route": {
-  "distanceKm": 49.0,
-  "durationH": 6.5,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 2.8,
+  "durationH": 2.2,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "gorki-leninskie-muzey",
+   "name": "Музейный комплекс заповедника",
+   "coords": {
+    "lat": 55.507,
+    "lon": 37.769
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Музей-заповедник «Горки Ленинские» учреждён в 1972 году. Сегодня это крупный комплекс: усадьба, парк, выставочные павильоны и несколько музейных зданий.",
+    "По одному туристическому источнику, в начале XX века имением владел промышленник Зимин, перестроивший дом в неоклассическом стиле. Это расходится с другими источниками, и мы оставляем вопрос открытым."
+   ],
+   "facts": [
+    {
+     "text": "Музей-заповедник учреждён в 1972 году.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Комплекс включает усадьбу, парк, выставочные павильоны и музейные здания.",
+     "sourceUrl": "https://tonkosti.ru/Горки_Ленинские",
+     "verified": true
+    },
+    {
+     "text": "Версия о владельце Зимине расходится с другими источниками.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    },
+    {
+     "text": "Последовательность владельцев в источниках различается.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    },
+    {
+     "text": "Горки — усадьба XVIII века.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorki-leninskie-garazh",
+   "name": "Мемориальный гараж",
+   "coords": {
+    "lat": 55.5082,
+    "lon": 37.766
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Мемориальный гараж входит в музей-заповедник вместе с усадьбой, домом-музеем и музеем крестьянского быта.",
+    "Музей-заповедник учреждён в 1972 году, а сама усадьба открыта для публики в 1949-м. Следующая точка маршрута — «Большой дом»."
+   ],
+   "facts": [
+    {
+     "text": "В состав музея-заповедника входит мемориальный гараж.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Музей-заповедник учреждён в 1972 году, усадьба открыта в 1949 году.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorki-leninskie-dom",
+   "name": "Большой дом",
+   "coords": {
+    "lat": 55.51,
+    "lon": 37.77
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "В 1909 году усадьбу купила Зинаида Морозова, вдова мецената Саввы Морозова. Она пригласила Фёдора Шехтеля, и дом получил по тем временам роскошные удобства: ванную, паровое отопление, водопровод, электричество и телефон «Эриксон».",
+    "После революции имение национализировали. С 1918 года сюда приезжал, а затем постоянно жил Ленин: усадьба была комфортной и хорошо связанной с Москвой. Здесь он провёл последние годы жизни.",
+    "Дом открыт для посетителей с 1949 года. Музей устраивает и необычные экскурсии — например, по кухонному «закулисью» усадьбы."
+   ],
+   "facts": [
+    {
+     "text": "В 1909 году имение купила Зинаида Морозова, вдова Саввы Морозова.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Интерьеры для Морозовой создавал Фёдор Шехтель; в доме были водопровод, электричество и телефон.",
+     "sourceUrl": "https://www.sputnik8.com/ru/activities/72337",
+     "verified": true
+    },
+    {
+     "text": "Последней владелицей была Морозова-Рейнбот.",
+     "sourceUrl": "https://olymp.msu.ru/archive/Lomonosov_2012/1778/43227_1408.doc",
+     "verified": true
+    },
+    {
+     "text": "С 1918 года усадьба стала местом жизни Ленина, здесь он провёл последние годы.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Усадьба открыта для публики в 1949 году.",
+     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "В музее проводят экскурсии по кухонному «закулисью».",
+     "sourceUrl": "https://rg.ru/2023/03/14/rasprobovat-istoriiu-v-muzee-zapovednike-gorki-leninskie-vodiat-po-kuhonnomu-zakulisiu-i-ugoshchaiut-boiarskim-obedom.html",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "warnings": [
+    "Музей платный; часы работы уточняйте на сайте заповедника."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorki-leninskie-pavlov",
+   "name": "Музей Ленина Леонида Павлова",
+   "coords": {
+    "lat": 55.5125,
+    "lon": 37.7745
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Здание музея построили в 1987 году по проекту архитектора Леонида Павлова; сам автор называл его Парфеноном.",
+    "Экспозиция рассказывает о России 1917–1924 годов. Следующая точка маршрута — «Оранжереи Зинаиды Морозовой». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "Здание построено в 1987 году по проекту Леонида Павлова.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Автор называл свой проект Парфеноном.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "Экспозиция охватывает 1917–1924 годы.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorki-leninskie-oranzherei",
+   "name": "Оранжереи Зинаиды Морозовой",
+   "coords": {
+    "lat": 55.5098,
+    "lon": 37.7728
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1909 году имение купила Зинаида Морозова, вдова мецената Саввы Морозова.",
+    "В усадьбе выстроили оранжереи, теплицы и парники, где цветы и декоративные растения выращивали в больших количествах. Следующая точка маршрута — «Усадебный парк»."
+   ],
+   "facts": [
+    {
+     "text": "В 1909 году имение купила вдова Саввы Морозова Зинаида.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    },
+    {
+     "text": "В имении были оранжереи, теплицы и парники для цветов.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/muzej-zapovednik-gorki-leninskie/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
   {
    "id": "gorki-leninskie-park",
    "name": "Усадебный парк",
@@ -87,396 +286,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "gorki-leninskie-muzey",
-   "name": "Музейный комплекс заповедника",
-   "coords": {
-    "lat": 55.507,
-    "lon": 37.769
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Музей-заповедник «Горки Ленинские» учреждён в 1972 году. Сегодня это крупный комплекс: усадьба, парк, выставочные павильоны и несколько музейных зданий.",
-    "По одному туристическому источнику, в начале XX века имением владел промышленник Зимин, перестроивший дом в неоклассическом стиле. Это расходится с другими источниками, и мы оставляем вопрос открытым."
-   ],
-   "facts": [
-    {
-     "text": "Музей-заповедник учреждён в 1972 году.",
-     "sourceUrl": "https://experience.tripster.ru/articles/muzej-zapovednik-gorki-leninskie/",
-     "verified": true
-    },
-    {
-     "text": "Комплекс включает усадьбу, парк, выставочные павильоны и музейные здания.",
-     "sourceUrl": "https://tonkosti.ru/Горки_Ленинские",
-     "verified": true
-    },
-    {
-     "text": "Версия о владельце Зимине расходится с другими источниками.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
-     "verified": false
-    },
-    {
-     "text": "Последовательность владельцев в источниках различается.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
-     "verified": false
-    },
-    {
-     "text": "Горки — усадьба XVIII века.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/kakie-sjurprizy-tait-muzej-zapovednik-gorki-leninskie/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "gorki-leninskie-rastorguevo",
-   "name": "Расторгуево",
-   "coords": {
-    "lat": 55.546,
-    "lon": 37.725
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Расторгуево — дачный посёлок, ставший частью Видного. По одному источнику, его включили в город в 1965 году.",
-    "В 1902 году здесь основали коммерческое общество для устройства дачного посёлка — это называют началом будущего города. Следующая точка маршрута — «Центр Видного»."
-   ],
-   "facts": [
-    {
-     "text": "В 1902 году основано общество для устройства дачного посёлка.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Расторгуево вошло в состав Видного в 1965 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Видное образовано из нескольких посёлков и деревень.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": true
-    },
-    {
-     "text": "Состав посёлков, вошедших в город, в источниках различается.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    },
-    {
-     "text": "Усадьба Видное известна с начала XIX века.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/vidnoe/history",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "gorki-leninskie-tsentr",
-   "name": "Центр Видного",
-   "coords": {
-    "lat": 55.553,
-    "lon": 37.705
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1937 году начали строить Московский коксогазовый завод. Война остановила работы, а в 1949 году стройка возобновилась вместе с постоянным рабочим посёлком.",
-    "13 января 1965 года указом Президиума Верховного Совета РСФСР Видное получило статус города областного подчинения."
-   ],
-   "facts": [
-    {
-     "text": "Строительство Московского коксогазового завода начато в 1937 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
-     "verified": true
-    },
-    {
-     "text": "В 1949 году возобновилось строительство завода и рабочего посёлка.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia",
-     "verified": true
-    },
-    {
-     "text": "13 января 1965 года Видное стало городом областного подчинения.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": true
-    },
-    {
-     "text": "Название связано с усадьбой Видное.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": true
-    },
-    {
-     "text": "Город — центр Ленинского городского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "gorki-leninskie-poligon",
-   "name": "Бутовский полигон",
-   "coords": {
-    "lat": 55.537,
-    "lon": 37.585
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "В 1935 году на территории бывшего имения коннозаводчика Зимина устроили стрелковый полигон «Бутово». Приговоры выносила внесудебная «тройка» УНКВД по Московской области; осуждённых привозили в основном из московских тюрем.",
-    "С августа 1937 по октябрь 1938 года здесь расстреляли около 20,8 тысячи человек. Обнаружено 13 рвов на площади около 5 гектаров. Имена 20 765 человек установлены по следственным делам; общее число погибших неизвестно. Среди них — более 300 священнослужителей, позже канонизированных.",
-    "В 1993 году поставили первый памятный знак, в 1996 году — деревянную церковь, в 2007 году — белокаменный храм Новомучеников и Исповедников Российских. Здесь не фотографируются «на память» и не шумят."
-   ],
-   "facts": [
-    {
-     "text": "В 1935 году на территории имения И. И. Зимина устроен стрелковый полигон «Бутово».",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "С августа 1937 по октябрь 1938 года здесь расстреляли и похоронили около 20,8 тыс. человек.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "Обнаружено 13 рвов на площади около 5 га.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "Установлены имена 20 765 человек; общее число погибших неизвестно.",
-     "sourceUrl": "https://bigenc.ru/c/butovskii-poligon-a7de44",
-     "verified": true
-    },
-    {
-     "text": "Более 300 расстрелянных здесь священников канонизированы.",
-     "sourceUrl": "https://azbyka.ru/days/sv-sobor-novomuchenikov-v-butove-postradavshih",
-     "verified": true
-    },
-    {
-     "text": "Деревянная церковь построена в 1996 году, каменный храм — в 2007 году.",
-     "sourceUrl": "https://tonkosti.ru/%D0%91%D1%83%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BF%D0%BE%D0%BB%D0%B8%D0%B3%D0%BE%D0%BD",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориальное место: тишина, уважение, без развлекательных фото."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "gorki-leninskie-sadki",
-   "name": "Усадьба Знаменское-Садки",
-   "coords": {
-    "lat": 55.575,
-    "lon": 37.56
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "На месте усадьбы раньше была деревня Садки; жители ловили рыбу в речке Обитце. В начале XVII века землями владели Ладыженские, потом Урусовы, а с середины XVIII века — князья Трубецкие.",
-    "По справочнику, в имении Трубецких бывали Екатерина II и Пушкин, хозяйничали наполеоновские войска, а позже Катковы устроили здесь суконное производство. Эти сведения мы видели в одном источнике."
-   ],
-   "facts": [
-    {
-     "text": "Владельцы: Ладыженские, Урусовы, с середины XVIII века — Трубецкие.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": true
-    },
-    {
-     "text": "На месте усадьбы была деревня Садки, жители ловили рыбу в Обитце.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": true
-    },
-    {
-     "text": "В имении бывали Екатерина II и Пушкин.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": false
-    },
-    {
-     "text": "Катковы производили здесь сукно.",
-     "sourceUrl": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/",
-     "verified": false
-    },
-    {
-     "text": "Москва изъяла участок 57 га в пользу парка «Битцевский лес»; спор рассматривал арбитражный суд.",
-     "sourceUrl": "https://pravo.ru/news/view/6612/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Доступ на территорию усадьбы может быть закрыт."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "gorki-leninskie-rayon",
-   "name": "Новый район",
-   "coords": {
-    "lat": 55.57,
-    "lon": 37.475
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В XVII веке на этой земле уже были сёла Саврасово и Поповка. После Великой Отечественной войны территория вошла в Никольско-Хованский сельсовет.",
-    "Совхоз «Николо-Хованское» стал частью совхоза «Коммунарка», от которого и пошло название. В 2012 году эти места вошли в состав Москвы."
-   ],
-   "facts": [
-    {
-     "text": "В XVII веке существовали сёла Саврасово и Поповка.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
-     "verified": true
-    },
-    {
-     "text": "После войны территория вошла в Никольско-Хованский сельсовет.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
-     "verified": true
-    },
-    {
-     "text": "Совхоз «Николо-Хованское» стал частью совхоза «Коммунарка».",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
-     "verified": true
-    },
-    {
-     "text": "В 2012 году территория вошла в состав Москвы.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
-     "verified": true
-    },
-    {
-     "text": "Координаты остановки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/kommunarka/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "gorki-leninskie-memorial",
-   "name": "Мемориал «Коммунарка»",
-   "coords": {
-    "lat": 55.56,
-    "lon": 37.462
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "В конце 1920-х в глухом лесу у совхоза, на берегу Ордынки, построили дачу заместителя председателя ОГПУ, затем наркома НКВД Генриха Ягоды. В 1937 году его арестовали, в 1938-м расстреляли.",
-    "После ареста Ягоды дачу передали НКВД. С 1937 года сюда по ночам привозили тела расстрелянных из Лубянской, Лефортовской, Бутырской и Сухановской тюрем. Территорию около 20 гектаров обнесли забором с колючей проволокой.",
-    "Поиски захоронений начались в годы перестройки; археологи находят новые расстрельные ямы. Это место скорби: тишина и уважение."
-   ],
-   "facts": [
-    {
-     "text": "Дача Ягоды построена в конце 1920-х в лесу у совхоза «Коммунарка», на речке Ордынке.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
-     "verified": true
-    },
-    {
-     "text": "Ягода арестован в марте 1937 года и расстрелян в марте 1938 года.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
-     "verified": true
-    },
-    {
-     "text": "После ареста Ягоды дачу передали НКВД.",
-     "sourceUrl": "https://novayagazeta.ru/articles/2021/07/25/kotlovan",
-     "verified": true
-    },
-    {
-     "text": "Сюда привозили тела расстрелянных из нескольких московских тюрем.",
-     "sourceUrl": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/",
-     "verified": true
-    },
-    {
-     "text": "Территория около 20 га была обнесена забором.",
-     "sourceUrl": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/",
-     "verified": true
-    },
-    {
-     "text": "Археологи обнаружили новые расстрельные ямы.",
-     "sourceUrl": "https://theins.ru/news/242047",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Мемориальное место: тишина и уважение. Часы доступа уточняйте."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "gorki-leninskie-park-2",
-   "name": "Парк и пруды",
-   "coords": {
-    "lat": 55.579,
-    "lon": 37.392
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Вокруг дома — усадебный парк с прудами, где удобно сделать привал и посидеть у воды.",
-    "Экскурсии в Валуево часто объединяют с романо-готическими постройками соседних Филимонок.",
-    "Не спеша обходим парк вокруг прудов и возвращаемся к остановке автобуса."
-   ],
-   "facts": [
-    {
-     "text": "Экскурсии объединяют Валуево с романо-готикой в Филимонках.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/93731-usadba-valuevo-romano-gotika-v-filimonkah",
-     "verified": true
-    },
-    {
-     "text": "Описание парка и прудов — по туристическим источникам.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
-     "verified": false
-    },
-    {
-     "text": "Валуево — в Новой Москве.",
-     "sourceUrl": "https://moskvichmag.ru/gorod/dom-nedeli-usadba-valuevo-v-novoj-moskve/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точек приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
-     "verified": false
-    },
-    {
-     "text": "Усадьба — объект наследия федерального значения.",
-     "sourceUrl": "https://tonkosti.ru/Усадьба_Валуево",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -517,139 +328,95 @@
    "url": "https://rg.ru/2023/03/14/rasprobovat-istoriiu-v-muzee-zapovednike-gorki-leninskie-vodiat-po-kuhonnomu-zakulisiu-i-ugoshchaiut-boiarskim-obedom.html"
   },
   {
-   "title": "История Видного — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/vidnoe/istoriia"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/Горки_Ленинские"
   },
   {
-   "title": "Видное — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%92%D0%B8%D0%B4%D0%BD%D0%BE%D0%B5_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/journal/articles/muzej-zapovednik-gorki-leninskie/"
   },
   {
-   "title": "Екатерининский монастырь — tonkosti.ru",
-   "url": "https://tonkosti.ru/Свято-Екатерининский_монастырь_в_Видном"
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/activities/72337"
   },
   {
-   "title": "Бутовский полигон — БРЭ",
-   "url": "https://bigenc.ru/c/butovskii-poligon-a7de44"
+   "title": "Источник: olymp.msu.ru",
+   "url": "https://olymp.msu.ru/archive/Lomonosov_2012/1778/43227_1408.doc"
   },
   {
-   "title": "Собор новомучеников в Бутове — Азбука веры",
-   "url": "https://azbyka.ru/days/sv-sobor-novomuchenikov-v-butove-postradavshih"
-  },
-  {
-   "title": "Знаменское-Садки — КП",
-   "url": "https://www.kp.ru/russia/moskva/mesta/usadba-znamenskoe-sadki/"
-  },
-  {
-   "title": "Котлован — Новая газета",
-   "url": "https://novayagazeta.ru/articles/2021/07/25/kotlovan"
-  },
-  {
-   "title": "Расстрельные полигоны — Рамблер",
-   "url": "https://weekend.rambler.ru/read/44730332-6-glavnyh-rasstrelnyh-poligonov-stalina/"
-  },
-  {
-   "title": "Коммунарка — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/kommunarka/"
-  },
-  {
-   "title": "Усадьба Валуево — tonkosti.ru",
-   "url": "https://tonkosti.ru/Усадьба_Валуево"
-  },
-  {
-   "title": "Дом недели: Валуево — Moskvich Mag",
-   "url": "https://moskvichmag.ru/gorod/dom-nedeli-usadba-valuevo-v-novoj-moskve/"
+   "title": "Источник: kp.ru",
+   "url": "https://www.kp.ru/russia/podmoskove/mesta/muzej-zapovednik-gorki-leninskie/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.386438,
-     55.579
+     37.760448,
+     55.5082
     ],
     [
-     37.387183,
-     55.577428
+     37.761192,
+     55.506628
     ],
     [
-     37.389219,
-     55.576277
+     37.765692,
+     55.503628
     ],
     [
-     37.45922,
-     55.557277
+     37.767724,
+     55.502477
     ],
     [
-     37.582222,
-     55.534277
+     37.7705,
+     55.502056
     ],
     [
-     37.767224,
-     55.502277
+     37.773276,
+     55.502477
     ],
     [
-     37.77,
-     55.501856
+     37.775308,
+     55.503628
     ],
     [
-     37.772776,
-     55.502277
+     37.779309,
+     55.510928
     ],
     [
-     37.774808,
-     55.503428
+     37.780053,
+     55.5125
     ],
     [
-     37.775552,
-     55.505
+     37.779309,
+     55.514072
     ],
     [
-     37.776552,
-     55.509
+     37.777276,
+     55.515223
     ],
     [
-     37.775808,
-     55.510572
+     37.7745,
+     55.515644
     ],
     [
-     37.729813,
-     55.547572
+     37.771724,
+     55.515223
     ],
     [
-     37.727779,
-     55.548723
+     37.763224,
+     55.510923
     ],
     [
-     37.707779,
-     55.555723
+     37.761192,
+     55.509772
     ],
     [
-     37.410783,
-     55.603723
-    ],
-    [
-     37.408,
-     55.604144
-    ],
-    [
-     37.405217,
-     55.603723
-    ],
-    [
-     37.40318,
-     55.602572
-    ],
-    [
-     37.387183,
-     55.580572
-    ],
-    [
-     37.386438,
-     55.579
+     37.760448,
+     55.5082
     ]
    ]
   ]
