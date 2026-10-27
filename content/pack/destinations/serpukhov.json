@@ -13,7 +13,8 @@
   "Серпухов — один из старейших городов Подмосковья, некогда укрепление на южной границе Московского княжества. От кремля на Соборной горе остались в основном фрагменты каменной кладки.",
   "Главная святыня — Высоцкий монастырь. Его основателями считают Сергия Радонежского и князя Владимира Андреевича Храброго; даты основания в источниках расходятся. Название, по одной версии, связано с тем, что монастырь стоит на самом высоком холме города.",
   "Монастыри Серпухова исследователи называют форпостами южной границы Московского княжества во времена Орды.",
-  "Маршрут: станция, Соборная гора, Высоцкий монастырь и музей в особняке Мараевых."
+  "Сначала — свои места: «Соборная гора», «Высоцкий монастырь», «Особняк Мараевых». Дальше маршрут идёт по соседним местам: Приокско-Террасный заповедник — «Визит-центр», «Зубровый питомник»; Пущино — «Высокий берег Оки», «Научный центр», «Радиоастрономическая обсерватория».",
+  "Маршрут линейный, около 59 км и 8 точек. Финиш — Станция «Серпухов» (Электрички Курского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Серпухов»",
@@ -32,13 +33,13 @@
   "transport": "Электрички Курского направления"
  },
  "route": {
-  "distanceKm": 7.0,
-  "durationH": 3.0,
-  "difficulty": "средний",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 59.0,
+  "durationH": 7.6,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Серпухов был укреплением Московского княжества на южной границе. От кремля на Соборной горе остались в основном фрагменты каменной кладки, а на месте кремля сегодня гуляют туристы.",
-    "Белокаменный собор на горе в советские годы закрыли, а в конце советской эпохи в нём открыли филиал краеведческого музея.",
-    "Подъём крутой. Следующая точка маршрута — «Высоцкий монастырь»."
+    "Белокаменный собор на горе в советские годы закрыли, а в конце советской эпохи в нём открыли филиал краеведческого музея."
    ],
    "facts": [
     {
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "serpukhov-vysotsky",
@@ -135,8 +135,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
   },
   {
    "id": "serpukhov-maraevy",
@@ -150,7 +150,7 @@
    "guideStory": [
     "Купеческий особняк Мараевых хранит богатые художественные собрания — здесь работает музей.",
     "КП советует в Серпухове смотреть остатки древнего кремля, Музей павлина и зубров рядом в заповеднике.",
-    "Часы работы уточняйте; затем — к станции. Финиш — Станция «Серпухов»: Электрички Курского направления. Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+    "Часы работы уточняйте; затем — к станции. Следующая точка маршрута — «Визит-центр»."
    ],
    "facts": [
     {
@@ -183,8 +183,245 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "serpukhov-vizit",
+   "name": "Визит-центр",
+   "coords": {
+    "lat": 54.89,
+    "lon": 37.57
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Заповедник основан в 1945 году для сохранения уникального для центра России природного комплекса на границе хвойно-широколиственных лесов и лесостепи.",
+    "По одному источнику, решение принял Совнарком РСФСР, создав заповедник из нескольких участков Московской области.",
+    "Билеты на экскурсию и правила посещения уточняйте заранее. Следующая точка маршрута — «Зубровый питомник»."
+   ],
+   "facts": [
+    {
+     "text": "Заповедник основан в 1945 году.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%80%D0%B8%D0%BE%D0%BA%D1%81%D0%BA%D0%BE-%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Он сохраняет комплекс на границе хвойно-широколиственных лесов и лесостепи.",
+     "sourceUrl": "https://www.philol.msu.ru/~rkigf/L_Kult-strnved/Exkursii/PrTerZapovednik_okt09/Info_Zapovednik.doc",
+     "verified": true
+    },
+    {
+     "text": "Решение принял Совнарком РСФСР — по одному источнику.",
+     "sourceUrl": "https://www.philol.msu.ru/~rkigf/L_Kult-strnved/Exkursii/PrTerZapovednik_okt09/Info_Zapovednik.doc",
+     "verified": false
+    },
+    {
+     "text": "Правила посещения не проверены.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%80%D0%B8%D0%BE%D0%BA%D1%81%D0%BA%D0%BE-%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%80%D0%B8%D0%BE%D0%BA%D1%81%D0%BA%D0%BE-%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "serpukhov-zubry",
+   "name": "Зубровый питомник",
+   "coords": {
+    "lat": 54.892,
+    "lon": 37.575
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Зубровый питомник появился в конце 1940-х: сотрудники называют 1948 год, другие источники — 1947-й. Его называют единственным в России.",
+    "За сохранение зубров в Подмосковье более 32 тысяч человек подписали петицию. В заповеднике живут и бизоны.",
+    "Смотрим животных только с экскурсией и только из-за ограды. Следующая точка маршрута — «Высокий берег Оки»."
+   ],
+   "facts": [
+    {
+     "text": "Зубровый питомник создан в 1948 году — по данным сотрудников.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%80%D0%B8%D0%BE%D0%BA%D1%81%D0%BA%D0%BE-%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Другой источник называет 1947 год.",
+     "sourceUrl": "https://www.philol.msu.ru/~rkigf/L_Kult-strnved/Exkursii/PrTerZapovednik_okt09/Info_Zapovednik.doc",
+     "verified": false
+    },
+    {
+     "text": "Питомник называют единственным в России.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9F%D1%80%D0%B8%D0%BE%D0%BA%D1%81%D0%BA%D0%BE-%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Более 32 тысяч человек подписали петицию о спасении зубров.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/bolee-32-tys-chelovek-podpisali-petitsiyu-dlya-spaseniya-zubrov-v-podmoskove-xl/",
+     "verified": true
+    },
+    {
+     "text": "«За рулём» писал о фотоохоте в заповеднике.",
+     "sourceUrl": "https://www.zr.ru/content/articles/101221-fotoohota/",
+     "verified": true
+    }
+   ],
+   "tickets": true,
+   "warnings": [
+    "Не кормить и не подходить к животным."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "serpukhov-bereg",
+   "name": "Высокий берег Оки",
+   "coords": {
+    "lat": 54.833,
+    "lon": 37.62
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Пущино стоит на высоком правом берегу Оки. С обрыва видна пойма и заповедный левый берег.",
+    "Ранняя история связана с дворянами Пущиными: в 1578–1579 годах местность упомянута как их поместье. Следующая точка маршрута — «Научный центр»."
+   ],
+   "facts": [
+    {
+     "text": "Пущино стоит на высоком правом берегу Оки.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В 1578–1579 годах местность упомянута как поместье Пущиных.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Описание вида — оценка составителя.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Пущино — примерно в 100 км от Москвы.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "serpukhov-nauka",
+   "name": "Научный центр",
+   "coords": {
+    "lat": 54.834,
+    "lon": 37.625
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Как современный город Пущино ведёт отсчёт с 1956 года. Здесь работают научные институты.",
+    "Связь биологического центра с датой 1956 года в найденных источниках не подтверждена — мы её не утверждаем. Следующая точка маршрута — «Радиоастрономическая обсерватория»."
+   ],
+   "facts": [
+    {
+     "text": "Пущино ведёт отсчёт с 1956 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Связь биоцентра с 1956 годом не подтверждена.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Территории закрыты.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia",
+     "verified": false
+    },
+    {
+     "text": "История Пущина — 101hotels.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/pushchino/history",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "serpukhov-observatoriya",
+   "name": "Радиоастрономическая обсерватория",
+   "coords": {
+    "lat": 54.82,
+    "lon": 37.63
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Рядом с городом — радиоастрономическая обсерватория; её включают в экскурсии по наукоградам Пущино и Протвино.",
+    "Посещение — только с экскурсией. Обратный путь к Серпухову долгий. Финиш — Станция «Серпухов»: Электрички Курского направления."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с Пущином — радиоастрономическая обсерватория.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": true
+    },
+    {
+     "text": "Экскурсии объединяют Пущино и Протвино.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": true
+    },
+    {
+     "text": "Посещение — с экскурсией, по наблюдению составителя.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -218,9 +455,26 @@
   {
    "title": "Высоцкий монастырь — Спутник8",
    "url": "https://www.sputnik8.com/ru/serpukhov/sights/vysockij-monastyr"
+  },
+  {
+   "title": "Приокско-Террасный — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9F%D1%80%D0%B8%D0%BE%D0%BA%D1%81%D0%BA%D0%BE-%D0%A2%D0%B5%D1%80%D1%80%D0%B0%D1%81%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA"
+  },
+  {
+   "title": "Заповедник — МГУ",
+   "url": "https://www.philol.msu.ru/~rkigf/L_Kult-strnved/Exkursii/PrTerZapovednik_okt09/Info_Zapovednik.doc"
+  },
+  {
+   "title": "История Пущина — kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/pushchino/istoriia"
+  },
+  {
+   "title": "Наукограды — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/88429-naukogrady-puschino-protvino-radioastronomicheskaya-observatoriya"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -246,32 +500,40 @@
      54.902277
     ],
     [
-     37.415,
-     54.901856
+     37.627271,
+     54.817277
     ],
     [
-     37.417734,
-     54.902277
+     37.63,
+     54.816856
     ],
     [
-     37.419736,
-     54.903428
+     37.632729,
+     54.817277
     ],
     [
-     37.420469,
-     54.905
+     37.634726,
+     54.818428
     ],
     [
-     37.41847,
-     54.915
+     37.635457,
+     54.82
     ],
     [
-     37.417737,
-     54.916572
+     37.630459,
+     54.834
     ],
     [
-     37.414738,
-     54.921572
+     37.629728,
+     54.835572
+    ],
+    [
+     37.579734,
+     54.893572
+    ],
+    [
+     37.577733,
+     54.894723
     ],
     [
      37.412735,

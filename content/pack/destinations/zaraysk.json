@@ -13,7 +13,8 @@
   "Зарайск — город с самым маленьким из сохранившихся русских кремлей. Каменный кремль построен в 1528–1531 годах по указанию Василия III для защиты от набегов; его площадь — 2,3 гектара.",
   "Это единственный полностью сохранившийся кремль в Подмосковье; за всю историю обороны его ни разу не взяли.",
   "Главная святыня — икона Николы Заразского. Историк А. Б. Мазуров предлагает датировать её список 1528–1531 годами; это список с утраченного «корсунского» оригинала XIII века.",
-  "Маршрут: кремль, Никольский собор и старый центр."
+  "Сначала — свои места: «Зарайский кремль», «Старый Зарайск», «Стены и башни кремля», «Святой источник «Белый колодец»». Дальше маршрут идёт по соседним местам: Озёры — «Текстильная «Ока»»; Ожерелье — «Город железнодорожников»; Кашира — «Архитектура ГОЭЛРО», «Берег Оки».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Кашира» (Электрички Павелецкого направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Зарайск, автостанция",
@@ -24,21 +25,21 @@
   "transport": "Автобусы от Луховиц и Москвы — уточняйте"
  },
  "endPoint": {
-  "name": "Зарайск, автостанция",
+  "name": "Станция «Кашира»",
   "coords": {
-   "lat": 54.7622,
-   "lon": 38.8855
+   "lat": 54.8342,
+   "lon": 38.1515
   },
-  "transport": "Автобусы до Луховиц и Москвы"
+  "transport": "Электрички Павелецкого направления"
  },
  "route": {
-  "distanceKm": 4.0,
-  "durationH": 2.5,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 70.0,
+  "durationH": 7.7,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -53,8 +54,7 @@
    "visitMinutes": 30,
    "guideStory": [
     "Каменный кремль построен в 1528–1531 годах по указанию великого князя Василия III для защиты от набегов. Его площадь — 2,3 гектара: это самый маленький из сохранившихся русских кремлей.",
-    "Зарайский кремль — единственный полностью сохранившийся кремль Подмосковья; при обороне его ни разу не взяли.",
-    "Обходим стены. Следующая точка маршрута — «Никольский собор»."
+    "Зарайский кремль — единственный полностью сохранившийся кремль Подмосковья; при обороне его ни разу не взяли."
    ],
    "facts": [
     {
@@ -86,57 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "zaraysk-nikola",
-   "name": "Никольский собор",
-   "coords": {
-    "lat": 54.7605,
-    "lon": 38.8855
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Главная святыня Никольского собора с XVII по начало XX века — икона Николы Заразского.",
-    "А. Б. Мазуров предлагает датировать её список 1528–1531 годами (раньше относили к 1513-му). Это список с утраченного византийского «корсунского» оригинала XIII века.",
-    "Действующий храм. Следующая точка маршрута — «Старый Зарайск». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
-   ],
-   "facts": [
-    {
-     "text": "Икона Николы Заразского — главная святыня собора с XVII по начало XX века.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Мазуров датирует список 1528–1531 годами.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Это список с утраченного «корсунского» оригинала XIII века.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Прежняя датировка — 1513 год.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "zaraysk-tsentr",
@@ -149,8 +100,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "KudaGo собрал «N причин поехать в Зарайск» — кремль, старые улицы и тихий провинциальный ритм.",
-    "Зарайск — один из самых южных городов нашей спирали.",
-    "Возвращаемся к автостанции. Финиш — Зарайск, автостанция: Автобусы до Луховиц и Москвы. Формат остановки — «проезжаем», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+    "Зарайск — один из самых южных городов нашей спирали. Следующая точка маршрута — «Стены и башни кремля». Формат остановки — «проезжаем», заложите на неё около 15 минут."
    ],
    "facts": [
     {
@@ -182,8 +132,271 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "zaraysk-steny",
+   "name": "Стены и башни кремля",
+   "coords": {
+    "lat": 54.7605,
+    "lon": 38.8835
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Зарайский кремль построили в 1528–1531 годах по приказу Василия III — это старейший кремль Подмосковья, сохранившийся почти целиком. Имя зодчего неизвестно, но в облике крепости видно итальянское влияние.",
+    "План почти прямоугольный, около 190 на 134 метра; башен семь, три из них проездные. Объехать стены по периметру — хороший способ почувствовать масштаб крепости засечной черты."
+   ],
+   "facts": [
+    {
+     "text": "Зарайский кремль построен в 1528–1531 годах по приказу Василия III.",
+     "sourceUrl": "https://welcome.mosreg.ru/museums/steny-hranasie-istoriu",
+     "verified": true
+    },
+    {
+     "text": "Кремль почти прямоугольный, около 190 на 134 метра, с семью башнями, три из них проездные.",
+     "sourceUrl": "https://vimpel-v.com/journey/moscow/4034-zarajsk.html",
+     "verified": true
+    },
+    {
+     "text": "Имя архитектора неизвестно; заметно итальянское влияние.",
+     "sourceUrl": "https://vimpel-v.com/journey/moscow/4034-zarajsk.html",
+     "verified": false
+    },
+    {
+     "text": "С 1 апреля 2025 года музей называется «Коломенско-Зарайский музей-заповедник».",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%97%D0%B0%D1%80%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
    "order": 30,
    "coordsVerified": false
+  },
+  {
+   "id": "zaraysk-belyy-kolodets",
+   "name": "Святой источник «Белый колодец»",
+   "coords": {
+    "lat": 54.757,
+    "lon": 38.876
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Подземный ключ на набережной Осетра, рядом с местной Голгофой, освящён во имя Николая Чудотворца. Над ним — деревянный сруб с двумя купелями.",
+    "Место популярно у паломников, поэтому в выходные здесь людно. Спуск к реке крутой — велосипед лучше оставить наверху."
+   ],
+   "facts": [
+    {
+     "text": "Белый колодец — подземный ключ на набережной Осетра рядом с местной Голгофой.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-zarayska-putevoditel-po-starinnomu-gorodu",
+     "verified": true
+    },
+    {
+     "text": "В деревянном срубе две купели — мужская и женская.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-zarayska-putevoditel-po-starinnomu-gorodu",
+     "verified": true
+    },
+    {
+     "text": "Источник освящён во имя Николая Чудотворца.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-zarayska-putevoditel-po-starinnomu-gorodu",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "zaraysk-fabrika",
+   "name": "Текстильная «Ока»",
+   "coords": {
+    "lat": 54.858,
+    "lon": 38.56
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В XIX веке в Озёрах появились ткацкие, отбельные и красильные производства. С 1835 года развивалось предприятие, позднее известное как текстильная фирма «Ока».",
+    "Корпуса фабрики — главный памятник промышленной истории города. Следующая точка маршрута — «Город железнодорожников»."
+   ],
+   "facts": [
+    {
+     "text": "В XIX веке появились ткацкие, отбельные и красильные производства.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": true
+    },
+    {
+     "text": "С 1835 года развивалось предприятие «Ока».",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Состояние фабрики не проверено.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Озёры описаны на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9E%D0%B7%D1%91%D1%80%D1%8B",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "zaraysk-gorod",
+   "name": "Город железнодорожников",
+   "coords": {
+    "lat": 54.792,
+    "lon": 38.275
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Ожерелье — город с 1958 года, в 10 км к югу от Каширы.",
+    "Деревня Ожерелье упоминается ещё с 1578 года.",
+    "Делаем небольшой круг по улицам города железнодорожников. Следующая точка маршрута — «Архитектура ГОЭЛРО». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Ожерелье — город с 1958 года.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Деревня упоминается с 1578 года.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Ожерелье — в 10 км к югу от Каширы.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "zaraysk-chernyshev",
+   "name": "Архитектура ГОЭЛРО",
+   "coords": {
+    "lat": 54.848,
+    "lon": 38.235
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Одним из ранних объектов архитектора С. Е. Чернышёва по плану ГОЭЛРО была Каширская районная электростанция.",
+    "Первые электростанции ГОЭЛРО строили быстро и в разруху — Кашира и «Электропередача» в Электрогорске стали опорой новой энергосистемы."
+   ],
+   "facts": [
+    {
+     "text": "Ранний объект Чернышёва по ГОЭЛРО — Каширская ГРЭС.",
+     "sourceUrl": "https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-9f4a699d-e90e-49ac-9cc6-e05a77a886d1/c/cheredina.pdf",
+     "verified": true
+    },
+    {
+     "text": "«Электропередача» тоже опора энергосистемы.",
+     "sourceUrl": "https://habr.com/en/articles/916262",
+     "verified": true
+    },
+    {
+     "text": "Оценка — мнение составителя.",
+     "sourceUrl": "https://habr.com/en/articles/916262",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "zaraysk-oka",
+   "name": "Берег Оки",
+   "coords": {
+    "lat": 54.84,
+    "lon": 38.16
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Кашира стоит на правом высоком берегу Оки. Историю самого города мы в найденных источниках не сверили и подробно не пересказываем.",
+    "С берега хорошо видна широкая Ока и её пойма. Финиш — Станция «Кашира»: Электрички Павелецкого направления."
+   ],
+   "facts": [
+    {
+     "text": "Кашира стоит на Оке.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": true
+    },
+    {
+     "text": "Берег — правый, высокий — по наблюдению составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    },
+    {
+     "text": "История города не сверена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -217,32 +430,57 @@
   {
    "title": "Икона Николы Заразского — Мазуров",
    "url": "https://historicalreporter.ru/soderzhanie/mazurov-a-b-k-istorii-pochitaniya-chudotvornoy-ikony-nikoly-zarazskogo-/"
+  },
+  {
+   "title": "Озёры — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/"
+  },
+  {
+   "title": "Ожерелье — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/27669"
+  },
+  {
+   "title": "Kashira Power Plant — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kashira_Power_Plant"
+  },
+  {
+   "title": "Открытие ГРЭС — Президентская библиотека",
+   "url": "https://www.prlib.ru/en/history/619289"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.877551,
-     54.762
+     38.146041,
+     54.8342
     ],
     [
-     38.878281,
-     54.760428
+     38.146772,
+     54.832628
     ],
     [
-     38.880281,
-     54.758428
+     38.14877,
+     54.831477
     ],
     [
-     38.882275,
-     54.757277
+     38.272273,
+     54.789277
     ],
     [
-     38.885,
-     54.756856
+     38.275,
+     54.788856
+    ],
+    [
+     38.876,
+     54.753856
+    ],
+    [
+     38.878724,
+     54.754277
     ],
     [
      38.887725,
@@ -253,44 +491,52 @@
      54.758428
     ],
     [
-     38.890219,
-     54.758928
+     38.890449,
+     54.76
     ],
     [
-     38.890949,
-     54.7605
+     38.890449,
+     54.762
     ],
     [
-     38.890949,
-     54.7622
-    ],
-    [
-     38.890219,
-     54.763772
-    ],
-    [
-     38.888225,
-     54.764923
-    ],
-    [
-     38.8855,
-     54.765344
-    ],
-    [
-     38.883,
-     54.765144
-    ],
-    [
-     38.880275,
-     54.764723
-    ],
-    [
-     38.878281,
+     38.889719,
      54.763572
     ],
     [
-     38.877551,
-     54.762
+     38.887725,
+     54.764723
+    ],
+    [
+     38.562731,
+     54.860723
+    ],
+    [
+     38.56,
+     54.861144
+    ],
+    [
+     38.235,
+     54.851144
+    ],
+    [
+     38.16,
+     54.843144
+    ],
+    [
+     38.15727,
+     54.842723
+    ],
+    [
+     38.155272,
+     54.841572
+    ],
+    [
+     38.146772,
+     54.835772
+    ],
+    [
+     38.146041,
+     54.8342
     ]
    ]
   ]

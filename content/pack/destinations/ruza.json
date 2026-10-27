@@ -13,7 +13,8 @@
   "Руза — старинная крепость на западных подступах к Москве. Первое упоминание относят к 1328 году — духовной грамоте Ивана Калиты; другой источник называет 1339 год и Звенигородское княжество.",
   "Город долго защищал дорогу на Москву — от новгородских и смоленских войск, позже от польско-литовских отрядов и татар. Крепость не сохранилась; на месте городища остались земляные валы.",
   "С 1782 года Руза — уездный город. В 1941 году её оккупировали на 84 дня; освободили 17 января 1942 года. Краеведческий музей, основанный в 1906 году, после оккупации восстанавливали.",
-  "Маршрут: Тучково, дорога на север, городище и центр Рузы."
+  "Сначала — свои места: «Городище и валы», «Краеведческий музей». Дальше маршрут идёт по соседним местам: Тучково — «Посёлок у станции», «Аллея Славы»; Дорохово — «Память освобождения»; Рузское водохранилище — «Плотина у Палашкина», «Берег водохранилища», «Вода для Москвы?».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Руза, автостанция (Автобусы от Тучкова и Москвы — уточняйте), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Тучково»",
@@ -29,19 +30,157 @@
    "lat": 55.701,
    "lon": 36.196
   },
-  "transport": "Автобусы до Тучкова и Москвы — уточняйте"
+  "transport": "Автобусы от Тучкова и Москвы — уточняйте"
  },
  "route": {
-  "distanceKm": 24.0,
-  "durationH": 3.5,
-  "difficulty": "средний",
+  "distanceKm": 70.0,
+  "durationH": 7.9,
+  "difficulty": "сложный",
   "shape": "линейный",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "ruza-posyolok",
+   "name": "Посёлок у станции",
+   "coords": {
+    "lat": 55.599,
+    "lon": 36.472
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Тучково — посёлок у одноимённой станции Белорусской дороги. Историю станции мы в найденных источниках не нашли.",
+    "Отсюда начинаются «рузские просторы» — дальше на север Руза и Рузское водохранилище. Следующая точка маршрута — «Аллея Славы»."
+   ],
+   "facts": [
+    {
+     "text": "Тучково — посёлок у станции.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "verified": true
+    },
+    {
+     "text": "История станции не найдена.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "verified": false
+    },
+    {
+     "text": "Экскурсии «Рузские просторы» включают Тучково.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "verified": false
+    },
+    {
+     "text": "Руза — к северу от Тучкова.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 10
+  },
+  {
+   "id": "ruza-slava",
+   "name": "Аллея Славы",
+   "coords": {
+    "lat": 55.6,
+    "lon": 36.48
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Тучкове торжественно открыли мемориал «Аллея Славы».",
+    "МЧС упоминало годовщину освобождения посёлка от немецко-фашистских захватчиков — значит, в 1941 году Тучково было оккупировано. Следующая точка маршрута — «Память освобождения»."
+   ],
+   "facts": [
+    {
+     "text": "В Тучкове открыли мемориал «Аллея Славы».",
+     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "verified": true
+    },
+    {
+     "text": "Тучково было освобождено от оккупации.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": true
+    },
+    {
+     "text": "Дату освобождения мы не сверили.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": false
+    },
+    {
+     "text": "Координаты мемориала приблизительные.",
+     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "verified": false
+    },
+    {
+     "text": "Тучково — в Рузском округе.",
+     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "ruza-memorial",
+   "name": "Память освобождения",
+   "coords": {
+    "lat": 55.552,
+    "lon": 36.365
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "13 января жители Рузского округа чтят память защитников в День освобождения Дорохова.",
+    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести». Следующая точка маршрута — «Городище и валы»."
+   ],
+   "facts": [
+    {
+     "text": "День освобождения Дорохова отмечают 13 января.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": true
+    },
+    {
+     "text": "В 2016 году — звание «Населённый пункт воинской доблести».",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
+     "verified": true
+    },
+    {
+     "text": "Год освобождения мы не сверили.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": false
+    },
+    {
+     "text": "Координаты мемориала приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": false
+    },
+    {
+     "text": "Жители чтят память защитников.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
   {
    "id": "ruza-gorodishche",
    "name": "Городище и валы",
@@ -53,8 +192,7 @@
    "visitMinutes": 20,
    "guideStory": [
     "Руза долго служила крепостью, защищавшей дорогу на Москву. Сама крепость не сохранилась, но на месте городища остались земляные валы.",
-    "Первое документальное упоминание — 1328 год, духовная грамота Ивана Калиты; по другой версии — 1339 год.",
-    "С вала хорошо видна долина Рузы. Следующая точка маршрута — «Краеведческий музей». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+    "Первое документальное упоминание — 1328 год, духовная грамота Ивана Калиты; по другой версии — 1339 год."
    ],
    "facts": [
     {
@@ -86,8 +224,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 10,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 40
   },
   {
    "id": "ruza-muzey",
@@ -100,8 +238,7 @@
    "visitMinutes": 30,
    "guideStory": [
     "Краеведческий музей Рузы основан в 1906 году. Во время оккупации его уничтожили, после войны восстановили.",
-    "В XVIII–XIX веках город получил регулярную планировку; четыре каменных храма снова действуют.",
-    "Часы работы уточняйте. Следующая точка маршрута — «Руза 1941 года». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+    "В XVIII–XIX веках город получил регулярную планировку; четыре каменных храма снова действуют. Следующая точка маршрута — «Плотина у Палашкина»."
    ],
    "facts": [
     {
@@ -134,55 +271,149 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 50
   },
   {
-   "id": "ruza-pamyat",
-   "name": "Руза 1941 года",
+   "id": "ruza-plotina",
+   "name": "Плотина у Палашкина",
    "coords": {
-    "lat": 55.7005,
-    "lon": 36.198
+    "lat": 55.73,
+    "lon": 36.15
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "25 октября 1941 года у Рузы шёл бой; город был оккупирован 84 дня и освобождён 17 января 1942 года.",
-    "«За рулём» называл Рузу «городом тихих улиц, героев-партизан и Мишки Карася». С 1782 года Руза — уездный город Московской губернии.",
-    "Финиш у автостанции. Финиш — Руза, автостанция: Автобусы до Тучкова и Москвы — уточняйте. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+    "Рузское водохранилище создано в 1965–1966 годах; его плотина стоит у деревни Палашкино на реке Рузе, притоке Москвы-реки.",
+    "Гидросооружение охраняется — смотрим с общедоступных мест. Следующая точка маршрута — «Берег водохранилища». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
    ],
    "facts": [
     {
-     "text": "Город был оккупирован 84 дня.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ruza/",
+     "text": "Водохранилище создано в 1965–1966 годах.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
      "verified": true
     },
     {
-     "text": "Руза освобождена 17 января 1942 года.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ruza/",
+     "text": "Плотина у деревни Палашкино.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
      "verified": true
     },
     {
-     "text": "С 1782 года — уездный город.",
-     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%A0%D1%83%D0%B7%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)",
+     "text": "Руза — приток Москвы-реки.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
      "verified": true
     },
     {
-     "text": "«За рулём» писал о Рузе.",
-     "sourceUrl": "https://www.zr.ru/content/articles/966132-v-dvukh-shagakh-ot-moskvy-na-vy/",
-     "verified": true
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": false
     },
     {
-     "text": "Руза в подборке идей поездок Яндекса.",
-     "sourceUrl": "https://travel.yandex.ru/journal/10-originalnyh-idey-kuda-poehat-iz-moskvy-na-vyhodnye/",
+     "text": "Водохранилища области описаны в Знании.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "ruza-bereg",
+   "name": "Берег водохранилища",
+   "coords": {
+    "lat": 55.75,
+    "lon": 36.0
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Площадь водохранилища — около 33 кв. км, ширина — до 4 км. Объём, по туристическому источнику, около 216 млн куб. м.",
+    "Здесь любят рыбачить. Купание — только в разрешённых местах. Следующая точка маршрута — «Вода для Москвы?». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "Площадь около 33 кв. км.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": true
+    },
+    {
+     "text": "Максимальная ширина — до 4 км.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": true
+    },
+    {
+     "text": "Объём около 216 млн куб. м — по туристическому источнику.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": false
+    },
+    {
+     "text": "Водохранилище популярно у рыбаков.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": true
+    },
+    {
+     "text": "Места для купания не проверены.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "warnings": [
+    "Купание — только в разрешённых местах."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "ruza-voda",
+   "name": "Вода для Москвы?",
+   "coords": {
+    "lat": 55.745,
+    "lon": 36.02
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Туристические сайты пишут, что водохранилище создали и для питьевого водоснабжения Москвы. Официальная схема водоснабжения относит к системе столицы Вазузскую систему с Верхне-Рузским водохранилищем — это другое водохранилище.",
+    "Поэтому роль Рузского водохранилища в водоснабжении Москвы мы помечаем как непроверенную."
+   ],
+   "facts": [
+    {
+     "text": "Роль в водоснабжении Москвы — по туристическому источнику.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": false
+    },
+    {
+     "text": "Вазузская система входит в водоснабжение Москвы.",
+     "sourceUrl": "https://www.chem.msu.ru/rus/ecology_2016/primin.pdf",
+     "verified": true
+    },
+    {
+     "text": "Верхне-Рузское — другое водохранилище.",
+     "sourceUrl": "https://www.chem.msu.ru/rus/ecology_2016/primin.pdf",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.chem.msu.ru/rus/ecology_2016/primin.pdf",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -217,76 +448,105 @@
   {
    "title": "Руза — travelto.ru",
    "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ruza/"
+  },
+  {
+   "title": "Генералы Тучковы — Проза",
+   "url": "https://proza.ru/2021/07/05/291"
+  },
+  {
+   "title": "Аллея Славы — 360",
+   "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
+  },
+  {
+   "title": "Дорохово — komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./"
+  },
+  {
+   "title": "День освобождения — РИАМО",
+   "url": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/"
+  },
+  {
+   "title": "Рузское водохранилище — fb.ru",
+   "url": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki"
+  },
+  {
+   "title": "Водохранилища области — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.18942,
-     55.702
+     35.994414,
+     55.75
     ],
     [
-     36.190168,
-     55.700428
+     35.995162,
+     55.748428
     ],
     [
-     36.191168,
-     55.699428
+     35.997207,
+     55.747277
     ],
     [
-     36.19321,
-     55.698277
+     36.362221,
+     55.549277
     ],
     [
-     36.467217,
+     36.365,
+     55.548856
+    ],
+    [
+     36.367779,
+     55.549277
+    ],
+    [
+     36.482783,
      55.597277
     ],
     [
-     36.47,
-     55.596856
-    ],
-    [
-     36.472783,
-     55.597277
-    ],
-    [
-     36.47482,
+     36.48482,
      55.598428
     ],
     [
-     36.475565,
+     36.485565,
      55.6
     ],
     [
-     36.47482,
+     36.48482,
      55.601572
     ],
     [
-     36.472783,
+     36.482783,
      55.602723
     ],
     [
-     36.19779,
-     55.704723
+     36.152792,
+     55.732723
     ],
     [
-     36.195,
-     55.705144
+     36.15,
+     55.733144
     ],
     [
-     36.19221,
-     55.704723
+     36.0,
+     55.753144
     ],
     [
-     36.190168,
-     55.703572
+     35.997207,
+     55.752723
     ],
     [
-     36.18942,
-     55.702
+     35.995162,
+     55.751572
+    ],
+    [
+     35.994414,
+     55.75
     ]
    ]
   ]

@@ -13,7 +13,8 @@
   "Белопесоцкий монастырь стоит у Оки возле Ступина. РИАМО называет его «монастырём-крепостью»: он строился как форпост у границы Московского княжества, которая тогда проходила по Оке.",
   "С середины 1930-х годов в зданиях монастыря размещались общежитие рабочих и тюрьма для заключённых, строивших мост через Оку.",
   "Дату основания мы в найденных источниках не подтвердили.",
-  "Маршрут: Ступино, дорога к Оке и монастырь."
+  "Сначала — свои места: «Монастырь-крепость», «Берег Оки». Дальше маршрут идёт по соседним местам: Ступино — «Электровозстрой», «Авиакомбинат № 150»; Кашира — «Архитектура ГОЭЛРО»; Ожерелье — «Город железнодорожников», «Узловая станция»; Озёры — «Центр».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Ожерелье» (Электрички Павелецкого направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Ступино»",
@@ -24,21 +25,21 @@
   "transport": "Электрички Павелецкого направления"
  },
  "endPoint": {
-  "name": "Станция «Ступино»",
+  "name": "Станция «Ожерелье»",
   "coords": {
-   "lat": 54.8862,
-   "lon": 38.0785
+   "lat": 54.7902,
+   "lon": 38.2705
   },
   "transport": "Электрички Павелецкого направления"
  },
  "route": {
-  "distanceKm": 8.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 70.0,
+  "durationH": 7.7,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
@@ -54,7 +55,7 @@
    "guideStory": [
     "Белопесоцкий монастырь изначально строился как крепость-форпост: граница Московского княжества тогда проходила по Оке.",
     "Дату основания мы в найденных источниках не подтвердили.",
-    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Тяжёлые годы». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Берег Оки»."
    ],
    "facts": [
     {
@@ -88,55 +89,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "belopesotskiy-monastyr-tyurma",
-   "name": "Тяжёлые годы",
-   "coords": {
-    "lat": 54.8802,
-    "lon": 38.0505
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "С середины 1930-х годов в зданиях монастыря размещались общежитие рабочих и тюрьма для заключённых, строивших мост через Оку.",
-    "Сегодня обитель снова действует и восстанавливается.",
-    "Едем к Оке. Следующая точка маршрута — «Берег Оки». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут. Координаты точки приблизительные — ориентируйтесь на месте."
-   ],
-   "facts": [
-    {
-     "text": "С середины 1930-х здесь было общежитие рабочих и тюрьма.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": true
-    },
-    {
-     "text": "Заключённые строили мост через Оку.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": true
-    },
-    {
-     "text": "Монастырь снова действует.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/stupino/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 10
   },
   {
    "id": "belopesotskiy-monastyr-oka",
@@ -149,8 +103,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Монастырь стоит у Оки — старой южной границы Москвы.",
-    "С берега видна река и Кашира на другой стороне.",
-    "Возвращаемся в Ступино. Финиш — Станция «Ступино»: Электрички Павелецкого направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут. Координаты точки приблизительные — ориентируйтесь на месте."
+    "С берега видна река и Кашира на другой стороне. Следующая точка маршрута — «Электровозстрой». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
    ],
    "facts": [
     {
@@ -183,8 +136,287 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 30,
-   "coordsVerified": false
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "belopesotskiy-monastyr-elektrovozstroy",
+   "name": "Электровозстрой",
+   "coords": {
+    "lat": 54.886,
+    "lon": 38.078
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Рабочий посёлок Электровозстрой возник на месте деревень Ступино и Кремиченка. 30 августа 1938 года он получил статус города и новое имя.",
+    "Задумывали электровозный завод, но ни один электровоз с местным названием так и не выпустили."
+   ],
+   "facts": [
+    {
+     "text": "Ступино стал городом 30 августа 1938 года.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Посёлок назывался Электровозстрой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Возник на месте деревень Ступино и Кремиченка.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Электровозов здесь так и не выпустили.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 30
+  },
+  {
+   "id": "belopesotskiy-monastyr-aviakombinat",
+   "name": "Авиакомбинат № 150",
+   "coords": {
+    "lat": 54.89,
+    "lon": 38.085
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1936 году комиссия под руководством Андрея Туполева нашла площадку пригодной для авиапроизводства, и «Электровозстрой» стал «Авиакомбинатом № 150».",
+    "В 1940 году в городе начал работать металлургический комбинат. РИАМО называет Ступино «чудом металлургов»."
+   ],
+   "facts": [
+    {
+     "text": "В 1936 году комиссия Туполева выбрала площадку для авиапроизводства.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "Стройка стала «Авиакомбинатом № 150».",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "В 1940 году заработал металлургический комбинат.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/stupino/history",
+     "verified": true
+    },
+    {
+     "text": "РИАМО называет Ступино «чудом металлургов».",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": true
+    },
+    {
+     "text": "Территории закрыты.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Промышленные территории."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "belopesotskiy-monastyr-chernyshev",
+   "name": "Архитектура ГОЭЛРО",
+   "coords": {
+    "lat": 54.848,
+    "lon": 38.235
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Одним из ранних объектов архитектора С. Е. Чернышёва по плану ГОЭЛРО была Каширская районная электростанция.",
+    "Первые электростанции ГОЭЛРО строили быстро и в разруху — Кашира и «Электропередача» в Электрогорске стали опорой новой энергосистемы."
+   ],
+   "facts": [
+    {
+     "text": "Ранний объект Чернышёва по ГОЭЛРО — Каширская ГРЭС.",
+     "sourceUrl": "https://yadda.icm.edu.pl/baztech/element/bwmeta1.element.baztech-9f4a699d-e90e-49ac-9cc6-e05a77a886d1/c/cheredina.pdf",
+     "verified": true
+    },
+    {
+     "text": "«Электропередача» тоже опора энергосистемы.",
+     "sourceUrl": "https://habr.com/en/articles/916262",
+     "verified": true
+    },
+    {
+     "text": "Оценка — мнение составителя.",
+     "sourceUrl": "https://habr.com/en/articles/916262",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kashira_Power_Plant",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "belopesotskiy-monastyr-gorod",
+   "name": "Город железнодорожников",
+   "coords": {
+    "lat": 54.792,
+    "lon": 38.275
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Ожерелье — город с 1958 года, в 10 км к югу от Каширы.",
+    "Деревня Ожерелье упоминается ещё с 1578 года.",
+    "Делаем небольшой круг по улицам города железнодорожников. Следующая точка маршрута — «Центр». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Ожерелье — город с 1958 года.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Деревня упоминается с 1578 года.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Ожерелье — в 10 км к югу от Каширы.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 60
+  },
+  {
+   "id": "belopesotskiy-monastyr-tsentr",
+   "name": "Центр",
+   "coords": {
+    "lat": 54.856,
+    "lon": 38.556
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Деревня Озерки, предшественница города, упоминается в источниках конца XVI века.",
+    "Город отмечает день рождения ежегодно; точную дату получения статуса мы не сверили. Следующая точка маршрута — «Узловая станция». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Деревня Озерки упоминается в конце XVI века.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": true
+    },
+    {
+     "text": "Город ежегодно отмечает день рождения.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
+     "verified": true
+    },
+    {
+     "text": "Дата статуса города не сверена.",
+     "sourceUrl": "https://360.ru/news/mosobl/den-rozhdenija-goroda-otmetili-v-ozerah/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 70
+  },
+  {
+   "id": "belopesotskiy-monastyr-stantsiya",
+   "name": "Узловая станция",
+   "coords": {
+    "lat": 54.79,
+    "lon": 38.27
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Станция Ожерелье работает с 1930 года; здесь сходятся линии Москва — Саратов и Москва — Донбасс.",
+    "Узел определил судьбу посёлка: город вырос вокруг станции. Финиш — Станция «Ожерелье»: Электрички Павелецкого направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Станция Ожерелье — с 1930 года.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Здесь сходятся линии Москва — Саратов и Москва — Донбасс.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    },
+    {
+     "text": "Город вырос вокруг станции — вывод составителя.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": false
+    },
+    {
+     "text": "Ожерелье — в 118 км к югу от Москвы.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/27669",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
   }
  ],
  "dish": {
@@ -218,9 +450,26 @@
   {
    "title": "Путешествие в Ступино — РИАМО",
    "url": "https://riamo.ru/articles/istorii/puteshestvie-v-stupino-chudo-metallurgi-banya-teatr-i-monastyr-krepost-xl/"
+  },
+  {
+   "title": "Kashira Power Plant — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Kashira_Power_Plant"
+  },
+  {
+   "title": "Открытие ГРЭС — Президентская библиотека",
+   "url": "https://www.prlib.ru/en/history/619289"
+  },
+  {
+   "title": "Ожерелье — Академик",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/27669"
+  },
+  {
+   "title": "Озёры — travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ozyori/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
@@ -238,48 +487,48 @@
      54.875277
     ],
     [
-     38.048,
-     54.874856
+     38.267273,
+     54.787277
     ],
     [
-     38.050732,
-     54.875277
+     38.27,
+     54.786856
     ],
     [
-     38.080733,
-     54.883277
+     38.272727,
+     54.787277
     ],
     [
-     38.081233,
-     54.883477
+     38.558731,
+     54.853277
     ],
     [
-     38.083234,
-     54.884628
+     38.56073,
+     54.854428
     ],
     [
-     38.083966,
-     54.8862
+     38.561462,
+     54.856
     ],
     [
-     38.083234,
-     54.887772
+     38.56073,
+     54.857572
     ],
     [
-     38.081233,
-     54.888923
+     38.558731,
+     54.858723
     ],
     [
-     38.0785,
-     54.889344
+     38.556,
+     54.859144
     ],
     [
-     38.075767,
-     54.888923
+     38.085,
+     54.893144
     ],
     [
-     38.047767,
-     54.882923
+     38.082267,
+     54.892723
     ],
     [
      38.047267,
