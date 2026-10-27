@@ -10,87 +10,204 @@
   "lon": 37.525
  },
  "intro": [
-  "Северный округ — от Петровского путевого дворца по Тимирязевке и Головинским прудам к Северному речному вокзалу, а затем вдоль канала имени Москвы в Долгопрудный — город дирижаблей и Физтеха — и до Лобни, где в 1941 году остановили врага у Красной Поляны.",
-  "Половина пути — вдоль воды: пруды Головина, Химкинское водохранилище, канал.",
-  "Около 40 км, полный день. Речной вокзал после реставрации — пешеходная зона; велосипед ведём рядом."
+  "Северный округ вытянут вдоль старой Петербургской дороги — нынешнего Ленинградского проспекта и шоссе. Это Москва путешествий: путевой дворец для императоров, речной вокзал «порта пяти морей», а между ними — академия, где учились земледелию.",
+  "XVIII век оставил Петровский путевой дворец: Екатерина II велела построить его в 1776 году, и здесь останавливались императорские кортежи перед въездом в Москву.",
+  "XIX век — Петровско-Разумовское, бывшее имение, где в 1865 году основали Петровскую земледельческую и лесную академию, нынешнюю Тимирязевку.",
+  "Точки маршрута: «Северный речной вокзал», «Усадьба Грачёвка в Ховрине», «Головинские пруды», «Усадьба Михалково», «Тимирязевская академия», «Петровский путевой дворец». Все они — в самом городе или рядом с ним.",
+  "Маршрут линейный, около 18 км: старт — Метро «Речной вокзал», финиш — Метро «Динамо» (Метро «Динамо», МЦД «Петровский парк»). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Метро «Речной вокзал»",
+  "coords": {
+   "lat": 55.8547,
+   "lon": 37.4764
+  },
+  "transport": "Метро «Речной вокзал»"
+ },
+ "endPoint": {
   "name": "Метро «Динамо»",
   "coords": {
    "lat": 55.7895,
-   "lon": 37.5585
+   "lon": 37.5583
   },
-  "transport": "Замоскворецкая линия"
- },
- "endPoint": {
-  "name": "Станция «Лобня»",
-  "coords": {
-   "lat": 56.013,
-   "lon": 37.481
-  },
-  "transport": "Электрички Савёловского направления / МЦД-1"
+  "transport": "Метро «Динамо», МЦД «Петровский парк»"
  },
  "route": {
-  "distanceKm": 40.0,
-  "durationH": 7.0,
-  "difficulty": "средний",
+  "distanceKm": 18.3,
+  "durationH": 3.0,
+  "difficulty": "лёгкий",
   "shape": "линейный",
   "surfaceNotes": "Асфальт, парковые аллеи; вдоль канала — асфальтовые и грунтовые дорожки.",
   "seasonNotes": "С мая по октябрь.",
-  "safetyNotes": "Ленинградский проспект, Дмитровское шоссе и МКАД — по переходам.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "sao-putevoy-dvorets",
-   "name": "Петровский путевой дворец",
+   "id": "sao-rechnoy-vokzal",
+   "name": "Северный речной вокзал",
    "coords": {
-    "lat": 55.7942,
-    "lon": 37.545
+    "lat": 55.853,
+    "lon": 37.476
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 25,
+   "visitMinutes": 30,
    "guideStory": [
-    "Петровский путевой дворец построили по распоряжению Екатерины II; работы начались в 1776 году, архитектор — Матвей Казаков. Его появление связывают с победой в русско-турецкой войне и Кючук-Кайнарджийским миром.",
-    "Это неоготика — красный кирпич и белый камень. Дворец был последней остановкой на дороге из Петербурга: здесь императорский кортеж ночевал перед торжественным въездом в Москву."
+    "Северный речной вокзал строили в 1932–1937 годах по проекту Алексея Рухлядева у нового канала имени Москвы. Его называли портом пяти морей: отсюда по рекам и каналам можно было дойти до Балтийского, Белого, Каспийского, Азовского и Чёрного морей.",
+    "Здание венчает 27-метровый шпиль со звездой. Шпиль задумывали выдвижным — поднимать в начале навигации и опускать в конце, — но за всю историю его выдвигали лишь трижды."
    ],
    "facts": [
     {
-     "text": "Строительство началось по распоряжению Екатерины II в 1776 году, архитектор — Матвей Казаков.",
-     "sourceUrl": "https://aif.ru/realty/city/petrovskiy_putevoy_dvorec_carskaya_rezidenciya_na_peterburgskom_shosse",
+     "text": "Вокзал построен в 1932–1937 годах по проекту архитектора А. М. Рухлядева и охраняется государством.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D1%87%D0%BD%D0%BE%D0%B9_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5",
      "verified": true
     },
     {
-     "text": "Один источник датирует постройку 1776–1780 годами.",
-     "sourceUrl": "https://experience.tripster.ru/sights/petrovskij-putevoj-dvorec-v-moskve/",
+     "text": "Самая высокая точка — 27-метровый шпиль со звездой.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D1%87%D0%BD%D0%BE%D0%B9_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5",
      "verified": true
     },
     {
-     "text": "Дворец построен в стиле неоготики.",
-     "sourceUrl": "https://experience.tripster.ru/sights/petrovskij-putevoj-dvorec-v-moskve/",
+     "text": "Шпиль задумывали выдвижным, но выдвигали его лишь трижды.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D1%87%D0%BD%D0%BE%D0%B9_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5",
      "verified": true
     },
     {
-     "text": "Императорский кортеж останавливался во дворце на ночёвку на пути из Петербурга.",
-     "sourceUrl": "https://aif.ru/realty/city/petrovskiy_putevoy_dvorec_carskaya_rezidenciya_na_peterburgskom_shosse",
+     "text": "Вокзал был закрыт с 2009 по 2020 год и открылся после реставрации.",
+     "sourceUrl": "https://meduza.io/feature/2020/10/04/v-tridtsatye-severnyy-rechnoy-vokzal-byl-portom-pyati-morey-v-devyanostye-rynkom-i-nochnym-klubom-teper-ego-otrestavrirovali",
      "verified": true
     },
     {
-     "text": "В 1917 году дворец национализировали; в нём размещались лазарет, райком и милиция.",
-     "sourceUrl": "https://www.litres.ru/journal/tainy-petrovskogo-putevogo-dvortsa/",
+     "text": "В 1930-х вокзал называли «портом пяти морей».",
+     "sourceUrl": "https://meduza.io/feature/2020/10/04/v-tridtsatye-severnyy-rechnoy-vokzal-byl-portom-pyati-morey-v-devyanostye-rynkom-i-nochnym-klubom-teper-ego-otrestavrirovali",
      "verified": true
     },
     {
-     "text": "Сейчас во дворце Дом приёмов Правительства Москвы.",
-     "sourceUrl": "https://experience.tripster.ru/sights/petrovskij-putevoj-dvorec-v-moskve/",
+     "text": "Большая российская энциклопедия описывает Северный речной вокзал как памятник архитектуры.",
+     "sourceUrl": "https://bigenc.ru/c/severnyi-rechnoi-vokzal-v-moskve-34f68e",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "sao-grachevka",
+   "name": "Усадьба Грачёвка в Ховрине",
+   "coords": {
+    "lat": 55.8695,
+    "lon": 37.496
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Дом, оранжерею, каретный сарай, конюшенный и служебные корпуса построили в конце XIX века; главный дом — работа мастера модерна Льва Кекушева для купца первой гильдии Грачёва.",
+    "Долгие годы здесь была областная больница восстановительного лечения; потом комплекс законсервировали и передали Москве."
+   ],
+   "facts": [
+    {
+     "text": "Постройки конца XIX века, архитектор — Лев Кекушев.",
+     "sourceUrl": "https://kudago.com/msk/place/usadba-grachevka/",
+     "verified": true
+    },
+    {
+     "text": "Заказчик — купец 1-й гильдии Грачёв.",
+     "sourceUrl": "https://1plus1.gppc.ru/wp-content/uploads/2021/01/Viktorina-SHkola-158.pdf",
+     "verified": true
+    },
+    {
+     "text": "Усадьбу передали в собственность Москвы.",
+     "sourceUrl": "https://finance.rambler.ru/realty/54682554-minmosoblimuschestvo-peredalo-v-sobstvennost-moskvy-usadbu-grachevka/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "sao-golovino",
+   "name": "Головинские пруды",
+   "coords": {
+    "lat": 55.847,
+    "lon": 37.508
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Головинский парк с каскадом прудов — Верхним, Средним и Нижним — тихий зелёный уголок между магистралями.",
+    "Название Головино, по одной из версий, пошло от прозвища первого владельца, Ивана Ховрина по прозвищу «Голова». Неподалёку — бывшая усадьба Михалково, где восстанавливают ценные старые деревья.",
+    "От прудов до речного вокзала — несколько километров по дублёрам Ленинградского шоссе и набережной канала."
+   ],
+   "facts": [
+    {
+     "text": "Головинский парк включает систему прудов: Верхний, Средний и Нижний.",
+     "sourceUrl": "https://www.aviasales.ru/psgr/article/prudy-v-moskve",
+     "verified": true
+    },
+    {
+     "text": "Название «Головино» по одной из версий связано с прозвищем владельца Ивана Ховрина «Голова».",
+     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/infrastructure/main_streets/golovinskoe_shosse",
+     "verified": true
+    },
+    {
+     "text": "На территории усадьбы Михалково бережно восстанавливают ценные деревья.",
+     "sourceUrl": "https://vm.ru/moscow/684633-cennye-derevya-na-territorii-usadby-mihalkovo-berezhno-vosstanovyat",
+     "verified": true
+    },
+    {
+     "text": "Версия о происхождении названия от Ховрина не подтверждена документами в найденных источниках.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/infrastructure/main_streets/golovinskoe_shosse",
+     "verified": false
+    },
+    {
+     "text": "Головинский район входит в САО.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/infrastructure/main_streets/golovinskoe_shosse",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "sao-mikhalkovo",
+   "name": "Усадьба Михалково",
+   "coords": {
+    "lat": 55.8445,
+    "lon": 37.5245
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Усадьба Михалково — памятник на Михалковской улице, 38.",
+    "Городские власти не раз штрафовали арендатора за работы в усадьбе без разрешений, поэтому смотреть её лучше снаружи. Следующая точка маршрута — «Тимирязевская академия». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Усадьба Михалково — памятник по адресу Михалковская, 38.",
+     "sourceUrl": "https://www.mos.ru/news/item/45194073/",
+     "verified": true
+    },
+    {
+     "text": "Организацию привлекали к ответственности за работы без документации.",
+     "sourceUrl": "https://www.mos.ru/news/item/45194073/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "sao-timiryazevka",
@@ -140,341 +257,59 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "sao-golovino",
-   "name": "Головинские пруды",
+   "id": "sao-putevoy-dvorets",
+   "name": "Петровский путевой дворец",
    "coords": {
-    "lat": 55.847,
-    "lon": 37.508
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Головинский парк с каскадом прудов — Верхним, Средним и Нижним — тихий зелёный уголок между магистралями.",
-    "Название Головино, по одной из версий, пошло от прозвища первого владельца, Ивана Ховрина по прозвищу «Голова». Неподалёку — бывшая усадьба Михалково, где восстанавливают ценные старые деревья.",
-    "От прудов до речного вокзала — несколько километров по дублёрам Ленинградского шоссе и набережной канала."
-   ],
-   "facts": [
-    {
-     "text": "Головинский парк включает систему прудов: Верхний, Средний и Нижний.",
-     "sourceUrl": "https://www.aviasales.ru/psgr/article/prudy-v-moskve",
-     "verified": true
-    },
-    {
-     "text": "Название «Головино» по одной из версий связано с прозвищем владельца Ивана Ховрина «Голова».",
-     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/infrastructure/main_streets/golovinskoe_shosse",
-     "verified": true
-    },
-    {
-     "text": "На территории усадьбы Михалково бережно восстанавливают ценные деревья.",
-     "sourceUrl": "https://vm.ru/moscow/684633-cennye-derevya-na-territorii-usadby-mihalkovo-berezhno-vosstanovyat",
-     "verified": true
-    },
-    {
-     "text": "Версия о происхождении названия от Ховрина не подтверждена документами в найденных источниках.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/infrastructure/main_streets/golovinskoe_shosse",
-     "verified": false
-    },
-    {
-     "text": "Головинский район входит в САО.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/moskva/infrastructure/main_streets/golovinskoe_shosse",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "sao-rechnoy-vokzal",
-   "name": "Северный речной вокзал",
-   "coords": {
-    "lat": 55.853,
-    "lon": 37.476
+    "lat": 55.7942,
+    "lon": 37.545
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 30,
+   "visitMinutes": 25,
    "guideStory": [
-    "Северный речной вокзал строили в 1932–1937 годах по проекту Алексея Рухлядева у нового канала имени Москвы. Его называли портом пяти морей: отсюда по рекам и каналам можно было дойти до Балтийского, Белого, Каспийского, Азовского и Чёрного морей.",
-    "Здание венчает 27-метровый шпиль со звездой. Шпиль задумывали выдвижным — поднимать в начале навигации и опускать в конце, — но за всю историю его выдвигали лишь трижды."
+    "Петровский путевой дворец построили по распоряжению Екатерины II; работы начались в 1776 году, архитектор — Матвей Казаков. Его появление связывают с победой в русско-турецкой войне и Кючук-Кайнарджийским миром.",
+    "Это неоготика — красный кирпич и белый камень. Дворец был последней остановкой на дороге из Петербурга: здесь императорский кортеж ночевал перед торжественным въездом в Москву."
    ],
    "facts": [
     {
-     "text": "Вокзал построен в 1932–1937 годах по проекту архитектора А. М. Рухлядева и охраняется государством.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D1%87%D0%BD%D0%BE%D0%B9_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5",
+     "text": "Строительство началось по распоряжению Екатерины II в 1776 году, архитектор — Матвей Казаков.",
+     "sourceUrl": "https://aif.ru/realty/city/petrovskiy_putevoy_dvorec_carskaya_rezidenciya_na_peterburgskom_shosse",
      "verified": true
     },
     {
-     "text": "Самая высокая точка — 27-метровый шпиль со звездой.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D1%87%D0%BD%D0%BE%D0%B9_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5",
+     "text": "Один источник датирует постройку 1776–1780 годами.",
+     "sourceUrl": "https://experience.tripster.ru/sights/petrovskij-putevoj-dvorec-v-moskve/",
      "verified": true
     },
     {
-     "text": "Шпиль задумывали выдвижным, но выдвигали его лишь трижды.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%80%D0%B5%D1%87%D0%BD%D0%BE%D0%B9_%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB_%D0%B2_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5",
+     "text": "Дворец построен в стиле неоготики.",
+     "sourceUrl": "https://experience.tripster.ru/sights/petrovskij-putevoj-dvorec-v-moskve/",
      "verified": true
     },
     {
-     "text": "Вокзал был закрыт с 2009 по 2020 год и открылся после реставрации.",
-     "sourceUrl": "https://meduza.io/feature/2020/10/04/v-tridtsatye-severnyy-rechnoy-vokzal-byl-portom-pyati-morey-v-devyanostye-rynkom-i-nochnym-klubom-teper-ego-otrestavrirovali",
+     "text": "Императорский кортеж останавливался во дворце на ночёвку на пути из Петербурга.",
+     "sourceUrl": "https://aif.ru/realty/city/petrovskiy_putevoy_dvorec_carskaya_rezidenciya_na_peterburgskom_shosse",
      "verified": true
     },
     {
-     "text": "В 1930-х вокзал называли «портом пяти морей».",
-     "sourceUrl": "https://meduza.io/feature/2020/10/04/v-tridtsatye-severnyy-rechnoy-vokzal-byl-portom-pyati-morey-v-devyanostye-rynkom-i-nochnym-klubom-teper-ego-otrestavrirovali",
+     "text": "В 1917 году дворец национализировали; в нём размещались лазарет, райком и милиция.",
+     "sourceUrl": "https://www.litres.ru/journal/tainy-petrovskogo-putevogo-dvortsa/",
      "verified": true
     },
     {
-     "text": "Большая российская энциклопедия описывает Северный речной вокзал как памятник архитектуры.",
-     "sourceUrl": "https://bigenc.ru/c/severnyi-rechnoi-vokzal-v-moskve-34f68e",
+     "text": "Сейчас во дворце Дом приёмов Правительства Москвы.",
+     "sourceUrl": "https://experience.tripster.ru/sights/petrovskij-putevoj-dvorec-v-moskve/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "sao-fiztekh",
-   "name": "МФТИ (Физтех)",
-   "coords": {
-    "lat": 55.9298,
-    "lon": 37.52
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Сегодня Долгопрудный знают прежде всего по МФТИ — Московскому физико-техническому институту. Отсюда вышли многие известные физики и инженеры.",
-    "Город рос вместе со своими предприятиями и институтом: в 1957 году он стал городом районного подчинения, а в 1963-м — областного.",
-    "От Физтеха — к станции Новодачная, финишу маршрута. Следующая точка маршрута — «Бывший «Дирижаблестрой»»."
-   ],
-   "facts": [
-    {
-     "text": "В 1953 году Долгопрудный стал районным центром Краснополянского района.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "В 1957 году Долгопрудный получил статус города районного подчинения.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "С 1963 года Долгопрудный — город областного подчинения.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "МФТИ находится в Долгопрудном.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-dolgoprudnyj-216379/",
-     "verified": true
-    },
-    {
-     "text": "Год основания МФТИ в найденных источниках не указан.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "sao-dirizhablestroy",
-   "name": "Бывший «Дирижаблестрой»",
-   "coords": {
-    "lat": 55.938,
-    "lon": 37.5
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1931 году при Управлении гражданского воздушного флота организовали «Дирижаблестрой» — центр строительства советских дирижаблей.",
-    "В 1936 году его производственную базу передали Наркомату тяжёлой промышленности; так возник машиностроительный завод, ставший градообразующим."
-   ],
-   "facts": [
-    {
-     "text": "В 1931 году при Управлении ГВФ организован «Дирижаблестрой».",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/03/03.RTF",
-     "verified": true
-    },
-    {
-     "text": "В 1936 году производственную базу передали в Наркомат тяжёлой промышленности.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/17/04.RTF",
-     "verified": true
-    },
-    {
-     "text": "Историю ДМЗ описывает краеведческий сборник о Долгопрудном.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/03/03.RTF",
-     "verified": true
-    },
-    {
-     "text": "Дату 1932 год, которую иногда называют, источники не подтверждают.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/03/03.RTF",
-     "verified": false
-    },
-    {
-     "text": "Дирижаблестроение — часть истории города.",
-     "sourceUrl": "https://teletype.in/@apfound/cPMm-ocAQjq",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующее предприятие: не фотографируем проходные."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "sao-prudy",
-   "name": "Долгие пруды",
-   "coords": {
-    "lat": 55.942,
-    "lon": 37.505
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Город назван по Долгим прудам — они существуют здесь около четырёх веков. Вытянутая цепочка воды и дала имя станции, посёлку и городу.",
-    "Когда в 1931 году искали место для дирижаблестроительной верфи, выбрали площадку недалеко от этих прудов."
-   ],
-   "facts": [
-    {
-     "text": "Город получил название от Долгих прудов, существующих около четырёх веков.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": true
-    },
-    {
-     "text": "Место для «Дирижаблестроя» выбрали недалеко от Долгих прудов.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/03/03.RTF",
-     "verified": true
-    },
-    {
-     "text": "Долгопрудный — город в Московской области.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%BF%D1%80%D1%83%D0%B4%D0%BD%D1%8B%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Возраст прудов назван приблизительно.",
-     "sourceUrl": "https://kamushki.duckdns.org/dedushkaProject/%d0%94%d0%be%d0%bb%d0%b3%d0%be%d0%bf%d1%80%d1%83%d0%b4%d0%bd%d1%8b%d0%b9/DOLGOPA/TEXT/01/01.RTF",
-     "verified": false
-    },
-    {
-     "text": "Город известен как спутник Москвы с собственной историей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-dolgoprudnyj-216379/",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "sao-krasnaya-polyana",
-   "name": "Красная Поляна и мемориал «Катюшки»",
-   "coords": {
-    "lat": 56.001,
-    "lon": 37.457
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Красная Поляна — бывшее село, где зимой 1941 года фронт подошёл ближе всего к Москве с севера. В 1975 году рабочий посёлок Красная Поляна вошёл в черту Лобни.",
-    "Мемориальный комплекс «Катюшки» посвящён героям Великой Отечественной войны."
-   ],
-   "facts": [
-    {
-     "text": "В 1975 году рабочий посёлок Красная Поляна вошёл в черту Лобни.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": true
-    },
-    {
-     "text": "Мемориальный комплекс «Катюшки» посвящён героям Великой Отечественной войны.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Лобня — один из ключевых рубежей обороны Москвы зимой 1941–1942 годов.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Точное расположение мемориала мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": false
-    },
-    {
-     "text": "Город сформировался из посёлка при станции и окрестных селений.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "sao-muzey",
-   "name": "Музей истории города и противотанковый ров",
-   "coords": {
-    "lat": 56.008,
-    "lon": 37.49
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Музей истории Лобни создали в 1981 году как Музей боевой и трудовой славы. Он стоит на месте, где в 1941 году горожане рыли противотанковый ров, — остатки рва видны до сих пор.",
-    "Здесь рассказывают, как в районе Красной Поляны остановили наступление на Москву с севера. Это одна из самых важных точек всей обороны столицы."
-   ],
-   "facts": [
-    {
-     "text": "Музей истории Лобни создан в 1981 году как Музей боевой и трудовой славы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Музей стоит на месте противотанкового рва 1941 года, остатки которого видны сегодня.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "В районе Красной Поляны было остановлено наступление немецких войск на северном направлении.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Часы работы музея мы не проверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": false
-    },
-    {
-     "text": "В Лобне есть художественно-краеведческий отдел музея-заповедника «Абрамцево».",
-     "sourceUrl": "https://www.komandirovka.ru/sights/lobnay/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Часы работы не проверены — уточняйте.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -517,18 +352,46 @@
   {
    "title": "Северный речной вокзал — Meduza",
    "url": "https://meduza.io/feature/2020/10/04/v-tridtsatye-severnyy-rechnoy-vokzal-byl-portom-pyati-morey-v-devyanostye-rynkom-i-nochnym-klubom-teper-ego-otrestavrirovali"
+  },
+  {
+   "title": "Источник: bigenc.ru",
+   "url": "https://bigenc.ru/c/severnyi-rechnoi-vokzal-v-moskve-34f68e"
+  },
+  {
+   "title": "Источник: kudago.com",
+   "url": "https://kudago.com/msk/place/usadba-grachevka/"
+  },
+  {
+   "title": "Источник: 1plus1.gppc.ru",
+   "url": "https://1plus1.gppc.ru/wp-content/uploads/2021/01/Viktorina-SHkola-158.pdf"
+  },
+  {
+   "title": "Источник: finance.rambler.ru",
+   "url": "https://finance.rambler.ru/realty/54682554-minmosoblimuschestvo-peredalo-v-sobstvennost-moskvy-usadbu-grachevka/"
+  },
+  {
+   "title": "Источник: aviasales.ru",
+   "url": "https://www.aviasales.ru/psgr/article/prudy-v-moskve"
+  },
+  {
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/moskva/infrastructure/main_streets/golovinskoe_shosse"
+  },
+  {
+   "title": "Источник: vm.ru",
+   "url": "https://vm.ru/moscow/684633-cennye-derevya-na-territorii-usadby-mihalkovo-berezhno-vosstanovyat"
+  },
+  {
+   "title": "Источник: mos.ru",
+   "url": "https://www.mos.ru/news/item/45194073/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
-    [
-     37.451377,
-     56.001
-    ],
     [
      37.470399,
      55.853
@@ -546,23 +409,23 @@
      55.791477
     ],
     [
-     37.555704,
+     37.555504,
      55.786777
     ],
     [
-     37.5585,
+     37.5583,
      55.786356
     ],
     [
-     37.561296,
+     37.561096,
      55.786777
     ],
     [
-     37.563343,
+     37.563143,
      55.787928
     ],
     [
-     37.564092,
+     37.563892,
      55.7895
     ],
     [
@@ -570,44 +433,40 @@
      55.835
     ],
     [
-     37.525612,
-     55.9298
+     37.555849,
+     55.836572
     ],
     [
-     37.495624,
-     56.008
+     37.500853,
+     55.871072
     ],
     [
-     37.49487,
-     56.009572
+     37.498802,
+     55.872223
     ],
     [
-     37.492812,
-     56.010723
+     37.496,
+     55.872644
     ],
     [
-     37.483812,
-     56.015723
+     37.493198,
+     55.872223
     ],
     [
-     37.481,
-     56.016144
+     37.491147,
+     55.871072
     ],
     [
-     37.478188,
-     56.015723
+     37.471549,
+     55.856272
     ],
     [
-     37.454189,
-     56.003723
+     37.470798,
+     55.8547
     ],
     [
-     37.452131,
-     56.002572
-    ],
-    [
-     37.451377,
-     56.001
+     37.470399,
+     55.853
     ]
    ]
   ]
