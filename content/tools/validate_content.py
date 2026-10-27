@@ -124,12 +124,12 @@ def check_destination(d, fname, spiral_ids):
     if d.get("boundarySource") not in ("osm", "approx"):
         err(w, "boundarySource: osm или approx")
     paragraphs(d, "intro", w, 3, 6)
-    # Версия 2 — полноценный велодень: 40–70 км и 8–12 точек. Версия 1 — старые короткие маршруты.
+    # Версия 2 — полноценный велодень: 40–70 км и 8–12 точек. Старые короткие маршруты (версия 1) больше не принимаются.
     v2 = d.get("routeVersion") == 2
     if v2:
         LONG_ROUTES.append(did)
     else:
-        warn(w, "старый короткий маршрут (routeVersion 1) — переписать на 40–70 км и 8–12 точек")
+        err(w, "старый короткий маршрут (routeVersion 1) — нужен маршрут 40–70 км и 8–12 точек")
     start = end = None
     for key in ("startPoint", "endPoint"):
         rp = need(d, key, dict, w)

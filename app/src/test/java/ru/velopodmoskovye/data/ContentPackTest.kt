@@ -46,18 +46,15 @@ class ContentPackTest {
     @Test
     fun destinationsAreUsable() {
         for (d in pack.destinations.values) {
-            val v2 = d.routeVersion == 2
-            if (v2) {
-                assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 8..12)
-                assertTrue("${d.id}: ${d.route.distanceKm} км", d.route.distanceKm in 40.0..70.0)
-            } else {
-                assertTrue(d.id, d.stops.size >= 3)
-            }
+            // Все маршруты — полноценный велодень (версия 2).
+            assertEquals(d.id, 2, d.routeVersion)
+            assertTrue("${d.id}: ${d.stops.size} точек", d.stops.size in 8..12)
+            assertTrue("${d.id}: ${d.route.distanceKm} км", d.route.distanceKm in 40.0..70.0)
             assertTrue(d.id, d.stops.zipWithNext().all { (a, b) -> a.order < b.order })
             d.stops.forEach { s ->
-                assertTrue(s.id, s.facts.size in (if (v2) 2 else 5)..12)
+                assertTrue(s.id, s.facts.size in 2..12)
                 assertTrue(s.id, s.facts.all { it.sourceUrl.startsWith("http") })
-                assertTrue(s.id, s.guideStory.size in (if (v2) 2 else 3)..6)
+                assertTrue(s.id, s.guideStory.size in 2..6)
             }
             assertTrue(d.id, d.intro.size in 3..6)
             val blocks = GoogleMapsLinks.blocks(MapData.routePoints(d))
