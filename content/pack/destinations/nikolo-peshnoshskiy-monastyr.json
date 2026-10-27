@@ -13,33 +13,33 @@
   "Николо-Пешношский монастырь стоит на правом берегу Яхромы, в посёлке Луговой Дмитровского округа. Его основал преподобный Мефодий — ученик Сергия Радонежского.",
   "Мефодий хотел большего уединения, чем в обители Сергия, и с благословения учителя поселился в дубовом лесу за Яхромой. Название «Пешношский» связывают с тем, что он носил тяжёлые брёвна для постройки «пешком», на себе, через реку.",
   "По данным Дмитровского музея, в 1361 году Мефодий стал игуменом основанной им обители; умер он в 1392 году и канонизирован в 1549 году.",
-  "Свои места маршрута: «Монастырь». По пути маршрут заходит и к соседям: Дмитров — «Город князей»; Яхрома — «Суконная фабрика», «Шлюз № 3», «Перемиловская высота»; Деденево — «Спасо-Влахернский монастырь», «Легенда о хане Дедене»; Икша — «Посёлок Икша».",
-  "Маршрут линейный, около 67 км и 8 точек. Финиш — Станция «Икша» (Электрички Савёловского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Монастырь», «Берег Яхромы», «Сергиевская церковь над могилой Мефодия», «Посёлок Луговой», «Преображенская церковь». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 1 км: старт и финиш — Николо-Пешношский монастырь, центр (До ближайшей станции — Станция «Яхрома», около 15 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Яхрома»",
+  "name": "Николо-Пешношский монастырь, центр",
   "coords": {
-   "lat": 56.289,
-   "lon": 37.485
+   "lat": 56.41,
+   "lon": 37.39
   },
-  "transport": "Электрички Савёловского направления"
+  "transport": "До ближайшей станции — Станция «Яхрома», около 15 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Икша»",
+  "name": "Николо-Пешношский монастырь, центр",
   "coords": {
-   "lat": 56.17,
-   "lon": 37.5
+   "lat": 56.41,
+   "lon": 37.39
   },
-  "transport": "Электрички Савёловского направления"
+  "transport": "До ближайшей станции — Станция «Яхрома», около 15 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 67.0,
-  "durationH": 7.7,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.2,
+  "durationH": 0.9,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -55,7 +55,7 @@
    "guideStory": [
     "Монастырь расположен на ровном месте по правому берегу Яхромы. По данным Дмитровского музея, в 1361 году Мефодий стал игуменом основанной им обители; эта дата встречается в одном источнике.",
     "Мефодий умер в 1392 году и был канонизирован на Московском соборе 1549 года. Подробное описание монастыря составил историк К. Ф. Калайдович.",
-    "Доступ на территорию и её состояние уточняйте на месте. Следующая точка маршрута — «Город князей»."
+    "Доступ на территорию и её состояние уточняйте на месте. Следующая точка маршрута — «Берег Яхромы»."
    ],
    "facts": [
     {
@@ -89,337 +89,147 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "nikolo-peshnoshskiy-monastyr-knyazya",
-   "name": "Город князей",
+   "id": "nikolo-peshnoshskiy-monastyr-yakhroma",
+   "name": "Берег Яхромы",
    "coords": {
-    "lat": 56.345,
-    "lon": 37.52
+    "lat": 56.4088,
+    "lon": 37.3878
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Николо-Пешношский монастырь стоит на правом берегу реки Яхромы.",
+    "Историк К. Ф. Калайдович описывал его как общежительный мужской монастырь Дмитровского уезда. Следующая точка маршрута — «Сергиевская церковь над могилой Мефодия». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь стоит на правом берегу Яхромы.",
+     "sourceUrl": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/",
+     "verified": true
+    },
+    {
+     "text": "Монастырь — общежительный мужской, Дмитровский уезд.",
+     "sourceUrl": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "nikolo-peshnoshskiy-monastyr-sergievskaya",
+   "name": "Сергиевская церковь над могилой Мефодия",
+   "coords": {
+    "lat": 56.4104,
+    "lon": 37.3893
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Сергиевскую церковь построили в 1732 году над могилой основателя обители, преподобного Мефодия Пешношского.",
+    "С 1542 года здесь на покое жил бывший коломенский епископ Вассиан Топорков, а в 1553 году монастырь посетил Иван Грозный. Следующая точка маршрута — «Посёлок Луговой»."
+   ],
+   "facts": [
+    {
+     "text": "Сергиевская церковь построена в 1732 году над могилой Мефодия.",
+     "sourceUrl": "https://www.ancient-history-sites.com/sites/nicolo-peshnoshsky-monastery/",
+     "verified": false
+    },
+    {
+     "text": "В 1553 году монастырь посетил Иван Грозный.",
+     "sourceUrl": "https://www.culture.ru/objects/973/nikolo-peshnoshskii-muzhskoi-monastyr-v-dmitrovskom-raione-moskovskoi-oblasti",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "nikolo-peshnoshskiy-monastyr-lugovoy",
+   "name": "Посёлок Луговой",
+   "coords": {
+    "lat": 56.4118,
+    "lon": 37.3928
    },
    "kind": "проезжаем",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Монастырь окружает посёлок Луговой — к нему относят и собор Николая Чудотворца.",
+    "Собор Николая Чудотворца — главный храм Николо-Пешношского монастыря. Следующая точка маршрута — «Преображенская церковь». Формат остановки — «проезжаем», заложите на неё около 5 минут."
+   ],
+   "facts": [
+    {
+     "text": "Собор Николая Чудотворца относится к посёлку Луговой.",
+     "sourceUrl": "https://sobory.ru/photo/338663",
+     "verified": true
+    },
+    {
+     "text": "Монастырь находится в Дмитровском округе.",
+     "sourceUrl": "https://www.culture.ru/objects/973/nikolo-peshnoshskii-muzhskoi-monastyr-v-dmitrovskom-raione-moskovskoi-oblasti",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "nikolo-peshnoshskiy-monastyr-preobrazhenie",
+   "name": "Преображенская церковь",
+   "coords": {
+    "lat": 56.4102,
+    "lon": 37.3905
+   },
+   "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "По одному источнику, в 1301 году в Дмитрове прошёл съезд четырёх князей. В 1364 году город вошёл в состав Московского княжества.",
-    "Tripster называет Дмитров «ровесником столицы» — Москва впервые упомянута в 1147 году, всего на семь лет раньше предания о Дмитрове."
+    "В монастыре стоит церковь Преображения Господня; в колокольне — церковь Мефодия Пешношского. Фотографии собраны на sobory.ru.",
+    "Название «Пешношский», по преданию, связано с тем, что Мефодий носил брёвна для обители на себе через реку."
    ],
    "facts": [
     {
-     "text": "В 1301 году в Дмитрове прошёл съезд четырёх князей — по одному источнику.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    },
-    {
-     "text": "В 1364 году Дмитров вошёл в Московское княжество.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
+     "text": "В монастыре есть церковь Преображения Господня.",
+     "sourceUrl": "https://sobory.ru/photo/487536",
      "verified": true
     },
     {
-     "text": "Дмитров называют ровесником столицы.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
+     "text": "В колокольне — церковь Мефодия Пешношского.",
+     "sourceUrl": "https://sobory.ru/photo/99987",
      "verified": true
     },
     {
-     "text": "Москва впервые упомянута в 1147 году.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
+     "text": "Происхождение названия — по преданию.",
+     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
      "verified": false
     },
     {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
+     "text": "Датировку церквей мы не сверяли.",
+     "sourceUrl": "https://sobory.ru/photo/487536",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/487536",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "nikolo-peshnoshskiy-monastyr-fabrika",
-   "name": "Суконная фабрика",
-   "coords": {
-    "lat": 56.29,
-    "lon": 37.48
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "По одной версии, история Яхромы как города начинается в 1841 году, когда здесь основали суконную фабрику. Вскоре её купил и модернизировал московский купец Иван Лямин.",
-    "Поселения на этих землях существовали и раньше, так что дата условна."
-   ],
-   "facts": [
-    {
-     "text": "В 1841 году основана суконная фабрика — по одной версии, начало истории города.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Фабрику купил и модернизировал купец Иван Лямин.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Поселения здесь существовали и раньше.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Состояние фабричных корпусов не проверено.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "nikolo-peshnoshskiy-monastyr-shlyuz",
-   "name": "Шлюз № 3",
-   "coords": {
-    "lat": 56.287,
-    "lon": 37.49
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Шлюз № 3 канала имени Москвы — однокамерный судоходный шлюз в Яхроме. Его строили с 1932 по 1936 год, а официально приняли в эксплуатацию 15 июля 1937 года.",
-    "Вместе со шлюзом № 4 в Деденеве он образует Яхромский гидроузел. Следующая точка маршрута — «Перемиловская высота»."
-   ],
-   "facts": [
-    {
-     "text": "Шлюз № 3 — однокамерный судоходный шлюз в Яхроме.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Строили с 1932 по 1936 год.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Принят в эксплуатацию 15 июля 1937 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Вместе со шлюзом № 4 образует Яхромский гидроузел.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": true
-    },
-    {
-     "text": "Координаты шлюза приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Гидросооружение: не заходить на охраняемую территорию."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "nikolo-peshnoshskiy-monastyr-vysota",
-   "name": "Перемиловская высота",
-   "coords": {
-    "lat": 56.285,
-    "lon": 37.5
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Перемиловская высота названа по селу Перемилово на восточном берегу канала напротив Яхромы. С 27 ноября по 5 декабря 1941 года здесь шли бои: это один из рубежей, где остановили немецкие войска.",
-    "Подъём на высоту крутой — велосипед, возможно, придётся вести. Сверху виден канал и город.",
-    "Минуту помолчим у мемориала и вернёмся к станции. Следующая точка маршрута — «Спасо-Влахернский монастырь»."
-   ],
-   "facts": [
-    {
-     "text": "Название — по селу Перемилово на восточном берегу канала.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Бои шли с 27 ноября по 5 декабря 1941 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Это один из рубежей, где остановили наступление на Москву.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "На высоте есть мемориал.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Крутизна подъёма — оценка составителя.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Крутой подъём."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "nikolo-peshnoshskiy-monastyr-monastyr-2",
-   "name": "Спасо-Влахернский монастырь",
-   "coords": {
-    "lat": 56.245,
-    "lon": 37.515
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "С XVIII века Деденевом владели Головины; здесь была их усадьба. С этим родом связывают основание Спасо-Влахернского женского монастыря.",
-    "Монастырь действующий: вход в скромной одежде, женщинам — в платке, фото — с разрешения. Следующая точка маршрута — «Легенда о хане Дедене»."
-   ],
-   "facts": [
-    {
-     "text": "С XVIII века село принадлежало Головиным, здесь была их усадьба.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Основателями монастыря называют представителей рода Головиных.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Спасо-Влахернский монастырь находится в Деденеве.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": true
-    },
-    {
-     "text": "Монастырь действующий, женский.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    },
-    {
-     "text": "Координаты монастыря приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "nikolo-peshnoshskiy-monastyr-legenda",
-   "name": "Легенда о хане Дедене",
-   "coords": {
-    "lat": 56.242,
-    "lon": 37.52
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "По преданию, посёлок назван в честь ордынского хана Деденя, убитого в этих местах в XIII веке; один источник называет 1295 год. Это легенда, а не документ.",
-    "Первое письменное упоминание села относится к 1504 году — с этой даты Деденево и отсчитывает свою историю."
-   ],
-   "facts": [
-    {
-     "text": "По преданию, название связано с ханом Деденем, убитым здесь в XIII веке.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Предание датирует гибель хана 1295 годом.",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": false
-    },
-    {
-     "text": "Первое упоминание села — 1504 год.",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": true
-    },
-    {
-     "text": "Ближайшая станция — «Турист».",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Флаг поселения Деденево утверждён 5 октября 2006 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%94%D0%B5%D0%B4%D0%B5%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "nikolo-peshnoshskiy-monastyr-posyolok",
-   "name": "Посёлок Икша",
-   "coords": {
-    "lat": 56.17,
-    "lon": 37.5
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Икша — рабочий посёлок; до 2018 года он был центром городского поселения Икша. Краеведы, собравшие сборник по местной истории, пишут, что окрестные деревни упоминаются в межевой грамоте Ивана III дмитровскому князю Юрию Ивановичу.",
-    "Река Икша в Подмосковье — правый приток Волгуши. Происхождение названия посёлка мы в источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "Икша — рабочий посёлок Дмитровского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Городское поселение Икша упразднено в 2018 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Окрестные деревни упоминаются в грамотах 1496 и 1504 годов.",
-     "sourceUrl": "https://books.yandex.ru/books/AAmnUscU/read-online",
-     "verified": true
-    },
-    {
-     "text": "Река Икша — правый приток Волгуши.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "В округе определили задачи по развитию посёлка.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-dmitrovskom-okruge-opredelili-zadachi-po-razvitiju-poselka-iksha/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -456,111 +266,103 @@
    "url": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/"
   },
   {
-   "title": "Ровесник столицы — Tripster",
-   "url": "https://experience.tripster.ru/articles/dmitrov/"
+   "title": "Источник: vk.ru",
+   "url": "https://vk.ru/@dmmuseum-sokrovischa-muzeya"
   },
   {
-   "title": "История Дмитрова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/dmitrov/istoriia"
+   "title": "Источник: ancient-history-sites.com",
+   "url": "https://www.ancient-history-sites.com/sites/nicolo-peshnoshsky-monastery/"
   },
   {
-   "title": "Перемиловская высота — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0"
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/objects/973/nikolo-peshnoshskii-muzhskoi-monastyr-v-dmitrovskom-raione-moskovskoi-oblasti"
   },
   {
-   "title": "Шлюз № 3 — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/338663"
   },
   {
-   "title": "«Турист» хана Деденя — За рулём",
-   "url": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/487536"
   },
   {
-   "title": "Деденево — knls.net",
-   "url": "https://knls.net/?p=13068"
-  },
-  {
-   "title": "Шлюз № 6 — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)"
-  },
-  {
-   "title": "Шлюзы канала — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/99987"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.384317,
-     56.41
+     37.382117,
+     56.4088
     ],
     [
-     37.494353,
-     56.17
+     37.382879,
+     56.407228
     ],
     [
-     37.495109,
-     56.168428
+     37.384959,
+     56.406077
     ],
     [
-     37.497176,
-     56.167277
+     37.3878,
+     56.405656
     ],
     [
-     37.5,
-     56.166856
+     37.390641,
+     56.406077
     ],
     [
-     37.502824,
-     56.167277
+     37.393342,
+     56.407477
     ],
     [
-     37.504891,
-     56.168428
+     37.395422,
+     56.408628
     ],
     [
-     37.505647,
-     56.17
+     37.397722,
+     56.410228
     ],
     [
-     37.525658,
-     56.242
+     37.398483,
+     56.4118
     ],
     [
-     37.525673,
-     56.345
+     37.397722,
+     56.413372
     ],
     [
-     37.524913,
-     56.346572
+     37.395642,
+     56.414523
     ],
     [
-     37.522837,
-     56.347723
+     37.3928,
+     56.414944
     ],
     [
-     37.392841,
-     56.412723
+     37.389958,
+     56.414523
     ],
     [
-     37.39,
-     56.413144
+     37.386458,
+     56.413123
     ],
     [
-     37.387159,
-     56.412723
+     37.384378,
+     56.411972
     ],
     [
-     37.385078,
-     56.411572
+     37.382879,
+     56.410372
     ],
     [
-     37.384317,
-     56.41
+     37.382117,
+     56.4088
     ]
    ]
   ]
