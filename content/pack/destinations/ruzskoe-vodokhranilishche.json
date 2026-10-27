@@ -13,113 +13,36 @@
   "Рузское водохранилище на реке Рузе, притоке Москвы-реки, создано в 1965–1966 годах. Плотина стоит у деревни Палашкино.",
   "Площадь — около 33 кв. км, максимальная ширина — до 4 км, объём — около 216 млн куб. м (по туристическому источнику).",
   "Туристические сайты пишут, что оно снабжает Москву питьевой водой; официальная схема относит к водоснабжению столицы Вазузскую систему, так что это утверждение мы помечаем как непроверенное.",
-  "Свои места маршрута: «Плотина у Палашкина», «Берег водохранилища», «Вода для Москвы?». По пути маршрут заходит и к соседям: Руза — «Воскресенский собор на площади Партизан», «Георгиевский пруд»; Дорохово — «Память освобождения»; Тучково — «Посёлок у станции», «Аллея Славы».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Тучково» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Берег водохранилища», «Посёлок Беляная Гора», «Осташёво». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 20 км: старт и финиш — Рузское водохранилище, центр (До ближайшей станции — Руза, автостанция, около 13 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Руза, автостанция",
+  "name": "Рузское водохранилище, центр",
   "coords": {
-   "lat": 55.701,
-   "lon": 36.196
+   "lat": 55.75,
+   "lon": 36.0
   },
-  "transport": "Автобусы от Тучкова и Москвы — уточняйте"
+  "transport": "До ближайшей станции — Руза, автостанция, около 13 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Тучково»",
+  "name": "Рузское водохранилище, центр",
   "coords": {
-   "lat": 55.6002,
-   "lon": 36.4705
+   "lat": 55.75,
+   "lon": 36.0
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "До ближайшей станции — Руза, автостанция, около 13 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.6,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 20.2,
+  "durationH": 2.3,
+  "difficulty": "средний",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "ruzskoe-vodokhranilishche-voskresensky",
-   "name": "Воскресенский собор на площади Партизан",
-   "coords": {
-    "lat": 55.7015,
-    "lon": 36.1955
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Пятиглавый Воскресенский собор — старейшее здание Рузы. Строить его начали в начале XVIII века, а в середине XIX века перестроили в псевдорусском стиле.",
-    "Собор стоит на площади Партизан — название напоминает о боях 1941 года. Отсюда до валов городища несколько минут пути."
-   ],
-   "facts": [
-    {
-     "text": "Воскресенский собор — старейшее здание Рузы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%A0%D1%83%D0%B7%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Строительство собора начато в начале XVIII века, в середине XIX века его перестроили.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%A0%D1%83%D0%B7%D1%8B",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "ruzskoe-vodokhranilishche-plotina",
-   "name": "Плотина у Палашкина",
-   "coords": {
-    "lat": 55.73,
-    "lon": 36.15
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Рузское водохранилище создано в 1965–1966 годах; его плотина стоит у деревни Палашкино на реке Рузе, притоке Москвы-реки.",
-    "Гидросооружение охраняется — смотрим с общедоступных мест. Следующая точка маршрута — «Берег водохранилища». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Водохранилище создано в 1965–1966 годах.",
-     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
-     "verified": true
-    },
-    {
-     "text": "Плотина у деревни Палашкино.",
-     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
-     "verified": true
-    },
-    {
-     "text": "Руза — приток Москвы-реки.",
-     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
-     "verified": false
-    },
-    {
-     "text": "Водохранилища области описаны в Знании.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
   {
    "id": "ruzskoe-vodokhranilishche-bereg",
    "name": "Берег водохранилища",
@@ -131,7 +54,7 @@
    "visitMinutes": 30,
    "guideStory": [
     "Площадь водохранилища — около 33 кв. км, ширина — до 4 км. Объём, по туристическому источнику, около 216 млн куб. м.",
-    "Здесь любят рыбачить. Купание — только в разрешённых местах. Следующая точка маршрута — «Вода для Москвы?». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
+    "Здесь любят рыбачить. Купание — только в разрешённых местах. Следующая точка маршрута — «Посёлок Беляная Гора». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
    ],
    "facts": [
     {
@@ -166,223 +89,70 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "ruzskoe-vodokhranilishche-voda",
-   "name": "Вода для Москвы?",
-   "coords": {
-    "lat": 55.745,
-    "lon": 36.02
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Туристические сайты пишут, что водохранилище создали и для питьевого водоснабжения Москвы. Официальная схема водоснабжения относит к системе столицы Вазузскую систему с Верхне-Рузским водохранилищем — это другое водохранилище.",
-    "Поэтому роль Рузского водохранилища в водоснабжении Москвы мы помечаем как непроверенную."
-   ],
-   "facts": [
-    {
-     "text": "Роль в водоснабжении Москвы — по туристическому источнику.",
-     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
-     "verified": false
-    },
-    {
-     "text": "Вазузская система входит в водоснабжение Москвы.",
-     "sourceUrl": "https://www.chem.msu.ru/rus/ecology_2016/primin.pdf",
-     "verified": true
-    },
-    {
-     "text": "Верхне-Рузское — другое водохранилище.",
-     "sourceUrl": "https://www.chem.msu.ru/rus/ecology_2016/primin.pdf",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.chem.msu.ru/rus/ecology_2016/primin.pdf",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "ruzskoe-vodokhranilishche-georgievsky",
-   "name": "Георгиевский пруд",
-   "coords": {
-    "lat": 55.699,
-    "lon": 36.19
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Пруд на Демократической улице, недалеко от Дома культуры, называется Георгиевским: в XVIII веке рядом стоял Георгиевский монастырь.",
-    "От монастыря ничего не осталось, но имя пруда сохранило память о нём. Тихое место для короткой остановки перед выездом из города."
-   ],
-   "facts": [
-    {
-     "text": "Георгиевский пруд находится на Демократической улице недалеко от Дома культуры.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/ruza/",
-     "verified": true
-    },
-    {
-     "text": "В XVIII веке рядом с прудом был Георгиевский монастырь.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/ruza/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 50,
+   "order": 10,
    "coordsVerified": false
   },
   {
-   "id": "ruzskoe-vodokhranilishche-memorial",
-   "name": "Память освобождения",
+   "id": "ruzskoe-vodokhranilishche-belyanaya-gora",
+   "name": "Посёлок Беляная Гора",
    "coords": {
-    "lat": 55.552,
-    "lon": 36.365
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "13 января жители Рузского округа чтят память защитников в День освобождения Дорохова.",
-    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести». Следующая точка маршрута — «Посёлок у станции»."
-   ],
-   "facts": [
-    {
-     "text": "День освобождения Дорохова отмечают 13 января.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": true
-    },
-    {
-     "text": "В 2016 году — звание «Населённый пункт воинской доблести».",
-     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
-     "verified": true
-    },
-    {
-     "text": "Год освобождения мы не сверили.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": false
-    },
-    {
-     "text": "Координаты мемориала приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": false
-    },
-    {
-     "text": "Жители чтят память защитников.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "ruzskoe-vodokhranilishche-posyolok",
-   "name": "Посёлок у станции",
-   "coords": {
-    "lat": 55.599,
-    "lon": 36.472
+    "lat": 55.79,
+    "lon": 36.04
    },
    "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "Тучково — посёлок у одноимённой станции Белорусской дороги. Историю станции мы в найденных источниках не нашли.",
-    "Отсюда начинаются «рузские просторы» — дальше на север Руза и Рузское водохранилище. Следующая точка маршрута — «Аллея Славы»."
+    "Рузское водохранилище заполнили в 1965–1966 годах после постройки железобетонной плотины длиной 550 метров и высотой до 25 метров.",
+    "Беляную Гору путеводитель называет среди селений у водохранилищ Рузского края; точное место на берегу проверьте по карте."
    ],
    "facts": [
     {
-     "text": "Тучково — посёлок у станции.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
+     "text": "Водохранилище заполнено в 1965–1966 годах.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D0%B7%D1%81%D0%BA%D0%BE%D0%B5_%D0%B2%D0%BE%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B5",
      "verified": true
     },
     {
-     "text": "История станции не найдена.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
-     "verified": false
-    },
-    {
-     "text": "Экскурсии «Рузские просторы» включают Тучково.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
+     "text": "Плотина длиной 550 м и высотой до 25 м.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D0%B7%D1%81%D0%BA%D0%BE%D0%B5_%D0%B2%D0%BE%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B5",
      "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/47424",
-     "verified": false
-    },
-    {
-     "text": "Руза — к северу от Тучкова.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "ruzskoe-vodokhranilishche-slava",
-   "name": "Аллея Славы",
+   "id": "ruzskoe-vodokhranilishche-ostashevo",
+   "name": "Осташёво",
    "coords": {
-    "lat": 55.6,
-    "lon": 36.48
+    "lat": 55.797,
+    "lon": 35.972
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "В Тучкове торжественно открыли мемориал «Аллея Славы».",
-    "МЧС упоминало годовщину освобождения посёлка от немецко-фашистских захватчиков — значит, в 1941 году Тучково было оккупировано. Финиш — Станция «Тучково»: Электрички Белорусского направления."
+    "На берегах водохранилищ Рузского края стоят дома отдыха, лагеря, посёлок Беляная Гора и село Осташёво.",
+    "Усадьба в Осташёве полуразрушена: главный дом уничтожили во время Великой Отечественной войны. Финиш — Рузское водохранилище, центр: До ближайшей станции — Руза, автостанция, около 13 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
    ],
    "facts": [
     {
-     "text": "В Тучкове открыли мемориал «Аллея Славы».",
-     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
-     "verified": true
-    },
-    {
-     "text": "Тучково было освобождено от оккупации.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
-     "verified": true
-    },
-    {
-     "text": "Дату освобождения мы не сверили.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "text": "На берегах — посёлок Беляная Гора и село Осташёво.",
+     "sourceUrl": "https://www.tourister.ru/world/europe/russia/city/ruza/lakes/41264",
      "verified": false
     },
     {
-     "text": "Координаты мемориала приблизительные.",
-     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "text": "Главный дом усадьбы Осташёво уничтожен в войну.",
+     "sourceUrl": "https://www.tourister.ru/world/europe/russia/city/ruza/lakes/41264",
      "verified": false
-    },
-    {
-     "text": "Тучково — в Рузском округе.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
-     "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 30,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -414,43 +184,27 @@
    "url": "https://fb.ru/article/138760/ruzskoe-vodohranilische---velikolepnoe-mesto-dlya-ryibalki"
   },
   {
-   "title": "Водохранилища области — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B0_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8"
+   "title": "Источник: ru.wikipedia.org",
+   "url": "https://ru.wikipedia.org/wiki/%D0%A0%D1%83%D0%B7%D1%81%D0%BA%D0%BE%D0%B5_%D0%B2%D0%BE%D0%B4%D0%BE%D1%85%D1%80%D0%B0%D0%BD%D0%B8%D0%BB%D0%B8%D1%89%D0%B5"
   },
   {
-   "title": "Руза — Циклопедия",
-   "url": "https://www.cyclowiki.org/wiki/%D0%A0%D1%83%D0%B7%D0%B0_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)"
-  },
-  {
-   "title": "Руза — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/ruza/"
-  },
-  {
-   "title": "Дорохово — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./"
-  },
-  {
-   "title": "День освобождения — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/"
-  },
-  {
-   "title": "Генералы Тучковы — Проза",
-   "url": "https://proza.ru/2021/07/05/291"
-  },
-  {
-   "title": "Аллея Славы — 360",
-   "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
+   "title": "Источник: tourister.ru",
+   "url": "https://www.tourister.ru/world/europe/russia/city/ruza/lakes/41264"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     35.994414,
-     55.75
+     35.966407,
+     55.797
+    ],
+    [
+     35.967156,
+     55.795428
     ],
     [
      35.995162,
@@ -461,60 +215,52 @@
      55.747277
     ],
     [
-     36.362221,
-     55.549277
-    ],
-    [
-     36.365,
-     55.548856
-    ],
-    [
-     36.367779,
-     55.549277
-    ],
-    [
-     36.482783,
-     55.597277
-    ],
-    [
-     36.48482,
-     55.598428
-    ],
-    [
-     36.485565,
-     55.6
-    ],
-    [
-     36.48482,
-     55.601572
-    ],
-    [
-     36.482783,
-     55.602723
-    ],
-    [
-     36.152792,
-     55.732723
-    ],
-    [
-     36.15,
-     55.733144
-    ],
-    [
      36.0,
-     55.753144
+     55.746856
     ],
     [
-     35.997207,
-     55.752723
+     36.002793,
+     55.747277
     ],
     [
-     35.995162,
-     55.751572
+     36.004838,
+     55.748428
     ],
     [
-     35.994414,
-     55.75
+     36.044843,
+     55.788428
+    ],
+    [
+     36.045592,
+     55.79
+    ],
+    [
+     36.044843,
+     55.791572
+    ],
+    [
+     36.042796,
+     55.792723
+    ],
+    [
+     36.04,
+     55.793144
+    ],
+    [
+     35.972,
+     55.800144
+    ],
+    [
+     35.969203,
+     55.799723
+    ],
+    [
+     35.967156,
+     55.798572
+    ],
+    [
+     35.966407,
+     55.797
     ]
    ]
   ]
