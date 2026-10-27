@@ -10,34 +10,36 @@
   "lon": 37.855
  },
  "intro": [
-  "Реутов — город ракетостроителей Челомея и старой мануфактуры. Маршрут начинается с городских мест — Фабричного пруда, монумента «Метеорит», колокола «Реут», музея и мемориала, — а затем уходит по лесопаркам: в Салтыковку к Золотому пруду, в усадьбу Горенки, в старую Некрасовку, к Белому озеру в Косине и в шереметевское Кусково.",
-  "Город и лес чередуются: после каждой городской точки — зелёный участок.",
-  "Около 48 км; финиш у метро «Новогиреево»."
+  "Реутов — маленький и очень плотный город, прижатый к восточной границе Москвы. Его легко проехать насквозь, не заметив, но если сбавить ход, город раскладывается на понятные слои: пустошь XVI века, фабричный посёлок при хлопкопрядильной мануфактуре, советский ракетный наукоград и современный спальный район у метро.",
+  "Самый старый слой — название. В писцовой книге 1573 года здесь записана «пустошь Реутово», а самая популярная городская легенда возводит имя к «реуту» — большому сигнальному колоколу, который будто бы предупреждал Москву о набегах с востока. Это именно легенда: краеведы приводят и другие версии, например связь с Владимирским трактом. Колокол тем не менее стал символом города — он есть и на гербе, и на улице.",
+  "Второй слой — фабрика. Посёлок жил хлопкопрядильной мануфактурой: её корпуса до сих пор стоят у Фабричного пруда, а сам пруд, существовавший ещё в XIX веке, стал главным городским парком. Производство остановилось в 2007 году, и теперь бывшую мануфактуру собираются превратить в «арт-фабрику».",
+  "Точки маршрута: «Парк «Фабричный пруд»», «Монумент крылатой ракете «Метеорит»», «Колокол «Реут»», «Музейно-выставочный центр», «Мемориал «Реутовцам, погибшим за Отечество»», «Площадь Академика Челомея и ДК «Мир»», «Переход через железную дорогу», «Центральный парк», «Церковь Казанской иконы Божией Матери». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Станция «Реутов» (МЦД-4), северный выход (МЦД-4 / Горьковское направление, станция Реутов). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Метро «Новокосино»",
+  "name": "Станция «Реутов» (МЦД-4), северный выход",
   "coords": {
-   "lat": 55.745,
-   "lon": 37.864
+   "lat": 55.7622,
+   "lon": 37.859
   },
-  "transport": "Калининская линия"
+  "transport": "МЦД-4 / Горьковское направление, станция Реутов"
  },
  "endPoint": {
-  "name": "Метро «Новогиреево»",
+  "name": "Станция «Реутов» (МЦД-4), северный выход",
   "coords": {
-   "lat": 55.752,
-   "lon": 37.817
+   "lat": 55.7622,
+   "lon": 37.859
   },
-  "transport": "Калининская линия"
+  "transport": "МЦД-4 / Горьковское направление, станция Реутов"
  },
  "route": {
-  "distanceKm": 48.0,
-  "durationH": 8.0,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 4.4,
+  "durationH": 2.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт, лесные дорожки Салтыковского лесопарка.",
   "seasonNotes": "С мая по октябрь.",
-  "safetyNotes": "Носовихинское шоссе и МКАД — по переходам; железную дорогу — по переходу.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -102,8 +104,8 @@
    "warnings": [
     "Территория бывшей мануфактуры — действующие арендаторы: смотрим снаружи, на территорию не заходим."
    ],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "reutov-meteorit",
@@ -155,8 +157,8 @@
    "warnings": [
     "НПО машиностроения — режимное предприятие: не фотографируйте проходные и ограждение, не задерживайтесь у ворот."
    ],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "reutov-kolokol",
@@ -213,8 +215,8 @@
     }
    ],
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "reutov-muzey",
@@ -278,8 +280,8 @@
     }
    ],
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "reutov-memorial",
@@ -333,8 +335,164 @@
    "warnings": [
     "Мемориал — место памяти: на территорию с Вечным огнём на велосипеде не заезжаем."
    ],
-   "coordsVerified": false,
-   "order": 50
+   "order": 50,
+   "coordsVerified": false
+  },
+  {
+   "id": "reutov-chelomey",
+   "name": "Площадь Академика Челомея и ДК «Мир»",
+   "coords": {
+    "lat": 55.763,
+    "lon": 37.872
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "openingHoursNote": "ДК работает по расписанию мероприятий.",
+   "bikeParkingNote": "На площади много пешеходов — ведём велосипед.",
+   "guideStory": [
+    "Владимир Челомей — генеральный конструктор авиакосмической техники, человек, без которого Реутов был бы просто фабричным пригородом. Его имя город носит в названиях: улица Академика Челомея появилась на карте в 1985 году по ходатайству НПО машиностроения, а путеводители советуют посмотреть и памятник конструктору.",
+    "Память о Челомее в Реутове живая: здесь проходят конференции по ракетно-космической отрасли, выставка под названием «Леонардо ракетного мира», а медалью имени академика награждают в том числе городских руководителей. Рядом — ДК «Мир», главная концертная площадка города."
+   ],
+   "facts": [
+    {
+     "text": "Улица Академика Челомея появилась на карте Реутова в 1985 году и названа по ходатайству НПО машиностроения.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
+     "verified": true
+    },
+    {
+     "text": "Улица носит имя генерального конструктора авиакосмической техники Владимира Челомея.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
+     "verified": true
+    },
+    {
+     "text": "Путеводители советуют осмотреть в Реутове памятник Владимиру Челомею.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/reutov/",
+     "verified": true
+    },
+    {
+     "text": "ДК «Мир» называют главной концертной площадкой Реутова.",
+     "sourceUrl": "https://360.ru/news/obschestvo/gorod-dnja--reutov-11717/",
+     "verified": true
+    },
+    {
+     "text": "В Реутове открывалась выставка «Леонардо ракетного мира».",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/vystavka-leonardo-raketnogo-mira-otkrylas-v-reutove/",
+     "verified": true
+    },
+    {
+     "text": "В городе проходила всероссийская конференция по ракетно-космической отрасли.",
+     "sourceUrl": "https://riamo.ru/news/ekonomika/v-reutove-proshla-vserossijskaja-konferentsija-po-raketno-kosmicheskoj-otrasli/",
+     "verified": true
+    },
+    {
+     "text": "Главу Реутова награждали медалью имени академика Челомея.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/glavu-reutova-nagradili-medalyu-imeni-akademika-chelomeya-xl/",
+     "verified": true
+    },
+    {
+     "text": "Площадь у ДК «Мир» носит имя Челомея (по данным ТЗ маршрута; в найденных источниках прямо не подтверждено).",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D0%BB%D0%B8%D1%86%D0%B0_%D0%A7%D0%B5%D0%BB%D0%BE%D0%BC%D0%B5%D1%8F",
+     "verified": false
+    }
+   ],
+   "warnings": [],
+   "order": 60,
+   "coordsVerified": false
+  },
+  {
+   "id": "reutov-pereezd",
+   "name": "Переход через железную дорогу",
+   "coords": {
+    "lat": 55.7612,
+    "lon": 37.87
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 5,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Через пути — пешком, ведя велосипед.",
+   "guideStory": [
+    "Здесь мы один раз пересекаем Горьковское направление — ту самую железную дорогу, вдоль которой вырос фабричный посёлок. Железная дорога для Реутова — и связь с Москвой, и граница, делящая город на север и юг.",
+    "Сегодня через город ходят поезда МЦД-4. Станцию Реутово ждёт перестройка: кассы и турникеты планировали перенести в подземный вестибюль, а старое здание снести — в генплане РЖД через Реутов проходит будущая скоростная магистраль Москва — Казань.",
+    "Переходите только по официальному переходу или переезду, спешившись. На юге нас ждёт храм Казанской иконы Божией Матери — он стоит совсем рядом с путями."
+   ],
+   "facts": [
+    {
+     "text": "Станция Реутово относится к Горьковской железной дороге.",
+     "sourceUrl": "https://riamo.ru/news/transport/biletnye-kassy-i-turnikety-zh-d-stantsii-v-reutove-perenesut-v-podzemnyj-vestibyul-xl/",
+     "verified": true
+    },
+    {
+     "text": "Билетные кассы и турникеты станции в Реутове планировали перенести в подземный вестибюль, а существующее здание снести.",
+     "sourceUrl": "https://riamo.ru/news/transport/biletnye-kassy-i-turnikety-zh-d-stantsii-v-reutove-perenesut-v-podzemnyj-vestibyul-xl/",
+     "verified": true
+    },
+    {
+     "text": "Причиной перестройки называли генплан РЖД, по которому через Реутов должна пройти высокоскоростная магистраль Москва — Казань.",
+     "sourceUrl": "https://riamo.ru/news/transport/biletnye-kassy-i-turnikety-zh-d-stantsii-v-reutove-perenesut-v-podzemnyj-vestibyul-xl/",
+     "verified": true
+    },
+    {
+     "text": "МЦД-4 — совместный проект правительств Москвы, Подмосковья и РЖД.",
+     "sourceUrl": "https://riamo.ru/news/zhkh/v-podmoskove-gotovyatsya-k-zapusku-chetvertogo-moskovskogo-tsentralnogo-diametra/",
+     "verified": true
+    },
+    {
+     "text": "Линия D4 Московских центральных диаметров проходит через Реутов.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Line_D4_(Moscow_Central_Diameters)",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Пути пересекаем только по официальному переходу или переезду и только спешившись."
+   ],
+   "order": 70,
+   "coordsVerified": false
+  },
+  {
+   "id": "reutov-tsentralny-park",
+   "name": "Центральный парк",
+   "coords": {
+    "lat": 55.757,
+    "lon": 37.865
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "openingHoursNote": "Парк открыт круглосуточно.",
+   "bikeParkingNote": "По аллеям — шагом, в выходные много детей.",
+   "guideStory": [
+    "Городской парк — тихая финальная точка перед метро. Если Фабричный пруд рассказывает о рабочем посёлке, то этот парк — о спальном городе, который вырос вокруг станции после войны и особенно в последние десятилетия.",
+    "Реутов давно перестал быть фабричным: мануфактура закрылась в 2007 году, а население выросло за счёт москвичей и новых кварталов. В городе даже поставили «самую длинную скамейку» — такие детали лучше всего показывают, что теперь главное здесь — отдых жителей."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с храмом Казанской иконы находится городской парк.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BA%D0%BE%D0%BD%D1%8B_%D0%91%D0%BE%D0%B6%D0%B8%D0%B5%D0%B9_%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8_%D0%B2_%D0%A0%D0%B5%D1%83%D1%82%D0%BE%D0%B2%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "На Южной улице Реутова расположен городской парк.",
+     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%AE%D0%B6%D0%BD%D0%B0%D1%8F_%D1%83%D0%BB%D0%B8%D1%86%D0%B0_(%D0%A0%D0%B5%D1%83%D1%82%D0%BE%D0%B2)",
+     "verified": false
+    },
+    {
+     "text": "Реутовская мануфактура закрыта с 2007 года.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/reutov/istoriia",
+     "verified": true
+    },
+    {
+     "text": "В Реутове установили самую длинную в городе скамейку.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/samuyu-dlinnuyu-skamejku-v-gorode-ustanovili-v-reutove-xl/",
+     "verified": true
+    },
+    {
+     "text": "Название «Центральный парк» в найденных источниках не подтверждено.",
+     "sourceUrl": "https://www.cyclowiki.org/wiki/%D0%AE%D0%B6%D0%BD%D0%B0%D1%8F_%D1%83%D0%BB%D0%B8%D1%86%D0%B0_(%D0%A0%D0%B5%D1%83%D1%82%D0%BE%D0%B2)",
+     "verified": false
+    }
+   ],
+   "warnings": [],
+   "order": 80,
+   "coordsVerified": false
   },
   {
    "id": "reutov-kazansky-hram",
@@ -382,313 +540,8 @@
    "warnings": [
     "Действующий храм: съёмка внутри — только с разрешения."
    ],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "reutov-zolotoy-prud",
-   "name": "Золотой пруд",
-   "coords": {
-    "lat": 55.77,
-    "lon": 37.926
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Пруды — главная прелесть Салтыковки. Обилие прудов, близость Москвы и красивые пейзажи сделали её любимым дачным местом московской интеллигенции на рубеже веков.",
-    "Местность с середины XVII века входила в вотчину Никольско-Архангельское Долгоруковых; с 1830 года здесь хозяйничали князья Салтыковы, в 1893 году владельцем был Д. П. Салтыков."
-   ],
-   "facts": [
-    {
-     "text": "Салтыковка основана в середине XVII века как часть владения Никольско-Архангельское Долгоруковых.",
-     "sourceUrl": "https://news.rambler.ru/other/44476683-istoriya-zolotogo-pruda-v-balashihe/",
-     "verified": true
-    },
-    {
-     "text": "Долгоруковы владели землёй до 1830 года, затем её получили князья Салтыковы.",
-     "sourceUrl": "https://news.rambler.ru/other/44476683-istoriya-zolotogo-pruda-v-balashihe/",
-     "verified": true
-    },
-    {
-     "text": "В 1893 году владельцем был Д. П. Салтыков, до 1917 года — Н. Н. Ковалёв.",
-     "sourceUrl": "https://news.rambler.ru/other/44476683-istoriya-zolotogo-pruda-v-balashihe/",
-     "verified": true
-    },
-    {
-     "text": "Дачников привлекали близость Москвы, пруды, пейзажи и цены.",
-     "sourceUrl": "https://news.rambler.ru/other/44476683-istoriya-zolotogo-pruda-v-balashihe/",
-     "verified": true
-    },
-    {
-     "text": "История Золотого пруда описана в материале Рамблера.",
-     "sourceUrl": "https://news.rambler.ru/other/44476683-istoriya-zolotogo-pruda-v-balashihe/",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "reutov-lesopark",
-   "name": "Салтыковский лесопарк",
-   "coords": {
-    "lat": 55.758,
-    "lon": 37.915
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Салтыковский лесопарк называют памятником ландшафтной архитектуры: старые деревья и аллеи — наследие усадебно-дачного прошлого.",
-    "Сегодня рядом растут новые жилые кварталы, и лесопарк стал главным местом прогулок микрорайона. Следующая точка маршрута — «Усадьба Горенки: главный дом»."
-   ],
-   "facts": [
-    {
-     "text": "Салтыковский лесопарк называют памятником ландшафтной архитектуры.",
-     "sourceUrl": "https://www.novostroy-m.ru/kompanii/hant_holding/news/jjk_usadba_novaya_saltykovka",
-     "verified": true
-    },
-    {
-     "text": "Название «Усадьба» используют застройщики для соседних жилых комплексов.",
-     "sourceUrl": "https://www.novostroy-m.ru/kompanii/hant_holding/news/jjk_usadba_novaya_saltykovka",
-     "verified": true
-    },
-    {
-     "text": "Путеводители включают Салтыковку в маршрут выходного дня по Балашихе.",
-     "sourceUrl": "https://news.rambler.ru/community/53411687-marshrut-vyhodnogo-dnya-balashiha/amp/",
-     "verified": true
-    },
-    {
-     "text": "Площадь лесопарка в найденных источниках не указана.",
-     "sourceUrl": "https://www.novostroy-m.ru/kompanii/hant_holding/news/jjk_usadba_novaya_saltykovka",
-     "verified": false
-    },
-    {
-     "text": "Салтыковка — часть Балашихи.",
-     "sourceUrl": "https://news.rambler.ru/other/44476683-istoriya-zolotogo-pruda-v-balashihe/",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "reutov-usadba",
-   "name": "Усадьба Горенки: главный дом",
-   "coords": {
-    "lat": 55.7975,
-    "lon": 37.88
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Горенки во второй половине XVIII — начале XIX века принадлежали графам Разумовским. До них, по одному из источников, владельцами были князья Долгорукие, построившие в 1719 году церковь и кирпичный дворец.",
-    "Усадьба признана федеральным памятником истории и архитектуры, но о реставрации пока не слышно. В 1970-х здесь был детский санаторий.",
-    "Территория закрыта для свободного входа: смотрим снаружи, а внутрь — только с экскурсией. Иногда здесь проходят события — например, впервые провели выпускной бал."
-   ],
-   "facts": [
-    {
-     "text": "Горенки — усадьба графов Разумовских во второй половине XVIII — начале XIX века.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/93607",
-     "verified": true
-    },
-    {
-     "text": "По одному из источников, князья Долгорукие в 1719 году построили здесь церковь и кирпичный дворец.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Усадьба на шоссе Энтузиастов признана федеральным памятником.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
-     "verified": true
-    },
-    {
-     "text": "В 1970-х, по справочнику, в усадьбе был детский санаторий.",
-     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/092/217.htm",
-     "verified": true
-    },
-    {
-     "text": "В усадьбе впервые провели выпускной бал.",
-     "sourceUrl": "https://riamo.ru/news/kultura/v-balashihe-vpervye-vypusknoj-bal-proveli-v-usadbe-grafov-razumovskih-gorenki",
-     "verified": true
-    },
-    {
-     "text": "Реставрация, по данным одного источника, не запланирована.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Территория закрыта для свободного посещения: внутрь — только с экскурсией."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "reutov-posyolok",
-   "name": "Старый посёлок Некрасовка",
-   "coords": {
-    "lat": 55.7,
-    "lon": 37.915
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1910 году городские инженеры указали на земли чайного купца Некрасова под Люберцами как на место для полей орошения. Московская городская дума решила их выкупить.",
-    "К 1915 году имение выкупили, рядом с полями появился рабочий посёлок — Некрасовка. Название так и осталось за купцом, торговавшим чаем."
-   ],
-   "facts": [
-    {
-     "text": "В 1910 году Московская городская дума решила приобрести эти земли для полей орошения.",
-     "sourceUrl": "https://msk1.ru/text/gorod/2024/10/29/74259551/",
-     "verified": true
-    },
-    {
-     "text": "Земли принадлежали чайному купцу Некрасову.",
-     "sourceUrl": "https://moskvichmag.ru/?p=77547",
-     "verified": true
-    },
-    {
-     "text": "К 1915 году власти выкупили имение и создали Люберецкие поля орошения.",
-     "sourceUrl": "https://moskvichmag.ru/?p=77547",
-     "verified": true
-    },
-    {
-     "text": "Рядом с полями вырос рабочий посёлок Некрасовка.",
-     "sourceUrl": "https://moskvichmag.ru/?p=77547",
-     "verified": true
-    },
-    {
-     "text": "Точное расположение старой застройки посёлка мы не сверяли.",
-     "sourceUrl": "https://t-j.ru/nekrasovka/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "reutov-beloe",
-   "name": "Белое озеро",
-   "coords": {
-    "lat": 55.718,
-    "lon": 37.853
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Белое озеро — самое крупное из трёх косинских. Имя — за светлую, прозрачную воду.",
-    "С ним связывают Петра I: по одному источнику, на Белом озере при Петре была построена первая в России судостроительная верфь; по другому — здесь тренировалась «потешная» флотилия, которую потом перевели на Плещеево озеро."
-   ],
-   "facts": [
-    {
-     "text": "В Косине три ледниковых озера — Святое, Белое и Чёрное.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": true
-    },
-    {
-     "text": "Белое озеро названо за светлую прозрачную воду.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": true
-    },
-    {
-     "text": "По одному источнику, на Белом озере при Петре I построили первую в России судостроительную верфь.",
-     "sourceUrl": "https://aif.ru/realty/city/vo_glubine_moskovskih_vod_kakie_tayny_hranyat_ozyora_stolicy",
-     "verified": false
-    },
-    {
-     "text": "Другой источник называет озеро учебной акваторией «потешной» флотилии, переведённой затем на Плещеево озеро.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": false
-    },
-    {
-     "text": "Территория с тремя озёрами — около 65 гектаров.",
-     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/108159",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 110
-  },
-  {
-   "id": "reutov-kuskovo",
-   "name": "Усадьба Кусково",
-   "coords": {
-    "lat": 55.7349,
-    "lon": 37.8092
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 90,
-   "guideStory": [
-    "Кусково — финиш и, пожалуй, лучшая усадьба внутри МКАД. Её первое упоминание относится к концу XVI века, когда она уже принадлежала Шереметевым, и оставалась она у этой семьи больше трёхсот лет — до 1917 года.",
-    "Ансамбль — дворец и регулярный парк с павильонами: Грот, Оранжерея, Эрмитаж, Итальянский и Голландский домики XVIII века. После революции здесь разместили музей керамики.",
-    "С 2017 года в Кускове идёт комплексная реставрация: уже восстановлены Грот, Голландский и Итальянский домики, хозяйственные постройки. Поставьте сюда побольше времени и проверьте часы музея."
-   ],
-   "facts": [
-    {
-     "text": "Первое упоминание Кускова относится к концу XVI века, тогда оно уже принадлежало Шереметевым.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%83%D1%81%D0%BA%D0%BE%D0%B2%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Усадьба оставалась у Шереметевых более трёхсот лет, до 1917 года.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%83%D1%81%D0%BA%D0%BE%D0%B2%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "В ансамбль входят дворец и парк с павильонами Грот, Оранжерея, Эрмитаж, Итальянский и Голландский домики.",
-     "sourceUrl": "https://lib.ks54.ru/images/stories/library/pdf/Усадьба_Кусково.pptx.pdf",
-     "verified": true
-    },
-    {
-     "text": "В усадьбе работает музей керамики.",
-     "sourceUrl": "https://lib.ks54.ru/images/stories/library/pdf/Усадьба_Кусково.pptx.pdf",
-     "verified": true
-    },
-    {
-     "text": "С 2017 года идёт комплексная реставрация ансамбля; Грот и домики уже отреставрированы.",
-     "sourceUrl": "https://www.mos.ru/news/item/142197073/",
-     "verified": true
-    },
-    {
-     "text": "Год постройки Голландского домика в найденных источниках не указан.",
-     "sourceUrl": "https://t-j.ru/must-see-usadba-kuskovo/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "Часы примерные (выходные — пн и вт, не проверено). Парк открыт дольше музея — уточняйте.",
-   "schedule": {
-    "days": {
-     "mon": "closed",
-     "tue": "closed",
-     "wed": "10:00-18:00",
-     "thu": "10:00-18:00",
-     "fri": "10:00-18:00",
-     "sat": "10:00-18:00",
-     "sun": "10:00-18:00"
-    }
-   },
-   "ticketNote": "Вход в парк и в музей — по правилам музея-усадьбы; уточняйте.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 120
+   "order": 90,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -740,89 +593,113 @@
   {
    "title": "Церковь Казанской иконы в Реутове — tonkosti.ru",
    "url": "https://tonkosti.ru/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%81%D0%BA%D0%BE%D0%B9_%D0%B8%D0%BA%D0%BE%D0%BD%D1%8B_%D0%91%D0%BE%D0%B6%D0%B8%D0%B5%D0%B9_%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8_%D0%B2_%D0%A0%D0%B5%D1%83%D1%82%D0%BE%D0%B2%D0%B5"
+  },
+  {
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/obschestvo/okolo-monumenta-krylatoj-rakete-v-reutove-pojavitsja-novyj-skver/"
+  },
+  {
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/reutov/fabrichnyi-prud"
+  },
+  {
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/tekst/obschestvo/artfabrika-i-novyj-park-reutovskuju-manufakturu-kardinalno-izmenjat-dlja-zhitelej-goroda/"
+  },
+  {
+   "title": "Источник: 360.ru",
+   "url": "https://360.ru/news/dengi/istoricheskie-eksponaty-predstavjat-na-vystavke-k-175letiju-reutovskoj-manufaktury/"
+  },
+  {
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/ekologi-proveli-monitoring-sostoyaniya-pruda-v-reutove-xl/"
+  },
+  {
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/v-reutove-poyavitsya-novyj-skver-okolo-monumenta-krylatoj-rakete-meteorit-xl/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.803616,
-     55.7349
+     37.852411,
+     55.766
     ],
     [
-     37.804364,
-     55.733328
+     37.853412,
+     55.7622
     ],
     [
-     37.806408,
-     55.732177
+     37.85416,
+     55.760628
     ],
     [
-     37.850209,
-     55.715277
+     37.860161,
+     55.755428
     ],
     [
-     37.91221,
-     55.697277
+     37.862206,
+     55.754277
     ],
     [
-     37.915,
-     55.696856
+     37.865,
+     55.753856
     ],
     [
-     37.91779,
-     55.697277
+     37.867794,
+     55.754277
     ],
     [
-     37.919832,
-     55.698428
+     37.869839,
+     55.755428
     ],
     [
-     37.920579,
-     55.7
+     37.874839,
+     55.759628
     ],
     [
-     37.931589,
-     55.77
+     37.87684,
+     55.761428
     ],
     [
-     37.930841,
-     55.771572
+     37.877588,
+     55.763
     ],
     [
-     37.884844,
-     55.799072
+     37.87684,
+     55.764572
     ],
     [
-     37.882797,
-     55.800223
+     37.874794,
+     55.765723
     ],
     [
-     37.88,
-     55.800644
+     37.865795,
+     55.770523
     ],
     [
-     37.877203,
-     55.800223
+     37.863,
+     55.770944
     ],
     [
-     37.875156,
-     55.799072
+     37.860205,
+     55.770523
     ],
     [
-     37.812162,
-     55.753572
+     37.855206,
+     55.768723
     ],
     [
-     37.811413,
-     55.752
+     37.85316,
+     55.767572
     ],
     [
-     37.803616,
-     55.7349
+     37.852411,
+     55.766
     ]
    ]
   ]

@@ -10,9 +10,11 @@
   "lon": 37.87
  },
  "intro": [
-  "Горенки — усадьба графа Разумовского со знаменитым ботаническим садом. От неё маршрут спускается вдоль Пехорки через Балашиху и Пехру-Яковлевское к Железнодорожному с Саввинской слободой и заканчивается в Электроуглях.",
-  "Это день подмосковных усадеб и старых фабричных слобод к востоку от МКАД.",
-  "Около 44 км; финиш на станции Электроугли Горьковского направления."
+  "Горенки — усадьба на западной окраине Балашихи, у самой МКАД. В XVIII веке это было одно из самых блестящих подмосковных имений: здесь жили князья Долгорукие, а потом графы Разумовские.",
+  "При Разумовском в Горенках появился знаменитый ботанический сад: в оранжереях росло около трёх тысяч видов растений, а после смерти владельца часть коллекции перевезли в Московский ботанический сад.",
+  "Сегодня усадьба — федеральный памятник в непростом состоянии; в XX веке здесь был детский санаторий, а теперь территория открыта в основном для экскурсий и событий.",
+  "Точки маршрута: «Место церкви Всемилостивого Спаса», «Дворец конца XVIII века», «Оранжереи графа Разумовского», «Бывший ботанический сад и пруды», «Усадьба Горенки: главный дом», «Платформа Горенки и ветка на Балашиху». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Платформа «Горенки» (Электрички по ветке Реутово — Балашиха, платформа Горенки). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Платформа «Горенки»",
@@ -20,72 +22,166 @@
    "lat": 55.799,
    "lon": 37.885
   },
-  "transport": "Электрички Горьковского направления (ветка на Балашиху)"
+  "transport": "Электрички по ветке Реутово — Балашиха, платформа Горенки"
  },
  "endPoint": {
-  "name": "Станция «Электроугли»",
+  "name": "Платформа «Горенки»",
   "coords": {
-   "lat": 55.717,
-   "lon": 38.22
+   "lat": 55.799,
+   "lon": 37.885
   },
-  "transport": "Электрички Горьковского направления"
+  "transport": "Электрички по ветке Реутово — Балашиха, платформа Горенки"
  },
  "route": {
-  "distanceKm": 44.0,
-  "durationH": 7.5,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 3.1,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт, грунтовые дорожки вдоль Пехорки.",
   "seasonNotes": "С мая по октябрь.",
-  "safetyNotes": "Горьковское шоссе — по переходам; дорога на Электроугли — по обочине.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "gorenki-platforma",
-   "name": "Платформа Горенки и ветка на Балашиху",
+   "id": "gorenki-spas",
+   "name": "Место церкви Всемилостивого Спаса",
    "coords": {
-    "lat": 55.799,
-    "lon": 37.885
+    "lat": 55.801,
+    "lon": 37.873
    },
    "kind": "проезжаем",
-   "visitMinutes": 5,
+   "visitMinutes": 10,
    "guideStory": [
-    "Платформа Горенки стоит на железнодорожной ветке, которая отходит от станции Реутово к Балашихе. Это один из девяти остановочных пунктов на территории огромного городского округа.",
-    "Отсюда до усадьбы — несколько минут. Вокруг — уже не дачные места XVIII века, а большой город, крупнейший в Подмосковье."
+    "До Разумовских Горенками владели князья Долгорукие: в 1719 году здесь возвели церковь во имя Всемилостивого Спаса и кирпичный дворец.",
+    "По одному из источников, в 1812 году сама усадьба почти не пострадала, а церковь французы разорили полностью."
    ],
    "facts": [
     {
-     "text": "Станция Балашиха и платформа Горенки находятся на ветке от станции Реутово.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
-     "verified": true
+     "text": "В 1719 году в усадьбе возвели церковь Всемилостивого Спаса и кирпичный дворец.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/105063",
+     "verified": false
     },
     {
-     "text": "На территории Балашихи девять остановочных пунктов железной дороги.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Балашиха — крупнейший город Московской области.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "По данным 2021 года, население Балашихи — 520 962 человека.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Название платформы дано по усадьбе.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
+     "text": "В 1812 году церковь была полностью разорена.",
+     "sourceUrl": "https://www.putevka.com/trip/russia/moscow/105063",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorenki-restavratsiya",
+   "name": "Дворец конца XVIII века",
+   "coords": {
+    "lat": 55.8,
+    "lon": 37.871
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Дворец усадьбы — конца XVIII века; долгое время здесь был детский санаторий. Комплекс — памятник федерального значения.",
+    "Усадьбу передали новым владельцам с обязательством за семь лет восстановить весь комплекс из 21 здания. Следующая точка маршрута — «Оранжереи графа Разумовского»."
+   ],
+   "facts": [
+    {
+     "text": "В усадьбе Горенки — дворец конца XVIII века, долгое время здесь был детский санаторий.",
+     "sourceUrl": "https://booksite.ru/fulltext/1/001/008/092/217.htm",
+     "verified": true
+    },
+    {
+     "text": "Новые владельцы должны за 7 лет восстановить комплекс из 21 здания.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/bryntsalov-proveril-hod-rabot-po-vosstanovleniyu-usadby-gorenki-v-balashihe-xl/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorenki-oranzherei",
+   "name": "Оранжереи графа Разумовского",
+   "coords": {
+    "lat": 55.7995,
+    "lon": 37.869
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Граф Алексей Разумовский превратил Горенки в научный сад: его оранжереи считались лучшими в Европе.",
+    "В ботаническом саду работали учёные Ф. Х. Стевен и Г. И. Фишер — Горенки были одним из центров русской ботаники начала XIX века. Следующая точка маршрута — «Бывший ботанический сад и пруды»."
+   ],
+   "facts": [
+    {
+     "text": "Оранжереи Разумовского в Горенках считались лучшими в Европе.",
+     "sourceUrl": "https://weekend.rambler.ru/read/55190777-sudba-osnovatelya-usadby-gorenki-grafa-razumovskogo/amp/",
+     "verified": false
+    },
+    {
+     "text": "Научную работу в ботаническом саду вели Ф. Х. Стевен и Г. И. Фишер.",
+     "sourceUrl": "https://weekend.rambler.ru/read/55190777-sudba-osnovatelya-usadby-gorenki-grafa-razumovskogo/amp/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorenki-sad",
+   "name": "Бывший ботанический сад и пруды",
+   "coords": {
+    "lat": 55.7965,
+    "lon": 37.877
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Главная слава Горенок — ботанический сад графа Алексея Разумовского. При нём построили оранжерею, где росло около трёх тысяч видов растений.",
+    "После смерти владельца оранжерея погибла, но часть коллекции успели перевезти в Московский ботанический сад. Так Горенки вошли в историю русской ботаники."
+   ],
+   "facts": [
+    {
+     "text": "При Разумовском в Горенках построили оранжерею и ботанический сад примерно с 3000 видов растений.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "После смерти владельца оранжерея погибла.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Часть коллекции перевезли в Московский ботанический сад.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
+     "verified": true
+    },
+    {
+     "text": "Жители Балашихи любят гулять в усадьбах Горенки и Пехра-Яковлевское.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
+     "verified": true
+    },
+    {
+     "text": "Судьба основателя усадьбы описана в материале Рамблера.",
+     "sourceUrl": "https://weekend.rambler.ru/read/55190777-sudba-osnovatelya-usadby-gorenki-grafa-razumovskogo/amp/",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "gorenki-usadba",
@@ -138,395 +234,54 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "gorenki-sad",
-   "name": "Бывший ботанический сад и пруды",
+   "id": "gorenki-platforma",
+   "name": "Платформа Горенки и ветка на Балашиху",
    "coords": {
-    "lat": 55.7965,
-    "lon": 37.877
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Главная слава Горенок — ботанический сад графа Алексея Разумовского. При нём построили оранжерею, где росло около трёх тысяч видов растений.",
-    "После смерти владельца оранжерея погибла, но часть коллекции успели перевезти в Московский ботанический сад. Так Горенки вошли в историю русской ботаники."
-   ],
-   "facts": [
-    {
-     "text": "При Разумовском в Горенках построили оранжерею и ботанический сад примерно с 3000 видов растений.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "После смерти владельца оранжерея погибла.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Часть коллекции перевезли в Московский ботанический сад.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Жители Балашихи любят гулять в усадьбах Горенки и Пехра-Яковлевское.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/",
-     "verified": true
-    },
-    {
-     "text": "Судьба основателя усадьбы описана в материале Рамблера.",
-     "sourceUrl": "https://weekend.rambler.ru/read/55190777-sudba-osnovatelya-usadby-gorenki-grafa-razumovskogo/amp/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "gorenki-galereya",
-   "name": "Картинная галерея",
-   "coords": {
-    "lat": 55.798,
-    "lon": 37.937
-   },
-   "address": "проспект Ленина, 10",
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "openingHoursNote": "Часы работы не подтверждены — уточните перед поездкой.",
-   "schedule": {
-    "days": {
-     "tue": "10:00-18:00",
-     "wed": "10:00-18:00",
-     "thu": "10:00-18:00",
-     "fri": "10:00-18:00",
-     "sat": "10:00-18:00",
-     "sun": "10:00-18:00"
-    }
-   },
-   "ticketNote": "Стоимость уточняйте в галерее.",
-   "bikeParkingNote": "Велосипед — снаружи на замке.",
-   "guideStory": [
-    "Картинная галерея на проспекте Ленина, 10 — последняя «культурная» точка дня. По данным Рувики, история Балашихинского историко-художественного музея, созданного в 1978 году, начинается с картинной галереи, собранной по инициативе местных художников.",
-    "Справочники называют учреждение по-разному — то картинной галереей, то музеем изобразительного искусства, то историко-художественным музеем. Похоже, речь об одном месте под разными вывесками, но мы этого не подтвердили, поэтому уточните на входе.",
-    "Галерея — финиш маршрута Балашихи. Следующее место по спирали откроется на экране «Спираль»."
-   ],
-   "facts": [
-    {
-     "text": "Балашихинская картинная галерея находится по адресу проспект Ленина, 10.",
-     "sourceUrl": "https://www.afisha.ru/balashiha/museum/",
-     "verified": true
-    },
-    {
-     "text": "По данным Рувики, учреждение по этому адресу — Балашихинский историко-художественный музей, созданный в 1978 году.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%BA%D0%BE-%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "История музея начинается с картинной галереи, собранной по инициативе местных художников.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%BA%D0%BE-%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Справочник командировка.ру называет галерею музеем изобразительного искусства Балашихи.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/balashicha/kartinnaya-galereya-muzey-izobrazitelnogo-iskusstva-g-balashihi/",
-     "verified": true
-    },
-    {
-     "text": "Что картинная галерея и историко-художественный музей — одно учреждение, не подтверждено.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D0%BA%D0%BE-%D1%85%D1%83%D0%B4%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": false
-    }
-   ],
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "gorenki-ploshchad-slavy",
-   "name": "Площадь Славы",
-   "coords": {
-    "lat": 55.803,
-    "lon": 37.948
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "openingHoursNote": "Открытая площадь.",
-   "bikeParkingNote": "По площади — пешком.",
-   "guideStory": [
-    "Площадь Славы — главное место памяти Балашихи. Здесь горит Вечный огонь у памятника землякам, погибшим в Великой Отечественной войне, и сюда приходят 9 мая и 22 июня.",
-    "Памятный знак, по данным афиши городских учреждений культуры, открыли 9 мая 1973 года, а его создание связывают со скульптором Н. С. Любимовым."
-   ],
-   "facts": [
-    {
-     "text": "На площади Славы горит Вечный огонь у памятника землякам, погибшим в Великой Отечественной войне.",
-     "sourceUrl": "https://360.ru/news/mosobl/predsedatel-mosobldumy-i-glava-balashihi-vozlozhili-tsvety-k-vechnomu-ognju/",
-     "verified": true
-    },
-    {
-     "text": "Памятный знак открыт 9 мая 1973 года, его создание связывают со скульптором Н. С. Любимовым.",
-     "sourceUrl": "https://www.culture.ru/events/3195914/pomnite-cherez-veka-cherez-goda",
-     "verified": true
-    },
-    {
-     "text": "На площади Славы проходят памятные митинги в честь участников войны.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/miting-v-pamjat-ob-uchastnikah-vov-proshel-na-ploschadi-slavy-v-balashihe/",
-     "verified": true
-    },
-    {
-     "text": "В День памяти и скорби 22 июня в Балашихе возлагают цветы к Вечному огню.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/tsvety-vozlozhili-k-vechnomu-ognyu-v-balashihe-v-den-pamyati-i-skorbi-xl/",
-     "verified": true
-    },
-    {
-     "text": "Точный адрес площади в найденных источниках не указан — расположение уточните на месте.",
-     "sourceUrl": "https://360.ru/news/mosobl/predsedatel-mosobldumy-i-glava-balashihi-vozlozhili-tsvety-k-vechnomu-ognju/",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Место памяти: на территорию у Вечного огня на велосипеде не заезжаем."
-   ],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "gorenki-pekhorka",
-   "name": "Берег Пехорки",
-   "coords": {
-    "lat": 55.787,
-    "lon": 37.962
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Под обрывом течёт Пехорка — та самая река, на которой стоит вся Балашиха и её «мельница».",
-    "Историко-краеведческий музей Балашихи разработал экскурсионный маршрут по усадьбе и показывает участникам пять зданий комплекса — если хотите внутрь, договаривайтесь с музеем."
-   ],
-   "facts": [
-    {
-     "text": "Музей Балашихи разработал экскурсионный маршрут по усадьбе.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
-     "verified": true
-    },
-    {
-     "text": "Экскурсантам показывают пять зданий комплекса.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/pensioneram-balashihi-rasskazali-ob-istorii-usadby-pehra-yakovlevskoe-xl/",
-     "verified": true
-    },
-    {
-     "text": "Усадьба стоит на берегу Пехорки.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A5%D1%80%D0%B0%D0%BC_%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F_%D0%93%D0%BE%D1%81%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F_%D0%B2_%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Каталог sobory.ru хранит фотографии Преображенской церкви.",
-     "sourceUrl": "https://sobory.ru/photo/56702",
-     "verified": true
-    },
-    {
-     "text": "Возможность купания в Пехорке мы не проверяли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9F%D0%B5%D1%85%D1%80%D0%B0-%D0%AF%D0%BA%D0%BE%D0%B2%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "gorenki-savvino",
-   "name": "Саввино",
-   "coords": {
-    "lat": 55.755,
-    "lon": 38.03
+    "lat": 55.799,
+    "lon": 37.885
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 5,
    "guideStory": [
-    "Саввино — один из восьми микрорайонов бывшего города, старое село, которое вошло в Железнодорожный.",
-    "Здесь лучше всего видно, как город складывался из сёл и деревень вокруг станции: старые улицы соседствуют с новыми кварталами. Следующая точка маршрута — «Краеведческий музей»."
+    "Платформа Горенки стоит на железнодорожной ветке, которая отходит от станции Реутово к Балашихе. Это один из девяти остановочных пунктов на территории огромного городского округа.",
+    "Отсюда до усадьбы — несколько минут. Вокруг — уже не дачные места XVIII века, а большой город, крупнейший в Подмосковье."
    ],
    "facts": [
     {
-     "text": "Саввино — один из микрорайонов Железнодорожного.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
+     "text": "Станция Балашиха и платформа Горенки находятся на ветке от станции Реутово.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
      "verified": true
     },
     {
-     "text": "Железнодорожный был городом областного подчинения с 1960 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
+     "text": "На территории Балашихи девять остановочных пунктов железной дороги.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
      "verified": true
     },
     {
-     "text": "Микрорайоны включают Керамик, Купавну, Кучино, Ольгино и Павлино.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
+     "text": "Балашиха — крупнейший город Московской области.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
      "verified": true
     },
     {
-     "text": "Историю Саввина в найденных источниках мы не нашли.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
+     "text": "По данным 2021 года, население Балашихи — 520 962 человека.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Название платформы дано по усадьбе.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%93%D0%BE%D1%80%D0%B5%D0%BD%D0%BA%D0%B8",
      "verified": false
-    },
-    {
-     "text": "Платформа Ольгино открыта на Горьковском направлении в рамках МЦД-4.",
-     "sourceUrl": "https://riamo.ru/news/transport/60-passazhiropotoka-perenapravyat-s-zheleznodorozhnoj-na-novuyu-platformu-olgino-v-balashihe-xl/",
-     "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "gorenki-muzey",
-   "name": "Краеведческий музей",
-   "coords": {
-    "lat": 55.748,
-    "lon": 38.01
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Краеведческий музей Железнодорожного открыт в 1970 году и находится на улице Новой, 18.",
-    "Здесь рассказывают о деревнях и сёлах, из которых сложился город, о станции и о людях. Это лучший способ понять, почему у бывшего города восемь разных микрорайонов."
-   ],
-   "facts": [
-    {
-     "text": "Краеведческий музей открыт в 1970 году.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9A%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0_%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%BE%D0%B3%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Адрес музея — улица Новая, 18, мкр. Железнодорожный.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9A%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0_%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%BE%D0%B3%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "После 2015 года здесь утвердили восемь микрорайонов.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D1%8B%D0%B9_(%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "Часы работы музея мы не проверяли.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9A%D1%80%D0%B0%D0%B5%D0%B2%D0%B5%D0%B4%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0_%D0%96%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%BE%D0%B3%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Из Железнодорожного «был город, а стал микрорайон», пишет «Мир квартир».",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/11/16/zheleznodorozhny/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "Часы работы не проверены.",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "gorenki-kamenka",
-   "name": "Каменка — старое ядро",
-   "coords": {
-    "lat": 55.715,
-    "lon": 38.215
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Центральная часть города — бывшее сельцо Каменка; первые упоминания о нём встречаются в документах 1623 года.",
-    "Так что Электроугли старше своего заводского имени почти на три века: сначала была деревня, потом станция, потом завод и город."
-   ],
-   "facts": [
-    {
-     "text": "Первые упоминания о сельце Каменка относятся к 1623 году.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    },
-    {
-     "text": "Каменка — центральная часть современного города.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    },
-    {
-     "text": "Электроугли с 2006 года — административный центр городского поселения.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    },
-    {
-     "text": "Старой застройки Каменки мы не проверяли.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": false
-    },
-    {
-     "text": "Город назван по заводу электрических углей.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "gorenki-zavod",
-   "name": "Завод электроугольных изделий",
-   "coords": {
-    "lat": 55.719,
-    "lon": 38.225
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Опытный завод электроугольных изделий выпускает около 30 марок электрощёток для электрических машин общепромышленного назначения.",
-    "В городе есть и научно-исследовательский институт электроугольных изделий — наследник того самого завода «электрических углей»."
-   ],
-   "facts": [
-    {
-     "text": "Опытный завод выпускает 30 марок электрощёток для электрических машин.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/",
-     "verified": true
-    },
-    {
-     "text": "В Электроуглях работает АО «НИИЭИ».",
-     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/ao-niiei/",
-     "verified": true
-    },
-    {
-     "text": "Завод — наследник производства электрических углей 1899 года.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/elektrougli/",
-     "verified": false
-    },
-    {
-     "text": "Достопримечательности города перечисляет командировка.ру.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/elektrougli/",
-     "verified": true
-    },
-    {
-     "text": "Электроугли с 2006 года — центр городского поселения.",
-     "sourceUrl": "https://www.cian.ru/stati-elektrougli-216552/",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующее предприятие: не фотографировать проходные."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 100
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -565,93 +320,105 @@
   {
    "title": "Жить в Балашихе — РИАМО",
    "url": "https://riamo.ru/articles/istorii/zhit-v-balashihe-gulyat-v-gorenkah-i-vozvraschatsya-iz-moskvy-na-taksi-xl/"
+  },
+  {
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/trip/russia/moscow/105063"
+  },
+  {
+   "title": "Источник: booksite.ru",
+   "url": "https://booksite.ru/fulltext/1/001/008/092/217.htm"
+  },
+  {
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/bryntsalov-proveril-hod-rabot-po-vosstanovleniyu-usadby-gorenki-v-balashihe-xl/"
+  },
+  {
+   "title": "Источник: weekend.rambler.ru",
+   "url": "https://weekend.rambler.ru/read/55190777-sudba-osnovatelya-usadby-gorenki-grafa-razumovskogo/amp/"
+  },
+  {
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/kultura/v-balashihe-vpervye-vypusknoj-bal-proveli-v-usadbe-grafov-razumovskih-gorenki"
+  },
+  {
+   "title": "Источник: ru.ruwiki.ru",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%91%D0%B0%D0%BB%D0%B0%D1%88%D0%B8%D1%85%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.871407,
-     55.7965
+     37.863406,
+     55.7995
     ],
     [
-     37.872156,
-     55.794928
+     37.864156,
+     55.797928
+    ],
+    [
+     37.866203,
+     55.796777
     ],
     [
      37.874203,
      55.793777
     ],
     [
-     38.007207,
-     55.745277
+     37.877,
+     55.793356
     ],
     [
-     38.212209,
-     55.712277
+     37.879797,
+     55.793777
     ],
     [
-     38.215,
-     55.711856
+     37.887797,
+     55.796277
     ],
     [
-     38.217791,
-     55.712277
+     37.889844,
+     55.797428
     ],
     [
-     38.227791,
-     55.716277
+     37.890593,
+     55.799
     ],
     [
-     38.229834,
-     55.717428
+     37.889844,
+     55.800572
     ],
     [
-     38.230582,
-     55.719
-    ],
-    [
-     38.229834,
-     55.720572
-    ],
-    [
-     38.227791,
-     55.721723
-    ],
-    [
-     37.950797,
-     55.805723
-    ],
-    [
-     37.948,
-     55.806144
-    ],
-    [
-     37.885,
-     55.802144
-    ],
-    [
-     37.882203,
+     37.887797,
      55.801723
     ],
     [
-     37.877203,
-     55.800223
+     37.875797,
+     55.803723
     ],
     [
-     37.874203,
-     55.799223
+     37.873,
+     55.804144
     ],
     [
-     37.872156,
-     55.798072
+     37.870203,
+     55.803723
     ],
     [
-     37.871407,
-     55.7965
+     37.866203,
+     55.802223
+    ],
+    [
+     37.864156,
+     55.801072
+    ],
+    [
+     37.863406,
+     55.7995
     ]
    ]
   ]

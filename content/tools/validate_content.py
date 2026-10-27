@@ -115,7 +115,7 @@ OKRUGS = {"tsao", "sao", "svao", "vao", "yuvao", "yuao", "yuzao", "zao", "szao"}
 def foreign_place(did, pt):
     """Имя другого места спирали, к которому точка явно ближе, чем к своему (допуск 4 км)."""
     okr = did in OKRUGS
-    inside = dist_km(pt, KREMLIN_PT) < 16.5
+    inside = min(CENTERS, key=lambda k: dist_km(pt, CENTERS[k][0])) in OKRUGS
     if okr != inside:
         return "внутри МКАД" if inside else "за МКАД"
     own = dist_km(pt, CENTERS[did][0])
@@ -182,8 +182,8 @@ def check_destination(d, fname, spiral_ids):
             if len(b.get("line", [])) < 2:
                 err(rw, f"барьер «{b.get('name')}» — нужна линия из ≥ 2 точек")
     stops = need(d, "stops", list, w) or []
-    if v3 and not (6 <= len(stops) <= 12):
-        err(w, f"{len(stops)} точек, нужно 6–12")
+    if v3 and not (5 <= len(stops) <= 12):
+        err(w, f"{len(stops)} точек, нужно 5–12 (цель — 6–8)")
     elif ver == 2 and not (8 <= len(stops) <= 12):
         err(w, f"{len(stops)} точек, нужно 8–12")
     elif len(stops) < 3:
