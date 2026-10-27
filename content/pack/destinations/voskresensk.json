@@ -13,8 +13,8 @@
   "Воскресенск — город химиков на Москве-реке, выросший из нескольких посёлков. Название, по одной версии, дала церковь Воскресения в селе Воскресенском; в 1862 году по селу назвали станцию Московско-Рязанской железной дороги.",
   "Главное предприятие — химкомбинат минеральных удобрений, работающий с первых пятилеток; сегодня он входит в «Уралхим», а в 2026 году отметил 95-летие.",
   "Центральный парк города — бывшая усадьба Кривякино, у которой в спирали свой маршрут.",
-  "Свои места маршрута: «Химкомбинат», «Музей трудовой и боевой славы». По пути маршрут заходит и к соседям: Кривякино — «Центральный парк»; Коломна — «Брусенский монастырь», ««Калачная» и «Коломенская пастила»»; Бобренев монастырь — «Обетная обитель»; Луховицы — «Луховицкий авиазавод», «Праздник огурца».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Луховицы» (Электрички Казанского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Воскресенск», «Скульптура «Воскресение Христово»», «Храм Покрова Пресвятой Богородицы», «Музей трудовой и боевой славы», «Химкомбинат». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Станция «Воскресенск» (Электрички Казанского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Воскресенск»",
@@ -25,24 +25,180 @@
   "transport": "Электрички Казанского направления"
  },
  "endPoint": {
-  "name": "Станция «Луховицы»",
+  "name": "Станция «Воскресенск»",
   "coords": {
-   "lat": 54.9652,
-   "lon": 39.0255
+   "lat": 55.3222,
+   "lon": 38.6715
   },
   "transport": "Электрички Казанского направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.8,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 3.6,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "voskresensk-stantsiya",
+   "name": "Станция Воскресенск",
+   "coords": {
+    "lat": 55.322,
+    "lon": 38.671
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Село получило название по церкви Воскресения Христова. В 1862 году село Воскресенское дало имя станции Московско-Рязанской железной дороги.",
+    "Город вырос из нескольких посёлков вдоль Москвы-реки. Следующая точка маршрута — «Скульптура «Воскресение Христово»»."
+   ],
+   "facts": [
+    {
+     "text": "Село получило название по церкви Воскресения.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "В 1862 году по селу назвали станцию.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Город вырос из нескольких посёлков.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
+     "verified": false
+    },
+    {
+     "text": "Воскресенск описан в Академике.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/26593",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "voskresensk-skulptura",
+   "name": "Скульптура «Воскресение Христово»",
+   "coords": {
+    "lat": 55.3212,
+    "lon": 38.6688
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 5,
+   "guideStory": [
+    "В городе стоит скульптурная композиция «Воскресение Христово» — отсылка к имени города.",
+    "Градообразующее предприятие Воскресенска — химический завод «Воскресенские минеральные удобрения». Следующая точка маршрута — «Храм Покрова Пресвятой Богородицы»."
+   ],
+   "facts": [
+    {
+     "text": "В Воскресенске есть скульптурная композиция «Воскресение Христово».",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/",
+     "verified": true
+    },
+    {
+     "text": "«Воскресенские минеральные удобрения» — градообразующее предприятие.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "voskresensk-pokrov",
+   "name": "Храм Покрова Пресвятой Богородицы",
+   "coords": {
+    "lat": 55.3198,
+    "lon": 38.6702
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Одна из ключевых достопримечательностей исторического центра Воскресенска — храм Покрова Пресвятой Богородицы.",
+    "Город назван по Воскресенскому собору — одной из первых каменных построек на этой земле. Следующая точка маршрута — «Музей трудовой и боевой славы»."
+   ],
+   "facts": [
+    {
+     "text": "Храм Покрова — одна из ключевых достопримечательностей центра.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Город назван по Воскресенскому собору.",
+     "sourceUrl": "https://tonkosti.ru/%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "voskresensk-muzey",
+   "name": "Музей трудовой и боевой славы",
+   "coords": {
+    "lat": 55.325,
+    "lon": 38.675
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В Воскресенске работает музей трудовой и боевой славы.",
+    "Часы работы мы не проверяли — уточните заранее.",
+    "Возвращаемся к станции или едем дальше в Кривякино. Следующая точка маршрута — «Химкомбинат». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Воскресенске есть музей трудовой и боевой славы.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": false
+    },
+    {
+     "text": "Кривякино — отдельная точка спирали.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/voskresensk",
+     "verified": true
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
   {
    "id": "voskresensk-khimkombinat",
    "name": "Химкомбинат",
@@ -88,319 +244,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "voskresensk-muzey",
-   "name": "Музей трудовой и боевой славы",
-   "coords": {
-    "lat": 55.325,
-    "lon": 38.675
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "В Воскресенске работает музей трудовой и боевой славы.",
-    "Часы работы мы не проверяли — уточните заранее.",
-    "Возвращаемся к станции или едем дальше в Кривякино. Следующая точка маршрута — «Центральный парк». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
-   ],
-   "facts": [
-    {
-     "text": "В Воскресенске есть музей трудовой и боевой славы.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
-     "verified": false
-    },
-    {
-     "text": "Кривякино — отдельная точка спирали.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/voskresensk",
-     "verified": true
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "voskresensk-park",
-   "name": "Центральный парк",
-   "coords": {
-    "lat": 55.281,
-    "lon": 38.679
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Центральный парк Воскресенска занимает территорию бывшей усадьбы Кривякино.",
-    "Реставрация идёт с восстановлением исторической планировки — со временем парк станет ближе к усадебному облику. Следующая точка маршрута — «Брусенский монастырь»."
-   ],
-   "facts": [
-    {
-     "text": "Центральный парк занимает территорию бывшей усадьбы.",
-     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
-     "verified": true
-    },
-    {
-     "text": "Реставрация идёт с восстановлением планировки.",
-     "sourceUrl": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/",
-     "verified": false
-    },
-    {
-     "text": "Сроки реставрации не проверены.",
-     "sourceUrl": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://teletype.in/@apfound/xn7ZBINwV5M",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "voskresensk-brusensky",
-   "name": "Брусенский монастырь",
-   "coords": {
-    "lat": 55.105,
-    "lon": 38.7585
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Небольшая обитель у кремлёвской стены основана в 1552 году — её связывают со взятием Казани: Коломна тогда была сборным пунктом войска Ивана Грозного.",
-    "Шатровая Успенская церковь 1550-х — один из немногих сохранившихся шатровых храмов середины XVI века; в 1970–1980-е её реставрировал архитектор С. П. Орловский. Название объясняют деревянным брусом первых построек, но это лишь версия."
-   ],
-   "facts": [
-    {
-     "text": "Брусенский монастырь основан в 1552 году и связан со взятием Казани.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%91%D1%80%D1%83%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Успенская церковь построена в 1550-е годы и реставрирована С. П. Орловским в 1970–1980-е.",
-     "sourceUrl": "https://rusmedievalartbulletin.sias.ru/upload/vestnik/Vestnik_2024-2_19122024-71-78_Донской,%20Оксенюк.pdf",
-     "verified": true
-    },
-    {
-     "text": "Название связывают с деревянным брусом первых построек.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%91%D1%80%D1%83%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Изначально монастырь был мужским, сейчас — женский.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%BF%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%91%D1%80%D1%83%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 40,
+   "order": 50,
    "coordsVerified": false
-  },
-  {
-   "id": "voskresensk-kalachnaya",
-   "name": "«Калачная» и «Коломенская пастила»",
-   "coords": {
-    "lat": 55.102,
-    "lon": 38.756
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Музей «Калачная» у Пятницких ворот — это музей, магазин, кафе и культурное пространство; калачи здесь пекут по старинному рецепту, проводят мастер-классы.",
-    "Музей «Коломенская пастила» — на Посадской улице, 13а; там же можно увидеть фабрику пастилы купца Чуприкова. «Российская газета» советует Коломну как поездку «между калачом и пастилой»."
-   ],
-   "facts": [
-    {
-     "text": "«Калачная» находится у Пятницких ворот.",
-     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry",
-     "verified": true
-    },
-    {
-     "text": "В «Калачной» проводят мастер-классы по выпечке.",
-     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry",
-     "verified": true
-    },
-    {
-     "text": "Музей «Коломенская пастила» — на Посадской, 13а.",
-     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry",
-     "verified": true
-    },
-    {
-     "text": "РГ: «Между калачом и пастилой».",
-     "sourceUrl": "https://rg.ru/2023/08/30/reg-cfo/chto-posmotret-v-kolomne-za-odin-den.html",
-     "verified": true
-    },
-    {
-     "text": "Т—Ж рассказывал, что посмотреть в Коломне за день.",
-     "sourceUrl": "https://t-j.ru/kolomna-one-day/",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "voskresensk-obet",
-   "name": "Обетная обитель",
-   "coords": {
-    "lat": 55.0702,
-    "lon": 38.7905
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Монастырь называют «Обетным». По одной версии, Боброк дал обет перед Куликовской битвой; по житию, Донской дал обет после победы, вернувшись в Коломну.",
-    "Мы приводим обе версии и не выбираем между ними. Следующая точка маршрута — «Луховицкий авиазавод»."
-   ],
-   "facts": [
-    {
-     "text": "Монастырь называют «Обетным».",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
-     "verified": true
-    },
-    {
-     "text": "Версия об обете Боброка перед битвой.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
-     "verified": false
-    },
-    {
-     "text": "Версия об обете Донского после победы — по житию.",
-     "sourceUrl": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "voskresensk-aviazavod",
-   "name": "Луховицкий авиазавод",
-   "coords": {
-    "lat": 54.982,
-    "lon": 39.045
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Луховицкий авиастроительный завод имени П. А. Воронина основан в 1953 году. Сегодня это филиал Объединённой авиастроительной корпорации; территория закрыта, смотрим снаружи.",
-    "В разные годы здесь собирали Ил-14, Ил-18, Як-25, Су-9, МиГ-21, МиГ-23 и МиГ-29. Город на огуречных грядках оказался ещё и городом самолётов."
-   ],
-   "facts": [
-    {
-     "text": "Луховицкий авиастроительный завод имени П. А. Воронина основан в 1953 году.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "На заводе выпускали Ил-14, Ил-18, Як-25, Су-9, МиГ-21, МиГ-23 и МиГ-29.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Сейчас завод — филиал ПАО «ОАК».",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 70,
-   "coordsVerified": false
-  },
-  {
-   "id": "voskresensk-prazdnik",
-   "name": "Праздник огурца",
-   "coords": {
-    "lat": 54.966,
-    "lon": 39.028
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Летом в Луховицах проходит семейный фестиваль «Луховицкий огурец»; его организуют администрация округа и Дом культуры «Старт».",
-    "Промысел в пойме Оки, по «Рамблеру», развивается с 1930-х годов. Финиш — Станция «Луховицы»: Электрички Казанского направления."
-   ],
-   "facts": [
-    {
-     "text": "В Луховицах проходит фестиваль «Луховицкий огурец».",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": true
-    },
-    {
-     "text": "Организаторы — администрация и ДК «Старт».",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": true
-    },
-    {
-     "text": "Промысел развивается с 1930-х — по Рамблеру.",
-     "sourceUrl": "https://weekend.rambler.ru/items/37259587-zhiteli-i-gosti-luhovits-otmetili-prazdnik-ogurtsa/",
-     "verified": true
-    },
-    {
-     "text": "Даты праздника меняются.",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
   }
  ],
  "dish": {
@@ -436,103 +281,71 @@
    "url": "https://360.ru/news/mosobl/himkombinat-voskresenska-otmetil-jubilej/"
   },
   {
-   "title": "Реставрация Кривякина — 360",
-   "url": "https://360.ru/news/kultura/vosstanovit-istoricheskij-oblik-v-voskresenske-pristupili-k-restavratsii-usadby-krivjakino/"
-  },
-  {
    "title": "Грушевый сад — 360",
    "url": "https://360.ru/news/mosobl/himiki-iz-voskresenska-poluchili-premiju-za-vossozdanie-istoricheskogo-sada/"
   },
   {
-   "title": "Маринкина башня — Спутник8",
-   "url": "https://www.sputnik8.com/ru/kolomna/sights/marinkina-bashnq/info"
+   "title": "Источник: dic.academic.ru",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/26593"
   },
   {
-   "title": "Сувениры Коломны — Спутник8",
-   "url": "https://www.sputnik8.com/ru/kolomna/pages/kolomenskie-suveniry"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/voskresensk/"
   },
   {
-   "title": "Коломна за день — РГ",
-   "url": "https://rg.ru/2023/08/30/reg-cfo/chto-posmotret-v-kolomne-za-odin-den.html"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA"
   },
   {
-   "title": "Бобренев монастырь — advantour",
-   "url": "https://www.advantour.com/rus/russia/kolomna/bobrenev-monastery.htm"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/voskresensk/museum-trudovoy-i-boevoy-slavyi/"
   },
   {
-   "title": "Бобренёв монастырь — Спутник8",
-   "url": "https://www.sputnik8.com/ru/kolomna/sights/bobrenyov-bogorodice-rozhdestvenskiy-monastyr/info"
-  },
-  {
-   "title": "Луховицкие огурцы — mos.ru",
-   "url": "https://www.mos.ru/news/item/170885073/"
-  },
-  {
-   "title": "Луховицы — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B"
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/voskresensk"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.665474,
-     55.322
+     38.663274,
+     55.3212
     ],
     [
-     38.67348,
-     55.281
+     38.664014,
+     55.319628
     ],
     [
-     38.750504,
-     55.102
+     38.665415,
+     55.318228
     ],
     [
-     38.751241,
-     55.100428
+     38.667437,
+     55.317077
     ],
     [
-     38.785745,
-     55.068628
+     38.6702,
+     55.316656
     ],
     [
-     38.787754,
-     55.067477
+     38.672963,
+     55.317077
     ],
     [
-     39.022762,
-     54.962477
+     38.674985,
+     55.318228
     ],
     [
-     39.0255,
-     54.962056
+     38.684787,
+     55.328428
     ],
     [
-     39.028238,
-     54.962477
-    ],
-    [
-     39.030738,
-     54.963277
-    ],
-    [
-     39.032743,
-     54.964428
-    ],
-    [
-     39.049745,
-     54.980428
-    ],
-    [
-     39.050479,
-     54.982
-    ],
-    [
-     39.049745,
-     54.983572
+     38.685527,
+     55.33
     ],
     [
      38.684787,
@@ -555,12 +368,12 @@
      55.331572
     ],
     [
-     38.666214,
-     55.323572
+     38.664014,
+     55.322772
     ],
     [
-     38.665474,
-     55.322
+     38.663274,
+     55.3212
     ]
    ]
   ]

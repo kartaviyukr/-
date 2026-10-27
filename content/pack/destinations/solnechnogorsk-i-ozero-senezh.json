@@ -13,8 +13,8 @@
   "Солнечногорск начинался с деревни Гомзино, упомянутой в писцовых книгах XVII века. В XVIII веке село стало второй почтовой станцией на пути из Москвы в Петербург; сохранившийся Путевой дворец сегодня — музейно-выставочный центр.",
   "Название, по популярному преданию, дала Екатерина II, восхитившаяся видом с холма, — это легенда. В 1851 году на Николаевской дороге появилась станция Подсолнечная. Городом Солнечногорск стал, по одному источнику, в 1938 году.",
   "Озеро Сенеж площадью около 8,5 кв. км — фактически водохранилище, созданное для питания Екатерининского канала между Сестрой и Истрой, который строили в первой половине XIX века.",
-  "Свои места маршрута: «Путевой дворец», «Солнечная Гора», «Озеро Сенеж». По пути маршрут заходит и к соседям: Шахматово и Тараканово — «Тараканово», «Окрестности Шахматова»; Боблово (усадьба Менделеева) — «Поля опытов Менделеева»; Клин — «Дом-музей Чайковского»; Высоковск — «Пруд и казармы».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Клин» (Электрички Ленинградского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Парк имени Крупской», «Солнечная Гора», «Путевой дворец», «Озеро Сенеж», «Церковь Николая и часовня Глазунова», «Центральная площадь и краеведческий музей». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 7 км: старт и финиш — Станция «Подсолнечная» (Электрички Ленинградского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Подсолнечная»",
@@ -25,70 +25,54 @@
   "transport": "Электрички Ленинградского направления"
  },
  "endPoint": {
-  "name": "Станция «Клин»",
+  "name": "Станция «Подсолнечная»",
   "coords": {
-   "lat": 56.336,
-   "lon": 36.716
+   "lat": 56.1852,
+   "lon": 36.9775
   },
   "transport": "Электрички Ленинградского направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.3,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 6.8,
+  "durationH": 2.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "solnechnogorsk-i-ozero-senezh-dvorets",
-   "name": "Путевой дворец",
+   "id": "solnechnogorsk-i-ozero-senezh-park-krupskoy",
+   "name": "Парк имени Крупской",
    "coords": {
     "lat": 56.183,
-    "lon": 36.99
+    "lon": 36.9742
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
    "guideStory": [
-    "В XVIII веке на Петербургском тракте возникло село Гомзино — вторая почтовая станция на пути из Москвы в Петербург.",
-    "Сохранившийся Путевой дворец сегодня занимает музейно-выставочный центр: экспозиция «Мир русской провинции», художественные выставки и музыкальный салон."
+    "Городской парк имени Крупской — главная зелёная зона Солнечногорска.",
+    "Рядом городской сад, памятник Русалке, памятник В. Н. Татищеву и светодинамический фонтан. Следующая точка маршрута — «Солнечная Гора». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
    ],
    "facts": [
     {
-     "text": "Гомзино упомянуто в писцовых книгах XVII века.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/solnechnogorsk/istoriia",
+     "text": "В Солнечногорске есть городской парк имени Крупской.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/solnechnogorsk/gorodskoy-park-im-krupskoy/",
      "verified": true
     },
     {
-     "text": "Село стало второй почтовой станцией на пути в Петербург.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
+     "text": "Рядом — городской сад, памятники Русалке и Татищеву, фонтан.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/solnechnogorsk/gorodskoy-park-im-krupskoy/",
      "verified": true
-    },
-    {
-     "text": "В Путевом дворце работает музейно-выставочный центр.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "В центре есть экспозиция «Мир русской провинции».",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
-     "verified": false
     }
    ],
-   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "solnechnogorsk-i-ozero-senezh-nazvanie",
@@ -133,8 +117,55 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "solnechnogorsk-i-ozero-senezh-dvorets",
+   "name": "Путевой дворец",
+   "coords": {
+    "lat": 56.183,
+    "lon": 36.99
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В XVIII веке на Петербургском тракте возникло село Гомзино — вторая почтовая станция на пути из Москвы в Петербург.",
+    "Сохранившийся Путевой дворец сегодня занимает музейно-выставочный центр: экспозиция «Мир русской провинции», художественные выставки и музыкальный салон."
+   ],
+   "facts": [
+    {
+     "text": "Гомзино упомянуто в писцовых книгах XVII века.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/solnechnogorsk/istoriia",
+     "verified": true
+    },
+    {
+     "text": "Село стало второй почтовой станцией на пути в Петербург.",
+     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
+     "verified": true
+    },
+    {
+     "text": "В Путевом дворце работает музейно-выставочный центр.",
+     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
+     "verified": true
+    },
+    {
+     "text": "В центре есть экспозиция «Мир русской провинции».",
+     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://teletype.in/@apfound/FNVjr3N4bkT",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "solnechnogorsk-i-ozero-senezh-senezh",
@@ -180,242 +211,70 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "solnechnogorsk-i-ozero-senezh-tarakanovo",
-   "name": "Тараканово",
+   "id": "solnechnogorsk-i-ozero-senezh-nikolay",
+   "name": "Церковь Николая и часовня Глазунова",
    "coords": {
-    "lat": 56.205,
-    "lon": 36.88
+    "lat": 56.1872,
+    "lon": 36.9805
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
+   "visitMinutes": 10,
    "guideStory": [
-    "Тараканово — третья усадьба музея-заповедника. По традиции, в здешней церкви венчались Александр Блок и Любовь Менделеева; сведения о венчании мы знаем по туристическим источникам.",
-    "Боблово и Шахматово называют «местами-свидетелями любви Блока и его Прекрасной Дамы»."
+    "В городе стоит церковь Святителя Николая и часовня-усыпальница А. И. Глазунова.",
+    "Город раскинулся на берегах Сенежского озера. Следующая точка маршрута — «Центральная площадь и краеведческий музей». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "Музей-заповедник включает Шахматово, Боблово и Тараканово.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
+     "text": "В Солнечногорске есть церковь Николая и часовня-усыпальница Глазунова.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/solnechnogorsk/",
      "verified": true
     },
     {
-     "text": "Венчание Блока в Тараканове — по туристическим источникам.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
-     "verified": false
-    },
-    {
-     "text": "Боблово и Шахматово — места любви Блока и Менделеевой.",
-     "sourceUrl": "https://www.calend.ru/calendar/tema/shahmatovo-i-boblovo-mesta-svideteli-lyubvi-aleksandra-bloka-i-ego-prekrasnoj-damy/",
+     "text": "Город стоит на берегах Сенежского озера.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA",
      "verified": true
-    },
-    {
-     "text": "Координаты Тараканова приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
-     "verified": false
-    },
-    {
-     "text": "Состояние церкви мы не проверяли.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "solnechnogorsk-i-ozero-senezh-okrestnosti",
-   "name": "Окрестности Шахматова",
+   "id": "solnechnogorsk-i-ozero-senezh-ploshchad",
+   "name": "Центральная площадь и краеведческий музей",
    "coords": {
-    "lat": 56.211,
-    "lon": 36.862
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Окрестности Шахматова — холмы, поля и перелески, которые Блок описывал в стихах.",
-    "Mel.fm называет Шахматово среди малоизвестных усадеб вокруг Москвы, куда стоит съездить «в гости к Блоку».",
-    "Обратно к станции Подсолнечная путь неблизкий — рассчитайте силы и время до заката."
-   ],
-   "facts": [
-    {
-     "text": "Mel.fm советует посетить Шахматово.",
-     "sourceUrl": "https://mel.fm/zhizn/razvlecheniya/1534970-7-maloizvestnykh-usadeb-vokrug-moskvy-edem-v-gosti-k-prishvinu-bloku-mendeleyevu-i-drugim",
-     "verified": true
-    },
-    {
-     "text": "Пейзажи вокруг усадьбы связаны со стихами Блока.",
-     "sourceUrl": "https://mel.fm/zhizn/razvlecheniya/1534970-7-maloizvestnykh-usadeb-vokrug-moskvy-edem-v-gosti-k-prishvinu-bloku-mendeleyevu-i-drugim",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor",
-     "verified": false
-    },
-    {
-     "text": "Шахматово входит в музей-заповедник.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/44889-avtoekskursiya-iz-moskvy-v-muzey-zapovednik-mendeleeva-i-bloka",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "solnechnogorsk-i-ozero-senezh-opyty",
-   "name": "Поля опытов Менделеева",
-   "coords": {
-    "lat": 56.241,
-    "lon": 36.762
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Боблово на 40 лет стало творческой лабораторией Менделеева. Он ставил здесь сельскохозяйственные опыты — в музее-заповеднике их планировали воссоздать.",
-    "Здесь же юный Александр Блок встретил Любовь Менделееву, будущую жену и «Прекрасную Даму» своих стихов."
-   ],
-   "facts": [
-    {
-     "text": "Боблово на 40 лет стало творческой лабораторией Менделеева.",
-     "sourceUrl": "https://www.culture.ru/institutes/14108/boblovo",
-     "verified": true
-    },
-    {
-     "text": "В усадьбах планировали воссоздать сельскохозяйственные опыты Менделеева.",
-     "sourceUrl": "https://www.interfax.ru/russia/432043",
-     "verified": true
-    },
-    {
-     "text": "Боблово и Шахматово — места любви Блока и Любови Менделеевой.",
-     "sourceUrl": "https://www.calend.ru/calendar/tema/shahmatovo-i-boblovo-mesta-svideteli-lyubvi-aleksandra-bloka-i-ego-prekrasnoj-damy/",
-     "verified": true
-    },
-    {
-     "text": "Координаты полей приблизительные.",
-     "sourceUrl": "https://www.interfax.ru/russia/432043",
-     "verified": false
-    },
-    {
-     "text": "Детали опытов мы не приводим.",
-     "sourceUrl": "https://www.interfax.ru/russia/432043",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "solnechnogorsk-i-ozero-senezh-chaikovsky",
-   "name": "Дом-музей Чайковского",
-   "coords": {
-    "lat": 56.324,
-    "lon": 36.74
+    "lat": 56.1856,
+    "lon": 36.9772
    },
    "kind": "заходим внутрь",
-   "visitMinutes": 60,
+   "visitMinutes": 30,
    "guideStory": [
-    "Дом-музей Чайковского — старейший в России мемориальный музыкальный музей. Композитор прожил здесь последние два года жизни.",
-    "После его смерти брат Модест сохранил обстановку, организовал музей и сделал пристройку для себя. Среди экспонатов — рояль «Беккер»; интерьеры в основном сохранились в дореволюционном виде."
+    "На Центральной площади — историко-краеведческий музей, здание администрации и памятник воинам-освободителям.",
+    "Путевой дворец XVIII века в селе Солнечная Гора служил местом отдыха знати на Петербургском тракте; теперь это музейно-выставочный центр."
    ],
    "facts": [
     {
-     "text": "Дом-музей Чайковского — старейший мемориальный музыкальный музей России.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D1%83%D0%B7%D0%B5%D0%B8_%D0%9A%D0%BB%D0%B8%D0%BD%D0%B0",
+     "text": "На Центральной площади — краеведческий музей и памятник воинам-освободителям.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/solnechnogorsk/",
      "verified": true
     },
     {
-     "text": "Чайковский прожил здесь последние два года жизни.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D1%83%D0%B7%D0%B5%D0%B8_%D0%9A%D0%BB%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Брат Модест сохранил обстановку и организовал музей.",
-     "sourceUrl": "https://experience.tripster.ru/journal/articles/muzei-klina/",
-     "verified": true
-    },
-    {
-     "text": "Среди экспонатов — рояль «Беккер».",
-     "sourceUrl": "https://experience.tripster.ru/journal/articles/muzei-klina/",
-     "verified": true
-    },
-    {
-     "text": "«За рулём» писал о «Музыкальном Клине».",
-     "sourceUrl": "https://www.zr.ru/content/articles/100729-muzykalnyj_klin/",
+     "text": "Путевой дворец построен в XVIII веке для отдыха на Петербургском тракте.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A1%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA",
      "verified": true
     }
    ],
-   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "solnechnogorsk-i-ozero-senezh-prud",
-   "name": "Пруд и казармы",
-   "coords": {
-    "lat": 56.318,
-    "lon": 36.553
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Облик города складывается из фабрики, рабочих казарм, общественных зданий и пруда.",
-    "Такие ансамбли — типичный пример подмосковного фабричного посёлка. Финиш — Станция «Клин»: Электрички Ленинградского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Облик — фабрика, казармы, общественные здания и пруд.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
-     "verified": true
-    },
-    {
-     "text": "Типичность ансамбля — оценка составителя.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
-     "verified": false
-    },
-    {
-     "text": "Высоковск описан на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Описание пруда не проверено.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -456,75 +315,43 @@
    "url": "https://t-j.ru/senezh/"
   },
   {
-   "title": "Шахматово — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/shakhmatovo-manor"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/solnechnogorsk/gorodskoy-park-im-krupskoy/"
   },
   {
-   "title": "Шахматово и Боблово — Календарь",
-   "url": "https://www.calend.ru/calendar/tema/shahmatovo-i-boblovo-mesta-svideteli-lyubvi-aleksandra-bloka-i-ego-prekrasnoj-damy/"
+   "title": "Источник: en.wikipedia.org",
+   "url": "https://en.wikipedia.org/wiki/Solnechnogorsk"
   },
   {
-   "title": "Боблово — Культура.РФ",
-   "url": "https://www.culture.ru/institutes/14108/boblovo"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/solnechnogorsk/"
   },
   {
-   "title": "Опыты Менделеева — Интерфакс",
-   "url": "https://www.interfax.ru/russia/432043"
-  },
-  {
-   "title": "Клин — advantour",
-   "url": "https://www.advantour.com/rus/russia/klin.htm"
-  },
-  {
-   "title": "Музеи Клина — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9C%D1%83%D0%B7%D0%B5%D0%B8_%D0%9A%D0%BB%D0%B8%D0%BD%D0%B0"
-  },
-  {
-   "title": "Музеи Клина — Tripster",
-   "url": "https://experience.tripster.ru/journal/articles/muzei-klina/"
-  },
-  {
-   "title": "Высоковск — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/visokovsk/"
-  },
-  {
-   "title": "Высоковск — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%92%D1%8B%D1%81%D0%BE%D0%BA%D0%BE%D0%B2%D1%81%D0%BA"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A1%D0%BE%D0%BB%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.547331,
-     56.318
+     36.968551,
+     56.183
     ],
     [
-     36.54809,
-     56.316428
+     36.969308,
+     56.181428
     ],
     [
-     36.550165,
-     56.315277
-    ],
-    [
-     36.759171,
-     56.238277
-    ],
-    [
-     36.877174,
-     56.202277
-    ],
-    [
-     36.974175,
-     56.182277
-    ],
-    [
-     36.987175,
+     36.971375,
      56.180277
+    ],
+    [
+     36.9742,
+     56.179856
     ],
     [
      36.99,
@@ -555,32 +382,24 @@
      56.202723
     ],
     [
-     36.742835,
-     56.326723
+     36.98,
+     56.203144
     ],
     [
-     36.718836,
-     56.338723
+     36.977174,
+     56.202723
     ],
     [
-     36.716,
-     56.339144
+     36.975105,
+     56.201572
     ],
     [
-     36.553,
-     56.321144
+     36.974348,
+     56.2
     ],
     [
-     36.550165,
-     56.320723
-    ],
-    [
-     36.54809,
-     56.319572
-    ],
-    [
-     36.547331,
-     56.318
+     36.968551,
+     56.183
     ]
    ]
   ]

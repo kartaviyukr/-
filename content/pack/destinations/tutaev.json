@@ -11,9 +11,8 @@
  },
  "intro": [
   "Тутаев — бывший Романов-Борисоглебск: два города на разных берегах Волги, объединённые в 1822 году и переименованные в 1918-м в честь красноармейца Ильи Тутаева.",
-  "Маршрут начинается у огромного Воскресенского собора на Борисоглебской стороне, переправляется на тихую Романовскую сторону к Крестовоздвиженскому собору и идёт по левому берегу Волги вниз по течению — к Толгскому монастырю и дальше в центр Ярославля: Стрелка, Успенский собор, Спасо-Преображенский монастырь и церковь Ильи Пророка.",
-  "Около 60 км, финиш на вокзале Ярославль-Главный. Переправу через Волгу в Тутаеве проверьте заранее.",
-  "Дорога по левому берегу асфальтовая; через Волгу в Ярославле — по Октябрьскому мосту, по тротуару."
+  "Точки маршрута: «Воскресенский собор», «Покровская церковь», «Волжская набережная — Кустодиевский бульвар», «Казанская Преображенская церковь», «Крестовоздвиженский собор», «Романов и Борисоглебск — два берега». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 6 км: старт и финиш — Тутаев, автостанция (Автобусы из Ярославля и Рыбинска). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Тутаев, автостанция",
@@ -24,21 +23,21 @@
   "transport": "Автобусы из Ярославля и Рыбинска"
  },
  "endPoint": {
-  "name": "Вокзал «Ярославль-Главный»",
+  "name": "Тутаев, автостанция",
   "coords": {
-   "lat": 57.6265,
-   "lon": 39.838
+   "lat": 57.869,
+   "lon": 39.535
   },
-  "transport": "Поезда до Москвы"
+  "transport": "Автобусы из Ярославля и Рыбинска"
  },
  "route": {
-  "distanceKm": 60.0,
-  "durationH": 9.0,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 6.2,
+  "durationH": 1.6,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт; переправа через Волгу в Тутаеве.",
   "seasonNotes": "С мая по сентябрь.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -79,6 +78,130 @@
    "coordsVerified": false
   },
   {
+   "id": "tutaev-pokrovskaya",
+   "name": "Покровская церковь",
+   "coords": {
+    "lat": 57.8842,
+    "lon": 39.5372
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Покровская церковь — одна из самых старых построек города: раньше здесь был мужской монастырь, а статус приходской церкви храм получил в 1771 году.",
+    "Город Романов-Борисоглебск переименовали в Тутаев в 1918 году. Следующая точка маршрута — «Волжская набережная — Кустодиевский бульвар»."
+   ],
+   "facts": [
+    {
+     "text": "Покровская церковь была монастырём и стала приходской в 1771 году.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/tutaev/",
+     "verified": true
+    },
+    {
+     "text": "Романов-Борисоглебск переименован в Тутаев в 1918 году.",
+     "sourceUrl": "https://fb.ru/article/140161/zolotoe-koltso-rossii-dostoprimechatelnosti-tutaeva/amp/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "tutaev-kustodievskiy",
+   "name": "Волжская набережная — Кустодиевский бульвар",
+   "coords": {
+    "lat": 57.8872,
+    "lon": 39.5335
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Волжская набережная, она же Кустодиевский бульвар, — одно из главных украшений левого берега.",
+    "С неё открываются лучшие виды на Борисоглебскую сторону и Воскресенский собор, строившийся в 1652–1678 годах. Следующая точка маршрута — «Казанская Преображенская церковь»."
+   ],
+   "facts": [
+    {
+     "text": "Кустодиевский бульвар — украшение левого берега с видом на Борисоглебскую сторону.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Tutayev/",
+     "verified": true
+    },
+    {
+     "text": "Воскресенский собор строили в 1652–1678 годах.",
+     "sourceUrl": "https://www.sputnik8.com/ru/tutayev/sights/voskresenskij-sobor",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "tutaev-kazanskaya",
+   "name": "Казанская Преображенская церковь",
+   "coords": {
+    "lat": 57.8864,
+    "lon": 39.5296
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Храм с двойным названием — Казанская Преображенская церковь — стал узнаваемым символом Тутаева и украшением Романовской стороны.",
+    "Это левый берег Волги, где стоит и Крестовоздвиженский собор. Следующая точка маршрута — «Крестовоздвиженский собор»."
+   ],
+   "facts": [
+    {
+     "text": "Казанская Преображенская церковь — символ Романовской стороны.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Tutayev/",
+     "verified": true
+    },
+    {
+     "text": "Крестовоздвиженский собор стоит на левом берегу.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Tutayev/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "tutaev-krestovozdvizhensky",
+   "name": "Крестовоздвиженский собор",
+   "coords": {
+    "lat": 57.885,
+    "lon": 39.53
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Крестовоздвиженский собор расписывал мастер Гурий Никитин — один из самых известных русских художников XVII века.",
+    "Отсюда начинается крестный ход, который потом переправляется на правый берег: город живёт на двух берегах, и переправа — часть его жизни."
+   ],
+   "facts": [
+    {
+     "text": "Крестовоздвиженский собор расписан мастером Гурием Никитиным.",
+     "sourceUrl": "https://t-j.ru/must-see-gorod-tutaev/",
+     "verified": true
+    },
+    {
+     "text": "Крестный ход делает первую остановку у Крестовоздвиженского собора на левом берегу.",
+     "sourceUrl": "https://dzen.ru/a/amnB2fMxCkdEEOCd",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
+  {
    "id": "tutaev-romanov",
    "name": "Романов и Борисоглебск — два берега",
    "coords": {
@@ -111,218 +234,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 20,
-   "coordsVerified": false
-  },
-  {
-   "id": "tutaev-krestovozdvizhensky",
-   "name": "Крестовоздвиженский собор",
-   "coords": {
-    "lat": 57.885,
-    "lon": 39.53
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Крестовоздвиженский собор расписывал мастер Гурий Никитин — один из самых известных русских художников XVII века.",
-    "Отсюда начинается крестный ход, который потом переправляется на правый берег: город живёт на двух берегах, и переправа — часть его жизни."
-   ],
-   "facts": [
-    {
-     "text": "Крестовоздвиженский собор расписан мастером Гурием Никитиным.",
-     "sourceUrl": "https://t-j.ru/must-see-gorod-tutaev/",
-     "verified": true
-    },
-    {
-     "text": "Крестный ход делает первую остановку у Крестовоздвиженского собора на левом берегу.",
-     "sourceUrl": "https://dzen.ru/a/amnB2fMxCkdEEOCd",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 30,
-   "coordsVerified": false
-  },
-  {
-   "id": "tutaev-tolga",
-   "name": "Толгский монастырь",
-   "coords": {
-    "lat": 57.6825,
-    "lon": 39.8285
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Толгский монастырь на берегу Волги основан, по одним данным, в 1314 году, по другим — просто в XIV веке. Его главная святыня — Толгская икона Богоматери, с которой связано предание об исцелении царя.",
-    "В советское время на территории были колония и воинская часть, а в 1987 году Толга стала первой возрождённой женской обителью в СССР. Монастырь известен своим кедровым садом."
-   ],
-   "facts": [
-    {
-     "text": "Монастырь основан в 1314 году.",
-     "sourceUrl": "https://www.putevka.com/yaroslavskaya-oblast/yaroslavl/sight/tolgskij-monastyr",
-     "verified": false
-    },
-    {
-     "text": "По преданию, Толгская икона исцелила царя от болезни ног.",
-     "sourceUrl": "https://www.sputnik8.com/ru/yaroslavl/sights/tolgskiy-zhenskiy-monastyr/info",
-     "verified": false
-    },
-    {
-     "text": "В 1987 году Толгский монастырь стал первой возрождённой женской обителью в СССР.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A2%D0%BE%D0%BB%D0%B3%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 40,
-   "coordsVerified": false
-  },
-  {
-   "id": "tutaev-strelka",
-   "name": "Стрелка",
-   "coords": {
-    "lat": 57.6215,
-    "lon": 39.9025
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Ярославль, по преданию, основал князь Ярослав Мудрый в 1010 году — на высоком мысу при слиянии Волги и Которосли. Это и есть Стрелка.",
-    "Сегодня здесь главная прогулочная эспланада города в два уровня. Исторический центр Ярославля с 2005 года входит в Список всемирного наследия ЮНЕСКО. Дата 1010 — традиционная, а не строго документированная."
-   ],
-   "facts": [
-    {
-     "text": "Город основан на мысу при слиянии Волги и Которосли; традиционная дата — 1010 год.",
-     "sourceUrl": "https://otello.ru/nomer/yaroslavl-chto-posmotret-i-kuda-shodit-v-2026-godu",
-     "verified": false
-    },
-    {
-     "text": "Стрелка — главная прогулочная эспланада города в два уровня.",
-     "sourceUrl": "https://otello.ru/nomer/yaroslavl-chto-posmotret-i-kuda-shodit-v-2026-godu",
-     "verified": true
-    },
-    {
-     "text": "Исторический центр Ярославля включён в Список всемирного наследия ЮНЕСКО в 2005 году.",
-     "sourceUrl": "https://otello.ru/nomer/yaroslavl-chto-posmotret-i-kuda-shodit-v-2026-godu",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 50,
-   "coordsVerified": false
-  },
-  {
-   "id": "tutaev-uspensky",
-   "name": "Успенский собор",
-   "coords": {
-    "lat": 57.6235,
-    "lon": 39.899
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Собор стоит на месте, где появился Ярославль. В 1937 году старый храм взорвали и на его месте разбили парк.",
-    "К тысячелетию города собор построили заново, и теперь он входит почти во все городские экскурсии. Следующая точка маршрута — «Спасо-Преображенский монастырь»."
-   ],
-   "facts": [
-    {
-     "text": "Успенский собор взорвали в 1937 году, на его месте разбили парк.",
-     "sourceUrl": "https://www.aviasales.ru/psgr/article/chto-smotret-yaroslavl",
-     "verified": true
-    },
-    {
-     "text": "К тысячелетию города собор восстановили.",
-     "sourceUrl": "https://www.aviasales.ru/psgr/article/chto-smotret-yaroslavl",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
    "order": 60,
-   "coordsVerified": false
-  },
-  {
-   "id": "tutaev-spaso",
-   "name": "Спасо-Преображенский монастырь",
-   "coords": {
-    "lat": 57.621,
-    "lon": 39.8885
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Монастырь основал в 1216 году князь Константин Всеволодович. В XVIII веке именно здесь нашли единственный сохранившийся список «Слова о полку Игореве»; его приобрёл А. И. Мусин-Пушкин.",
-    "Оригинал сгорел в московском пожаре 1812 года — до нас дошла копия, снятая для Екатерины II. Сегодня в монастыре музей-заповедник, ансамбль включает собор, Святые ворота и звонницу."
-   ],
-   "facts": [
-    {
-     "text": "Монастырь основан в 1216 году князем Константином Всеволодовичем.",
-     "sourceUrl": "https://experience.tripster.ru/articles/yaroslavskij-kreml-monastyr-ili-krepost/",
-     "verified": true
-    },
-    {
-     "text": "В монастыре в XVIII веке был найден единственный сохранившийся экземпляр «Слова о полку Игореве».",
-     "sourceUrl": "https://www.sputnik8.com/ru/yaroslavl/sights/spaso-preobrazhenskiy-monastir/info",
-     "verified": true
-    },
-    {
-     "text": "Оригинал сгорел в 1812 году, сохранилась копия, снятая для Екатерины II.",
-     "sourceUrl": "https://urok.1sept.ru/file/01/a0/1d/4f/01a01d4f-2f3f-767e-a241-e06a066979d8/presentation.pdf",
-     "verified": true
-    },
-    {
-     "text": "Ансамбль включает собор, Святые ворота и звонницу.",
-     "sourceUrl": "https://experience.tripster.ru/articles/yaroslavskij-kreml-monastyr-ili-krepost/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 70,
-   "coordsVerified": false
-  },
-  {
-   "id": "tutaev-ilya",
-   "name": "Церковь Ильи Пророка",
-   "coords": {
-    "lat": 57.6268,
-    "lon": 39.895
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Церковь Ильи Пророка построили купцы Скрипины между 1647 и 1650 годами. Храм сохранился почти без изменений вместе с росписями XVII века.",
-    "Фрески по масштабу сравнивают с Сикстинской капеллой; среди сюжетов — одно из самых ранних в русской монументальной живописи изображений Бога Отца вне композиции «Троица»."
-   ],
-   "facts": [
-    {
-     "text": "Церковь построена купцами Скрипиными в 1647–1650 годах.",
-     "sourceUrl": "https://www.putevka.com/yaroslavskaya-oblast/yaroslavl/sight/tserkov-ili-proroka",
-     "verified": true
-    },
-    {
-     "text": "Храм сохранился практически без изменений, включая росписи XVII века.",
-     "sourceUrl": "https://www.putevka.com/yaroslavskaya-oblast/yaroslavl/sight/tserkov-ili-proroka",
-     "verified": true
-    },
-    {
-     "text": "Фрески сравнивают с Сикстинской капеллой по масштабу.",
-     "sourceUrl": "https://experience.tripster.ru/articles/samye-krasivye-hramy-yaroslavlya/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 80,
    "coordsVerified": false
   }
  ],
@@ -364,24 +276,44 @@
    "url": "https://www.zr.ru/content/articles/101295-tutajevskije_khitrosti/"
   },
   {
-   "title": "Толгский монастырь — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A2%D0%BE%D0%BB%D0%B3%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/tutaev/"
   },
   {
-   "title": "Ярославль — Отелло",
-   "url": "https://otello.ru/nomer/yaroslavl-chto-posmotret-i-kuda-shodit-v-2026-godu"
+   "title": "Источник: fb.ru",
+   "url": "https://fb.ru/article/140161/zolotoe-koltso-rossii-dostoprimechatelnosti-tutaeva/amp/"
   },
   {
-   "title": "Спасо-Преображенский монастырь — Трипстер",
-   "url": "https://experience.tripster.ru/articles/yaroslavskij-kreml-monastyr-ili-krepost/"
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/attractions/Tutayev/"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/tutayev/sights/voskresenskij-sobor"
+  },
+  {
+   "title": "Источник: t-j.ru",
+   "url": "https://t-j.ru/must-see-gorod-tutaev/"
+  },
+  {
+   "title": "Источник: dzen.ru",
+   "url": "https://dzen.ru/a/amnB2fMxCkdEEOCd"
+  },
+  {
+   "title": "Источник: booksite.ru",
+   "url": "https://booksite.ru/fulltext/1/001/008/113/045.htm"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
+    [
+     39.523686,
+     57.8864
+    ],
     [
      39.524086,
      57.885
@@ -395,68 +327,64 @@
      57.867428
     ],
     [
-     39.832915,
-     57.624928
+     39.532044,
+     57.866277
     ],
     [
-     39.835064,
-     57.623777
+     39.535,
+     57.865856
     ],
     [
-     39.838,
-     57.623356
+     39.537956,
+     57.866277
     ],
     [
-     39.8885,
-     57.617856
+     39.542956,
+     57.867277
     ],
     [
-     39.9025,
-     57.618356
+     39.54512,
+     57.868428
     ],
     [
-     39.905436,
-     57.618777
+     39.545912,
+     57.87
     ],
     [
-     39.907585,
-     57.619928
+     39.543114,
+     57.8842
     ],
     [
-     39.908371,
-     57.6215
+     39.542322,
+     57.885772
     ],
     [
-     39.907585,
-     57.623072
+     39.538622,
+     57.888772
     ],
     [
-     39.833593,
-     57.684072
+     39.536457,
+     57.889923
     ],
     [
-     39.535122,
-     57.886572
+     39.5335,
+     57.890344
     ],
     [
-     39.532957,
-     57.887723
+     39.530543,
+     57.889923
     ],
     [
-     39.53,
-     57.888144
+     39.526643,
+     57.889123
     ],
     [
-     39.527043,
-     57.887723
+     39.524478,
+     57.887972
     ],
     [
-     39.524878,
-     57.886572
-    ],
-    [
-     39.524086,
-     57.885
+     39.523686,
+     57.8864
     ]
    ]
   ]
