@@ -13,74 +13,151 @@
   "Колоцкий Успенский монастырь стоит к северо-западу от Бородинского поля. По одному источнику, его основал в 1413 году князь Андрей Дмитриевич, сын Дмитрия Донского.",
   "Поводом стала икона: в 1412 году местный крестьянин Лука нашёл чудотворный образ Богородицы, а после основания обители стал монахом.",
   "Надвратную колокольню строили в 1739–1763 годах; в 1812 году, по одному источнику, на неё поднимался Кутузов.",
-  "Свои места маршрута: «Обретение иконы». По пути маршрут заходит и к соседям: Бородинское поле — «Спасо-Бородинский монастырь», «Батарея Раевского», «Багратионовы флеши»; Уваровка — «Посёлок Уваровых»; Можайск — «Лужецкий монастырь», «Никольская гора и собор», «Город после крепости».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Можайск» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Надвратная колокольня», «Колокольня», «Успенский собор», «Берег Колочи», «Село Колоцкое». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 1 км: старт и финиш — Колоцкий монастырь, центр (До ближайшей станции — Станция «Бородино», около 11 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Бородино»",
+  "name": "Колоцкий монастырь, центр",
   "coords": {
-   "lat": 55.487,
-   "lon": 35.835
+   "lat": 55.58,
+   "lon": 35.79
   },
-  "transport": "Электрички Белорусского направления — уточняйте"
+  "transport": "До ближайшей станции — Станция «Бородино», около 11 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Можайск»",
+  "name": "Колоцкий монастырь, центр",
   "coords": {
-   "lat": 55.505,
-   "lon": 36.033
+   "lat": 55.58,
+   "lon": 35.79
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "До ближайшей станции — Станция «Бородино», около 11 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.4,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.0,
+  "durationH": 0.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "kolotskiy-monastyr-monastyr",
-   "name": "Спасо-Бородинский монастырь",
+   "id": "kolotskiy-monastyr-kolokolnya",
+   "name": "Надвратная колокольня",
    "coords": {
-    "lat": 55.508,
-    "lon": 35.82
+    "lat": 55.5802,
+    "lon": 35.7898
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
    "guideStory": [
-    "Маргарита Тучкова в память о муже построила церковь Спаса Нерукотворного на месте его гибели; вокруг вырос Спасо-Бородинский женский монастырь.",
-    "В 1941 году на Бородинском поле снова шли бои — уже с немецкими войсками. Следующая точка маршрута — «Посёлок Уваровых»."
+    "Надвратную колокольню строили в 1739–1763 годах. По одному источнику, в 1812 году на неё поднимался фельдмаршал Кутузов.",
+    "Был ли монастырь госпиталем в 1812 году — в найденных источниках не подтверждено. Следующая точка маршрута — «Колокольня»."
    ],
    "facts": [
     {
-     "text": "Монастырь основала Маргарита Тучкова в память о муже.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
+     "text": "Колокольню строили в 1739–1763 годах.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
      "verified": true
     },
     {
-     "text": "Церковь Спаса Нерукотворного построена на месте гибели Тучкова.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
+     "text": "Кутузов поднимался на колокольню — по одному источнику.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": false
     },
     {
-     "text": "В 1941 году на поле шли бои с немецкими войсками.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Монастырь — женский.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
+     "text": "Использование монастыря как госпиталя не подтверждено.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
      "verified": false
     },
     {
      "text": "Координаты приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
      "verified": false
+    },
+    {
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "kolotskiy-monastyr-kolokolnya-2",
+   "name": "Колокольня",
+   "coords": {
+    "lat": 55.5808,
+    "lon": 35.7897
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Перед Бородинским сражением в обители несколько суток стояла штаб-квартира Кутузова; с колокольни он осматривал поле будущей битвы.",
+    "Позже здесь побывал Наполеон; французы устроили в монастыре госпиталь, а при отступлении сожгли деревянные постройки."
+   ],
+   "facts": [
+    {
+     "text": "В монастыре несколько суток была штаб-квартира Кутузова.",
+     "sourceUrl": "https://travel.riamo.ru/napravleniya/minskoe/kolockii-monastyr",
+     "verified": true
+    },
+    {
+     "text": "Французы устроили госпиталь и при отступлении сожгли деревянные постройки.",
+     "sourceUrl": "http://voynablog.ru/2011/11/27/kolockij-monastyr-v-otechestvennoj-vojne-1812-goda/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kolotskiy-monastyr-sobor",
+   "name": "Успенский собор",
+   "coords": {
+    "lat": 55.5805,
+    "lon": 35.7905
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Рядом с первой церковью возвели кельи и каменный пятиглавый храм в память Успения Богоматери.",
+    "Монастырь действующий: одежда скромная, говорим тихо. Следующая точка маршрута — «Берег Колочи». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "В монастыре построили каменный пятиглавый Успенский храм.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Монастырь действующий.",
+     "sourceUrl": "https://knls.net/?p=7678",
+     "verified": false
+    },
+    {
+     "text": "Датировку собора мы не сверяли.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": false
+    },
+    {
+     "text": "Монастырь описан на knls.net.",
+     "sourceUrl": "https://knls.net/?p=7678",
+     "verified": true
     }
    ],
    "warnings": [
@@ -88,335 +165,70 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "kolotskiy-monastyr-posyolok",
-   "name": "Посёлок Уваровых",
+   "id": "kolotskiy-monastyr-kolocha",
+   "name": "Берег Колочи",
    "coords": {
-    "lat": 55.532,
-    "lon": 35.615
+    "lat": 55.5793,
+    "lon": 35.7917
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Монастырь основан в 1413 году удельным князем Андреем, сыном Дмитрия Донского, на левом берегу реки Колочи — как форпост на подступах к Можайску.",
+    "Поводом стало обретение крестьянином Лукой чудотворной иконы Богородицы. Следующая точка маршрута — «Село Колоцкое»."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь основан в 1413 году князем Андреем на левом берегу Колочи.",
+     "sourceUrl": "https://www.uvarovka.ru/kolotskiy.html",
+     "verified": true
+    },
+    {
+     "text": "Поводом стало обретение иконы крестьянином Лукой.",
+     "sourceUrl": "https://www.pravenc.ru/text/1841794.html",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "kolotskiy-monastyr-selo",
+   "name": "Село Колоцкое",
+   "coords": {
+    "lat": 55.5785,
+    "lon": 35.788
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 5,
    "guideStory": [
-    "Уваровка — один из самых западных посёлков Московской области, недалеко от границы со Смоленщиной.",
-    "В Можайске открывалась выставка «Золотой век Уваровых» — о роде, давшем имя посёлку. Следующая точка маршрута — «Обретение иконы». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "После 1812 года монастырь восстанавливали долго — полностью, по одному из источников, только к 1839 году.",
+    "Сейчас обитель женская, а раньше она была мужской. Финиш — Колоцкий монастырь, центр: До ближайшей станции — Станция «Бородино», около 11 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
    ],
    "facts": [
     {
-     "text": "В Можайске открывалась выставка «Золотой век Уваровых».",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-mozhajske-otkrylas-vystavka-pod-nazvaniem-zolotoj-vek-uvarovyh/",
-     "verified": true
-    },
-    {
-     "text": "Уваровка — у западной границы области — по наблюдению составителя.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "text": "Монастырь полностью восстановлен к 1839 году.",
+     "sourceUrl": "https://www.uvarovka.ru/kolotskiy.html",
      "verified": false
     },
     {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
-     "verified": false
-    },
-    {
-     "text": "Уваровка — в Можайском округе.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
-     "verified": true
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "kolotskiy-monastyr-ikona",
-   "name": "Обретение иконы",
-   "coords": {
-    "lat": 55.58,
-    "lon": 35.79
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По преданию, в 1412 году местный крестьянин Лука нашёл чудотворный образ Богородицы. К 1413 году князь Андрей Дмитриевич, сын Дмитрия Донского, основал здесь обитель, а Лука стал монахом.",
-    "Эту историю мы знаем по одному туристическому источнику. Следующая точка маршрута — «Батарея Раевского»."
-   ],
-   "facts": [
-    {
-     "text": "В 1412 году крестьянин Лука нашёл икону — по одному источнику.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Монастырь основан к 1413 году князем Андреем Дмитриевичем.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Андрей Дмитриевич — сын Дмитрия Донского.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Лука стал монахом.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "kolotskiy-monastyr-raevsky",
-   "name": "Батарея Раевского",
-   "coords": {
-    "lat": 55.522,
-    "lon": 35.818
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Батарея Раевского на Курганной высоте — одна из ключевых точек сражения. Здесь стоит главный монумент воинам русской армии.",
-    "В 1839 году на Курганной высоте по указу Николая I установили первый памятник героям — с этого и начался музей. Под музей тогда отвели каменную сторожку у монумента."
-   ],
-   "facts": [
-    {
-     "text": "Музей-заповедник основан в 1839 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Первый памятник героям поставлен на Курганной высоте по указу Николая I.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Под музей отвели каменную сторожку у монумента.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Батарея Раевского — главный монумент русской армии.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "Комплекс включает братские могилы, храмы, укрепления и памятники.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "kolotskiy-monastyr-fleshi",
-   "name": "Багратионовы флеши",
-   "coords": {
-    "lat": 55.51,
-    "lon": 35.825
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Сражение произошло 26 августа (7 сентября) 1812 года у села Бородино. Багратионовы флеши — земляные укрепления, за которые шли ожесточённые бои.",
-    "На центральном укреплении флешей погиб генерал Александр Тучков. Итог сражения остаётся предметом споров: ни одна из сторон не достигла поставленных целей.",
-    "По полю ездят и на электромобилях с экскурсией. Следующая точка маршрута — «Лужецкий монастырь»."
-   ],
-   "facts": [
-    {
-     "text": "Сражение произошло 26 августа (7 сентября) 1812 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Ни одна из сторон не добилась своих целей.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Генерал Тучков погиб на центральном укреплении флешей.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "По полю проводят экскурсии на электромобилях.",
-     "sourceUrl": "https://www.culture.ru/events/5906675/ekskursiya-na-elektromobile-po-borodinskomu-polyu",
-     "verified": true
-    },
-    {
-     "text": "Координаты флешей приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "kolotskiy-monastyr-luzhetsky",
-   "name": "Лужецкий монастырь",
-   "coords": {
-    "lat": 55.51,
-    "lon": 36.005
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Лужецкий монастырь основан в 1408 году преподобным Ферапонтом. Это единственная древняя можайская обитель, сохранившаяся до наших дней.",
-    "В 1812 году монастырь сильно пострадал: французские войска устроили здесь штаб.",
-    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Никольская гора и собор»."
-   ],
-   "facts": [
-    {
-     "text": "Лужецкий монастырь основан в 1408 году Ферапонтом.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Это единственная сохранившаяся древняя обитель Можайска.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "В 1812 году здесь был французский штаб.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Монастырь описан в паломническом справочнике.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "kolotskiy-monastyr-nikolskaya",
-   "name": "Никольская гора и собор",
-   "coords": {
-    "lat": 55.5,
-    "lon": 36.025
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Можайск впервые упоминается в летописи под 1231 годом и сначала входил в Смоленское княжество. Крепость на Никольской горе, по одному источнику, строили ещё в XII веке.",
-    "Первыми каменными постройками в XIV веке стали Никольский собор, Никольские ворота и Воздвиженская церковь. Сегодняшний собор — красивое неоготическое здание. От кремля сохранились въездные ворота и 11-метровый участок стены."
-   ],
-   "facts": [
-    {
-     "text": "Можайск впервые упомянут под 1231 годом.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Город входил в Смоленское княжество.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Крепость на Никольской горе — XII век, по одному источнику.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "От кремля сохранились ворота и 11-метровый участок стены.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "При Екатерине II крепость разбирали на кирпич.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
+     "text": "Сейчас монастырь женский.",
+     "sourceUrl": "https://monasterium.ru/monastyri/monastery/uspenskiy-kolotskiy-zhenskiy-monastyr/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "kolotskiy-monastyr-upadok",
-   "name": "Город после крепости",
-   "coords": {
-    "lat": 55.505,
-    "lon": 36.03
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Упадок крепости начался после 1686 года, а при Екатерине II её начали разбирать на кирпичи.",
-    "Можайск — ворота к Бородинскому полю, у которого в спирали свой маршрут. Финиш — Станция «Можайск»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Упадок начался после 1686 года.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Бородинское поле — рядом с Можайском.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "Можайск описан на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -448,107 +260,103 @@
    "url": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
   },
   {
-   "title": "Бородинское сражение — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5"
+   "title": "Источник: travel.riamo.ru",
+   "url": "https://travel.riamo.ru/napravleniya/minskoe/kolockii-monastyr"
   },
   {
-   "title": "Музей-заповедник — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA"
+   "title": "Источник: voynablog.ru",
+   "url": "http://voynablog.ru/2011/11/27/kolockij-monastyr-v-otechestvennoj-vojne-1812-goda/"
   },
   {
-   "title": "Флаг Уваровки — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0"
+   "title": "Источник: knls.net",
+   "url": "https://knls.net/?p=7678"
   },
   {
-   "title": "Уваровке 157 лет — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/"
+   "title": "Источник: uvarovka.ru",
+   "url": "https://www.uvarovka.ru/kolotskiy.html"
   },
   {
-   "title": "Можайск — Путёвка",
-   "url": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret"
+   "title": "Источник: pravenc.ru",
+   "url": "https://www.pravenc.ru/text/1841794.html"
   },
   {
-   "title": "История — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia"
+   "title": "Источник: monasterium.ru",
+   "url": "https://monasterium.ru/monastyri/monastery/uspenskiy-kolotskiy-zhenskiy-monastyr/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     35.609445,
-     55.532
+     35.782438,
+     55.5785
     ],
     [
-     35.610189,
-     55.530428
+     35.783183,
+     55.576928
     ],
     [
-     35.612222,
-     55.529277
+     35.785219,
+     55.575777
     ],
     [
-     35.832225,
-     55.484277
+     35.788,
+     55.575356
     ],
     [
-     35.835,
-     55.483856
+     35.790781,
+     55.575777
     ],
     [
-     36.025,
-     55.496856
+     35.794481,
+     55.576577
     ],
     [
-     36.027775,
-     55.497277
+     35.796517,
+     55.577728
     ],
     [
-     36.029807,
-     55.498428
+     35.797262,
+     55.5793
     ],
     [
-     36.037808,
-     55.503428
+     35.796517,
+     55.580872
     ],
     [
-     36.038552,
-     55.505
+     35.795317,
+     55.582072
     ],
     [
-     36.037808,
-     55.506572
+     35.793281,
+     55.583223
     ],
     [
-     36.035776,
-     55.507723
+     35.792481,
+     55.583523
     ],
     [
-     35.792781,
-     55.582723
+     35.7897,
+     55.583944
     ],
     [
-     35.79,
-     55.583144
+     35.786919,
+     55.583523
     ],
     [
-     35.787219,
-     55.582723
+     35.784883,
+     55.582372
     ],
     [
-     35.612222,
-     55.534723
+     35.783183,
+     55.580072
     ],
     [
-     35.610189,
-     55.533572
-    ],
-    [
-     35.609445,
-     55.532
+     35.782438,
+     55.5785
     ]
    ]
   ]
