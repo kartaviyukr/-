@@ -13,8 +13,8 @@
   "Тучково — посёлок Рузского округа на Белорусской дороге. Туристический источник связывает его название с родом Тучковых, служивших на военной и дипломатической службе.",
   "Самые известные Тучковы — пятеро сыновей генерала Алексея Васильевича Тучкова, ставшие генералами и отличившиеся в 1812 году; Николай Тучков умер от ран, полученных при Бородине. В посёлке есть Аллея братьев Тучковых.",
   "В годы войны Тучково было оккупировано и освобождено; здесь открыли мемориал «Аллея Славы».",
-  "Свои места маршрута: «Аллея братьев Тучковых», «Аллея Славы», «Посёлок у станции». По пути маршрут заходит и к соседям: Кубинка — «Аэродром Кубинка», «Небо «Витязей» и «Стрижей»», «Вокзал Кубинка-1»; Парк «Патриот» — «Главный храм Вооружённых сил»; Дорохово — «Память освобождения».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Дорохово» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Аллея братьев Тучковых», «Мемориал Славы», «Аллея Славы», «Посёлок у станции», «Усадьба Любвино». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 6 км: старт и финиш — Станция «Тучково» (Электрички Белорусского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Тучково»",
@@ -25,21 +25,21 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Дорохово»",
+  "name": "Станция «Тучково»",
   "coords": {
-   "lat": 55.5502,
-   "lon": 36.3605
+   "lat": 55.6,
+   "lon": 36.47
   },
   "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.0,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 6.2,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -86,197 +86,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
-   "id": "tuchkovo-aerodrom",
-   "name": "Аэродром Кубинка",
+   "id": "tuchkovo-memorial",
+   "name": "Мемориал Славы",
    "coords": {
-    "lat": 55.61,
-    "lon": 36.65
+    "lat": 55.6025,
+    "lon": 36.479
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Аэродром открылся в 1935 году примерно в 5 км к северо-западу от города. С 1938 года полки испытывали здесь новые истребители — Як-1 и ЛаГГ-3.",
-    "После 1945 года здесь стояли фронтовые истребительные дивизии; 324-я в ноябре 1950 года отправилась на Корейскую войну. В 1993 году сюда перевели управление 16-й воздушной армии из Германии.",
-    "Военный объект: смотрим издалека, ничего не снимаем у КПП. Следующая точка маршрута — «Небо «Витязей» и «Стрижей»»."
-   ],
-   "facts": [
-    {
-     "text": "Аэродром открылся в 1935 году.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "С 1938 года здесь испытывали Як-1 и ЛаГГ-3.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "324-я дивизия в ноябре 1950 года отправилась в Корею.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "В 1993 году сюда перевели управление 16-й воздушной армии.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": true
-    },
-    {
-     "text": "Аэродром описан в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kubinka_(air_base)",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Военный объект: не фотографировать."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "tuchkovo-vityazi",
-   "name": "Небо «Витязей» и «Стрижей»",
-   "coords": {
-    "lat": 55.6,
-    "lon": 36.67
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В Кубинке базируются пилотажные группы «Стрижи» и «Русские витязи». Если повезёт, в небе можно увидеть их тренировку.",
-    "Altapress писал о планах сделать из аэродрома бизнес-терминал — статус этих планов мы не проверяли. Следующая точка маршрута — «Главный храм Вооружённых сил»."
-   ],
-   "facts": [
-    {
-     "text": "В Кубинке базируются «Стрижи» и «Русские витязи».",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": true
-    },
-    {
-     "text": "Планы бизнес-терминала — статус не проверен.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": false
-    },
-    {
-     "text": "Расписание тренировок не известно.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://altapress.ru/story/glavniy-aerodrom-bazirovaniya-znamenitih-pilotazhnih-grupp-russkie-vityazi-i-strizhi-teper-budet-biznes-terminalom-77509",
-     "verified": false
-    },
-    {
-     "text": "Аэродром — военный.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kubinka_(air_base)",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "tuchkovo-khram",
-   "name": "Главный храм Вооружённых сил",
-   "coords": {
-    "lat": 55.565,
-    "lon": 36.82
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
-   "guideStory": [
-    "Главный храм Вооружённых сил — одна из ключевых точек парка. Рядом — музейный комплекс «Дорога памяти».",
-    "Дату освящения храма мы в найденных источниках не сверили и поэтому не приводим.",
-    "Билеты в музейный комплекс и режим посещения храма уточняйте на официальном сайте парка."
-   ],
-   "facts": [
-    {
-     "text": "Главный храм ВС РФ и комплекс «Дорога памяти» — главные объекты парка.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": true
-    },
-    {
-     "text": "Парк расположен на 43-м километре Минского шоссе.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": true
-    },
-    {
-     "text": "Парк открыт в 2015 году.",
-     "sourceUrl": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/",
-     "verified": true
-    },
-    {
-     "text": "Дата освящения храма нами не сверена.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": false
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "tuchkovo-vokzal",
-   "name": "Вокзал Кубинка-1",
-   "coords": {
-    "lat": 55.577,
-    "lon": 36.695
-   },
-   "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "В южной части города стоит здание вокзала у станции Кубинка-1. Историю станции мы в найденных источниках не нашли.",
-    "Кубинка — примерно в 60 км к западу от центра Москвы. Следующая точка маршрута — «Аллея Славы». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+    "Мемориал Славы в Тучкове недавно благоустроили: обновили площадь, проложили дорожки, поставили сцену и детский игровой комплекс.",
+    "Это место памяти и одновременно общественное пространство посёлка. Следующая точка маршрута — «Аллея Славы»."
    ],
    "facts": [
     {
-     "text": "У станции Кубинка-1 есть здание вокзала.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "Мемориал благоустроен: новая площадь, дорожки, сцена, детский комплекс.",
+     "sourceUrl": "https://lenta.ru/news/2023/10/13/memorial/",
      "verified": true
     },
     {
-     "text": "Кубинка — примерно в 60 км к западу от центра Москвы.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
-     "verified": true
-    },
-    {
-     "text": "История станции не найдена.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
-     "verified": false
-    },
-    {
-     "text": "Кубинка описана на travelto.ru.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "Благоустройство мемориала завершено в 2023 году.",
+     "sourceUrl": "https://lenta.ru/news/2023/10/13/memorial/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 50
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "tuchkovo-slava",
@@ -321,8 +163,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "tuchkovo-posyolok",
@@ -335,7 +177,7 @@
    "visitMinutes": 10,
    "guideStory": [
     "Тучково — посёлок у одноимённой станции Белорусской дороги. Историю станции мы в найденных источниках не нашли.",
-    "Отсюда начинаются «рузские просторы» — дальше на север Руза и Рузское водохранилище. Следующая точка маршрута — «Память освобождения»."
+    "Отсюда начинаются «рузские просторы» — дальше на север Руза и Рузское водохранилище. Следующая точка маршрута — «Усадьба Любвино»."
    ],
    "facts": [
     {
@@ -367,54 +209,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "tuchkovo-memorial",
-   "name": "Память освобождения",
+   "id": "tuchkovo-lyubvino",
+   "name": "Усадьба Любвино",
    "coords": {
-    "lat": 55.552,
-    "lon": 36.365
+    "lat": 55.588,
+    "lon": 36.456
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "13 января жители Рузского округа чтят память защитников в День освобождения Дорохова.",
-    "28 апреля 2016 года Московская областная Дума присвоила посёлку звание «Населённый пункт воинской доблести». Финиш — Станция «Дорохово»: Электрички Белорусского направления."
+    "На окраине Тучкова стоит усадьба Любвино, названная в честь хозяйки — Любови Герасимовны Хлудовой.",
+    "Сам посёлок носит имя братьев Тучковых, героев войны 1812 года. Финиш — Станция «Тучково»: Электрички Белорусского направления. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
    ],
    "facts": [
     {
-     "text": "День освобождения Дорохова отмечают 13 января.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "text": "Усадьба Любвино названа в честь Л. Г. Хлудовой.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
      "verified": true
     },
     {
-     "text": "В 2016 году — звание «Населённый пункт воинской доблести».",
-     "sourceUrl": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./",
-     "verified": true
-    },
-    {
-     "text": "Год освобождения мы не сверили.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": false
-    },
-    {
-     "text": "Координаты мемориала приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
-     "verified": false
-    },
-    {
-     "text": "Жители чтят память защитников.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/",
+     "text": "Посёлок назван в честь братьев Тучковых.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -450,107 +277,95 @@
    "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
   },
   {
-   "title": "Авиабаза Кубинка — migflug",
-   "url": "https://migflug.com/ru/авиабазы/кубинка/"
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/72410-ruzskie-prostory-ruza-tuchkovo-usadba-lyubvino-komlevo"
   },
   {
-   "title": "Kubinka air base — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
+   "title": "Источник: lenta.ru",
+   "url": "https://lenta.ru/news/2023/10/13/memorial/"
   },
   {
-   "title": "Парк «Патриот» — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
+   "title": "Источник: ruzpu.organizations.mchs.gov.ru",
+   "url": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556"
   },
   {
-   "title": "Парк «Патриот» — Яндекс Путешествия",
-   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
-  },
-  {
-   "title": "Дорохово — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/cities/dorokhovo_mosk._obl./"
-  },
-  {
-   "title": "День освобождения — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/zhiteli-ruzskogo-okruga-pochtili-pamjat-zaschitnikov-na-dne-osvobozhdenija-dorohovo/"
+   "title": "Источник: dic.academic.ru",
+   "url": "https://dic.academic.ru/dic.nsf/ruwiki/47424"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.354942,
-     55.5502
+     36.450437,
+     55.588
     ],
     [
-     36.355687,
-     55.548628
+     36.451182,
+     55.586428
     ],
     [
-     36.357721,
-     55.547477
+     36.453218,
+     55.585277
     ],
     [
-     36.3605,
-     55.547056
+     36.456,
+     55.584856
     ],
     [
-     36.82,
-     55.561856
+     36.458782,
+     55.585277
     ],
     [
-     36.82278,
-     55.562277
+     36.482783,
+     55.597277
     ],
     [
-     36.824815,
-     55.563428
+     36.48482,
+     55.598428
     ],
     [
-     36.82556,
-     55.565
+     36.485565,
+     55.6
     ],
     [
-     36.824815,
-     55.566572
+     36.484565,
+     55.6025
     ],
     [
-     36.82278,
-     55.567723
+     36.48382,
+     55.604072
     ],
     [
-     36.652783,
-     55.612723
+     36.481783,
+     55.605223
     ],
     [
-     36.65,
-     55.613144
+     36.479,
+     55.605644
     ],
     [
-     36.475,
-     55.604144
-    ],
-    [
-     36.472217,
-     55.603723
+     36.476217,
+     55.605223
     ],
     [
      36.467217,
      55.602723
     ],
     [
-     36.357721,
-     55.552923
+     36.46518,
+     55.601572
     ],
     [
-     36.355687,
-     55.551772
+     36.451182,
+     55.589572
     ],
     [
-     36.354942,
-     55.5502
+     36.450437,
+     55.588
     ]
    ]
   ]

@@ -13,247 +13,36 @@
   "Дединово — село на Оке, где в 1667 году по указу царя Алексея Михайловича основали верфь. Здесь в 1667–1669 годах построили «Орёл» — первый военный парусный корабль России.",
   "Жители Дединова издавна умели строить деревянные суда. «Орёл» предназначался для охраны русских торговых судов на Каспии; имя он получил по царскому указу 4 апреля 1669 года, в честь государственного герба.",
   "Судьба корабля в источниках описана по-разному: его захватили восставшие Степана Разина в Астрахани; по одной версии, сожгли в 1670 году, по другой — он сгнил и был разобран в 1680-м.",
-  "Свои места маршрута: «Место верфи», «Корабль «Орёл»», «Село на Оке». По пути маршрут заходит и к соседям: Луховицы — «Памятник огурцу», «Луховицкий авиазавод», «Праздник огурца»; Белоомут — «Гидроузел «Белоомут» на Оке», «Имение Огарёва», «Рыбацкий берег Оки».",
-  "Маршрут кольцевой, около 70 км и 9 точек. Финиш — Станция «Луховицы» (Электрички Казанского направления (на Рязань)), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Место верфи», «Церковь Троицы Живоначальной», «Село на Оке», «Церковь Воскресения Христова», «Корабль «Орёл»». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Дединово, центр (До ближайшей станции — Станция «Луховицы», около 22 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Луховицы»",
+  "name": "Дединово, центр",
   "coords": {
-   "lat": 54.965,
-   "lon": 39.025
+   "lat": 54.99,
+   "lon": 39.37
   },
-  "transport": "Электрички Казанского направления (на Рязань)"
+  "transport": "До ближайшей станции — Станция «Луховицы», около 22 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Луховицы»",
+  "name": "Дединово, центр",
   "coords": {
-   "lat": 54.965,
-   "lon": 39.025
+   "lat": 54.99,
+   "lon": 39.37
   },
-  "transport": "Электрички Казанского направления (на Рязань)"
+  "transport": "До ближайшей станции — Станция «Луховицы», около 22 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.8,
-  "difficulty": "сложный",
+  "distanceKm": 1.7,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
   "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "dedinovo-ogurets",
-   "name": "Памятник огурцу",
-   "coords": {
-    "lat": 54.967,
-    "lon": 39.03
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В центре Луховиц стоит памятник огурцу. «Луховицкие огурцы» изначально — собирательное понятие: так называли разные сорта, хорошо плодоносящие в окрестностях города.",
-    "Расцвет огуречного производства пришёлся на 1970-е годы; фермерских хозяйств здесь много и сегодня."
-   ],
-   "facts": [
-    {
-     "text": "В центре города стоит памятник огурцу.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": true
-    },
-    {
-     "text": "«Луховицкие огурцы» — собирательное название сортов.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": true
-    },
-    {
-     "text": "Расцвет пришёлся на 1970-е годы.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": true
-    },
-    {
-     "text": "Луховицы называют огуречной столицей России.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Координаты памятника приблизительные.",
-     "sourceUrl": "https://www.mos.ru/news/item/170885073/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "dedinovo-aviazavod",
-   "name": "Луховицкий авиазавод",
-   "coords": {
-    "lat": 54.982,
-    "lon": 39.045
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Луховицкий авиастроительный завод имени П. А. Воронина основан в 1953 году. Сегодня это филиал Объединённой авиастроительной корпорации; территория закрыта, смотрим снаружи.",
-    "В разные годы здесь собирали Ил-14, Ил-18, Як-25, Су-9, МиГ-21, МиГ-23 и МиГ-29. Город на огуречных грядках оказался ещё и городом самолётов."
-   ],
-   "facts": [
-    {
-     "text": "Луховицкий авиастроительный завод имени П. А. Воронина основан в 1953 году.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "На заводе выпускали Ил-14, Ил-18, Як-25, Су-9, МиГ-21, МиГ-23 и МиГ-29.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Сейчас завод — филиал ПАО «ОАК».",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D0%BA%D0%B8%D0%B9_%D0%B0%D0%B2%D0%B8%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B8%D0%BC._%D0%9F._%D0%90._%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 20,
-   "coordsVerified": false
-  },
-  {
-   "id": "dedinovo-gidrouzel",
-   "name": "Гидроузел «Белоомут» на Оке",
-   "coords": {
-    "lat": 54.945,
-    "lon": 39.28
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Гидроузел «Белоомут» поддерживает судоходные глубины на Оке и работает с 1915 года. Одна газета писала, что шлюзы построили немцы ещё в 1913-м, — даты в источниках расходятся.",
-    "В конце 2010-х гидроузел перестроили: старый шлюз засыпали, а столетнюю плотину после постройки новой железобетонной разобрали. Смотрим с берега — на сооружения не заходим."
-   ],
-   "facts": [
-    {
-     "text": "Гидроузел «Белоомут» функционирует с 1915 года.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/gidrouzel-beloomut-v-luhovitsah-moderniziruyut-k-2019-godu-xl/",
-     "verified": true
-    },
-    {
-     "text": "По сообщению газеты, шлюзы построили немцы в 1913 году.",
-     "sourceUrl": "https://www.mk.ru/old/article/2002/09/09/162373-ne-niagara.html",
-     "verified": false
-    },
-    {
-     "text": "Старый шлюз засыпали, а столетнюю плотину демонтировали после постройки новой.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/gidrouzel-beloomut-v-luhovitsah-moderniziruyut-k-2019-godu-xl/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 30,
-   "coordsVerified": false
-  },
-  {
-   "id": "dedinovo-ogarev",
-   "name": "Имение Огарёва",
-   "coords": {
-    "lat": 54.94,
-    "lon": 39.33
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "До середины XIX века в Белоомуте было имение Николая Огарёва — поэта, публициста и друга Герцена.",
-    "Огарёв дал вольную своим крестьянам за 15 лет до Крестьянской реформы 1861 года. Следующая точка маршрута — «Рыбацкий берег Оки». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "В Белоомуте было имение Николая Огарёва.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
-     "verified": true
-    },
-    {
-     "text": "Огарёв дал вольную крестьянам за 15 лет до реформы 1861 года.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
-     "verified": true
-    },
-    {
-     "text": "Огарёв — друг Герцена — общеизвестный факт, здесь не сверен.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
-     "verified": false
-    },
-    {
-     "text": "Местоположение имения не установлено.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "dedinovo-oka",
-   "name": "Рыбацкий берег Оки",
-   "coords": {
-    "lat": 54.942,
-    "lon": 39.335
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Белоомут связан с рыбацкими традициями. Здесь проходит межрегиональный фестиваль «Царская уха».",
-    "Даты фестиваля меняются — уточняйте заранее. Следующая точка маршрута — «Место верфи». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
-   ],
-   "facts": [
-    {
-     "text": "В Белоомуте проходит фестиваль «Царская уха».",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/",
-     "verified": true
-    },
-    {
-     "text": "Фестиваль межрегиональный.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/",
-     "verified": true
-    },
-    {
-     "text": "Даты фестиваля меняются.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/festival-uhi-sostoitsya-26-iyulya-v-luhovitskom-rajone-podmoskovya-xl/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/",
-     "verified": false
-    },
-    {
-     "text": "Рыбацкие традиции — по источнику.",
-     "sourceUrl": "https://www.currenttime.tv/a/unknown-russia/30639188.html",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
   {
    "id": "dedinovo-verf",
    "name": "Место верфи",
@@ -298,8 +87,117 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "dedinovo-troitskaya",
+   "name": "Церковь Троицы Живоначальной",
+   "coords": {
+    "lat": 54.9888,
+    "lon": 39.3722
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В Дединове стоит церковь Троицы Живоначальной — один из храмов старого приокского села.",
+    "По старым документам село относилось к Зарайскому уезду Рязанской губернии. Следующая точка маршрута — «Село на Оке». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Дединове есть церковь Троицы Живоначальной.",
+     "sourceUrl": "https://sobory.ru/photo/90142",
+     "verified": true
+    },
+    {
+     "text": "Село относилось к Зарайскому уезду Рязанской губернии.",
+     "sourceUrl": "https://nashipredki.com/church/14852",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "dedinovo-selo",
+   "name": "Село на Оке",
+   "coords": {
+    "lat": 54.9895,
+    "lon": 39.3695
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Судьба «Орла» описана по-разному: по одной версии, его сожгли в 1670 году, по другой — он простоял в протоке Кутум, пришёл в негодность и был разобран в 1680-м.",
+    "Музей военно-морского флота отмечает дату указа о строительстве «Орла» как памятную.",
+    "Обратный путь к Луховицам долгий — рассчитайте силы. Следующая точка маршрута — «Церковь Воскресения Христова»."
+   ],
+   "facts": [
+    {
+     "text": "Версии о судьбе «Орла» расходятся.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    },
+    {
+     "text": "Военно-морской музей отмечает дату указа о строительстве.",
+     "sourceUrl": "https://eng.navalmuseum.ru/news/memorable?id=714",
+     "verified": true
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://www.calend.ru/events/4581/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "dedinovo-voskresenie",
+   "name": "Церковь Воскресения Христова",
+   "coords": {
+    "lat": 54.9922,
+    "lon": 39.3648
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Ещё один храм Дединова — церковь Воскресения Христова.",
+    "Её метрические книги и исповедные ведомости 1737–1838 годов хранятся в московском архиве. Следующая точка маршрута — «Корабль «Орёл»». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Дединове есть церковь Воскресения Христова.",
+     "sourceUrl": "https://nashipredki.com/church/14852",
+     "verified": true
+    },
+    {
+     "text": "Метрические книги 1737–1838 годов хранятся в ЦГА Москвы.",
+     "sourceUrl": "https://nashipredki.com/church/14852",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "dedinovo-oryol",
@@ -344,101 +242,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "dedinovo-selo",
-   "name": "Село на Оке",
-   "coords": {
-    "lat": 54.9895,
-    "lon": 39.3695
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Судьба «Орла» описана по-разному: по одной версии, его сожгли в 1670 году, по другой — он простоял в протоке Кутум, пришёл в негодность и был разобран в 1680-м.",
-    "Музей военно-морского флота отмечает дату указа о строительстве «Орла» как памятную.",
-    "Обратный путь к Луховицам долгий — рассчитайте силы. Следующая точка маршрута — «Праздник огурца»."
-   ],
-   "facts": [
-    {
-     "text": "Версии о судьбе «Орла» расходятся.",
-     "sourceUrl": "https://www.calend.ru/events/4581/",
-     "verified": false
-    },
-    {
-     "text": "Военно-морской музей отмечает дату указа о строительстве.",
-     "sourceUrl": "https://eng.navalmuseum.ru/news/memorable?id=714",
-     "verified": true
-    },
-    {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://www.calend.ru/events/4581/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.calend.ru/events/4581/",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.calend.ru/events/4581/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "dedinovo-prazdnik",
-   "name": "Праздник огурца",
-   "coords": {
-    "lat": 54.966,
-    "lon": 39.028
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Летом в Луховицах проходит семейный фестиваль «Луховицкий огурец»; его организуют администрация округа и Дом культуры «Старт».",
-    "Промысел в пойме Оки, по «Рамблеру», развивается с 1930-х годов. Финиш — Станция «Луховицы»: Электрички Казанского направления (на Рязань)."
-   ],
-   "facts": [
-    {
-     "text": "В Луховицах проходит фестиваль «Луховицкий огурец».",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": true
-    },
-    {
-     "text": "Организаторы — администрация и ДК «Старт».",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": true
-    },
-    {
-     "text": "Промысел развивается с 1930-х — по Рамблеру.",
-     "sourceUrl": "https://weekend.rambler.ru/items/37259587-zhiteli-i-gosti-luhovits-otmetili-prazdnik-ogurtsa/",
-     "verified": true
-    },
-    {
-     "text": "Даты праздника меняются.",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/kultura/semejnyj-festival-luhovitskij-ogurets-sostoitsja-5-ijulja/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -474,67 +279,67 @@
    "url": "https://en.wikipedia.org/wiki/Russian_frigate_Oryol_(1668)"
   },
   {
-   "title": "Луховицкие огурцы — mos.ru",
-   "url": "https://www.mos.ru/news/item/170885073/"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/marku-k-350-letiyu-rossijskogo-gosudarstvennogo-sudostroeniya-pogasili-v-luhovitsah-xl/"
   },
   {
-   "title": "Луховицы — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9B%D1%83%D1%85%D0%BE%D0%B2%D0%B8%D1%86%D1%8B"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/90142"
   },
   {
-   "title": "Неизвестная Россия — Настоящее время",
-   "url": "https://www.currenttime.tv/a/unknown-russia/30639188.html"
+   "title": "Источник: nashipredki.com",
+   "url": "https://nashipredki.com/church/14852"
   },
   {
-   "title": "«Царская уха» — РИАМО",
-   "url": "https://riamo.ru/news/obschestvo/v-luhovitsah-sostoitsja-12-j-mezhregionalnyj-festival-tsarskaja-uha/"
+   "title": "Источник: eng.navalmuseum.ru",
+   "url": "https://eng.navalmuseum.ru/news/memorable?id=714"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     39.019523,
-     54.965
+     39.35932,
+     54.9922
     ],
     [
-     39.020257,
-     54.963428
+     39.360054,
+     54.990628
     ],
     [
-     39.022262,
-     54.962277
+     39.364754,
+     54.987928
     ],
     [
-     39.025,
-     54.961856
+     39.36676,
+     54.986777
     ],
     [
-     39.33,
-     54.936856
+     39.36946,
+     54.986077
     ],
     [
-     39.332737,
-     54.937277
+     39.3722,
+     54.985656
     ],
     [
-     39.337737,
-     54.939277
+     39.37494,
+     54.986077
     ],
     [
-     39.33974,
-     54.940428
+     39.376946,
+     54.987228
     ],
     [
-     39.375246,
-     54.988928
+     39.37768,
+     54.9888
     ],
     [
-     39.37598,
-     54.9905
+     39.376946,
+     54.990372
     ],
     [
      39.375246,
@@ -545,28 +350,24 @@
      54.993223
     ],
     [
-     39.3705,
-     54.993644
+     39.36754,
+     54.994923
     ],
     [
-     39.045,
-     54.985144
+     39.3648,
+     54.995344
     ],
     [
-     39.04226,
-     54.984723
+     39.36206,
+     54.994923
     ],
     [
-     39.040255,
-     54.983572
+     39.360054,
+     54.993772
     ],
     [
-     39.020257,
-     54.966572
-    ],
-    [
-     39.019523,
-     54.965
+     39.35932,
+     54.9922
     ]
    ]
   ]
