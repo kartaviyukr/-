@@ -13,8 +13,8 @@
   "Радонеж — когда-то город на Переяславском тракте, крупном торговом пути. В древних рукописях сохранились записи о семи храмах и двух монастырях; население достигало 4–5 тысяч человек.",
   "С Радонежем связано имя Сергия Радонежского: его семья переселилась сюда из Ростова. По мнению историков, родом из этих мест мог быть и Андрей Рублёв.",
   "Долгое время село называлось Городок; в октябре 1989 года ему вернули имя Радонеж. 29 мая 1988 года здесь открыли памятник Сергию — первый памятник русскому святому после 1917 года.",
-  "Свои места маршрута: «Памятник Сергию Радонежскому». По пути маршрут заходит и к соседям: Абрамцево — «Парк над Ворей»; Хотьково — «Берег Вори», «Монастырская жизнь»; Сергиев Посад — «Вид на лавру»; Богородское — «Бывшее поселение»; Пересвет — «Испытания ракетных двигателей», «Пересветовское подворье».",
-  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Сергиев Посад» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Берег Пажи», «Преображенская церковь», «Святой источник преподобного Сергия», «Памятник Сергию Радонежскому», «Древний город». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 9 км: старт и финиш — Станция «Хотьково» (Электрички Ярославского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Хотьково»",
@@ -25,24 +25,135 @@
   "transport": "Электрички Ярославского направления"
  },
  "endPoint": {
-  "name": "Станция «Сергиев Посад»",
+  "name": "Станция «Хотьково»",
   "coords": {
-   "lat": 56.3082,
-   "lon": 38.1385
+   "lat": 56.253,
+   "lon": 37.987
   },
   "transport": "Электрички Ярославского направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.5,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 8.9,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "radonezh-pazha",
+   "name": "Берег Пажи",
+   "coords": {
+    "lat": 56.2415,
+    "lon": 38.029
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Радонеж возник примерно в XI веке на левом берегу речки Пажи; по преданию, крепость поставил новгородец Радонег.",
+    "В XIV веке Радонеж входил в Московское княжество и упоминается в завещании Ивана Калиты. Следующая точка маршрута — «Преображенская церковь»."
+   ],
+   "facts": [
+    {
+     "text": "Радонеж основан примерно в XI веке на левом берегу Пажи.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
+     "verified": true
+    },
+    {
+     "text": "Крепость, по преданию, поставил новгородец Радонег.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "radonezh-khram",
+   "name": "Преображенская церковь",
+   "coords": {
+    "lat": 56.2405,
+    "lon": 38.0305
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Радонеже стоит церковь Преображения Господня; в фотоархиве sobory.ru её фото собраны под адресом «Радонеж (Городок)».",
+    "Подробной истории постройки храма мы в найденных источниках не нашли.",
+    "Храм действующий; от него едем к валам древнего города. Следующая точка маршрута — «Святой источник преподобного Сергия»."
+   ],
+   "facts": [
+    {
+     "text": "В Радонеже есть церковь Преображения Господня.",
+     "sourceUrl": "https://sobory.ru/photo/192923",
+     "verified": true
+    },
+    {
+     "text": "История постройки храма не найдена.",
+     "sourceUrl": "https://sobory.ru/photo/192923",
+     "verified": false
+    },
+    {
+     "text": "КП включает храм в «намоленные места» Подмосковья.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
+     "verified": true
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/192923",
+     "verified": false
+    },
+    {
+     "text": "Храм действующий.",
+     "sourceUrl": "https://sobory.ru/photo/192923",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "radonezh-istochnik",
+   "name": "Святой источник преподобного Сергия",
+   "coords": {
+    "lat": 56.2396,
+    "lon": 38.0335
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Рядом с Преображенским храмом обустроен святой источник Сергия Радонежского.",
+    "По житию, семья будущего святого переселилась в Радонеж, когда ему было 15 лет. Следующая точка маршрута — «Памятник Сергию Радонежскому». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "У Преображенского храма есть святой источник прп. Сергия.",
+     "sourceUrl": "https://sobory.ru/photo/458252",
+     "verified": true
+    },
+    {
+     "text": "Семья переселилась в Радонеж, когда подростку было 15 лет.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
   {
    "id": "radonezh-pamyatnik",
    "name": "Памятник Сергию Радонежскому",
@@ -86,336 +197,54 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "radonezh-vorya",
-   "name": "Парк над Ворей",
+   "id": "radonezh-gorodishche",
+   "name": "Древний город",
    "coords": {
-    "lat": 56.233,
-    "lon": 37.965
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Музей-заповедник стоит на берегу реки Вори, примерно в 60 километрах от Москвы, рядом с Сергиевым Посадом.",
-    "В 1995 году указом президента он получил статус объекта наследия федерального значения; в собрании более 25 тысяч экспонатов."
-   ],
-   "facts": [
-    {
-     "text": "Абрамцево стоит на берегу Вори, примерно в 60 км от Москвы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "В 1995 году музей-заповедник получил статус федерального значения.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "В собрании более 25 тысяч экспонатов.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "«Известия» публиковали фотогалерею Абрамцева.",
-     "sourceUrl": "https://iz.ru/948952/gallery/abramtcevo",
-     "verified": true
-    },
-    {
-     "text": "Тропы парка мы не проверяли.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/abramtsevo/info",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "radonezh-vorya-2",
-   "name": "Берег Вори",
-   "coords": {
-    "lat": 56.248,
-    "lon": 37.99
+    "lat": 56.2395,
+    "lon": 38.0295
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Хотьково стоит на реке Воре, той же, что течёт мимо Абрамцева, — до усадьбы отсюда недалеко.",
-    "Берег — хорошее место для паузы перед дорогой к Радонежу. Следующая точка маршрута — «Монастырская жизнь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Радонеж стоял на Переяславском тракте. В древних рукописях упомянуты семь храмов и два монастыря, а население доходило до 4–5 тысяч человек — по меркам XIV века это немало.",
+    "В октябре 1989 года указом Президиума Верховного Совета РСФСР село Городок переименовали в Радонеж."
    ],
    "facts": [
     {
-     "text": "Хотьково стоит на Воре.",
-     "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": false
-    },
-    {
-     "text": "Абрамцево находится рядом.",
-     "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": false
-    },
-    {
-     "text": "Описание берега — оценка составителя.",
-     "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": false
-    },
-    {
-     "text": "Монастырь — главная достопримечательность Хотькова.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "radonezh-pansion",
-   "name": "Монастырская жизнь",
-   "coords": {
-    "lat": 56.2505,
-    "lon": 37.9955
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "При монастыре действуют детский пансион и гостиница для паломников.",
-    "Хотьково — начало пути «по Радонежской земле»: дальше — Радонеж и Сергиев Посад, у которых в спирали свои маршруты. Следующая точка маршрута — «Вид на лавру». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
-   ],
-   "facts": [
-    {
-     "text": "При монастыре действуют детский пансион и гостиница для паломников.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "text": "Радонеж стоял на Переяславском тракте.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
      "verified": true
     },
     {
-     "text": "Экскурсии по местам жизни Сергия включают Хотьково.",
-     "sourceUrl": "https://www.sputnik8.com/ru/sergiev-posad/activities/28236-ekskursiya-po-mestam-zhizni-i-prebyvaniem-prepodobnogo-sergiya-radonezhskogo",
+     "text": "В рукописях упомянуты 7 храмов и 2 монастыря.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
      "verified": true
     },
     {
-     "text": "Монастырь описан на Культура.РФ.",
-     "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "text": "Население достигало 4–5 тысяч человек.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
      "verified": false
     },
     {
-     "text": "Состав экскурсий может меняться.",
-     "sourceUrl": "https://www.sputnik8.com/ru/sergiev-posad/activities/28236-ekskursiya-po-mestam-zhizni-i-prebyvaniem-prepodobnogo-sergiya-radonezhskogo",
+     "text": "В октябре 1989 года село Городок переименовано в Радонеж.",
+     "sourceUrl": "https://en.wikipedia.com/wiki/Radonezh",
+     "verified": true
+    },
+    {
+     "text": "Родство Рублёва с этими местами — мнение историков.",
+     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "radonezh-vid",
-   "name": "Вид на лавру",
-   "coords": {
-    "lat": 56.312,
-    "lon": 38.127
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Город вырос вокруг монастыря, а не крепости или торговой площади. Датой основания принято считать 1337 год — эта дата условная, принятая традицией.",
-    "Со смотровых мест за пределами стен хорошо видна вся лавра. Выберите место у дороги и сделайте фото."
-   ],
-   "facts": [
-    {
-     "text": "Город сложился вокруг монастыря.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Датой основания принято считать 1337 год.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Дата 1337 год — принятая, а не доказанная.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Координаты смотровой точки приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/sergiev-posad/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Лавра описана на Культура.РФ.",
-     "sourceUrl": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "radonezh-poselenie",
-   "name": "Бывшее поселение",
-   "coords": {
-    "lat": 56.3895,
-    "lon": 38.2495
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Богородское было центром городского поселения; в него входили 11 сёл и деревень, в том числе Шубино и Муханово.",
-    "1 апреля 2019 года район и поселения объединили в Сергиево-Посадский городской округ. Следующая точка маршрута — «Испытания ракетных двигателей»."
-   ],
-   "facts": [
-    {
-     "text": "В поселение входили посёлок и 11 сёл и деревень.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Среди них — Шубино и Муханово.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В 2019 году образован Сергиево-Посадский городской округ.",
-     "sourceUrl": "https://bigenc.ru/c/sergiev-posad-111975",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "radonezh-nits",
-   "name": "Испытания ракетных двигателей",
-   "coords": {
-    "lat": 56.415,
-    "lon": 38.175
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Научно-испытательный центр ракетно-космической промышленности считает днём основания 18 декабря 1949 года — первое огневое испытание ракеты. Сейчас центр входит в Роскосмос.",
-    "Связь центра именно с Пересветом в нашем источнике прямо не указана — отмечаем это как непроверенное."
-   ],
-   "facts": [
-    {
-     "text": "Первое огневое испытание — 18 декабря 1949 года, день основания НИЦ РКП.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%86%D0%B5%D0%BD%D1%82%D1%80_%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE-%D0%BA%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "НИЦ РКП входит в Роскосмос.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%86%D0%B5%D0%BD%D1%82%D1%80_%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE-%D0%BA%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Связь центра с Пересветом не подтверждена.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%86%D0%B5%D0%BD%D1%82%D1%80_%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE-%D0%BA%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8",
-     "verified": false
-    },
-    {
-     "text": "Территории закрыты.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%86%D0%B5%D0%BD%D1%82%D1%80_%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE-%D0%BA%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%86%D0%B5%D0%BD%D1%82%D1%80_%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE-%D0%BA%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Режимные территории."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "radonezh-podvorye",
-   "name": "Пересветовское подворье",
-   "coords": {
-    "lat": 56.42,
-    "lon": 38.18
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В городе есть Пересветовское подворье Троице-Сергиевой лавры с несколькими храмами.",
-    "Город назван в честь Александра Пересвета — инока Троице-Сергиева монастыря, погибшего в поединке перед Куликовской битвой. Финиш — Станция «Сергиев Посад»: Электрички Ярославского направления."
-   ],
-   "facts": [
-    {
-     "text": "В Пересвете есть подворье Троице-Сергиевой лавры.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%B5%D1%80%D0%B5%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D1%80%D1%8C%D0%B5_%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%B5-%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BB%D0%B0%D0%B2%D1%80%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Город назван в честь Александра Пересвета.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Alexander_Peresvet",
-     "verified": false
-    },
-    {
-     "text": "Пересвет — герой Куликовской битвы.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Alexander_Peresvet",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%B5%D1%80%D0%B5%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D1%80%D1%8C%D0%B5_%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%B5-%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BB%D0%B0%D0%B2%D1%80%D1%8B",
-     "verified": false
-    },
-    {
-     "text": "Датировка храмов не сверена.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%B5%D1%80%D0%B5%D1%81%D0%B2%D0%B5%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D1%80%D1%8C%D0%B5_%D0%A2%D1%80%D0%BE%D0%B8%D1%86%D0%B5-%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2%D0%BE%D0%B9_%D0%BB%D0%B0%D0%B2%D1%80%D1%8B",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующие храмы."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
+   "order": 50,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -423,8 +252,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Радонежа нет. Тематическая замена — простой постный пирог в честь преподобного Сергия. Это выбор составителя.",
   "story": [
-   "Сергий Радонежский был известен скромностью и простой пищей.",
-   "Возьмите выпечку из Хотькова. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Сергий Радонежский был известен скромностью и простой пищей. Возьмите выпечку из Хотькова. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -452,131 +280,91 @@
    "url": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/"
   },
   {
-   "title": "Абрамцево — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/192923"
   },
   {
-   "title": "Абрамцево — Tripster",
-   "url": "https://experience.tripster.ru/journal/articles/usadba-abramcevo/"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/photo/458252"
   },
   {
-   "title": "Абрамцевский кружок — KudaGo",
-   "url": "https://kudago.com/all/news/abramtsevskij-kruzhok-art-/"
-  },
-  {
-   "title": "Покровский Хотьков монастырь — 360",
-   "url": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/"
-  },
-  {
-   "title": "Азбука паломника",
-   "url": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Троице-Сергиева лавра — Культура.РФ",
-   "url": "https://www.culture.ru/objects/1648/svyato-troitskaya-sergieva-lavra-v-sergievom-posade"
-  },
-  {
-   "title": "Как создавалась лавра — ПНП",
-   "url": "https://www.pnp.ru/social/kak-sozdavalas-troice-sergieva-lavra.html"
-  },
-  {
-   "title": "Сергиев Посад — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A1%D0%B5%D1%80%D0%B3%D0%B8%D0%B5%D0%B2_%D0%9F%D0%BE%D1%81%D0%B0%D0%B4"
-  },
-  {
-   "title": "Поселение Богородское — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%BE%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5"
-  },
-  {
-   "title": "Памятник Пухову — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/peresvet/pamyatnik-viktoru-puhovu/"
-  },
-  {
-   "title": "НИЦ РКП — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D1%86%D0%B5%D0%BD%D1%82%D1%80_%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE-%D0%BA%D0%BE%D1%81%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BF%D1%80%D0%BE%D0%BC%D1%8B%D1%88%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8"
+   "title": "Источник: en.wikipedia.com",
+   "url": "https://en.wikipedia.com/wiki/Radonezh"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.959343,
-     56.233
+     37.98134,
+     56.253
     ],
     [
-     37.960101,
-     56.231428
+     37.982099,
+     56.251428
     ],
     [
-     37.962172,
-     56.230277
+     37.98417,
+     56.250277
     ],
     [
-     37.965,
-     56.229856
+     38.026671,
+     56.236777
     ],
     [
-     38.03,
-     56.236856
+     38.0295,
+     56.236356
     ],
     [
-     38.032829,
-     56.237277
+     38.0335,
+     56.236456
     ],
     [
-     38.0349,
-     56.238428
+     38.036329,
+     56.236877
     ],
     [
-     38.143408,
-     56.306628
+     38.0384,
+     56.238028
     ],
     [
-     38.254419,
-     56.387928
+     38.039158,
+     56.2396
     ],
     [
-     38.25518,
-     56.3895
+     38.0384,
+     56.241172
     ],
     [
-     38.254419,
-     56.391072
+     38.036329,
+     56.242323
     ],
     [
-     38.25234,
-     56.392223
+     38.031829,
+     56.244223
     ],
     [
-     38.182842,
-     56.422723
+     37.98983,
+     56.255723
     ],
     [
-     38.18,
-     56.423144
+     37.987,
+     56.256144
     ],
     [
-     38.177158,
-     56.422723
-    ],
-    [
-     38.175077,
-     56.421572
+     37.98417,
+     56.255723
     ],
     [
      37.982099,
      56.254572
     ],
     [
-     37.960101,
-     56.234572
-    ],
-    [
-     37.959343,
-     56.233
+     37.98134,
+     56.253
     ]
    ]
   ]

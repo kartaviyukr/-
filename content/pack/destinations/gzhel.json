@@ -13,10 +13,18 @@
   "Гжель — село и целый куст деревень, давший имя самому известному русскому фарфору с синей росписью. Местные жители начали делать керамику благодаря залежам качественной белой глины.",
   "Во второй половине XVIII века здесь делали майолику из красной глины с цветной росписью. В 1810 году Яков Кузнецов открыл фарфоровую мастерскую на реке Дорке, а в 1830–1840-х годах в Гжели было сосредоточено почти половина фарфорово-фаянсовых предприятий России.",
   "Потом промысел пришёл в упадок и возродился лишь в середине XX века; сине-белая роспись стала национальным брендом.",
-  "Свои места маршрута: «Гжельский завод и музей», «Белая глина и майолика», «Фарфор на Дорке». По пути маршрут заходит и к соседям: Раменское — «Раменская мануфактура», «Борисоглебское озеро и Троицкая церковь»; Кратово — «Кратовское озеро», «Профессорские дачи»; Быково — «Дворец на холме»; Малаховка — «Летний театр», «Малаховское озеро»; Томилино — «Улицы посёлка», «Вертолётный завод имени Миля».",
-  "Маршрут линейный, около 51 км и 12 точек. Финиш — Станция «Томилино» (Электрички Казанского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Новохаритоново», «Фарфор на Дорке», «Площадь с памятником мастерам», «Гжельский завод и музей», «Белая глина и майолика», «Церковь Успения Пресвятой Богородицы». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 14 км: старт и финиш — Станция «Гжель» (Электрички Казанского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Станция «Гжель»",
+  "coords": {
+   "lat": 55.6152,
+   "lon": 38.3055
+  },
+  "transport": "Электрички Казанского направления"
+ },
+ "endPoint": {
   "name": "Станция «Гжель»",
   "coords": {
    "lat": 55.615,
@@ -24,118 +32,47 @@
   },
   "transport": "Электрички Казанского направления (на Шатуру)"
  },
- "endPoint": {
-  "name": "Станция «Томилино»",
-  "coords": {
-   "lat": 55.66,
-   "lon": 37.95
-  },
-  "transport": "Электрички Казанского направления / МЦД-3"
- },
  "route": {
-  "distanceKm": 51.0,
-  "durationH": 7.2,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 13.8,
+  "durationH": 2.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "gzhel-zavod",
-   "name": "Гжельский завод и музей",
+   "id": "gzhel-novokharitonovo",
+   "name": "Новохаритоново",
    "coords": {
-    "lat": 55.62,
-    "lon": 38.3
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 45,
-   "guideStory": [
-    "Главная музейная точка — музей Гжельского художественно-промышленного завода: история промысла, старинные изделия и современные работы. Экскурсии на завод проводят по записи.",
-    "В XX веке гжельская сине-белая роспись стала национальным брендом. Возрождение промысла началось в середине века, после долгого упадка.",
-    "Часы работы и запись на экскурсию уточняйте заранее. Следующая точка маршрута — «Белая глина и майолика»."
-   ],
-   "facts": [
-    {
-     "text": "Музей завода показывает историю промысла и старинные изделия.",
-     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
-     "verified": true
-    },
-    {
-     "text": "Экскурсии на гжельский завод проводятся.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/gzhel",
-     "verified": true
-    },
-    {
-     "text": "Возрождение промысла началось в середине XX века.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
-     "verified": true
-    },
-    {
-     "text": "Сине-белая роспись стала национальным брендом.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
-     "verified": true
-    },
-    {
-     "text": "Часы работы музея не проверены.",
-     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "gzhel-glina",
-   "name": "Белая глина и майолика",
-   "coords": {
-    "lat": 55.625,
-    "lon": 38.29
+    "lat": 55.587,
+    "lon": 38.333
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Местные жители начали делать фарфор, узнав о качестве белой глины, залегавшей рядом. Происхождение названия «Гжель» спорно: популярная версия связывает его со словом «жечь», то есть с обжигом.",
-    "Во второй половине XVIII века здесь делали майолику из красной глины, расписанную белой, жёлтой, синей, зелёной и коричневой красками."
+    "Во второй половине XIX века керамические заводы Гжельской волости стояли в Речицах, Бахтееве, Новохаритонове, Трошкове и других деревнях.",
+    "Новохаритоново — одна из деревень гжельского «куста», куда стоит доехать, чтобы увидеть, насколько широко был разбросан промысел."
    ],
    "facts": [
     {
-     "text": "Промысел вырос на местной белой глине.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
+     "text": "Во второй половине XIX века керамические заводы стояли в том числе в Новохаритонове.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C_(%D1%81%D0%B5%D0%BB%D0%BE,_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
      "verified": true
     },
     {
-     "text": "Версия о происхождении названия от слова «жечь» спорна.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
-     "verified": false
-    },
-    {
-     "text": "Во второй половине XVIII века делали майолику из красной глины.",
-     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "text": "Возрождение гжельского фарфора началось в середине XX века.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C_(%D1%81%D0%B5%D0%BB%D0%BE,_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
      "verified": true
-    },
-    {
-     "text": "Майолику расписывали белой, жёлтой, синей, зелёной и коричневой красками.",
-     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
-     "verified": true
-    },
-    {
-     "text": "Туристический сайт относит первые упоминания мастеров к XIV веку — не подтверждено.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "gzhel-dorka",
@@ -181,443 +118,169 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 20,
+   "coordsVerified": false
   },
   {
-   "id": "gzhel-fabrika",
-   "name": "Раменская мануфактура",
+   "id": "gzhel-ploshchad",
+   "name": "Площадь с памятником мастерам",
    "coords": {
-    "lat": 55.565,
-    "lon": 38.235
+    "lat": 55.6205,
+    "lon": 38.301
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Расширение Раменской бумагопрядильной мануфактуры купцами Малютиными превратило село в мощный индустриальный центр.",
-    "Даты основания фабрики мы в найденных источниках не нашли — смотрим корпуса и не придумываем цифры. Следующая точка маршрута — «Борисоглебское озеро и Троицкая церковь»."
+    "На центральной площади Гжели стоит скульптурная композиция, посвящённая местным мастерам.",
+    "Село впервые упоминается в завещании Ивана Калиты 1328 года. Следующая точка маршрута — «Гжельский завод и музей». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "Купцы Малютины расширили Раменскую бумагопрядильную мануфактуру.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "На центральной площади стоит композиция, посвящённая мастерам.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C",
      "verified": true
     },
     {
-     "text": "Мануфактура превратила село в индустриальный центр.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Дата основания фабрики не найдена.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Раменское описано в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
+     "text": "Гжель впервые упоминается в завещании Ивана Калиты 1328 года.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
+   "order": 30,
+   "coordsVerified": false
   },
   {
-   "id": "gzhel-ozero",
-   "name": "Борисоглебское озеро и Троицкая церковь",
+   "id": "gzhel-zavod",
+   "name": "Гжельский завод и музей",
    "coords": {
-    "lat": 55.57,
-    "lon": 38.225
+    "lat": 55.62,
+    "lon": 38.3
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
    "guideStory": [
-    "Местность впервые упоминается как «Раменье» в 1328 году в духовной грамоте Ивана Калиты. Эту дату считают и первым упоминанием озера, названного по церкви.",
-    "В 1725–1730 годах граф Мусин-Пушкин построил на берегу каменную Троицкую церковь с приделами Бориса и Глеба. В 1770-х годах Михаил Волконский выкупил землю и устроил охотничий дом с обширным парком."
+    "Главная музейная точка — музей Гжельского художественно-промышленного завода: история промысла, старинные изделия и современные работы. Экскурсии на завод проводят по записи.",
+    "В XX веке гжельская сине-белая роспись стала национальным брендом. Возрождение промысла началось в середине века, после долгого упадка.",
+    "Часы работы и запись на экскурсию уточняйте заранее. Следующая точка маршрута — «Белая глина и майолика»."
    ],
    "facts": [
     {
-     "text": "«Раменье» упомянуто в 1328 году в грамоте Ивана Калиты.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Музей завода показывает историю промысла и старинные изделия.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
      "verified": true
     },
     {
-     "text": "Название связывают со словом «раменье» — опушка леса.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Экскурсии на гжельский завод проводятся.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/gzhel",
      "verified": true
     },
     {
-     "text": "В 1725–1730 годах Мусин-Пушкин построил Троицкую церковь.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Возрождение промысла началось в середине XX века.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
      "verified": true
     },
     {
-     "text": "В 1770-х Михаил Волконский устроил здесь охотничий дом с парком.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Сине-белая роспись стала национальным брендом.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
      "verified": true
     },
     {
-     "text": "Озеро получило название по церкви.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
+     "text": "Часы работы музея не проверены.",
+     "sourceUrl": "https://tonkosti.ru/%D0%AD%D0%BA%D1%81%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B8_%D0%BF%D0%BE_%D0%93%D0%B6%D0%B5%D0%BB%D0%B8",
      "verified": false
     }
    ],
-   "daylightOnly": true,
+   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 50
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "gzhel-ozero-2",
-   "name": "Кратовское озеро",
-   "coords": {
-    "lat": 55.6,
-    "lon": 38.168
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Озеро — любимое место отдыха кратовских дачников в жаркие дни.",
-    "Вокруг — сосны, которые и делают Кратово одним из самых приятных дачных посёлков Казанского направления.",
-    "От озера по тенистым дачным улицам возвращаемся к станции, где маршрут и заканчивается."
-   ],
-   "facts": [
-    {
-     "text": "Кратово окружено сосновым лесом.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Посёлку посвящён материал «Смотрим».",
-     "sourceUrl": "https://smotrim.ru/journal/2594072",
-     "verified": true
-    },
-    {
-     "text": "История озера в найденных источниках не раскрыта.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": false
-    },
-    {
-     "text": "Кратово — дачный посёлок Раменского округа.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": false
-    },
-    {
-     "text": "Летом в Кратове жили семьи учёных.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "gzhel-dachi",
-   "name": "Профессорские дачи",
-   "coords": {
-    "lat": 55.602,
-    "lon": 38.155
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 25,
-   "guideStory": [
-    "До 1930 года посёлок назывался Прозоровским — по князьям Голицыным-Прозоровским. Дачной местностью он был ещё в XIX веке.",
-    "В советское время здесь появились десятки тенистых дач, где отдыхали учёные и работники культуры. Mel.fm собирал воспоминания о «профессорских дачах»: сосны, мопеды, детские игры и местные легенды."
-   ],
-   "facts": [
-    {
-     "text": "До 1930 года посёлок назывался Прозоровским.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Название связано с князьями Голицыными-Прозоровскими.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "На дачах Кратова летом жили советские учёные и деятели культуры.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Московский комсомолец называет Кратово среди интересных мест для покупки дачи.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": true
-    },
-    {
-     "text": "Конкретные дачи известных людей мы не сверяли.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "gzhel-dvorets",
-   "name": "Дворец на холме",
+   "id": "gzhel-glina",
+   "name": "Белая глина и майолика",
    "coords": {
     "lat": 55.625,
-    "lon": 38.082
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Генерал-майор Михаил Измайлов получил щедрые награды от Екатерины II после переворота 1762 года и пригласил Баженова спланировать новую усадьбу.",
-    "В комплекс входили дворец на холме, Эрмитаж, церковь, грот и мостик к беседке на острове. Примерно через десять лет Баженов впал в немилость, и, вероятно, не всё было достроено. Баженовский Эрмитаж не сохранился."
-   ],
-   "facts": [
-    {
-     "text": "Владелец Михаил Измайлов был награждён Екатериной II после переворота 1762 года.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Измайлов пригласил Баженова для планировки усадьбы.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "В комплекс входили дворец, Эрмитаж, церковь, грот и мостик к беседке на острове.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Баженовский Эрмитаж не сохранился.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Усадьба перешла к Воронцовым-Дашковым, в 1890-х её продали инженеру.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Утверждение о «масонском стиле» усадьбы не подтверждено.",
-     "sourceUrl": "https://lomonosov.msu.ru/archive/Lomonosov_2024/data/32768/172096_uid348645_report.pdf",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Доступ к дворцу может быть ограничен — уточняйте."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "gzhel-teatr",
-   "name": "Летний театр",
-   "coords": {
-    "lat": 55.643,
-    "lon": 38.028
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Летний театр появился в начале XX века; на его сцене выступали Фаина Раневская и Алиса Коонен.",
-    "С 1934 года театр стал кинотеатром, в середине 1950-х здесь ещё играл джаз-оркестр Леонида Утёсова. В 1966 году сильный снегопад разрушил крышу и часть стен.",
-    "Деревянное здание называют «свидетелем беспокойного века». Рядом после реконструкции открыли Летний парк с кинопоказами под открытым небом."
-   ],
-   "facts": [
-    {
-     "text": "Летний театр появился в начале XX века; на сцене выступали Раневская и Коонен.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "С 1934 года театр стал кинотеатром.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В середине 1950-х здесь выступал джаз-оркестр Леонида Утёсова.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "В 1966 году снегопад разрушил крышу и часть стен театра.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "После реконструкции в Летнем парке организовали кинопоказы под открытым небом.",
-     "sourceUrl": "https://360.ru/news/mosobl/kinopokazy-pod-otkrytym-nebom-organizovali-v-letnem-parke-v-ljubertsah/",
-     "verified": true
-    },
-    {
-     "text": "Московский комсомолец называл театр «деревянным свидетелем беспокойного века».",
-     "sourceUrl": "https://www.mk.ru/mosobl/2013/06/18/871030-derevyannyiy-svidetel-bespokoynogo-veka.html",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "gzhel-ozero-3",
-   "name": "Малаховское озеро",
-   "coords": {
-    "lat": 55.64,
-    "lon": 38.018
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Главный центр притяжения посёлка — живописное озеро. На его берегах отдыхали дачники, среди которых были Суриков, Шаляпин, Шагал и Бунин.",
-    "Шагал приехал в Малаховку в 1920 году вместе с женой. Дачная Малаховка была местом, где встречалась художественная Москва."
-   ],
-   "facts": [
-    {
-     "text": "Главным центром притяжения посёлка является озеро.",
-     "sourceUrl": "https://teletype.in/@apfound/cGcJG4OYOc3",
-     "verified": true
-    },
-    {
-     "text": "В Малаховке жили Суриков, Шаляпин, Шагал и Бунин.",
-     "sourceUrl": "https://iz.ru/export/google/amp/636363",
-     "verified": true
-    },
-    {
-     "text": "Шагал переехал в Малаховку в 1920 году.",
-     "sourceUrl": "https://iz.ru/export/google/amp/636363",
-     "verified": true
-    },
-    {
-     "text": "Малаховка помнит Лилю Брик и Фёдора Шаляпина.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/actual/2020/09/02/mesto-kotoroe-pomnit/",
-     "verified": true
-    },
-    {
-     "text": "История самого озера в найденных источниках не раскрыта.",
-     "sourceUrl": "https://teletype.in/@apfound/cGcJG4OYOc3",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
-  },
-  {
-   "id": "gzhel-posyolok",
-   "name": "Улицы посёлка",
-   "coords": {
-    "lat": 55.662,
-    "lon": 37.945
+    "lon": 38.29
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "Томилино — посёлок, где живут инженеры и лётчики-испытатели вертолётов.",
-    "Посёлок стоит на Казанской дороге в окружении других дачных мест — Малаховки, Красково, Люберец.",
-    "Посёлок невелик, поэтому обратный путь к станции займёт всего несколько минут спокойной езды."
+    "Местные жители начали делать фарфор, узнав о качестве белой глины, залегавшей рядом. Происхождение названия «Гжель» спорно: популярная версия связывает его со словом «жечь», то есть с обжигом.",
+    "Во второй половине XVIII века здесь делали майолику из красной глины, расписанную белой, жёлтой, синей, зелёной и коричневой красками."
    ],
    "facts": [
     {
-     "text": "Томилино описано в англоязычной Википедии.",
-     "sourceUrl": "https://en.wikipedia.com/wiki/Tomilino",
+     "text": "Промысел вырос на местной белой глине.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
      "verified": true
     },
     {
-     "text": "Штаб-квартира вертолётной компании Миля находится в Томилине.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant",
-     "verified": true
-    },
-    {
-     "text": "Состав жителей посёлка (инженеры, лётчики) — оценка составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant",
+     "text": "Версия о происхождении названия от слова «жечь» спорна.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
      "verified": false
     },
     {
-     "text": "Томилино входит в Люберецкий городской округ.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
+     "text": "Во второй половине XVIII века делали майолику из красной глины.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
      "verified": true
     },
     {
-     "text": "История застройки посёлка в найденных источниках не раскрыта.",
-     "sourceUrl": "https://en.wikipedia.com/wiki/Tomilino",
+     "text": "Майолику расписывали белой, жёлтой, синей, зелёной и коричневой красками.",
+     "sourceUrl": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf",
+     "verified": true
+    },
+    {
+     "text": "Туристический сайт относит первые упоминания мастеров к XIV веку — не подтверждено.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gzhel/history",
      "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 110
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "gzhel-mil",
-   "name": "Вертолётный завод имени Миля",
+   "id": "gzhel-uspenie",
+   "name": "Церковь Успения Пресвятой Богородицы",
    "coords": {
-    "lat": 55.658,
-    "lon": 37.93
+    "lat": 55.6188,
+    "lon": 38.2972
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Московский вертолётный завод имени М. Л. Миля расположен в Томилине. Его создал в 1947 году генеральный конструктор Михаил Миль.",
-    "Завод включает ОКБ, опытное производство, экспериментально-исследовательский комплекс и лётно-испытательную базу. Компания проектирует и производит вертолёты и входит в «Вертолёты России».",
-    "Это режимное предприятие: смотрим только снаружи. Если повезёт, в небе пролетит вертолёт."
+    "Успенский храм в Гжели известен с начала XVII века — тогда он был деревянным, рядом стояла церковь Дмитрия Солунского.",
+    "Нынешнее здание построено по проекту архитектора К. В. Гриневского; освящение связывают с 1885 годом, в других источниках встречается дата 1859."
    ],
    "facts": [
     {
-     "text": "Завод имени Миля расположен в посёлке Томилино Люберецкого района.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
+     "text": "В начале XVII века в селе отмечены деревянные храмы Успения и Дмитрия Солунского.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C_(%D1%81%D0%B5%D0%BB%D0%BE,_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
      "verified": true
     },
     {
-     "text": "Завод создан генеральным конструктором Михаилом Милем в 1947 году.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
+     "text": "Нынешнее здание построено по проекту К. В. Гриневского.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C_(%D1%81%D0%B5%D0%BB%D0%BE,_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
      "verified": true
     },
     {
-     "text": "В состав входят ОКБ, опытное производство, исследовательский комплекс и лётно-испытательная база.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/55839",
-     "verified": true
-    },
-    {
-     "text": "Компания входит в холдинг «Вертолёты России».",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant",
-     "verified": true
-    },
-    {
-     "text": "Календарь событий рассказывает о биографии Михаила Миля.",
-     "sourceUrl": "https://www.calend.ru/persons/212/",
-     "verified": true
+     "text": "Церковь освящена 24 ноября 1885 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C_(%D1%81%D0%B5%D0%BB%D0%BE,_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": false
     }
-   ],
-   "warnings": [
-    "Режимное предприятие: не фотографировать проходные и ограждение."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 120
+   "warnings": [],
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -658,107 +321,75 @@
    "url": "https://360.ru/tekst/mosobl/ot-gzheli-do-klina-i-zhostova-gde-zhivut-legendarnye-promysly-podmoskovja/"
   },
   {
-   "title": "История Раменского — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia"
+   "title": "Источник: ru.ruwiki.ru",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C_(%D1%81%D0%B5%D0%BB%D0%BE,_%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
   },
   {
-   "title": "Раменское — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/47154"
+   "title": "Источник: edu-1.tatar.ru",
+   "url": "https://edu-1.tatar.ru/upload/storage/org4935/files/1%20%D0%93%D0%B6%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B0%D1%8F%20%D1%80%D0%BE%D1%81%D0%BF%D0%B8%D1%81%D1%8C.pdf"
   },
   {
-   "title": "Кратово — Мел",
-   "url": "https://mel.fm/dacha/6703185-kratovo"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%93%D0%B6%D0%B5%D0%BB%D1%8C"
   },
   {
-   "title": "Интересные места для дачи — МК",
-   "url": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html"
-  },
-  {
-   "title": "Усадьба Быково — Рамблер",
-   "url": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo"
-  },
-  {
-   "title": "Владимирская церковь — KudaGo",
-   "url": "https://kudago.com/msk/place/vladimirskoy/"
-  },
-  {
-   "title": "Быково — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%91%D1%8B%D0%BA%D0%BE%D0%B2%D0%BE"
-  },
-  {
-   "title": "Летний театр в Малаховке — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9B%D0%B5%D1%82%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%B2_%D0%9C%D0%B0%D0%BB%D0%B0%D1%85%D0%BE%D0%B2%D0%BA%D0%B5"
-  },
-  {
-   "title": "Малаховка — Известия",
-   "url": "https://iz.ru/export/google/amp/636363"
-  },
-  {
-   "title": "Малаховка — Мир квартир",
-   "url": "https://www.mirkvartir.ru/journal/actual/2020/09/02/mesto-kotoroe-pomnit/"
-  },
-  {
-   "title": "Завод имени Миля — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/55839"
-  },
-  {
-   "title": "Mil Moscow Helicopter Plant — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Mil_Moscow_Helicopter_Plant"
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/gzhel"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.924427,
-     55.658
+     38.284431,
+     55.625
     ],
     [
-     37.925173,
-     55.656428
+     38.285177,
+     55.623428
     ],
     [
-     37.927213,
-     55.655277
+     38.328182,
+     55.585428
     ],
     [
-     38.23222,
-     55.562277
+     38.330218,
+     55.584277
     ],
     [
-     38.235,
-     55.561856
+     38.333,
+     55.583856
     ],
     [
-     38.23778,
-     55.562277
+     38.335782,
+     55.584277
     ],
     [
-     38.317783,
-     55.607277
+     38.337818,
+     55.585428
     ],
     [
-     38.319821,
-     55.608428
+     38.338563,
+     55.587
     ],
     [
-     38.320567,
-     55.61
+     38.337818,
+     55.588572
     ],
     [
      38.319821,
      55.611572
     ],
     [
-     38.304822,
-     55.621572
+     38.305822,
+     55.622072
     ],
     [
-     38.302784,
-     55.622723
+     38.303784,
+     55.623223
     ],
     [
      38.292784,
@@ -769,24 +400,16 @@
      55.628144
     ],
     [
-     37.945,
-     55.665144
+     38.287216,
+     55.627723
     ],
     [
-     37.942213,
-     55.664723
+     38.285177,
+     55.626572
     ],
     [
-     37.927213,
-     55.660723
-    ],
-    [
-     37.925173,
-     55.659572
-    ],
-    [
-     37.924427,
-     55.658
+     38.284431,
+     55.625
     ]
    ]
   ]

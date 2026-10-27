@@ -13,8 +13,8 @@
   "Яхрома — город на канале имени Москвы. По одной версии, точкой отсчёта его истории считают 1841 год, когда здесь основали суконную фабрику, которую вскоре купил и модернизировал купец Иван Лямин; поселения на этих землях были и раньше.",
   "В городе стоит шлюз № 3 канала имени Москвы: его строили с 1932 по 1936 год и приняли в эксплуатацию 15 июля 1937 года. Вместе со шлюзом № 4 в Деденеве он образует Яхромский гидроузел.",
   "Напротив, на восточном берегу канала, — Перемиловская высота, где с 27 ноября по 5 декабря 1941 года шли бои за Москву.",
-  "Свои места маршрута: «Суконная фабрика», «Шлюз № 3», «Перемиловская высота». По пути маршрут заходит и к соседям: Деденево — «Спасо-Влахернский монастырь», «Берег канала»; Икша — «Посёлок Икша», «Шлюз № 6»; Лобня — «Озеро Киово и церковь Спаса».",
-  "Маршрут линейный, около 48 км и 8 точек. Финиш — Станция «Лобня» (Электрички Савёловского направления / МЦД-1), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Площадь генерала Кузнецова», «Суконная фабрика», «Церковь Вознесения Господня», «Парк имени Ивана Лямина», «Шлюз № 3», «Перемиловская высота», «Троицкий собор». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 5 км: старт и финиш — Станция «Яхрома» (Электрички Савёловского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Яхрома»",
@@ -25,24 +25,55 @@
   "transport": "Электрички Савёловского направления"
  },
  "endPoint": {
-  "name": "Станция «Лобня»",
+  "name": "Станция «Яхрома»",
   "coords": {
-   "lat": 56.0125,
-   "lon": 37.4745
+   "lat": 56.2892,
+   "lon": 37.4855
   },
-  "transport": "Электрички Савёловского направления / МЦД-1"
+  "transport": "Электрички Савёловского направления"
  },
  "route": {
-  "distanceKm": 48.0,
-  "durationH": 6.1,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 4.8,
+  "durationH": 1.6,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "yakhroma-kuznetsov",
+   "name": "Площадь генерала Кузнецова",
+   "coords": {
+    "lat": 56.2895,
+    "lon": 37.483
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "На площади генерала Кузнецова стоит мемориал героям-яхромчанам.",
+    "Город вырос из посёлка при Покровской суконной мануфактуре; позже его разделил канал имени Москвы. Следующая точка маршрута — «Суконная фабрика». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "На площади Кузнецова — мемориал героям-яхромчанам.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/yakhroma/points",
+     "verified": true
+    },
+    {
+     "text": "Яхрома выросла при Покровской суконной мануфактуре.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/yakhroma/points",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
   {
    "id": "yakhroma-fabrika",
    "name": "Суконная фабрика",
@@ -86,8 +117,70 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "yakhroma-voznesenie",
+   "name": "Церковь Вознесения Господня",
+   "coords": {
+    "lat": 56.286,
+    "lon": 37.48
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Церковь Вознесения построена в 1792 году на средства Степана Апраксина; в ней было три престола.",
+    "Стиль — классицизм с элементами псевдоготики. Следующая точка маршрута — «Парк имени Ивана Лямина». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Вознесения построена в 1792 году на средства Апраксина.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/ayhroma/",
+     "verified": true
+    },
+    {
+     "text": "Стиль — классицизм с элементами псевдоготики.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/ayhroma/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "yakhroma-lyamin",
+   "name": "Парк имени Ивана Лямина",
+   "coords": {
+    "lat": 56.288,
+    "lon": 37.486
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Городской парк имени Ивана Лямина — зелёный центр Яхромы.",
+    "Хорошее место для остановки между собором и каналом. Следующая точка маршрута — «Шлюз № 3». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Яхроме есть парк имени Ивана Лямина.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/yakhroma/points",
+     "verified": true
+    },
+    {
+     "text": "Путеводитель включает парк в список главных мест Яхромы вместе с Троицким собором и Перемиловской высотой.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/yakhroma/points",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "yakhroma-shlyuz",
@@ -134,8 +227,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 50,
+   "coordsVerified": false
   },
   {
    "id": "yakhroma-vysota",
@@ -149,7 +242,7 @@
    "guideStory": [
     "Перемиловская высота названа по селу Перемилово на восточном берегу канала напротив Яхромы. С 27 ноября по 5 декабря 1941 года здесь шли бои: это один из рубежей, где остановили немецкие войска.",
     "Подъём на высоту крутой — велосипед, возможно, придётся вести. Сверху виден канал и город.",
-    "Минуту помолчим у мемориала и вернёмся к станции. Следующая точка маршрута — «Спасо-Влахернский монастырь»."
+    "Минуту помолчим у мемориала и вернёмся к станции. Следующая точка маршрута — «Троицкий собор»."
    ],
    "facts": [
     {
@@ -183,247 +276,39 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
+   "order": 60,
+   "coordsVerified": false
   },
   {
-   "id": "yakhroma-monastyr",
-   "name": "Спасо-Влахернский монастырь",
+   "id": "yakhroma-troitskiy",
+   "name": "Троицкий собор",
    "coords": {
-    "lat": 56.245,
-    "lon": 37.515
+    "lat": 56.292,
+    "lon": 37.488
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "С XVIII века Деденевом владели Головины; здесь была их усадьба. С этим родом связывают основание Спасо-Влахернского женского монастыря.",
-    "Монастырь действующий: вход в скромной одежде, женщинам — в платке, фото — с разрешения. Следующая точка маршрута — «Берег канала»."
-   ],
-   "facts": [
-    {
-     "text": "С XVIII века село принадлежало Головиным, здесь была их усадьба.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Основателями монастыря называют представителей рода Головиных.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Спасо-Влахернский монастырь находится в Деденеве.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": true
-    },
-    {
-     "text": "Монастырь действующий, женский.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    },
-    {
-     "text": "Координаты монастыря приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "yakhroma-kanal",
-   "name": "Берег канала",
-   "coords": {
-    "lat": 56.24,
-    "lon": 37.525
-   },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Деденево стоит на берегу канала имени Москвы. Отсюда видно, как проходят суда по пути между Волгой и Москвой.",
-    "Холмы вокруг Деденева — часть Клинско-Дмитровской гряды; на склонах зимой катаются на лыжах. Это общая информация, конкретные трассы мы не проверяли."
+    "Троицкий собор с колокольней стоит на возвышенности над городом.",
+    "Для колокольни получено разрешение на реставрацию: кладку, стропила, капители и карнизы будут восстанавливать. Финиш — Станция «Яхрома»: Электрички Савёловского направления."
    ],
    "facts": [
     {
-     "text": "Посёлок стоит на берегу канала имени Москвы.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
+     "text": "Колокольня — часть ансамбля Троицкого собора на возвышенности.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/razreshenie-na-provedenie-restavratsii-kolokolni-troitskogo-sobora-polucheno-v-yahrome/",
      "verified": true
     },
     {
-     "text": "Холмы вокруг — часть Клинско-Дмитровской гряды.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Горнолыжные трассы не проверены.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "До посёлка удобно ехать до станции «Турист».",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "yakhroma-posyolok",
-   "name": "Посёлок Икша",
-   "coords": {
-    "lat": 56.17,
-    "lon": 37.5
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Икша — рабочий посёлок; до 2018 года он был центром городского поселения Икша. Краеведы, собравшие сборник по местной истории, пишут, что окрестные деревни упоминаются в межевой грамоте Ивана III дмитровскому князю Юрию Ивановичу.",
-    "Река Икша в Подмосковье — правый приток Волгуши. Происхождение названия посёлка мы в источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "Икша — рабочий посёлок Дмитровского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Городское поселение Икша упразднено в 2018 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Окрестные деревни упоминаются в грамотах 1496 и 1504 годов.",
-     "sourceUrl": "https://books.yandex.ru/books/AAmnUscU/read-online",
-     "verified": true
-    },
-    {
-     "text": "Река Икша — правый приток Волгуши.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "В округе определили задачи по развитию посёлка.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-dmitrovskom-okruge-opredelili-zadachi-po-razvitiju-poselka-iksha/",
+     "text": "Получено разрешение на реставрацию колокольни.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/razreshenie-na-provedenie-restavratsii-kolokolni-troitskogo-sobora-polucheno-v-yahrome/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "yakhroma-shlyuz-2",
-   "name": "Шлюз № 6",
-   "coords": {
-    "lat": 56.165,
-    "lon": 37.51
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Шлюз № 6 канала имени Москвы стоит неподалёку от Икши. Автором его архитектуры назван Г. Г. Вегман.",
-    "Канал строили с 1932 по 1936 год, чтобы дать Москве волжскую воду и судоходство. Первые суда прошли через шлюзы 1 мая 1937 года, официальный ввод — 15 июля 1937 года.",
-    "Шлюз — охраняемое сооружение; смотрим с общедоступных мест. Следующая точка маршрута — «Озеро Киово и церковь Спаса»."
-   ],
-   "facts": [
-    {
-     "text": "Шлюз № 6 находится неподалёку от посёлка Икша.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Автор проекта — архитектор Г. Г. Вегман.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
-     "verified": true
-    },
-    {
-     "text": "Канал строили с 1932 по 1936 год.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Первые суда прошли 1 мая 1937 года, ввод — 15 июля 1937 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Канал строили, чтобы дать Москве воду Волги и судоходство.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Гидросооружение: не заходить на охраняемую территорию."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "yakhroma-kiovo",
-   "name": "Озеро Киово и церковь Спаса",
-   "coords": {
-    "lat": 56.023,
-    "lon": 37.495
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Озеро Киово — природная гордость Лобни: здесь гнездятся чайки, и чайка изображена на гербе города.",
-    "Мало кто знает, что Киово когда-то было усадьбой. Церковь Спаса Нерукотворного Образа в Киове в 1930-е закрывали, а богослужения возобновили в 1988 году."
-   ],
-   "facts": [
-    {
-     "text": "Чайка изображена на гербе Лобни, в территорию которой входит Киово.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Киово было усадьбой.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Церковь Спаса Нерукотворного Образа в 1930-е закрывали, службы возобновили в 1988 году.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F",
-     "verified": true
-    },
-    {
-     "text": "Название Лобни связывают с речкой Лобненкой.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/",
-     "verified": false
-    },
-    {
-     "text": "Озеро Киово — место гнездования чаек.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/lobnia",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "warnings": [
-    "У озера — колония птиц: не шумим и не подходим к гнёздам."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
+   "order": 70,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -460,99 +345,87 @@
    "url": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963"
   },
   {
-   "title": "«Турист» хана Деденя — За рулём",
-   "url": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/yakhroma/points"
   },
   {
-   "title": "Деденево — knls.net",
-   "url": "https://knls.net/?p=13068"
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/iakhroma/istoriia"
   },
   {
-   "title": "Шлюз № 6 — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/ayhroma/"
   },
   {
-   "title": "Шлюзы канала — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%B8%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%B2%D1%8B%D1%81%D0%BE%D1%82%D0%B0"
   },
   {
-   "title": "Лобня — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9B%D0%BE%D0%B1%D0%BD%D1%8F"
-  },
-  {
-   "title": "Лобня — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/lobnya/"
-  },
-  {
-   "title": "Лобня — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/lobnay/"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/razreshenie-na-provedenie-restavratsii-kolokolni-troitskogo-sobora-polucheno-v-yahrome/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.468876,
-     56.0125
+     37.474335,
+     56.29
     ],
     [
-     37.469629,
-     56.010928
+     37.474335,
+     56.286
     ],
     [
-     37.471688,
-     56.009777
+     37.475094,
+     56.284428
     ],
     [
-     37.4745,
-     56.009356
+     37.477168,
+     56.283277
     ],
     [
-     37.477312,
-     56.009777
+     37.48,
+     56.282856
     ],
     [
-     37.497813,
-     56.020277
+     37.5,
+     56.281856
     ],
     [
-     37.499872,
-     56.021428
+     37.502832,
+     56.282277
     ],
     [
-     37.500626,
-     56.023
+     37.504906,
+     56.283428
     ],
     [
-     37.530658,
-     56.24
-    ],
-    [
-     37.5299,
-     56.241572
+     37.505664,
+     56.285
     ],
     [
      37.504906,
      56.286572
     ],
     [
-     37.502832,
-     56.287723
+     37.492906,
+     56.293572
     ],
     [
-     37.487832,
-     56.291723
+     37.490833,
+     56.294723
     ],
     [
-     37.482833,
-     56.292723
+     37.488,
+     56.295144
     ],
     [
-     37.48,
-     56.293144
+     37.485167,
+     56.294723
     ],
     [
      37.477167,
@@ -565,10 +438,6 @@
     [
      37.474335,
      56.29
-    ],
-    [
-     37.468876,
-     56.0125
     ]
    ]
   ]

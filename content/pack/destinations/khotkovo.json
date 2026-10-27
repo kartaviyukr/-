@@ -13,8 +13,8 @@
   "Хотьково — город на Ярославской дороге, известный Покровским Хотьковым монастырём. Здесь похоронены родители преподобного Сергия Радонежского — ростовские бояре Кирилл и Мария.",
   "В 1330-е годы они приняли монашеский постриг в этой обители и жили в ней до смерти в 1337 году. В 1992 году их канонизировали.",
   "Время основания монастыря неизвестно; впервые он упоминается в летописях в 1308 году. Монастырь закрыли в 1921 году и вернули Церкви в 1991-м.",
-  "Свои места маршрута: «Покровский Хотьков монастырь», «Берег Вори». По пути маршрут заходит и к соседям: Радонеж — «Древний город»; Абрамцево — «Парк над Ворей»; Софрино — «Село Софрино и Смоленская церковь»; Красноармейск — «Вознесенская мануфактура»; Фрязино — «Центр наукограда»; Щёлково — «Набережная Клязьмы», «Хлопчатобумажный комбинат».",
-  "Маршрут линейный, около 70 км и 9 точек. Финиш — Станция «Щёлково» (Электрички Ярославского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Историко-ландшафтный парк «Покровский»», «Надвратный храм Митрофана Воронежского», «Берег Вори», «Покровский Хотьков монастырь», «Монастырская жизнь», «Город художественных промыслов». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 5 км: старт и финиш — Станция «Хотьково» (Электрички Ярославского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Хотьково»",
@@ -25,24 +25,133 @@
   "transport": "Электрички Ярославского направления"
  },
  "endPoint": {
-  "name": "Станция «Щёлково»",
+  "name": "Станция «Хотьково»",
   "coords": {
-   "lat": 55.9203,
-   "lon": 37.9935
+   "lat": 56.2532,
+   "lon": 37.9875
   },
   "transport": "Электрички Ярославского направления"
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 8.2,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 4.8,
+  "durationH": 1.6,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "khotkovo-park-pokrovskiy",
+   "name": "Историко-ландшафтный парк «Покровский»",
+   "coords": {
+    "lat": 56.2538,
+    "lon": 37.974
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Парк открыли 5 декабря 2015 года на правом берегу Пажи, с западной стороны монастыря.",
+    "Отсюда хорошо видна обитель, где, по преданию, в 1335–1336 годах приняли монашество родители Сергия Радонежского. Следующая точка маршрута — «Надвратный храм Митрофана Воронежского»."
+   ],
+   "facts": [
+    {
+     "text": "Парк «Покровский» открылся 5 декабря 2015 года на правом берегу Пажи.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/khotkovo",
+     "verified": true
+    },
+    {
+     "text": "Родители Сергия приняли монашество в 1335–1336 годах и похоронены здесь в 1337 году.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "khotkovo-mitrofan",
+   "name": "Надвратный храм Митрофана Воронежского",
+   "coords": {
+    "lat": 56.2522,
+    "lon": 37.98
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Над Южными Водяными воротами монастыря в 1833 году возвели храм Митрофана Воронежского.",
+    "С конца XVI века в обители упоминается и тёплый храм Николая Чудотворца. Следующая точка маршрута — «Берег Вори». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Надвратный храм Митрофана Воронежского возведён в 1833 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/khotkovo",
+     "verified": true
+    },
+    {
+     "text": "С конца XVI века упоминается тёплый храм Николая Чудотворца.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/khotkovo",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "khotkovo-vorya",
+   "name": "Берег Вори",
+   "coords": {
+    "lat": 56.248,
+    "lon": 37.99
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Хотьково стоит на реке Воре, той же, что течёт мимо Абрамцева, — до усадьбы отсюда недалеко.",
+    "Берег — хорошее место для паузы перед дорогой к Радонежу. Следующая точка маршрута — «Покровский Хотьков монастырь». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Хотьково стоит на Воре.",
+     "sourceUrl": "https://culture.ru/objects/1649",
+     "verified": false
+    },
+    {
+     "text": "Абрамцево находится рядом.",
+     "sourceUrl": "https://culture.ru/objects/1649",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://culture.ru/objects/1649",
+     "verified": false
+    },
+    {
+     "text": "Описание берега — оценка составителя.",
+     "sourceUrl": "https://culture.ru/objects/1649",
+     "verified": false
+    },
+    {
+     "text": "Монастырь — главная достопримечательность Хотькова.",
+     "sourceUrl": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
   {
    "id": "khotkovo-monastyr",
    "name": "Покровский Хотьков монастырь",
@@ -55,7 +164,7 @@
    "guideStory": [
     "Монастырь впервые упоминается в летописях в 1308 году; время его основания неизвестно.",
     "Родители Сергия Радонежского, Кирилл и Мария, приняли здесь постриг в 1330-е годы и жили до смерти в 1337 году. В 1992 году их канонизировали. Монастырь закрыли в 1921 году и вернули Церкви в 1991-м.",
-    "Действующий женский монастырь: платок, юбка, тишина. Следующая точка маршрута — «Берег Вори»."
+    "Действующий женский монастырь: платок, юбка, тишина. Следующая точка маршрута — «Монастырская жизнь»."
    ],
    "facts": [
     {
@@ -89,383 +198,85 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 40,
+   "coordsVerified": false
   },
   {
-   "id": "khotkovo-vorya",
-   "name": "Берег Вори",
+   "id": "khotkovo-pansion",
+   "name": "Монастырская жизнь",
    "coords": {
-    "lat": 56.248,
-    "lon": 37.99
+    "lat": 56.2505,
+    "lon": 37.9955
    },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
    "guideStory": [
-    "Хотьково стоит на реке Воре, той же, что течёт мимо Абрамцева, — до усадьбы отсюда недалеко.",
-    "Берег — хорошее место для паузы перед дорогой к Радонежу. Следующая точка маршрута — «Древний город». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "При монастыре действуют детский пансион и гостиница для паломников.",
+    "Хотьково — начало пути «по Радонежской земле»: дальше — Радонеж и Сергиев Посад, у которых в спирали свои маршруты. Следующая точка маршрута — «Город художественных промыслов»."
    ],
    "facts": [
     {
-     "text": "Хотьково стоит на Воре.",
-     "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": false
+     "text": "При монастыре действуют детский пансион и гостиница для паломников.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
     },
     {
-     "text": "Абрамцево находится рядом.",
+     "text": "Экскурсии по местам жизни Сергия включают Хотьково.",
+     "sourceUrl": "https://www.sputnik8.com/ru/sergiev-posad/activities/28236-ekskursiya-po-mestam-zhizni-i-prebyvaniem-prepodobnogo-sergiya-radonezhskogo",
+     "verified": true
+    },
+    {
+     "text": "Монастырь описан на Культура.РФ.",
      "sourceUrl": "https://culture.ru/objects/1649",
-     "verified": false
+     "verified": true
     },
     {
      "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://culture.ru/objects/1649",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
      "verified": false
     },
     {
-     "text": "Описание берега — оценка составителя.",
-     "sourceUrl": "https://culture.ru/objects/1649",
+     "text": "Состав экскурсий может меняться.",
+     "sourceUrl": "https://www.sputnik8.com/ru/sergiev-posad/activities/28236-ekskursiya-po-mestam-zhizni-i-prebyvaniem-prepodobnogo-sergiya-radonezhskogo",
      "verified": false
-    },
-    {
-     "text": "Монастырь — главная достопримечательность Хотькова.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/pokrovskij-hotkov-monastyr/",
-     "verified": true
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "khotkovo-gorodishche",
-   "name": "Древний город",
+   "id": "khotkovo-promysly",
+   "name": "Город художественных промыслов",
    "coords": {
-    "lat": 56.2395,
-    "lon": 38.0295
+    "lat": 56.256,
+    "lon": 37.993
    },
    "kind": "проезжаем",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Радонеж стоял на Переяславском тракте. В древних рукописях упомянуты семь храмов и два монастыря, а население доходило до 4–5 тысяч человек — по меркам XIV века это немало.",
-    "В октябре 1989 года указом Президиума Верховного Совета РСФСР село Городок переименовали в Радонеж."
+    "Хотьково — старый центр художественных промыслов: резьбы и росписи по дереву.",
+    "Монастырь закрыли в 1921 году и вернули Церкви в 1991-м. Финиш — Станция «Хотьково»: Электрички Ярославского направления. Формат остановки — «проезжаем», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "Радонеж стоял на Переяславском тракте.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
+     "text": "Хотьково — старый центр художественных промыслов.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2%D0%BE",
      "verified": true
     },
     {
-     "text": "В рукописях упомянуты 7 храмов и 2 монастыря.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
-     "verified": true
-    },
-    {
-     "text": "Население достигало 4–5 тысяч человек.",
-     "sourceUrl": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6",
-     "verified": false
-    },
-    {
-     "text": "В октябре 1989 года село Городок переименовано в Радонеж.",
-     "sourceUrl": "https://en.wikipedia.com/wiki/Radonezh",
-     "verified": true
-    },
-    {
-     "text": "Родство Рублёва с этими местами — мнение историков.",
-     "sourceUrl": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "khotkovo-vorya-2",
-   "name": "Парк над Ворей",
-   "coords": {
-    "lat": 56.233,
-    "lon": 37.965
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Музей-заповедник стоит на берегу реки Вори, примерно в 60 километрах от Москвы, рядом с Сергиевым Посадом.",
-    "В 1995 году указом президента он получил статус объекта наследия федерального значения; в собрании более 25 тысяч экспонатов."
-   ],
-   "facts": [
-    {
-     "text": "Абрамцево стоит на берегу Вори, примерно в 60 км от Москвы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "В 1995 году музей-заповедник получил статус федерального значения.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "В собрании более 25 тысяч экспонатов.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)",
-     "verified": true
-    },
-    {
-     "text": "«Известия» публиковали фотогалерею Абрамцева.",
-     "sourceUrl": "https://iz.ru/948952/gallery/abramtcevo",
-     "verified": true
-    },
-    {
-     "text": "Тропы парка мы не проверяли.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/abramtsevo/info",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "khotkovo-selo",
-   "name": "Село Софрино и Смоленская церковь",
-   "coords": {
-    "lat": 56.16,
-    "lon": 37.91
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Старое село Софрино стоит в стороне от посёлка. Главный памятник — церковь Смоленской иконы Божией Матери.",
-    "Дату постройки храма и историю села мы по открытым источникам не установили. Если вам интересно — спросите у прихожан. Следующая точка маршрута — «Вознесенская мануфактура»."
-   ],
-   "facts": [
-    {
-     "text": "В селе Софрино есть церковь Смоленской иконы Божией Матери.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": true
-    },
-    {
-     "text": "Дата постройки храма нами не установлена.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": false
-    },
-    {
-     "text": "История села в найденных источниках не раскрыта.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": false
-    },
-    {
-     "text": "Координаты села приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": false
-    },
-    {
-     "text": "Село относится к Пушкинскому округу.",
-     "sourceUrl": "https://sobory.ru/photo/105076",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "khotkovo-manufaktura",
-   "name": "Вознесенская мануфактура",
-   "coords": {
-    "lat": 56.11,
-    "lon": 38.13
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Город вырос вокруг Вознесенской бумагопрядильной мануфактуры на реке Воре; энциклопедическая статья начинает историю с 1834 года, но подробности в найденном тексте обрываются.",
-    "Корпуса фабрики формируют облик старой части города. Внутрь не заходим — территория может быть закрыта."
-   ],
-   "facts": [
-    {
-     "text": "Город вырос из села Муромцево, Вознесенской мануфактуры и посёлка при полигоне.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "История города в энциклопедии начинается с 1834 года.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": false
-    },
-    {
-     "text": "Мануфактура стоит на реке Воре.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": true
-    },
-    {
-     "text": "Доступ на территорию фабрики не проверен.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA",
-     "verified": false
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30760",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "khotkovo-tsentr",
-   "name": "Центр наукограда",
-   "coords": {
-    "lat": 55.962,
-    "lon": 38.042
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Институтские кварталы Фрязина выросли после войны вокруг НИИ; в 1951 году посёлок стал городом.",
-    "29 декабря 2003 года Фрязину присвоили статус наукограда. Название связывают с «фрягами» — итальянцами-строителями Кремля, но это лишь предположение."
-   ],
-   "facts": [
-    {
-     "text": "В 1951 году Фрязино получило статус города.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
-     "verified": true
-    },
-    {
-     "text": "29 декабря 2003 года Фрязину присвоен статус наукограда.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/16521",
-     "verified": true
-    },
-    {
-     "text": "Связь названия с «фрягами» — гипотеза, не подтверждённая источниками.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Вокруг НИИ выросли институтские кварталы.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/",
-     "verified": true
-    },
-    {
-     "text": "Фрязино — наукоград Российской Федерации.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/16521",
+     "text": "Монастырь закрыт в 1921 году и возвращён Церкви в 1991 году.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "khotkovo-klyazma",
-   "name": "Набережная Клязьмы",
-   "coords": {
-    "lat": 55.924,
-    "lon": 38.005
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Щёлково стоит на берегах Клязьмы — река отражена и в символике городского флага.",
-    "Река давала фабрикам воду для промывки и окраски тканей, а теперь даёт горожанам место для прогулок и рыбалки.",
-    "Вдоль Клязьмы возвращаемся к станции: петля по фабричному городу замкнута, и река проводит нас до самой железной дороги."
-   ],
-   "facts": [
-    {
-     "text": "Город расположен на Клязьме, что отражено в символике флага.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — промышленный город с текстильной историей.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-schelkovo-216393/",
-     "verified": true
-    },
-    {
-     "text": "Набережная — место прогулок горожан.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/schyolkovo/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Щёлкова описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Щёлково — центр городского округа.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%BE",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "khotkovo-kombinat",
-   "name": "Хлопчатобумажный комбинат",
-   "coords": {
-    "lat": 55.919,
-    "lon": 38.0
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Вокруг фабрик формировался город. Кроме шерстопрядильных и шёлковых производств, здесь открывались красильные и химические.",
-    "В 1894 году семья Рабенек основала производство соляной кислоты для отбеливания тканей. В городе и сегодня работают хлопчатобумажный комбинат и ткацкая фабрика «Славия»."
-   ],
-   "facts": [
-    {
-     "text": "В Щёлкове работали шерстопрядильные, шёлковые и красильные производства.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "В 1894 году семья Рабенек основала производство соляной кислоты для отбеливания тканей.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "В Щёлкове находятся хлопчатобумажный комбинат и ткацкая фабрика «Славия».",
-     "sourceUrl": "https://101hotels.com/recreation/russia/shchelkovo/history",
-     "verified": true
-    },
-    {
-     "text": "Вокруг фабрик появились школа и больница.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Год основания комбината в найденных источниках не указан.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/shchelkovo/history",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующее производство: смотрим снаружи."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -502,159 +313,99 @@
    "url": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
   },
   {
-   "title": "Радонеж — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%A0%D0%B0%D0%B4%D0%BE%D0%BD%D0%B5%D0%B6"
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/khotkovo"
   },
   {
-   "title": "Храм в Радонеже — КП",
-   "url": "https://www.kp.ru/russia/podmoskove/mesta/hram-v-chest-preobrazheniya-gospodnya-v-radonezhe/"
+   "title": "Источник: culture.ru",
+   "url": "https://culture.ru/objects/1649"
   },
   {
-   "title": "Абрамцево — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%90%D0%B1%D1%80%D0%B0%D0%BC%D1%86%D0%B5%D0%B2%D0%BE_(%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA)"
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/sergiev-posad/activities/28236-ekskursiya-po-mestam-zhizni-i-prebyvaniem-prepodobnogo-sergiya-radonezhskogo"
   },
   {
-   "title": "Абрамцево — Tripster",
-   "url": "https://experience.tripster.ru/journal/articles/usadba-abramcevo/"
-  },
-  {
-   "title": "Абрамцевский кружок — KudaGo",
-   "url": "https://kudago.com/all/news/abramtsevskij-kruzhok-art-/"
-  },
-  {
-   "title": "Предприятие «Софрино» — Газета.ру",
-   "url": "https://www.gazeta.ru/social/2018/07/29/11875777.shtml"
-  },
-  {
-   "title": "Софрино — RTVI",
-   "url": "https://rtvi.com/news/stranger-things-in-sofrino/"
-  },
-  {
-   "title": "Красноармейск — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/30760"
-  },
-  {
-   "title": "Красноармейск — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B0%D1%80%D0%BC%D0%B5%D0%B9%D1%81%D0%BA_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
-  },
-  {
-   "title": "История Фрязина — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/friazino/istoriia"
-  },
-  {
-   "title": "Фрязино — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/fryazino/"
-  },
-  {
-   "title": "НПП «Исток» — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5_%C2%AB%D0%98%D1%81%D1%82%D0%BE%D0%BA%C2%BB"
-  },
-  {
-   "title": "История Щёлкова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/shchelkovo/istoriia"
-  },
-  {
-   "title": "Щёлково — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/shchelkovo/history"
-  },
-  {
-   "title": "Флаг Щёлкова — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A9%D1%91%D0%BB%D0%BA%D0%BE%D0%B2%D0%B0"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A5%D0%BE%D1%82%D1%8C%D0%BA%D0%BE%D0%B2%D0%BE"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.904354,
-     56.16
+     37.96834,
+     56.2538
     ],
     [
-     37.987889,
-     55.9203
+     37.969098,
+     56.252228
     ],
     [
-     37.988641,
-     55.918728
+     37.97117,
+     56.251077
     ],
     [
-     37.990695,
-     55.917577
+     37.987171,
+     56.245277
     ],
     [
-     37.997195,
-     55.916277
+     37.99,
+     56.244856
     ],
     [
-     38.0,
-     55.915856
+     37.992829,
+     56.245277
     ],
     [
-     38.002805,
-     55.916277
+     37.99783,
+     56.247277
     ],
     [
-     38.004859,
-     55.917428
+     37.999901,
+     56.248428
     ],
     [
-     38.00986,
-     55.922428
+     38.000401,
+     56.248928
     ],
     [
-     38.046864,
-     55.960428
+     38.001159,
+     56.2505
     ],
     [
-     38.134883,
-     56.108428
+     37.99866,
+     56.256
     ],
     [
-     38.135639,
-     56.11
+     37.997902,
+     56.257572
     ],
     [
-     38.134883,
-     56.111572
+     37.99583,
+     56.258723
     ],
     [
-     38.0344,
-     56.241072
+     37.993,
+     56.259144
     ],
     [
-     38.032329,
-     56.242223
+     37.974,
+     56.256944
     ],
     [
-     37.98983,
-     56.255723
+     37.97117,
+     56.256523
     ],
     [
-     37.987,
-     56.256144
+     37.969098,
+     56.255372
     ],
     [
-     37.98417,
-     56.255723
-    ],
-    [
-     37.982099,
-     56.254572
-    ],
-    [
-     37.960101,
-     56.234572
-    ],
-    [
-     37.90511,
-     56.161572
-    ],
-    [
-     37.904354,
-     56.16
+     37.96834,
+     56.2538
     ]
    ]
   ]
