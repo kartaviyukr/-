@@ -12,8 +12,8 @@
  "intro": [
   "Уваровка — самый западный посёлок Можайского округа, выросший у железной дороги. В 1868–1869 годах акционерное общество Алексея Уварова построило линию Москва — Смоленск, и тогда же возникла станция Уваровская.",
   "Посёлок носит имя графов Уваровых, инициаторов дороги; в 2026 году Уваровка отметила 157-летие. В Можайске открывалась выставка «Золотой век Уваровых».",
-  "Свои места маршрута: «Посёлок Уваровых». По пути маршрут заходит и к соседям: Колоцкий монастырь — «Надвратная колокольня»; Бородинское поле — «Батарея Раевского», «Спасо-Бородинский монастырь», «Багратионовы флеши»; Можайск — «Лужецкий монастырь», «Никольская гора и собор», «Город после крепости».",
-  "Маршрут линейный, около 51 км и 8 точек. Финиш — Станция «Можайск» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Уваровская», «Серафимовский храм», «Посёлок Уваровых». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 1 км: старт и финиш — Станция «Уваровка» (Электрички Белорусского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Уваровка»",
@@ -24,24 +24,106 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Можайск»",
+  "name": "Станция «Уваровка»",
   "coords": {
-   "lat": 55.505,
-   "lon": 36.033
+   "lat": 55.5302,
+   "lon": 35.6105
   },
   "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 51.0,
-  "durationH": 6.6,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 1.4,
+  "durationH": 0.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "uvarovka-stantsiya",
+   "name": "Станция Уваровская",
+   "coords": {
+    "lat": 55.53,
+    "lon": 35.61
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В 1868–1869 годах акционерное общество Алексея Уварова построило железную дорогу Москва — Смоленск. Тогда же появилась станция Уваровская.",
+    "Дорога сыграла главную роль в становлении посёлка, который носит имя Уваровых. Следующая точка маршрута — «Серафимовский храм»."
+   ],
+   "facts": [
+    {
+     "text": "В 1868–1869 годах общество Уварова построило линию Москва — Смоленск.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Тогда же возникла станция Уваровская.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Инициаторами дороги были графы Уваровы.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": true
+    },
+    {
+     "text": "Посёлок отметил 157-летие.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "uvarovka-serafim",
+   "name": "Серафимовский храм",
+   "coords": {
+    "lat": 55.5312,
+    "lon": 35.6078
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Храм преподобного Серафима Саровского построен по проекту архитектора Н. Б. Васнецова; его белые стены и золотые главки видно из окон проходящих поездов.",
+    "Посёлок вырос у станции в 1860-х годах и назван по семье графа С. С. Уварова, жившей рядом в Поречье; в 1929–1960 годах был центром Уваровского района."
+   ],
+   "facts": [
+    {
+     "text": "Храм построен по проекту Н. Б. Васнецова; адрес — Торговая ул., 8-а.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": true
+    },
+    {
+     "text": "Храм виден из окон проходящих поездов.",
+     "sourceUrl": "https://stseraphim.ru/",
+     "verified": true
+    },
+    {
+     "text": "Посёлок назван по семье графа С. С. Уварова.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
   {
    "id": "uvarovka-posyolok",
    "name": "Посёлок Уваровых",
@@ -53,7 +135,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Уваровка — один из самых западных посёлков Московской области, недалеко от границы со Смоленщиной.",
-    "В Можайске открывалась выставка «Золотой век Уваровых» — о роде, давшем имя посёлку. Следующая точка маршрута — «Надвратная колокольня»."
+    "В Можайске открывалась выставка «Золотой век Уваровых» — о роде, давшем имя посёлку. Финиш — Станция «Уваровка»: Электрички Белорусского направления."
    ],
    "facts": [
     {
@@ -85,337 +167,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "uvarovka-kolokolnya",
-   "name": "Надвратная колокольня",
-   "coords": {
-    "lat": 55.5802,
-    "lon": 35.7898
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Надвратную колокольню строили в 1739–1763 годах. По одному источнику, в 1812 году на неё поднимался фельдмаршал Кутузов.",
-    "Был ли монастырь госпиталем в 1812 году — в найденных источниках не подтверждено. Следующая точка маршрута — «Батарея Раевского»."
-   ],
-   "facts": [
-    {
-     "text": "Колокольню строили в 1739–1763 годах.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Кутузов поднимался на колокольню — по одному источнику.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Использование монастыря как госпиталя не подтверждено.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость маршрута оценена приблизительно.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "uvarovka-raevsky",
-   "name": "Батарея Раевского",
-   "coords": {
-    "lat": 55.522,
-    "lon": 35.818
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Батарея Раевского на Курганной высоте — одна из ключевых точек сражения. Здесь стоит главный монумент воинам русской армии.",
-    "В 1839 году на Курганной высоте по указу Николая I установили первый памятник героям — с этого и начался музей. Под музей тогда отвели каменную сторожку у монумента."
-   ],
-   "facts": [
-    {
-     "text": "Музей-заповедник основан в 1839 году.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Первый памятник героям поставлен на Курганной высоте по указу Николая I.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Под музей отвели каменную сторожку у монумента.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Батарея Раевского — главный монумент русской армии.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "Комплекс включает братские могилы, храмы, укрепления и памятники.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "uvarovka-monastyr",
-   "name": "Спасо-Бородинский монастырь",
-   "coords": {
-    "lat": 55.508,
-    "lon": 35.82
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Маргарита Тучкова в память о муже построила церковь Спаса Нерукотворного на месте его гибели; вокруг вырос Спасо-Бородинский женский монастырь.",
-    "В 1941 году на Бородинском поле снова шли бои — уже с немецкими войсками. Следующая точка маршрута — «Багратионовы флеши»."
-   ],
-   "facts": [
-    {
-     "text": "Монастырь основала Маргарита Тучкова в память о муже.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "Церковь Спаса Нерукотворного построена на месте гибели Тучкова.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "В 1941 году на поле шли бои с немецкими войсками.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Монастырь — женский.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "uvarovka-fleshi",
-   "name": "Багратионовы флеши",
-   "coords": {
-    "lat": 55.51,
-    "lon": 35.825
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Сражение произошло 26 августа (7 сентября) 1812 года у села Бородино. Багратионовы флеши — земляные укрепления, за которые шли ожесточённые бои.",
-    "На центральном укреплении флешей погиб генерал Александр Тучков. Итог сражения остаётся предметом споров: ни одна из сторон не достигла поставленных целей.",
-    "По полю ездят и на электромобилях с экскурсией. Следующая точка маршрута — «Лужецкий монастырь»."
-   ],
-   "facts": [
-    {
-     "text": "Сражение произошло 26 августа (7 сентября) 1812 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Ни одна из сторон не добилась своих целей.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5",
-     "verified": true
-    },
-    {
-     "text": "Генерал Тучков погиб на центральном укреплении флешей.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": true
-    },
-    {
-     "text": "По полю проводят экскурсии на электромобилях.",
-     "sourceUrl": "https://www.culture.ru/events/5906675/ekskursiya-na-elektromobile-po-borodinskomu-polyu",
-     "verified": true
-    },
-    {
-     "text": "Координаты флешей приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/Бородино",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "uvarovka-luzhetsky",
-   "name": "Лужецкий монастырь",
-   "coords": {
-    "lat": 55.51,
-    "lon": 36.005
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Лужецкий монастырь основан в 1408 году преподобным Ферапонтом. Это единственная древняя можайская обитель, сохранившаяся до наших дней.",
-    "В 1812 году монастырь сильно пострадал: французские войска устроили здесь штаб.",
-    "Действующий монастырь: правила посещения. Следующая точка маршрута — «Никольская гора и собор»."
-   ],
-   "facts": [
-    {
-     "text": "Лужецкий монастырь основан в 1408 году Ферапонтом.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Это единственная сохранившаяся древняя обитель Можайска.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "В 1812 году здесь был французский штаб.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Монастырь описан в паломническом справочнике.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "uvarovka-nikolskaya",
-   "name": "Никольская гора и собор",
-   "coords": {
-    "lat": 55.5,
-    "lon": 36.025
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Можайск впервые упоминается в летописи под 1231 годом и сначала входил в Смоленское княжество. Крепость на Никольской горе, по одному источнику, строили ещё в XII веке.",
-    "Первыми каменными постройками в XIV веке стали Никольский собор, Никольские ворота и Воздвиженская церковь. Сегодняшний собор — красивое неоготическое здание. От кремля сохранились въездные ворота и 11-метровый участок стены."
-   ],
-   "facts": [
-    {
-     "text": "Можайск впервые упомянут под 1231 годом.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Город входил в Смоленское княжество.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Крепость на Никольской горе — XII век, по одному источнику.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "От кремля сохранились ворота и 11-метровый участок стены.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "При Екатерине II крепость разбирали на кирпич.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "uvarovka-upadok",
-   "name": "Город после крепости",
-   "coords": {
-    "lat": 55.505,
-    "lon": 36.03
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Упадок крепости начался после 1686 года, а при Екатерине II её начали разбирать на кирпичи.",
-    "Можайск — ворота к Бородинскому полю, у которого в спирали свой маршрут. Финиш — Станция «Можайск»: Электрички Белорусского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Упадок начался после 1686 года.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": true
-    },
-    {
-     "text": "Бородинское поле — рядом с Можайском.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret",
-     "verified": false
-    },
-    {
-     "text": "Можайск описан на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%9C%D0%BE%D0%B6%D0%B0%D0%B9%D1%81%D0%BA",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 30,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -451,39 +204,35 @@
    "url": "https://riamo.ru/news/obschestvo/uvarovka-v-mozhajskom-okruge-otmetila-157-letie/"
   },
   {
-   "title": "Колоцкий монастырь — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%9A%D0%BE%D0%BB%D0%BE%D1%86%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
+   "title": "Источник: ru.wikipedia.org",
+   "url": "https://ru.wikipedia.org/wiki/%D0%A3%D0%B2%D0%B0%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_(%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C)"
   },
   {
-   "title": "Бородинское сражение — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%B5_%D1%81%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5"
+   "title": "Источник: stseraphim.ru",
+   "url": "https://stseraphim.ru/"
   },
   {
-   "title": "Музей-заповедник — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9-%D0%B7%D0%B0%D0%BF%D0%BE%D0%B2%D0%B5%D0%B4%D0%BD%D0%B8%D0%BA"
-  },
-  {
-   "title": "Можайск — Путёвка",
-   "url": "https://www.putevka.com/blog/dostoprimechatelnosti-mozhayska-na-vykhodnye-chto-posmotret"
-  },
-  {
-   "title": "История — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/mozhaisk/istoriia"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/news/obschestvo/v-mozhajske-otkrylas-vystavka-pod-nazvaniem-zolotoj-vek-uvarovyh/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     35.604445,
-     55.53
+     35.602245,
+     55.5312
     ],
     [
-     35.605189,
-     55.528428
+     35.602989,
+     55.529628
+    ],
+    [
+     35.605022,
+     55.528477
     ],
     [
      35.607222,
@@ -494,64 +243,48 @@
      55.526856
     ],
     [
-     35.82,
-     55.504856
+     35.612778,
+     55.527277
     ],
     [
-     36.025,
-     55.496856
+     35.617778,
+     55.529277
     ],
     [
-     36.027775,
-     55.497277
+     35.619811,
+     55.530428
     ],
     [
-     36.029807,
-     55.498428
+     35.620555,
+     55.532
     ],
     [
-     36.037808,
-     55.503428
+     35.619811,
+     55.533572
     ],
     [
-     36.038552,
-     55.505
-    ],
-    [
-     36.037808,
-     55.506572
-    ],
-    [
-     36.035776,
-     55.507723
-    ],
-    [
-     35.792581,
-     55.582923
-    ],
-    [
-     35.7898,
-     55.583344
-    ],
-    [
-     35.787019,
-     55.582923
-    ],
-    [
-     35.612222,
+     35.617778,
      55.534723
     ],
     [
-     35.607222,
-     55.532723
+     35.615,
+     55.535144
     ],
     [
-     35.605189,
-     55.531572
+     35.6078,
+     55.534344
     ],
     [
-     35.604445,
-     55.53
+     35.605022,
+     55.533923
+    ],
+    [
+     35.602989,
+     55.532772
+    ],
+    [
+     35.602245,
+     55.5312
     ]
    ]
   ]
