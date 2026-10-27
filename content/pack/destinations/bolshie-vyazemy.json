@@ -13,8 +13,8 @@
   "Большие Вязёмы — усадьба на Большой Смоленской дороге, часть Государственного историко-литературного музея-заповедника А. С. Пушкина, созданного в 1994 году.",
   "В XVI веке Вязёмы были скромной деревней; при Борисе Годунове здесь, предположительно в 1584–1600 годах, построили семиглавый двухэтажный храм с уникальной звонницей.",
   "Позже усадьба принадлежала Голицыным. Дворец называют «Дворцом Пиковой дамы»; в нём есть масонская комната. Рядом похоронен Николай Пушкин, младший брат поэта.",
-  "Свои места маршрута: «Спасо-Преображенский собор и звонница». По пути маршрут заходит и к соседям: Захарово — «Пушкинская тропа», «Пруд и детство поэта»; Голицыно — «Дорога к Вязёмам», «Центр Голицына»; Апрелевка — «Завод грампластинок»; Селятино — «Институт Данилевского»; Калининец — «Тарасково», «Посёлок».",
-  "Маршрут линейный, около 57 км и 9 точек. Финиш — Станция «Селятино» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Свои места маршрута: «Спасо-Преображенский собор и звонница». По пути маршрут заходит и к соседям: Голицыно — «Центр Голицына»; Захарово — «Пушкинская тропа», «Пруд и детство поэта»; Парк «Патриот» — «Главный храм Вооружённых сил»; Селятино — «Посёлок «Гидромонтажа»», «Институт Данилевского»; Апрелевка — «Завод грампластинок», «Город и ручей Прелый».",
+  "Маршрут линейный, около 53 км и 9 точек. Финиш — Станция «Апрелевка» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Голицыно»",
@@ -25,17 +25,17 @@
   "transport": "Электрички Белорусского направления"
  },
  "endPoint": {
-  "name": "Станция «Селятино»",
+  "name": "Станция «Апрелевка»",
   "coords": {
-   "lat": 55.515,
-   "lon": 36.98
+   "lat": 55.5452,
+   "lon": 37.0735
   },
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 57.0,
-  "durationH": 6.4,
-  "difficulty": "сложный",
+  "distanceKm": 53.0,
+  "durationH": 6.7,
+  "difficulty": "средний",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
@@ -43,6 +43,52 @@
   "barriers": []
  },
  "stops": [
+  {
+   "id": "bolshie-vyazemy-tsentr",
+   "name": "Центр Голицына",
+   "coords": {
+    "lat": 55.617,
+    "lon": 36.99
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Голицыно — небольшой город; его центр складывался вокруг станции.",
+    "Дату основания и происхождение названия мы в найденных источниках не нашли. Не будем гадать, связано ли оно с князьями Голицыными, владевшими соседними Вязёмами. Следующая точка маршрута — «Спасо-Преображенский собор и звонница»."
+   ],
+   "facts": [
+    {
+     "text": "Центр города сложился вокруг станции.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Происхождение названия не установлено.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    },
+    {
+     "text": "Достопримечательности Голицына собраны на komandirovka.ru.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/golicino/",
+     "verified": true
+    },
+    {
+     "text": "Координаты центра приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 10
+  },
   {
    "id": "bolshie-vyazemy-sobor",
    "name": "Спасо-Преображенский собор и звонница",
@@ -89,7 +135,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "coordsVerified": false,
-   "order": 10
+   "order": 20
   },
   {
    "id": "bolshie-vyazemy-tropa",
@@ -135,7 +181,7 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 20
+   "order": 30
   },
   {
    "id": "bolshie-vyazemy-prud",
@@ -182,94 +228,50 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "bolshie-vyazemy-okraina",
-   "name": "Дорога к Вязёмам",
-   "coords": {
-    "lat": 55.625,
-    "lon": 36.99
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Отсюда начинается дорога к Большим Вязёмам и Захарову — пушкинским местам, о которых рассказывают отдельные маршруты спирали.",
-    "Туристические сайты советуют использовать Голицыно как отправную точку для поездок по окрестным усадьбам."
-   ],
-   "facts": [
-    {
-     "text": "Рядом с Голицыном — Большие Вязёмы и Захарово.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Захарово связано с детством Пушкина.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "Голицыно — удобная отправная точка для усадеб.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Голицыно описано в Знании.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
    "order": 40
   },
   {
-   "id": "bolshie-vyazemy-tsentr",
-   "name": "Центр Голицына",
+   "id": "bolshie-vyazemy-khram",
+   "name": "Главный храм Вооружённых сил",
    "coords": {
-    "lat": 55.617,
-    "lon": 36.99
+    "lat": 55.565,
+    "lon": 36.82
    },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
    "guideStory": [
-    "Голицыно — небольшой город; его центр складывался вокруг станции.",
-    "Дату основания и происхождение названия мы в найденных источниках не нашли. Не будем гадать, связано ли оно с князьями Голицыными, владевшими соседними Вязёмами. Следующая точка маршрута — «Завод грампластинок»."
+    "Главный храм Вооружённых сил — одна из ключевых точек парка. Рядом — музейный комплекс «Дорога памяти».",
+    "Дату освящения храма мы в найденных источниках не сверили и поэтому не приводим.",
+    "Билеты в музейный комплекс и режим посещения храма уточняйте на официальном сайте парка."
    ],
    "facts": [
     {
-     "text": "Центр города сложился вокруг станции.",
-     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "text": "Главный храм ВС РФ и комплекс «Дорога памяти» — главные объекты парка.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
      "verified": true
     },
     {
-     "text": "Дата основания не найдена.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Происхождение названия не установлено.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
-     "verified": false
-    },
-    {
-     "text": "Достопримечательности Голицына собраны на komandirovka.ru.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/golicino/",
+     "text": "Парк расположен на 43-м километре Минского шоссе.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
      "verified": true
     },
     {
-     "text": "Координаты центра приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "text": "Парк открыт в 2015 году.",
+     "sourceUrl": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/",
+     "verified": true
+    },
+    {
+     "text": "Дата освящения храма нами не сверена.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
      "verified": false
     }
    ],
+   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
@@ -277,43 +279,42 @@
    "order": 50
   },
   {
-   "id": "bolshie-vyazemy-zavod",
-   "name": "Завод грампластинок",
+   "id": "bolshie-vyazemy-gidromontazh",
+   "name": "Посёлок «Гидромонтажа»",
    "coords": {
-    "lat": 55.55,
-    "lon": 37.07
+    "lat": 55.515,
+    "lon": 36.975
    },
-   "kind": "смотреть снаружи",
+   "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
-    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
-    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
+    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
+    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
    ],
    "facts": [
     {
-     "text": "Завод основан в 1910 году Б. Моллем.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
      "verified": true
     },
     {
-     "text": "Первые пластинки выпущены в декабре 1910 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "text": "Посёлок отмечал 66-й день рождения.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
      "verified": true
     },
     {
-     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "text": "Подробности о работе треста не найдены.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Селятино находится в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
      "verified": true
     },
     {
-     "text": "С 1964 года завод входил в фирму «Мелодия».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
      "verified": false
     }
    ],
@@ -370,44 +371,44 @@
    "order": 70
   },
   {
-   "id": "bolshie-vyazemy-taraskovo",
-   "name": "Тарасково",
+   "id": "bolshie-vyazemy-zavod",
+   "name": "Завод грампластинок",
    "coords": {
-    "lat": 55.49,
-    "lon": 36.9
+    "lat": 55.55,
+    "lon": 37.07
    },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
    "guideStory": [
-    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
-    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
-    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок»."
+    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
+    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
+    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
    ],
    "facts": [
     {
-     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "text": "Завод основан в 1910 году Б. Моллем.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
      "verified": true
     },
     {
-     "text": "Посёлок связан с военным городком.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "text": "Первые пластинки выпущены в декабре 1910 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
      "verified": true
     },
     {
-     "text": "Дата основания не найдена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "С 1964 года завод входил в фирму «Мелодия».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
      "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Калининец находится недалеко от станции Голицыно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
     }
    ],
    "openingHoursNote": "",
@@ -417,44 +418,43 @@
    "order": 80
   },
   {
-   "id": "bolshie-vyazemy-posyolok",
-   "name": "Посёлок",
+   "id": "bolshie-vyazemy-gorod",
+   "name": "Город и ручей Прелый",
    "coords": {
-    "lat": 55.471,
-    "lon": 36.881
+    "lat": 55.545,
+    "lon": 37.075
    },
    "kind": "проезжаем",
-   "visitMinutes": 10,
+   "visitMinutes": 15,
    "guideStory": [
-    "Калининец — посёлок, где живут семьи военнослужащих. Здесь есть остановки автобусов на Голицыно и Селятино.",
-    "Больше подробностей мы в открытых источниках не нашли. Маршрут заканчивается здесь.",
-    "Обратно — автобусом или своим ходом к Селятину. Финиш — Станция «Селятино»: Электрички Киевского направления / МЦД-4."
+    "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
+    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Финиш — Станция «Апрелевка»: Электрички Киевского направления / МЦД-4."
    ],
    "facts": [
     {
-     "text": "Автобусы ходят из Калининца в Голицыно и Селятино.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "text": "Апрелевка основана в 1899 году, город — с 1961 года.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
      "verified": true
     },
     {
-     "text": "Состав жителей — оценка составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "text": "Город расположен в 28 км к юго-западу от Москвы.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Версия о ручье Прелом — одна из версий.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
      "verified": false
     },
     {
-     "text": "История посёлка в источниках не раскрыта.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
+     "text": "В Апрелевке есть генеральские дачи.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/04/01/kult-gramplas/",
+     "verified": true
     },
     {
      "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
      "verified": false
-    },
-    {
-     "text": "Калининец — в Наро-Фоминском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
     }
    ],
    "openingHoursNote": "",
@@ -498,6 +498,14 @@
    "url": "https://360.ru/news/zima/usadba-bolshie-vjazemy/"
   },
   {
+   "title": "Голицыно — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
+   "title": "Голицыно — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
    "title": "Детство гения: Захарово — Спутник8",
    "url": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina"
   },
@@ -506,12 +514,20 @@
    "url": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/"
   },
   {
-   "title": "Голицыно — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+   "title": "Парк «Патриот» — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
   },
   {
-   "title": "Голицыно — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+   "title": "Парк «Патриот» — Яндекс Путешествия",
+   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
+  },
+  {
+   "title": "Selyatino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Selyatino"
+  },
+  {
+   "title": "Селятино 66 лет — Рамблер",
+   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
   },
   {
    "title": "Апрелевский завод грампластинок — Рувики",
@@ -524,22 +540,6 @@
   {
    "title": "Апрелевка — Знание",
    "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
-  },
-  {
-   "title": "Selyatino — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Selyatino"
-  },
-  {
-   "title": "Селятино 66 лет — Рамблер",
-   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
-  },
-  {
-   "title": "Kalininets — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kalininets"
-  },
-  {
-   "title": "Tamanskaya Division — Military Wiki",
-   "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
   }
  ],
  "lastChecked": "2026-10-26",
@@ -549,40 +549,48 @@
   "coordinates": [
    [
     [
-     36.875453,
-     55.471
+     36.81444,
+     55.565
     ],
     [
-     36.876196,
-     55.469428
+     36.815185,
+     55.563428
     ],
     [
-     36.878227,
-     55.468277
+     36.81722,
+     55.562277
     ],
     [
-     36.881,
-     55.467856
+     36.972223,
+     55.512277
     ],
     [
-     36.883773,
-     55.468277
+     36.975,
+     55.511856
     ],
     [
-     37.072779,
-     55.547277
+     36.982,
+     55.512856
     ],
     [
-     37.074813,
-     55.548428
+     36.984777,
+     55.513277
     ],
     [
-     37.075558,
-     55.55
+     37.077779,
+     55.542277
     ],
     [
-     37.074813,
-     55.551572
+     37.079813,
+     55.543428
+    ],
+    [
+     37.080557,
+     55.545
+    ],
+    [
+     37.079813,
+     55.546572
     ],
     [
      36.999824,
@@ -605,16 +613,16 @@
      55.647223
     ],
     [
-     36.966175,
-     55.646072
+     36.81722,
+     55.567723
     ],
     [
-     36.876196,
-     55.472572
+     36.815185,
+     55.566572
     ],
     [
-     36.875453,
-     55.471
+     36.81444,
+     55.565
     ]
    ]
   ]

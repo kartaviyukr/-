@@ -13,8 +13,8 @@
   "Апрелевка — город грампластинок в 28 км к юго-западу от Москвы. Основана в 1899 году, город — с 1961-го. По одной версии, название не связано с апрелем: местный ручей назывался Прелым.",
   "В 1910 году прусский подданный Б. Молль с немецкими специалистами А. Кибартом и А. Фогтом основал здесь завод грампластинок; первые диски вышли в декабре 1910 года, а в 1911-м — около 400 тысяч дисков «Метрополь-рекорд».",
   "С 1930-х годов это крупнейший производитель грампластинок в СССР, с 1964 года — в составе «Мелодии». Производство прекратили в 1995 году (по другим данным — в 2002-м). Сегодня работает частный музей истории завода.",
-  "Свои места маршрута: «Завод грампластинок», «Музей истории завода», «Город и ручей Прелый». По пути маршрут заходит и к соседям: Селятино — «Институт Данилевского»; Калининец — «Тарасково», «Посёлок»; Парк «Патриот» — «Танковый музей»; Кубинка — «Вокзал Кубинка-1».",
-  "Маршрут линейный, около 51 км и 8 точек. Финиш — Станция «Кубинка-1» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Свои места маршрута: «Город и ручей Прелый», «Музей истории завода», «Завод грампластинок». По пути маршрут заходит и к соседям: Селятино — «Институт Данилевского», «Серафимовский храм»; Калининец — «Тарасково»; Захарово — «Пушкинская тропа»; Большие Вязёмы — «Старинная плотина и Смоленская дорога»; Голицыно — «Вокзал Кекушева».",
+  "Маршрут линейный, около 50 км и 9 точек. Финиш — Станция «Голицыно» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Апрелевка»",
@@ -25,16 +25,16 @@
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "endPoint": {
-  "name": "Станция «Кубинка-1»",
+  "name": "Станция «Голицыно»",
   "coords": {
-   "lat": 55.577,
-   "lon": 36.695
+   "lat": 55.615,
+   "lon": 36.985
   },
   "transport": "Электрички Белорусского направления"
  },
  "route": {
-  "distanceKm": 51.0,
-  "durationH": 6.3,
+  "distanceKm": 50.0,
+  "durationH": 6.1,
   "difficulty": "средний",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
@@ -43,6 +43,100 @@
   "barriers": []
  },
  "stops": [
+  {
+   "id": "aprelevka-gorod",
+   "name": "Город и ручей Прелый",
+   "coords": {
+    "lat": 55.545,
+    "lon": 37.075
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
+    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Следующая точка маршрута — «Музей истории завода»."
+   ],
+   "facts": [
+    {
+     "text": "Апрелевка основана в 1899 году, город — с 1961 года.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Город расположен в 28 км к юго-западу от Москвы.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Версия о ручье Прелом — одна из версий.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
+     "verified": false
+    },
+    {
+     "text": "В Апрелевке есть генеральские дачи.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/04/01/kult-gramplas/",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 10
+  },
+  {
+   "id": "aprelevka-muzey",
+   "name": "Музей истории завода",
+   "coords": {
+    "lat": 55.548,
+    "lon": 37.072
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "В Апрелевке работает частный музей истории завода грампластинок; его организовал предприниматель Борис Чухонцев.",
+    "Музей принимает гостей, в том числе делегации; программы музея анонсирует Культура.РФ.",
+    "Часы работы и возможность экскурсии уточняйте заранее. Следующая точка маршрута — «Завод грампластинок»."
+   ],
+   "facts": [
+    {
+     "text": "Частный музей истории завода организовал Борис Чухонцев.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Музей принимает делегации.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": true
+    },
+    {
+     "text": "Программы музея анонсирует Культура.РФ.",
+     "sourceUrl": "https://www.culture.ru/events/6203287/programma-aprelevskii-zavod-grammplastinok",
+     "verified": true
+    },
+    {
+     "text": "Часы работы не проверены.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": false
+    },
+    {
+     "text": "Координаты музея приблизительные.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
+     "verified": false
+    }
+   ],
+   "tickets": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 20
+  },
   {
    "id": "aprelevka-zavod",
    "name": "Завод грампластинок",
@@ -81,100 +175,6 @@
     {
      "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
      "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "aprelevka-muzey",
-   "name": "Музей истории завода",
-   "coords": {
-    "lat": 55.548,
-    "lon": 37.072
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "В Апрелевке работает частный музей истории завода грампластинок; его организовал предприниматель Борис Чухонцев.",
-    "Музей принимает гостей, в том числе делегации; программы музея анонсирует Культура.РФ.",
-    "Часы работы и возможность экскурсии уточняйте заранее. Следующая точка маршрута — «Город и ручей Прелый»."
-   ],
-   "facts": [
-    {
-     "text": "Частный музей истории завода организовал Борис Чухонцев.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Музей принимает делегации.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
-     "verified": true
-    },
-    {
-     "text": "Программы музея анонсирует Культура.РФ.",
-     "sourceUrl": "https://www.culture.ru/events/6203287/programma-aprelevskii-zavod-grammplastinok",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/delegatsiya-iz-tatarstana-posetila-muzej-istorii-zavoda-gramplastinok-naro-fominskogo-rajona-xl/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "aprelevka-gorod",
-   "name": "Город и ручей Прелый",
-   "coords": {
-    "lat": 55.545,
-    "lon": 37.075
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
-    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Следующая точка маршрута — «Институт Данилевского»."
-   ],
-   "facts": [
-    {
-     "text": "Апрелевка основана в 1899 году, город — с 1961 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Город расположен в 28 км к юго-западу от Москвы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Версия о ручье Прелом — одна из версий.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "В Апрелевке есть генеральские дачи.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/04/01/kult-gramplas/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
      "verified": false
     }
    ],
@@ -231,6 +231,55 @@
    "order": 40
   },
   {
+   "id": "aprelevka-khram",
+   "name": "Серафимовский храм",
+   "coords": {
+    "lat": 55.513,
+    "lon": 36.978
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Селятине стоит Серафимовский храм; в 2010 году на нём освятили кресты.",
+    "Храм описан в паломническом справочнике «Азбуки веры». Его историю мы подробно не сверяли.",
+    "Храм действующий; от него едем по посёлку к институту. Следующая точка маршрута — «Тарасково»."
+   ],
+   "facts": [
+    {
+     "text": "В Селятине есть Серафимовский храм.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "В 2010 году на храме освятили кресты.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Храм действующий.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    },
+    {
+     "text": "История храма подробно не сверена.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
    "id": "aprelevka-taraskovo",
    "name": "Тарасково",
    "coords": {
@@ -242,7 +291,7 @@
    "guideStory": [
     "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
     "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
-    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок»."
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Пушкинская тропа»."
    ],
    "facts": [
     {
@@ -275,97 +324,48 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "aprelevka-posyolok",
-   "name": "Посёлок",
-   "coords": {
-    "lat": 55.471,
-    "lon": 36.881
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Калининец — посёлок, где живут семьи военнослужащих. Здесь есть остановки автобусов на Голицыно и Селятино.",
-    "Больше подробностей мы в открытых источниках не нашли. Маршрут заканчивается здесь.",
-    "Обратно — автобусом или своим ходом к Селятину. Следующая точка маршрута — «Танковый музей»."
-   ],
-   "facts": [
-    {
-     "text": "Автобусы ходят из Калининца в Голицыно и Селятино.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    },
-    {
-     "text": "Состав жителей — оценка составителя.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "История посёлка в источниках не раскрыта.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Калининец — в Наро-Фоминском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
    "order": 60
   },
   {
-   "id": "aprelevka-tanki",
-   "name": "Танковый музей",
+   "id": "aprelevka-tropa",
+   "name": "Пушкинская тропа",
    "coords": {
-    "lat": 55.56,
-    "lon": 36.825
+    "lat": 55.64,
+    "lon": 36.98
    },
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
+   "kind": "проезжаем",
+   "visitMinutes": 20,
    "guideStory": [
-    "Танковый музей (Технический центр) — одно из крупнейших собраний бронетехники. Музей разделён на семь павильонов: справа от аллеи — зарубежная техника, слева — российская.",
-    "В проекте парка предусматривались также интерактивный музей с симуляторами управления и музеи ВКС, ВДВ и ВМФ.",
-    "Музей платный; по туристическим данным, парк работает со вторника по воскресенье — проверьте перед поездкой."
+    "В 2020 году объявили о создании Пушкинской тропы, которая, по описаниям, начинается от Захарова.",
+    "Сноб включает пушкинские усадьбы в идеи для летнего отдыха в Подмосковье. Маршрут тропы на месте мы не проверяли. Следующая точка маршрута — «Старинная плотина и Смоленская дорога»."
    ],
    "facts": [
     {
-     "text": "Танковый музей разделён на семь павильонов.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "text": "О создании Пушкинской тропы объявили в 2020 году.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
      "verified": true
     },
     {
-     "text": "Справа от аллеи — зарубежная техника, слева — российская.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
-     "verified": true
-    },
-    {
-     "text": "Проект парка включал интерактивный музей бронетехники с симуляторами.",
-     "sourceUrl": "https://realty.rbc.ru/news/577d215f9a7947a78ce913ad",
-     "verified": true
-    },
-    {
-     "text": "Парк работает вт–вс — по туристическому сайту.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/pages/kak-dobratsya-v-park-patriot",
+     "text": "Тропа начинается от Захарова — по описаниям.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
      "verified": false
     },
     {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info",
+     "text": "Сноб включает пушкинские места в идеи летнего отдыха.",
+     "sourceUrl": "https://snob.ru/travel/goroda-usadby-zapovedniki-i-festivali-idei-dlya-letnego-otdyha-v-podmoskove/",
+     "verified": true
+    },
+    {
+     "text": "Маршрут тропы не проверен.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
+     "verified": false
+    },
+    {
+     "text": "Координаты тропы приблизительные.",
+     "sourceUrl": "https://www.sputnik8.com/ru/moscow/activities/94125-avtobusnaya-ekskursiya-pushkin-nashe-vsyo-bolshie-vyazemy-zaharovo",
      "verified": false
     }
    ],
-   "tickets": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
@@ -373,50 +373,97 @@
    "order": 70
   },
   {
-   "id": "aprelevka-vokzal",
-   "name": "Вокзал Кубинка-1",
+   "id": "aprelevka-plotina",
+   "name": "Старинная плотина и Смоленская дорога",
    "coords": {
-    "lat": 55.577,
-    "lon": 36.695
+    "lat": 55.6345,
+    "lon": 36.996
    },
    "kind": "проезжаем",
-   "visitMinutes": 10,
+   "visitMinutes": 15,
    "guideStory": [
-    "В южной части города стоит здание вокзала у станции Кубинка-1. Историю станции мы в найденных источниках не нашли.",
-    "Кубинка — примерно в 60 км к западу от центра Москвы. Финиш — Станция «Кубинка-1»: Электрички Белорусского направления."
+    "В ансамбль входит старинная плотина. Рядом проходит Большая Смоленская дорога — ныне Можайское шоссе, по которой в 1812 году наступала и затем отступала армия Наполеона.",
+    "360.ru называет Вязёмы местом красивым, спокойным и романтичным — с этим трудно спорить."
    ],
    "facts": [
     {
-     "text": "У станции Кубинка-1 есть здание вокзала.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "В ансамбль входит старинная плотина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B",
      "verified": true
     },
     {
-     "text": "Кубинка — примерно в 60 км к западу от центра Москвы.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "text": "Рядом проходит Большая Смоленская дорога (Можайское шоссе).",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B",
      "verified": true
     },
     {
-     "text": "История станции не найдена.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "По этой дороге в 1812 году шла армия Наполеона.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "360.ru рассказывал об усадьбе.",
+     "sourceUrl": "https://360.ru/news/zima/usadba-bolshie-vjazemy/",
+     "verified": true
+    },
+    {
+     "text": "Координаты плотины приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "aprelevka-vokzal",
+   "name": "Вокзал Кекушева",
+   "coords": {
+    "lat": 55.615,
+    "lon": 36.985
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Станция на Московско-Смоленской линии стала ядром поселения. Сохранившееся здание начала XX века связывают с архитектором Львом Кекушевым.",
+    "Кекушев — один из главных мастеров московского модерна. Авторство вокзала мы знаем по туристическому источнику и отмечаем это."
+   ],
+   "facts": [
+    {
+     "text": "Город сформировался вокруг станции на Московско-Смоленской линии.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Здание вокзала начала XX века связывают с Кекушевым.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
      "verified": false
     },
     {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
-     "verified": false
+     "text": "Голицыно — город Одинцовского округа.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": true
     },
     {
-     "text": "Кубинка описана на travelto.ru.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "Станция носит название Голицыно.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
      "verified": true
+    },
+    {
+     "text": "Кекушев — мастер московского модерна.",
+     "sourceUrl": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE",
+     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 80
+   "order": 90
   }
  ],
  "dish": {
@@ -473,20 +520,28 @@
    "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
   },
   {
-   "title": "Парк «Патриот» — Спутник8",
-   "url": "https://www.sputnik8.com/ru/moscow/sights/park-patriot/info"
+   "title": "Детство гения: Захарово — Спутник8",
+   "url": "https://www.sputnik8.com/ru/moscow/activities/98654-detstvo-geniya-zaharovo-i-vyazyomy-v-sudbe-a-s-pushkina"
   },
   {
-   "title": "Парк «Патриот» — Яндекс Путешествия",
-   "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
+   "title": "Детство Пушкина — Рамблер",
+   "url": "https://weekend.rambler.ru/items/36183223-poet-s-kudryavoy-golovoy-detstvo-aleksandra-pushkina/"
   },
   {
-   "title": "Авиабаза Кубинка — migflug",
-   "url": "https://migflug.com/ru/авиабазы/кубинка/"
+   "title": "Большие Вязёмы — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B8%D0%B5_%D0%92%D1%8F%D0%B7%D0%B5%D0%BC%D1%8B"
   },
   {
-   "title": "Kubinka air base — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
+   "title": "Большие Вязёмы — 360",
+   "url": "https://360.ru/news/zima/usadba-bolshie-vjazemy/"
+  },
+  {
+   "title": "Голицыно — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
+  },
+  {
+   "title": "Голицыно — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%93%D0%BE%D0%BB%D0%B8%D1%86%D1%8B%D0%BD%D0%BE"
   }
  ],
  "lastChecked": "2026-10-26",
@@ -496,28 +551,28 @@
   "coordinates": [
    [
     [
-     36.689438,
-     55.577
+     36.89445,
+     55.49
     ],
     [
-     36.690183,
-     55.575428
+     36.895194,
+     55.488428
     ],
     [
-     36.876196,
-     55.469428
+     36.897225,
+     55.487277
     ],
     [
-     36.878227,
-     55.468277
+     36.9,
+     55.486856
     ],
     [
-     36.881,
-     55.467856
+     36.902775,
+     55.487277
     ],
     [
-     36.883773,
-     55.468277
+     36.980776,
+     55.510277
     ],
     [
      37.077779,
@@ -536,32 +591,36 @@
      55.546572
     ],
     [
-     37.074813,
-     55.551572
+     37.000824,
+     55.636072
     ],
     [
-     37.072779,
-     55.552723
+     36.998785,
+     55.637223
     ],
     [
-     37.07,
-     55.553144
+     36.982785,
+     55.642723
     ],
     [
-     36.695,
-     55.580144
+     36.98,
+     55.643144
     ],
     [
-     36.692219,
-     55.579723
+     36.977215,
+     55.642723
     ],
     [
-     36.690183,
-     55.578572
+     36.975176,
+     55.641572
     ],
     [
-     36.689438,
-     55.577
+     36.895194,
+     55.491572
+    ],
+    [
+     36.89445,
+     55.49
     ]
    ]
   ]

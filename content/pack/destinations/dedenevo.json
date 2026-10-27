@@ -13,8 +13,8 @@
   "Деденево — посёлок под Дмитровом на берегу канала имени Москвы. Ближайшая станция называется «Турист».",
   "По преданию, название связано с ордынским ханом Деденем, убитым в этих местах в конце XIII века — по одной версии, в 1295 году. Это легенда. Документально село упоминается с 1504 года.",
   "С XVIII века Деденевом владели Головины, у которых здесь была усадьба. С этим родом связывают и Спасо-Влахернский женский монастырь.",
-  "Свои места маршрута: «Легенда о хане Дедене», «Спасо-Влахернский монастырь», «Берег канала». По пути маршрут заходит и к соседям: Яхрома — «Перемиловская высота», «Суконная фабрика»; Дмитров — «Город князей»; Николо-Пешношский монастырь — «Преображенская церковь»; Запрудня — «Дорога на запад».",
-  "Маршрут линейный, около 69 км и 8 точек. Финиш — Станция «Вербилки» (Электрички Савёловского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Свои места маршрута: «Берег канала», «Легенда о хане Дедене», «Спасо-Влахернский монастырь». По пути маршрут заходит и к соседям: Яхрома — «Перемиловская высота», «Шлюз № 3», «Суконная фабрика»; Ольгово — «Английский парк и пруды»; Икша — «Шлюз № 6», «Берег канала и шлюз № 5», «Посёлок Икша».",
+  "Маршрут линейный, около 46 км и 10 точек. Финиш — Станция «Икша» (Электрички Савёловского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Турист»",
@@ -25,17 +25,17 @@
   "transport": "Электрички Савёловского направления"
  },
  "endPoint": {
-  "name": "Станция «Вербилки»",
+  "name": "Станция «Икша»",
   "coords": {
-   "lat": 56.53,
-   "lon": 37.6
+   "lat": 56.17,
+   "lon": 37.5
   },
   "transport": "Электрички Савёловского направления"
  },
  "route": {
-  "distanceKm": 69.0,
-  "durationH": 7.7,
-  "difficulty": "сложный",
+  "distanceKm": 46.0,
+  "durationH": 6.0,
+  "difficulty": "средний",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
@@ -43,100 +43,6 @@
   "barriers": []
  },
  "stops": [
-  {
-   "id": "dedenevo-legenda",
-   "name": "Легенда о хане Дедене",
-   "coords": {
-    "lat": 56.242,
-    "lon": 37.52
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "По преданию, посёлок назван в честь ордынского хана Деденя, убитого в этих местах в XIII веке; один источник называет 1295 год. Это легенда, а не документ.",
-    "Первое письменное упоминание села относится к 1504 году — с этой даты Деденево и отсчитывает свою историю."
-   ],
-   "facts": [
-    {
-     "text": "По преданию, название связано с ханом Деденем, убитым здесь в XIII веке.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Предание датирует гибель хана 1295 годом.",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": false
-    },
-    {
-     "text": "Первое упоминание села — 1504 год.",
-     "sourceUrl": "https://knls.net/?p=13068",
-     "verified": true
-    },
-    {
-     "text": "Ближайшая станция — «Турист».",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Флаг поселения Деденево утверждён 5 октября 2006 года.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%94%D0%B5%D0%B4%D0%B5%D0%BD%D0%B5%D0%B2%D0%BE",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "dedenevo-monastyr",
-   "name": "Спасо-Влахернский монастырь",
-   "coords": {
-    "lat": 56.245,
-    "lon": 37.515
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "С XVIII века Деденевом владели Головины; здесь была их усадьба. С этим родом связывают основание Спасо-Влахернского женского монастыря.",
-    "Монастырь действующий: вход в скромной одежде, женщинам — в платке, фото — с разрешения. Следующая точка маршрута — «Берег канала»."
-   ],
-   "facts": [
-    {
-     "text": "С XVIII века село принадлежало Головиным, здесь была их усадьба.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": true
-    },
-    {
-     "text": "Основателями монастыря называют представителей рода Головиных.",
-     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
-     "verified": false
-    },
-    {
-     "text": "Спасо-Влахернский монастырь находится в Деденеве.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": true
-    },
-    {
-     "text": "Монастырь действующий, женский.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    },
-    {
-     "text": "Координаты монастыря приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/1000",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий монастырь: правила посещения."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
   {
    "id": "dedenevo-kanal",
    "name": "Берег канала",
@@ -182,6 +88,100 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
+   "order": 10
+  },
+  {
+   "id": "dedenevo-legenda",
+   "name": "Легенда о хане Дедене",
+   "coords": {
+    "lat": 56.242,
+    "lon": 37.52
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "По преданию, посёлок назван в честь ордынского хана Деденя, убитого в этих местах в XIII веке; один источник называет 1295 год. Это легенда, а не документ.",
+    "Первое письменное упоминание села относится к 1504 году — с этой даты Деденево и отсчитывает свою историю."
+   ],
+   "facts": [
+    {
+     "text": "По преданию, название связано с ханом Деденем, убитым здесь в XIII веке.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
+     "verified": false
+    },
+    {
+     "text": "Предание датирует гибель хана 1295 годом.",
+     "sourceUrl": "https://knls.net/?p=13068",
+     "verified": false
+    },
+    {
+     "text": "Первое упоминание села — 1504 год.",
+     "sourceUrl": "https://knls.net/?p=13068",
+     "verified": true
+    },
+    {
+     "text": "Ближайшая станция — «Турист».",
+     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
+     "verified": true
+    },
+    {
+     "text": "Флаг поселения Деденево утверждён 5 октября 2006 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%94%D0%B5%D0%B4%D0%B5%D0%BD%D0%B5%D0%B2%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "dedenevo-monastyr",
+   "name": "Спасо-Влахернский монастырь",
+   "coords": {
+    "lat": 56.245,
+    "lon": 37.515
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "С XVIII века Деденевом владели Головины; здесь была их усадьба. С этим родом связывают основание Спасо-Влахернского женского монастыря.",
+    "Монастырь действующий: вход в скромной одежде, женщинам — в платке, фото — с разрешения. Следующая точка маршрута — «Перемиловская высота»."
+   ],
+   "facts": [
+    {
+     "text": "С XVIII века село принадлежало Головиным, здесь была их усадьба.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
+     "verified": true
+    },
+    {
+     "text": "Основателями монастыря называют представителей рода Головиных.",
+     "sourceUrl": "https://www.zr.ru/content/articles/100202-turist_khana_dedena/",
+     "verified": false
+    },
+    {
+     "text": "Спасо-Влахернский монастырь находится в Деденеве.",
+     "sourceUrl": "https://sobory.ru/photo/1000",
+     "verified": true
+    },
+    {
+     "text": "Монастырь действующий, женский.",
+     "sourceUrl": "https://sobory.ru/photo/1000",
+     "verified": false
+    },
+    {
+     "text": "Координаты монастыря приблизительные.",
+     "sourceUrl": "https://sobory.ru/photo/1000",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий монастырь: правила посещения."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
    "order": 30
   },
   {
@@ -196,7 +196,7 @@
    "guideStory": [
     "Перемиловская высота названа по селу Перемилово на восточном берегу канала напротив Яхромы. С 27 ноября по 5 декабря 1941 года здесь шли бои: это один из рубежей, где остановили немецкие войска.",
     "Подъём на высоту крутой — велосипед, возможно, придётся вести. Сверху виден канал и город.",
-    "Минуту помолчим у мемориала и вернёмся к станции. Следующая точка маршрута — «Суконная фабрика»."
+    "Минуту помолчим у мемориала и вернёмся к станции. Следующая точка маршрута — «Шлюз № 3»."
    ],
    "facts": [
     {
@@ -232,6 +232,54 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "coordsVerified": false,
    "order": 40
+  },
+  {
+   "id": "dedenevo-shlyuz",
+   "name": "Шлюз № 3",
+   "coords": {
+    "lat": 56.287,
+    "lon": 37.49
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Шлюз № 3 канала имени Москвы — однокамерный судоходный шлюз в Яхроме. Его строили с 1932 по 1936 год, а официально приняли в эксплуатацию 15 июля 1937 года.",
+    "Вместе со шлюзом № 4 в Деденеве он образует Яхромский гидроузел. Следующая точка маршрута — «Суконная фабрика»."
+   ],
+   "facts": [
+    {
+     "text": "Шлюз № 3 — однокамерный судоходный шлюз в Яхроме.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
+     "verified": true
+    },
+    {
+     "text": "Строили с 1932 по 1936 год.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
+     "verified": true
+    },
+    {
+     "text": "Принят в эксплуатацию 15 июля 1937 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
+     "verified": true
+    },
+    {
+     "text": "Вместе со шлюзом № 4 образует Яхромский гидроузел.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
+     "verified": true
+    },
+    {
+     "text": "Координаты шлюза приблизительные.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Гидросооружение: не заходить на охраняемую территорию."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 50
   },
   {
    "id": "dedenevo-fabrika",
@@ -277,94 +325,50 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "dedenevo-knyazya",
-   "name": "Город князей",
-   "coords": {
-    "lat": 56.345,
-    "lon": 37.52
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "По одному источнику, в 1301 году в Дмитрове прошёл съезд четырёх князей. В 1364 году город вошёл в состав Московского княжества.",
-    "Tripster называет Дмитров «ровесником столицы» — Москва впервые упомянута в 1147 году, всего на семь лет раньше предания о Дмитрове."
-   ],
-   "facts": [
-    {
-     "text": "В 1301 году в Дмитрове прошёл съезд четырёх князей — по одному источнику.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    },
-    {
-     "text": "В 1364 году Дмитров вошёл в Московское княжество.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": true
-    },
-    {
-     "text": "Дмитров называют ровесником столицы.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": true
-    },
-    {
-     "text": "Москва впервые упомянута в 1147 году.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://experience.tripster.ru/articles/dmitrov/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
    "order": 60
   },
   {
-   "id": "dedenevo-preobrazhenie",
-   "name": "Преображенская церковь",
+   "id": "dedenevo-park",
+   "name": "Английский парк и пруды",
    "coords": {
-    "lat": 56.4102,
-    "lon": 37.3905
+    "lat": 56.269,
+    "lon": 37.372
    },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "kind": "проезжаем",
+   "visitMinutes": 20,
    "guideStory": [
-    "В монастыре стоит церковь Преображения Господня; в колокольне — церковь Мефодия Пешношского. Фотографии собраны на sobory.ru.",
-    "Название «Пешношский», по преданию, связано с тем, что Мефодий носил брёвна для обители на себе через реку."
+    "В комплекс входили английский парк и пруды. По местной легенде, усадьбу связывают с Натальей Голицыной — прототипом старой графини из «Пиковой дамы» Пушкина; это предание, а не доказанный факт.",
+    "«За рулём» включал Ольгово в маршрут выходного дня, а Mail.ru — в список заброшенных усадеб, которые стоит увидеть.",
+    "Обратная дорога к станции Яхрома — по просёлкам, будьте внимательны."
    ],
    "facts": [
     {
-     "text": "В монастыре есть церковь Преображения Господня.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
+     "text": "В усадьбе были английский парк и пруды.",
+     "sourceUrl": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%9E%D0%BB%D1%8C%D0%B3%D0%BE%D0%B2%D0%BE",
      "verified": true
     },
     {
-     "text": "В колокольне — церковь Мефодия Пешношского.",
-     "sourceUrl": "https://sobory.ru/photo/99987",
+     "text": "Связь с прототипом «Пиковой дамы» — легенда.",
+     "sourceUrl": "https://360.ru/tekst/kultura/prizrak-pikovoj-damy/",
+     "verified": false
+    },
+    {
+     "text": "«За рулём» описывал Ольгово в маршруте без ночлега.",
+     "sourceUrl": "https://www.zr.ru/content/articles/12836-marshrut_bez_nochlega/",
      "verified": true
     },
     {
-     "text": "Происхождение названия — по преданию.",
-     "sourceUrl": "https://azbyka.ru/days/sv-mefodij-peshnoshskij",
-     "verified": false
+     "text": "Mail.ru включил Ольгово в список заброшенных усадеб.",
+     "sourceUrl": "https://auto.mail.ru/article/81839-pyat-zabroshennyih-usadeb-kotoryie-stoit-uvidet-po/",
+     "verified": true
     },
     {
-     "text": "Датировку церквей мы не сверяли.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://sobory.ru/photo/487536",
+     "text": "Протяжённость маршрута оценена приблизительно.",
+     "sourceUrl": "https://www.zr.ru/content/articles/12836-marshrut_bez_nochlega/",
      "verified": false
     }
    ],
+   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
@@ -372,42 +376,138 @@
    "order": 70
   },
   {
-   "id": "dedenevo-doroga",
-   "name": "Дорога на запад",
+   "id": "dedenevo-shlyuz-2",
+   "name": "Шлюз № 6",
    "coords": {
-    "lat": 56.545,
+    "lat": 56.165,
     "lon": 37.51
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Шлюз № 6 канала имени Москвы стоит неподалёку от Икши. Автором его архитектуры назван Г. Г. Вегман.",
+    "Канал строили с 1932 по 1936 год, чтобы дать Москве волжскую воду и судоходство. Первые суда прошли через шлюзы 1 мая 1937 года, официальный ввод — 15 июля 1937 года.",
+    "Шлюз — охраняемое сооружение; смотрим с общедоступных мест. Следующая точка маршрута — «Берег канала и шлюз № 5»."
+   ],
+   "facts": [
+    {
+     "text": "Шлюз № 6 находится неподалёку от посёлка Икша.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": true
+    },
+    {
+     "text": "Автор проекта — архитектор Г. Г. Вегман.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": true
+    },
+    {
+     "text": "Канал строили с 1932 по 1936 год.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Первые суда прошли 1 мая 1937 года, ввод — 15 июля 1937 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
+    },
+    {
+     "text": "Канал строили, чтобы дать Москве воду Волги и судоходство.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
+    }
+   ],
+   "warnings": [
+    "Гидросооружение: не заходить на охраняемую территорию."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 80
+  },
+  {
+   "id": "dedenevo-kanal-2",
+   "name": "Берег канала и шлюз № 5",
+   "coords": {
+    "lat": 56.155,
+    "lon": 37.515
    },
    "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "От Вербилок едем на запад к Запрудне через поля и перелески Талдомского округа.",
-    "Дорогу мы на месте не проверяли — держитесь обочины. Финиш — Станция «Вербилки»: Электрички Савёловского направления. Формат остановки — «проезжаем», заложите на неё около 15 минут."
+    "Рядом — шлюз № 5; его строили с 1932 по 1936 год и приняли в эксплуатацию 15 июля 1937 года.",
+    "Ещё при Николае I в 1825–1850 годах строили Екатерининский канал между Волгой и Москвой, но он просуществовал всего около десяти лет. Следующая точка маршрута — «Посёлок Икша»."
    ],
    "facts": [
     {
-     "text": "Запрудня — в Талдомском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Zaprudnya",
+     "text": "Шлюз № 5 строили с 1932 по 1936 год.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
      "verified": true
     },
     {
-     "text": "Дорога не проверена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Zaprudnya",
-     "verified": false
+     "text": "Шлюз № 5 принят в эксплуатацию 15 июля 1937 года.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": true
     },
     {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Zaprudnya",
-     "verified": false
+     "text": "Екатерининский канал строили в 1825–1850 годах.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
     },
     {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Zaprudnya",
-     "verified": false
+     "text": "Екатерининский канал просуществовал около 10 лет.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
+     "verified": true
     },
     {
-     "text": "Талдомский район стал округом в 2018 году.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A2%D0%B0%D0%BB%D0%B4%D0%BE%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD",
+     "text": "Координаты шлюза № 5 приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%965_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": false
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 90
+  },
+  {
+   "id": "dedenevo-posyolok",
+   "name": "Посёлок Икша",
+   "coords": {
+    "lat": 56.17,
+    "lon": 37.5
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Икша — рабочий посёлок; до 2018 года он был центром городского поселения Икша. Краеведы, собравшие сборник по местной истории, пишут, что окрестные деревни упоминаются в межевой грамоте Ивана III дмитровскому князю Юрию Ивановичу.",
+    "Река Икша в Подмосковье — правый приток Волгуши. Происхождение названия посёлка мы в источниках не нашли."
+   ],
+   "facts": [
+    {
+     "text": "Икша — рабочий посёлок Дмитровского округа.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "Городское поселение Икша упразднено в 2018 году.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)",
+     "verified": true
+    },
+    {
+     "text": "Окрестные деревни упоминаются в грамотах 1496 и 1504 годов.",
+     "sourceUrl": "https://books.yandex.ru/books/AAmnUscU/read-online",
+     "verified": true
+    },
+    {
+     "text": "Река Икша — правый приток Волгуши.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%98%D0%BA%D1%88%D0%B0",
+     "verified": true
+    },
+    {
+     "text": "В округе определили задачи по развитию посёлка.",
+     "sourceUrl": "https://riamo.ru/news/obschestvo/v-dmitrovskom-okruge-opredelili-zadachi-po-razvitiju-poselka-iksha/",
      "verified": true
     }
    ],
@@ -415,7 +515,7 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 80
+   "order": 100
   }
  ],
  "dish": {
@@ -460,24 +560,24 @@
    "url": "https://cyclowiki.org/wiki/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%963"
   },
   {
-   "title": "Ровесник столицы — Tripster",
-   "url": "https://experience.tripster.ru/articles/dmitrov/"
+   "title": "Усадьба Ольгово — tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%9E%D0%BB%D1%8C%D0%B3%D0%BE%D0%B2%D0%BE"
   },
   {
-   "title": "История Дмитрова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/dmitrov/istoriia"
+   "title": "Призрак Пиковой дамы — 360",
+   "url": "https://360.ru/tekst/kultura/prizrak-pikovoj-damy/"
   },
   {
-   "title": "Мефодий Пешношский — Азбука веры",
-   "url": "https://azbyka.ru/days/sv-mefodij-peshnoshskij"
+   "title": "Заброшенные усадьбы — Mail.ru",
+   "url": "https://auto.mail.ru/article/81839-pyat-zabroshennyih-usadeb-kotoryie-stoit-uvidet-po/"
   },
   {
-   "title": "Описание монастыря — Калайдович",
-   "url": "https://azbyka.ru/otechnik/Istorija_Tserkvi/istoricheskoe-i-topograficheskoe-opisanie-muzhskogo-obshhezhitelnogo-monastyrja-svjatogo-chudotvortsa-nikolaja-chto-na-peshnoshe/"
+   "title": "Шлюз № 6 — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%A8%D0%BB%D1%8E%D0%B7_%E2%84%966_(%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B)"
   },
   {
-   "title": "Zaprudnya — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Zaprudnya"
+   "title": "Шлюзы канала — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_%D1%88%D0%BB%D1%8E%D0%B7%D0%BE%D0%B2_%D0%BA%D0%B0%D0%BD%D0%B0%D0%BB%D0%B0_%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B"
   }
  ],
  "lastChecked": "2026-10-26",
@@ -487,84 +587,76 @@
   "coordinates": [
    [
     [
-     37.384817,
-     56.4102
+     37.366338,
+     56.269
     ],
     [
-     37.385578,
-     56.408628
+     37.367097,
+     56.267428
     ],
     [
-     37.475094,
-     56.288428
+     37.510111,
+     56.153428
     ],
     [
-     37.5101,
-     56.243428
+     37.512177,
+     56.152277
     ],
     [
-     37.5151,
-     56.238428
+     37.515,
+     56.151856
     ],
     [
-     37.517171,
-     56.237277
+     37.517823,
+     56.152277
     ],
     [
-     37.52,
-     56.236856
+     37.519889,
+     56.153428
     ],
     [
-     37.525,
-     56.236856
-    ],
-    [
-     37.527829,
-     56.237277
-    ],
-    [
-     37.5299,
-     56.238428
+     37.520645,
+     56.155
     ],
     [
      37.530658,
      56.24
     ],
     [
-     37.605701,
-     56.53
+     37.5299,
+     56.241572
     ],
     [
-     37.604937,
-     56.531572
+     37.504906,
+     56.286572
     ],
     [
-     37.60285,
-     56.532723
+     37.502832,
+     56.287723
     ],
     [
-     37.512852,
-     56.547723
+     37.482833,
+     56.292723
     ],
     [
-     37.51,
-     56.548144
+     37.48,
+     56.293144
     ],
     [
-     37.507148,
-     56.547723
+     37.477167,
+     56.292723
     ],
     [
-     37.505061,
-     56.546572
+     37.369169,
+     56.271723
     ],
     [
-     37.385578,
-     56.411772
+     37.367097,
+     56.270572
     ],
     [
-     37.384817,
-     56.4102
+     37.366338,
+     56.269
     ]
    ]
   ]

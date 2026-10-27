@@ -13,8 +13,8 @@
   "Истринское водохранилище — второе по размеру в Московской области: площадь 33,6 кв. км, береговая линия 94 км, глубина до 20 метров, средняя — около пяти.",
   "Оно лежит на северо-западе области, примерно в 40 км по прямой от МКАД. Берега находятся в зоне санитарной охраны источников питьевого водоснабжения Москвы — поэтому суды признавали незаконным строительство у воды.",
   "Год создания водохранилища мы в найденных источниках не нашли и не приводим.",
-  "Свои места маршрута: «Дорога на север», «Берег водохранилища», «Залив и обратный путь». По пути маршрут заходит и к соседям: Истра (Новый Иерусалим) — «Воскресенский собор»; Снегири — «Ленино-Снегирёвский музей»; Дедовск — «Рабочий посёлок», «Прядильно-ткацкая фабрика»; Нахабино — «Старое село», «Полигон и первые ракеты».",
-  "Маршрут линейный, около 70 км и 9 точек. Финиш — Станция «Нахабино» (Электрички Рижского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Свои места маршрута: «Берег водохранилища», «Залив и обратный путь». По пути маршрут заходит и к соседям: Истра (Новый Иерусалим) — «Воскресенский собор»; Снегири — «Ленино-Снегирёвский музей»; Дедовск — «Рабочий посёлок», «Прядильно-ткацкая фабрика»; Нахабино — «Старое село», «Полигон и первые ракеты».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Нахабино» (Электрички Рижского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Новоиерусалимская»",
@@ -34,7 +34,7 @@
  },
  "route": {
   "distanceKm": 70.0,
-  "durationH": 8.4,
+  "durationH": 8.3,
   "difficulty": "сложный",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
@@ -43,52 +43,6 @@
   "barriers": []
  },
  "stops": [
-  {
-   "id": "istrinskoe-vodokhranilishche-doroga",
-   "name": "Дорога на север",
-   "coords": {
-    "lat": 55.97,
-    "lon": 36.85
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "От Истры едем на север вдоль реки Истры к водохранилищу. Дорога идёт через лес и деревни.",
-    "Водохранилище — в 40 км по прямой от МКАД; это одно из главных мест отдыха на воде в Подмосковье. Следующая точка маршрута — «Берег водохранилища»."
-   ],
-   "facts": [
-    {
-     "text": "Водохранилище находится в 40 км по прямой от МКАД.",
-     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
-     "verified": true
-    },
-    {
-     "text": "Это одно из мест отдыха на воде вокруг Москвы.",
-     "sourceUrl": "https://tonkosti.ru/%D0%96%D1%83%D1%80%D0%BD%D0%B0%D0%BB/10_%D0%BC%D0%B5%D1%81%D1%82_%D0%B4%D0%BB%D1%8F_%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0_%D0%BD%D0%B0_%D0%B2%D0%BE%D0%B4%D0%B5_%D0%B2%D0%BE%D0%BA%D1%80%D1%83%D0%B3_%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B",
-     "verified": true
-    },
-    {
-     "text": "Маршрут вдоль реки не проверен.",
-     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
-     "verified": false
-    },
-    {
-     "text": "Водохранилище — на северо-западе области.",
-     "sourceUrl": "https://aif.ru/moscow/more-ryadom-otdyh-na-vodohranilishchah-podmoskovya-bazy-plyazhi-priroda",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "istrinskoe-vodokhranilishche-bereg",
    "name": "Берег водохранилища",
@@ -137,7 +91,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "coordsVerified": false,
-   "order": 20
+   "order": 10
   },
   {
    "id": "istrinskoe-vodokhranilishche-zaliv",
@@ -184,7 +138,7 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 30
+   "order": 20
   },
   {
    "id": "istrinskoe-vodokhranilishche-sobor",
@@ -230,7 +184,7 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 40
+   "order": 30
   },
   {
    "id": "istrinskoe-vodokhranilishche-muzey",
@@ -277,7 +231,7 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 50
+   "order": 40
   },
   {
    "id": "istrinskoe-vodokhranilishche-posyolok",
@@ -324,7 +278,7 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 60
+   "order": 50
   },
   {
    "id": "istrinskoe-vodokhranilishche-fabrika",
@@ -372,7 +326,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "coordsVerified": false,
-   "order": 70
+   "order": 60
   },
   {
    "id": "istrinskoe-vodokhranilishche-selo",
@@ -418,7 +372,7 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
-   "order": 80
+   "order": 70
   },
   {
    "id": "istrinskoe-vodokhranilishche-poligon",
@@ -466,7 +420,7 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "coordsVerified": false,
-   "order": 90
+   "order": 80
   }
  ],
  "dish": {

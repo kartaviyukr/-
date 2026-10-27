@@ -13,8 +13,8 @@
   "Селятино — посёлок Наро-Фоминского округа на Киевском направлении. Его история тесно связана с трестом «Гидромонтаж», который в 1957 году стал градообразующим предприятием.",
   "В посёлке работает Институт русско-славянских исследований имени Н. Я. Данилевского и стоит Серафимовский храм. У поселения есть свои герб и флаг.",
   "Происхождение названия «Селятино» мы в найденных источниках не нашли и не придумываем.",
-  "Свои места маршрута: «Посёлок «Гидромонтажа»», «Серафимовский храм», «Институт Данилевского». По пути маршрут заходит и к соседям: Калининец — «Тарасково», «Посёлок»; Парк «Патриот» — «Танковый музей»; Кубинка — «Вокзал Кубинка-1»; Тучково — «Аллея Славы».",
-  "Маршрут линейный, около 62 км и 8 точек. Финиш — Станция «Тучково» (Электрички Белорусского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Свои места маршрута: «Институт Данилевского», «Серафимовский храм», «Посёлок «Гидромонтажа»». По пути маршрут заходит и к соседям: Калининец — «Тарасково», «Таманская дивизия»; Парк «Патриот» — «Танковый музей»; Апрелевка — «Завод грампластинок», «Город и ручей Прелый».",
+  "Маршрут линейный, около 52 км и 8 точек. Финиш — Станция «Апрелевка» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Селятино»",
@@ -25,17 +25,17 @@
   "transport": "Электрички Киевского направления / МЦД-4"
  },
  "endPoint": {
-  "name": "Станция «Тучково»",
+  "name": "Станция «Апрелевка»",
   "coords": {
-   "lat": 55.6002,
-   "lon": 36.4705
+   "lat": 55.5452,
+   "lon": 37.0735
   },
-  "transport": "Электрички Белорусского направления"
+  "transport": "Электрички Киевского направления / МЦД-4"
  },
  "route": {
-  "distanceKm": 62.0,
-  "durationH": 7.1,
-  "difficulty": "сложный",
+  "distanceKm": 52.0,
+  "durationH": 6.3,
+  "difficulty": "средний",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
@@ -43,101 +43,6 @@
   "barriers": []
  },
  "stops": [
-  {
-   "id": "selyatino-gidromontazh",
-   "name": "Посёлок «Гидромонтажа»",
-   "coords": {
-    "lat": 55.515,
-    "lon": 36.975
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
-    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Посёлок отмечал 66-й день рождения.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Подробности о работе треста не найдены.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Селятино находится в Наро-Фоминском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "selyatino-khram",
-   "name": "Серафимовский храм",
-   "coords": {
-    "lat": 55.513,
-    "lon": 36.978
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В Селятине стоит Серафимовский храм; в 2010 году на нём освятили кресты.",
-    "Храм описан в паломническом справочнике «Азбуки веры». Его историю мы подробно не сверяли.",
-    "Храм действующий; от него едем по посёлку к институту. Следующая точка маршрута — «Институт Данилевского»."
-   ],
-   "facts": [
-    {
-     "text": "В Селятине есть Серафимовский храм.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "В 2010 году на храме освятили кресты.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "Храм действующий.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
-     "verified": false
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
-     "verified": false
-    },
-    {
-     "text": "История храма подробно не сверена.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
   {
    "id": "selyatino-institut",
    "name": "Институт Данилевского",
@@ -182,6 +87,101 @@
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
    "coordsVerified": false,
+   "order": 10
+  },
+  {
+   "id": "selyatino-khram",
+   "name": "Серафимовский храм",
+   "coords": {
+    "lat": 55.513,
+    "lon": 36.978
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Селятине стоит Серафимовский храм; в 2010 году на нём освятили кресты.",
+    "Храм описан в паломническом справочнике «Азбуки веры». Его историю мы подробно не сверяли.",
+    "Храм действующий; от него едем по посёлку к институту. Следующая точка маршрута — «Посёлок «Гидромонтажа»»."
+   ],
+   "facts": [
+    {
+     "text": "В Селятине есть Серафимовский храм.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "В 2010 году на храме освятили кресты.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Храм действующий.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    },
+    {
+     "text": "Координаты храма приблизительные.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    },
+    {
+     "text": "История храма подробно не сверена.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%A1%D0%B5%D1%80%D0%B0%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%BE)",
+     "verified": false
+    }
+   ],
+   "warnings": [
+    "Действующий храм."
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "selyatino-gidromontazh",
+   "name": "Посёлок «Гидромонтажа»",
+   "coords": {
+    "lat": 55.515,
+    "lon": 36.975
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
+    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
+   ],
+   "facts": [
+    {
+     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Посёлок отмечал 66-й день рождения.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": true
+    },
+    {
+     "text": "Подробности о работе треста не найдены.",
+     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
+     "verified": false
+    },
+    {
+     "text": "Селятино находится в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": true
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
    "order": 30
   },
   {
@@ -196,7 +196,7 @@
    "guideStory": [
     "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
     "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
-    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Посёлок»."
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Таманская дивизия»."
    ],
    "facts": [
     {
@@ -232,32 +232,37 @@
    "order": 40
   },
   {
-   "id": "selyatino-posyolok",
-   "name": "Посёлок",
+   "id": "selyatino-divisiya",
+   "name": "Таманская дивизия",
    "coords": {
-    "lat": 55.471,
-    "lon": 36.881
+    "lat": 55.47,
+    "lon": 36.88
    },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
    "guideStory": [
-    "Калининец — посёлок, где живут семьи военнослужащих. Здесь есть остановки автобусов на Голицыно и Селятино.",
-    "Больше подробностей мы в открытых источниках не нашли. Маршрут заканчивается здесь.",
-    "Обратно — автобусом или своим ходом к Селятину. Следующая точка маршрута — «Танковый музей»."
+    "2-я гвардейская Таманская мотострелковая дивизия — одна из самых известных дивизий Сухопутных войск России.",
+    "Её подразделения занимают большой комплекс к северу и северо-западу от Апрелевки. Калининец связан с этой дивизией.",
+    "Военная территория: не фотографировать КПП и объекты. Следующая точка маршрута — «Танковый музей»."
    ],
    "facts": [
     {
-     "text": "Автобусы ходят из Калининца в Голицыно и Селятино.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "text": "Таманская дивизия — одна из самых известных в Сухопутных войсках.",
+     "sourceUrl": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division",
      "verified": true
     },
     {
-     "text": "Состав жителей — оценка составителя.",
+     "text": "Подразделения дивизии расположены к северу и северо-западу от Апрелевки.",
+     "sourceUrl": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division",
+     "verified": true
+    },
+    {
+     "text": "Связь Калининца с дивизией — по совокупности источников.",
      "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
      "verified": false
     },
     {
-     "text": "История посёлка в источниках не раскрыта.",
+     "text": "Военная территория закрыта.",
      "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
      "verified": false
     },
@@ -265,16 +270,13 @@
      "text": "Координаты точки приблизительные.",
      "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
      "verified": false
-    },
-    {
-     "text": "Калининец — в Наро-Фоминском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
     }
+   ],
+   "warnings": [
+    "Военная территория: не фотографировать."
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
    "coordsVerified": false,
    "order": 50
   },
@@ -327,43 +329,44 @@
    "order": 60
   },
   {
-   "id": "selyatino-vokzal",
-   "name": "Вокзал Кубинка-1",
+   "id": "selyatino-zavod",
+   "name": "Завод грампластинок",
    "coords": {
-    "lat": 55.577,
-    "lon": 36.695
+    "lat": 55.55,
+    "lon": 37.07
    },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
    "guideStory": [
-    "В южной части города стоит здание вокзала у станции Кубинка-1. Историю станции мы в найденных источниках не нашли.",
-    "Кубинка — примерно в 60 км к западу от центра Москвы. Следующая точка маршрута — «Аллея Славы». Формат остановки — «проезжаем», заложите на неё около 10 минут."
+    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
+    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
+    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
    ],
    "facts": [
     {
-     "text": "У станции Кубинка-1 есть здание вокзала.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "Завод основан в 1910 году Б. Моллем.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
      "verified": true
     },
     {
-     "text": "Кубинка — примерно в 60 км к западу от центра Москвы.",
-     "sourceUrl": "https://migflug.com/ru/авиабазы/кубинка/",
+     "text": "Первые пластинки выпущены в декабре 1910 года.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
      "verified": true
     },
     {
-     "text": "История станции не найдена.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
+     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "С 1964 года завод входил в фирму «Мелодия».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
+     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
      "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
-     "verified": false
-    },
-    {
-     "text": "Кубинка описана на travelto.ru.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/kubinka/",
-     "verified": true
     }
    ],
    "openingHoursNote": "",
@@ -373,43 +376,43 @@
    "order": 70
   },
   {
-   "id": "selyatino-slava",
-   "name": "Аллея Славы",
+   "id": "selyatino-gorod",
+   "name": "Город и ручей Прелый",
    "coords": {
-    "lat": 55.6,
-    "lon": 36.48
+    "lat": 55.545,
+    "lon": 37.075
    },
-   "kind": "смотреть снаружи",
+   "kind": "проезжаем",
    "visitMinutes": 15,
    "guideStory": [
-    "В Тучкове торжественно открыли мемориал «Аллея Славы».",
-    "МЧС упоминало годовщину освобождения посёлка от немецко-фашистских захватчиков — значит, в 1941 году Тучково было оккупировано. Финиш — Станция «Тучково»: Электрички Белорусского направления."
+    "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
+    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Финиш — Станция «Апрелевка»: Электрички Киевского направления / МЦД-4."
    ],
    "facts": [
     {
-     "text": "В Тучкове открыли мемориал «Аллея Славы».",
-     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
+     "text": "Апрелевка основана в 1899 году, город — с 1961 года.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
      "verified": true
     },
     {
-     "text": "Тучково было освобождено от оккупации.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "text": "Город расположен в 28 км к юго-западу от Москвы.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
      "verified": true
     },
     {
-     "text": "Дату освобождения мы не сверили.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
+     "text": "Версия о ручье Прелом — одна из версий.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
      "verified": false
     },
     {
-     "text": "Координаты мемориала приблизительные.",
-     "sourceUrl": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/",
-     "verified": false
+     "text": "В Апрелевке есть генеральские дачи.",
+     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/04/01/kult-gramplas/",
+     "verified": true
     },
     {
-     "text": "Тучково — в Рузском округе.",
-     "sourceUrl": "https://ruzpu.organizations.mchs.gov.ru/export/docx/News/4233556",
-     "verified": true
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
+     "verified": false
     }
    ],
    "openingHoursNote": "",
@@ -469,20 +472,16 @@
    "url": "https://travel.yandex.ru/journal/park-patriot-v-kubinke/"
   },
   {
-   "title": "Авиабаза Кубинка — migflug",
-   "url": "https://migflug.com/ru/авиабазы/кубинка/"
+   "title": "Апрелевский завод грампластинок — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
   },
   {
-   "title": "Kubinka air base — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Kubinka_(air_base)"
+   "title": "Апрелевский завод — БРЭ",
+   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
   },
   {
-   "title": "Генералы Тучковы — Проза",
-   "url": "https://proza.ru/2021/07/05/291"
-  },
-  {
-   "title": "Аллея Славы — 360",
-   "url": "https://360.ru/news/mosobl/torzhestvennoe-otkrytie-memoriala-alleja-slavy-sostojalos-v-tuchkovo/"
+   "title": "Апрелевка — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
@@ -492,84 +491,72 @@
   "coordinates": [
    [
     [
-     36.464935,
-     55.6002
+     36.819441,
+     55.56
     ],
     [
-     36.46568,
-     55.598628
+     36.820185,
+     55.558428
     ],
     [
-     36.467717,
-     55.597477
+     36.875196,
+     55.468428
     ],
     [
-     36.878227,
-     55.468277
+     36.877227,
+     55.467277
     ],
     [
-     36.881,
-     55.467856
+     36.88,
+     55.466856
     ],
     [
-     36.883773,
-     55.468277
+     36.882773,
+     55.467277
     ],
     [
-     36.980776,
-     55.510277
+     37.077779,
+     55.542277
     ],
     [
-     36.982809,
-     55.511428
+     37.079813,
+     55.543428
     ],
     [
-     36.986809,
-     55.514428
+     37.080557,
+     55.545
     ],
     [
-     36.987553,
-     55.516
+     37.079813,
+     55.546572
     ],
     [
-     36.986809,
-     55.517572
+     37.074813,
+     55.551572
     ],
     [
-     36.984777,
-     55.518723
+     37.072779,
+     55.552723
     ],
     [
-     36.82778,
-     55.562723
+     37.07,
+     55.553144
     ],
     [
      36.825,
      55.563144
     ],
     [
-     36.695,
-     55.580144
+     36.82222,
+     55.562723
     ],
     [
-     36.48,
-     55.603144
+     36.820185,
+     55.561572
     ],
     [
-     36.4705,
-     55.603344
-    ],
-    [
-     36.467717,
-     55.602923
-    ],
-    [
-     36.46568,
-     55.601772
-    ],
-    [
-     36.464935,
-     55.6002
+     36.819441,
+     55.56
     ]
    ]
   ]
