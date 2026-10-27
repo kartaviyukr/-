@@ -13,7 +13,8 @@
   "Волоколамск — бывший Волок Ламский. Он впервые упоминается в Лаврентьевской летописи под 1135 годом. Название связано с волоком: купцы перетаскивали здесь суда и грузы из одной реки в другую.",
   "Кремль стоит на возвышенности у слияния Городни и Ламы. Археологи подтвердили, что к 1135 году здесь уже стояла деревянная крепость.",
   "Главный памятник — Воскресенский собор, датируемый 1480 годом, один из лучших старинных храмов Подмосковья. В 1930 году его закрыли, в 1960-м реставрировали, службы возобновились в 1990-е.",
-  "Маршрут короткий: станция, кремль с Воскресенским собором и слияние рек."
+  "Сначала — свои места: «Волок между реками», «Волоколамский кремль», «Река Лама», «Музей героев-панфиловцев в Нелидове», «Мемориал «Подвигу 28» у Дубосекова». Дальше маршрут идёт по соседним местам: Теряево (Иосифо-Волоцкий монастырь) — «Стены и пруды»; Ярополец — «Усадьба Загряжских–Гончаровых», «Ярополецкая ГЭС».",
+  "Маршрут линейный, около 70 км и 8 точек. Финиш — Станция «Волоколамск» (Электрички Рижского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Волоколамск»",
@@ -32,112 +33,16 @@
   "transport": "Электрички Рижского направления"
  },
  "route": {
-  "distanceKm": 6.0,
-  "durationH": 2.0,
-  "difficulty": "лёгкий",
-  "shape": "петля",
-  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
-  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
-  "safetyNotes": "По оживлённым улицам — по тротуарам и велодорожкам, переходим по светофорам спешившись.",
+  "distanceKm": 70.0,
+  "durationH": 7.9,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
+  "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
+  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "volokolamsk-kreml",
-   "name": "Волоколамский кремль",
-   "coords": {
-    "lat": 56.035,
-    "lon": 35.958
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "Кремль стоит на возвышенности у слияния рек Городни и Ламы, на месте древнего Волока Ламского. Археологи подтвердили, что к 1135 году здесь уже была деревянная крепость.",
-    "Реставрацию кремля планировали начать в 2019 году — состояние сейчас уточняйте.",
-    "Идём к собору. Следующая точка маршрута — «Воскресенский собор». Формат остановки — «смотреть снаружи», заложите на неё около 25 минут."
-   ],
-   "facts": [
-    {
-     "text": "Кремль стоит у слияния Городни и Ламы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "К 1135 году здесь стояла деревянная крепость.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Реставрацию планировали начать в 2019 году.",
-     "sourceUrl": "https://riamo.ru/news/nedvizhimost/restavratsiyu-volokolamskogo-kremlya-v-podmoskove-mogut-nachat-v-2019-godu-xl/",
-     "verified": true
-    },
-    {
-     "text": "Текущее состояние не проверено.",
-     "sourceUrl": "https://riamo.ru/news/nedvizhimost/restavratsiyu-volokolamskogo-kremlya-v-podmoskove-mogut-nachat-v-2019-godu-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 10,
-   "coordsVerified": false
-  },
-  {
-   "id": "volokolamsk-sobor",
-   "name": "Воскресенский собор",
-   "coords": {
-    "lat": 56.0352,
-    "lon": 35.9585
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Воскресенский собор датируется 1480 годом и считается одним из лучших старинных памятников Подмосковья.",
-    "Собор несколько раз перестраивали; в 1930 году закрыли, в 1960 году реставрировали, а богослужения возобновились в 1990-е.",
-    "Храм действующий. Следующая точка маршрута — «Волок между реками». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
-   ],
-   "facts": [
-    {
-     "text": "Воскресенский собор датируется 1480 годом.",
-     "sourceUrl": "https://tonkosti.ru/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Собор — один из лучших старинных памятников Подмосковья.",
-     "sourceUrl": "https://tonkosti.ru/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "В 1930 году собор закрыли.",
-     "sourceUrl": "https://tonkosti.ru/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "В 1960 году провели реставрацию.",
-     "sourceUrl": "https://tonkosti.ru/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "Службы возобновились в 1990-е.",
-     "sourceUrl": "https://tonkosti.ru/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "order": 20,
-   "coordsVerified": false
-  },
   {
    "id": "volokolamsk-volok",
    "name": "Волок между реками",
@@ -149,8 +54,7 @@
    "visitMinutes": 15,
    "guideStory": [
     "Волоколамск впервые упомянут в Лаврентьевской летописи под 1135 годом как Волок Ламский. По перешейку купцы «волочили» суда и грузы из одной реки в другую.",
-    "Окрестности соединяют Иосифо-Волоцкий монастырь, усадьбы Яропольца и память битвы за Москву — у них в спирали свои маршруты.",
-    "Возвращаемся к станции. Финиш — Станция «Волоколамск»: Электрички Рижского направления."
+    "Окрестности соединяют Иосифо-Волоцкий монастырь, усадьбы Яропольца и память битвы за Москву — у них в спирали свои маршруты."
    ],
    "facts": [
     {
@@ -182,7 +86,290 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
+   "coordsVerified": false,
+   "order": 10
+  },
+  {
+   "id": "volokolamsk-kreml",
+   "name": "Волоколамский кремль",
+   "coords": {
+    "lat": 56.035,
+    "lon": 35.958
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Кремль стоит на возвышенности у слияния рек Городни и Ламы, на месте древнего Волока Ламского. Археологи подтвердили, что к 1135 году здесь уже была деревянная крепость.",
+    "Реставрацию кремля планировали начать в 2019 году — состояние сейчас уточняйте."
+   ],
+   "facts": [
+    {
+     "text": "Кремль стоит у слияния Городни и Ламы.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "К 1135 году здесь стояла деревянная крепость.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "Реставрацию планировали начать в 2019 году.",
+     "sourceUrl": "https://riamo.ru/news/nedvizhimost/restavratsiyu-volokolamskogo-kremlya-v-podmoskove-mogut-nachat-v-2019-godu-xl/",
+     "verified": true
+    },
+    {
+     "text": "Текущее состояние не проверено.",
+     "sourceUrl": "https://riamo.ru/news/nedvizhimost/restavratsiyu-volokolamskogo-kremlya-v-podmoskove-mogut-nachat-v-2019-godu-xl/",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D1%80%D0%B5%D0%BC%D0%BB%D1%8C",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 20
+  },
+  {
+   "id": "volokolamsk-lama",
+   "name": "Река Лама",
+   "coords": {
+    "lat": 56.04,
+    "lon": 35.95
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Лама течёт через весь город. Её длина около 139 километров, впадает она в Шошу; в городе в неё впадает речка Городенка.",
+    "Имя Волоколамска — «волок на Ламе»: здесь суда перетаскивали между Ламой и Волошней. Первое упоминание волока относят к 1135 году."
+   ],
+   "facts": [
+    {
+     "text": "Длина Ламы — около 139 км, она впадает в Шошу.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Lama_(river)",
+     "verified": true
+    },
+    {
+     "text": "Через Волоколамск течёт Лама и её правый приток Городенка.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "Название города связано с волоком между Ламой и Волошней, впервые упомянутым в 1135 году.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B0",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
    "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "volokolamsk-steny",
+   "name": "Стены и пруды",
+   "coords": {
+    "lat": 56.1195,
+    "lon": 35.7995
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Монастырь окружён стенами и стоит у воды. Это один из самых известных монастырей Подмосковья.",
+    "Обратный путь к Волоколамску долгий — рассчитайте силы. Следующая точка маршрута — «Усадьба Загряжских–Гончаровых». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Это один из самых известных монастырей Подмосковья.",
+     "sourceUrl": "https://tonkosti.ru/Иосифо-Волоцкий_монастырь",
+     "verified": true
+    },
+    {
+     "text": "Описание стен и прудов — оценка составителя.",
+     "sourceUrl": "https://tonkosti.ru/Иосифо-Волоцкий_монастырь",
+     "verified": false
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://tonkosti.ru/Иосифо-Волоцкий_монастырь",
+     "verified": false
+    },
+    {
+     "text": "Протяжённость оценена приблизительно.",
+     "sourceUrl": "https://tonkosti.ru/Иосифо-Волоцкий_монастырь",
+     "verified": false
+    },
+    {
+     "text": "Монастырь описан в Циклопедии.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 40
+  },
+  {
+   "id": "volokolamsk-goncharovy",
+   "name": "Усадьба Загряжских–Гончаровых",
+   "coords": {
+    "lat": 56.129,
+    "lon": 35.952
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Загряжский, получивший ярополецкие владения в приданое, — прадед Натальи Николаевны Пушкиной. Здесь жила тёща поэта, и Пушкин приезжал к ней.",
+    "Афиша вспоминает «наливки тёщи Пушкина». Дату визита Пушкина мы не сверили. Следующая точка маршрута — «Ярополецкая ГЭС»."
+   ],
+   "facts": [
+    {
+     "text": "Загряжский — прадед Н. Н. Пушкиной.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%AF%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%B5%D1%86_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D1%88%D1%91%D0%B2%D1%8B%D1%85)",
+     "verified": true
+    },
+    {
+     "text": "Пушкин бывал в Яропольце.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-yaropoltsu-russkij-versal-nabegi-pushkina-i-leninskaya-ges-xl/",
+     "verified": true
+    },
+    {
+     "text": "Афиша писала о наливках тёщи Пушкина.",
+     "sourceUrl": "https://daily.afisha.ru/cities/22993-nalivki-teschi-pushkina-i-podmoskovnyy-versal-zachem-ehat-v-selo-yaropolec/",
+     "verified": true
+    },
+    {
+     "text": "Дата визита Пушкина не сверена.",
+     "sourceUrl": "https://riamo.ru/articles/istorii/progulki-po-yaropoltsu-russkij-versal-nabegi-pushkina-i-leninskaya-ges-xl/",
+     "verified": false
+    },
+    {
+     "text": "Ярополец описан на tonkosti.ru.",
+     "sourceUrl": "https://tonkosti.ru/Ярополец",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "coordsVerified": false,
+   "order": 50
+  },
+  {
+   "id": "volokolamsk-ges",
+   "name": "Ярополецкая ГЭС",
+   "coords": {
+    "lat": 56.135,
+    "lon": 35.975
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "На Ламе у Ярополца стоит одна из первых сельских гидроэлектростанций. По рассказу журнала «За рулём», турбину для неё изготовили в 1920 году по распоряжению Ленина.",
+    "В 1939 году станцию модернизировали. Сегодня это памятник плана электрификации, на который приятно посмотреть с моста."
+   ],
+   "facts": [
+    {
+     "text": "Турбину для Ярополецкой ГЭС изготовили в 1920 году по распоряжению Ленина.",
+     "sourceUrl": "https://www.zr.ru/content/articles/954498-moshchnost-12-kvt-privod-ot-mel/",
+     "verified": false
+    },
+    {
+     "text": "В 1939 году Ярополецкую ГЭС модернизировали.",
+     "sourceUrl": "https://www.zr.ru/content/articles/954498-moshchnost-12-kvt-privod-ot-mel/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 60,
+   "coordsVerified": false
+  },
+  {
+   "id": "volokolamsk-nelidovo",
+   "name": "Музей героев-панфиловцев в Нелидове",
+   "coords": {
+    "lat": 55.996,
+    "lon": 36.07
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Деревня Нелидово — в полутора километрах от разъезда Дубосеково. Музей героев-панфиловцев открыли здесь в 1967 году, рядом — братская могила.",
+    "Музей небольшой, но хорошо дополняет мемориал: после огромных фигур на холме — документы, фотографии и вещи времён осени 1941 года. Часы работы уточняйте заранее."
+   ],
+   "facts": [
+    {
+     "text": "Музей героев-панфиловцев в Нелидове открыт в 1967 году.",
+     "sourceUrl": "https://profile.ru/society/oni-otstoyali-moskvu-960990/amp/",
+     "verified": true
+    },
+    {
+     "text": "Нелидово находится в 1,5 км от разъезда Дубосеково.",
+     "sourceUrl": "https://profile.ru/society/oni-otstoyali-moskvu-960990/amp/",
+     "verified": true
+    },
+    {
+     "text": "Рядом с музеем — братская могила.",
+     "sourceUrl": "https://profile.ru/society/oni-otstoyali-moskvu-960990/amp/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 70,
+   "coordsVerified": false
+  },
+  {
+   "id": "volokolamsk-dubosekovo",
+   "name": "Мемориал «Подвигу 28» у Дубосекова",
+   "coords": {
+    "lat": 55.989,
+    "lon": 36.062
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "У разъезда Дубосеково 16 ноября 1941 года бойцы дивизии Панфилова держали оборону на подступах к Москве. В 1942 году участникам боя присвоили звание Героя Советского Союза — большинству посмертно.",
+    "Гранитный ансамбль из шести десятиметровых фигур открыли 6 мая 1975 года, к 30-летию Победы. Шесть воинов — шесть национальностей, сражавшихся в дивизии. Подробности самого боя историки обсуждают до сих пор."
+   ],
+   "facts": [
+    {
+     "text": "Ансамбль «Подвигу 28» открыт 6 мая 1975 года, к 30-летию Победы.",
+     "sourceUrl": "https://profile.ru/society/oni-otstoyali-moskvu-960990/amp/",
+     "verified": true
+    },
+    {
+     "text": "Ансамбль состоит из шести скульптур высотой 10 метров.",
+     "sourceUrl": "https://profile.ru/society/oni-otstoyali-moskvu-960990/amp/",
+     "verified": true
+    },
+    {
+     "text": "Бой у разъезда Дубосеково произошёл 16 ноября 1941 года.",
+     "sourceUrl": "https://www.pnp.ru/social/podvigu-geroev-panfilovcev-ispolnilos-78-let.html",
+     "verified": true
+    },
+    {
+     "text": "В 1942 году участникам боя присвоили звание Героя Советского Союза, большинству посмертно.",
+     "sourceUrl": "https://www.pnp.ru/social/podvigu-geroev-panfilovcev-ispolnilos-78-let.html",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 80,
    "coordsVerified": false
   }
  ],
@@ -217,84 +404,105 @@
   {
    "title": "Волоколамск — tonkosti.ru",
    "url": "https://tonkosti.ru/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA"
+  },
+  {
+   "title": "Иосифо-Волоцкий монастырь — tonkosti.ru",
+   "url": "https://tonkosti.ru/Иосифо-Волоцкий_монастырь"
+  },
+  {
+   "title": "Монастырь — Циклопедия",
+   "url": "https://cyclowiki.org/wiki/%D0%92%D0%BE%D0%BB%D0%BE%D0%BA%D0%BE%D0%BB%D0%B0%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
+  },
+  {
+   "title": "Ярополец — Рувики",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%AF%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%B5%D1%86_(%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%A7%D0%B5%D1%80%D0%BD%D1%8B%D1%88%D1%91%D0%B2%D1%8B%D1%85)"
+  },
+  {
+   "title": "Прогулки по Яропольцу — РИАМО",
+   "url": "https://riamo.ru/articles/istorii/progulki-po-yaropoltsu-russkij-versal-nabegi-pushkina-i-leninskaya-ges-xl/"
+  },
+  {
+   "title": "Ярополец — Афиша",
+   "url": "https://daily.afisha.ru/cities/22993-nalivki-teschi-pushkina-i-podmoskovnyy-versal-zachem-ehat-v-selo-yaropolec/"
   }
  ],
  "lastChecked": "2026-10-26",
+ "routeVersion": 2,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     35.950372,
-     56.034
+     35.79386,
+     56.1195
     ],
     [
-     35.951126,
-     56.032428
+     35.794616,
+     56.117928
     ],
     [
-     35.970128,
-     56.021428
+     35.79668,
+     56.116777
     ],
     [
      35.972187,
      56.020277
     ],
     [
+     36.05919,
+     55.986277
+    ],
+    [
+     36.062,
+     55.985856
+    ],
+    [
+     36.06481,
+     55.986277
+    ],
+    [
+     36.066868,
+     55.987428
+    ],
+    [
+     36.074869,
+     55.994428
+    ],
+    [
+     36.075622,
+     55.996
+    ],
+    [
+     36.074869,
+     55.997572
+    ],
+    [
+     35.979886,
+     56.136572
+    ],
+    [
+     35.977821,
+     56.137723
+    ],
+    [
      35.975,
-     56.019856
+     56.138144
     ],
     [
-     35.977813,
-     56.020277
+     35.7995,
+     56.122644
     ],
     [
-     35.978313,
-     56.020477
+     35.79668,
+     56.122223
     ],
     [
-     35.980372,
-     56.021628
+     35.794616,
+     56.121072
     ],
     [
-     35.981126,
-     56.0232
-    ],
-    [
-     35.980372,
-     56.024772
-    ],
-    [
-     35.963374,
-     56.036772
-    ],
-    [
-     35.961314,
-     56.037923
-    ],
-    [
-     35.9585,
-     56.038344
-    ],
-    [
-     35.955686,
-     56.037923
-    ],
-    [
-     35.955186,
-     56.037723
-    ],
-    [
-     35.953186,
-     56.036723
-    ],
-    [
-     35.951126,
-     56.035572
-    ],
-    [
-     35.950372,
-     56.034
+     35.79386,
+     56.1195
     ]
    ]
   ]
