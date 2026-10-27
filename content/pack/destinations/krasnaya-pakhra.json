@@ -13,8 +13,8 @@
   "Красная Пахра — село на Старой Калужской дороге, через которое в 1812 году прошла армия Кутузова во время Тарутинского манёвра.",
   "Отступая от Москвы, армия форсированным маршем под прикрытием Пахры дошла до Подольска, а оттуда по Старой Калужской дороге — до Красной Пахры, куда прибыла 9 (21) сентября. Затем она отошла к Наре и остановилась в Тарутинском лагере.",
   "По данным управы, в сентябре 1812 года в усадьбе был штаб Кутузова, а при отступлении французов здесь ночевал Наполеон. С 1728 года село принадлежало князьям Дадиани, затем Салтыковым; в 1913 году усадьбу купил бывший министр финансов Сергей Витте.",
-  "Свои места маршрута: «Тарутинский манёвр», «Усадьба и штаб Кутузова», «Берег Пахры». По пути маршрут заходит и к соседям: Михайловское — «Парк над рекой»; Вороново — «Уцелевший храм»; Климовск — «Центр Климовска»; Подольск — «Троицкий собор», «Набережная Пахры и усадьба Ивановское».",
-  "Маршрут линейный, около 68 км и 8 точек. Финиш — Станция «Подольск» (Электрички Курского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Тарутинский манёвр», «Усадьба и штаб Кутузова», «Берег Пахры». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Остановка «Красная Пахра» (Автобусы по Калужскому шоссе — уточняйте). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Остановка «Красная Пахра»",
@@ -25,21 +25,21 @@
   "transport": "Автобусы по Калужскому шоссе — уточняйте"
  },
  "endPoint": {
-  "name": "Станция «Подольск»",
+  "name": "Остановка «Красная Пахра»",
   "coords": {
-   "lat": 55.4312,
-   "lon": 37.5655
+   "lat": 55.42,
+   "lon": 37.28
   },
-  "transport": "Электрички Курского направления / МЦД-2"
+  "transport": "Автобусы по Калужскому шоссе — уточняйте"
  },
  "route": {
-  "distanceKm": 68.0,
-  "durationH": 7.6,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 1.9,
+  "durationH": 0.7,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -86,8 +86,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "krasnaya-pakhra-usadba",
@@ -132,8 +132,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "krasnaya-pakhra-pakhra",
@@ -147,7 +147,7 @@
    "guideStory": [
     "Пахра прикрывала отход армии Кутузова от Москвы к Подольску. Здесь, на Старой Калужской дороге, армия свернула к Тарутину.",
     "Сегодня Красная Пахра — часть Троицкого округа Москвы.",
-    "От реки по улицам села возвращаемся к остановке на шоссе. Следующая точка маршрута — «Парк над рекой»."
+    "От реки по улицам села возвращаемся к остановке на шоссе. Финиш — Остановка «Красная Пахра»: Автобусы по Калужскому шоссе — уточняйте."
    ],
    "facts": [
     {
@@ -180,244 +180,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "krasnaya-pakhra-park",
-   "name": "Парк над рекой",
-   "coords": {
-    "lat": 55.4005,
-    "lon": 37.201
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Усадьба стоит над Пахрой, и с берега открывается вид на речную долину.",
-    "Историю парка и дальнейших владельцев мы в найденных источниках не нашли — это честный пробел, а не повод для выдумок.",
-    "Обратно к Красной Пахре едем той же дорогой вдоль реки. Следующая точка маршрута — «Уцелевший храм»."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба стоит над Пахрой.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    },
-    {
-     "text": "История парка в источниках не раскрыта.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Владельцы после Кречетникова не установлены.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Координаты парка приблизительные.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": false
-    },
-    {
-     "text": "Михайловское — подмосковная усадьба.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "krasnaya-pakhra-khram",
-   "name": "Уцелевший храм",
-   "coords": {
-    "lat": 55.323,
-    "lon": 37.187
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В пожаре 1812 года уцелел только храм усадьбы. Его называют главным уцелевшим свидетелем ростопчинской эпохи.",
-    "Датировку храма мы в найденных источниках не сверили и поэтому не приводим.",
-    "От храма неспешно идём к усадебным прудам. Следующая точка маршрута — «Центр Климовска»."
-   ],
-   "facts": [
-    {
-     "text": "В пожаре 1812 года уцелел только храм.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
-     "verified": true
-    },
-    {
-     "text": "Датировка храма нами не проверена.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
-     "verified": false
-    },
-    {
-     "text": "Координаты храма приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
-     "verified": false
-    },
-    {
-     "text": "Вороново — в составе Новой Москвы.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/voronovo/",
-     "verified": true
-    },
-    {
-     "text": "Усадьба описана в Большой российской энциклопедии.",
-     "sourceUrl": "https://bigenc.ru/c/voronovo-3f93b1",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "krasnaya-pakhra-tsentr",
-   "name": "Центр Климовска",
-   "coords": {
-    "lat": 55.363,
-    "lon": 37.53
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1940 году рабочий посёлок получил статус города и название Климовск. Позже город вошёл в состав Подольска.",
-    "В Подольске отпраздновали 200-летие улицы Климовской — это напоминает, что история этих мест старше завода. Следующая точка маршрута — «Троицкий собор»."
-   ],
-   "facts": [
-    {
-     "text": "В 1940 году посёлок стал городом Климовском.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/klimovsk/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Климовск вошёл в состав Подольска.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Klimovsk",
-     "verified": true
-    },
-    {
-     "text": "В Подольске отметили 200-летие улицы Климовской.",
-     "sourceUrl": "https://riamo.ru/news/obschestvo/v-podolske-otprazdnovali-200-letie-ulitsy-klimovskoj/",
-     "verified": true
-    },
-    {
-     "text": "Дату включения в Подольск мы не приводим.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Klimovsk",
-     "verified": false
-    },
-    {
-     "text": "Координаты центра приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/klimovsk/istoriia",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "krasnaya-pakhra-sobor",
-   "name": "Троицкий собор",
-   "coords": {
-    "lat": 55.428,
-    "lon": 37.547
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Троицкий собор — главный православный храм города. По одному источнику, он построен в 1832 году в честь победы над Наполеоном; эту дату мы не сверили с другими источниками.",
-    "Герб Подольска, утверждённый 20 декабря 1781 года, изображает два золотых инструмента каменотёсов на голубом поле — «в знак того, что жители сим промыслом набогащаются»."
-   ],
-   "facts": [
-    {
-     "text": "Троицкий собор — главный православный храм Подольска.",
-     "sourceUrl": "https://experience.tripster.ru/journal/articles/podolsk/",
-     "verified": true
-    },
-    {
-     "text": "По одному источнику, собор построен в 1832 году в честь победы над Наполеоном.",
-     "sourceUrl": "https://experience.tripster.ru/journal/articles/podolsk/",
-     "verified": false
-    },
-    {
-     "text": "Герб утверждён 20 декабря 1781 года, на нём два инструмента каменотёсов.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/",
-     "verified": true
-    },
-    {
-     "text": "Подольские жители занимались добычей белого камня.",
-     "sourceUrl": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/",
-     "verified": true
-    },
-    {
-     "text": "Достопримечательности Подольска собраны на tonkosti.ru.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "krasnaya-pakhra-ivanovskoe",
-   "name": "Набережная Пахры и усадьба Ивановское",
-   "coords": {
-    "lat": 55.442,
-    "lon": 37.555
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Пахра — река, на которой стоял старый Подол. По берегу едем к усадьбе Ивановское — классическому дворянскому имению рубежа XVIII–XIX веков.",
-    "По одному описанию, двести лет назад вокруг усадьбы был лес, а рядом текла Пахра. Сегодня Ивановское внутри города; часы доступа на территорию мы не уточняли."
-   ],
-   "facts": [
-    {
-     "text": "Усадьба Ивановское — дворянское имение рубежа XVIII–XIX веков.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Подольск стоит на реке Пахре.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/podolsk/history",
-     "verified": true
-    },
-    {
-     "text": "Часы работы усадьбы мы не проверяли.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/podolsk/",
-     "verified": false
-    },
-    {
-     "text": "Рядом с Подольском — усадьбы Дубровицы и Плещеево.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Описание леса вокруг усадьбы — по туристическому источнику.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B0",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 30,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -454,95 +218,59 @@
    "url": "https://booksite.ru/FullText/1/001/008/067/856.htm"
   },
   {
-   "title": "Михайловское — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B5_(%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D0%B0%D1%8F_%D1%83%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0)"
-  },
-  {
-   "title": "Вороново — БРЭ",
-   "url": "https://bigenc.ru/c/voronovo-3f93b1"
-  },
-  {
-   "title": "Вороново — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/voronovo/"
-  },
-  {
-   "title": "История Климовска — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/klimovsk/istoriia"
-  },
-  {
-   "title": "Флагман текстильного машиностроения — VK",
-   "url": "https://vk.ru/@498603575-flagman-tekstilnogo-mashinostroeniya-v-sssr"
-  },
-  {
-   "title": "Подольск — ЦИАН",
-   "url": "https://www.cian.ru/stati-goroda-podmoskovja-podolsk-216375/"
-  },
-  {
-   "title": "История Подольска — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/podolsk/history"
-  },
-  {
-   "title": "Подольск — Tripster",
-   "url": "https://experience.tripster.ru/journal/articles/podolsk/"
+   "title": "Источник: americanliterature.com",
+   "url": "https://americanliterature.com/author/leo-tolstoy/book/war-and-peace/book-thirteen-1812-chapter-v"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.181474,
-     55.323
+     37.269461,
+     55.418
     ],
     [
-     37.182214,
-     55.321428
+     37.270203,
+     55.416428
     ],
     [
-     37.184237,
-     55.320277
+     37.275203,
+     55.413428
     ],
     [
-     37.187,
-     55.319856
+     37.277231,
+     55.412277
     ],
     [
-     37.53,
-     55.359856
+     37.28,
+     55.411856
     ],
     [
-     37.532766,
-     55.360277
+     37.282769,
+     55.412277
     ],
     [
-     37.534791,
-     55.361428
+     37.284797,
+     55.413428
     ],
     [
-     37.570299,
-     55.429628
+     37.285539,
+     55.415
     ],
     [
-     37.571041,
-     55.4312
+     37.28554,
+     55.42
     ],
     [
-     37.570299,
-     55.432772
+     37.284798,
+     55.421572
     ],
     [
-     37.5598,
-     55.443572
-    ],
-    [
-     37.557771,
-     55.444723
-    ],
-    [
-     37.555,
-     55.445144
+     37.28277,
+     55.422723
     ],
     [
      37.28,
@@ -553,20 +281,16 @@
      55.422723
     ],
     [
-     37.198232,
-     55.403223
+     37.27223,
+     55.420723
     ],
     [
-     37.196205,
-     55.402072
+     37.270203,
+     55.419572
     ],
     [
-     37.195463,
-     55.4005
-    ],
-    [
-     37.181474,
-     55.323
+     37.269461,
+     55.418
     ]
    ]
   ]

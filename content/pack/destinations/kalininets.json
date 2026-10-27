@@ -12,83 +12,36 @@
  "intro": [
   "Калининец — военный посёлок Наро-Фоминского округа у станции Голицыно. Он известен как место, связанное со 2-й гвардейской Таманской мотострелковой дивизией — одной из самых известных дивизий Сухопутных войск.",
   "Подразделения дивизии занимают большой комплекс зданий к северу и северо-западу от Апрелевки. Дату основания посёлка мы в найденных источниках не нашли.",
-  "Свои места маршрута: «Тарасково», «Таманская дивизия». По пути маршрут заходит и к соседям: Селятино — «Посёлок «Гидромонтажа»», «Институт Данилевского»; Апрелевка — «Город и ручей Прелый», «Завод грампластинок»; Лесной Городок — «Лесная петля»; Внуково — «Посёлок Внуково», «История аэродрома».",
-  "Маршрут линейный, около 70 км и 9 точек. Финиш — Станция «Внуково» (Электрички Киевского направления / МЦД-4), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Таманская дивизия», «Посёлок», «Тарасково», «Церковь Донской иконы Божией Матери». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 7 км: старт и финиш — Калининец, центр (До ближайшей станции — Станция «Голицыно», около 17 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Голицыно»",
+  "name": "Калининец, центр",
   "coords": {
-   "lat": 55.615,
-   "lon": 36.985
+   "lat": 55.47,
+   "lon": 36.88
   },
-  "transport": "Электрички Белорусского направления; далее автобус — уточняйте"
+  "transport": "До ближайшей станции — Станция «Голицыно», около 17 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Внуково»",
+  "name": "Калининец, центр",
   "coords": {
-   "lat": 55.638,
-   "lon": 37.32
+   "lat": 55.47,
+   "lon": 36.88
   },
-  "transport": "Электрички Киевского направления / МЦД-4"
+  "transport": "До ближайшей станции — Станция «Голицыно», около 17 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 70.0,
-  "durationH": 7.6,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 7.1,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
-  {
-   "id": "kalininets-taraskovo",
-   "name": "Тарасково",
-   "coords": {
-    "lat": 55.49,
-    "lon": 36.9
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
-    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
-    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Таманская дивизия»."
-   ],
-   "facts": [
-    {
-     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    },
-    {
-     "text": "Посёлок связан с военным городком.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    },
-    {
-     "text": "Дата основания не найдена.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": false
-    },
-    {
-     "text": "Калининец находится недалеко от станции Голицыно.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
   {
    "id": "kalininets-divisiya",
    "name": "Таманская дивизия",
@@ -101,7 +54,7 @@
    "guideStory": [
     "2-я гвардейская Таманская мотострелковая дивизия — одна из самых известных дивизий Сухопутных войск России.",
     "Её подразделения занимают большой комплекс к северу и северо-западу от Апрелевки. Калининец связан с этой дивизией.",
-    "Военная территория: не фотографировать КПП и объекты. Следующая точка маршрута — «Посёлок «Гидромонтажа»»."
+    "Военная территория: не фотографировать КПП и объекты. Следующая точка маршрута — «Посёлок»."
    ],
    "facts": [
     {
@@ -135,332 +88,133 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "kalininets-gidromontazh",
-   "name": "Посёлок «Гидромонтажа»",
-   "coords": {
-    "lat": 55.515,
-    "lon": 36.975
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина; с этого времени посёлок и отсчитывает свою современную историю — в одной из публикаций отмечали его 66-й день рождения.",
-    "Что именно строил трест и как выглядел посёлок в первые годы, мы в найденных источниках не нашли."
-   ],
-   "facts": [
-    {
-     "text": "В 1957 году трест «Гидромонтаж» стал градообразующим предприятием Селятина.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Посёлок отмечал 66-й день рождения.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Подробности о работе треста не найдены.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Селятино находится в Наро-Фоминском округе.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "kalininets-institut",
-   "name": "Институт Данилевского",
-   "coords": {
-    "lat": 55.516,
-    "lon": 36.982
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "В Селятине расположен Институт русско-славянских исследований имени Н. Я. Данилевского — философа и естествоиспытателя XIX века, автора книги «Россия и Европа».",
-    "У городского поселения Селятино есть флаг, составленный на основе его герба."
-   ],
-   "facts": [
-    {
-     "text": "В Селятине расположен Институт русско-славянских исследований имени Данилевского.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": true
-    },
-    {
-     "text": "Данилевский — автор книги «Россия и Европа».",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Флаг Селятина составлен на основе герба.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%A1%D0%B5%D0%BB%D1%8F%D1%82%D0%B8%D0%BD%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Координаты института приблизительные.",
-     "sourceUrl": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/",
-     "verified": false
-    },
-    {
-     "text": "Селятино — посёлок на Киевском направлении.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Selyatino",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "kalininets-gorod",
-   "name": "Город и ручей Прелый",
-   "coords": {
-    "lat": 55.545,
-    "lon": 37.075
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Апрелевка основана в 1899 году и получила статус города в 1961-м. По одной версии, название — перестановка букв: местный ручей назывался Прелым.",
-    "«Мир квартир» писал о культе грампластинок и генеральских дачах Апрелевки. Следующая точка маршрута — «Завод грампластинок»."
-   ],
-   "facts": [
-    {
-     "text": "Апрелевка основана в 1899 году, город — с 1961 года.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Город расположен в 28 км к юго-западу от Москвы.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Версия о ручье Прелом — одна из версий.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "В Апрелевке есть генеральские дачи.",
-     "sourceUrl": "https://www.mirkvartir.ru/journal/reviews/2021/04/01/kult-gramplas/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "kalininets-zavod",
-   "name": "Завод грампластинок",
-   "coords": {
-    "lat": 55.55,
-    "lon": 37.07
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "В 1910 году Б. Молль основал завод при имении Апрелевка; ему помогали немецкие мастера А. Кибарт и А. Фогт. Первые пластинки выпустили уже в декабре 1910 года, а в 1911 году — около 400 тысяч дисков «Метрополь-рекорд».",
-    "После революции завод национализировали; с 1925 года он назывался «Фабрика памяти 1905 года». С 1930-х это крупнейший производитель пластинок в СССР, с 1964 года — в составе «Мелодии».",
-    "Производство прекратили в 1995 году по БРЭ; другой источник называет 2002 год."
-   ],
-   "facts": [
-    {
-     "text": "Завод основан в 1910 году Б. Моллем.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
-     "verified": true
-    },
-    {
-     "text": "Первые пластинки выпущены в декабре 1910 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "В 1911 году выпущено около 400 тысяч дисков «Метрополь-рекорд».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "С 1964 года завод входил в фирму «Мелодия».",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA",
-     "verified": true
-    },
-    {
-     "text": "По БРЭ, производство прекращено в 1995 году; другой источник — 2002 год.",
-     "sourceUrl": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "kalininets-les",
-   "name": "Лесная петля",
-   "coords": {
-    "lat": 55.638,
-    "lon": 37.22
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Название посёлка говорит само за себя: вокруг лес. Пройдёмся по лесной петле и вернёмся к станции.",
-    "Конкретные лесные тропы мы на месте не проверяли — держитесь накатанных дорожек и не заезжайте в болотистые места. Следующая точка маршрута — «Посёлок Внуково»."
-   ],
-   "facts": [
-    {
-     "text": "Вокруг посёлка — лес.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
-     "verified": false
-    },
-    {
-     "text": "Тропы на месте не проверены.",
-     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
-     "verified": false
-    },
-    {
-     "text": "Станция находится в Одинцовском округе.",
-     "sourceUrl": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/",
-     "verified": true
-    },
-    {
-     "text": "Рядом с посёлком строятся новые кварталы.",
-     "sourceUrl": "https://www.novostroy-m.ru/baza/zhk_lesnoy_gorodok",
-     "verified": true
-    },
-    {
-     "text": "Координаты петли приблизительные.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
+   "order": 10,
+   "coordsVerified": false
   },
   {
    "id": "kalininets-posyolok",
-   "name": "Посёлок Внуково",
+   "name": "Посёлок",
    "coords": {
-    "lat": 55.63,
-    "lon": 37.3
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Посёлок строили одновременно с аэропортом — для рабочих и лётчиков. В 1947 году Внуково преобразовали в рабочий посёлок.",
-    "Известных дачников Внукова в найденных источниках мы не нашли, поэтому о них не рассказываем. Следующая точка маршрута — «История аэродрома»."
-   ],
-   "facts": [
-    {
-     "text": "Посёлок строили для рабочих и лётчиков одновременно с аэропортом.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "В 1947 году Внуково стало рабочим посёлком.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Сведения об известных дачниках не найдены.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": false
-    },
-    {
-     "text": "Внуково — район Москвы.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "kalininets-istoriya",
-   "name": "История аэродрома",
-   "coords": {
-    "lat": 55.615,
-    "lon": 37.295
+    "lat": 55.471,
+    "lon": 36.881
    },
    "kind": "проезжаем",
    "visitMinutes": 10,
    "guideStory": [
-    "В 1937 году правительство утвердило план нового аэродрома, чтобы разгрузить московский авиаузел. Работы начались в 1938 году, первую очередь приняли в 1941-м.",
-    "Официальное открытие намечали на 18 августа 1941 года, но из-за войны аэропорт заработал раньше. Kupibilet называет дату 2 июля 1941 года."
+    "Калининец — посёлок, где живут семьи военнослужащих. Здесь есть остановки автобусов на Голицыно и Селятино.",
+    "Больше подробностей мы в открытых источниках не нашли. Маршрут заканчивается здесь.",
+    "Обратно — автобусом или своим ходом к Селятину. Следующая точка маршрута — «Тарасково»."
    ],
    "facts": [
     {
-     "text": "План аэродрома утверждён в 1937 году.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "text": "Автобусы ходят из Калининца в Голицыно и Селятино.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
      "verified": true
     },
     {
-     "text": "Работы начаты в 1938 году, первая очередь принята в 1941 году.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Открытие планировали на 18 августа 1941 года.",
-     "sourceUrl": "https://www.mos.ru/moi-raion/vnukovo/",
-     "verified": true
-    },
-    {
-     "text": "Аэропорт открыт досрочно, 2 июля 1941 года.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia",
+     "text": "Состав жителей — оценка составителя.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
      "verified": false
     },
     {
-     "text": "Внукову исполнилось 80 лет в 2021 году.",
-     "sourceUrl": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375",
+     "text": "История посёлка в источниках не раскрыта.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец — в Наро-Фоминском округе.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalininets-taraskovo",
+   "name": "Тарасково",
+   "coords": {
+    "lat": 55.49,
+    "lon": 36.9
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Автобус от Голицына к Калининцу проходит мимо офицерских домов (ДОС) в Тараскове у шоссе.",
+    "Посёлок вырос вокруг военного городка. Его история и дата основания в найденных источниках не раскрыты.",
+    "Дальше по шоссе едем к самому посёлку Калининец. Следующая точка маршрута — «Церковь Донской иконы Божией Матери»."
+   ],
+   "facts": [
+    {
+     "text": "Автобус проходит мимо офицерских домов в Тараскове.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Посёлок связан с военным городком.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    },
+    {
+     "text": "Дата основания не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Координаты точки приблизительные.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": false
+    },
+    {
+     "text": "Калининец находится недалеко от станции Голицыно.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Kalininets",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "kalininets-donskaya",
+   "name": "Церковь Донской иконы Божией Матери",
+   "coords": {
+    "lat": 55.4722,
+    "lon": 36.8778
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Церковь Донской иконы Божией Матери в Калининце построена в 2001–2002 годах.",
+    "Это самый новый ориентир посёлка, где квартирует Таманская дивизия. Финиш — Калининец, центр: До ближайшей станции — Станция «Голицыно», около 17 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Донской иконы построена в 2001–2002 годах.",
+     "sourceUrl": "https://sobory.ru/geo/distr/14&help",
+     "verified": true
+    },
+    {
+     "text": "Храм относится к Наро-Фоминскому округу.",
+     "sourceUrl": "https://sobory.ru/geo/distr/14&help",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -497,55 +251,23 @@
    "url": "https://military-history.fandom.com/wiki/2nd_Guards_Tamanskaya_Motor_Rifle_Division"
   },
   {
-   "title": "Selyatino — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Selyatino"
-  },
-  {
-   "title": "Селятино 66 лет — Рамблер",
-   "url": "https://news.rambler.ua/science/51361643-poselok-selyatino-otmetil-66-y-den-rozhdeniya/"
-  },
-  {
-   "title": "Апрелевский завод грампластинок — Рувики",
-   "url": "https://ru.ruwiki.ru/wiki/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4_%D0%B3%D1%80%D0%B0%D0%BC%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%BA"
-  },
-  {
-   "title": "Апрелевский завод — БРЭ",
-   "url": "https://bigenc.ru/c/aprelevskii-zavod-gramplastinok-708f52"
-  },
-  {
-   "title": "Апрелевка — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%90%D0%BF%D1%80%D0%B5%D0%BB%D0%B5%D0%B2%D0%BA%D0%B0"
-  },
-  {
-   "title": "Lesnoy Gorodok — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Lesnoy_Gorodok"
-  },
-  {
-   "title": "МЦД Лесной Городок — РИАМО",
-   "url": "https://riamo.ru/news/transport/v-odintsove-blagoustroili-territoriju-mtsd-lesnoj-gorodok-i-obustroili-13-trop/"
-  },
-  {
-   "title": "Внуково — mos.ru",
-   "url": "https://www.mos.ru/moi-raion/vnukovo/"
-  },
-  {
-   "title": "История Внукова — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/vnukovo/istoriia"
-  },
-  {
-   "title": "Внукову 80 лет — Вокруг света",
-   "url": "https://www.vokrugsveta.ru/articles/velikovozrastnoe-vnukovo-stareishemu-aeroportu-moskvy-ispolnilos-80-let-id665375"
+   "title": "Источник: sobory.ru",
+   "url": "https://sobory.ru/geo/distr/14&help"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.874453,
-     55.47
+     36.872253,
+     55.4722
+    ],
+    [
+     36.872996,
+     55.470628
     ],
     [
      36.875196,
@@ -564,56 +286,44 @@
      55.467277
     ],
     [
-     37.297784,
-     55.612277
+     36.884804,
+     55.468428
     ],
     [
-     37.299821,
-     55.613428
+     36.904806,
+     55.488428
     ],
     [
-     37.324824,
-     55.636428
+     36.90555,
+     55.49
     ],
     [
-     37.32557,
-     55.638
+     36.904806,
+     55.491572
     ],
     [
-     37.324824,
-     55.639572
+     36.902775,
+     55.492723
     ],
     [
-     37.322785,
-     55.640723
+     36.9,
+     55.493144
     ],
     [
-     37.32,
-     55.641144
+     36.897225,
+     55.492723
     ],
     [
-     37.22,
-     55.641144
+     36.895194,
+     55.491572
     ],
     [
-     36.985,
-     55.618144
+     36.872996,
+     55.473772
     ],
     [
-     36.982216,
-     55.617723
-    ],
-    [
-     36.980179,
-     55.616572
-    ],
-    [
-     36.875196,
-     55.471572
-    ],
-    [
-     36.874453,
-     55.47
+     36.872253,
+     55.4722
     ]
    ]
   ]

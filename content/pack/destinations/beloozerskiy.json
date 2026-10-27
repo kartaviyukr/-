@@ -12,8 +12,8 @@
  "intro": [
   "Белоозёрский — небольшой город Воскресенского округа (с 2019 года — город). По одному источнику, он основан в 1960-х как посёлок для рабочих; другой описывает его как жилой посёлок авиационной испытательной базы у железнодорожной платформы.",
   "Главная звезда города — озеро Белое; рядом и озеро Островное. Режим отдыха у озёр различается и уточняется ежегодно.",
-  "Свои места маршрута: «Город у платформы», «Озеро Белое», «Озеро Островное». По пути маршрут заходит и к соседям: Бронницы — «Город на Москве-реке»; Раменское — «Раменская мануфактура»; Кратово — «Кратовское озеро», «Профессорские дачи»; Быково — «Дворец на холме».",
-  "Маршрут линейный, около 62 км и 8 точек. Финиш — Станция «Быково» (Электрички Казанского направления / МЦД-3), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Город у платформы», «Озеро Островное», «Озеро Белое». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Станция «Белоозёрская» (Электрички Казанского направления (на Рязань)). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Белоозёрская»",
@@ -24,21 +24,21 @@
   "transport": "Электрички Казанского направления (на Рязань)"
  },
  "endPoint": {
-  "name": "Станция «Быково»",
+  "name": "Станция «Белоозёрская»",
   "coords": {
-   "lat": 55.6352,
-   "lon": 38.0685
+   "lat": 55.4602,
+   "lon": 38.4405
   },
-  "transport": "Электрички Казанского направления / МЦД-3"
+  "transport": "Электрички Казанского направления"
  },
  "route": {
-  "distanceKm": 62.0,
-  "durationH": 7.1,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 3.0,
+  "durationH": 0.9,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
@@ -85,8 +85,54 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "beloozerskiy-ostrovnoe",
+   "name": "Озеро Островное",
+   "coords": {
+    "lat": 55.462,
+    "lon": 38.455
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Рядом с Белым — озеро Островное. Вместе они дают природную паузу в маршруте.",
+    "Режим отдыха у этого озера может отличаться от Белого — уточняйте на месте. Следующая точка маршрута — «Озеро Белое». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Рядом с городом есть озеро Островное.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": true
+    },
+    {
+     "text": "Режим отдыха у озёр различается.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": true
+    },
+    {
+     "text": "Координаты приблизительные.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": false
+    },
+    {
+     "text": "Описание — оценка составителя.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
+     "verified": false
+    },
+    {
+     "text": "Белоозёрский — в Воскресенском округе.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
   },
   {
    "id": "beloozerskiy-beloe",
@@ -99,7 +145,7 @@
    "visitMinutes": 30,
    "guideStory": [
     "Главная звезда Белоозёрского — озеро Белое. Это место отдыха горожан.",
-    "Режим отдыха на озёрах ежегодно уточняется: проверьте, где разрешено купание. Следующая точка маршрута — «Озеро Островное». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
+    "Режим отдыха на озёрах ежегодно уточняется: проверьте, где разрешено купание. Финиш — Станция «Белоозёрская»: Электрички Казанского направления. Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
    ],
    "facts": [
     {
@@ -134,294 +180,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "beloozerskiy-ostrovnoe",
-   "name": "Озеро Островное",
-   "coords": {
-    "lat": 55.462,
-    "lon": 38.455
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Рядом с Белым — озеро Островное. Вместе они дают природную паузу в маршруте.",
-    "Режим отдыха у этого озера может отличаться от Белого — уточняйте на месте. Следующая точка маршрута — «Город на Москве-реке». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Рядом с городом есть озеро Островное.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
-     "verified": true
-    },
-    {
-     "text": "Режим отдыха у озёр различается.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
-     "verified": false
-    },
-    {
-     "text": "Описание — оценка составителя.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/",
-     "verified": false
-    },
-    {
-     "text": "Белоозёрский — в Воскресенском округе.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "beloozerskiy-reka",
-   "name": "Город на Москве-реке",
-   "coords": {
-    "lat": 55.422,
-    "lon": 38.27
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "5 октября 1781 года, при новом административном делении, Бронницы получили статус уездного города и стали центром Бронницкого уезда.",
-    "Первое упоминание — 1451 год по Большой российской энциклопедии; другие источники называют 1453 год и грамоту Софьи Витовтовны, вдовы Василия I."
-   ],
-   "facts": [
-    {
-     "text": "5 октября 1781 года Бронницы стали уездным городом.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30062",
-     "verified": true
-    },
-    {
-     "text": "По БРЭ, Бронницы впервые упоминаются в 1451 году.",
-     "sourceUrl": "https://bigenc.ru/c/khronotop-bronnitsy-8e2837",
-     "verified": true
-    },
-    {
-     "text": "Другие источники называют 1453 год и грамоту Софьи Витовтовны.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30062",
-     "verified": false
-    },
-    {
-     "text": "Бронницы стоят на Москве-реке.",
-     "sourceUrl": "https://bigenc.ru/c/khronotop-bronnitsy-8e2837",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30062",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "beloozerskiy-fabrika",
-   "name": "Раменская мануфактура",
-   "coords": {
-    "lat": 55.565,
-    "lon": 38.235
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Расширение Раменской бумагопрядильной мануфактуры купцами Малютиными превратило село в мощный индустриальный центр.",
-    "Даты основания фабрики мы в найденных источниках не нашли — смотрим корпуса и не придумываем цифры. Следующая точка маршрута — «Кратовское озеро»."
-   ],
-   "facts": [
-    {
-     "text": "Купцы Малютины расширили Раменскую бумагопрядильную мануфактуру.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Мануфактура превратила село в индустриальный центр.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": true
-    },
-    {
-     "text": "Дата основания фабрики не найдена.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Координаты фабрики приблизительные.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia",
-     "verified": false
-    },
-    {
-     "text": "Раменское описано в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A0%D0%B0%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "beloozerskiy-ozero",
-   "name": "Кратовское озеро",
-   "coords": {
-    "lat": 55.6,
-    "lon": 38.168
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Озеро — любимое место отдыха кратовских дачников в жаркие дни.",
-    "Вокруг — сосны, которые и делают Кратово одним из самых приятных дачных посёлков Казанского направления.",
-    "От озера по тенистым дачным улицам возвращаемся к станции, где маршрут и заканчивается."
-   ],
-   "facts": [
-    {
-     "text": "Кратово окружено сосновым лесом.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Посёлку посвящён материал «Смотрим».",
-     "sourceUrl": "https://smotrim.ru/journal/2594072",
-     "verified": true
-    },
-    {
-     "text": "История озера в найденных источниках не раскрыта.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": false
-    },
-    {
-     "text": "Кратово — дачный посёлок Раменского округа.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": false
-    },
-    {
-     "text": "Летом в Кратове жили семьи учёных.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "beloozerskiy-dachi",
-   "name": "Профессорские дачи",
-   "coords": {
-    "lat": 55.602,
-    "lon": 38.155
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 25,
-   "guideStory": [
-    "До 1930 года посёлок назывался Прозоровским — по князьям Голицыным-Прозоровским. Дачной местностью он был ещё в XIX веке.",
-    "В советское время здесь появились десятки тенистых дач, где отдыхали учёные и работники культуры. Mel.fm собирал воспоминания о «профессорских дачах»: сосны, мопеды, детские игры и местные легенды."
-   ],
-   "facts": [
-    {
-     "text": "До 1930 года посёлок назывался Прозоровским.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Название связано с князьями Голицыными-Прозоровскими.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "На дачах Кратова летом жили советские учёные и деятели культуры.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": true
-    },
-    {
-     "text": "Московский комсомолец называет Кратово среди интересных мест для покупки дачи.",
-     "sourceUrl": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html",
-     "verified": true
-    },
-    {
-     "text": "Конкретные дачи известных людей мы не сверяли.",
-     "sourceUrl": "https://mel.fm/dacha/6703185-kratovo",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "beloozerskiy-dvorets",
-   "name": "Дворец на холме",
-   "coords": {
-    "lat": 55.625,
-    "lon": 38.082
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Генерал-майор Михаил Измайлов получил щедрые награды от Екатерины II после переворота 1762 года и пригласил Баженова спланировать новую усадьбу.",
-    "В комплекс входили дворец на холме, Эрмитаж, церковь, грот и мостик к беседке на острове. Примерно через десять лет Баженов впал в немилость, и, вероятно, не всё было достроено. Баженовский Эрмитаж не сохранился."
-   ],
-   "facts": [
-    {
-     "text": "Владелец Михаил Измайлов был награждён Екатериной II после переворота 1762 года.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Измайлов пригласил Баженова для планировки усадьбы.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "В комплекс входили дворец, Эрмитаж, церковь, грот и мостик к беседке на острове.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Баженовский Эрмитаж не сохранился.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Усадьба перешла к Воронцовым-Дашковым, в 1890-х её продали инженеру.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo",
-     "verified": true
-    },
-    {
-     "text": "Утверждение о «масонском стиле» усадьбы не подтверждено.",
-     "sourceUrl": "https://lomonosov.msu.ru/archive/Lomonosov_2024/data/32768/172096_uid348645_report.pdf",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Доступ к дворцу может быть ограничен — уточняйте."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
+   "order": 30,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -457,75 +217,35 @@
    "url": "https://ru.ruwiki.ru/wiki/%D0%93%D0%BE%D1%80%D0%BE%D0%B4%D1%81%D0%BA%D0%BE%D0%B5_%D0%BF%D0%BE%D1%81%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%91%D0%B5%D0%BB%D0%BE%D0%BE%D0%B7%D1%91%D1%80%D1%81%D0%BA%D0%B8%D0%B9"
   },
   {
-   "title": "Бронницы — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/30062"
-  },
-  {
-   "title": "Хронотоп: Бронницы — БРЭ",
-   "url": "https://bigenc.ru/c/khronotop-bronnitsy-8e2837"
-  },
-  {
-   "title": "Храмовый комплекс — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A5%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D1%8B%D0%B9_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81_%D0%B2_%D0%91%D1%80%D0%BE%D0%BD%D0%BD%D0%B8%D1%86%D0%B0%D1%85"
-  },
-  {
-   "title": "История Раменского — kupibilet.ru",
-   "url": "https://www.kupibilet.ru/gid/rossiia/ramenskoe/istoriia"
-  },
-  {
-   "title": "Раменское — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/47154"
-  },
-  {
-   "title": "Кратово — Мел",
-   "url": "https://mel.fm/dacha/6703185-kratovo"
-  },
-  {
-   "title": "Интересные места для дачи — МК",
-   "url": "https://www.mk.ru/mosobl/2024/05/09/ryadom-s-tavernoy-ili-pod-bokom-u-okudzhavy-nazvany-interesnye-mesta-dlya-pokupki-dachi.html"
-  },
-  {
-   "title": "Усадьба Быково — Рамблер",
-   "url": "https://weekend.rambler.ru/other/42676156-chto-stoit-znat-o-podmoskovnoy-usadbe-bykovo"
-  },
-  {
-   "title": "Владимирская церковь — KudaGo",
-   "url": "https://kudago.com/msk/place/vladimirskoy/"
-  },
-  {
-   "title": "Быково — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%91%D1%8B%D0%BA%D0%BE%D0%B2%D0%BE"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/beloozyorskii/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     38.06293,
-     55.6352
+     38.434455,
+     55.46
     ],
     [
-     38.063676,
-     55.633628
+     38.435198,
+     55.458428
     ],
     [
-     38.265202,
-     55.420428
+     38.437227,
+     55.457277
     ],
     [
-     38.26723,
-     55.419277
+     38.44,
+     55.456856
     ],
     [
-     38.27,
-     55.418856
-    ],
-    [
-     38.27277,
-     55.419277
+     38.455,
+     55.458856
     ],
     [
      38.457773,
@@ -552,28 +272,24 @@
      55.467723
     ],
     [
-     38.170783,
-     55.602723
+     38.45,
+     55.468144
     ],
     [
-     38.071285,
-     55.637923
+     38.447227,
+     55.467723
     ],
     [
-     38.0685,
-     55.638344
+     38.437227,
+     55.462723
     ],
     [
-     38.065715,
-     55.637923
+     38.435198,
+     55.461572
     ],
     [
-     38.063676,
-     55.636772
-    ],
-    [
-     38.06293,
-     55.6352
+     38.434455,
+     55.46
     ]
    ]
   ]
