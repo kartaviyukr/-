@@ -142,6 +142,7 @@
     "peresvet.json",
     "krasnozavodsk.json",
     "bogorodskoe.json",
+    "aleksandrov.json",
     "orekhovo-zuevo.json",
     "likino-dulevo.json",
     "guslitsy-davydovo.json",
@@ -177,6 +178,7 @@
     "teryaevo-iosifo-volotskiy-monastyr.json",
     "lotoshino.json",
     "mikulino.json",
+    "pereslavl-zalesskiy.json",
     "roshal.json",
     "svyatoe-ozero-meshchera.json",
     "shatura.json",
@@ -185,6 +187,7 @@
     "lukhovitsy.json",
     "zaraysk.json",
     "serebryanye-prudy.json",
+    "rostov-velikiy.json",
     "suzdal.json",
     "vladimir.json"
   ]

@@ -2999,7 +2999,7 @@
    "distanceFromKremlinKm": 98.7,
    "azimuthDeg": 43.0,
    "ring": 5,
-   "destinationId": null,
+   "destinationId": "aleksandrov",
    "start": false,
    "insideMkad": false
   },
@@ -3701,7 +3701,7 @@
    "distanceFromKremlinKm": 133.5,
    "azimuthDeg": 34.4,
    "ring": 7,
-   "destinationId": null,
+   "destinationId": "pereslavl-zalesskiy",
    "start": false,
    "insideMkad": false
   },
@@ -3935,7 +3935,7 @@
    "distanceFromKremlinKm": 193.8,
    "azimuthDeg": 34.0,
    "ring": 8,
-   "destinationId": null,
+   "destinationId": "rostov-velikiy",
    "start": false,
    "insideMkad": false
   },
