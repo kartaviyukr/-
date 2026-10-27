@@ -3953,7 +3953,7 @@
    "distanceFromKremlinKm": 190.7,
    "azimuthDeg": 65.9,
    "ring": 8,
-   "destinationId": null,
+   "destinationId": "suzdal",
    "start": false,
    "insideMkad": false
   },
@@ -3971,7 +3971,7 @@
    "distanceFromKremlinKm": 178.7,
    "azimuthDeg": 75.3,
    "ring": 8,
-   "destinationId": null,
+   "destinationId": "vladimir",
    "start": false,
    "insideMkad": false
   },

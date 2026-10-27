@@ -1,0 +1,498 @@
+{
+ "id": "suzdal",
+ "name": "Суздаль",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "vladimirskaya-oblast",
+ "distanceFromKremlinKm": 190.7,
+ "coords": {
+  "lat": 56.42,
+  "lon": 40.45
+ },
+ "intro": [
+  "Суздаль — город-музей: кремль, монастыри и храмы почти без поздней застройки. Рождественский собор с Золотыми вратами 1230-х годов входит в объект ЮНЕСКО «Белокаменные памятники Владимира и Суздаля».",
+  "Маршрут начинается в кремле, проходит по берегу Каменки к Покровскому и Спасо-Евфимиеву монастырям, а затем выводит из города: в Кидекшу Юрия Долгорукого, к церкви Покрова на Нерли, палатам Андрея Боголюбского и Золотым воротам Владимира.",
+  "Около 68 км с финишем на вокзале Владимира, откуда идут поезда в Москву. Это длинный день: в Суздале не задерживайтесь до обеда.",
+  "Дороги — асфальт и местные шоссе; к Покрову на Нерли ведёт тропа через луг, в половодье её заливает."
+ ],
+ "startPoint": {
+  "name": "Суздаль, автостанция",
+  "coords": {
+   "lat": 56.411,
+   "lon": 40.456
+  },
+  "transport": "Автобусы из Владимира и Москвы"
+ },
+ "endPoint": {
+  "name": "Вокзал «Владимир»",
+  "coords": {
+   "lat": 56.1286,
+   "lon": 40.4106
+  },
+  "transport": "Поезда и электрички до Москвы"
+ },
+ "route": {
+  "distanceKm": 68.0,
+  "durationH": 9.5,
+  "difficulty": "сложный",
+  "shape": "линейный",
+  "surfaceNotes": "Асфальт, местные дороги, тропа через луг у Нерли.",
+  "seasonNotes": "С мая по сентябрь.",
+  "safetyNotes": "Трассу М-7 и объезд Владимира пересекаем только по переходам; по загородным дорогам — по обочине.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "suzdal-kreml",
+   "name": "Суздальский кремль",
+   "coords": {
+    "lat": 56.4155,
+    "lon": 40.44
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Кремль — древнейшая часть Суздаля. Он входит в Список всемирного наследия ЮНЕСКО, а Архиерейские палаты XV–XVIII веков занимает музей истории Суздальской земли.",
+    "С земляных валов видно, как город расходится от кремля по излучине Каменки. Билеты в музеи — в кассе у входа."
+   ],
+   "facts": [
+    {
+     "text": "Суздальский кремль внесён в Список всемирного наследия ЮНЕСКО.",
+     "sourceUrl": "https://experience.tripster.ru/articles/chto-posmotret-v-suzdale/",
+     "verified": true
+    },
+    {
+     "text": "Архиерейские палаты XV–XVIII веков занимает музей истории Суздальской земли.",
+     "sourceUrl": "https://experience.tripster.ru/articles/chto-posmotret-v-suzdale/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "suzdal-rozhdestvensky",
+   "name": "Рождественский собор и Золотые врата",
+   "coords": {
+    "lat": 56.4161,
+    "lon": 40.4412
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Главный собор кремля известен Золотыми вратами 1230-х годов. Их сделали в технике «золотой наводки»: листы нагревали до 600–700 градусов и втирали амальгаму золота на ртути.",
+    "Это древнейший памятник такого рода на Руси. За всё время врата реставрировали лишь однажды — в XVIII веке. С 1992 года собор входит в объект ЮНЕСКО."
+   ],
+   "facts": [
+    {
+     "text": "Золотые врата выполнены в 1230-х годах в технике «золотой наводки».",
+     "sourceUrl": "https://rg.ru/2023/01/27/reg-cfo/piat-eksponatov-radi-kotoryh-stoit-uvidet-vystavku-k-1000-letiiu-suzdalia-v-novoj-tretiakovke.html",
+     "verified": true
+    },
+    {
+     "text": "Это древнейший памятник подобного рода, созданный на Руси.",
+     "sourceUrl": "https://rg.ru/2023/01/27/reg-cfo/piat-eksponatov-radi-kotoryh-stoit-uvidet-vystavku-k-1000-letiiu-suzdalia-v-novoj-tretiakovke.html",
+     "verified": true
+    },
+    {
+     "text": "Врата реставрировали только однажды, в XVIII веке.",
+     "sourceUrl": "https://rg.ru/2023/01/27/reg-cfo/piat-eksponatov-radi-kotoryh-stoit-uvidet-vystavku-k-1000-letiiu-suzdalia-v-novoj-tretiakovke.html",
+     "verified": true
+    },
+    {
+     "text": "С 1992 года Рождественский собор входит в объект ЮНЕСКО «Белокаменные памятники Владимира и Суздаля».",
+     "sourceUrl": "https://experience.tripster.ru/articles/chto-posmotret-v-suzdale/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "suzdal-pokrovsky",
+   "name": "Покровский монастырь",
+   "coords": {
+    "lat": 56.4297,
+    "lon": 40.439
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Женский Покровский монастырь основан в 1364 году; одна версия связывает его с князем Андреем Константиновичем, другая — с Дмитрием Константиновичем.",
+    "Одной из первых знатных узниц обители стала жена Василия III Соломония Сабурова: её постригли здесь в 1525 году под именем Софии. Сегодня её почитают как преподобную Софию Суздальскую."
+   ],
+   "facts": [
+    {
+     "text": "Покровский монастырь основан в 1364 году.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/suzdal/intercession-monastery-suzdal.htm",
+     "verified": true
+    },
+    {
+     "text": "Имя основателя в источниках расходится: Андрей или Дмитрий Константинович.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C_(%D0%A1%D1%83%D0%B7%D0%B4%D0%B0%D0%BB%D1%8C)",
+     "verified": false
+    },
+    {
+     "text": "Соломония Сабурова пострижена в монастыре в 1525 году под именем Софии.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/suzdal/intercession-monastery-suzdal.htm",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "suzdal-evfimiev",
+   "name": "Спасо-Евфимиев монастырь",
+   "coords": {
+    "lat": 56.4315,
+    "lon": 40.4425
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 45,
+   "guideStory": [
+    "Монастырь основан в 1352 году суздальско-нижегородским князем Борисом Константиновичем и монахом Евфимием. Он задумывался и как крепость, защищавшая город с севера.",
+    "В центре — Спасо-Преображенский собор XVI века с фресками XVII века. Музеем монастырь стал в 1968 году, а в 2015-м мощи преподобного Евфимия вернули в собор."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь основан в 1352 году князем Борисом Константиновичем и монахом Евфимием.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A1%D0%BF%D0%B0%D1%81%D0%BE-%D0%95%D0%B2%D1%84%D0%B8%D0%BC%D0%B8%D0%B5%D0%B2_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
+     "verified": true
+    },
+    {
+     "text": "В центре монастыря — Спасо-Преображенский собор XVI века.",
+     "sourceUrl": "https://www.culture.ru/objects/873/spaso-evfimiev-muzhskoi-monastyr-v-suzdale-vladimirskaya-oblast",
+     "verified": true
+    },
+    {
+     "text": "Музеем монастырь стал в 1968 году.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/suzdal/spaso-evfimiev-monastyr",
+     "verified": true
+    },
+    {
+     "text": "10 октября 2015 года мощи преподобного Евфимия вернули в Спасо-Преображенский собор.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/suzdal/spaso-evfimiev-monastyr",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "suzdal-kideksha",
+   "name": "Кидекша: церковь Бориса и Глеба",
+   "coords": {
+    "lat": 56.429,
+    "lon": 40.53
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "В Кидекше в XII веке была резиденция Юрия Долгорукого. Церковь Бориса и Глеба обычно датируют 1152 годом — это одна из самых ранних белокаменных построек Северо-Восточной Руси.",
+    "Храм сложен из тщательно отёсанных известняковых плит почти без резьбы. Фрагменты фресок, открытые в 1947 году, относят к 1180-м годам. С 1992 года церковь входит в объект ЮНЕСКО «Белокаменные памятники Владимира и Суздаля»."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Бориса и Глеба в Кидекше предположительно построена в 1152 году.",
+     "sourceUrl": "https://znanierussia.ru/articles/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%B0_%D0%B8_%D0%93%D0%BB%D0%B5%D0%B1%D0%B0_(%D0%9A%D0%B8%D0%B4%D0%B5%D0%BA%D1%88%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Это одна из наиболее ранних белокаменных построек Северо-Восточной Руси.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%B0_%D0%B8_%D0%93%D0%BB%D0%B5%D0%B1%D0%B0_(%D0%9A%D0%B8%D0%B4%D0%B5%D0%BA%D1%88%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "Фрагменты фресок, открытые в 1947 году, относят к 1180-м годам.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%B0_%D0%B8_%D0%93%D0%BB%D0%B5%D0%B1%D0%B0_(%D0%9A%D0%B8%D0%B4%D0%B5%D0%BA%D1%88%D0%B0)",
+     "verified": true
+    },
+    {
+     "text": "С 1992 года храм входит в объект ЮНЕСКО «Белокаменные памятники Владимира и Суздаля».",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%B0_%D0%B8_%D0%93%D0%BB%D0%B5%D0%B1%D0%B0_(%D0%9A%D0%B8%D0%B4%D0%B5%D0%BA%D1%88%D0%B0)",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  },
+  {
+   "id": "suzdal-nerl",
+   "name": "Церковь Покрова на Нерли",
+   "coords": {
+    "lat": 56.196,
+    "lon": 40.5615
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В полутора километрах от Боголюбова, на лугу у Нерли, стоит одна из самых известных церквей России. Традиционная дата — 1165 год, в память о погибшем сыне князя Изяславе; часть исследователей по летописям относит храм к 1158 году.",
+    "Анализ известняка показал, что камень добывали недалеко от Москвы, а не везли с Волги. К церкви ведёт пешая тропа по лугу — в паводок её заливает; велосипед оставляем у начала тропы."
+   ],
+   "facts": [
+    {
+     "text": "Церковь находится в полутора километрах от Боголюбова.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%BD%D0%B0_%D0%9D%D0%B5%D1%80%D0%BB%D0%B8_(%D0%91%D0%BE%D0%B3%D0%BE%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Традиционная датировка — 1165 год, некоторые исследователи обосновывают 1158 год.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%BD%D0%B0_%D0%9D%D0%B5%D1%80%D0%BB%D0%B8_(%D0%91%D0%BE%D0%B3%D0%BE%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D0%BE)",
+     "verified": true
+    },
+    {
+     "text": "Храм построен в память о сыне князя Изяславе между 1158 и 1165 годами.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/vladimir/church-on-nerl.htm",
+     "verified": true
+    },
+    {
+     "text": "Анализ показал, что известняк для храма добывали недалеко от Москвы.",
+     "sourceUrl": "https://www.vokrugsveta.ru/telegraph/history/588/",
+     "verified": true
+    }
+   ],
+   "daylightOnly": true,
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 60,
+   "coordsVerified": false
+  },
+  {
+   "id": "suzdal-bogolyubovo",
+   "name": "Боголюбово: палаты Андрея Боголюбского",
+   "coords": {
+    "lat": 56.1957,
+    "lon": 40.534
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "В Боголюбове была резиденция князя Андрея — и до наших дней дошли белокаменные фрагменты его дворца XII века: переход палат с лестничной башней и остатки церкви Рождества Богородицы.",
+    "По летописи, в 1158 году Андрей заложил здесь каменные церкви во имя Богородицы. Позже вокруг дворца вырос монастырь — его основали уже преемники князя."
+   ],
+   "facts": [
+    {
+     "text": "В Боголюбове сохранились белокаменные фрагменты княжеской резиденции XII века.",
+     "sourceUrl": "https://pnj.nngasu.ru/word/articles/4-2025/24.pdf",
+     "verified": true
+    },
+    {
+     "text": "Облик перехода палат с лестничной башней складывался в несколько строительных периодов.",
+     "sourceUrl": "https://pnj.nngasu.ru/word/articles/4-2025/24.pdf",
+     "verified": true
+    },
+    {
+     "text": "Монастырь, по мнению учёных, основали преемники Андрея Боголюбского.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/vladimir/points",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 70,
+   "coordsVerified": false
+  },
+  {
+   "id": "suzdal-zolotye-vorota",
+   "name": "Золотые ворота",
+   "coords": {
+    "lat": 56.127,
+    "lon": 40.397
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Парадный въезд во Владимир построили в 1164 году, при Андрее Боголюбском. От крепостной стены ничего не осталось, а арка с надвратной церковью стоит до сих пор.",
+    "Ворота много раз перестраивали, поэтому их нынешний облик заметно отличается от первоначального. Сам город, по путеводителям, основан в 1108 году."
+   ],
+   "facts": [
+    {
+     "text": "Золотые ворота построены в 1164 году при Андрее Боголюбском.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/vladimir/golden-gate.htm",
+     "verified": true
+    },
+    {
+     "text": "Сохранились арка и надвратная церковь, крепостная стена не сохранилась.",
+     "sourceUrl": "https://www.advantour.com/rus/russia/vladimir/golden-gate.htm",
+     "verified": true
+    },
+    {
+     "text": "Ворота неоднократно перестраивались, их облик отличается от первоначального.",
+     "sourceUrl": "https://www.sputnik8.com/ru/vladimir/sights/zolotye-vorota/info",
+     "verified": true
+    },
+    {
+     "text": "Владимир основан в 1108 году.",
+     "sourceUrl": "https://www.putevka.com/blog/vladimir:-glavnye-dostoprimechatelnosti-i-interesnye-mesta",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 80,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Суздальская медовуха",
+  "kind": "продукт",
+  "story": [
+   "Медовуха — главный напиток Суздаля: её продают и дают попробовать в торговых рядах и дегустационных залах.",
+   "Эксперты спорят с мифом, будто её придумали советские технологи для иностранцев: в советское время просто не мешали возрождению старых промыслов. Классических сортов несколько, они различаются крепостью и количеством мёда. Велосипедисту — только после финиша."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Торговые ряды Суздаля",
+    "address": "Суздаль, Торговая площадь",
+    "verified": false,
+    "note": "Туристический источник; конкретные лавки не проверяли."
+   }
+  ]
+ },
+ "title": {
+  "id": "suzdal-title",
+  "name": "Суздальский пилигрим",
+  "legend": "Суздаль, Кидекша, Нерль и Владимир — весь белокаменный пояс за один день. Кто проехал — суздальский пилигрим.",
+  "ritual": "Сфотографироваться на валу кремля над Каменкой перед выездом.",
+  "pairVariant": "Суздальские пилигримы"
+ },
+ "sources": [
+  {
+   "title": "Золотые врата — Российская газета",
+   "url": "https://rg.ru/2023/01/27/reg-cfo/piat-eksponatov-radi-kotoryh-stoit-uvidet-vystavku-k-1000-letiiu-suzdalia-v-novoj-tretiakovke.html"
+  },
+  {
+   "title": "Что посмотреть в Суздале — Трипстер",
+   "url": "https://experience.tripster.ru/articles/chto-posmotret-v-suzdale/"
+  },
+  {
+   "title": "Спасо-Евфимиев монастырь — Культура.РФ",
+   "url": "https://www.culture.ru/objects/873/spaso-evfimiev-muzhskoi-monastyr-v-suzdale-vladimirskaya-oblast"
+  },
+  {
+   "title": "Покровский монастырь — Advantour",
+   "url": "https://www.advantour.com/rus/russia/suzdal/intercession-monastery-suzdal.htm"
+  },
+  {
+   "title": "Кидекша — Знание",
+   "url": "https://znanierussia.ru/articles/%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%91%D0%BE%D1%80%D0%B8%D1%81%D0%B0_%D0%B8_%D0%93%D0%BB%D0%B5%D0%B1%D0%B0_(%D0%9A%D0%B8%D0%B4%D0%B5%D0%BA%D1%88%D0%B0)"
+  },
+  {
+   "title": "Покрова на Нерли — Азбука паломника",
+   "url": "https://azbyka.ru/palomnik/%D0%9F%D0%BE%D0%BA%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%86%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C_%D0%BD%D0%B0_%D0%9D%D0%B5%D1%80%D0%BB%D0%B8_(%D0%91%D0%BE%D0%B3%D0%BE%D0%BB%D1%8E%D0%B1%D0%BE%D0%B2%D0%BE)"
+  },
+  {
+   "title": "Медовуха — Лента.ру",
+   "url": "https://lenta.ru/articles/2025/09/17/chto-posmotret-v-suzdale-za-1-den/amp/"
+  },
+  {
+   "title": "Медовуха — Коммерсантъ FM",
+   "url": "https://www.kommersant.ru/doc/902174"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 2,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     40.391359,
+     56.127
+    ],
+    [
+     40.392115,
+     56.125428
+    ],
+    [
+     40.394179,
+     56.124277
+    ],
+    [
+     40.397,
+     56.123856
+    ],
+    [
+     40.4106,
+     56.125456
+    ],
+    [
+     40.413421,
+     56.125877
+    ],
+    [
+     40.564326,
+     56.193277
+    ],
+    [
+     40.566394,
+     56.194428
+    ],
+    [
+     40.567151,
+     56.196
+    ],
+    [
+     40.535686,
+     56.429
+    ],
+    [
+     40.534924,
+     56.430572
+    ],
+    [
+     40.532843,
+     56.431723
+    ],
+    [
+     40.53,
+     56.432144
+    ],
+    [
+     40.4425,
+     56.434644
+    ],
+    [
+     40.439657,
+     56.434223
+    ],
+    [
+     40.436157,
+     56.432423
+    ],
+    [
+     40.434076,
+     56.431272
+    ],
+    [
+     40.433314,
+     56.4297
+    ],
+    [
+     40.391359,
+     56.127
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
