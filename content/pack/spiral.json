@@ -3731,11 +3731,11 @@
    "regionId": "shatura",
    "mustHave": 2,
    "coords": {
-    "lat": 55.65,
-    "lon": 39.95
+    "lat": 55.6085,
+    "lon": 39.553
    },
-   "distanceFromKremlinKm": 146.6,
-   "azimuthDeg": 93.5,
+   "distanceFromKremlinKm": 122.4,
+   "azimuthDeg": 96.7,
    "ring": 7,
    "destinationId": "svyatoe-ozero-meshchera",
    "start": false,

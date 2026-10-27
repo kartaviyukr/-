@@ -4,442 +4,137 @@
  "settlementType": "природа",
  "mustHave": 2,
  "regionId": "shatura",
- "distanceFromKremlinKm": 146.6,
+ "distanceFromKremlinKm": 122.4,
  "coords": {
-  "lat": 55.65,
-  "lon": 39.95
+  "lat": 55.6085,
+  "lon": 39.553
  },
  "intro": [
   "Святое озеро — одно из озёр Мещёры на крайнем востоке Московской области, недалеко от Рошаля.",
   "Мещёра — край лесов, болот и торфяников; торф здесь веками добывали, а Шатурская ГРЭС когда-то работала именно на нём.",
   "Подробных сведений о самом озере мы в найденных источниках не нашли и не придумываем. Это природный маршрут: лес, озеро и тишина.",
-  "Свои места маршрута: «Мещёрский лес», «Святое озеро». По пути маршрут заходит и к соседям: Рошаль — «Дом культуры имени Косякова», «Городской музей»; Шатура — «Озеро Святое — крупнейшее в области», «Торфяные края и узкоколейка», «Музей при Шатурской ГРЭС», «Шатурская ГРЭС», «Шатурские озёра».",
-  "Маршрут линейный, около 51 км и 9 точек. Финиш — Станция «Шатура» (Электрички Казанского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Святое озеро», «Храм в Андреевских Выселках», «Северный берег». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 9 км: старт и финиш — Святое озеро (Мещера), центр (До ближайшей станции — Остановка «Рошаль», около 20 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Остановка «Рошаль»",
+  "name": "Святое озеро (Мещера), центр",
   "coords": {
-   "lat": 55.663,
-   "lon": 39.865
+   "lat": 55.6085,
+   "lon": 39.553
   },
-  "transport": "Автобусы от Шатуры — уточняйте"
+  "transport": "До ближайшей станции — Остановка «Рошаль», около 20 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "endPoint": {
-  "name": "Станция «Шатура»",
+  "name": "Святое озеро (Мещера), центр",
   "coords": {
-   "lat": 55.5782,
-   "lon": 39.5445
+   "lat": 55.6085,
+   "lon": 39.553
   },
-  "transport": "Электрички Казанского направления"
+  "transport": "До ближайшей станции — Остановка «Рошаль», около 20 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута."
  },
  "route": {
-  "distanceKm": 51.0,
-  "durationH": 6.5,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 8.9,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
   {
-   "id": "svyatoe-ozero-meshchera-dk",
-   "name": "Дом культуры имени Косякова",
-   "coords": {
-    "lat": 55.664,
-    "lon": 39.866
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Дом культуры имени Косякова построен в 1916 году и остаётся главным общественным памятником Рошаля.",
-    "Город возник в урочище Крестов Брод при строительстве порохового завода в 1914–1916 годах. Следующая точка маршрута — «Городской музей»."
-   ],
-   "facts": [
-    {
-     "text": "Дом культуры построен в 1916 году.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "ДК — главный общественный памятник города.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "Город возник при пороховом заводе 1914–1916 годов.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "Рошаль — самый восточный город области.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 10
-  },
-  {
-   "id": "svyatoe-ozero-meshchera-muzey",
-   "name": "Городской музей",
-   "coords": {
-    "lat": 55.663,
-    "lon": 39.867
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Музей рассказывает об опасном труде на заводе, об эвакуации предприятия и о химической экологии.",
-    "Комбинат сформировал рабочие кварталы, школы и культуру города. Следующая точка маршрута — «Мещёрский лес». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
-   ],
-   "facts": [
-    {
-     "text": "Музей рассказывает об опасном труде и эвакуации завода.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "Музей рассказывает о химической экологии.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "Комбинат сформировал кварталы, школы и культуру.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "Часы работы не проверены.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "svyatoe-ozero-meshchera-les",
-   "name": "Мещёрский лес",
-   "coords": {
-    "lat": 55.656,
-    "lon": 39.9
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Из Рошаля едем на восток через мещёрский лес. Дороги здесь могут быть песчаными или заболоченными.",
-    "Тропы мы на месте не проверяли — держитесь накатанных дорог. Следующая точка маршрута — «Святое озеро». Формат остановки — «проезжаем», заложите на неё около 15 минут."
-   ],
-   "facts": [
-    {
-     "text": "Рошаль — край Мещёры.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": true
-    },
-    {
-     "text": "Тропы не проверены.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    },
-    {
-     "text": "Тип дорог — оценка составителя.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    },
-    {
-     "text": "Протяжённость оценена приблизительно.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
    "id": "svyatoe-ozero-meshchera-ozero",
    "name": "Святое озеро",
    "coords": {
-    "lat": 55.65,
-    "lon": 39.95
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Святое озеро — мещёрское озеро среди лесов. Подробных сведений о нём в найденных источниках мы не нашли.",
-    "Мещёра — край торфяников: на местном торфе когда-то работала Шатурская ГРЭС.",
-    "Привал на берегу; купание — на свой риск, мы места не проверяли."
-   ],
-   "facts": [
-    {
-     "text": "Святое озеро — в Мещёре — по составителю.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    },
-    {
-     "text": "Подробные сведения об озере не найдены.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    },
-    {
-     "text": "Шатурская ГРЭС работала на торфе.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    },
-    {
-     "text": "Купание не проверено.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/",
-     "verified": false
-    }
-   ],
-   "daylightOnly": true,
-   "warnings": [
-    "Болотистые места: не сходить с дорог."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "svyatoe-ozero-meshchera-svyatoe",
-   "name": "Озеро Святое — крупнейшее в области",
-   "coords": {
-    "lat": 55.67,
-    "lon": 39.93
+    "lat": 55.6085,
+    "lon": 39.553
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 20,
    "guideStory": [
-    "Шатура стоит на Мещёрской низменности, среди озёр Святое, Муромское, Белое и Чёрное. Святое называют крупнейшим озером Московской области.",
-    "С озером связаны легенды о затонувшей церкви — это предание, а не история. Берега местами заболочены: к воде подходим только по тропам."
+    "Святое озеро ледникового происхождения — одно из трёх крупнейших в Подмосковье: площадь водного зеркала 11,6–11,8 км², размеры около 5 на 3 километра.",
+    "Озеро мелкое — наибольшая глубина 3,2 метра; из него вытекает река Большая Ушма."
    ],
    "facts": [
     {
-     "text": "Шатура стоит на Мещёрской низменности у озёр Святое, Муромское, Белое и Чёрное.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%B0%D1%82%D1%83%D1%80%D0%B0",
+     "text": "Площадь озера 11,6–11,8 км², одно из трёх крупнейших в Подмосковье.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_(%D0%A8%D0%B0%D1%82%D1%83%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
      "verified": true
     },
     {
-     "text": "Святое называют крупнейшим озером Подмосковья.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/shatura",
-     "verified": false
-    },
-    {
-     "text": "С озером связывают легенды о затонувшей церкви.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A8%D0%B0%D1%82%D1%83%D1%80%D0%B0",
-     "verified": false
+     "text": "Наибольшая глубина — 3,2 м; исток Большой Ушмы.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_(%D0%A8%D0%B0%D1%82%D1%83%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
+     "verified": true
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 50,
+   "order": 10,
    "coordsVerified": false
   },
   {
-   "id": "svyatoe-ozero-meshchera-torf",
-   "name": "Торфяные края и узкоколейка",
+   "id": "svyatoe-ozero-meshchera-andreevskie-vyselki",
+   "name": "Храм в Андреевских Выселках",
    "coords": {
-    "lat": 55.61,
-    "lon": 39.66
+    "lat": 55.6225,
+    "lon": 39.529
    },
-   "kind": "проезжаем",
+   "kind": "смотреть снаружи",
    "visitMinutes": 10,
    "guideStory": [
-    "Дорога от Шатуры к Рошалю идёт через бывшие торфоразработки. Для снабжения ГРЭС топливом создали три торфопредприятия — в 1927, 1930 и 1935 годах, а торф возили по узкоколейкам.",
-    "В 1986–1989 годах станцию перевели на газ: запасы торфа истощились. Ровные лесные поля и каналы вокруг — следы той эпохи."
+    "На северо-западном берегу озера, в Андреевских Выселках, стоит храм.",
+    "Шатура стоит на берегу этого же озера, к югу от храма. Следующая точка маршрута — «Северный берег». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
    ],
    "facts": [
     {
-     "text": "Для снабжения ГРЭС топливом созданы три торфопредприятия — в 1927, 1930 и 1935 годах.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "text": "Храм стоит на северо-западном берегу, в Андреевских Выселках.",
+     "sourceUrl": "https://waterresources.ru/ozera/svyatoe-ozero-shaturskiy-rayon/",
      "verified": true
     },
     {
-     "text": "В 1986–1989 годах электростанцию перевели на газ из-за исчерпания запасов торфа.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
+     "text": "Шатура стоит на берегу Святого озера.",
+     "sourceUrl": "https://kamaran.ru/moskovskaya-oblast/shatura/svyatoe-522",
      "verified": true
-    },
-    {
-     "text": "Торф вывозили по сети узкоколейных железных дорог.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/shatura/",
-     "verified": false
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "order": 60,
+   "order": 20,
    "coordsVerified": false
   },
   {
-   "id": "svyatoe-ozero-meshchera-muzey-gres",
-   "name": "Музей при Шатурской ГРЭС",
+   "id": "svyatoe-ozero-meshchera-severnyy-bereg",
+   "name": "Северный берег",
    "coords": {
-    "lat": 55.585,
+    "lat": 55.629,
     "lon": 39.56
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "С 1970 года при Шатурской ГРЭС работает музей. Станцию строили по плану ГОЭЛРО и, по данным энциклопедии, возвели всего за 600 суток; одно время она считалась самой рентабельной в мире электростанцией на торфе.",
-    "В 1933 году мощность станции достигла 180 МВт, в 1966-м — 600 МВт. Музей рассказывает, как болотный торф превращали в свет для Москвы. Посещение — по договорённости, уточняйте заранее."
-   ],
-   "facts": [
-    {
-     "text": "С 1970 года при ГРЭС действует музей.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    },
-    {
-     "text": "Станция входила в план ГОЭЛРО.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    },
-    {
-     "text": "В 1933 году мощность станции достигла 180 МВт, в 1966 году — 600 МВт.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    },
-    {
-     "text": "Станцию соорудили за 600 суток.",
-     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/shatura/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "order": 70,
-   "coordsVerified": false
-  },
-  {
-   "id": "svyatoe-ozero-meshchera-gres",
-   "name": "Шатурская ГРЭС",
-   "coords": {
-    "lat": 55.58,
-    "lon": 39.55
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Место для станции выбрал в 1914 году Роберт Классон — из-за богатых запасов торфа. Опытную «Малую Шатуру» строили с 1919 года и пустили 25 июля 1920 года.",
-    "Основная станция — одна из первых по плану ГОЭЛРО. Первую турбину 16 МВт ввели в 1925 году; источники называют 23 сентября и 6 декабря. Станции присвоили имя Ленина."
-   ],
-   "facts": [
-    {
-     "text": "Место выбрал Классон в 1914 году.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    },
-    {
-     "text": "«Малая Шатура» пущена 25 июля 1920 года.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    },
-    {
-     "text": "Шатурская ГРЭС — одна из первых по ГОЭЛРО.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    },
-    {
-     "text": "Даты пуска первой очереди в 1925 году расходятся.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Shatura_Thermal_Power_Plant",
-     "verified": false
-    },
-    {
-     "text": "Станции присвоено имя Ленина.",
-     "sourceUrl": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Промышленная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "svyatoe-ozero-meshchera-ozero-2",
-   "name": "Шатурские озёра",
-   "coords": {
-    "lat": 55.575,
-    "lon": 39.54
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Шатура стоит среди мещёрских озёр. РИАМО писало о путешествии в Шатурский район — «первая советская ГРЭС и мистические валуны».",
-    "Купание — только в разрешённых местах, их мы не проверяли. Финиш — Станция «Шатура»: Электрички Казанского направления."
+    "Озеро лежит в центральной части городского поселения Шатура, к северу от города.",
+    "Это Мещёрская низменность — край лесов, болот и торфяников. Финиш — Святое озеро (Мещера), центр: До ближайшей станции — Остановка «Рошаль», около 20 км; оттуда автобусом, на такси или своим ходом — это подъезд, а не часть маршрута.."
    ],
    "facts": [
     {
-     "text": "РИАМО писало о путешествии в Шатурский район.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
+     "text": "Озеро находится к северу от Шатуры.",
+     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_(%D0%A8%D0%B0%D1%82%D1%83%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
      "verified": true
     },
     {
-     "text": "Шатура стоит среди озёр — по наблюдению составителя.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
-     "verified": false
-    },
-    {
-     "text": "Купание не проверено.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
-     "verified": false
-    },
-    {
-     "text": "Координаты приблизительные.",
-     "sourceUrl": "https://riamo.ru/articles/istorii/puteshestvie-v-shaturskij-rajon-pervaya-sovetskaya-gres-i-misticheskie-valuny-xl/",
-     "verified": false
-    },
-    {
-     "text": "История Шатуры — kupibilet.ru.",
-     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/shatura/istoriia",
+     "text": "Озеро ледникового происхождения.",
+     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_(%D0%A8%D0%B0%D1%82%D1%83%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)",
      "verified": true
     }
    ],
-   "daylightOnly": true,
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 30,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -467,99 +162,91 @@
  },
  "sources": [
   {
-   "title": "Рошаль — travelto.ru",
-   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/roshal/"
+   "title": "Источник: ru.wikipedia.org",
+   "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_(%D0%A8%D0%B0%D1%82%D1%83%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)"
   },
   {
-   "title": "Шатурская ГРЭС — БРЭ",
-   "url": "https://bigenc.ru/c/shaturskaia-gres-imeni-v-i-lenina-9982a1"
+   "title": "Источник: ru.ruwiki.ru",
+   "url": "https://ru.ruwiki.ru/wiki/%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_(%D0%A8%D0%B0%D1%82%D1%83%D1%80%D1%81%D0%BA%D0%B8%D0%B9_%D1%80%D0%B0%D0%B9%D0%BE%D0%BD)"
   },
   {
-   "title": "Shatura Power Plant — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Shatura_Thermal_Power_Plant"
+   "title": "Источник: waterresources.ru",
+   "url": "https://waterresources.ru/ozera/svyatoe-ozero-shaturskiy-rayon/"
+  },
+  {
+   "title": "Источник: kamaran.ru",
+   "url": "https://kamaran.ru/moskovskaya-oblast/shatura/svyatoe-522"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     39.534438,
-     55.575
+     39.523432,
+     55.6225
     ],
     [
-     39.535184,
-     55.573428
+     39.524178,
+     55.620928
     ],
     [
-     39.537219,
-     55.572277
+     39.548179,
+     55.606928
     ],
     [
-     39.54,
-     55.571856
+     39.550217,
+     55.605777
     ],
     [
-     39.542781,
-     55.572277
+     39.553,
+     55.605356
     ],
     [
-     39.952786,
-     55.647277
+     39.555783,
+     55.605777
     ],
     [
-     39.954826,
-     55.648428
+     39.557821,
+     55.606928
     ],
     [
-     39.955572,
-     55.65
+     39.558566,
+     55.6085
     ],
     [
-     39.954826,
-     55.651572
+     39.565569,
+     55.629
     ],
     [
-     39.934828,
-     55.671572
+     39.564823,
+     55.630572
     ],
     [
-     39.932788,
-     55.672723
+     39.562785,
+     55.631723
     ],
     [
-     39.93,
-     55.673144
+     39.56,
+     55.632144
     ],
     [
-     39.866,
-     55.667144
+     39.557215,
+     55.631723
     ],
     [
-     39.863213,
-     55.666723
+     39.526216,
+     55.625223
     ],
     [
-     39.557219,
-     55.587723
+     39.524178,
+     55.624072
     ],
     [
-     39.541719,
-     55.580923
-    ],
-    [
-     39.539683,
-     55.579772
-    ],
-    [
-     39.535184,
-     55.576572
-    ],
-    [
-     39.534438,
-     55.575
+     39.523432,
+     55.6225
     ]
    ]
   ]
