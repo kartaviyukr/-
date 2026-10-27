@@ -10,12 +10,19 @@
   "lon": 37.33
  },
  "intro": [
-  "Красногорск — город у северо-западной границы Москвы, выросший вокруг предприятий оптики. Даты основания в источниках расходятся: один называет 1932 год, другой говорит об объединении соседних деревень в начале XX века.",
   "Главная старинная достопримечательность — усадьба Знаменское-Губайлово, которой владели Волынские, а затем князья Долгоруковы-Крымские. В городе работает Мемориальный музей немецких антифашистов.",
-  "Свои места маршрута: «Усадьба Знаменское-Губайлово», «Центр и история города», «Музей немецких антифашистов». По пути маршрут заходит и к соседям: Архангельское — «Большой дворец»; Нахабино — «Полигон и первые ракеты», «Старое село»; Дедовск — «Прядильно-ткацкая фабрика», «Рабочий посёлок»; Снегири — «Рубеж обороны»; Истра (Новый Иерусалим) — «Воскресенский собор».",
-  "Маршрут линейный, около 59 км и 10 точек. Финиш — Станция «Новоиерусалимская» (Электрички Рижского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Павшинская пойма и пешеходный мост», «Знаменская церковь», «Усадьба Знаменское-Губайлово», «Центр и история города», «Музей немецких антифашистов», «Городской парк и Ивановские пруды». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 10 км: старт и финиш — Станция «Красногорская» (Электрички Рижского направления / МЦД-2). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
+  "name": "Станция «Красногорская»",
+  "coords": {
+   "lat": 55.8182,
+   "lon": 37.3345
+  },
+  "transport": "Электрички Рижского направления / МЦД-2"
+ },
+ "endPoint": {
   "name": "Станция «Красногорская»",
   "coords": {
    "lat": 55.818,
@@ -23,25 +30,79 @@
   },
   "transport": "Электрички Рижского направления / МЦД-2"
  },
- "endPoint": {
-  "name": "Станция «Новоиерусалимская»",
-  "coords": {
-   "lat": 55.9142,
-   "lon": 36.8355
-  },
-  "transport": "Электрички Рижского направления"
- },
  "route": {
-  "distanceKm": 59.0,
-  "durationH": 7.9,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 9.9,
+  "durationH": 2.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "krasnogorsk-pavshinskaya-poyma",
+   "name": "Павшинская пойма и пешеходный мост",
+   "coords": {
+    "lat": 55.809,
+    "lon": 37.355
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Набережная Павшинской поймы — место для прогулок у Москвы-реки; через реку перекинут пешеходный мост.",
+    "От исторической части до поймы далеко — на велосипеде это как раз удобно. Следующая точка маршрута — «Знаменская церковь». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Павшинской пойме есть набережная и пешеходный мост.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnogorsk/",
+     "verified": true
+    },
+    {
+     "text": "Между исторической частью и поймой нужен транспорт.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnogorsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnogorsk-znamenskaya",
+   "name": "Знаменская церковь",
+   "coords": {
+    "lat": 55.825,
+    "lon": 37.331
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В центре усадьбы Знаменское-Губайлово стоит Знаменская церковь — главное культурно-духовное сооружение Красногорска; её история началась в XVII веке.",
+    "Усадьба войдёт в будущий исторический центр города. Следующая точка маршрута — «Усадьба Знаменское-Губайлово»."
+   ],
+   "facts": [
+    {
+     "text": "В центре усадьбы Знаменское-Губайлово стоит Знаменская церковь.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA",
+     "verified": true
+    },
+    {
+     "text": "История церкви началась в XVII веке.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
   {
    "id": "krasnogorsk-usadba",
    "name": "Усадьба Знаменское-Губайлово",
@@ -85,8 +146,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 30,
+   "coordsVerified": false
   },
   {
    "id": "krasnogorsk-tsentr",
@@ -131,8 +192,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "krasnogorsk-muzey",
@@ -178,339 +239,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 30
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "krasnogorsk-dvorets",
-   "name": "Большой дворец",
+   "id": "krasnogorsk-ivanovskie-prudy",
+   "name": "Городской парк и Ивановские пруды",
    "coords": {
-    "lat": 55.785,
-    "lon": 37.284
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 60,
-   "guideStory": [
-    "В 1810 году Архангельское купил князь Николай Борисович Юсупов — коллекционер и вельможа. Он превратил усадьбу в музей своей эпохи: по одному источнику, в его коллекции было более 540 полотен западноевропейских живописцев и десятки мраморных скульптур.",
-    "После революции имение национализировали, и уже в 1919 году здесь открылся государственный музей. Послевоенную реставрацию вели по сохранившимся фотографиям и архивам.",
-    "Музей платный; часы работы и правила прохода с велосипедом уточняйте у входа."
-   ],
-   "facts": [
-    {
-     "text": "Усадьбу в 1810 году купил князь Николай Юсупов.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
-     "verified": true
-    },
-    {
-     "text": "В коллекции Юсупова было более 540 полотен и десятки скульптур.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
-     "verified": false
-    },
-    {
-     "text": "Юсуповы владели усадьбой с 1810 по 1917 год.",
-     "sourceUrl": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe",
-     "verified": true
-    },
-    {
-     "text": "Государственный музей открылся в 1919 году.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
-     "verified": true
-    },
-    {
-     "text": "Архангельское называют «подмосковным Версалем».",
-     "sourceUrl": "https://www.kommersant.ru/gallery/4094761",
-     "verified": true
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "krasnogorsk-poligon",
-   "name": "Полигон и первые ракеты",
-   "coords": {
-    "lat": 55.83,
-    "lon": 37.19
+    "lat": 55.821,
+    "lon": 37.33
    },
    "kind": "смотреть снаружи",
    "visitMinutes": 15,
    "guideStory": [
-    "Нахабино известно как полигон инженерных войск. По Циклопедии, в 1933 году здесь запустили первые советские ракеты; туристический справочник пишет, что ракеты испытывали тут ещё до войны.",
-    "Полигон — закрытая военная территория. Смотрим только с общественных дорог и не фотографируем охраняемые объекты."
+    "Городской парк между улицами Ленина и Комсомольской устроен вокруг исторических прудов, прежде относившихся к усадьбе.",
+    "Хорошее место для привала в центре. Финиш — Станция «Красногорская»: Электрички Рижского направления / МЦД-2. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
    ],
    "facts": [
     {
-     "text": "В Нахабине в 1933 году запустили первые советские ракеты.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "text": "Парк между улицами Ленина и Комсомольской устроен вокруг исторических прудов.",
+     "sourceUrl": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-krasnogorske/",
      "verified": true
     },
     {
-     "text": "Нахабино — полигон инженерных войск.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
-     "verified": true
-    },
-    {
-     "text": "До войны здесь испытывали первые советские ракеты.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
-     "verified": true
-    },
-    {
-     "text": "Полигон — закрытая территория.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
-     "verified": false
-    },
-    {
-     "text": "Точное место запусков мы не устанавливали.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Военная территория: не фотографировать охраняемые объекты."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "krasnogorsk-selo",
-   "name": "Старое село",
-   "coords": {
-    "lat": 55.835,
-    "lon": 37.175
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Нахабино известно с 1482 года: тогда село принадлежало боярам Плещеевым. В 1534 году оно перешло к Троице-Сергиеву монастырю.",
-    "В посёлке есть храм, описанный в паломническом справочнике «Азбуки веры», — Максимовский. Его историю мы не сверяли."
-   ],
-   "facts": [
-    {
-     "text": "Нахабино известно с 1482 года как владение бояр Плещеевых.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "В 1534 году село перешло к Троице-Сергиеву монастырю.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "В Нахабине есть Максимовский храм.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "История храма нами не проверена.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "krasnogorsk-fabrika",
-   "name": "Прядильно-ткацкая фабрика",
-   "coords": {
-    "lat": 55.865,
-    "lon": 37.13
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Фабрику основало российско-французское акционерное общество: по одним данным в 1911 году, по другим — в 1913-м. Её называли одной из самых крупных и современных мануфактур того времени.",
-    "В 1940-х годах фабрику преобразовали в кордную. Промышленность надолго стала градообразующей для Дедовска."
-   ],
-   "facts": [
-    {
-     "text": "Фабрику основало российско-французское акционерное общество.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": true
-    },
-    {
-     "text": "Год основания — 1911 или 1913, источники расходятся.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": false
-    },
-    {
-     "text": "Фабрику описывают как одну из самых крупных мануфактур своего времени.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
-     "verified": true
-    },
-    {
-     "text": "В 1940-х фабрику преобразовали в кордную.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": true
-    },
-    {
-     "text": "Флаг Дедовска описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B0",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Промышленная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "krasnogorsk-posyolok",
-   "name": "Рабочий посёлок",
-   "coords": {
-    "lat": 55.868,
-    "lon": 37.12
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Рядом с фабрикой вырос рабочий посёлок Дедовский: строили дома, школу, ясли.",
-    "Название города, вероятно, связано с деревней Дедово, но точной истории названия мы в источниках не нашли.",
-    "По улицам бывшего рабочего посёлка возвращаемся к станции Гучково."
-   ],
-   "facts": [
-    {
-     "text": "При фабрике был рабочий посёлок Дедовский со школой и яслями.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
-     "verified": true
-    },
-    {
-     "text": "Происхождение названия не проверено.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": false
-    },
-    {
-     "text": "Промышленность определила развитие города.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": true
-    },
-    {
-     "text": "Дедовск — город районного подчинения.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": false
-    },
-    {
-     "text": "Достопримечательности Дедовска собраны на komandirovka.ru.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "text": "Пруды прежде относились к усадебной территории.",
+     "sourceUrl": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-krasnogorske/",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "krasnogorsk-rubezh",
-   "name": "Рубеж обороны",
-   "coords": {
-    "lat": 55.885,
-    "lon": 37.035
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1941 году на Волоколамском шоссе близ Снегирей было остановлено наступление немецких войск на Москву.",
-    "30 ноября на 42-м километре шоссе шли бои, в которых участвовала 78-я стрелковая дивизия Афанасия Белобородова. Следующая точка маршрута — «Воскресенский собор»."
-   ],
-   "facts": [
-    {
-     "text": "В 1941 году у Снегирей остановлено наступление на Москву.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "30 ноября 1941 года на 42-м километре шли бои.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Здесь действовала 78-я стрелковая дивизия Белобородова.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Координаты рубежа приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Номер мемориального километра мы не сверяли.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Волоколамское шоссе — плотное движение."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 90
-  },
-  {
-   "id": "krasnogorsk-sobor",
-   "name": "Воскресенский собор",
-   "coords": {
-    "lat": 55.9192,
-    "lon": 36.8435
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Воскресенский собор монастыря (1656–1685) скопирован с храма Воскресения в Иерусалиме.",
-    "Патриарх Никон скончался в пути в августе 1681 года и похоронен в Воскресенском соборе. Финиш — Станция «Новоиерусалимская»: Электрички Рижского направления."
-   ],
-   "facts": [
-    {
-     "text": "Воскресенский собор скопирован с храма Воскресения в Иерусалиме.",
-     "sourceUrl": "https://booksite.ru/FullText/1/001/008/082/228.htm",
-     "verified": true
-    },
-    {
-     "text": "Собор строился в 1656–1685 годах.",
-     "sourceUrl": "https://booksite.ru/FullText/1/001/008/082/228.htm",
-     "verified": true
-    },
-    {
-     "text": "Никон скончался в августе 1681 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B8%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Никон похоронен в Воскресенском соборе.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B8%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "«Рамблер» писал о Новом Иерусалиме как об образе Святой земли.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42213202-novyy-ierusalim-obraz-svyatoy-zemli-na-rusi/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 100
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -518,8 +279,7 @@
   "kind": "тематическая замена",
   "honestyNote": "Своего блюда у Красногорска нет. Тематическая замена — перекус в центре города. Это выбор составителя.",
   "story": [
-   "Красногорск — город оптиков, усадеб и военных музеев.",
-   "Кафе в центре мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
+   "Красногорск — город оптиков, усадеб и военных музеев. Кафе в центре мы не проверяли. Адреса, где купить, ниже — проверенные отмечены отдельно."
   ],
   "whereToBuy": [
    {
@@ -551,91 +311,67 @@
    "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
   },
   {
-   "title": "Архангельское — 360",
-   "url": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/krasnogorsk/"
   },
   {
-   "title": "Архангельское — tonkosti.ru",
-   "url": "https://tonkosti.ru/Архангельское"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA"
   },
   {
-   "title": "Музей-усадьба — Tripster",
-   "url": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe"
+   "title": "Источник: riamo.ru",
+   "url": "https://riamo.ru/articles/istorii/masonskie-baly-i-sosna-balmonta-kakie-tajny-skryvaet-usadba-simvolistov-v-krasnogorske-xl/"
   },
   {
-   "title": "Нахабино — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE"
+   "title": "Источник: kudago.com",
+   "url": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/"
   },
   {
-   "title": "Nakhabino — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Nakhabino"
-  },
-  {
-   "title": "Дедовск — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/30938"
-  },
-  {
-   "title": "Достопримечательности Дедовска — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/dedovsk/"
-  },
-  {
-   "title": "Ленино-Снегирёвский музей — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9"
-  },
-  {
-   "title": "Новоиерусалимский монастырь — Азбука веры",
-   "url": "https://azbyka.ru/palomnik/%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%BE%D0%B8%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Новый Иерусалим — Tripster",
-   "url": "https://experience.tripster.ru/articles/novyj-ierusalim/"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-krasnogorske/"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.82989,
-     55.9142
+     37.309403,
+     55.825
     ],
     [
-     36.830642,
-     55.912628
+     37.310153,
+     55.823428
     ],
     [
-     36.832695,
-     55.911477
+     37.312201,
+     55.822277
     ],
     [
-     37.281204,
-     55.782277
+     37.352203,
+     55.806277
     ],
     [
-     37.284,
-     55.781856
+     37.355,
+     55.805856
     ],
     [
-     37.286796,
-     55.782277
+     37.357797,
+     55.806277
     ],
     [
-     37.288842,
-     55.783428
+     37.359845,
+     55.807428
     ],
     [
-     37.338846,
-     55.816428
+     37.360595,
+     55.809
     ],
     [
-     37.339596,
-     55.818
-    ],
-    [
-     37.335598,
-     55.83
+     37.359845,
+     55.810572
     ],
     [
      37.334848,
@@ -646,32 +382,28 @@
      55.832723
     ],
     [
-     37.037803,
-     55.887723
+     37.33,
+     55.833144
     ],
     [
-     36.846305,
-     55.921923
+     37.32,
+     55.834144
     ],
     [
-     36.8435,
-     55.922344
+     37.317201,
+     55.833723
     ],
     [
-     36.840695,
-     55.921923
+     37.315152,
+     55.832572
     ],
     [
-     36.838641,
-     55.920772
+     37.310153,
+     55.826572
     ],
     [
-     36.830642,
-     55.915772
-    ],
-    [
-     36.82989,
-     55.9142
+     37.309403,
+     55.825
     ]
    ]
   ]

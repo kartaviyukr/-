@@ -12,8 +12,8 @@
  "intro": [
   "Дедовск — город-фабрика. Он вырос из нескольких деревень, железнодорожной станции Гучково и рабочего посёлка при большой прядильно-ткацкой фабрике.",
   "Фабрику основало российско-французское акционерное общество; одни источники называют 1911 год, другие — 1913-й. Её описывают как одну из самых крупных и современных мануфактур своего времени. В 1940-х фабрику преобразовали в кордную.",
-  "Свои места маршрута: «Прядильно-ткацкая фабрика», «Рабочий посёлок». По пути маршрут заходит и к соседям: Нахабино — «Старое село», «Полигон и первые ракеты»; Павловская Слобода — «Благовещенская церковь», «Курганы на Истре»; Снегири — «Рубеж обороны»; Истра (Новый Иерусалим) — «Воскресенский собор».",
-  "Маршрут линейный, около 55 км и 8 точек. Финиш — Станция «Новоиерусалимская» (Электрички Рижского направления), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Гучково», «Музей истории мироздания», «Церковь Георгия Победоносца», «Прядильно-ткацкая фабрика», «Рабочий посёлок», «Казармы, больница и ДК фабрики». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Станция «Гучково» (Дедовск) (Электрички Рижского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Гучково» (Дедовск)",
@@ -24,24 +24,132 @@
   "transport": "Электрички Рижского направления"
  },
  "endPoint": {
-  "name": "Станция «Новоиерусалимская»",
+  "name": "Станция «Гучково» (Дедовск)",
   "coords": {
-   "lat": 55.9142,
-   "lon": 36.8355
+   "lat": 55.87,
+   "lon": 37.124
   },
   "transport": "Электрички Рижского направления"
  },
  "route": {
-  "distanceKm": 55.0,
-  "durationH": 6.5,
-  "difficulty": "средний",
-  "shape": "линейный",
+  "distanceKm": 3.4,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "dedovsk-guchkovo",
+   "name": "Станция Гучково",
+   "coords": {
+    "lat": 55.87,
+    "lon": 37.124
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Город сложился из деревень, станции Гучково и рабочего посёлка при фабрике. Вокруг станции вырос Гучковский посёлок.",
+    "Станция до сих пор называется Гучково, хотя город — Дедовск. Кто такие Гучковы и как связаны со станцией, мы по источникам не проверяли."
+   ],
+   "facts": [
+    {
+     "text": "Город вырос из деревень, станции Гучково и рабочего посёлка при фабрике.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Вокруг станции сложился Гучковский посёлок.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": true
+    },
+    {
+     "text": "Связь названия станции с Гучковыми не проверена.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": false
+    },
+    {
+     "text": "Дедовск — город в Истринском округе.",
+     "sourceUrl": "https://www.komandirovka.ru/cities/dedovsk/",
+     "verified": true
+    },
+    {
+     "text": "Координаты станции приблизительные.",
+     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "dedovsk-muzey-mirozdaniya",
+   "name": "Музей истории мироздания",
+   "coords": {
+    "lat": 55.869,
+    "lon": 37.125
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В Дедовске работает частный Музей истории мироздания — метеориты, минералы и палеонтологические находки.",
+    "Неожиданная точка для фабричного городка, особенно с детьми. Следующая точка маршрута — «Церковь Георгия Победоносца». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Дедовске есть частный Музей истории мироздания.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/dedovsk/",
+     "verified": true
+    },
+    {
+     "text": "В музее — метеориты, минералы и палеонтологические находки.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/dedovsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "dedovsk-georgiy",
+   "name": "Церковь Георгия Победоносца",
+   "coords": {
+    "lat": 55.87,
+    "lon": 37.13
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Среди храмов Дедовска — церковь Георгия Победоносца.",
+    "Город вырос из нескольких деревень, станции Гучково и рабочего посёлка при большой фабрике. Следующая точка маршрута — «Прядильно-ткацкая фабрика». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Дедовске есть церковь Георгия Победоносца.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "verified": true
+    },
+    {
+     "text": "Дедовск вырос из деревень, станции Гучково и фабричного посёлка.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/dedovsk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
   {
    "id": "dedovsk-fabrika",
    "name": "Прядильно-ткацкая фабрика",
@@ -87,8 +195,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "dedovsk-posyolok",
@@ -134,294 +242,39 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 20
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "dedovsk-selo",
-   "name": "Старое село",
+   "id": "dedovsk-kazarmy",
+   "name": "Казармы, больница и ДК фабрики",
    "coords": {
-    "lat": 55.835,
-    "lon": 37.175
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Нахабино известно с 1482 года: тогда село принадлежало боярам Плещеевым. В 1534 году оно перешло к Троице-Сергиеву монастырю.",
-    "В посёлке есть храм, описанный в паломническом справочнике «Азбуки веры», — Максимовский. Его историю мы не сверяли."
-   ],
-   "facts": [
-    {
-     "text": "Нахабино известно с 1482 года как владение бояр Плещеевых.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "В 1534 году село перешло к Троице-Сергиеву монастырю.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": true
-    },
-    {
-     "text": "В Нахабине есть Максимовский храм.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
-     "verified": true
-    },
-    {
-     "text": "История храма нами не проверена.",
-     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
-     "verified": false
-    },
-    {
-     "text": "Координаты точки приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "dedovsk-poligon",
-   "name": "Полигон и первые ракеты",
-   "coords": {
-    "lat": 55.83,
-    "lon": 37.19
+    "lat": 55.872,
+    "lon": 37.12
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Нахабино известно как полигон инженерных войск. По Циклопедии, в 1933 году здесь запустили первые советские ракеты; туристический справочник пишет, что ракеты испытывали тут ещё до войны.",
-    "Полигон — закрытая военная территория. Смотрим только с общественных дорог и не фотографируем охраняемые объекты."
+    "От фабричного посёлка сохранились краснокирпичные корпуса, казармы, больница и Дворец культуры.",
+    "Бобина ниток на флаге города, утверждённом в 2009 году, напоминает о фабрике 1911 года. Финиш — Станция «Гучково» (Дедовск): Электрички Рижского направления."
    ],
    "facts": [
     {
-     "text": "В Нахабине в 1933 году запустили первые советские ракеты.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "text": "Сохранились краснокирпичные корпуса, казармы, больница и ДК.",
+     "sourceUrl": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/dedovsk/",
      "verified": true
     },
     {
-     "text": "Нахабино — полигон инженерных войск.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
-     "verified": true
-    },
-    {
-     "text": "До войны здесь испытывали первые советские ракеты.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
-     "verified": true
-    },
-    {
-     "text": "Полигон — закрытая территория.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
-     "verified": false
-    },
-    {
-     "text": "Точное место запусков мы не устанавливали.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Военная территория: не фотографировать охраняемые объекты."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "dedovsk-khram",
-   "name": "Благовещенская церковь",
-   "coords": {
-    "lat": 55.811,
-    "lon": 37.082
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Благовещенская церковь — главный памятник села. Её архивная фотография 1915 года хранится в проекте «Летопись русской усадьбы».",
-    "Датировку храма мы в найденных источниках не сверили и не приводим, чтобы не ошибиться. Следующая точка маршрута — «Курганы на Истре»."
-   ],
-   "facts": [
-    {
-     "text": "Главный памятник села — Благовещенская церковь.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Церковь Благовещения находится в Истринском округе.",
-     "sourceUrl": "https://sobory.ru/photo/206263",
-     "verified": true
-    },
-    {
-     "text": "Датировка храма нами не проверена.",
-     "sourceUrl": "https://nataturka.ru/muzey-usadba/pavl_sloboda.html",
-     "verified": false
-    },
-    {
-     "text": "В селе есть археологический памятник Павловская Слобода II.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Об усадьбе Павловская Слобода рассказывает сайт nataturka.ru.",
-     "sourceUrl": "https://nataturka.ru/muzey-usadba/pavl_sloboda.html",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "dedovsk-kurgany",
-   "name": "Курганы на Истре",
-   "coords": {
-    "lat": 55.805,
-    "lon": 37.075
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 15,
-   "guideStory": [
-    "На берегу Истры сохранилась группа из 12 славянских курганов XI–XIII веков — значит, люди жили здесь задолго до первого упоминания села.",
-    "В начале XIX века род Ягужинских пресёкся, и село отошло к комиссариату Военного министерства. В 1926 году на краю села создали колхоз «Серп и молот».",
-    "Курганы — охраняемый памятник: не копать и не заезжать на насыпи."
-   ],
-   "facts": [
-    {
-     "text": "На берегу Истры — 12 славянских курганов XI–XIII веков.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0",
-     "verified": false
-    },
-    {
-     "text": "В начале XIX века село отошло к комиссариату Военного министерства.",
-     "sourceUrl": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/",
-     "verified": false
-    },
-    {
-     "text": "В 1926 году создан колхоз «Серп и молот».",
-     "sourceUrl": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/",
-     "verified": false
-    },
-    {
-     "text": "Курганы — археологический памятник.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Votpusk описывает Павловскую Слободу как достопримечательность Истринского района.",
-     "sourceUrl": "https://www.votpusk.ru/article/attractions/rossiya-podmoskove/istrinskii-r-n/pavlovskaya_sloboda-a",
-     "verified": true
-    }
-   ],
-   "daylightOnly": true,
-   "warnings": [
-    "Археологический памятник: не заезжать на курганы."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "dedovsk-rubezh",
-   "name": "Рубеж обороны",
-   "coords": {
-    "lat": 55.885,
-    "lon": 37.035
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1941 году на Волоколамском шоссе близ Снегирей было остановлено наступление немецких войск на Москву.",
-    "30 ноября на 42-м километре шоссе шли бои, в которых участвовала 78-я стрелковая дивизия Афанасия Белобородова. Следующая точка маршрута — «Воскресенский собор»."
-   ],
-   "facts": [
-    {
-     "text": "В 1941 году у Снегирей остановлено наступление на Москву.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "30 ноября 1941 года на 42-м километре шли бои.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Здесь действовала 78-я стрелковая дивизия Белобородова.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Координаты рубежа приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Номер мемориального километра мы не сверяли.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Волоколамское шоссе — плотное движение."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "dedovsk-sobor",
-   "name": "Воскресенский собор",
-   "coords": {
-    "lat": 55.9192,
-    "lon": 36.8435
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 30,
-   "guideStory": [
-    "Воскресенский собор монастыря (1656–1685) скопирован с храма Воскресения в Иерусалиме.",
-    "Патриарх Никон скончался в пути в августе 1681 года и похоронен в Воскресенском соборе. Финиш — Станция «Новоиерусалимская»: Электрички Рижского направления."
-   ],
-   "facts": [
-    {
-     "text": "Воскресенский собор скопирован с храма Воскресения в Иерусалиме.",
-     "sourceUrl": "https://booksite.ru/FullText/1/001/008/082/228.htm",
-     "verified": true
-    },
-    {
-     "text": "Собор строился в 1656–1685 годах.",
-     "sourceUrl": "https://booksite.ru/FullText/1/001/008/082/228.htm",
-     "verified": true
-    },
-    {
-     "text": "Никон скончался в августе 1681 года.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B8%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "Никон похоронен в Воскресенском соборе.",
-     "sourceUrl": "https://ru.ruwiki.ru/wiki/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B8%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C",
-     "verified": true
-    },
-    {
-     "text": "«Рамблер» писал о Новом Иерусалиме как об образе Святой земли.",
-     "sourceUrl": "https://weekend.rambler.ru/other/42213202-novyy-ierusalim-obraz-svyatoy-zemli-na-rusi/",
+     "text": "Флаг утверждён в 2009 году, бобина ниток напоминает о фабрике 1911 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B0",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -458,111 +311,91 @@
    "url": "https://www.komandirovka.ru/sights/dedovsk/"
   },
   {
-   "title": "Нахабино — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE"
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/cities/dedovsk/"
   },
   {
-   "title": "Nakhabino — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Nakhabino"
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/cities/rossiya/moskovskaya-oblast/dedovsk/"
   },
   {
-   "title": "Павловская Слобода — Википедия",
-   "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0"
-  },
-  {
-   "title": "История Павловской Слободы — Истра сегодня",
-   "url": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/"
-  },
-  {
-   "title": "Ленино-Снегирёвский музей — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9"
-  },
-  {
-   "title": "Новоиерусалимский монастырь — Азбука веры",
-   "url": "https://azbyka.ru/palomnik/%D0%92%D0%BE%D1%81%D0%BA%D1%80%D0%B5%D1%81%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%9D%D0%BE%D0%B2%D0%BE%D0%B8%D0%B5%D1%80%D1%83%D1%81%D0%B0%D0%BB%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D0%BC%D0%BE%D0%BD%D0%B0%D1%81%D1%82%D1%8B%D1%80%D1%8C"
-  },
-  {
-   "title": "Новый Иерусалим — Tripster",
-   "url": "https://experience.tripster.ru/articles/novyj-ierusalim/"
+   "title": "Источник: cyclowiki.org",
+   "url": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B0"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     36.82989,
-     55.9142
+     37.114396,
+     55.872
     ],
     [
-     36.830642,
-     55.912628
+     37.114397,
+     55.868
     ],
     [
-     36.832695,
-     55.911477
+     37.115147,
+     55.866428
     ],
     [
-     37.072203,
-     55.802277
+     37.117198,
+     55.865277
     ],
     [
-     37.075,
-     55.801856
+     37.127199,
+     55.862277
     ],
     [
-     37.077797,
-     55.802277
+     37.13,
+     55.861856
     ],
     [
-     37.192799,
-     55.827277
+     37.132801,
+     55.862277
     ],
     [
-     37.194848,
-     55.828428
+     37.134852,
+     55.863428
     ],
     [
-     37.195598,
-     55.83
+     37.135603,
+     55.865
     ],
     [
-     37.194848,
-     55.831572
+     37.135604,
+     55.87
     ],
     [
-     37.128853,
+     37.134853,
      55.871572
     ],
     [
-     37.126802,
+     37.132802,
      55.872723
     ],
     [
-     36.846305,
-     55.921923
+     37.122802,
+     55.874723
     ],
     [
-     36.8435,
-     55.922344
+     37.12,
+     55.875144
     ],
     [
-     36.840695,
-     55.921923
+     37.117198,
+     55.874723
     ],
     [
-     36.838641,
-     55.920772
+     37.115147,
+     55.873572
     ],
     [
-     36.830642,
-     55.915772
-    ],
-    [
-     36.82989,
-     55.9142
+     37.114396,
+     55.872
     ]
    ]
   ]

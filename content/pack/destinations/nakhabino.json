@@ -12,8 +12,8 @@
  "intro": [
   "Нахабино — один из крупнейших посёлков Подмосковья. Село известно с 1482 года, когда принадлежало боярам Плещеевым; в 1534 году оно перешло к Троице-Сергиеву монастырю.",
   "В XX веке здесь появился полигон инженерных войск. По Циклопедии, в 1933 году именно в Нахабине запустили первые советские ракеты. Статус посёлка городского типа — с 1938 года.",
-  "Свои места маршрута: «Старое село», «Полигон и первые ракеты». По пути маршрут заходит и к соседям: Дедовск — «Прядильно-ткацкая фабрика», «Рабочий посёлок»; Снегири — «Рубеж обороны»; Павловская Слобода — «Благовещенская церковь»; Архангельское — «Церковь Михаила Архангела»; Красногорск — «Музей немецких антифашистов», «Центр и история города».",
-  "Маршрут линейный, около 62 км и 9 точек. Финиш — Станция «Красногорская» (Электрички Рижского направления / МЦД-2), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «Станция Нахабино», «Храм Покрова Пресвятой Богородицы», «Строения усадьбы Болдино», «Старое село», «Полигон и первые ракеты», «Храм Максима Исповедника». Все они — в самом городе или рядом с ним.",
+  "Маршрут кольцевой, около 6 км: старт и финиш — Станция «Нахабино» (Электрички Рижского направления / МЦД-2). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
   "name": "Станция «Нахабино»",
@@ -24,24 +24,132 @@
   "transport": "Электрички Рижского направления / МЦД-2"
  },
  "endPoint": {
-  "name": "Станция «Красногорская»",
+  "name": "Станция «Нахабино»",
   "coords": {
-   "lat": 55.8182,
-   "lon": 37.3345
+   "lat": 55.8412,
+   "lon": 37.1835
   },
   "transport": "Электрички Рижского направления / МЦД-2"
  },
  "route": {
-  "distanceKm": 62.0,
-  "durationH": 7.4,
-  "difficulty": "сложный",
-  "shape": "линейный",
+  "distanceKm": 5.9,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "nakhabino-stantsiya",
+   "name": "Станция Нахабино",
+   "coords": {
+    "lat": 55.841,
+    "lon": 37.183
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Нахабино стоит на Рижском направлении; сегодня через станцию ходят поезда МЦД-2. Дату открытия станции мы в найденных источниках не нашли.",
+    "Посёлок расположен примерно в 16 километрах к западу от Москвы и получил статус посёлка городского типа в 1938 году."
+   ],
+   "facts": [
+    {
+     "text": "Нахабино — посёлок городского типа с 1938 года.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Нахабино находится примерно в 16 км к западу от Москвы.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Дата открытия станции не найдена.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Nakhabino_railway_station",
+     "verified": false
+    },
+    {
+     "text": "Нахабино — крупный посёлок Красногорского округа.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Nakhabino",
+     "verified": true
+    },
+    {
+     "text": "Станция входит в МЦД-2.",
+     "sourceUrl": "https://en.wikipedia.org/wiki/Nakhabino_railway_station",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "nakhabino-pokrovskiy",
+   "name": "Храм Покрова Пресвятой Богородицы",
+   "coords": {
+    "lat": 55.845,
+    "lon": 37.18
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В Нахабине три храма, самый известный из них — храм Покрова Пресвятой Богородицы.",
+    "Посёлок лежит примерно в 16 км к западу от Москвы. Следующая точка маршрута — «Строения усадьбы Болдино». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Самый известный из трёх храмов Нахабина — храм Покрова.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": false
+    },
+    {
+     "text": "Нахабино находится примерно в 16 км к западу от Москвы.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "nakhabino-boldino",
+   "name": "Строения усадьбы Болдино",
+   "coords": {
+    "lat": 55.838,
+    "lon": 37.175
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В посёлке сохранилось несколько строений усадьбы Болдино.",
+    "Нахабино впервые упоминается в 1482 году как село бояр Плещеевых; в 1534 году его продали Троице-Сергиеву монастырю. Следующая точка маршрута — «Старое село». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Нахабине сохранились строения усадьбы Болдино.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/nahabino",
+     "verified": false
+    },
+    {
+     "text": "Нахабино впервые упоминается в 1482 году, в 1534 году продано Троице-Сергиеву монастырю.",
+     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
   {
    "id": "nakhabino-selo",
    "name": "Старое село",
@@ -85,8 +193,8 @@
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 10
+   "order": 40,
+   "coordsVerified": false
   },
   {
    "id": "nakhabino-poligon",
@@ -133,338 +241,39 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
+   "order": 50,
+   "coordsVerified": false
   },
   {
-   "id": "nakhabino-fabrika",
-   "name": "Прядильно-ткацкая фабрика",
+   "id": "nakhabino-maksimovskiy",
+   "name": "Храм Максима Исповедника",
    "coords": {
-    "lat": 55.865,
-    "lon": 37.13
+    "lat": 55.842,
+    "lon": 37.188
    },
    "kind": "смотреть снаружи",
-   "visitMinutes": 15,
+   "visitMinutes": 10,
    "guideStory": [
-    "Фабрику основало российско-французское акционерное общество: по одним данным в 1911 году, по другим — в 1913-м. Её называли одной из самых крупных и современных мануфактур того времени.",
-    "В 1940-х годах фабрику преобразовали в кордную. Промышленность надолго стала градообразующей для Дедовска."
+    "Храм Максима Исповедника построили в 1995 году по инициативе местного жителя в память о сыне, погибшем в Чечне; освятили его в сентябре 1995 года.",
+    "Небольшая сельская церковь со временем стала полноценным однопридельным храмом. Финиш — Станция «Нахабино»: Электрички Рижского направления / МЦД-2."
    ],
    "facts": [
     {
-     "text": "Фабрику основало российско-французское акционерное общество.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
+     "text": "Храм построен в 1995 году в память о погибшем в Чечне сыне местного жителя.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
      "verified": true
     },
     {
-     "text": "Год основания — 1911 или 1913, источники расходятся.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": false
-    },
-    {
-     "text": "Фабрику описывают как одну из самых крупных мануфактур своего времени.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
-     "verified": true
-    },
-    {
-     "text": "В 1940-х фабрику преобразовали в кордную.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": true
-    },
-    {
-     "text": "Флаг Дедовска описан в Циклопедии.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A4%D0%BB%D0%B0%D0%B3_%D0%94%D0%B5%D0%B4%D0%BE%D0%B2%D1%81%D0%BA%D0%B0",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Промышленная территория."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "nakhabino-posyolok",
-   "name": "Рабочий посёлок",
-   "coords": {
-    "lat": 55.868,
-    "lon": 37.12
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Рядом с фабрикой вырос рабочий посёлок Дедовский: строили дома, школу, ясли.",
-    "Название города, вероятно, связано с деревней Дедово, но точной истории названия мы в источниках не нашли.",
-    "По улицам бывшего рабочего посёлка возвращаемся к станции Гучково."
-   ],
-   "facts": [
-    {
-     "text": "При фабрике был рабочий посёлок Дедовский со школой и яслями.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
-     "verified": true
-    },
-    {
-     "text": "Происхождение названия не проверено.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": false
-    },
-    {
-     "text": "Промышленность определила развитие города.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": true
-    },
-    {
-     "text": "Дедовск — город районного подчинения.",
-     "sourceUrl": "https://dic.academic.ru/dic.nsf/ruwiki/30938",
-     "verified": false
-    },
-    {
-     "text": "Достопримечательности Дедовска собраны на komandirovka.ru.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/dedovsk/",
+     "text": "Храм освящён в сентябре 1995 года.",
+     "sourceUrl": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)",
      "verified": true
     }
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
    "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "nakhabino-rubezh",
-   "name": "Рубеж обороны",
-   "coords": {
-    "lat": 55.885,
-    "lon": 37.035
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1941 году на Волоколамском шоссе близ Снегирей было остановлено наступление немецких войск на Москву.",
-    "30 ноября на 42-м километре шоссе шли бои, в которых участвовала 78-я стрелковая дивизия Афанасия Белобородова. Следующая точка маршрута — «Благовещенская церковь»."
-   ],
-   "facts": [
-    {
-     "text": "В 1941 году у Снегирей остановлено наступление на Москву.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "30 ноября 1941 года на 42-м километре шли бои.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Здесь действовала 78-я стрелковая дивизия Белобородова.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": true
-    },
-    {
-     "text": "Координаты рубежа приблизительные.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": false
-    },
-    {
-     "text": "Номер мемориального километра мы не сверяли.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9",
-     "verified": false
-    }
-   ],
-   "warnings": [
-    "Волоколамское шоссе — плотное движение."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "nakhabino-khram",
-   "name": "Благовещенская церковь",
-   "coords": {
-    "lat": 55.811,
-    "lon": 37.082
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Благовещенская церковь — главный памятник села. Её архивная фотография 1915 года хранится в проекте «Летопись русской усадьбы».",
-    "Датировку храма мы в найденных источниках не сверили и не приводим, чтобы не ошибиться. Следующая точка маршрута — «Церковь Михаила Архангела»."
-   ],
-   "facts": [
-    {
-     "text": "Главный памятник села — Благовещенская церковь.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Церковь Благовещения находится в Истринском округе.",
-     "sourceUrl": "https://sobory.ru/photo/206263",
-     "verified": true
-    },
-    {
-     "text": "Датировка храма нами не проверена.",
-     "sourceUrl": "https://nataturka.ru/muzey-usadba/pavl_sloboda.html",
-     "verified": false
-    },
-    {
-     "text": "В селе есть археологический памятник Павловская Слобода II.",
-     "sourceUrl": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Об усадьбе Павловская Слобода рассказывает сайт nataturka.ru.",
-     "sourceUrl": "https://nataturka.ru/muzey-usadba/pavl_sloboda.html",
-     "verified": true
-    }
-   ],
-   "warnings": [
-    "Действующий храм."
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "nakhabino-tserkov",
-   "name": "Церковь Михаила Архангела",
-   "coords": {
-    "lat": 55.783,
-    "lon": 37.281
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "Название «Архангельское» закрепилось за усадьбой в 1646 году, при Шереметевых, — по церкви Михаила Архангела.",
-    "Храм стоит на высоком берегу Москвы-реки; от него открываются виды на пойму. Датировку храма мы в найденных источниках не сверяли."
-   ],
-   "facts": [
-    {
-     "text": "Название «Архангельское» появилось в 1646 году по церкви Михаила Архангела.",
-     "sourceUrl": "https://tonkosti.ru/Архангельское",
-     "verified": true
-    },
-    {
-     "text": "Датировку храма мы не сверяли.",
-     "sourceUrl": "https://tonkosti.ru/Архангельское",
-     "verified": false
-    },
-    {
-     "text": "Храм стоит на берегу Москвы-реки.",
-     "sourceUrl": "https://cyclowiki.org/wiki/%D0%A3%D1%81%D0%B0%D0%B4%D1%8C%D0%B1%D0%B0_%D0%90%D1%80%D1%85%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%BE%D0%B5",
-     "verified": false
-    },
-    {
-     "text": "Усадьба — музей-заповедник.",
-     "sourceUrl": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/",
-     "verified": true
-    },
-    {
-     "text": "Коммерсантъ публиковал фотогалерею «Юсуповский Версаль».",
-     "sourceUrl": "https://www.kommersant.ru/gallery/4094761",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "nakhabino-muzey",
-   "name": "Музей немецких антифашистов",
-   "coords": {
-    "lat": 55.825,
-    "lon": 37.315
-   },
-   "kind": "заходим внутрь",
-   "visitMinutes": 40,
-   "guideStory": [
-    "Мемориальный музей немецких антифашистов находится на улице Народного Ополчения, 15. Он рассказывает об антифашистском движении немцев в годы войны.",
-    "В коллекции — немецкие знаки и награды, листовки антифашистских организаций, газеты и униформа. По данным справочника, музей ежегодно принимает более 8000 посетителей."
-   ],
-   "facts": [
-    {
-     "text": "Музей находится на ул. Народного Ополчения, 15.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": true
-    },
-    {
-     "text": "В коллекции — знаки, награды, листовки, газеты и униформа.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": true
-    },
-    {
-     "text": "Музей принимает более 8000 посетителей в год.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": false
-    },
-    {
-     "text": "Музей — филиал Музея Победы.",
-     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
-     "verified": false
-    },
-    {
-     "text": "Координаты музея приблизительные.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/",
-     "verified": false
-    }
-   ],
-   "tickets": true,
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
-  },
-  {
-   "id": "nakhabino-tsentr",
-   "name": "Центр и история города",
-   "coords": {
-    "lat": 55.831,
-    "lon": 37.32
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Город вырос вокруг предприятий оптики. Дата основания спорна: 1932 год по одному источнику и объединение деревень в начале XX века — по другому.",
-    "В годы войны в городе создали батальоны народного ополчения, истребительный батальон и трудовые отряды."
-   ],
-   "facts": [
-    {
-     "text": "Красногорск связан с оптическими предприятиями.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": true
-    },
-    {
-     "text": "Дата основания города в источниках расходится.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": false
-    },
-    {
-     "text": "В войну создавались батальоны народного ополчения.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": true
-    },
-    {
-     "text": "Куда сходить в Красногорске — подборка KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/list/kuda-shodit-v-krasnogorske/",
-     "verified": true
-    },
-    {
-     "text": "Красногорск граничит с Москвой.",
-     "sourceUrl": "https://101hotels.com/recreation/russia/krasnogorsk/history",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 90
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -501,127 +310,95 @@
    "url": "https://en.wikipedia.org/wiki/Nakhabino"
   },
   {
-   "title": "Дедовск — Академик",
-   "url": "https://dic.academic.ru/dic.nsf/ruwiki/30938"
+   "title": "Источник: en.wikipedia.org",
+   "url": "https://en.wikipedia.org/wiki/Nakhabino_railway_station"
   },
   {
-   "title": "Достопримечательности Дедовска — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/dedovsk/"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/nahabino"
   },
   {
-   "title": "Ленино-Снегирёвский музей — Циклопедия",
-   "url": "https://cyclowiki.org/wiki/%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D0%BE-%D0%A1%D0%BD%D0%B5%D0%B3%D0%B8%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D0%B2%D0%BE%D0%B5%D0%BD%D0%BD%D0%BE-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%BC%D1%83%D0%B7%D0%B5%D0%B9"
-  },
-  {
-   "title": "Павловская Слобода — Википедия",
-   "url": "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D0%B0"
-  },
-  {
-   "title": "История Павловской Слободы — Истра сегодня",
-   "url": "https://istra.today/topic/47-%D0%B8%D1%81%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B9-%D1%81%D0%BB%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B-%D1%81-16-%D0%B8%D1%8E%D0%BD%D1%8F-1504/"
-  },
-  {
-   "title": "Архангельское — 360",
-   "url": "https://360.ru/tekst/mosobl/puteshestvie-v-podmoskovnyj-versal-chem-poraduet-muzej-zapovednik-arhangelskoe/"
-  },
-  {
-   "title": "Архангельское — tonkosti.ru",
-   "url": "https://tonkosti.ru/Архангельское"
-  },
-  {
-   "title": "Музей-усадьба — Tripster",
-   "url": "https://experience.tripster.ru/sights/muzej-usadba-arhangelskoe"
-  },
-  {
-   "title": "История Красногорска — 101hotels",
-   "url": "https://101hotels.com/recreation/russia/krasnogorsk/history"
-  },
-  {
-   "title": "Музей немецких антифашистов — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/krasnogorsk/memorialnyiy-muzey-nemetskih-antifashistov/"
-  },
-  {
-   "title": "Знаменское-Губайлово — РИАМО",
-   "url": "https://riamo.ru/articles/istorii/usadba-znamenskoe-gubajlovo-muzej-dachnoj-zhizni-i-eksperimentanium-xl/"
+   "title": "Источник: azbyka.ru",
+   "url": "https://azbyka.ru/palomnik/%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9_%D1%85%D1%80%D0%B0%D0%BC_(%D0%9D%D0%B0%D1%85%D0%B0%D0%B1%D0%B8%D0%BD%D0%BE)"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.029394,
-     55.885
+     37.169401,
+     55.838
     ],
     [
-     37.030145,
-     55.883428
+     37.169401,
+     55.835
     ],
     [
-     37.077154,
-     55.809428
+     37.170151,
+     55.833428
     ],
     [
-     37.079202,
-     55.808277
+     37.172201,
+     55.832277
     ],
     [
-     37.082,
-     55.807856
+     37.187201,
+     55.827277
     ],
     [
-     37.281,
-     55.779856
+     37.19,
+     55.826856
     ],
     [
-     37.283796,
-     55.780277
+     37.192799,
+     55.827277
     ],
     [
-     37.285842,
-     55.781428
+     37.194848,
+     55.828428
     ],
     [
-     37.339346,
-     55.816628
+     37.195598,
+     55.83
     ],
     [
-     37.340096,
-     55.8182
+     37.1936,
+     55.842
     ],
     [
-     37.339346,
-     55.819772
+     37.192849,
+     55.843572
     ],
     [
-     37.324848,
-     55.832572
+     37.1908,
+     55.844723
     ],
     [
-     37.322799,
-     55.833723
+     37.1828,
+     55.847723
     ],
     [
-     37.037803,
-     55.887723
+     37.18,
+     55.848144
     ],
     [
-     37.035,
-     55.888144
+     37.1772,
+     55.847723
     ],
     [
-     37.032197,
-     55.887723
+     37.17515,
+     55.846572
     ],
     [
-     37.030145,
-     55.886572
+     37.170151,
+     55.839572
     ],
     [
-     37.029394,
-     55.885
+     37.169401,
+     55.838
     ]
    ]
   ]
