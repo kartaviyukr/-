@@ -13,36 +13,113 @@
   "Королёв — космическая столица Подмосковья и самый большой по населению наукоград России: статус присвоен в 2001 году, население в 2020 году — больше 224 тысяч человек.",
   "Город назван в честь академика Сергея Павловича Королёва — основателя практической космонавтики. Здесь сосредоточена ракетно-космическая промышленность: РКК «Энергия» и Центр управления полётами.",
   "В промышленности города работает больше 23 тысяч человек. Королёв стоит на северо-востоке от Москвы, примерно в 6 км от её границы.",
-  "Свои места маршрута: «РКК «Энергия»», «Центр управления полётами», «Сквер Покорителей космоса». По пути маршрут заходит и к соседям: Мытищи — «Памятник 200-летию водопровода», «Памятник Екатерине II»; Жостово — «Соседние деревни и «Металлоподнос»»; Федоскино — «Село Федоскино», «Данилково — начало промысла».",
-  "Маршрут линейный, около 46 км и 8 точек. Финиш — Станция «Лобня» (Электрички Савёловского направления / МЦД-1), оттуда удобно вернуться домой. Координаты точек приблизительные — дорогу прокладывает навигатор."
+  "Точки маршрута: «ДК имени Калинина», «Сквер Покорителей космоса», «РКК «Энергия»», «Исторический музей Королёва», «Дом-музей Марины Цветаевой в Болшеве», «Центр управления полётами». Все они — в самом городе или рядом с ним.",
+  "Маршрут линейный, около 9 км: старт — Станция «Болшево», финиш — Станция «Подлипки-Дачные» (Электрички Ярославского направления). Координаты точек приблизительные — дорогу прокладывает навигатор."
  ],
  "startPoint": {
-  "name": "Станция «Подлипки-Дачные»",
+  "name": "Станция «Болшево»",
   "coords": {
-   "lat": 55.9135,
-   "lon": 37.827
+   "lat": 55.931,
+   "lon": 37.864
   },
   "transport": "Электрички Ярославского направления"
  },
  "endPoint": {
-  "name": "Станция «Лобня»",
+  "name": "Станция «Подлипки-Дачные»",
   "coords": {
-   "lat": 56.0125,
-   "lon": 37.4745
+   "lat": 55.918,
+   "lon": 37.818
   },
-  "transport": "Электрички Савёловского направления / МЦД-1"
+  "transport": "Электрички Ярославского направления"
  },
  "route": {
-  "distanceKm": 46.0,
-  "durationH": 5.5,
-  "difficulty": "средний",
+  "distanceKm": 8.8,
+  "durationH": 2.2,
+  "difficulty": "лёгкий",
   "shape": "линейный",
   "surfaceNotes": "Асфальт городских улиц и загородных дорог, местами грунт, парковые и лесные дорожки.",
   "seasonNotes": "С мая по сентябрь. Музеи и храмы ставьте на середину дня — часы работы уточняйте перед поездкой.",
-  "safetyNotes": "Трассы пересекаем только по переходам; по загородным дорогам едем по обочине друг за другом, в светлое время.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
   "barriers": []
  },
  "stops": [
+  {
+   "id": "korolev-dk-kalinina",
+   "name": "ДК имени Калинина",
+   "coords": {
+    "lat": 55.921,
+    "lon": 37.853
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "У Центрального дворца культуры имени М. И. Калинина — сквер Покорителей Космоса с памятником Сергею Королёву и Юрию Гагарину.",
+    "Отсюда начинается любой «космический» маршрут по городу. Следующая точка маршрута — «Сквер Покорителей космоса»."
+   ],
+   "facts": [
+    {
+     "text": "Сквер Покорителей Космоса находится у ЦДК имени М. И. Калинина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%B2",
+     "verified": true
+    },
+    {
+     "text": "В сквере стоит памятник Королёву и Гагарину.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%B2",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "korolev-skver",
+   "name": "Сквер Покорителей космоса",
+   "coords": {
+    "lat": 55.919,
+    "lon": 37.846
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "На центральной площади наукограда — сквер Покорителей космоса с памятником Королёву и Гагарину: конструктор и первый космонавт вместе.",
+    "Отсюда начинается любая прогулка по Королёву: вокруг — улицы, названные в честь космонавтов и учёных."
+   ],
+   "facts": [
+    {
+     "text": "В сквере Покорителей космоса стоит памятник Королёву и Гагарину.",
+     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
+     "verified": true
+    },
+    {
+     "text": "Сквер расположен на центральной площади наукограда.",
+     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
+     "verified": true
+    },
+    {
+     "text": "Население Королёва в 2020 году — 224 348 человек.",
+     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
+     "verified": true
+    },
+    {
+     "text": "Интересные места Королёва перечисляет KudaGo.",
+     "sourceUrl": "https://kudago.com/msk/list/interesnye-mesta-v-korolyove/",
+     "verified": true
+    },
+    {
+     "text": "Год установки памятника в найденных источниках не указан.",
+     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
   {
    "id": "korolev-energiya",
    "name": "РКК «Энергия»",
@@ -88,8 +165,70 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 10
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "korolev-istoricheskiy",
+   "name": "Исторический музей Королёва",
+   "coords": {
+    "lat": 55.918,
+    "lon": 37.83
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Исторический музей на улице Терешковой, 1 рассказывает о вкладе жителей города в развитие космической техники.",
+    "В городе, названном в честь главного конструктора, космос — главная тема почти каждого музея. Следующая точка маршрута — «Дом-музей Марины Цветаевой в Болшеве»."
+   ],
+   "facts": [
+    {
+     "text": "Исторический музей находится на ул. Терешковой, 1.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/korolyov/points",
+     "verified": true
+    },
+    {
+     "text": "Экспозиция рассказывает о вкладе жителей в развитие космической техники.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/korolyov/points",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "korolev-tsvetaeva",
+   "name": "Дом-музей Марины Цветаевой в Болшеве",
+   "coords": {
+    "lat": 55.925,
+    "lon": 37.825
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Литературно-мемориальный дом-музей Марины Цветаевой работает в Болшеве, на улице Цветаевой, 15. Его открыли в сентябре 1992 года.",
+    "Это последний подмосковный дом поэта; музей известен и в России, и за рубежом. Следующая точка маршрута — «Центр управления полётами»."
+   ],
+   "facts": [
+    {
+     "text": "Дом-музей М. И. Цветаевой находится на ул. Цветаевой, 15.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%B2",
+     "verified": true
+    },
+    {
+     "text": "Музей открыт в сентябре 1992 года.",
+     "sourceUrl": "https://tonkosti.ru/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%B2",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
   },
   {
    "id": "korolev-tsup",
@@ -136,289 +275,8 @@
    ],
    "openingHoursNote": "",
    "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "coordsVerified": false,
-   "order": 20
-  },
-  {
-   "id": "korolev-skver",
-   "name": "Сквер Покорителей космоса",
-   "coords": {
-    "lat": 55.919,
-    "lon": 37.846
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 25,
-   "guideStory": [
-    "На центральной площади наукограда — сквер Покорителей космоса с памятником Королёву и Гагарину: конструктор и первый космонавт вместе.",
-    "Отсюда начинается любая прогулка по Королёву: вокруг — улицы, названные в честь космонавтов и учёных."
-   ],
-   "facts": [
-    {
-     "text": "В сквере Покорителей космоса стоит памятник Королёву и Гагарину.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": true
-    },
-    {
-     "text": "Сквер расположен на центральной площади наукограда.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": true
-    },
-    {
-     "text": "Население Королёва в 2020 году — 224 348 человек.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": true
-    },
-    {
-     "text": "Интересные места Королёва перечисляет KudaGo.",
-     "sourceUrl": "https://kudago.com/msk/list/interesnye-mesta-v-korolyove/",
-     "verified": true
-    },
-    {
-     "text": "Год установки памятника в найденных источниках не указан.",
-     "sourceUrl": "https://www.vokrugsveta.ru/history/poekhali-putevoditel-po-kosmicheskim-gorodam-rossii-id6957169/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 30
-  },
-  {
-   "id": "korolev-vodoprovod",
-   "name": "Памятник 200-летию водопровода",
-   "coords": {
-    "lat": 55.912,
-    "lon": 37.75
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 20,
-   "guideStory": [
-    "В 1779 году Екатерина II повелела найти источники чистой воды для Москвы. Их нашли у Мытищ, и 8 ноября 1804 года заработал Мытищинский водопровод — первый в России.",
-    "Строительством руководил военный инженер Фридрих Вильгельм Бауэр, а в перестройках участвовали Николай Зимин, Владимир Шухов и другие инженеры. До открытия канала имени Москвы в 1937 году водопровод оставался единственным источником воды для столицы."
-   ],
-   "facts": [
-    {
-     "text": "В 1779 году Екатерина II повелела найти источники чистой воды для Москвы.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "Мытищинский водопровод начал работать 8 ноября 1804 года.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "Строительство возглавлял военный инженер Фридрих Вильгельм Бауэр.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "До постройки канала имени Москвы в 1937 году водопровод был единственным источником воды для столицы.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "В перестройках участвовали Николай Зимин и Владимир Шухов.",
-     "sourceUrl": "https://moskvichmag.ru/?p=395137",
-     "verified": true
-    },
-    {
-     "text": "В Мытищах установлен памятник в честь 200-летия первого российского водопровода.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/mytitshi/pamyatnik-v-chest-200-letiya-pervogo-rossiyskogo-vodoprovoda/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 40
-  },
-  {
-   "id": "korolev-ekaterina",
-   "name": "Памятник Екатерине II",
-   "coords": {
-    "lat": 55.917,
-    "lon": 37.738
-   },
-   "kind": "смотреть снаружи",
-   "visitMinutes": 10,
-   "guideStory": [
-    "Памятник Екатерине II в Мытищах — благодарность императрице за водопровод: именно её указ 1779 года отправил инженеров искать чистую воду к северу от Москвы.",
-    "По преданию, сама Екатерина, проезжая через Мытищи, попробовала здешнюю воду и оценила её, но это именно предание."
-   ],
-   "facts": [
-    {
-     "text": "В Мытищах установлен памятник Екатерине II.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/mytitshi/pamyatnik-ekaterine-ii/",
-     "verified": true
-    },
-    {
-     "text": "Указ о поиске источников воды для Москвы Екатерина II издала в 1779 году.",
-     "sourceUrl": "https://www.mos.ru/news/item/77912073",
-     "verified": true
-    },
-    {
-     "text": "Предание о том, что Екатерина пробовала мытищинскую воду, в найденных источниках не подтверждено.",
-     "sourceUrl": "https://www.komandirovka.ru/sights/mytitshi/pamyatnik-ekaterine-ii/",
-     "verified": false
-    },
-    {
-     "text": "Водопровод проектировал и строил Фридрих Бауэр.",
-     "sourceUrl": "https://moskvichmag.ru/?p=395137",
-     "verified": true
-    },
-    {
-     "text": "Путеводитель насчитывает в Мытищах десятки достопримечательностей, включая памятники.",
-     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9C%D1%8B%D1%82%D0%B8%D1%89",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 50
-  },
-  {
-   "id": "korolev-artel",
-   "name": "Соседние деревни и «Металлоподнос»",
-   "coords": {
-    "lat": 55.96,
-    "lon": 37.56
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "После революции в Жостове и соседних деревнях появились артели, в том числе Жостовская трудовая артель. В 1928 году они объединились в артель «Металлоподнос».",
-    "Из этой артели выросла нынешняя фабрика. Промысел пережил XX век и остаётся живым — подносы и сегодня расписывают вручную."
-   ],
-   "facts": [
-    {
-     "text": "После революции организовали артели, в том числе Жостовскую трудовую.",
-     "sourceUrl": "https://osnmedia.ru/1000/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "В 1928 году артели объединились в артель «Металлоподнос».",
-     "sourceUrl": "https://osnmedia.ru/1000/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "Жостовская роспись — один из известных народных промыслов России.",
-     "sourceUrl": "https://experience.tripster.ru/articles/narodnye-remyosla-rossii/",
-     "verified": true
-    },
-    {
-     "text": "Роспись выполняется вручную.",
-     "sourceUrl": "https://culture.ru/s/slovo-dnya/zhostovskaya-rospis/",
-     "verified": true
-    },
-    {
-     "text": "Соседство с Федоскином — географический факт, оценка близости составителем не измерялась.",
-     "sourceUrl": "https://experience.tripster.ru/articles/narodnye-remyosla-rossii/",
-     "verified": false
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 60
-  },
-  {
-   "id": "korolev-selo",
-   "name": "Село Федоскино",
-   "coords": {
-    "lat": 56.0,
-    "lon": 37.532
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Само село — тихое подмосковное место над рекой, где мастера несколько поколений передают друг другу ремесло.",
-    "Лаковая миниатюра — один из главных русских промыслов, наряду с палехской, мстёрской и холуйской, и Федоскино среди них самое старое и единственное подмосковное."
-   ],
-   "facts": [
-    {
-     "text": "Федоскино географически стоит особняком среди центров лаковой миниатюры.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Fedoskino_miniature",
-     "verified": true
-    },
-    {
-     "text": "Русская лаковая миниатюра — отдельное направление декоративного искусства.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Russian_lacquer_art",
-     "verified": true
-    },
-    {
-     "text": "Федоскинская миниатюра — одна из четырёх школ русской лаковой миниатюры.",
-     "sourceUrl": "https://en.wikipedia.org/wiki/Russian_lacquer_art",
-     "verified": true
-    },
-    {
-     "text": "Федоскино — село в Мытищинском округе.",
-     "sourceUrl": "https://www.mos.ru/news/item/93773073/",
-     "verified": false
-    },
-    {
-     "text": "Изделия федоскинских мастеров — шкатулки, ларцы, коробки.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A4%D0%B5%D0%B4%D0%BE%D1%81%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D0%B0",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 70
-  },
-  {
-   "id": "korolev-danilkovo",
-   "name": "Данилково — начало промысла",
-   "coords": {
-    "lat": 56.006,
-    "lon": 37.5
-   },
-   "kind": "проезжаем",
-   "visitMinutes": 15,
-   "guideStory": [
-    "Промысел начался не в самом Федоскине, а в соседнем Данилкове. Здесь в 1795 году купец Коробов наладил выпуск армейских лаковых козырьков.",
-    "Затем он перенял в Брауншвейге технику миниатюрной живописи на папье-маше — и от козырьков перешёл к шкатулкам. Позже производство перенесли в Федоскино."
-   ],
-   "facts": [
-    {
-     "text": "Федоскинская лаковая миниатюра возникла в 1795 году благодаря купцу П. И. Коробову.",
-     "sourceUrl": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/",
-     "verified": true
-    },
-    {
-     "text": "Сначала в Данилкове изготавливали армейские лаковые козырьки.",
-     "sourceUrl": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/",
-     "verified": true
-    },
-    {
-     "text": "Коробов перенял технику миниатюрной живописи на папье-маше в Брауншвейге.",
-     "sourceUrl": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/",
-     "verified": true
-    },
-    {
-     "text": "Промысел позже перенесли из Данилкова в Федоскино.",
-     "sourceUrl": "https://znanierussia.ru/articles/%D0%A4%D0%B5%D0%B4%D0%BE%D1%81%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D0%B0",
-     "verified": true
-    },
-    {
-     "text": "Федоскинская миниатюра отмечала 230 лет со дня основания.",
-     "sourceUrl": "https://riamo.ru/news/kultura/fedoskinskaja-lakovaja-miniatjura-otmechaet-230-let-so-dnja-osnovanija/",
-     "verified": true
-    }
-   ],
-   "openingHoursNote": "",
-   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
-   "warnings": [],
-   "coordsVerified": false,
-   "order": 80
+   "order": 60,
+   "coordsVerified": false
   }
  ],
  "dish": {
@@ -459,131 +317,103 @@
    "url": "https://riamo.ru/news/obschestvo/v-promsektore-koroleva-rabotaet-svyshe-23-tys-chelovek/"
   },
   {
-   "title": "Мытищинский водопровод — mos.ru",
-   "url": "https://www.mos.ru/news/item/77912073"
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%91%D0%B2"
   },
   {
-   "title": "Мытищи — Большая российская энциклопедия",
-   "url": "https://bigenc.ru/c/mytishchi-cc250b"
+   "title": "Источник: kudago.com",
+   "url": "https://kudago.com/msk/list/interesnye-mesta-v-korolyove/"
   },
   {
-   "title": "Достопримечательности Мытищ — tonkosti.ru",
-   "url": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%9C%D1%8B%D1%82%D0%B8%D1%89"
+   "title": "Источник: naked-science.ru",
+   "url": "https://naked-science.ru/events/energkosm"
   },
   {
-   "title": "Памятники Мытищ — komandirovka.ru",
-   "url": "https://www.komandirovka.ru/sights/mytitshi/monuments/"
-  },
-  {
-   "title": "Жостовская роспись — ОСН",
-   "url": "https://osnmedia.ru/1000/zhostovskaya-rospis/"
-  },
-  {
-   "title": "Жостовская роспись — culture.ru",
-   "url": "https://culture.ru/s/slovo-dnya/zhostovskaya-rospis/"
-  },
-  {
-   "title": "Царские букеты Жостова — ЛГ",
-   "url": "https://lgz.ru/article/tsarskie-bukety-zhostovo"
-  },
-  {
-   "title": "Федоскинская миниатюра — Знание",
-   "url": "https://znanierussia.ru/articles/%D0%A4%D0%B5%D0%B4%D0%BE%D1%81%D0%BA%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%BC%D0%B8%D0%BD%D0%B8%D0%B0%D1%82%D1%8E%D1%80%D0%B0"
-  },
-  {
-   "title": "Fedoskino miniature — Wikipedia",
-   "url": "https://en.wikipedia.org/wiki/Fedoskino_miniature"
-  },
-  {
-   "title": "Федоскинская миниатюра — ОСН",
-   "url": "https://www.osnmedia.ru/1000/fedoskinskaya-miniatyura/"
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/korolyov/points"
   }
  ],
  "lastChecked": "2026-10-26",
- "routeVersion": 2,
+ "routeVersion": 3,
  "boundaryGeoJson": {
   "type": "Polygon",
   "coordinates": [
    [
     [
-     37.468876,
-     56.0125
+     37.80339,
+     55.913
     ],
     [
-     37.469629,
-     56.010928
+     37.804142,
+     55.911428
     ],
     [
-     37.555136,
-     55.958428
-    ],
-    [
-     37.557192,
-     55.957277
-    ],
-    [
-     37.747195,
-     55.909277
-    ],
-    [
-     37.75,
-     55.908856
+     37.806195,
+     55.910277
     ],
     [
      37.809,
      55.909856
     ],
     [
-     37.827,
-     55.910356
+     37.83,
+     55.911856
     ],
     [
-     37.829805,
-     55.910777
+     37.832805,
+     55.912277
     ],
     [
      37.848805,
      55.916277
     ],
     [
-     37.850859,
-     55.917428
+     37.855806,
+     55.918277
     ],
     [
-     37.851611,
-     55.919
+     37.857859,
+     55.919428
     ],
     [
-     37.850859,
-     55.920572
+     37.868861,
+     55.929428
     ],
     [
-     37.848805,
-     55.921723
+     37.869613,
+     55.931
     ],
     [
-     37.534811,
-     56.002723
+     37.868861,
+     55.932572
     ],
     [
-     37.477312,
-     56.015223
+     37.866806,
+     55.933723
     ],
     [
-     37.4745,
-     56.015644
+     37.864,
+     55.934144
     ],
     [
-     37.471688,
-     56.015223
+     37.861194,
+     55.933723
     ],
     [
-     37.469629,
-     56.014072
+     37.822194,
+     55.927723
     ],
     [
-     37.468876,
-     56.0125
+     37.82014,
+     55.926572
+    ],
+    [
+     37.804142,
+     55.914572
+    ],
+    [
+     37.80339,
+     55.913
     ]
    ]
   ]
