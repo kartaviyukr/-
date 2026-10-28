@@ -15,8 +15,8 @@ const App = (() => {
     22: 'Смысл текста', 23: 'Типы речи', 24: 'Лексика текста', 25: 'Связь предложений',
     26: 'Средства выразительности', 27: 'Сочинение',
   };
-  // Маршрут: начинаем с пунктуации (17 → блок 16–21), затем остальное, сочинение — в замке
-  const ROUTE = [17, 16, 18, 19, 20, 21, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 22, 23, 24, 25, 26, 27];
+  // Маршрут по порядку: задания 1–26, сочинение (27) — в замке
+  const ROUTE = Array.from({ length: 27 }, (_, i) => i + 1);
   const LESSONS = {};
   const CHESTS = [4, 9, 14, 19, 24]; // после какого по счёту пройденного задания открывается сундук
 
@@ -271,7 +271,11 @@ const App = (() => {
       prefix.push(d);
     }
     // доля пройденной дороги
-    const curIdx = ROUTE.findIndex((n) => !S.done[n]);
+    // Персонаж стоит на ближайшем открытом непройденном задании
+    let curIdx = ROUTE.findIndex((n) => !S.done[n] && LESSONS[n]);
+    if (curIdx < 0) curIdx = ROUTE.findIndex((n) => !S.done[n]);
+    // Дорога закрашивается до самого дальнего пройденного задания
+    const lastDone = ROUTE.reduce((acc, n, i) => (S.done[n] ? i : acc), -1);
     wrap.style.height = H + 'px';
     wrap.innerHTML = `<svg class="road" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
         <path d="${d}" class="road-edge"/><path d="${d}" class="road-body"/>
@@ -284,7 +288,7 @@ const App = (() => {
     try {
       const len = done.getTotalLength();
       const tmp = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      tmp.setAttribute('d', prefix[curIdx < 0 ? prefix.length - 1 : curIdx]);
+      tmp.setAttribute('d', prefix[curIdx < 0 ? prefix.length - 1 : Math.max(0, lastDone)]);
       done.parentNode.appendChild(tmp);
       const reach = tmp.getTotalLength();
       tmp.remove();

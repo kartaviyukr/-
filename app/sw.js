@@ -1,5 +1,5 @@
 /* Офлайн-кэш: приложение работает без интернета после первого открытия */
-const CACHE = 'egequest-v1';
+const CACHE = 'egequest-v2';
 const ASSETS = [
   './', 'index.html', 'manifest.webmanifest', 'css/style.css',
   'js/markup.js', 'js/app.js', 'js/task17.js',
