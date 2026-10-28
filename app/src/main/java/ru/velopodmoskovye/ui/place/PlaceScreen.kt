@@ -151,7 +151,7 @@ fun PlaceScreen(
                     modifier = Modifier.fillMaxWidth().height(260.dp),
                 )
                 Text(
-                    "Пунктир — порядок точек, а не трасса. Дорогу по улицам проложит Google Maps.",
+                    "Пунктир — порядок точек, а не трасса. Дорогу по улицам проложат Google Maps или Яндекс Карты.",
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -182,6 +182,16 @@ fun PlaceScreen(
                     }
                 }
             }
+            state.yandexUrl?.let { url ->
+                item {
+                    SectionTitle("Построить в Яндекс Картах")
+                    Text(
+                        "Все точки маршрута одной ссылкой, по порядку. Если стоят Яндекс Карты — откроется приложение.",
+                        style = MaterialTheme.typography.bodySmall,
+                    )
+                    OutlinedButton(onClick = { context.openUrl(url) }) { Text("Открыть в Яндекс Картах") }
+                }
+            }
             item {
                 SectionTitle("Вести в Google Maps")
                 Text(
@@ -199,7 +209,7 @@ fun PlaceScreen(
                     Switch(checked = state.walking, onCheckedChange = vm::setWalking)
                     Spacer(Modifier.width(8.dp))
                     Text(
-                        "Пешеходный режим — если Google не строит велосипедный маршрут в этом регионе",
+                        "Пешеходный режим — если карты не строят велосипедный маршрут в этом регионе (действует и для Яндекса)",
                         style = MaterialTheme.typography.bodySmall,
                     )
                 }

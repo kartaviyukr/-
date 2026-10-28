@@ -21,6 +21,7 @@ import ru.velopodmoskovye.domain.model.Destination
 import ru.velopodmoskovye.domain.progress.DestinationProgress
 import ru.velopodmoskovye.domain.progress.ProgressCalculator
 import ru.velopodmoskovye.domain.route.GoogleMapsLinks
+import ru.velopodmoskovye.domain.route.YandexMapsLinks
 import ru.velopodmoskovye.domain.route.RouteOptimizer
 import ru.velopodmoskovye.domain.route.RouteTiming
 import ru.velopodmoskovye.ui.map.MapData
@@ -40,6 +41,7 @@ data class PlaceUiState(
     val suggestion: RouteOptimizer.Suggestion? = null,
     val walking: Boolean = false,
     val blocks: List<GoogleMapsLinks.Block> = emptyList(),
+    val yandexUrl: String? = null,
     val pairMode: Boolean = false,
     val isActive: Boolean = false,
     val otherActive: Boolean = false,
@@ -90,6 +92,7 @@ class PlaceViewModel @Inject constructor(
             suggestion = suggestion,
             walking = p.walking,
             blocks = GoogleMapsLinks.blocks(MapData.routePoints(dest), mode),
+            yandexUrl = MapData.routePoints(dest).takeIf { it.size >= 2 }?.let { YandexMapsLinks.url(it, mode) },
             pairMode = s.pairMode,
             isActive = active?.destinationId == dest.id,
             otherActive = active != null && active.destinationId != dest.id,

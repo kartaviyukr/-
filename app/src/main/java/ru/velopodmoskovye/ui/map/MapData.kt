@@ -19,7 +19,7 @@ object MapData {
 
     fun zones(zones: List<Zone>, level: Zone.Level): String = Fog.zonesGeoJson(zones.filter { it.level == level })
 
-    /** Схема маршрута по порядку точек (прямыми — это не велотрасса, вести будет Google Maps). */
+    /** Схема маршрута по порядку точек (прямыми — это не велотрасса, вести будут Google Maps или Яндекс Карты). */
     fun routePoints(dest: Destination): List<GeoPoint> =
         listOf(dest.startPoint.coords) + dest.stops.sortedBy { it.order }.map { it.coords } + dest.endPoint.coords
 

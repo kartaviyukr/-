@@ -9,6 +9,7 @@ import ru.velopodmoskovye.domain.model.Barrier
 import ru.velopodmoskovye.domain.model.GeoPoint
 import ru.velopodmoskovye.domain.model.Schedule
 import ru.velopodmoskovye.domain.route.GoogleMapsLinks
+import ru.velopodmoskovye.domain.route.YandexMapsLinks
 import ru.velopodmoskovye.domain.route.RouteOptimizer
 import ru.velopodmoskovye.domain.route.RouteTiming
 import ru.velopodmoskovye.domain.route.Sun
@@ -33,6 +34,18 @@ class RouteTest {
             assertTrue(b.url.startsWith("https://www.google.com/maps/dir/?api=1&origin="))
         }
         assertTrue(GoogleMapsLinks.blocks(pts.take(2), GoogleMapsLinks.Mode.WALKING).single().url.endsWith("travelmode=walking"))
+    }
+
+    @Test
+    fun yandexLinkHasAllPointsInOrder() {
+        val pts = (0 until 14).map { GeoPoint(55.7 + it * 0.001, 37.6) }
+        val url = YandexMapsLinks.url(pts)
+        assertTrue(url.startsWith("https://yandex.ru/maps/?rtext=55.700000%2C37.600000~"))
+        assertTrue(url.endsWith("&rtt=bc"))
+        val rtext = Regex("rtext=([^&]*)").find(url)!!.groupValues[1].split("~")
+        assertEquals(14, rtext.size)
+        assertEquals("55.713000%2C37.600000", rtext.last())
+        assertTrue(YandexMapsLinks.url(pts.take(2), GoogleMapsLinks.Mode.WALKING).endsWith("&rtt=pd"))
     }
 
     @Test
