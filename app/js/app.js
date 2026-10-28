@@ -155,6 +155,12 @@ const App = (() => {
     return { el: m.firstElementChild, close };
   }
 
+  /* Подтверждение в самом приложении (системные confirm() работают не везде) */
+  function ask(text, okLabel, onOk) {
+    const m = modal(`<div class="center"><p class="ask-text">${text}</p><button class="btn primary ask-ok">${okLabel}</button><button class="btn ghost" data-close>Отмена</button></div>`);
+    m.el.querySelector('.ask-ok').addEventListener('click', () => { m.close(); onOk(); });
+  }
+
   /* ===== Награды ===== */
   function reward(xp, coins, { anchor, phrase = true, quiet = false } = {}) {
     const before = levelInfo().lvl;
@@ -461,7 +467,7 @@ const App = (() => {
       <button class="btn ghost danger reset">Сбросить прогресс</button></div>`);
     $('input', set).addEventListener('change', (e) => { S.sound = e.target.checked; save(); });
     $('.reset', set).addEventListener('click', () => {
-      if (confirm('Точно сбросить весь прогресс, монеты и город?')) { S = fresh(); save(); topbar(); onboarding(); go('map'); }
+      ask('Точно сбросить весь прогресс, монеты и город?', 'Сбросить', () => { S = fresh(); save(); topbar(); onboarding(); go('map'); });
     });
     v.appendChild(set);
   }
@@ -594,7 +600,8 @@ const App = (() => {
       go(tab);
     }
     $('.l-close', root).onclick = () => {
-      if (idx === 0 || idx >= L.slides.length - 1 || confirm('Выйти из задания? Прогресс урока не сохранится.')) close();
+      if (idx === 0 || idx >= L.slides.length - 1) close();
+      else ask('Выйти из задания? Прогресс урока не сохранится.', 'Выйти', close);
     };
     $('.l-algo', root).onclick = () => openAlgo(L.algoImg);
     show(0);
@@ -617,7 +624,7 @@ const App = (() => {
     onboarding();
     let rt;
     addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(() => { if (tab === 'map' && $('#lesson').classList.contains('hidden')) go('map'); }, 250); });
-    if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});
+    try { if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {}); } catch (_) {}
   }
 
   return { start, LESSONS, TASKS, coin, h, $, pick, openAlgo, confetti };
