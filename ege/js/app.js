@@ -7,7 +7,7 @@ const App = (() => {
 
   /* ===== Контент ===== */
   const TASKS = {
-    1: 'Анализ текста', 2: 'Средства связи', 3: 'Стилистика текста', 4: 'Ударения', 5: 'Паронимы',
+    1: 'Слово на месте пропуска', 2: 'Лексическое значение', 3: 'Стилистика текста', 4: 'Ударения', 5: 'Паронимы',
     6: 'Лексические нормы', 7: 'Морфологические нормы', 8: 'Синтаксические нормы', 9: 'Корни',
     10: 'Приставки', 11: 'Суффиксы', 12: 'Окончания глаголов', 13: 'НЕ с разными частями речи',
     14: 'Слитно / раздельно', 15: 'Н и НН', 16: 'Однородные члены и ССП', 17: 'Обособленные члены',
@@ -45,6 +45,7 @@ const App = (() => {
     { id: 'first', e: '🌱', name: 'Первый шаг', d: 'Первая верная проверка' },
     { id: 'bases', e: '🧱', name: 'Основатель', d: 'Верно выделить грамматические основы' },
     { id: 'clean', e: '💎', name: 'Без единой ошибки', d: 'Пройти задание на 3 звезды' },
+    { id: 't1', e: '🔑', name: 'Первый ключ', d: 'Пройти задание 1' },
     { id: 't17', e: '🗝️', name: 'Мастер обособления', d: 'Пройти задание 17' },
     { id: 'builder', e: '🔨', name: 'Строитель', d: 'Построить первое здание' },
     { id: 'mayor', e: '🎩', name: 'Мэр', d: 'Построить 5 зданий' },
@@ -271,9 +272,8 @@ const App = (() => {
       prefix.push(d);
     }
     // доля пройденной дороги
-    // Персонаж стоит на ближайшем открытом непройденном задании
-    let curIdx = ROUTE.findIndex((n) => !S.done[n] && LESSONS[n]);
-    if (curIdx < 0) curIdx = ROUTE.findIndex((n) => !S.done[n]);
+    // Персонаж стоит на первом непройденном задании пути
+    const curIdx = ROUTE.findIndex((n) => !S.done[n]);
     // Дорога закрашивается до самого дальнего пройденного задания
     const lastDone = ROUTE.reduce((acc, n, i) => (S.done[n] ? i : acc), -1);
     wrap.style.height = H + 'px';
@@ -310,7 +310,8 @@ const App = (() => {
     ROUTE.forEach((n, i) => {
       const pt = pts[i];
       const isDone = !!S.done[n];
-      const ready = !!LESSONS[n];
+      const open = curIdx < 0 || i <= curIdx;
+      const ready = open && !!LESSONS[n];
       const isCur = i === curIdx;
       const isCastle = n === 27;
       const cls = ['station', isDone ? 'done' : '', isCur ? 'cur' : '', ready ? 'ready' : 'soon', isCastle ? 'essay' : ''].join(' ');
@@ -342,16 +343,21 @@ const App = (() => {
     });
     // прокрутка к текущей станции
     requestAnimationFrame(() => {
-      const cur = wrap.querySelector('.station.cur') || wrap.querySelector('.station');
-      if (cur) v.scrollTop = Math.max(0, cur.offsetTop + wrap.offsetTop - v.clientHeight / 2);
+      // Карта открывается на текущей станции; в самом начале видно СТАРТ → 1
+      const cur = curIdx >= 0 ? wrap.querySelectorAll('.station')[curIdx] : null;
+      v.scrollTop = curIdx <= 0 ? v.scrollHeight : Math.max(0, cur.offsetTop + wrap.offsetTop - v.clientHeight / 2);
     });
   }
 
   function openStation(n) {
     sound('tap');
-    if (LESSONS[n]) return openLesson(n);
+    // Задания открываются строго по порядку пути
+    const i = ROUTE.indexOf(n), curIdx = ROUTE.findIndex((x) => !S.done[x]);
+    const open = S.done[n] || curIdx < 0 || i <= curIdx;
+    if (open && LESSONS[n]) return openLesson(n);
+    if (!open) return modal(`<div class="center"><div class="big-emoji">🔒</div><h2>Задание ${n}. ${TASKS[n]}</h2><p>Станции открываются по порядку. Сначала пройди задание <b>№${ROUTE[curIdx]}</b> — и дорога поведёт дальше.</p><button class="btn primary" data-close>Понятно</button></div>`);
     if (n === 27) return modal(`<div class="center"><div class="big-emoji">🏰</div><h2>Сочинение — финальный босс</h2><p>Ворота замка откроются, когда ты соберёшь ключи от всех 26 заданий.</p><p class="muted">Ключей: ${doneCount()} / 26 🗝️</p><button class="btn primary" data-close>Вперёд!</button></div>`);
-    modal(`<div class="center"><div class="big-emoji">🔒</div><h2>Задание ${n}. ${TASKS[n]}</h2><p>Эта станция скоро откроется.</p><p class="muted">Сейчас доступно задание <b>№17</b> — начни путь с него!</p><button class="btn primary" data-close>Понятно</button></div>`);
+    modal(`<div class="center"><div class="big-emoji">🔒</div><h2>Задание ${n}. ${TASKS[n]}</h2><p>Ты дошёл до этой станции! 🎉 Урок по ней уже в разработке и скоро появится здесь.</p><button class="btn primary" data-close>Понятно</button></div>`);
   }
 
   /* ===== Город ===== */
@@ -580,6 +586,7 @@ const App = (() => {
         const bx = first ? 60 : 20, bc = first ? 40 : 10;
         const gx = reward(bx, bc, { quiet: true });
         ctx.xp += gx; ctx.coins += bc;
+        if (n === 1) unlock('t1');
         if (n === 17) unlock('t17');
         if (stars === 3) unlock('clean');
         return { first, bonusXp: gx, bonusCoins: bc };
@@ -612,7 +619,9 @@ const App = (() => {
   }
 
   function openAlgo(src) {
-    modal(`<div class="algo-full"><img src="${src}" alt="Алгоритм выполнения задания"></div><button class="btn primary" data-close>Закрыть</button>`, { cls: 'wide' });
+    // src — картинка-схема или готовая HTML-схема алгоритма
+    const inner = src.trim().startsWith('<') ? `<div class="algo-html">${src}</div>` : `<img src="${src}" alt="Алгоритм выполнения задания">`;
+    modal(`<div class="algo-full">${inner}</div><button class="btn primary" data-close>Закрыть</button>`, { cls: 'wide' });
   }
 
   /* ===== PWA ===== */
