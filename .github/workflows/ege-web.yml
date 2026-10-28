@@ -1,0 +1,56 @@
+name: Веб-версия ЕГЭ Квест (PWA)
+
+on:
+  push:
+    branches:
+      - claude/serene-franklin-sll6hs
+      - main
+    paths:
+      - 'app/**'
+      - '.github/workflows/ege-web.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  web:
+    name: Опубликовать на GitHub Pages
+    runs-on: ubuntu-latest
+    # Публикация в gh-pages одна на репозиторий: параллельные пуши конфликтуют.
+    concurrency:
+      group: gh-pages-publish
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - name: Взять текущую ветку gh-pages
+        run: |
+          git fetch origin gh-pages:gh-pages || true
+          if git show-ref --verify --quiet refs/heads/gh-pages; then
+            git worktree add _site gh-pages
+          else
+            git worktree add --orphan -b gh-pages _site
+          fi
+      # Кладём приложение в подпапку ege/, не трогая остальное содержимое ветки
+      # (там живут и другие веб-приложения репозитория).
+      - name: Разложить файлы
+        run: |
+          rm -rf _site/ege
+          mkdir -p _site/ege
+          cp -r app/. _site/ege/
+          touch _site/.nojekyll
+          ls -la _site _site/ege
+      - name: Запушить gh-pages
+        working-directory: _site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Без изменений"; exit 0; fi
+          git commit -q -m "Веб-версия ЕГЭ Квест, сборка ${{ github.run_number }} (${GITHUB_SHA::7})"
+          git push origin gh-pages
+      - name: Адрес приложения
+        run: |
+          echo "### ЕГЭ Квест опубликован" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/ege/" >> "$GITHUB_STEP_SUMMARY"
