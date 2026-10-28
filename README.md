@@ -15,14 +15,12 @@
 - **iPhone / iPad:** открыть ссылку в Safari → «Поделиться» → «На экран „Домой“» → «Добавить».
 - **Android:** открыть ссылку в Chrome → «Установить приложение» (или ⋮ → «Добавить на главный экран»).
 
-## Публикация (GitHub Pages)
+## Ссылка
 
-1. Влить ветку в `main`.
-2. В репозитории: **Settings → Pages → Source: GitHub Actions**.
-3. Workflow `.github/workflows/pages.yml` выложит папку `app/`. Адрес будет вида `https://<логин>.github.io/<репозиторий>/`.
+**https://kartaviyukr.github.io/-/ege/**
 
-Без GitHub: папку `app/` можно перетащить на https://app.netlify.com/drop и получить ссылку за минуту.
-Для APK под Android можно прогнать готовую ссылку через https://www.pwabuilder.com.
+Workflow `.github/workflows/ege-web.yml` при каждом изменении папки `app/` кладёт приложение в папку `ege/` ветки `gh-pages`
+(остальные приложения в этой ветке не трогаются). Прогресс каждого ученика хранится на его устройстве.
 
 ## Локальный запуск
 
