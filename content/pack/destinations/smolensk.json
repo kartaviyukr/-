@@ -1,0 +1,316 @@
+{
+ "id": "smolensk",
+ "name": "Смоленск",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "smolenskaya-oblast",
+ "distanceFromKremlinKm": 369.1,
+ "coords": {
+  "lat": 54.782,
+  "lon": 32.045
+ },
+ "intro": [
+  "Смоленск стоит по берегам Днепра — один из древнейших городов России.",
+  "Его главный символ — крепостная стена, заложенная в 1596 году по приказу царя Фёдора Иоанновича в присутствии Бориса Годунова.",
+  "Точки маршрута: «Набережная Днепра», «Королевский бастион», «Крепостная стена и Громовая башня», «Лопатинский сад», «Успенский собор». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 8 км: старт и финиш — Вокзал Смоленск (Поезда с Белорусского вокзала). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Вокзал Смоленск",
+  "coords": {
+   "lat": 54.7955,
+   "lon": 32.0505
+  },
+  "transport": "Поезда с Белорусского вокзала"
+ },
+ "endPoint": {
+  "name": "Вокзал Смоленск",
+  "coords": {
+   "lat": 54.7955,
+   "lon": 32.0505
+  },
+  "transport": "Поезда с Белорусского вокзала"
+ },
+ "route": {
+  "distanceKm": 7.8,
+  "durationH": 1.6,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "smolensk-dnepr",
+   "name": "Набережная Днепра",
+   "coords": {
+    "lat": 54.7885,
+    "lon": 32.0505
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Смоленск раскинулся по берегам Днепра — набережная внизу под соборным холмом.",
+    "Хорошее место для финальной остановки перед вокзалом. Следующая точка маршрута — «Королевский бастион». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Смоленск расположен по берегам Днепра.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/smolensk",
+     "verified": true
+    },
+    {
+     "text": "Успенский собор — главная святыня города.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Smolensk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "smolensk-bastion",
+   "name": "Королевский бастион",
+   "coords": {
+    "lat": 54.7748,
+    "lon": 32.0352
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Королевский бастион — ещё одна точка обзорной экскурсии по Смоленску.",
+    "От бастиона хорошо видна линия крепостной стены. Следующая точка маршрута — «Крепостная стена и Громовая башня». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Королевский бастион входит в обзорную экскурсию.",
+     "sourceUrl": "https://www.sputnik8.com/ru/smolensk/activities/15794-grad-velik-i-mnog-lyudmi-obzornaya-ekskursiya-po-gorodu",
+     "verified": true
+    },
+    {
+     "text": "Стена — главный военный объект XVI века.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Smolensk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "smolensk-stena",
+   "name": "Крепостная стена и Громовая башня",
+   "coords": {
+    "lat": 54.7762,
+    "lon": 32.0402
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Каменную стену заложили в 1596 году вместо деревянной; строили её как главный военный объект государства.",
+    "Экскурсии показывают её вместе с Громовой и Красной башнями. Следующая точка маршрута — «Лопатинский сад». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Стена заложена в 1596 году по приказу Фёдора Иоанновича при Годунове.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Smolensk/",
+     "verified": true
+    },
+    {
+     "text": "Громовая башня входит в экскурсии вдоль стены.",
+     "sourceUrl": "https://www.sputnik8.com/ru/smolensk/activities/15794-grad-velik-i-mnog-lyudmi-obzornaya-ekskursiya-po-gorodu",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "smolensk-lopatinskiy",
+   "name": "Лопатинский сад",
+   "coords": {
+    "lat": 54.7772,
+    "lon": 32.0442
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Лопатинский сад входит в основной маршрут по Смоленску вместе с Королевским бастионом и площадью Победы.",
+    "Сад — зелёная остановка в самом центре Смоленска. Следующая точка маршрута — «Успенский собор». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Лопатинский сад — в основном экскурсионном маршруте.",
+     "sourceUrl": "https://www.sputnik8.com/ru/smolensk/activities/15794-grad-velik-i-mnog-lyudmi-obzornaya-ekskursiya-po-gorodu",
+     "verified": true
+    },
+    {
+     "text": "Маршрут включает Королевский бастион и площадь Победы.",
+     "sourceUrl": "https://www.sputnik8.com/ru/smolensk/activities/15794-grad-velik-i-mnog-lyudmi-obzornaya-ekskursiya-po-gorodu",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "smolensk-uspenskiy",
+   "name": "Успенский собор",
+   "coords": {
+    "lat": 54.7862,
+    "lon": 32.0592
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Кафедральный Успенский собор — главная святыня города; в народе его зовут Мономаховым.",
+    "Первый собор простоял 500 лет и был взорван защитниками Смоленска вместе с пороховыми погребами. Нынешний собор действует. Финиш — Вокзал Смоленск: Поезда с Белорусского вокзала."
+   ],
+   "facts": [
+    {
+     "text": "Успенский собор в народе называют Мономаховым.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Smolensk/",
+     "verified": true
+    },
+    {
+     "text": "Первый собор взорвали защитники города вместе с пороховыми погребами.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Smolensk/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Смоленск берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Смоленск, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "smolensk-title",
+  "name": "Путник: Смоленск",
+  "legend": "Проехал все свои точки маршрута «Смоленск» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/smolensk"
+  },
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/attractions/Smolensk/"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/smolensk/activities/15794-grad-velik-i-mnog-lyudmi-obzornaya-ekskursiya-po-gorodu"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     32.029749,
+     54.7748
+    ],
+    [
+     32.030479,
+     54.773228
+    ],
+    [
+     32.032475,
+     54.772077
+    ],
+    [
+     32.0352,
+     54.771656
+    ],
+    [
+     32.037925,
+     54.772077
+    ],
+    [
+     32.046926,
+     54.774477
+    ],
+    [
+     32.048921,
+     54.775628
+    ],
+    [
+     32.063922,
+     54.784628
+    ],
+    [
+     32.064653,
+     54.7862
+    ],
+    [
+     32.063922,
+     54.787772
+    ],
+    [
+     32.055223,
+     54.797072
+    ],
+    [
+     32.053227,
+     54.798223
+    ],
+    [
+     32.0505,
+     54.798644
+    ],
+    [
+     32.047773,
+     54.798223
+    ],
+    [
+     32.045777,
+     54.797072
+    ],
+    [
+     32.030479,
+     54.776372
+    ],
+    [
+     32.029749,
+     54.7748
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
