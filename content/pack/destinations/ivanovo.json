@@ -1,0 +1,320 @@
+{
+ "id": "ivanovo",
+ "name": "Иваново",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "ivanovskaya-oblast",
+ "distanceFromKremlinKm": 248.9,
+ "coords": {
+  "lat": 57.0,
+  "lon": 40.974
+ },
+ "intro": [
+  "Иваново — текстильная столица России, «город невест». Здесь сохранилось много зданий конструктивизма 1920–1930-х годов.",
+  "Ивановский ситец — главный сюжет городских музеев.",
+  "Точки маршрута: «Дом-подкова», «Дом-корабль», «Музей промышленности и искусства», «Музей ивановского ситца», «Щудровская палатка». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Вокзал Иваново (Поезда с Ярославского вокзала). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Вокзал Иваново",
+  "coords": {
+   "lat": 57.0102,
+   "lon": 40.9862
+  },
+  "transport": "Поезда с Ярославского вокзала"
+ },
+ "endPoint": {
+  "name": "Вокзал Иваново",
+  "coords": {
+   "lat": 57.0102,
+   "lon": 40.9862
+  },
+  "transport": "Поезда с Ярославского вокзала"
+ },
+ "route": {
+  "distanceKm": 3.8,
+  "durationH": 1.3,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "ivanovo-dom-podkova",
+   "name": "Дом-подкова",
+   "coords": {
+    "lat": 57.0052,
+    "lon": 40.9802
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Дом-подкова — яркий пример ивановского конструктивизма.",
+    "Он стоит в том же ряду символов города, что и Дом-корабль. Следующая точка маршрута — «Дом-корабль». Формат остановки — «смотреть снаружи», заложите на неё около 5 минут."
+   ],
+   "facts": [
+    {
+     "text": "Дом-подкова — пример конструктивизма.",
+     "sourceUrl": "https://travelto.ru/blog/dostoprimechatelnosti-ivanovo-gorod-nevest-i-tekstilnogo-naslediya/",
+     "verified": true
+    },
+    {
+     "text": "Дом-корабль — выразительное здание того же периода.",
+     "sourceUrl": "https://travelto.ru/blog/dostoprimechatelnosti-ivanovo-gorod-nevest-i-tekstilnogo-naslediya/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "ivanovo-dom-korabl",
+   "name": "Дом-корабль",
+   "coords": {
+    "lat": 57.0042,
+    "lon": 40.9782
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Дом-корабль построен в 1929–1930 годах по проекту архитектора Д. Ф. Фридмана на проспекте Ленина, 49; два корпуса стоят на угловом участке.",
+    "Округлые формы и фасад делают его похожим на корабль — это один из символов города. Следующая точка маршрута — «Музей промышленности и искусства»."
+   ],
+   "facts": [
+    {
+     "text": "Дом-корабль построен в 1929–1930 годах по проекту Д. Ф. Фридмана.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Ivanovo/",
+     "verified": true
+    },
+    {
+     "text": "Дом стоит на проспекте Ленина, 49.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Ivanovo/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "ivanovo-muzey-promyshlennosti",
+   "name": "Музей промышленности и искусства",
+   "coords": {
+    "lat": 57.0012,
+    "lon": 40.9772
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Музей промышленности и искусства — одна из главных экспозиций города.",
+    "В Иванове есть также художественный музей и дом-музей семьи Бубновых. Следующая точка маршрута — «Музей ивановского ситца». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Иванове работает музей промышленности и искусства.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Ivanovo/",
+     "verified": true
+    },
+    {
+     "text": "В городе есть дом-музей семьи Бубновых.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Ivanovo/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "ivanovo-sitets",
+   "name": "Музей ивановского ситца",
+   "coords": {
+    "lat": 57.0001,
+    "lon": 40.9762
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Музей ситца — филиал краеведческого музея имени Бурылина — размещён в родовом доме Дмитрия Бурылина, построенном в начале XX века в стиле модерн.",
+    "Осенью 2024 года музей временно закрывался — режим работы лучше проверить заранее. Следующая точка маршрута — «Щудровская палатка»."
+   ],
+   "facts": [
+    {
+     "text": "Музей ситца — в доме Бурылина в стиле модерн.",
+     "sourceUrl": "https://www.sputnik8.com/ru/ivanovo/sights/muzej-ivanovskogo-sitca",
+     "verified": true
+    },
+    {
+     "text": "Музей временно закрывался в 2024 году.",
+     "sourceUrl": "https://travelto.ru/blog/dostoprimechatelnosti-ivanovo-gorod-nevest-i-tekstilnogo-naslediya/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "ivanovo-shchudrovskaya",
+   "name": "Щудровская палатка",
+   "coords": {
+    "lat": 56.9992,
+    "lon": 40.9798
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Название палатке дал купец Осип Щудров, купивший дом; в начале XXI века здание отреставрировали и вернули ему первоначальный вид.",
+    "Щудровская палатка стоит на улице 10 Августа, 36А. Финиш — Вокзал Иваново: Поезда с Ярославского вокзала."
+   ],
+   "facts": [
+    {
+     "text": "Название — по купцу Осипу Щудрову.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE",
+     "verified": true
+    },
+    {
+     "text": "Палатку отреставрировали в начале XXI века.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Иваново берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Иваново, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "ivanovo-title",
+  "name": "Путник: Иваново",
+  "legend": "Проехал все свои точки маршрута «Иваново» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/blog/dostoprimechatelnosti-ivanovo-gorod-nevest-i-tekstilnogo-naslediya/"
+  },
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/attractions/Ivanovo/"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/ivanovo/sights/muzej-ivanovskogo-sitca"
+  },
+  {
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     40.970427,
+     57.0001
+    ],
+    [
+     40.971201,
+     56.998528
+    ],
+    [
+     40.973314,
+     56.997377
+    ],
+    [
+     40.976914,
+     56.996477
+    ],
+    [
+     40.9798,
+     56.996056
+    ],
+    [
+     40.982686,
+     56.996477
+    ],
+    [
+     40.984799,
+     56.997628
+    ],
+    [
+     40.991201,
+     57.008628
+    ],
+    [
+     40.991974,
+     57.0102
+    ],
+    [
+     40.991201,
+     57.011772
+    ],
+    [
+     40.989087,
+     57.012923
+    ],
+    [
+     40.9862,
+     57.013344
+    ],
+    [
+     40.983313,
+     57.012923
+    ],
+    [
+     40.981199,
+     57.011772
+    ],
+    [
+     40.9732,
+     57.005772
+    ],
+    [
+     40.972427,
+     57.0042
+    ],
+    [
+     40.970427,
+     57.0001
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

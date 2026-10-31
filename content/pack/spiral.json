@@ -146,6 +146,12 @@
    "verified": false
   },
   {
+   "id": "ivanovskaya-oblast",
+   "name": "Ивановская область",
+   "type": "соседняя_область",
+   "verified": false
+  },
+  {
    "id": "istra",
    "name": "Истра",
    "type": "МО_городской_округ",
@@ -4780,8 +4786,80 @@
    "insideMkad": false
   },
   {
-   "id": "kovrov",
+   "id": "ples",
    "num": 239,
+   "name": "Плёс",
+   "kindNote": "г., Левитан",
+   "regionId": "ivanovskaya-oblast",
+   "mustHave": 3,
+   "coords": {
+    "lat": 57.46,
+    "lon": 41.513
+   },
+   "distanceFromKremlinKm": 304.7,
+   "azimuthDeg": 49.8,
+   "ring": 9,
+   "destinationId": "ples",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ivanovo",
+   "num": 240,
+   "name": "Иваново",
+   "kindNote": "г., текстиль и конструктивизм",
+   "regionId": "ivanovskaya-oblast",
+   "mustHave": 3,
+   "coords": {
+    "lat": 57.0,
+    "lon": 40.974
+   },
+   "distanceFromKremlinKm": 248.9,
+   "azimuthDeg": 54.7,
+   "ring": 9,
+   "destinationId": "ivanovo",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "shuya",
+   "num": 241,
+   "name": "Шуя",
+   "kindNote": "г., Воскресенский собор",
+   "regionId": "ivanovskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.851,
+    "lon": 41.389
+   },
+   "distanceFromKremlinKm": 262.7,
+   "azimuthDeg": 60.7,
+   "ring": 9,
+   "destinationId": "shuya",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "palekh",
+   "num": 242,
+   "name": "Палех",
+   "kindNote": "посёлок, лаковая миниатюра",
+   "regionId": "ivanovskaya-oblast",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.802,
+    "lon": 41.86
+   },
+   "distanceFromKremlinKm": 286.7,
+   "azimuthDeg": 64.2,
+   "ring": 9,
+   "destinationId": "palekh",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kovrov",
+   "num": 243,
    "name": "Ковров",
    "kindNote": "г., Дегтярёв",
    "regionId": "vladimirskaya-oblast",
@@ -4799,7 +4877,7 @@
   },
   {
    "id": "mstera",
-   "num": 240,
+   "num": 244,
    "name": "Мстёра",
    "kindNote": "посёлок, лаковая миниатюра",
    "regionId": "vladimirskaya-oblast",
@@ -4817,7 +4895,7 @@
   },
   {
    "id": "vyazniki",
-   "num": 241,
+   "num": 245,
    "name": "Вязники",
    "kindNote": "г., льняной промысел",
    "regionId": "vladimirskaya-oblast",
@@ -4835,7 +4913,7 @@
   },
   {
    "id": "gorokhovets",
-   "num": 242,
+   "num": 246,
    "name": "Гороховец",
    "kindNote": "г., купеческие палаты",
    "regionId": "vladimirskaya-oblast",
@@ -4853,7 +4931,7 @@
   },
   {
    "id": "sudogda",
-   "num": 243,
+   "num": 247,
    "name": "Судогда",
    "kindNote": "г., замок Храповицкого",
    "regionId": "vladimirskaya-oblast",
@@ -4871,7 +4949,7 @@
   },
   {
    "id": "murom",
-   "num": 244,
+   "num": 248,
    "name": "Муром",
    "kindNote": "г., Пётр и Феврония, Илья Муромец",
    "regionId": "vladimirskaya-oblast",
@@ -4889,7 +4967,7 @@
   },
   {
    "id": "kasimov",
-   "num": 245,
+   "num": 249,
    "name": "Касимов",
    "kindNote": "г., ханская мечеть",
    "regionId": "ryazanskaya-oblast",
@@ -4907,7 +4985,7 @@
   },
   {
    "id": "skopin",
-   "num": 246,
+   "num": 250,
    "name": "Скопин",
    "kindNote": "г., гончарный промысел",
    "regionId": "ryazanskaya-oblast",
@@ -4925,7 +5003,7 @@
   },
   {
    "id": "kulikovo-pole",
-   "num": 247,
+   "num": 251,
    "name": "Куликово поле",
    "kindNote": "мемориал 1380 года",
    "regionId": "tulskaya-oblast",
@@ -4943,7 +5021,7 @@
   },
   {
    "id": "bogoroditsk",
-   "num": 248,
+   "num": 252,
    "name": "Богородицк",
    "kindNote": "г., дворец Бобринских",
    "regionId": "tulskaya-oblast",
@@ -4961,7 +5039,7 @@
   },
   {
    "id": "efremov",
-   "num": 249,
+   "num": 253,
    "name": "Ефремов",
    "kindNote": "г., Бунин",
    "regionId": "tulskaya-oblast",
