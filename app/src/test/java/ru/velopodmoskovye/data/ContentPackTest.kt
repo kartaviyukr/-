@@ -22,7 +22,7 @@ class ContentPackTest {
 
     @Test
     fun spiralStartsAtTsaoWithOkrugsInsideMkad() {
-        assertTrue(pack.spiral.places.size in 200..365)
+        assertEquals(365, pack.spiral.places.size)
         assertTrue(pack.spiral.places.first().start)
         assertEquals("ЦАО", pack.spiral.places.first().name)
         assertEquals(9, pack.spiral.places.count { it.insideMkad })

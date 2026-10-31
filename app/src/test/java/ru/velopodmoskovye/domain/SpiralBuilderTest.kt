@@ -13,7 +13,7 @@ class SpiralBuilderTest {
 
     @Test
     fun startsAtTsaoAndCoversAllPlaces() {
-        assertTrue(rows.size in 200..365)
+        assertEquals(365, rows.size)
         val nodes = spiral()
         assertEquals("ЦАО", nodes.first().item.name)
         assertEquals(rows.map { it.num }.toSet(), nodes.map { it.item.num }.toSet())

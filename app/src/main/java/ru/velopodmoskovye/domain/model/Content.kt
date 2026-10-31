@@ -46,7 +46,7 @@ data class Region(
     val verified: Boolean = false,
 )
 
-/** Место в общей спирали (все 183 точки), даже если для него ещё нет контента. */
+/** Место в общей спирали (все 365 мест), даже если для него ещё нет контента. */
 @Serializable
 data class SpiralPlace(
     val id: String,
