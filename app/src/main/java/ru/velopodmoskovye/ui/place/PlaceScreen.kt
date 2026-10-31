@@ -79,6 +79,7 @@ fun PlaceScreen(
     onBack: () -> Unit,
     onOpenStop: (String, String) -> Unit,
     onStartRoute: (String) -> Unit,
+    onEditPoint: (String, String) -> Unit = { _, _ -> },
     vm: PlaceViewModel = hiltViewModel(),
 ) {
     val state by vm.state.collectAsStateWithLifecycle()
@@ -226,6 +227,19 @@ fun PlaceScreen(
                     eta = eta,
                     onClick = { onOpenStop(dest.id, stop.id) },
                 )
+            }
+            item {
+                SectionTitle("Свои правки")
+                Text(
+                    "Если точка стоит не там — откройте её и нажмите «Поправить координаты». " +
+                        "Можно добавить и свою точку: она встанет в маршрут, а ссылки на карты учтут её.",
+                    style = MaterialTheme.typography.bodySmall,
+                )
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    OutlinedButton(onClick = { onEditPoint(dest.id, "new") }) { Text("Добавить свою точку") }
+                    TextButton(onClick = { onEditPoint(dest.id, "start") }) { Text("Поправить старт") }
+                    TextButton(onClick = { onEditPoint(dest.id, "end") }) { Text("Поправить финиш") }
+                }
             }
             item { DishCard(dest) }
             item { TitleCard(dest, state.pairMode, state.progress?.complete == true) }

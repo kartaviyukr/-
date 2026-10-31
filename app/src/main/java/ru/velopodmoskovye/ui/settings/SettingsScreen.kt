@@ -1,5 +1,6 @@
 package ru.velopodmoskovye.ui.settings
 
+import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -25,6 +26,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -34,9 +36,11 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import ru.velopodmoskovye.BuildConfig
+import ru.velopodmoskovye.data.edit.EditsRepository
 import ru.velopodmoskovye.data.map.OfflineMaps
 import ru.velopodmoskovye.data.map.OfflineState
 import ru.velopodmoskovye.data.progress.ProgressRepository
@@ -51,7 +55,12 @@ class SettingsViewModel @Inject constructor(
     private val repo: SettingsRepository,
     private val progress: ProgressRepository,
     private val offline: OfflineMaps,
+    private val edits: EditsRepository,
 ) : ViewModel() {
+    val editsCount: StateFlow<Int> = edits.edits.map { it.count }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), 0)
+    fun exportEdits(): String = edits.exportJson()
+    fun clearEdits() = viewModelScope.launch { edits.clear() }
+
     val offlineStates: StateFlow<Map<String, OfflineState>> = offline.states
 
     fun downloadOblast() = offline.downloadOblast()
@@ -71,6 +80,7 @@ fun SettingsScreen(vm: SettingsViewModel = hiltViewModel()) {
     val s by vm.settings.collectAsStateWithLifecycle()
     val settings = s ?: return
     var confirmReset by remember { mutableStateOf(false) }
+    var confirmClearEdits by remember { mutableStateOf(false) }
 
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp)) {
         Text("Настройки", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
@@ -102,6 +112,25 @@ fun SettingsScreen(vm: SettingsViewModel = hiltViewModel()) {
         )
         OfflineControl(offline[OfflineMaps.OBLAST_KEY] ?: OfflineState.None, onDownload = vm::downloadOblast, onDelete = vm::deleteOblast)
 
+        SectionTitle("Мои правки точек")
+        val editsCount by vm.editsCount.collectAsStateWithLifecycle()
+        val ctx = LocalContext.current
+        Text(
+            if (editsCount == 0) "Правок пока нет. Поправить координаты или добавить точку можно на экране точки и места."
+            else "Правок: $editsCount. Они хранятся в телефоне и не пропадут при обновлении приложения. " +
+                "Отправьте их файлом — по нему их можно внести в общий контент.",
+            style = MaterialTheme.typography.bodySmall,
+        )
+        if (editsCount > 0) Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedButton(onClick = {
+                val send = Intent(Intent.ACTION_SEND).setType("application/json")
+                    .putExtra(Intent.EXTRA_SUBJECT, "Правки точек — Велоподмосковье")
+                    .putExtra(Intent.EXTRA_TEXT, vm.exportEdits())
+                ctx.startActivity(Intent.createChooser(send, "Поделиться правками"))
+            }) { Text("Поделиться правками") }
+            TextButton(onClick = { confirmClearEdits = true }) { Text("Сбросить правки") }
+        }
+
         SectionTitle("Прогресс")
         OutlinedButton(onClick = { confirmReset = true }) { Text("Сбросить все отметки и звания") }
 
@@ -109,6 +138,16 @@ fun SettingsScreen(vm: SettingsViewModel = hiltViewModel()) {
             "Версия ${BuildConfig.VERSION_NAME}. Карта © участники OpenStreetMap, тайлы OpenFreeMap.",
             style = MaterialTheme.typography.labelSmall,
             modifier = Modifier.padding(top = 24.dp),
+        )
+    }
+
+    if (confirmClearEdits) {
+        AlertDialog(
+            onDismissRequest = { confirmClearEdits = false },
+            title = { Text("Сбросить правки точек?") },
+            text = { Text("Поправленные координаты вернутся к исходным, свои точки удалятся.") },
+            confirmButton = { TextButton(onClick = { vm.clearEdits(); confirmClearEdits = false }) { Text("Сбросить") } },
+            dismissButton = { TextButton(onClick = { confirmClearEdits = false }) { Text("Отмена") } },
         )
     }
 

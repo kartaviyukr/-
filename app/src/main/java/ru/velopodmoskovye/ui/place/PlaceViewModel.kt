@@ -8,7 +8,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
@@ -72,7 +71,7 @@ class PlaceViewModel @Inject constructor(
     private val plan = MutableStateFlow(Plan(LocalDate.now(), LocalTime.of(10, 0), false))
 
     val state: StateFlow<PlaceUiState> = combine(
-        flow { emit(content.pack()) }, progress.visitedIds, settings.settings, plan, progress.activeRoute,
+        content.packs, progress.visitedIds, settings.settings, plan, progress.activeRoute,
     ) { pack, visited, s, p, active ->
         val dest = pack.destinations[id] ?: return@combine PlaceUiState(loading = false)
         val ordered = dest.stops

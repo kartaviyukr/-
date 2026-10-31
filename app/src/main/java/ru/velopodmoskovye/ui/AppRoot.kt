@@ -25,6 +25,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import ru.velopodmoskovye.ui.common.TitleAwardDialog
+import ru.velopodmoskovye.ui.edit.PointEditorScreen
 import ru.velopodmoskovye.ui.map.MapScreen
 import ru.velopodmoskovye.ui.place.PlaceScreen
 import ru.velopodmoskovye.ui.route.ActiveRouteScreen
@@ -41,10 +42,13 @@ object Routes {
     const val PLACE = "place/{id}"
     const val ACTIVE = "active/{id}"
     const val STOP = "stop/{destId}/{stopId}"
+    const val EDIT = "edit/{destId}/{stopId}"
 
     fun place(id: String) = "place/$id"
     fun active(id: String) = "active/$id"
     fun stop(destId: String, stopId: String) = "stop/$destId/$stopId"
+    /** stopId: id точки, "start", "end" или "new" — новая своя точка. */
+    fun edit(destId: String, stopId: String) = "edit/$destId/$stopId"
 }
 
 private data class Tab(val route: String, val label: String, val icon: ImageVector)
@@ -96,6 +100,7 @@ fun AppRoot(appViewModel: AppViewModel) {
                     onBack = { nav.popBackStack() },
                     onOpenStop = { d, s -> nav.navigate(Routes.stop(d, s)) },
                     onStartRoute = { nav.navigate(Routes.active(it)) },
+                    onEditPoint = { d, s -> nav.navigate(Routes.edit(d, s)) },
                 )
             }
             composable(Routes.ACTIVE, arguments = listOf(navArgument("id") { type = NavType.StringType })) {
@@ -110,7 +115,14 @@ fun AppRoot(appViewModel: AppViewModel) {
                     navArgument("destId") { type = NavType.StringType },
                     navArgument("stopId") { type = NavType.StringType },
                 ),
-            ) { StopScreen(onBack = { nav.popBackStack() }) }
+            ) { StopScreen(onBack = { nav.popBackStack() }, onEdit = { d, s -> nav.navigate(Routes.edit(d, s)) }) }
+            composable(
+                Routes.EDIT,
+                arguments = listOf(
+                    navArgument("destId") { type = NavType.StringType },
+                    navArgument("stopId") { type = NavType.StringType },
+                ),
+            ) { PointEditorScreen(onBack = { nav.popBackStack() }) }
         }
     }
 

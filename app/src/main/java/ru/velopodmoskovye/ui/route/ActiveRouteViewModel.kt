@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import ru.velopodmoskovye.data.content.ContentRepository
@@ -54,7 +53,7 @@ class ActiveRouteViewModel @Inject constructor(
     private val id: String = checkNotNull(savedState["id"])
 
     val state: StateFlow<ActiveUiState> = combine(
-        flow { emit(content.pack()) }, progress.visits, tracker.last, progress.activeRoute, settings.settings,
+        content.packs, progress.visits, tracker.last, progress.activeRoute, settings.settings,
     ) { pack, visits, fix, active, _ ->
         val dest = pack.destinations[id] ?: return@combine ActiveUiState(loading = false)
         val byStop = visits.filter { it.destinationId == dest.id }.associateBy { it.stopId }

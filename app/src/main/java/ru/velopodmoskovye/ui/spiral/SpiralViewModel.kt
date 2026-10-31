@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import ru.velopodmoskovye.data.content.ContentPack
@@ -82,7 +81,7 @@ class SpiralViewModel @Inject constructor(
     private val query = MutableStateFlow("")
 
     val state: StateFlow<SpiralUiState> = combine(
-        combine(flow { emit(content.pack()) }, progress.visitedIds, progress.activeRoute) { a, b, c -> Triple(a, b, c) },
+        combine(content.packs, progress.visitedIds, progress.activeRoute) { a, b, c -> Triple(a, b, c) },
         filter, sort, tracker.last, query,
     ) { (pack, visited, active), f, s, me, q ->
         val rows = buildRows(pack, visited, me?.point)

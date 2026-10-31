@@ -12,6 +12,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.EditLocationAlt
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material3.CircularProgressIndicator
@@ -39,11 +40,11 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.stateIn
 import ru.velopodmoskovye.data.content.ContentRepository
 import ru.velopodmoskovye.data.db.VisitEntity
 import ru.velopodmoskovye.data.progress.ProgressRepository
+import ru.velopodmoskovye.domain.edit.EditApplier
 import ru.velopodmoskovye.domain.model.Stop
 import ru.velopodmoskovye.domain.progress.Geofence
 import ru.velopodmoskovye.ui.Format
@@ -65,10 +66,10 @@ class StopViewModel @Inject constructor(
     content: ContentRepository,
     progress: ProgressRepository,
 ) : ViewModel() {
-    private val destId: String = checkNotNull(savedState["destId"])
+    val destId: String = checkNotNull(savedState["destId"])
     private val stopId: String = checkNotNull(savedState["stopId"])
 
-    val state: StateFlow<StopUiState> = combine(flow { emit(content.pack()) }, progress.visits) { pack, visits ->
+    val state: StateFlow<StopUiState> = combine(content.packs, progress.visits) { pack, visits ->
         val dest = pack.destinations[destId]
         StopUiState(false, dest?.stops?.firstOrNull { it.id == stopId }, dest?.name ?: "", visits.firstOrNull { it.stopId == stopId })
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), StopUiState())
@@ -76,7 +77,7 @@ class StopViewModel @Inject constructor(
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun StopScreen(onBack: () -> Unit, vm: StopViewModel = hiltViewModel()) {
+fun StopScreen(onBack: () -> Unit, onEdit: (String, String) -> Unit, vm: StopViewModel = hiltViewModel()) {
     val state by vm.state.collectAsStateWithLifecycle()
     val context = LocalContext.current
     val tts = rememberTts()
@@ -123,6 +124,13 @@ fun StopScreen(onBack: () -> Unit, vm: StopViewModel = hiltViewModel()) {
                         )
                     }
                 }
+                OutlinedButton(onClick = { onEdit(vm.destId, stop.id) }, modifier = Modifier.padding(top = 8.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Filled.EditLocationAlt, null)
+                        Spacer(Modifier.width(6.dp))
+                        Text(if (EditApplier.isUserStop(stop.id)) "Изменить или удалить свою точку" else "Поправить координаты")
+                    }
+                }
                 stop.warnings.forEach { WarningCard(it) }
                 if (tts.ready) {
                     OutlinedButton(
@@ -138,7 +146,7 @@ fun StopScreen(onBack: () -> Unit, vm: StopViewModel = hiltViewModel()) {
                 }
                 SectionTitle("Рассказ экскурсовода")
                 Paragraphs(stop.guideStory)
-                SectionTitle("Факты")
+                if (stop.facts.isNotEmpty()) SectionTitle("Факты")
             }
             items(stop.facts) { FactItem(it) }
         }

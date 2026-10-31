@@ -3,10 +3,17 @@ package ru.velopodmoskovye.data.content
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import ru.velopodmoskovye.data.edit.EditsRepository
+import ru.velopodmoskovye.domain.edit.EditApplier
+import ru.velopodmoskovye.domain.edit.UserEdits
 import ru.velopodmoskovye.domain.model.ContentManifest
 import ru.velopodmoskovye.domain.model.Destination
 import ru.velopodmoskovye.domain.model.SpiralPack
@@ -20,6 +27,10 @@ data class ContentPack(
     val destinations: Map<String, Destination>,
 ) {
     val regionNames: Map<String, String> = spiral.regions.associate { it.id to it.name }
+
+    /** Контент с наложенными правками пользователя. */
+    fun withEdits(edits: UserEdits): ContentPack =
+        if (edits.isEmpty) this else copy(destinations = destinations.mapValues { (_, d) -> EditApplier.apply(d, edits) })
 }
 
 object ContentParser {
@@ -40,11 +51,19 @@ object ContentParser {
 @Singleton
 class ContentRepository @Inject constructor(
     @ApplicationContext private val context: Context,
+    private val edits: EditsRepository,
 ) {
     private val mutex = Mutex()
     @Volatile private var cache: ContentPack? = null
 
-    suspend fun pack(): ContentPack = cache ?: mutex.withLock {
+    /** Контент-пак с правками пользователя; обновляется, когда правки меняются. */
+    val packs: Flow<ContentPack> = combine(flow { emit(base()) }, edits.edits) { pack, e -> pack.withEdits(e) }
+
+    /** Текущий контент с правками пользователя. */
+    suspend fun pack(): ContentPack = packs.first()
+
+    /** Контент как в APK, без правок. */
+    suspend fun base(): ContentPack = cache ?: mutex.withLock {
         cache ?: withContext(Dispatchers.IO) {
             ContentParser.parse { path -> context.assets.open(path).bufferedReader(Charsets.UTF_8).use { it.readText() } }
         }.also { cache = it }

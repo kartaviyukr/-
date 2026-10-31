@@ -7,7 +7,6 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import ru.velopodmoskovye.data.content.ContentRepository
@@ -69,7 +68,7 @@ class MapViewModel @Inject constructor(
     private val filter = MutableStateFlow(MapFilter())
 
     val state: StateFlow<MapUiState> = combine(
-        flow { emit(content.pack()) }, progress.visitedIds, settings.settings, filter, tracker.last,
+        content.packs, progress.visitedIds, settings.settings, filter, tracker.last,
     ) { pack, visited, s, f, fix ->
         val zones = OpenZones.compute(pack.spiral, pack.destinations, visited, s.geofenceRadiusM)
         val completeDest = pack.destinations.values.filter { ProgressCalculator.destination(it, visited).complete }.map { it.id }.toSet()

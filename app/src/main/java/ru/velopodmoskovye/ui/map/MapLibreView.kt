@@ -61,6 +61,11 @@ fun MapLibreView(
     initialZoom: Double = 7.0,
     onMapClick: ((GeoPoint, metersPerPixel: Double) -> Unit)? = null,
     gesturesEnabled: Boolean = true,
+    /** Центр карты после каждого сдвига — для выбора точки перекрестием. */
+    onCameraIdle: ((GeoPoint) -> Unit)? = null,
+    /** Перелететь сюда (масштаб [moveZoom]); новый объект — новый перелёт. */
+    moveTo: GeoPoint? = null,
+    moveZoom: Double = 17.0,
 ) {
     val context = LocalContext.current
     val lifecycle = LocalLifecycleOwner.current.lifecycle
@@ -109,6 +114,22 @@ fun MapLibreView(
             handler(GeoPoint(latLng.latitude, latLng.longitude), m.projection.getMetersPerPixelAtLatitude(latLng.latitude))
             true
         }
+    }
+
+    val idleHandler by rememberUpdatedState(onCameraIdle)
+    LaunchedEffect(map) {
+        val m = map ?: return@LaunchedEffect
+        m.addOnCameraIdleListener {
+            val t = m.cameraPosition.target ?: return@addOnCameraIdleListener
+            idleHandler?.invoke(GeoPoint(t.latitude, t.longitude))
+        }
+    }
+
+    LaunchedEffect(map, moveTo) {
+        val m = map ?: return@LaunchedEffect
+        val p = moveTo ?: return@LaunchedEffect
+        fitted = true
+        m.animateCamera(CameraUpdateFactory.newLatLngZoom(LatLng(p.lat, p.lon), moveZoom))
     }
 
     LaunchedEffect(style, layers) {

@@ -36,7 +36,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.stateIn
 import ru.velopodmoskovye.data.content.ContentRepository
 import ru.velopodmoskovye.data.db.TitleAwardEntity
@@ -74,7 +73,7 @@ class TitlesViewModel @Inject constructor(
     settings: SettingsRepository,
 ) : ViewModel() {
     val state: StateFlow<TitlesUiState> = combine(
-        flow { emit(content.pack()) }, progress.titles, progress.visitedIds, progress.trackedMeters, settings.settings,
+        content.packs, progress.titles, progress.visitedIds, progress.trackedMeters, settings.settings,
     ) { pack, awards, visited, meters, s ->
         val completeDest = pack.destinations.values.filter { ProgressCalculator.destination(it, visited).complete }
         val completeIds = completeDest.map { it.id }.toSet()
