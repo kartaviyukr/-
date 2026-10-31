@@ -1,0 +1,303 @@
+{
+ "id": "talashkino-i-flenovo",
+ "name": "Талашкино и Флёново",
+ "settlementType": "село",
+ "mustHave": 2,
+ "regionId": "smolenskaya-oblast",
+ "distanceFromKremlinKm": 366.0,
+ "coords": {
+  "lat": 54.63,
+  "lon": 32.195
+ },
+ "intro": [
+  "Талашкино — бывшая усадьба княгини Марии Тенишевой к югу от Смоленска, на рубеже XIX–XX веков ставшая известным художественным центром.",
+  "Музейный комплекс «Теремок» в соседнем Флёнове объединяет усадьбу и хутор Тенишевой; здесь работали Сергей Малютин и Николай Рерих.",
+  "Точки маршрута: «Храм Святого Духа», ««Теремок» во Флёнове», «Экспозиции «Теремка»», «Село Талашкино». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Талашкино и Флёново, центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Талашкино и Флёново, центр",
+  "coords": {
+   "lat": 54.63,
+   "lon": 32.195
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Талашкино и Флёново, центр",
+  "coords": {
+   "lat": 54.63,
+   "lon": 32.195
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 3.8,
+  "durationH": 1.4,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "talashkino-i-flenovo-hram",
+   "name": "Храм Святого Духа",
+   "coords": {
+    "lat": 54.6256,
+    "lon": 32.1916
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Храм Святого Духа основала сама княгиня вместе с Малютиным и фотографом Барщевским.",
+    "Малютин проектировал храм, а Рерих его декорировал. Следующая точка маршрута — ««Теремок» во Флёнове». Формат остановки — «смотреть снаружи», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Церковь основала княгиня Тенишева с Малютиным и Барщевским.",
+     "sourceUrl": "https://www.sputnik8.com/ru/smolensk/sights/talashkino/info",
+     "verified": true
+    },
+    {
+     "text": "Рерих декорировал храм.",
+     "sourceUrl": "https://samokatus.ru/travel-telegram-feed/RussianArchitecture/28641",
+     "verified": true
+    },
+    {
+     "text": "С Рерихом связан целый период жизни Талашкина.",
+     "sourceUrl": "https://www.culture.ru/institutes/11154/istoriko-arhitekturniy-kompleks-teremok",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "talashkino-i-flenovo-teremok",
+   "name": "«Теремок» во Флёнове",
+   "coords": {
+    "lat": 54.625,
+    "lon": 32.19
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Сказочный бревенчатый «Теремок» построен по проекту Сергея Малютина и считается шедевром русского малого зодчества.",
+    "Усадьбу разграбили в 1920-х, но ключевые постройки уцелели. Следующая точка маршрута — «Экспозиции «Теремка»». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "«Теремок» построен по проекту Малютина.",
+     "sourceUrl": "https://www.culture.ru/institutes/11154/istoriko-arhitekturniy-kompleks-teremok",
+     "verified": true
+    },
+    {
+     "text": "Комплекс объединяет усадьбу Талашкино и хутор Флёново.",
+     "sourceUrl": "https://samokatus.ru/travel-telegram-feed/RussianArchitecture/28641",
+     "verified": true
+    },
+    {
+     "text": "Ключевые постройки пережили разграбление 1920-х.",
+     "sourceUrl": "https://tenchat.ru/media/3260936-talashkino-i-teremok--utopiya-tenishevoy-i-russkiy-modern-v-derevne",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "talashkino-i-flenovo-ekspozitsii",
+   "name": "Экспозиции «Теремка»",
+   "coords": {
+    "lat": 54.6245,
+    "lon": 32.1925
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В экспозициях — «Сельскохозяйственная школа», «Художественное наследие Талашкино» и рассказ о создателях храма.",
+    "Деревянный дом усадьбы не сохранился, показывают его макет. Следующая точка маршрута — «Село Талашкино». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "Экспозиции: «Сельскохозяйственная школа», «Художественное наследие Талашкино».",
+     "sourceUrl": "https://www.putevka.com/smolenskaya-oblast/smolensk/sight/istoriko-arkhitekturnyy-kompleks-teremok",
+     "verified": true
+    },
+    {
+     "text": "Деревянная усадьба не сохранилась, есть её макет.",
+     "sourceUrl": "https://www.putevka.com/smolenskaya-oblast/smolensk/sight/istoriko-arkhitekturnyy-kompleks-teremok",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "talashkino-i-flenovo-talashkino",
+   "name": "Село Талашкино",
+   "coords": {
+    "lat": 54.635,
+    "lon": 32.201
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Талашкино лежит примерно в 18 км к югу от Смоленска.",
+    "Отсюда до Флёнова — короткий переезд. Талашкино — в 18 км к югу от Смоленска. Финиш — Талашкино и Флёново, центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Талашкино — в 18 км к югу от Смоленска.",
+     "sourceUrl": "https://www.culture.ru/institutes/11154/istoriko-arhitekturniy-kompleks-teremok",
+     "verified": true
+    },
+    {
+     "text": "Талашкино — бывшая усадьба Тенишевых.",
+     "sourceUrl": "https://www.culture.ru/institutes/11154/istoriko-arhitekturniy-kompleks-teremok",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Талашкино и Флёново берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Талашкино и Флёново, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "talashkino-i-flenovo-title",
+  "name": "Путник: Талашкино и Флёново",
+  "legend": "Проехал все свои точки маршрута «Талашкино и Флёново» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/smolensk/sights/talashkino/info"
+  },
+  {
+   "title": "Источник: samokatus.ru",
+   "url": "https://samokatus.ru/travel-telegram-feed/RussianArchitecture/28641"
+  },
+  {
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/institutes/11154/istoriko-arhitekturniy-kompleks-teremok"
+  },
+  {
+   "title": "Источник: tenchat.ru",
+   "url": "https://tenchat.ru/media/3260936-talashkino-i-teremok--utopiya-tenishevoy-i-russkiy-modern-v-derevne"
+  },
+  {
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/smolenskaya-oblast/smolensk/sight/istoriko-arkhitekturnyy-kompleks-teremok"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     32.184569,
+     54.625
+    ],
+    [
+     32.185297,
+     54.623428
+    ],
+    [
+     32.187285,
+     54.622277
+    ],
+    [
+     32.189785,
+     54.621777
+    ],
+    [
+     32.1925,
+     54.621356
+    ],
+    [
+     32.195215,
+     54.621777
+    ],
+    [
+     32.197203,
+     54.622928
+    ],
+    [
+     32.205704,
+     54.633428
+    ],
+    [
+     32.206432,
+     54.635
+    ],
+    [
+     32.205704,
+     54.636572
+    ],
+    [
+     32.203716,
+     54.637723
+    ],
+    [
+     32.201,
+     54.638144
+    ],
+    [
+     32.198284,
+     54.637723
+    ],
+    [
+     32.196296,
+     54.636572
+    ],
+    [
+     32.190296,
+     54.631572
+    ],
+    [
+     32.185297,
+     54.626572
+    ],
+    [
+     32.184569,
+     54.625
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
