@@ -3706,8 +3706,26 @@
    "insideMkad": false
   },
   {
-   "id": "pereslavl-zalesskiy",
+   "id": "kimry",
    "num": 180,
+   "name": "Кимры",
+   "kindNote": "г., деревянный модерн",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.873,
+    "lon": 37.355
+   },
+   "distanceFromKremlinKm": 125.7,
+   "azimuthDeg": 352.7,
+   "ring": 7,
+   "destinationId": "kimry",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "pereslavl-zalesskiy",
+   "num": 181,
    "name": "Переславль-Залесский",
    "kindNote": "г., Плещеево озеро",
    "regionId": "yaroslavskaya-oblast",
@@ -3725,7 +3743,7 @@
   },
   {
    "id": "roshal",
-   "num": 181,
+   "num": 182,
    "name": "Рошаль",
    "kindNote": "г.",
    "regionId": "shatura",
@@ -3743,7 +3761,7 @@
   },
   {
    "id": "svyatoe-ozero-meshchera",
-   "num": 182,
+   "num": 183,
    "name": "Святое озеро (Мещера)",
    "kindNote": "природа",
    "regionId": "shatura",
@@ -3761,7 +3779,7 @@
   },
   {
    "id": "shatura",
-   "num": 183,
+   "num": 184,
    "name": "Шатура",
    "kindNote": "г.",
    "regionId": "shatura",
@@ -3779,7 +3797,7 @@
   },
   {
    "id": "dedinovo",
-   "num": 184,
+   "num": 185,
    "name": "Дединово",
    "kindNote": "с., родина корабля «Орёл»",
    "regionId": "lukhovitsy",
@@ -3797,7 +3815,7 @@
   },
   {
    "id": "beloomut",
-   "num": 185,
+   "num": 186,
    "name": "Белоомут",
    "kindNote": "рп, Ока, шлюз",
    "regionId": "lukhovitsy",
@@ -3815,7 +3833,7 @@
   },
   {
    "id": "lukhovitsy",
-   "num": 186,
+   "num": 187,
    "name": "Луховицы",
    "kindNote": "г.",
    "regionId": "lukhovitsy",
@@ -3833,7 +3851,7 @@
   },
   {
    "id": "zaraysk",
-   "num": 187,
+   "num": 188,
    "name": "Зарайск",
    "kindNote": "г., кремль",
    "regionId": "zaraysk",
@@ -3851,7 +3869,7 @@
   },
   {
    "id": "serebryanye-prudy",
-   "num": 188,
+   "num": 189,
    "name": "Серебряные Пруды",
    "kindNote": "рп",
    "regionId": "serebryanye-prudy",
@@ -3869,7 +3887,7 @@
   },
   {
    "id": "tula",
-   "num": 189,
+   "num": 190,
    "name": "Тула",
    "kindNote": "г., кремль",
    "regionId": "tulskaya-oblast",
@@ -3887,7 +3905,7 @@
   },
   {
    "id": "kaluga",
-   "num": 190,
+   "num": 191,
    "name": "Калуга",
    "kindNote": "г., музей космонавтики",
    "regionId": "kaluzhskaya-oblast",
@@ -3904,8 +3922,26 @@
    "insideMkad": false
   },
   {
+   "id": "staritsa",
+   "num": 192,
+   "name": "Старица",
+   "kindNote": "г., Успенский монастырь",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 3,
+   "coords": {
+    "lat": 56.508,
+    "lon": 34.936
+   },
+   "distanceFromKremlinKm": 186.2,
+   "azimuthDeg": 297.9,
+   "ring": 8,
+   "destinationId": "staritsa",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "tver",
-   "num": 191,
+   "num": 193,
    "name": "Тверь",
    "kindNote": "г., Путевой дворец",
    "regionId": "tverskaya-oblast",
@@ -3923,7 +3959,7 @@
   },
   {
    "id": "kalyazin",
-   "num": 192,
+   "num": 194,
    "name": "Калязин",
    "kindNote": "г., затопленная колокольня",
    "regionId": "tverskaya-oblast",
@@ -3941,7 +3977,7 @@
   },
   {
    "id": "rostov-velikiy",
-   "num": 193,
+   "num": 195,
    "name": "Ростов Великий",
    "kindNote": "г., кремль, озеро Неро",
    "regionId": "yaroslavskaya-oblast",
@@ -3959,7 +3995,7 @@
   },
   {
    "id": "suzdal",
-   "num": 194,
+   "num": 196,
    "name": "Суздаль",
    "kindNote": "г., кремль — ЮНЕСКО",
    "regionId": "vladimirskaya-oblast",
@@ -3977,7 +4013,7 @@
   },
   {
    "id": "vladimir",
-   "num": 195,
+   "num": 197,
    "name": "Владимир",
    "kindNote": "г., Золотые ворота — ЮНЕСКО",
    "regionId": "vladimirskaya-oblast",
@@ -3995,7 +4031,7 @@
   },
   {
    "id": "ryazan",
-   "num": 196,
+   "num": 198,
    "name": "Рязань",
    "kindNote": "г., кремль",
    "regionId": "ryazanskaya-oblast",
@@ -4012,8 +4048,26 @@
    "insideMkad": false
   },
   {
+   "id": "torzhok",
+   "num": 199,
+   "name": "Торжок",
+   "kindNote": "г., Борисоглебский монастырь",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 3,
+   "coords": {
+    "lat": 57.041,
+    "lon": 34.96
+   },
+   "distanceFromKremlinKm": 217.5,
+   "azimuthDeg": 312.3,
+   "ring": 9,
+   "destinationId": "torzhok",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "uglich",
-   "num": 197,
+   "num": 200,
    "name": "Углич",
    "kindNote": "г., кремль на Волге",
    "regionId": "yaroslavskaya-oblast",
@@ -4031,7 +4085,7 @@
   },
   {
    "id": "myshkin",
-   "num": 198,
+   "num": 201,
    "name": "Мышкин",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4049,7 +4103,7 @@
   },
   {
    "id": "rybinsk",
-   "num": 199,
+   "num": 202,
    "name": "Рыбинск",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4067,7 +4121,7 @@
   },
   {
    "id": "tutaev",
-   "num": 200,
+   "num": 203,
    "name": "Тутаев",
    "kindNote": "г., Романов-Борисоглебск",
    "regionId": "yaroslavskaya-oblast",
@@ -4085,7 +4139,7 @@
   },
   {
    "id": "yaroslavl",
-   "num": 201,
+   "num": 204,
    "name": "Ярославль",
    "kindNote": "г., центр — ЮНЕСКО",
    "regionId": "yaroslavskaya-oblast",
