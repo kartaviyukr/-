@@ -1,0 +1,290 @@
+{
+ "id": "krasnoe-na-volge",
+ "name": "Красное-на-Волге",
+ "settlementType": "посёлок",
+ "mustHave": 3,
+ "regionId": "kostromskaya-oblast",
+ "distanceFromKremlinKm": 295.1,
+ "coords": {
+  "lat": 57.512,
+  "lon": 41.232
+ },
+ "intro": [
+  "Красное-на-Волге — традиционный центр русского ювелирного искусства, прославленный ажурной серебряной сканью с жар-птицами, ладьями и тройками.",
+  "Село было вотчиной Годуновых; в центре стоит белокаменная Богоявленская церковь 1592 года.",
+  "Точки маршрута: «Набережная Волги», «Здание ювелирного училища», «Музей ювелирного искусства», «Богоявленская церковь Годуновых». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Красное-на-Волге, центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Красное-на-Волге, центр",
+  "coords": {
+   "lat": 57.512,
+   "lon": 41.232
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Красное-на-Волге, центр",
+  "coords": {
+   "lat": 57.512,
+   "lon": 41.232
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 1.6,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "krasnoe-na-volge-naberezhnaya",
+   "name": "Набережная Волги",
+   "coords": {
+    "lat": 57.514,
+    "lon": 41.23
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Прогулка по набережной Волги завершает знакомство с посёлком.",
+    "Красное было вотчиной Бориса Годунова. Программа включает прогулку по набережной Волги. Следующая точка маршрута — «Здание ювелирного училища». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Программа включает прогулку по набережной Волги.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/activities/84918-krasnoe-na-volge-yuvelirnaya-stolitsa-i-votchina-godunovyh",
+     "verified": true
+    },
+    {
+     "text": "Красное было вотчиной Годуновых.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/activities/84918-krasnoe-na-volge-yuvelirnaya-stolitsa-i-votchina-godunovyh",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnoe-na-volge-uchilishche",
+   "name": "Здание ювелирного училища",
+   "coords": {
+    "lat": 57.513,
+    "lon": 41.237
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Здание ювелирного училища построено по проекту Бенуа.",
+    "Училище — часть ювелирной истории посёлка. Здание ювелирного училища — по проекту Бенуа. Следующая точка маршрута — «Музей ювелирного искусства». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Здание ювелирного училища — по проекту Бенуа.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/activities/84918-krasnoe-na-volge-yuvelirnaya-stolitsa-i-votchina-godunovyh",
+     "verified": true
+    },
+    {
+     "text": "Красное — традиционный центр ювелирного искусства.",
+     "sourceUrl": "https://krasnoe.kostroma.gov.ru/upload/medialibrary/ec6/piwygnk7yqqev93sow5w6lsivwmjisxm/pasport_2024g.doc",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnoe-na-volge-muzey",
+   "name": "Музей ювелирного искусства",
+   "coords": {
+    "lat": 57.511,
+    "lon": 41.235
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Экспозиция рассказывает о трёхвековой истории ювелирного промысла Костромской земли.",
+    "Можно попасть и на мастер-класс; билеты оплачиваются отдельно. Следующая точка маршрута — «Богоявленская церковь Годуновых». Формат остановки — «заходим внутрь», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "Экспозиция — о трёхвековой истории ювелирного промысла.",
+     "sourceUrl": "https://www.culture.ru/events/7010845/nasledie-masterov",
+     "verified": true
+    },
+    {
+     "text": "Красносельский промысел прославился ажурной серебряной сканью.",
+     "sourceUrl": "https://www.culture.ru/events/7010845/nasledie-masterov",
+     "verified": true
+    },
+    {
+     "text": "В программе — музей ювелирного искусства и мастер-класс.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/activities/84918-krasnoe-na-volge-yuvelirnaya-stolitsa-i-votchina-godunovyh",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "krasnoe-na-volge-bogoyavlenskaya",
+   "name": "Богоявленская церковь Годуновых",
+   "coords": {
+    "lat": 57.512,
+    "lon": 41.233
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Стройная белокаменная церковь Богоявления сооружена в 1592 году на средства бояр Годуновых.",
+    "Это шатровый храм XVI века — главная архитектурная точка посёлка. Финиш — Красное-на-Волге, центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Церковь Богоявления построена в 1592 году на средства Годуновых.",
+     "sourceUrl": "https://krasnoe.kostroma.gov.ru/upload/medialibrary/ec6/piwygnk7yqqev93sow5w6lsivwmjisxm/pasport_2024g.doc",
+     "verified": true
+    },
+    {
+     "text": "В посёлке — шатровый храм Годуновых XVI века.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/activities/84918-krasnoe-na-volge-yuvelirnaya-stolitsa-i-votchina-godunovyh",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Красное-на-Волге берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Красное-на-Волге, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "krasnoe-na-volge-title",
+  "name": "Путник: Красное-на-Волге",
+  "legend": "Проехал все свои точки маршрута «Красное-на-Волге» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/kostroma/activities/84918-krasnoe-na-volge-yuvelirnaya-stolitsa-i-votchina-godunovyh"
+  },
+  {
+   "title": "Источник: krasnoe.kostroma.gov.ru",
+   "url": "https://krasnoe.kostroma.gov.ru/upload/medialibrary/ec6/piwygnk7yqqev93sow5w6lsivwmjisxm/pasport_2024g.doc"
+  },
+  {
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/events/7010845/nasledie-masterov"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     41.224146,
+     57.514
+    ],
+    [
+     41.22493,
+     57.512428
+    ],
+    [
+     41.226931,
+     57.510428
+    ],
+    [
+     41.229073,
+     57.509277
+    ],
+    [
+     41.232073,
+     57.508277
+    ],
+    [
+     41.235,
+     57.507856
+    ],
+    [
+     41.237927,
+     57.508277
+    ],
+    [
+     41.240069,
+     57.509428
+    ],
+    [
+     41.242069,
+     57.511428
+    ],
+    [
+     41.242854,
+     57.513
+    ],
+    [
+     41.242069,
+     57.514572
+    ],
+    [
+     41.239927,
+     57.515723
+    ],
+    [
+     41.237,
+     57.516144
+    ],
+    [
+     41.23,
+     57.517144
+    ],
+    [
+     41.227073,
+     57.516723
+    ],
+    [
+     41.22493,
+     57.515572
+    ],
+    [
+     41.224146,
+     57.514
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
