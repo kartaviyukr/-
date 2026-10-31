@@ -1,0 +1,286 @@
+{
+ "id": "konstantinovo-esenin",
+ "name": "Константиново (Есенин)",
+ "settlementType": "село",
+ "mustHave": 3,
+ "regionId": "ryazanskaya-oblast",
+ "distanceFromKremlinKm": 161.6,
+ "coords": {
+  "lat": 54.831,
+  "lon": 39.592
+ },
+ "intro": [
+  "Константиново на высоком берегу Оки — родина Сергея Есенина: здесь 3 октября 1895 года он родился в крестьянской избе.",
+  "Музей открыли в 1965 году, к 70-летию поэта; сейчас музей-заповедник принимает около 400 тысяч гостей в год.",
+  "Точки маршрута: «Родительский дом Есенина», «Земская школа», «Церковь Казанской иконы», «Дом Кашиной — музей «Анны Снегиной»». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 1 км: старт и финиш — Константиново (Есенин), центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Константиново (Есенин), центр",
+  "coords": {
+   "lat": 54.831,
+   "lon": 39.592
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Константиново (Есенин), центр",
+  "coords": {
+   "lat": 54.831,
+   "lon": 39.592
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 1.2,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "konstantinovo-esenin-roditelskiy-dom",
+   "name": "Родительский дом Есенина",
+   "coords": {
+    "lat": 54.831,
+    "lon": 39.592
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Родительский дом — центральный объект музея-заповедника.",
+    "Источники спорят, какой дом сохранился: по одной версии, дом с мезонином построил отец поэта в начале XX века, по другой — дом, где родился Есенин, не дошёл до нас. Следующая точка маршрута — «Земская школа»."
+   ],
+   "facts": [
+    {
+     "text": "Родительский дом — центральный объект музея.",
+     "sourceUrl": "https://www.sputnik8.com/ru/ryazan/sights/muzey-esenina/info",
+     "verified": true
+    },
+    {
+     "text": "Есенин родился 3 октября 1895 года.",
+     "sourceUrl": "https://www.sputnik8.com/ru/ryazan/sights/muzey-esenina/info",
+     "verified": true
+    },
+    {
+     "text": "Дом, построенный дедом, не сохранился.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/selo-konstantinovo-chto-smotret-na-rodine-esenina/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "konstantinovo-esenin-shkola",
+   "name": "Земская школа",
+   "coords": {
+    "lat": 54.8304,
+    "lon": 39.5899
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Земская школа входит в музейный комплекс вместе с родительским домом и домом Кашиной.",
+    "Школа — одна из главных точек музея-заповедника Есенина. Следующая точка маршрута — «Церковь Казанской иконы». Формат остановки — «заходим внутрь», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Земская школа входит в музейный комплекс.",
+     "sourceUrl": "https://www.culture.ru/themes/257385/5-usadeb-pisatelei-v-kotorye-stoit-sezdit-osenyu",
+     "verified": true
+    },
+    {
+     "text": "Музей открыт в 1965 году к 70-летию Есенина.",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/selo-konstantinovo-chto-smotret-na-rodine-esenina/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "konstantinovo-esenin-kazanskaya",
+   "name": "Церковь Казанской иконы",
+   "coords": {
+    "lat": 54.8318,
+    "lon": 39.5946
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "В церкви Казанской иконы Божией Матери крестили будущего поэта.",
+    "Рядом — дом священника, тоже часть музейного комплекса. Следующая точка маршрута — «Дом Кашиной — музей «Анны Снегиной»». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Есенина крестили в Казанской церкви.",
+     "sourceUrl": "https://www.culture.ru/themes/257385/5-usadeb-pisatelei-v-kotorye-stoit-sezdit-osenyu",
+     "verified": true
+    },
+    {
+     "text": "Дом священника входит в музейный комплекс.",
+     "sourceUrl": "https://www.culture.ru/themes/257385/5-usadeb-pisatelei-v-kotorye-stoit-sezdit-osenyu",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "konstantinovo-esenin-kashina",
+   "name": "Дом Кашиной — музей «Анны Снегиной»",
+   "coords": {
+    "lat": 54.8322,
+    "lon": 39.5962
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В доме помещицы Кашиной работает музей одной поэмы — «Анна Снегина».",
+    "Музей одной поэмы — редкость, ради него стоит зайти внутрь. Финиш — Константиново (Есенин), центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "В доме Кашиной — музей поэмы «Анна Снегина».",
+     "sourceUrl": "https://experience.tripster.ru/journal/articles/selo-konstantinovo-chto-smotret-na-rodine-esenina/",
+     "verified": true
+    },
+    {
+     "text": "Дом помещицы Кашиной входит в комплекс.",
+     "sourceUrl": "https://www.culture.ru/themes/257385/5-usadeb-pisatelei-v-kotorye-stoit-sezdit-osenyu",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Константиново (Есенин) берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Константиново (Есенин), центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "konstantinovo-esenin-title",
+  "name": "Путник: Константиново (Есенин)",
+  "legend": "Проехал все свои точки маршрута «Константиново (Есенин)» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/ryazan/sights/muzey-esenina/info"
+  },
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/journal/articles/selo-konstantinovo-chto-smotret-na-rodine-esenina/"
+  },
+  {
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/themes/257385/5-usadeb-pisatelei-v-kotorye-stoit-sezdit-osenyu"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     39.584441,
+     54.8304
+    ],
+    [
+     39.585173,
+     54.828828
+    ],
+    [
+     39.587171,
+     54.827677
+    ],
+    [
+     39.5899,
+     54.827256
+    ],
+    [
+     39.592629,
+     54.827677
+    ],
+    [
+     39.598929,
+     54.829477
+    ],
+    [
+     39.600927,
+     54.830628
+    ],
+    [
+     39.601659,
+     54.8322
+    ],
+    [
+     39.600927,
+     54.833772
+    ],
+    [
+     39.598929,
+     54.834923
+    ],
+    [
+     39.5962,
+     54.835344
+    ],
+    [
+     39.593471,
+     54.834923
+    ],
+    [
+     39.591871,
+     54.834523
+    ],
+    [
+     39.587171,
+     54.833123
+    ],
+    [
+     39.585173,
+     54.831972
+    ],
+    [
+     39.584441,
+     54.8304
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
