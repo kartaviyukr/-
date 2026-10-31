@@ -136,7 +136,7 @@ class OfflineMaps @Inject constructor(@ApplicationContext private val context: C
 
     companion object {
         const val OBLAST_KEY = "oblast"
-        val OBLAST_SOUTH_WEST = GeoPoint(53.9, 34.8)
-        val OBLAST_NORTH_EAST = GeoPoint(58.3, 41.0)
+        val OBLAST_SOUTH_WEST = GeoPoint(52.5, 31.5)
+        val OBLAST_NORTH_EAST = GeoPoint(59.0, 43.5)
     }
 }

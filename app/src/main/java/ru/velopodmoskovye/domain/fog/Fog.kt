@@ -17,9 +17,9 @@ data class Zone(val id: String, val ring: List<GeoPoint>, val level: Level) {
  * пересекающиеся зоны сливаются в общую выпуклую оболочку.
  */
 object Fog {
-    /** Охват Москвы, области и соседних городов спирали (Ярославль, Рыбинск, Тверь, Тула, Рязань, Владимир) с запасом. */
+    /** Охват Москвы, области и внешних колец спирали (от Смоленска до Мурома, от Орла до Пошехонья) с запасом. */
     val OBLAST_BOUNDS = listOf(
-        GeoPoint(53.9, 34.8), GeoPoint(53.9, 41.0), GeoPoint(58.3, 41.0), GeoPoint(58.3, 34.8),
+        GeoPoint(52.5, 31.5), GeoPoint(52.5, 43.5), GeoPoint(59.0, 43.5), GeoPoint(59.0, 31.5),
     )
 
     fun mergeOverlapping(zones: List<List<GeoPoint>>): List<List<GeoPoint>> {

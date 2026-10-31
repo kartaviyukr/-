@@ -4102,8 +4102,26 @@
    "insideMkad": false
   },
   {
-   "id": "torzhok",
+   "id": "ostashkov",
    "num": 202,
+   "name": "Осташков",
+   "kindNote": "г., Селигер",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 3,
+   "coords": {
+    "lat": 57.145,
+    "lon": 33.112
+   },
+   "distanceFromKremlinKm": 317.2,
+   "azimuthDeg": 301.1,
+   "ring": 9,
+   "destinationId": "ostashkov",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "torzhok",
+   "num": 203,
    "name": "Торжок",
    "kindNote": "г., Борисоглебский монастырь",
    "regionId": "tverskaya-oblast",
@@ -4121,7 +4139,7 @@
   },
   {
    "id": "vyshniy-volochek",
-   "num": 203,
+   "num": 204,
    "name": "Вышний Волочёк",
    "kindNote": "г., каналы",
    "regionId": "tverskaya-oblast",
@@ -4139,7 +4157,7 @@
   },
   {
    "id": "bezhetsk",
-   "num": 204,
+   "num": 205,
    "name": "Бежецк",
    "kindNote": "г., Гумилёвы",
    "regionId": "tverskaya-oblast",
@@ -4156,8 +4174,26 @@
    "insideMkad": false
   },
   {
+   "id": "krasnyy-kholm",
+   "num": 206,
+   "name": "Красный Холм",
+   "kindNote": "г.",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 58.058,
+    "lon": 37.118
+   },
+   "distanceFromKremlinKm": 258.2,
+   "azimuthDeg": 353.5,
+   "ring": 9,
+   "destinationId": "krasnyy-kholm",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "uglich",
-   "num": 205,
+   "num": 207,
    "name": "Углич",
    "kindNote": "г., кремль на Волге",
    "regionId": "yaroslavskaya-oblast",
@@ -4175,7 +4211,7 @@
   },
   {
    "id": "myshkin",
-   "num": 206,
+   "num": 208,
    "name": "Мышкин",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4193,7 +4229,7 @@
   },
   {
    "id": "rybinsk",
-   "num": 207,
+   "num": 209,
    "name": "Рыбинск",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4211,7 +4247,7 @@
   },
   {
    "id": "tutaev",
-   "num": 208,
+   "num": 210,
    "name": "Тутаев",
    "kindNote": "г., Романов-Борисоглебск",
    "regionId": "yaroslavskaya-oblast",
@@ -4229,7 +4265,7 @@
   },
   {
    "id": "yaroslavl",
-   "num": 209,
+   "num": 211,
    "name": "Ярославль",
    "kindNote": "г., центр — ЮНЕСКО",
    "regionId": "yaroslavskaya-oblast",
