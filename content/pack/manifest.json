@@ -192,8 +192,7 @@
     "beloomut.json",
     "lukhovitsy.json",
     "zaraysk.json",
-    "serebryanye-prudy.json",
-    "tula.json",
+    "aleksin.json",
     "kaluga.json",
     "polotnyanyy-zavod.json",
     "nikola-lenivets.json",
@@ -209,6 +208,11 @@
     "suzdal.json",
     "vladimir.json",
     "ryazan.json",
+    "serebryanye-prudy.json",
+    "venev.json",
+    "tula.json",
+    "krapivna.json",
+    "belev.json",
     "kozelsk.json",
     "smolensk.json",
     "vyazma.json",
@@ -222,6 +226,7 @@
     "myshkin.json",
     "rybinsk.json",
     "tutaev.json",
-    "yaroslavl.json"
+    "yaroslavl.json",
+    "bogoroditsk.json"
   ]
 }
