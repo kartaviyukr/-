@@ -1,0 +1,285 @@
+{
+ "id": "kostroma",
+ "name": "Кострома",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "kostromskaya-oblast",
+ "distanceFromKremlinKm": 301.4,
+ "coords": {
+  "lat": 57.767,
+  "lon": 40.927
+ },
+ "intro": [
+  "Кострома — старинный город на Волге; её Ипатьевский монастырь называют колыбелью династии Романовых.",
+  "Центр города собран вокруг Сусанинской площади с пожарной каланчой и торговыми рядами.",
+  "Точки маршрута: «Богоявленско-Анастасиин монастырь», «Торговые ряды», «Пожарная каланча на Сусанинской площади», «Ипатьевский монастырь». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 13 км: старт и финиш — Вокзал Кострома (Поезда с Ярославского вокзала). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Вокзал Кострома",
+  "coords": {
+   "lat": 57.7505,
+   "lon": 40.951
+  },
+  "transport": "Поезда с Ярославского вокзала"
+ },
+ "endPoint": {
+  "name": "Вокзал Кострома",
+  "coords": {
+   "lat": 57.7505,
+   "lon": 40.951
+  },
+  "transport": "Поезда с Ярославского вокзала"
+ },
+ "route": {
+  "distanceKm": 13.2,
+  "durationH": 2.2,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "kostroma-anastasiin",
+   "name": "Богоявленско-Анастасиин монастырь",
+   "coords": {
+    "lat": 57.7642,
+    "lon": 40.9312
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Богоявленско-Анастасиин монастырь — один из самых впечатляющих ансамблей Костромы, настоящий «город в городе».",
+    "Монастырь стоит в центре — в нескольких минутах от Сусанинской площади. Следующая точка маршрута — «Торговые ряды». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь — «город в городе».",
+     "sourceUrl": "https://www.gazeta.ru/style/20068633/chto-posmotret-v-kostrome-dostoprimechatelnosti.shtml",
+     "verified": true
+    },
+    {
+     "text": "Это один из самых впечатляющих ансамблей Костромы.",
+     "sourceUrl": "https://www.gazeta.ru/style/20068633/chto-posmotret-v-kostrome-dostoprimechatelnosti.shtml",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "kostroma-ryady",
+   "name": "Торговые ряды",
+   "coords": {
+    "lat": 57.7672,
+    "lon": 40.9282
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Торговые ряды XVIII века входят во все маршруты по центру Костромы.",
+    "В торговых рядах удобно купить еды в дорогу перед Ипатьевским монастырём. Следующая точка маршрута — «Пожарная каланча на Сусанинской площади». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Торговые ряды относят к XVIII веку.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/activities/85533-kostroma-avtomobilnaya-retro-tur-vechernyaya-ekskursiya-i-ipatevskiy-monasty",
+     "verified": true
+    },
+    {
+     "text": "Ряды входят в маршруты по центру.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/activities/85533-kostroma-avtomobilnaya-retro-tur-vechernyaya-ekskursiya-i-ipatevskiy-monasty",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kostroma-kalancha",
+   "name": "Пожарная каланча на Сусанинской площади",
+   "coords": {
+    "lat": 57.7681,
+    "lon": 40.9262
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Пожарная каланча — самый узнаваемый силуэт Костромы; она стоит в центре Сусанинской площади.",
+    "Площадь в 1835 году переименовали из Екатеринославской в Сусанинскую. Следующая точка маршрута — «Ипатьевский монастырь». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Каланча — самый узнаваемый силуэт Костромы.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/sights",
+     "verified": true
+    },
+    {
+     "text": "В 1835 году площадь переименовали в Сусанинскую.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kostroma/sights",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "kostroma-ipatievskiy",
+   "name": "Ипатьевский монастырь",
+   "coords": {
+    "lat": 57.779,
+    "lon": 40.8892
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 60,
+   "guideStory": [
+    "Свято-Троицкий Ипатьевский монастырь сыграл большую роль в Смутное время; при Романовых он стал их фамильной святыней.",
+    "Ипатьевский монастырь называют колыбелью династии Романовых. Финиш — Вокзал Кострома: Поезда с Ярославского вокзала."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь сыграл большую роль в Смутное время.",
+     "sourceUrl": "https://www.gazeta.ru/style/20068633/chto-posmotret-v-kostrome-dostoprimechatelnosti.shtml",
+     "verified": true
+    },
+    {
+     "text": "При Романовых монастырь стал фамильной святыней.",
+     "sourceUrl": "https://www.gazeta.ru/style/20068633/chto-posmotret-v-kostrome-dostoprimechatelnosti.shtml",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Кострома берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Кострома, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "kostroma-title",
+  "name": "Путник: Кострома",
+  "legend": "Проехал все свои точки маршрута «Кострома» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: gazeta.ru",
+   "url": "https://www.gazeta.ru/style/20068633/chto-posmotret-v-kostrome-dostoprimechatelnosti.shtml"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/kostroma/activities/85533-kostroma-avtomobilnaya-retro-tur-vechernyaya-ekskursiya-i-ipatevskiy-monasty"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/kostroma/sights"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     40.883303,
+     57.779
+    ],
+    [
+     40.884093,
+     57.777428
+    ],
+    [
+     40.886252,
+     57.776277
+    ],
+    [
+     40.948054,
+     57.747777
+    ],
+    [
+     40.951,
+     57.747356
+    ],
+    [
+     40.953946,
+     57.747777
+    ],
+    [
+     40.956103,
+     57.748928
+    ],
+    [
+     40.956892,
+     57.7505
+    ],
+    [
+     40.956103,
+     57.752072
+    ],
+    [
+     40.933305,
+     57.768772
+    ],
+    [
+     40.931147,
+     57.769923
+    ],
+    [
+     40.929148,
+     57.770823
+    ],
+    [
+     40.892148,
+     57.781723
+    ],
+    [
+     40.8892,
+     57.782144
+    ],
+    [
+     40.886252,
+     57.781723
+    ],
+    [
+     40.884093,
+     57.780572
+    ],
+    [
+     40.883303,
+     57.779
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
