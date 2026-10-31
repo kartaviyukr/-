@@ -154,6 +154,7 @@
     "krivyakino.json",
     "prioksko-terrasnyy-zapovednik.json",
     "serpukhov.json",
+    "zhukov.json",
     "obninsk.json",
     "borovsk.json",
     "dorokhovo.json",
@@ -225,7 +226,10 @@
     "venev.json",
     "novomoskovsk.json",
     "tula.json",
+    "peremyshl.json",
     "kaluga.json",
+    "meshchovsk.json",
+    "lyudinovo.json",
     "roslavl.json",
     "elnya.json",
     "dorogobuzh.json",
@@ -285,6 +289,7 @@
     "bolkhov.json",
     "belev.json",
     "chekalin.json",
+    "shamordino.json",
     "kozelsk.json"
   ]
 }
