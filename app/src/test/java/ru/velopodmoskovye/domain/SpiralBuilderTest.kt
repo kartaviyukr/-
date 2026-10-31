@@ -43,7 +43,9 @@ class SpiralBuilderTest {
         nodes.zipWithNext().forEach { (a, b) -> assertTrue("${a.item.name} → ${b.item.name}", a.ring <= b.ring) }
         assertEquals(SpiralBuilder.INSIDE_MKAD_RING, nodes.first().ring)
         assertEquals(SpiralBuilder.RING_NAMES.lastIndex, nodes.last().ring)
-        assertEquals("Ярославль", nodes.last().item.name)
+        // Последним идёт место внешнего кольца, до которого дальше всех по часовой стрелке от входа в кольцо.
+        val outer = nodes.filter { it.ring == nodes.last().ring }
+        assertEquals(outer.last().item.name, nodes.last().item.name)
         // Первым после ЦАО — ближайший к Кремлю округ.
         assertEquals(rows.filter { it.insideMkad && !it.isStart }.minBy { Geo.distanceKm(Geo.KREMLIN, it.point) }.name, nodes.first().item.name)
     }
