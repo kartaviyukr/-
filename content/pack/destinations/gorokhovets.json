@@ -1,0 +1,293 @@
+{
+ "id": "gorokhovets",
+ "name": "Гороховец",
+ "settlementType": "город",
+ "mustHave": 2,
+ "regionId": "vladimirskaya-oblast",
+ "distanceFromKremlinKm": 319.6,
+ "coords": {
+  "lat": 56.202,
+  "lon": 42.692
+ },
+ "intro": [
+  "Гороховец основан, по одной из версий, в 1168 году Андреем Боголюбским; наибольшего расцвета город достиг при Петре I.",
+  "Здесь сохранились каменные купеческие палаты XVII века — редкость для провинциального города.",
+  "Точки маршрута: «Никольский монастырь на Пужаловой горе», «Палаты и музей купечества в доме Ершова», «Благовещенский собор», «Набережная Клязьмы». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Гороховец, центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Гороховец, центр",
+  "coords": {
+   "lat": 56.202,
+   "lon": 42.692
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Гороховец, центр",
+  "coords": {
+   "lat": 56.202,
+   "lon": 42.692
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 2.6,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "gorokhovets-nikolskiy",
+   "name": "Никольский монастырь на Пужаловой горе",
+   "coords": {
+    "lat": 56.199,
+    "lon": 42.6878
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Свято-Троицкий Никольский монастырь стоит на Пужаловой горе, и его видно из всех частей города; постройку относят ко второй четверти XVII века.",
+    "По другой версии, обитель основали по указу Михаила Романова, но её постройки вскоре сгорели."
+   ],
+   "facts": [
+    {
+     "text": "Монастырь стоит на Пужаловой горе и виден со всех частей города.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Gorokhovets/",
+     "verified": true
+    },
+    {
+     "text": "Обитель основана в XVII веке по указу Михаила Романова.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/gorohovets/history",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorokhovets-ershov",
+   "name": "Палаты и музей купечества в доме Ершова",
+   "coords": {
+    "lat": 56.2021,
+    "lon": 42.6931
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В Гороховце сохранились каменные купеческие палаты XVII века; в доме Ершова работает музей купечества с интерактивной экспозицией.",
+    "Экспозиция рассчитана и на детей — удобно для семейной поездки. Следующая точка маршрута — «Благовещенский собор»."
+   ],
+   "facts": [
+    {
+     "text": "В городе сохранились каменные палаты XVII века.",
+     "sourceUrl": "https://www.putevka.com/blog/luchshie-dostoprimechatelnosti-gorokhovtsa:-samostoyatelnye-progulki-i",
+     "verified": true
+    },
+    {
+     "text": "Музей купечества в доме Ершова — интерактивная экспозиция для детей.",
+     "sourceUrl": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-gorohovtse/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorokhovets-blagoveshchenskiy",
+   "name": "Благовещенский собор",
+   "coords": {
+    "lat": 56.2026,
+    "lon": 42.6952
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Благовещенский собор называют главным православным храмом Гороховца; одна из дат его основания — 1700 год.",
+    "Он стоит в старом центре среди купеческих палат. Следующая точка маршрута — «Набережная Клязьмы». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Благовещенский собор — главный храм города.",
+     "sourceUrl": "https://www.sputnik8.com/ru/gorokhovets/activities/36810-obzornaya-ekskursiya-po-gorohovtsu",
+     "verified": true
+    },
+    {
+     "text": "Собор основан в 1700 году.",
+     "sourceUrl": "https://www.putevka.com/blog/luchshie-dostoprimechatelnosti-gorokhovtsa:-samostoyatelnye-progulki-i",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "gorokhovets-klyazma",
+   "name": "Набережная Клязьмы",
+   "coords": {
+    "lat": 56.2052,
+    "lon": 42.6982
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Путеводители советуют прогулку по набережной Клязьмы и виды на реку.",
+    "Для прогулки подходит и Лысая гора над городом. Финиш — Гороховец, центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Путеводители советуют набережную Клязьмы.",
+     "sourceUrl": "https://www.putevka.com/blog/luchshie-dostoprimechatelnosti-gorokhovtsa:-samostoyatelnye-progulki-i",
+     "verified": true
+    },
+    {
+     "text": "Лысая гора — место для прогулок.",
+     "sourceUrl": "https://www.putevka.com/blog/luchshie-dostoprimechatelnosti-gorokhovtsa:-samostoyatelnye-progulki-i",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Гороховец берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Гороховец, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "gorokhovets-title",
+  "name": "Путник: Гороховец",
+  "legend": "Проехал все свои точки маршрута «Гороховец» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/attractions/Gorokhovets/"
+  },
+  {
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/gorohovets/history"
+  },
+  {
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/blog/luchshie-dostoprimechatelnosti-gorokhovtsa:-samostoyatelnye-progulki-i"
+  },
+  {
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/blog/kuda-shodit-s-detmi-v-gorohovtse/"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/gorokhovets/activities/36810-obzornaya-ekskursiya-po-gorohovtsu"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     42.682148,
+     56.199
+    ],
+    [
+     42.682905,
+     56.197428
+    ],
+    [
+     42.684974,
+     56.196277
+    ],
+    [
+     42.6878,
+     56.195856
+    ],
+    [
+     42.690626,
+     56.196277
+    ],
+    [
+     42.698026,
+     56.199877
+    ],
+    [
+     42.700095,
+     56.201028
+    ],
+    [
+     42.703095,
+     56.203628
+    ],
+    [
+     42.703853,
+     56.2052
+    ],
+    [
+     42.703095,
+     56.206772
+    ],
+    [
+     42.701026,
+     56.207923
+    ],
+    [
+     42.6982,
+     56.208344
+    ],
+    [
+     42.695374,
+     56.207923
+    ],
+    [
+     42.689174,
+     56.204723
+    ],
+    [
+     42.687105,
+     56.203572
+    ],
+    [
+     42.682905,
+     56.200572
+    ],
+    [
+     42.682148,
+     56.199
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

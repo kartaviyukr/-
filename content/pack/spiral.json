@@ -4780,8 +4780,98 @@
    "insideMkad": false
   },
   {
-   "id": "murom",
+   "id": "kovrov",
    "num": 239,
+   "name": "Ковров",
+   "kindNote": "г., Дегтярёв",
+   "regionId": "vladimirskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.357,
+    "lon": 41.317
+   },
+   "distanceFromKremlinKm": 239.3,
+   "azimuthDeg": 72.1,
+   "ring": 9,
+   "destinationId": "kovrov",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "mstera",
+   "num": 240,
+   "name": "Мстёра",
+   "kindNote": "посёлок, лаковая миниатюра",
+   "regionId": "vladimirskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.372,
+    "lon": 41.926
+   },
+   "distanceFromKremlinKm": 276.1,
+   "azimuthDeg": 73.8,
+   "ring": 9,
+   "destinationId": "mstera",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "vyazniki",
+   "num": 241,
+   "name": "Вязники",
+   "kindNote": "г., льняной промысел",
+   "regionId": "vladimirskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.245,
+    "lon": 42.158
+   },
+   "distanceFromKremlinKm": 287.5,
+   "azimuthDeg": 77.1,
+   "ring": 9,
+   "destinationId": "vyazniki",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "gorokhovets",
+   "num": 242,
+   "name": "Гороховец",
+   "kindNote": "г., купеческие палаты",
+   "regionId": "vladimirskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.202,
+    "lon": 42.692
+   },
+   "distanceFromKremlinKm": 319.6,
+   "azimuthDeg": 78.9,
+   "ring": 9,
+   "destinationId": "gorokhovets",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "sudogda",
+   "num": 243,
+   "name": "Судогда",
+   "kindNote": "г., замок Храповицкого",
+   "regionId": "vladimirskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.95,
+    "lon": 40.857
+   },
+   "distanceFromKremlinKm": 203.4,
+   "azimuthDeg": 82.4,
+   "ring": 9,
+   "destinationId": "sudogda",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "murom",
+   "num": 244,
    "name": "Муром",
    "kindNote": "г., Пётр и Феврония, Илья Муромец",
    "regionId": "vladimirskaya-oblast",
@@ -4799,7 +4889,7 @@
   },
   {
    "id": "kasimov",
-   "num": 240,
+   "num": 245,
    "name": "Касимов",
    "kindNote": "г., ханская мечеть",
    "regionId": "ryazanskaya-oblast",
@@ -4817,7 +4907,7 @@
   },
   {
    "id": "skopin",
-   "num": 241,
+   "num": 246,
    "name": "Скопин",
    "kindNote": "г., гончарный промысел",
    "regionId": "ryazanskaya-oblast",
@@ -4835,7 +4925,7 @@
   },
   {
    "id": "kulikovo-pole",
-   "num": 242,
+   "num": 247,
    "name": "Куликово поле",
    "kindNote": "мемориал 1380 года",
    "regionId": "tulskaya-oblast",
@@ -4853,7 +4943,7 @@
   },
   {
    "id": "bogoroditsk",
-   "num": 243,
+   "num": 248,
    "name": "Богородицк",
    "kindNote": "г., дворец Бобринских",
    "regionId": "tulskaya-oblast",
@@ -4871,7 +4961,7 @@
   },
   {
    "id": "efremov",
-   "num": 244,
+   "num": 249,
    "name": "Ефремов",
    "kindNote": "г., Бунин",
    "regionId": "tulskaya-oblast",
