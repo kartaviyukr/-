@@ -5212,8 +5212,62 @@
    "insideMkad": false
   },
   {
-   "id": "skopin",
+   "id": "staraya-ryazan",
    "num": 262,
+   "name": "Старая Рязань",
+   "kindNote": "городище, заповедник",
+   "regionId": "ryazanskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 54.475,
+    "lon": 40.42
+   },
+   "distanceFromKremlinKm": 227.8,
+   "azimuthDeg": 127.4,
+   "ring": 9,
+   "destinationId": "staraya-ryazan",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "pronsk",
+   "num": 263,
+   "name": "Пронск",
+   "kindNote": "посёлок, древняя крепость",
+   "regionId": "ryazanskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.119,
+    "lon": 39.61
+   },
+   "distanceFromKremlinKm": 221.7,
+   "azimuthDeg": 144.2,
+   "ring": 9,
+   "destinationId": "pronsk",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "ryazhsk",
+   "num": 264,
+   "name": "Ряжск",
+   "kindNote": "г., город-крепость",
+   "regionId": "ryazanskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 53.708,
+    "lon": 40.068
+   },
+   "distanceFromKremlinKm": 276.4,
+   "azimuthDeg": 144.3,
+   "ring": 9,
+   "destinationId": "ryazhsk",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "skopin",
+   "num": 265,
    "name": "Скопин",
    "kindNote": "г., гончарный промысел",
    "regionId": "ryazanskaya-oblast",
@@ -5231,7 +5285,7 @@
   },
   {
    "id": "lipetsk",
-   "num": 263,
+   "num": 266,
    "name": "Липецк",
    "kindNote": "г., курорт Петра I",
    "regionId": "lipetskaya-oblast",
@@ -5249,7 +5303,7 @@
   },
   {
    "id": "lebedyan",
-   "num": 264,
+   "num": 267,
    "name": "Лебедянь",
    "kindNote": "г., Замятин",
    "regionId": "lipetskaya-oblast",
@@ -5267,7 +5321,7 @@
   },
   {
    "id": "kulikovo-pole",
-   "num": 265,
+   "num": 268,
    "name": "Куликово поле",
    "kindNote": "мемориал 1380 года",
    "regionId": "tulskaya-oblast",
@@ -5285,7 +5339,7 @@
   },
   {
    "id": "elets",
-   "num": 266,
+   "num": 269,
    "name": "Елец",
    "kindNote": "г., кружево и Бунин",
    "regionId": "lipetskaya-oblast",
@@ -5303,7 +5357,7 @@
   },
   {
    "id": "bogoroditsk",
-   "num": 267,
+   "num": 270,
    "name": "Богородицк",
    "kindNote": "г., дворец Бобринских",
    "regionId": "tulskaya-oblast",
@@ -5321,7 +5375,7 @@
   },
   {
    "id": "efremov",
-   "num": 268,
+   "num": 271,
    "name": "Ефремов",
    "kindNote": "г., Бунин",
    "regionId": "tulskaya-oblast",
@@ -5339,7 +5393,7 @@
   },
   {
    "id": "krapivna",
-   "num": 269,
+   "num": 272,
    "name": "Крапивна",
    "kindNote": "село-музей",
    "regionId": "tulskaya-oblast",
@@ -5357,7 +5411,7 @@
   },
   {
    "id": "spasskoe-lutovinovo",
-   "num": 270,
+   "num": 273,
    "name": "Спасское-Лутовиново",
    "kindNote": "усадьба Тургенева",
    "regionId": "orlovskaya-oblast",
@@ -5375,7 +5429,7 @@
   },
   {
    "id": "mtsensk",
-   "num": 271,
+   "num": 274,
    "name": "Мценск",
    "kindNote": "г., Зуша",
    "regionId": "orlovskaya-oblast",
@@ -5393,7 +5447,7 @@
   },
   {
    "id": "odoev",
-   "num": 272,
+   "num": 275,
    "name": "Одоев",
    "kindNote": "посёлок, засечная черта",
    "regionId": "tulskaya-oblast",
@@ -5411,7 +5465,7 @@
   },
   {
    "id": "orel",
-   "num": 273,
+   "num": 276,
    "name": "Орёл",
    "kindNote": "г., литературная столица",
    "regionId": "orlovskaya-oblast",
@@ -5429,7 +5483,7 @@
   },
   {
    "id": "bolkhov",
-   "num": 274,
+   "num": 277,
    "name": "Болхов",
    "kindNote": "г., «орловский Суздаль»",
    "regionId": "orlovskaya-oblast",
@@ -5447,7 +5501,7 @@
   },
   {
    "id": "belev",
-   "num": 275,
+   "num": 278,
    "name": "Белёв",
    "kindNote": "г., пастила",
    "regionId": "tulskaya-oblast",
@@ -5465,7 +5519,7 @@
   },
   {
    "id": "chekalin",
-   "num": 276,
+   "num": 279,
    "name": "Чекалин",
    "kindNote": "самый маленький город",
    "regionId": "tulskaya-oblast",
@@ -5483,7 +5537,7 @@
   },
   {
    "id": "kozelsk",
-   "num": 277,
+   "num": 280,
    "name": "Козельск",
    "kindNote": "г., Оптина пустынь",
    "regionId": "kaluzhskaya-oblast",
