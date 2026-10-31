@@ -3484,8 +3484,26 @@
    "insideMkad": false
   },
   {
-   "id": "kolomna",
+   "id": "petushki",
    "num": 166,
+   "name": "Петушки",
+   "kindNote": "г., «Москва — Петушки»",
+   "regionId": "vladimirskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 55.93,
+    "lon": 39.46
+   },
+   "distanceFromKremlinKm": 116.7,
+   "azimuthDeg": 79.5,
+   "ring": 6,
+   "destinationId": "petushki",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kolomna",
+   "num": 167,
    "name": "Коломна",
    "kindNote": "г., кремль",
    "regionId": "kolomna",
@@ -3503,7 +3521,7 @@
   },
   {
    "id": "bobrenev-monastyr",
-   "num": 167,
+   "num": 168,
    "name": "Бобренев монастырь",
    "kindNote": "монастырь",
    "regionId": "kolomna",
@@ -3521,7 +3539,7 @@
   },
   {
    "id": "ozery",
-   "num": 168,
+   "num": 169,
    "name": "Озёры",
    "kindNote": "г.",
    "regionId": "kolomna",
@@ -3539,7 +3557,7 @@
   },
   {
    "id": "ozherele",
-   "num": 169,
+   "num": 170,
    "name": "Ожерелье",
    "kindNote": "мкр Каширы",
    "regionId": "kashira",
@@ -3557,7 +3575,7 @@
   },
   {
    "id": "kashira",
-   "num": 170,
+   "num": 171,
    "name": "Кашира",
    "kindNote": "г.",
    "regionId": "kashira",
@@ -3575,7 +3593,7 @@
   },
   {
    "id": "stupino",
-   "num": 171,
+   "num": 172,
    "name": "Ступино",
    "kindNote": "г.",
    "regionId": "stupino",
@@ -3593,7 +3611,7 @@
   },
   {
    "id": "belopesotskiy-monastyr",
-   "num": 172,
+   "num": 173,
    "name": "Белопесоцкий монастырь",
    "kindNote": "монастырь",
    "regionId": "stupino",
@@ -3611,7 +3629,7 @@
   },
   {
    "id": "pushchino",
-   "num": 173,
+   "num": 174,
    "name": "Пущино",
    "kindNote": "г.",
    "regionId": "serpukhov",
@@ -3629,7 +3647,7 @@
   },
   {
    "id": "tarusa",
-   "num": 174,
+   "num": 175,
    "name": "Таруса",
    "kindNote": "г., Ока",
    "regionId": "kaluzhskaya-oblast",
@@ -3647,7 +3665,7 @@
   },
   {
    "id": "protvino",
-   "num": 175,
+   "num": 176,
    "name": "Протвино",
    "kindNote": "г.",
    "regionId": "serpukhov",
@@ -3665,7 +3683,7 @@
   },
   {
    "id": "maloyaroslavets",
-   "num": 176,
+   "num": 177,
    "name": "Малоярославец",
    "kindNote": "г., поле 1812 года",
    "regionId": "kaluzhskaya-oblast",
@@ -3683,7 +3701,7 @@
   },
   {
    "id": "vereya",
-   "num": 177,
+   "num": 178,
    "name": "Верея",
    "kindNote": "г.",
    "regionId": "naro-fominskiy",
@@ -3701,7 +3719,7 @@
   },
   {
    "id": "uvarovka",
-   "num": 178,
+   "num": 179,
    "name": "Уваровка",
    "kindNote": "рп",
    "regionId": "mozhayskiy",
@@ -3719,7 +3737,7 @@
   },
   {
    "id": "shakhovskaya",
-   "num": 179,
+   "num": 180,
    "name": "Шаховская",
    "kindNote": "рп",
    "regionId": "shakhovskaya",
@@ -3737,7 +3755,7 @@
   },
   {
    "id": "belaya-kolp",
-   "num": 180,
+   "num": 181,
    "name": "Белая Колпь",
    "kindNote": "с., усадьба",
    "regionId": "shakhovskaya",
@@ -3755,7 +3773,7 @@
   },
   {
    "id": "teryaevo-iosifo-volotskiy-monastyr",
-   "num": 181,
+   "num": 182,
    "name": "Теряево (Иосифо-Волоцкий монастырь)",
    "kindNote": "с., монастырь",
    "regionId": "volokolamskiy",
@@ -3773,7 +3791,7 @@
   },
   {
    "id": "lotoshino",
-   "num": 182,
+   "num": 183,
    "name": "Лотошино",
    "kindNote": "рп",
    "regionId": "lotoshino",
@@ -3791,7 +3809,7 @@
   },
   {
    "id": "mikulino",
-   "num": 183,
+   "num": 184,
    "name": "Микулино",
    "kindNote": "с., валы удельного города",
    "regionId": "lotoshino",
@@ -3809,7 +3827,7 @@
   },
   {
    "id": "kimry",
-   "num": 184,
+   "num": 185,
    "name": "Кимры",
    "kindNote": "г., деревянный модерн",
    "regionId": "tverskaya-oblast",
@@ -3827,7 +3845,7 @@
   },
   {
    "id": "pereslavl-zalesskiy",
-   "num": 185,
+   "num": 186,
    "name": "Переславль-Залесский",
    "kindNote": "г., Плещеево озеро",
    "regionId": "yaroslavskaya-oblast",
@@ -3844,8 +3862,26 @@
    "insideMkad": false
   },
   {
+   "id": "kolchugino",
+   "num": 187,
+   "name": "Кольчугино",
+   "kindNote": "г., столица подстаканника",
+   "regionId": "vladimirskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.3,
+    "lon": 39.38
+   },
+   "distanceFromKremlinKm": 125.3,
+   "azimuthDeg": 60.2,
+   "ring": 7,
+   "destinationId": "kolchugino",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "roshal",
-   "num": 186,
+   "num": 188,
    "name": "Рошаль",
    "kindNote": "г.",
    "regionId": "shatura",
@@ -3863,7 +3899,7 @@
   },
   {
    "id": "svyatoe-ozero-meshchera",
-   "num": 187,
+   "num": 189,
    "name": "Святое озеро (Мещера)",
    "kindNote": "природа",
    "regionId": "shatura",
@@ -3881,7 +3917,7 @@
   },
   {
    "id": "shatura",
-   "num": 188,
+   "num": 190,
    "name": "Шатура",
    "kindNote": "г.",
    "regionId": "shatura",
@@ -3899,7 +3935,7 @@
   },
   {
    "id": "dedinovo",
-   "num": 189,
+   "num": 191,
    "name": "Дединово",
    "kindNote": "с., родина корабля «Орёл»",
    "regionId": "lukhovitsy",
@@ -3917,7 +3953,7 @@
   },
   {
    "id": "beloomut",
-   "num": 190,
+   "num": 192,
    "name": "Белоомут",
    "kindNote": "рп, Ока, шлюз",
    "regionId": "lukhovitsy",
@@ -3935,7 +3971,7 @@
   },
   {
    "id": "lukhovitsy",
-   "num": 191,
+   "num": 193,
    "name": "Луховицы",
    "kindNote": "г.",
    "regionId": "lukhovitsy",
@@ -3953,7 +3989,7 @@
   },
   {
    "id": "zaraysk",
-   "num": 192,
+   "num": 194,
    "name": "Зарайск",
    "kindNote": "г., кремль",
    "regionId": "zaraysk",
@@ -3971,7 +4007,7 @@
   },
   {
    "id": "aleksin",
-   "num": 193,
+   "num": 195,
    "name": "Алексин",
    "kindNote": "г., Ока",
    "regionId": "tulskaya-oblast",
@@ -3989,7 +4025,7 @@
   },
   {
    "id": "tikhonova-pustyn",
-   "num": 194,
+   "num": 196,
    "name": "Тихонова пустынь",
    "kindNote": "монастырь",
    "regionId": "kaluzhskaya-oblast",
@@ -4007,7 +4043,7 @@
   },
   {
    "id": "polotnyanyy-zavod",
-   "num": 195,
+   "num": 197,
    "name": "Полотняный Завод",
    "kindNote": "усадьба Гончаровых",
    "regionId": "kaluzhskaya-oblast",
@@ -4025,7 +4061,7 @@
   },
   {
    "id": "nikola-lenivets",
-   "num": 196,
+   "num": 198,
    "name": "Никола-Ленивец",
    "kindNote": "арт-парк на Угре",
    "regionId": "kaluzhskaya-oblast",
@@ -4043,7 +4079,7 @@
   },
   {
    "id": "yukhnov",
-   "num": 197,
+   "num": 199,
    "name": "Юхнов",
    "kindNote": "г., Угра",
    "regionId": "kaluzhskaya-oblast",
@@ -4061,7 +4097,7 @@
   },
   {
    "id": "khmelita",
-   "num": 198,
+   "num": 200,
    "name": "Хмелита",
    "kindNote": "усадьба Грибоедовых",
    "regionId": "smolenskaya-oblast",
@@ -4079,7 +4115,7 @@
   },
   {
    "id": "gagarin",
-   "num": 199,
+   "num": 201,
    "name": "Гагарин",
    "kindNote": "г., родина Гагарина",
    "regionId": "smolenskaya-oblast",
@@ -4097,7 +4133,7 @@
   },
   {
    "id": "zubtsov",
-   "num": 200,
+   "num": 202,
    "name": "Зубцов",
    "kindNote": "г., слияние Вазузы и Волги",
    "regionId": "tverskaya-oblast",
@@ -4115,7 +4151,7 @@
   },
   {
    "id": "staritsa",
-   "num": 201,
+   "num": 203,
    "name": "Старица",
    "kindNote": "г., Успенский монастырь",
    "regionId": "tverskaya-oblast",
@@ -4133,7 +4169,7 @@
   },
   {
    "id": "mednoe",
-   "num": 202,
+   "num": 204,
    "name": "Медное",
    "kindNote": "мемориал, село на Тверце",
    "regionId": "tverskaya-oblast",
@@ -4151,7 +4187,7 @@
   },
   {
    "id": "tver",
-   "num": 203,
+   "num": 205,
    "name": "Тверь",
    "kindNote": "г., Путевой дворец",
    "regionId": "tverskaya-oblast",
@@ -4169,7 +4205,7 @@
   },
   {
    "id": "kashin",
-   "num": 204,
+   "num": 206,
    "name": "Кашин",
    "kindNote": "г., курорт и храмы",
    "regionId": "tverskaya-oblast",
@@ -4187,7 +4223,7 @@
   },
   {
    "id": "kalyazin",
-   "num": 205,
+   "num": 207,
    "name": "Калязин",
    "kindNote": "г., затопленная колокольня",
    "regionId": "tverskaya-oblast",
@@ -4205,7 +4241,7 @@
   },
   {
    "id": "borisoglebskiy",
-   "num": 206,
+   "num": 208,
    "name": "Борисоглебский",
    "kindNote": "посёлок, монастырь на Устье",
    "regionId": "yaroslavskaya-oblast",
@@ -4223,7 +4259,7 @@
   },
   {
    "id": "rostov-velikiy",
-   "num": 207,
+   "num": 209,
    "name": "Ростов Великий",
    "kindNote": "г., кремль, озеро Неро",
    "regionId": "yaroslavskaya-oblast",
@@ -4241,7 +4277,7 @@
   },
   {
    "id": "yurev-polskiy",
-   "num": 208,
+   "num": 210,
    "name": "Юрьев-Польский",
    "kindNote": "г., Георгиевский собор",
    "regionId": "vladimirskaya-oblast",
@@ -4259,7 +4295,7 @@
   },
   {
    "id": "suzdal",
-   "num": 209,
+   "num": 211,
    "name": "Суздаль",
    "kindNote": "г., кремль — ЮНЕСКО",
    "regionId": "vladimirskaya-oblast",
@@ -4277,7 +4313,7 @@
   },
   {
    "id": "vladimir",
-   "num": 210,
+   "num": 212,
    "name": "Владимир",
    "kindNote": "г., Золотые ворота — ЮНЕСКО",
    "regionId": "vladimirskaya-oblast",
@@ -4295,7 +4331,7 @@
   },
   {
    "id": "gus-khrustalnyy",
-   "num": 211,
+   "num": 213,
    "name": "Гусь-Хрустальный",
    "kindNote": "г., хрусталь",
    "regionId": "vladimirskaya-oblast",
@@ -4313,7 +4349,7 @@
   },
   {
    "id": "spas-klepiki",
-   "num": 212,
+   "num": 214,
    "name": "Спас-Клепики",
    "kindNote": "г., Мещера",
    "regionId": "ryazanskaya-oblast",
@@ -4331,7 +4367,7 @@
   },
   {
    "id": "solotcha",
-   "num": 213,
+   "num": 215,
    "name": "Солотча",
    "kindNote": "монастырь, курорт",
    "regionId": "ryazanskaya-oblast",
@@ -4349,7 +4385,7 @@
   },
   {
    "id": "konstantinovo-esenin",
-   "num": 214,
+   "num": 216,
    "name": "Константиново (Есенин)",
    "kindNote": "село-музей Есенина",
    "regionId": "ryazanskaya-oblast",
@@ -4367,7 +4403,7 @@
   },
   {
    "id": "ryazan",
-   "num": 215,
+   "num": 217,
    "name": "Рязань",
    "kindNote": "г., кремль",
    "regionId": "ryazanskaya-oblast",
@@ -4385,7 +4421,7 @@
   },
   {
    "id": "mikhaylov",
-   "num": 216,
+   "num": 218,
    "name": "Михайлов",
    "kindNote": "г., пограничная крепость",
    "regionId": "ryazanskaya-oblast",
@@ -4403,7 +4439,7 @@
   },
   {
    "id": "serebryanye-prudy",
-   "num": 217,
+   "num": 219,
    "name": "Серебряные Пруды",
    "kindNote": "рп",
    "regionId": "serebryanye-prudy",
@@ -4421,7 +4457,7 @@
   },
   {
    "id": "venev",
-   "num": 218,
+   "num": 220,
    "name": "Венёв",
    "kindNote": "г.",
    "regionId": "tulskaya-oblast",
@@ -4439,7 +4475,7 @@
   },
   {
    "id": "novomoskovsk",
-   "num": 219,
+   "num": 221,
    "name": "Новомосковск",
    "kindNote": "г., исток Дона",
    "regionId": "tulskaya-oblast",
@@ -4457,7 +4493,7 @@
   },
   {
    "id": "tula",
-   "num": 220,
+   "num": 222,
    "name": "Тула",
    "kindNote": "г., кремль",
    "regionId": "tulskaya-oblast",
@@ -4475,7 +4511,7 @@
   },
   {
    "id": "kaluga",
-   "num": 221,
+   "num": 223,
    "name": "Калуга",
    "kindNote": "г., музей космонавтики",
    "regionId": "kaluzhskaya-oblast",
@@ -4493,7 +4529,7 @@
   },
   {
    "id": "roslavl",
-   "num": 222,
+   "num": 224,
    "name": "Рославль",
    "kindNote": "г., Остёр",
    "regionId": "smolenskaya-oblast",
@@ -4511,7 +4547,7 @@
   },
   {
    "id": "elnya",
-   "num": 223,
+   "num": 225,
    "name": "Ельня",
    "kindNote": "г., воинская слава",
    "regionId": "smolenskaya-oblast",
@@ -4529,7 +4565,7 @@
   },
   {
    "id": "dorogobuzh",
-   "num": 224,
+   "num": 226,
    "name": "Дорогобуж",
    "kindNote": "г., Днепр",
    "regionId": "smolenskaya-oblast",
@@ -4547,7 +4583,7 @@
   },
   {
    "id": "smolensk",
-   "num": 225,
+   "num": 227,
    "name": "Смоленск",
    "kindNote": "г., крепостная стена",
    "regionId": "smolenskaya-oblast",
@@ -4565,7 +4601,7 @@
   },
   {
    "id": "vyazma",
-   "num": 226,
+   "num": 228,
    "name": "Вязьма",
    "kindNote": "г., Иоанно-Предтеченский монастырь",
    "regionId": "smolenskaya-oblast",
@@ -4583,7 +4619,7 @@
   },
   {
    "id": "yartsevo",
-   "num": 227,
+   "num": 229,
    "name": "Ярцево",
    "kindNote": "г., рубеж 1941 года",
    "regionId": "smolenskaya-oblast",
@@ -4601,7 +4637,7 @@
   },
   {
    "id": "rzhev",
-   "num": 228,
+   "num": 230,
    "name": "Ржев",
    "kindNote": "г., Ржевский мемориал",
    "regionId": "tverskaya-oblast",
@@ -4619,7 +4655,7 @@
   },
   {
    "id": "ostashkov",
-   "num": 229,
+   "num": 231,
    "name": "Осташков",
    "kindNote": "г., Селигер",
    "regionId": "tverskaya-oblast",
@@ -4637,7 +4673,7 @@
   },
   {
    "id": "bernovo",
-   "num": 230,
+   "num": 232,
    "name": "Берново",
    "kindNote": "усадьба Вульфов, Пушкин",
    "regionId": "tverskaya-oblast",
@@ -4655,7 +4691,7 @@
   },
   {
    "id": "torzhok",
-   "num": 231,
+   "num": 233,
    "name": "Торжок",
    "kindNote": "г., Борисоглебский монастырь",
    "regionId": "tverskaya-oblast",
@@ -4673,7 +4709,7 @@
   },
   {
    "id": "pryamukhino",
-   "num": 232,
+   "num": 234,
    "name": "Прямухино",
    "kindNote": "усадьба Бакуниных",
    "regionId": "tverskaya-oblast",
@@ -4691,7 +4727,7 @@
   },
   {
    "id": "vyshniy-volochek",
-   "num": 233,
+   "num": 235,
    "name": "Вышний Волочёк",
    "kindNote": "г., каналы",
    "regionId": "tverskaya-oblast",
@@ -4709,7 +4745,7 @@
   },
   {
    "id": "bezhetsk",
-   "num": 234,
+   "num": 236,
    "name": "Бежецк",
    "kindNote": "г., Гумилёвы",
    "regionId": "tverskaya-oblast",
@@ -4727,7 +4763,7 @@
   },
   {
    "id": "krasnyy-kholm",
-   "num": 235,
+   "num": 237,
    "name": "Красный Холм",
    "kindNote": "г.",
    "regionId": "tverskaya-oblast",
@@ -4745,7 +4781,7 @@
   },
   {
    "id": "uglich",
-   "num": 236,
+   "num": 238,
    "name": "Углич",
    "kindNote": "г., кремль на Волге",
    "regionId": "yaroslavskaya-oblast",
@@ -4763,7 +4799,7 @@
   },
   {
    "id": "myshkin",
-   "num": 237,
+   "num": 239,
    "name": "Мышкин",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4781,7 +4817,7 @@
   },
   {
    "id": "rybinsk",
-   "num": 238,
+   "num": 240,
    "name": "Рыбинск",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4799,7 +4835,7 @@
   },
   {
    "id": "poshekhone",
-   "num": 239,
+   "num": 241,
    "name": "Пошехонье",
    "kindNote": "г., Согожа",
    "regionId": "yaroslavskaya-oblast",
@@ -4817,7 +4853,7 @@
   },
   {
    "id": "tutaev",
-   "num": 240,
+   "num": 242,
    "name": "Тутаев",
    "kindNote": "г., Романов-Борисоглебск",
    "regionId": "yaroslavskaya-oblast",
@@ -4834,8 +4870,26 @@
    "insideMkad": false
   },
   {
+   "id": "danilov",
+   "num": 243,
+   "name": "Данилов",
+   "kindNote": "г., железнодорожный узел",
+   "regionId": "yaroslavskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 58.186,
+    "lon": 40.178
+   },
+   "distanceFromKremlinKm": 311.9,
+   "azimuthDeg": 28.8,
+   "ring": 9,
+   "destinationId": "danilov",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "lyubim",
-   "num": 241,
+   "num": 244,
    "name": "Любим",
    "kindNote": "г., слияние Учи и Обноры",
    "regionId": "yaroslavskaya-oblast",
@@ -4853,7 +4907,7 @@
   },
   {
    "id": "yaroslavl",
-   "num": 242,
+   "num": 245,
    "name": "Ярославль",
    "kindNote": "г., центр — ЮНЕСКО",
    "regionId": "yaroslavskaya-oblast",
@@ -4871,7 +4925,7 @@
   },
   {
    "id": "karabikha",
-   "num": 243,
+   "num": 246,
    "name": "Карабиха",
    "kindNote": "усадьба Некрасова",
    "regionId": "yaroslavskaya-oblast",
@@ -4888,8 +4942,26 @@
    "insideMkad": false
   },
   {
+   "id": "nekrasovskoe",
+   "num": 247,
+   "name": "Некрасовское",
+   "kindNote": "посёлок, Большие Соли",
+   "regionId": "yaroslavskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 57.665,
+    "lon": 40.38
+   },
+   "distanceFromKremlinKm": 271.4,
+   "azimuthDeg": 37.2,
+   "ring": 9,
+   "destinationId": "nekrasovskoe",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "gavrilov-yam",
-   "num": 244,
+   "num": 248,
    "name": "Гаврилов-Ям",
    "kindNote": "г., страна ямщика",
    "regionId": "yaroslavskaya-oblast",
@@ -4907,7 +4979,7 @@
   },
   {
    "id": "kostroma",
-   "num": 245,
+   "num": 249,
    "name": "Кострома",
    "kindNote": "г., Ипатьевский монастырь",
    "regionId": "kostromskaya-oblast",
@@ -4925,7 +4997,7 @@
   },
   {
    "id": "nerekhta",
-   "num": 246,
+   "num": 250,
    "name": "Нерехта",
    "kindNote": "г., храмы XVII–XVIII веков",
    "regionId": "kostromskaya-oblast",
@@ -4943,7 +5015,7 @@
   },
   {
    "id": "ples",
-   "num": 247,
+   "num": 251,
    "name": "Плёс",
    "kindNote": "г., Левитан",
    "regionId": "ivanovskaya-oblast",
@@ -4961,7 +5033,7 @@
   },
   {
    "id": "ivanovo",
-   "num": 248,
+   "num": 252,
    "name": "Иваново",
    "kindNote": "г., текстиль и конструктивизм",
    "regionId": "ivanovskaya-oblast",
@@ -4979,7 +5051,7 @@
   },
   {
    "id": "shuya",
-   "num": 249,
+   "num": 253,
    "name": "Шуя",
    "kindNote": "г., Воскресенский собор",
    "regionId": "ivanovskaya-oblast",
@@ -4997,7 +5069,7 @@
   },
   {
    "id": "palekh",
-   "num": 250,
+   "num": 254,
    "name": "Палех",
    "kindNote": "посёлок, лаковая миниатюра",
    "regionId": "ivanovskaya-oblast",
@@ -5015,7 +5087,7 @@
   },
   {
    "id": "kovrov",
-   "num": 251,
+   "num": 255,
    "name": "Ковров",
    "kindNote": "г., Дегтярёв",
    "regionId": "vladimirskaya-oblast",
@@ -5033,7 +5105,7 @@
   },
   {
    "id": "mstera",
-   "num": 252,
+   "num": 256,
    "name": "Мстёра",
    "kindNote": "посёлок, лаковая миниатюра",
    "regionId": "vladimirskaya-oblast",
@@ -5051,7 +5123,7 @@
   },
   {
    "id": "vyazniki",
-   "num": 253,
+   "num": 257,
    "name": "Вязники",
    "kindNote": "г., льняной промысел",
    "regionId": "vladimirskaya-oblast",
@@ -5069,7 +5141,7 @@
   },
   {
    "id": "gorokhovets",
-   "num": 254,
+   "num": 258,
    "name": "Гороховец",
    "kindNote": "г., купеческие палаты",
    "regionId": "vladimirskaya-oblast",
@@ -5087,7 +5159,7 @@
   },
   {
    "id": "sudogda",
-   "num": 255,
+   "num": 259,
    "name": "Судогда",
    "kindNote": "г., замок Храповицкого",
    "regionId": "vladimirskaya-oblast",
@@ -5105,7 +5177,7 @@
   },
   {
    "id": "murom",
-   "num": 256,
+   "num": 260,
    "name": "Муром",
    "kindNote": "г., Пётр и Феврония, Илья Муромец",
    "regionId": "vladimirskaya-oblast",
@@ -5123,7 +5195,7 @@
   },
   {
    "id": "kasimov",
-   "num": 257,
+   "num": 261,
    "name": "Касимов",
    "kindNote": "г., ханская мечеть",
    "regionId": "ryazanskaya-oblast",
@@ -5141,7 +5213,7 @@
   },
   {
    "id": "skopin",
-   "num": 258,
+   "num": 262,
    "name": "Скопин",
    "kindNote": "г., гончарный промысел",
    "regionId": "ryazanskaya-oblast",
@@ -5159,7 +5231,7 @@
   },
   {
    "id": "lipetsk",
-   "num": 259,
+   "num": 263,
    "name": "Липецк",
    "kindNote": "г., курорт Петра I",
    "regionId": "lipetskaya-oblast",
@@ -5177,7 +5249,7 @@
   },
   {
    "id": "lebedyan",
-   "num": 260,
+   "num": 264,
    "name": "Лебедянь",
    "kindNote": "г., Замятин",
    "regionId": "lipetskaya-oblast",
@@ -5195,7 +5267,7 @@
   },
   {
    "id": "kulikovo-pole",
-   "num": 261,
+   "num": 265,
    "name": "Куликово поле",
    "kindNote": "мемориал 1380 года",
    "regionId": "tulskaya-oblast",
@@ -5213,7 +5285,7 @@
   },
   {
    "id": "elets",
-   "num": 262,
+   "num": 266,
    "name": "Елец",
    "kindNote": "г., кружево и Бунин",
    "regionId": "lipetskaya-oblast",
@@ -5231,7 +5303,7 @@
   },
   {
    "id": "bogoroditsk",
-   "num": 263,
+   "num": 267,
    "name": "Богородицк",
    "kindNote": "г., дворец Бобринских",
    "regionId": "tulskaya-oblast",
@@ -5249,7 +5321,7 @@
   },
   {
    "id": "efremov",
-   "num": 264,
+   "num": 268,
    "name": "Ефремов",
    "kindNote": "г., Бунин",
    "regionId": "tulskaya-oblast",
@@ -5267,7 +5339,7 @@
   },
   {
    "id": "krapivna",
-   "num": 265,
+   "num": 269,
    "name": "Крапивна",
    "kindNote": "село-музей",
    "regionId": "tulskaya-oblast",
@@ -5285,7 +5357,7 @@
   },
   {
    "id": "spasskoe-lutovinovo",
-   "num": 266,
+   "num": 270,
    "name": "Спасское-Лутовиново",
    "kindNote": "усадьба Тургенева",
    "regionId": "orlovskaya-oblast",
@@ -5303,7 +5375,7 @@
   },
   {
    "id": "mtsensk",
-   "num": 267,
+   "num": 271,
    "name": "Мценск",
    "kindNote": "г., Зуша",
    "regionId": "orlovskaya-oblast",
@@ -5321,7 +5393,7 @@
   },
   {
    "id": "odoev",
-   "num": 268,
+   "num": 272,
    "name": "Одоев",
    "kindNote": "посёлок, засечная черта",
    "regionId": "tulskaya-oblast",
@@ -5339,7 +5411,7 @@
   },
   {
    "id": "orel",
-   "num": 269,
+   "num": 273,
    "name": "Орёл",
    "kindNote": "г., литературная столица",
    "regionId": "orlovskaya-oblast",
@@ -5357,7 +5429,7 @@
   },
   {
    "id": "bolkhov",
-   "num": 270,
+   "num": 274,
    "name": "Болхов",
    "kindNote": "г., «орловский Суздаль»",
    "regionId": "orlovskaya-oblast",
@@ -5375,7 +5447,7 @@
   },
   {
    "id": "belev",
-   "num": 271,
+   "num": 275,
    "name": "Белёв",
    "kindNote": "г., пастила",
    "regionId": "tulskaya-oblast",
@@ -5393,7 +5465,7 @@
   },
   {
    "id": "chekalin",
-   "num": 272,
+   "num": 276,
    "name": "Чекалин",
    "kindNote": "самый маленький город",
    "regionId": "tulskaya-oblast",
@@ -5411,7 +5483,7 @@
   },
   {
    "id": "kozelsk",
-   "num": 273,
+   "num": 277,
    "name": "Козельск",
    "kindNote": "г., Оптина пустынь",
    "regionId": "kaluzhskaya-oblast",
