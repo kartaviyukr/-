@@ -15,8 +15,17 @@ const App = (() => {
     22: 'Смысл текста', 23: 'Типы речи', 24: 'Лексика текста', 25: 'Связь предложений',
     26: 'Средства выразительности', 27: 'Сочинение',
   };
-  // Маршрут по порядку: задания 1–26, сочинение (27) — в замке
-  const ROUTE = Array.from({ length: 27 }, (_, i) => i + 1);
+  // Маршрут по главам; задания открываются строго по порядку, первым — №17
+  const range = (a, b) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
+  const GROUPS = [
+    { name: 'Пунктуация', e: '✒️', tasks: [17, 16, 18, 19, 20, 21], label: 'задания 16–21' },
+    { name: 'Орфография', e: '🔤', tasks: range(9, 15), label: 'задания 9–15' },
+    { name: 'Речевые нормы', e: '🗣️', tasks: range(4, 8), label: 'задания 4–8' },
+    { name: 'Текст', e: '📖', tasks: [1, 2, 3, ...range(22, 26)], label: 'задания 1–3, 22–26' },
+    { name: 'Сочинение', e: '✍️', tasks: [27], label: 'задание 27' },
+  ];
+  const ROUTE = GROUPS.flatMap((g) => g.tasks);
+  const GROUP_STARTS = GROUPS.map((g) => ROUTE.indexOf(g.tasks[0]));
   const LESSONS = {};
   const CHESTS = [4, 9, 14, 19, 24]; // после какого по счёту пройденного задания открывается сундук
 
@@ -252,18 +261,22 @@ const App = (() => {
       <div><div class="eyebrow">Твой путь к 100 баллам</div><h2>Дорога к Замку Грамотности</h2></div>
       <div class="prog-row"><div class="pbar"><i style="width:${(dc / 27) * 100}%"></i></div><b>${dc}/27</b></div>
       <div class="muted small">26 тестовых заданий + сочинение в замке. Каждое задание — ключ 🗝️ от ворот.</div>
+      <div class="group-chips">${GROUPS.map((g, gi) => { const n = g.tasks.filter((t) => S.done[t]).length; return `<span class="gchip ${n === g.tasks.length ? 'full' : ''}">${g.e} ${gi + 1}. ${g.name} <b>${n}/${g.tasks.length}</b></span>`; }).join('')}</div>
     </div>`);
     v.appendChild(head);
     const wrap = h('<div class="map"></div>');
     v.appendChild(wrap);
     const W = Math.min((v.clientWidth || 360) - 28, 520);
     wrap.style.width = W + 'px';
-    const step = 136, top = 300, bottom = 150;
-    const H = top + (ROUTE.length - 1) * step + bottom;
-    const pts = ROUTE.map((_, i) => ({ x: W / 2 + Math.sin(i * 0.85) * W * 0.27, y: H - bottom - i * step }));
+    // Перед каждой главой — дополнительный отступ под указатель
+    const step = 136, gapG = 120, top = 300, bottom = 250;
+    const off = [0];
+    for (let i = 1; i < ROUTE.length; i++) off[i] = off[i - 1] + step + (GROUP_STARTS.includes(i) ? gapG : 0);
+    const H = top + off[ROUTE.length - 1] + bottom;
+    const pts = ROUTE.map((_, i) => ({ x: W / 2 + Math.sin(i * 0.85) * W * 0.27, y: H - bottom - off[i] }));
     pts[ROUTE.length - 1] = { x: W / 2, y: top - 10 };
     const p = [pts[0], ...pts, pts[pts.length - 1]];
-    let d = `M${pts[0].x},${pts[0].y + 130}L${pts[0].x},${pts[0].y}`;
+    let d = `M${pts[0].x},${pts[0].y + 240}L${pts[0].x},${pts[0].y}`;
     const prefix = [d];
     for (let i = 1; i < p.length - 2; i++) {
       const c1x = p[i].x + (p[i + 1].x - p[i - 1].x) / 6, c1y = p[i].y + (p[i + 1].y - p[i - 1].y) / 6;
@@ -282,7 +295,7 @@ const App = (() => {
         <path d="${d}" class="road-done" id="roadDone"/><path d="${d}" class="road-line"/>
       </svg>
       <div class="castle ${dc >= 26 ? 'open' : ''}" style="left:${W / 2}px;top:${top - 290}px">${castleSvg(dc >= 27)}<div class="castle-label">Замок Грамотности</div></div>
-      <div class="start-sign" style="left:${pts[0].x}px;top:${pts[0].y + 118}px">СТАРТ</div>`;
+      <div class="start-sign" style="left:${pts[0].x}px;top:${pts[0].y + 222}px">СТАРТ</div>`;
     // пройденная часть дороги
     const done = wrap.querySelector('#roadDone');
     try {
@@ -297,6 +310,21 @@ const App = (() => {
       done.getBoundingClientRect();
       requestAnimationFrame(() => { done.style.strokeDashoffset = `${Math.max(0, len - reach)}`; });
     } catch (_) {}
+    // главы: подложка участка дороги и указатель в начале главы
+    GROUPS.forEach((g, gi) => {
+      const s = GROUP_STARTS[gi];
+      const yStart = pts[s].y + (step + gapG) / 2;
+      const yEnd = gi + 1 < GROUPS.length ? pts[GROUP_STARTS[gi + 1]].y + (step + gapG) / 2 : 0;
+      const n = g.tasks.filter((t) => S.done[t]).length;
+      const reached = curIdx < 0 || s <= curIdx;
+      const full = n === g.tasks.length;
+      if (gi < GROUPS.length - 1) wrap.prepend(h(`<div class="zone z${gi % 2}" style="top:${yEnd}px;height:${yStart - yEnd}px"></div>`));
+      wrap.appendChild(h(`<div class="gsign ${reached ? 'reached' : 'locked'} ${full ? 'full' : ''}" style="top:${yStart}px">
+          <span class="gs-e">${full ? '✅' : reached ? g.e : '🔒'}</span>
+          <span class="gs-t"><small>Глава ${gi + 1} · ${g.label}</small><b>${g.name}</b></span>
+          <span class="gs-n">${n}/${g.tasks.length}</span>
+        </div>`));
+    });
     // декор
     const deco = ['🌲', '🌳', '🌼', '🍄', '🌲', '🪨', '🌷', '🌳', '🦋', '🌲'];
     pts.forEach((pt, i) => {
@@ -330,7 +358,7 @@ const App = (() => {
       const a = pts[ci], b = pts[ci + 1];
       const opened = S.chests.includes(ci);
       const avail = dc > ci;
-      const ch = h(`<button class="chest ${opened ? 'opened' : ''} ${avail && !opened ? 'avail' : ''}" style="left:${Math.max(24, Math.min(W - 24, (a.x + b.x) / 2 + (a.x < b.x ? -70 : 70)))}px;top:${(a.y + b.y) / 2 - 10}px">${opened ? '📭' : '🎁'}</button>`);
+      const ch = h(`<button class="chest ${opened ? 'opened' : ''} ${avail && !opened ? 'avail' : ''}" style="left:${(a.x + b.x) / 2 > W / 2 ? W * 0.16 : W * 0.84}px;top:${(a.y + b.y) / 2}px">${opened ? '📭' : '🎁'}</button>`);
       ch.addEventListener('click', () => {
         if (opened) return toast('Этот сундук уже открыт');
         if (!avail) return toast(`🎁 Сундук откроется после ${ci + 1}-го пройденного задания`);
