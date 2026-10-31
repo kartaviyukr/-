@@ -1,0 +1,250 @@
+{
+ "id": "kashin",
+ "name": "Кашин",
+ "settlementType": "город",
+ "mustHave": 2,
+ "regionId": "tverskaya-oblast",
+ "distanceFromKremlinKm": 178.8,
+ "coords": {
+  "lat": 57.36,
+  "lon": 37.611
+ },
+ "intro": [
+  "Кашин — старинный город на холмах; храмы и монастыри составляют его облик.",
+  "Экскурсоводы обращают внимание на редкую крестово-круговую планировку улиц.",
+  "Точки маршрута: «Колокольня со смотровой площадкой», «Улицы крестово-круговой планировки», «Музей каши». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Кашин, центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Кашин, центр",
+  "coords": {
+   "lat": 57.36,
+   "lon": 37.611
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Кашин, центр",
+  "coords": {
+   "lat": 57.36,
+   "lon": 37.611
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 1.5,
+  "durationH": 0.8,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "kashin-kolokolnya",
+   "name": "Колокольня со смотровой площадкой",
+   "coords": {
+    "lat": 57.3595,
+    "lon": 37.6085
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "В Кашине есть колокольня высотой 75 метров со смотровой площадкой — с неё открываются панорамы города.",
+    "Отсюда хорошо видно, как храмы стоят на холмах. Следующая точка маршрута — «Улицы крестово-круговой планировки». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Колокольня высотой 75 м со смотровой площадкой.",
+     "sourceUrl": "https://experience.tripster.ru/experience/Kashin/74279-monastyri-cerkvi-hramy/",
+     "verified": true
+    },
+    {
+     "text": "С колокольни открываются панорамы города.",
+     "sourceUrl": "https://experience.tripster.ru/experience/Kashin/74279-monastyri-cerkvi-hramy/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "kashin-planirovka",
+   "name": "Улицы крестово-круговой планировки",
+   "coords": {
+    "lat": 57.358,
+    "lon": 37.615
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Экскурсии по Кашину проходят по улицам с крестово-круговой планировкой.",
+    "Город стоит на холмах — подъёмы короткие, но крутые. Следующая точка маршрута — «Музей каши». Формат остановки — «проезжаем», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "У Кашина крестово-круговая планировка улиц.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    },
+    {
+     "text": "Кашин — город на холмах.",
+     "sourceUrl": "https://experience.tripster.ru/experience/Kashin/145452-istoriya-i-arhitektura/reviews/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "kashin-muzey-kashi",
+   "name": "Музей каши",
+   "coords": {
+    "lat": 57.361,
+    "lon": 37.6135
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Музей каши — отдельная достопримечательность Кашина, его включают в экскурсии по городу.",
+    "Хорошая остановка, чтобы перекусить по теме города. Финиш — Кашин, центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Музей каши входит в экскурсии по Кашину.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    },
+    {
+     "text": "Музей каши — отдельная достопримечательность города.",
+     "sourceUrl": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Кашин берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Кашин, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "kashin-title",
+  "name": "Путник: Кашин",
+  "legend": "Проехал все свои точки маршрута «Кашин» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/experience/Kashin/74279-monastyri-cerkvi-hramy/"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/kashin/activities/41503-ekskursiya-po-kashinu-s-posescheniem-muzeya-kashi"
+  },
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/experience/Kashin/145452-istoriya-i-arhitektura/reviews/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     37.602671,
+     57.3595
+    ],
+    [
+     37.603452,
+     57.357928
+    ],
+    [
+     37.605585,
+     57.356777
+    ],
+    [
+     37.612086,
+     57.355277
+    ],
+    [
+     37.615,
+     57.354856
+    ],
+    [
+     37.617914,
+     57.355277
+    ],
+    [
+     37.620048,
+     57.356428
+    ],
+    [
+     37.620829,
+     57.358
+    ],
+    [
+     37.620048,
+     57.359572
+    ],
+    [
+     37.618548,
+     57.362572
+    ],
+    [
+     37.616415,
+     57.363723
+    ],
+    [
+     37.6135,
+     57.364144
+    ],
+    [
+     37.610585,
+     57.363723
+    ],
+    [
+     37.605585,
+     57.362223
+    ],
+    [
+     37.603452,
+     57.361072
+    ],
+    [
+     37.602671,
+     57.3595
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

@@ -3922,8 +3922,26 @@
    "insideMkad": false
   },
   {
-   "id": "staritsa",
+   "id": "zubtsov",
    "num": 192,
+   "name": "Зубцов",
+   "kindNote": "г., слияние Вазузы и Волги",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 56.176,
+    "lon": 34.583
+   },
+   "distanceFromKremlinKm": 194.7,
+   "azimuthDeg": 285.3,
+   "ring": 8,
+   "destinationId": "zubtsov",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "staritsa",
+   "num": 193,
    "name": "Старица",
    "kindNote": "г., Успенский монастырь",
    "regionId": "tverskaya-oblast",
@@ -3941,7 +3959,7 @@
   },
   {
    "id": "tver",
-   "num": 193,
+   "num": 194,
    "name": "Тверь",
    "kindNote": "г., Путевой дворец",
    "regionId": "tverskaya-oblast",
@@ -3958,8 +3976,26 @@
    "insideMkad": false
   },
   {
+   "id": "kashin",
+   "num": 195,
+   "name": "Кашин",
+   "kindNote": "г., курорт и храмы",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 57.36,
+    "lon": 37.611
+   },
+   "distanceFromKremlinKm": 178.8,
+   "azimuthDeg": 359.9,
+   "ring": 8,
+   "destinationId": "kashin",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "kalyazin",
-   "num": 194,
+   "num": 196,
    "name": "Калязин",
    "kindNote": "г., затопленная колокольня",
    "regionId": "tverskaya-oblast",
@@ -3977,7 +4013,7 @@
   },
   {
    "id": "rostov-velikiy",
-   "num": 195,
+   "num": 197,
    "name": "Ростов Великий",
    "kindNote": "г., кремль, озеро Неро",
    "regionId": "yaroslavskaya-oblast",
@@ -3995,7 +4031,7 @@
   },
   {
    "id": "suzdal",
-   "num": 196,
+   "num": 198,
    "name": "Суздаль",
    "kindNote": "г., кремль — ЮНЕСКО",
    "regionId": "vladimirskaya-oblast",
@@ -4013,7 +4049,7 @@
   },
   {
    "id": "vladimir",
-   "num": 197,
+   "num": 199,
    "name": "Владимир",
    "kindNote": "г., Золотые ворота — ЮНЕСКО",
    "regionId": "vladimirskaya-oblast",
@@ -4031,7 +4067,7 @@
   },
   {
    "id": "ryazan",
-   "num": 198,
+   "num": 200,
    "name": "Рязань",
    "kindNote": "г., кремль",
    "regionId": "ryazanskaya-oblast",
@@ -4048,8 +4084,26 @@
    "insideMkad": false
   },
   {
+   "id": "rzhev",
+   "num": 201,
+   "name": "Ржев",
+   "kindNote": "г., Ржевский мемориал",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 56.262,
+    "lon": 34.329
+   },
+   "distanceFromKremlinKm": 212.2,
+   "azimuthDeg": 286.9,
+   "ring": 9,
+   "destinationId": "rzhev",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "torzhok",
-   "num": 199,
+   "num": 202,
    "name": "Торжок",
    "kindNote": "г., Борисоглебский монастырь",
    "regionId": "tverskaya-oblast",
@@ -4066,8 +4120,44 @@
    "insideMkad": false
   },
   {
+   "id": "vyshniy-volochek",
+   "num": 203,
+   "name": "Вышний Волочёк",
+   "kindNote": "г., каналы",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 57.588,
+    "lon": 34.565
+   },
+   "distanceFromKremlinKm": 276.5,
+   "azimuthDeg": 318.9,
+   "ring": 9,
+   "destinationId": "vyshniy-volochek",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "bezhetsk",
+   "num": 204,
+   "name": "Бежецк",
+   "kindNote": "г., Гумилёвы",
+   "regionId": "tverskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 57.786,
+    "lon": 36.693
+   },
+   "distanceFromKremlinKm": 233.1,
+   "azimuthDeg": 346.4,
+   "ring": 9,
+   "destinationId": "bezhetsk",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "uglich",
-   "num": 200,
+   "num": 205,
    "name": "Углич",
    "kindNote": "г., кремль на Волге",
    "regionId": "yaroslavskaya-oblast",
@@ -4085,7 +4175,7 @@
   },
   {
    "id": "myshkin",
-   "num": 201,
+   "num": 206,
    "name": "Мышкин",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4103,7 +4193,7 @@
   },
   {
    "id": "rybinsk",
-   "num": 202,
+   "num": 207,
    "name": "Рыбинск",
    "kindNote": "г., Волга",
    "regionId": "yaroslavskaya-oblast",
@@ -4121,7 +4211,7 @@
   },
   {
    "id": "tutaev",
-   "num": 203,
+   "num": 208,
    "name": "Тутаев",
    "kindNote": "г., Романов-Борисоглебск",
    "regionId": "yaroslavskaya-oblast",
@@ -4139,7 +4229,7 @@
   },
   {
    "id": "yaroslavl",
-   "num": 204,
+   "num": 209,
    "name": "Ярославль",
    "kindNote": "г., центр — ЮНЕСКО",
    "regionId": "yaroslavskaya-oblast",
