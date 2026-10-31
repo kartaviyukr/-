@@ -1,0 +1,324 @@
+{
+ "id": "murom",
+ "name": "Муром",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "vladimirskaya-oblast",
+ "distanceFromKremlinKm": 278.7,
+ "coords": {
+  "lat": 55.575,
+  "lon": 42.052
+ },
+ "intro": [
+  "Муром — древний город на Оке, родина былинного Ильи Муромца и город святых Петра и Февронии.",
+  "Монастыри Мурома — Спасо-Преображенский, Троицкий и Благовещенский — стоят над рекой, а с набережной видна Ока и вантовый мост.",
+  "Точки маршрута: «Спасо-Преображенский монастырь», «Памятник Илье Муромцу», «Окский парк и вид на мост», «Благовещенский монастырь», «Свято-Троицкий монастырь». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 4 км: старт и финиш — Муром, центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Муром, центр",
+  "coords": {
+   "lat": 55.575,
+   "lon": 42.052
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Муром, центр",
+  "coords": {
+   "lat": 55.575,
+   "lon": 42.052
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 4.2,
+  "durationH": 1.5,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "murom-spaso-preobrazhenskiy",
+   "name": "Спасо-Преображенский монастырь",
+   "coords": {
+    "lat": 55.5702,
+    "lon": 42.0518
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Самый старый монастырь Мурома: по преданию, основан в 1096 году, хотя другой источник называет XIV век.",
+    "По легенде, именно здесь принял постриг муромский князь Пётр. Следующая точка маршрута — «Памятник Илье Муромцу». Формат остановки — «заходим внутрь», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "По преданию, монастырь основан в 1096 году.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/murom/points",
+     "verified": true
+    },
+    {
+     "text": "Спасо-Преображенский — самый старый монастырь города.",
+     "sourceUrl": "https://experience.tripster.ru/attractions/Murom/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "murom-ilya",
+   "name": "Памятник Илье Муромцу",
+   "coords": {
+    "lat": 55.5716,
+    "lon": 42.0562
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Памятник Илье Муромцу стоит в парке и был поставлен к 50-летию СССР.",
+    "Памятник былинному богатырю — главное фото в Муроме. Следующая точка маршрута — «Окский парк и вид на мост». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Памятник Илье Муромцу установлен к 50-летию СССР.",
+     "sourceUrl": "https://www.orexca.com/rus/russia/murom.htm",
+     "verified": true
+    },
+    {
+     "text": "Памятник стоит в одном из парков города.",
+     "sourceUrl": "https://www.orexca.com/rus/russia/murom.htm",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "murom-okskiy-park",
+   "name": "Окский парк и вид на мост",
+   "coords": {
+    "lat": 55.5742,
+    "lon": 42.0602
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Из Окского парка открываются панорамы реки с вантовым мостом.",
+    "Окский парк — финальная точка маршрута у самой реки. Следующая точка маршрута — «Благовещенский монастырь». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Окском парке — панорамы Оки и вантового моста.",
+     "sourceUrl": "https://travelto.ru/blog/chto-posmotret-v-murome-glavnye-dostoprimechatelnosti-goroda/",
+     "verified": true
+    },
+    {
+     "text": "Муром стоит на Оке.",
+     "sourceUrl": "https://travelto.ru/blog/chto-posmotret-v-murome-glavnye-dostoprimechatelnosti-goroda/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "murom-blagoveshchenskiy",
+   "name": "Благовещенский монастырь",
+   "coords": {
+    "lat": 55.5802,
+    "lon": 42.0452
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Благовещенский монастырь — третий из главных монастырей Мурома.",
+    "Обзорные экскурсии по Мурому включают все три обители. Следующая точка маршрута — «Свято-Троицкий монастырь». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Благовещенский монастырь — среди главных достопримечательностей.",
+     "sourceUrl": "https://travelto.ru/blog/chto-posmotret-v-murome-glavnye-dostoprimechatelnosti-goroda/",
+     "verified": true
+    },
+    {
+     "text": "Экскурсии включают Спасо-Преображенский, Троицкий и Благовещенский монастыри.",
+     "sourceUrl": "https://travelto.ru/blog/chto-posmotret-v-murome-glavnye-dostoprimechatelnosti-goroda/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "murom-troitskiy",
+   "name": "Свято-Троицкий монастырь",
+   "coords": {
+    "lat": 55.5772,
+    "lon": 42.0498
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "В женском Свято-Троицком монастыре покоятся мощи Петра и Февронии.",
+    "Главный храм — Троицкий собор в стиле московского барокко; в 1918 году монастырь закрывали. Финиш — Муром, центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Мощи Петра и Февронии — в Свято-Троицком монастыре.",
+     "sourceUrl": "https://www.sputnik8.com/ru/murom/sights/svyato-troickij-zhenskij-monastyr",
+     "verified": true
+    },
+    {
+     "text": "Троицкий собор — в стиле московского барокко.",
+     "sourceUrl": "https://101hotels.com/recreation/russia/murom/points",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Муром берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Муром, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "murom-title",
+  "name": "Путник: Муром",
+  "legend": "Проехал все свои точки маршрута «Муром» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: 101hotels.com",
+   "url": "https://101hotels.com/recreation/russia/murom/points"
+  },
+  {
+   "title": "Источник: experience.tripster.ru",
+   "url": "https://experience.tripster.ru/attractions/Murom/"
+  },
+  {
+   "title": "Источник: orexca.com",
+   "url": "https://www.orexca.com/rus/russia/murom.htm"
+  },
+  {
+   "title": "Источник: travelto.ru",
+   "url": "https://travelto.ru/blog/chto-posmotret-v-murome-glavnye-dostoprimechatelnosti-goroda/"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/murom/sights/svyato-troickij-zhenskij-monastyr"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     42.039638,
+     55.5802
+    ],
+    [
+     42.040383,
+     55.578628
+    ],
+    [
+     42.046984,
+     55.568628
+    ],
+    [
+     42.04902,
+     55.567477
+    ],
+    [
+     42.0518,
+     55.567056
+    ],
+    [
+     42.05458,
+     55.567477
+    ],
+    [
+     42.058981,
+     55.568877
+    ],
+    [
+     42.061016,
+     55.570028
+    ],
+    [
+     42.065016,
+     55.572628
+    ],
+    [
+     42.065761,
+     55.5742
+    ],
+    [
+     42.065016,
+     55.575772
+    ],
+    [
+     42.062981,
+     55.576923
+    ],
+    [
+     42.047981,
+     55.582923
+    ],
+    [
+     42.0452,
+     55.583344
+    ],
+    [
+     42.042419,
+     55.582923
+    ],
+    [
+     42.040383,
+     55.581772
+    ],
+    [
+     42.039638,
+     55.5802
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
