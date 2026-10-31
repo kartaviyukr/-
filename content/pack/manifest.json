@@ -230,6 +230,10 @@
     "suvorov.json",
     "peremyshl.json",
     "kaluga.json",
+    "trubchevsk.json",
+    "bryansk.json",
+    "ovstug.json",
+    "dyatkovo.json",
     "meshchovsk.json",
     "lyudinovo.json",
     "roslavl.json",
@@ -294,6 +298,7 @@
     "belev.json",
     "chekalin.json",
     "shamordino.json",
+    "karachev.json",
     "kozelsk.json"
   ]
 }

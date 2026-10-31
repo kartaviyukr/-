@@ -1,0 +1,294 @@
+{
+ "id": "bryansk",
+ "name": "Брянск",
+ "settlementType": "город",
+ "mustHave": 3,
+ "regionId": "bryanskaya-oblast",
+ "distanceFromKremlinKm": 349.2,
+ "coords": {
+  "lat": 53.243,
+  "lon": 34.364
+ },
+ "intro": [
+  "Брянск стоит на Десне; город начинался на Покровской горе, его высшей точке, где стоит старейший городской храм.",
+  "В окрестностях — Свенский монастырь у слияния Десны и Свени, а в годы войны Брянщина стала партизанским краем.",
+  "Точки маршрута: «Площадь Партизан», «Петропавловский монастырь», «Покровская гора», «Свенский монастырь». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 24 км: старт и финиш — Брянск, центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Брянск, центр",
+  "coords": {
+   "lat": 53.243,
+   "lon": 34.364
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Брянск, центр",
+  "coords": {
+   "lat": 53.243,
+   "lon": 34.364
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 24.1,
+  "durationH": 3.1,
+  "difficulty": "средний",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "bryansk-ploshchad-partizan",
+   "name": "Площадь Партизан",
+   "coords": {
+    "lat": 53.262,
+    "lon": 34.374
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "От площади Партизан обычно начинаются экскурсии к мемориалу «Партизанская поляна».",
+    "Там в 1941 году, накануне оккупации, собрались партизанские отряды области. Следующая точка маршрута — «Петропавловский монастырь». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Экскурсии на «Партизанскую поляну» идут от площади Партизан.",
+     "sourceUrl": "https://www.sputnik8.com/ru/bryansk/sights/pokrovskaya-gora",
+     "verified": true
+    },
+    {
+     "text": "В 1941 году на «Партизанской поляне» собрались партизанские отряды.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-bryanska:-putevoditel-po-gorodu-voinskoy",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "bryansk-petropavlovsky",
+   "name": "Петропавловский монастырь",
+   "coords": {
+    "lat": 53.247,
+    "lon": 34.387
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Петропавловский монастырь стоит на берегу напротив Покровской горы.",
+    "Вместе они составляют главный вид старого Брянска. Следующая точка маршрута — «Покровская гора». Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Петропавловский монастырь виден с Покровской горы, на противоположном берегу.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-bryanska:-putevoditel-po-gorodu-voinskoy",
+     "verified": true
+    },
+    {
+     "text": "Брянск стоит на Десне.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%91%D1%80%D1%8F%D0%BD%D1%81%D0%BA%D0%B0",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "bryansk-pokrovskaya-gora",
+   "name": "Покровская гора",
+   "coords": {
+    "lat": 53.2412,
+    "lon": 34.372
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 25,
+   "guideStory": [
+    "Покровская гора — место основания города и его высшая точка. Храм Покрова Пресвятой Богородицы здесь считается старейшим в Брянске.",
+    "Со смотровой площадки видно стрелку рек и Петропавловский монастырь на другом берегу. Следующая точка маршрута — «Свенский монастырь»."
+   ],
+   "facts": [
+    {
+     "text": "Покровская гора — историческое место основания Брянска.",
+     "sourceUrl": "https://www.sputnik8.com/ru/bryansk/sights/pokrovskaya-gora",
+     "verified": true
+    },
+    {
+     "text": "Храм Покрова считается старейшим в Брянске.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-bryanska:-putevoditel-po-gorodu-voinskoy",
+     "verified": true
+    },
+    {
+     "text": "С площадки виден Петропавловский монастырь на противоположном берегу.",
+     "sourceUrl": "https://www.putevka.com/blog/dostoprimechatelnosti-bryanska:-putevoditel-po-gorodu-voinskoy",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "bryansk-svensky",
+   "name": "Свенский монастырь",
+   "coords": {
+    "lat": 53.191,
+    "lon": 34.328
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Свенский Успенский монастырь основан в 1288 году у слияния Десны и Свени.",
+    "Он стоит в посёлке Супонево, к югу от города. Финиш — Брянск, центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.. Формат остановки — «смотреть снаружи», заложите на неё около 40 минут."
+   ],
+   "facts": [
+    {
+     "text": "Свенский монастырь основан в 1288 году.",
+     "sourceUrl": "https://www.sputnik8.com/ru/bryansk/sights/svenskiy-monastyr",
+     "verified": true
+    },
+    {
+     "text": "Монастырь — в посёлке Супонево у слияния Десны и Свени.",
+     "sourceUrl": "https://www.onetwotrip.com/ru/blog/guides/russian-federation/dostoprimechatelnosti-bryanska-debri-partizany-i-yurij-gagarin/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Брянск берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Брянск, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "bryansk-title",
+  "name": "Путник: Брянск",
+  "legend": "Проехал все свои точки маршрута «Брянск» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/bryansk/sights/pokrovskaya-gora"
+  },
+  {
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/blog/dostoprimechatelnosti-bryanska:-putevoditel-po-gorodu-voinskoy"
+  },
+  {
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%87%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%91%D1%80%D1%8F%D0%BD%D1%81%D0%BA%D0%B0"
+  },
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/bryansk/sights/svenskiy-monastyr"
+  },
+  {
+   "title": "Источник: onetwotrip.com",
+   "url": "https://www.onetwotrip.com/ru/blog/guides/russian-federation/dostoprimechatelnosti-bryanska-debri-partizany-i-yurij-gagarin/"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     34.322752,
+     53.191
+    ],
+    [
+     34.323455,
+     53.189428
+    ],
+    [
+     34.325376,
+     53.188277
+    ],
+    [
+     34.328,
+     53.187856
+    ],
+    [
+     34.330624,
+     53.188277
+    ],
+    [
+     34.332545,
+     53.189428
+    ],
+    [
+     34.39155,
+     53.245428
+    ],
+    [
+     34.392254,
+     53.247
+    ],
+    [
+     34.39155,
+     53.248572
+    ],
+    [
+     34.378552,
+     53.263572
+    ],
+    [
+     34.376628,
+     53.264723
+    ],
+    [
+     34.374,
+     53.265144
+    ],
+    [
+     34.371372,
+     53.264723
+    ],
+    [
+     34.369448,
+     53.263572
+    ],
+    [
+     34.323455,
+     53.192572
+    ],
+    [
+     34.322752,
+     53.191
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
