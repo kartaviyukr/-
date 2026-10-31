@@ -1,0 +1,268 @@
+{
+ "id": "konduki-romantsevskie-gory",
+ "name": "Кондуки (Романцевские горы)",
+ "settlementType": "деревня",
+ "mustHave": 2,
+ "regionId": "tulskaya-oblast",
+ "distanceFromKremlinKm": 198.8,
+ "coords": {
+  "lat": 53.99,
+  "lon": 38.141
+ },
+ "intro": [
+  "У деревни Кондуки с 1960-х годов добывали бурый уголь; заброшенные карьеры превратились в голубые озёра, а отвалы — в «Романцевские горы».",
+  "Холмы только кажутся песчаными — это глина. Купаться нельзя: вода кислая и жёсткая.",
+  "Точки маршрута: «Главное голубое озеро», «Верхние озёра», «Романцевские горы». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 2 км: старт и финиш — Кондуки (Романцевские горы), центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Кондуки (Романцевские горы), центр",
+  "coords": {
+   "lat": 53.99,
+   "lon": 38.141
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Кондуки (Романцевские горы), центр",
+  "coords": {
+   "lat": 53.99,
+   "lon": 38.141
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 1.9,
+  "durationH": 1.0,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "konduki-romantsevskie-gory-goluboe",
+   "name": "Главное голубое озеро",
+   "coords": {
+    "lat": 53.9905,
+    "lon": 38.1415
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Главное озеро с бирюзовой водой — самая фотографируемая точка Кондуков.",
+    "Купаться запрещено: у воды повышенная кислотность и жёсткость. Следующая точка маршрута — «Верхние озёра». Формат остановки — «смотреть снаружи», заложите на неё около 30 минут."
+   ],
+   "facts": [
+    {
+     "text": "Карьеры у Кондуков начали разрабатывать в 1960-е годы.",
+     "sourceUrl": "https://tonkosti.ru/Голубые_озера_в_Кондуках",
+     "verified": true
+    },
+    {
+     "text": "Купаться в озёрах нельзя.",
+     "sourceUrl": "https://tonkosti.ru/Голубые_озера_в_Кондуках",
+     "verified": true
+    },
+    {
+     "text": "Вода отличается повышенной кислотностью и жёсткостью.",
+     "sourceUrl": "https://journal.sovcombank.ru/puteshestviya/konduki-kak-dobratsya-do-romantsevskih-gor-i-zachem-tuda-ehat",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "konduki-romantsevskie-gory-verhnie",
+   "name": "Верхние озёра",
+   "coords": {
+    "lat": 53.9945,
+    "lon": 38.145
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Выше лежат озёра Сухое, Секретное и Верхнее с очень прозрачной водой.",
+    "Инфраструктуры почти нет — воду и всё нужное берём с собой. Следующая точка маршрута — «Романцевские горы». Формат остановки — «проезжаем», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Выше — озёра Сухое, Секретное и Верхнее.",
+     "sourceUrl": "https://auto.ru/mag/article/konduki-kak-dobratsya-do-romancevskih-gor-na-mashine/",
+     "verified": true
+    },
+    {
+     "text": "Раздевалок и мусорных контейнеров здесь нет.",
+     "sourceUrl": "https://auto.ru/mag/article/konduki-kak-dobratsya-do-romancevskih-gor-na-mashine/",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "konduki-romantsevskie-gory-gory",
+   "name": "Романцевские горы",
+   "coords": {
+    "lat": 53.9925,
+    "lon": 38.138
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Холмы вокруг озёр — терриконы, отвалы пустой породы.",
+    "Издали они кажутся песчаными, но на самом деле это глина. Финиш — Кондуки (Романцевские горы), центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.."
+   ],
+   "facts": [
+    {
+     "text": "Холмы — отвалы пустых пород угледобычи.",
+     "sourceUrl": "https://journal.sovcombank.ru/puteshestviya/konduki-kak-dobratsya-do-romantsevskih-gor-i-zachem-tuda-ehat",
+     "verified": true
+    },
+    {
+     "text": "Холмы сложены глиной, а не песком.",
+     "sourceUrl": "https://journal.sovcombank.ru/puteshestviya/konduki-kak-dobratsya-do-romantsevskih-gor-i-zachem-tuda-ehat",
+     "verified": true
+    },
+    {
+     "text": "Место называют Ушаковскими карьерами, Романцевскими горами или Кондуками.",
+     "sourceUrl": "https://www.putevka.com/tulskaya-oblast/tula/sight/romancevskie-gory-konduki",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Кондуки (Романцевские горы) берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Кондуки (Романцевские горы), центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "konduki-romantsevskie-gory-title",
+  "name": "Путник: Кондуки (Романцевские горы)",
+  "legend": "Проехал все свои точки маршрута «Кондуки (Романцевские горы)» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/Голубые_озера_в_Кондуках"
+  },
+  {
+   "title": "Источник: journal.sovcombank.ru",
+   "url": "https://journal.sovcombank.ru/puteshestviya/konduki-kak-dobratsya-do-romantsevskih-gor-i-zachem-tuda-ehat"
+  },
+  {
+   "title": "Источник: auto.ru",
+   "url": "https://auto.ru/mag/article/konduki-kak-dobratsya-do-romancevskih-gor-na-mashine/"
+  },
+  {
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/tulskaya-oblast/tula/sight/romancevskie-gory-konduki"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.132652,
+     53.9925
+    ],
+    [
+     38.133368,
+     53.990928
+    ],
+    [
+     38.136369,
+     53.988428
+    ],
+    [
+     38.138326,
+     53.987277
+    ],
+    [
+     38.141,
+     53.986856
+    ],
+    [
+     38.143674,
+     53.987277
+    ],
+    [
+     38.145631,
+     53.988428
+    ],
+    [
+     38.146131,
+     53.988928
+    ],
+    [
+     38.149632,
+     53.992928
+    ],
+    [
+     38.150348,
+     53.9945
+    ],
+    [
+     38.149632,
+     53.996072
+    ],
+    [
+     38.147674,
+     53.997223
+    ],
+    [
+     38.145,
+     53.997644
+    ],
+    [
+     38.142326,
+     53.997223
+    ],
+    [
+     38.135326,
+     53.995223
+    ],
+    [
+     38.133368,
+     53.994072
+    ],
+    [
+     38.132652,
+     53.9925
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
