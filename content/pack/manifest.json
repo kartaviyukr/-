@@ -210,8 +210,10 @@
     "ryazan.json",
     "serebryanye-prudy.json",
     "venev.json",
+    "novomoskovsk.json",
     "tula.json",
     "krapivna.json",
+    "odoev.json",
     "belev.json",
     "kozelsk.json",
     "smolensk.json",
@@ -227,6 +229,8 @@
     "rybinsk.json",
     "tutaev.json",
     "yaroslavl.json",
-    "bogoroditsk.json"
+    "kulikovo-pole.json",
+    "bogoroditsk.json",
+    "efremov.json"
   ]
 }

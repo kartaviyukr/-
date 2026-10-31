@@ -1,0 +1,329 @@
+{
+ "id": "efremov",
+ "name": "Ефремов",
+ "settlementType": "город",
+ "mustHave": 1,
+ "regionId": "tulskaya-oblast",
+ "distanceFromKremlinKm": 291.6,
+ "coords": {
+  "lat": 53.146,
+  "lon": 38.121
+ },
+ "intro": [
+  "Ефремов стоит на реке Красивая Меча. Город связан с Иваном Буниным: здесь жили его мать и брат, и оба похоронены в Ефремове.",
+  "В районе водят экскурсию «Бунин и Ефремовская земля».",
+  "Точки маршрута: «Собор «Взыскание погибших»», «Свято-Троицкий храм», «Художественно-краеведческий музей», «Дом-музей Бунина», «Парк имени Бунина». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 3 км: старт и финиш — Ефремов, центр (Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Ефремов, центр",
+  "coords": {
+   "lat": 53.146,
+   "lon": 38.121
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "endPoint": {
+  "name": "Ефремов, центр",
+  "coords": {
+   "lat": 53.146,
+   "lon": 38.121
+  },
+  "transport": "Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута."
+ },
+ "route": {
+  "distanceKm": 2.6,
+  "durationH": 1.4,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "efremov-sobor",
+   "name": "Собор «Взыскание погибших»",
+   "coords": {
+    "lat": 53.1471,
+    "lon": 38.1262
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Кафедральный собор иконы Божией Матери «Взыскание погибших» — главный храм Ефремова.",
+    "В Ефремове есть и своя Красная площадь — центр старого города. Следующая точка маршрута — «Свято-Троицкий храм». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "В Ефремове есть кафедральный собор «Взыскание погибших».",
+     "sourceUrl": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec",
+     "verified": true
+    },
+    {
+     "text": "В городе есть Красная площадь.",
+     "sourceUrl": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "efremov-troitskiy",
+   "name": "Свято-Троицкий храм",
+   "coords": {
+    "lat": 53.1451,
+    "lon": 38.1231
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "Свято-Троицкий храм построили и освятили в 2001 году на месте разрушенного прежнего.",
+    "Храм стоит в центре, недалеко от бунинских мест. Следующая точка маршрута — «Художественно-краеведческий музей». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "Троицкий храм построен и освящён в 2001 году.",
+     "sourceUrl": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec",
+     "verified": true
+    },
+    {
+     "text": "Храм стоит на месте разрушенного прежнего.",
+     "sourceUrl": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "efremov-muzey",
+   "name": "Художественно-краеведческий музей",
+   "coords": {
+    "lat": 53.1441,
+    "lon": 38.1201
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 30,
+   "guideStory": [
+    "Ефремовский художественно-краеведческий музей рассказывает об истории города и района и о связях края с русскими писателями.",
+    "Музей хорошо дополняет бунинский дом — рассказом о самом городе. Следующая точка маршрута — «Дом-музей Бунина»."
+   ],
+   "facts": [
+    {
+     "text": "Музей рассказывает об истории края и связях с писателями.",
+     "sourceUrl": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec",
+     "verified": true
+    },
+    {
+     "text": "В Ефремове есть районный художественно-краеведческий музей.",
+     "sourceUrl": "https://www.komandirovka.ru/sights/efremov/",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "efremov-bunin",
+   "name": "Дом-музей Бунина",
+   "coords": {
+    "lat": 53.1462,
+    "lon": 38.1152
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 40,
+   "guideStory": [
+    "Музей работает с 1985 года в доме, который принадлежал брату писателя Евгению; комнаты воссозданы по воспоминаниям племянника. Его называют единственным сохранившимся мемориальным домом Бунина.",
+    "Адрес — улица Тургенева, 47; по воскресеньям, по данным путеводителя, принимают только группы по записи."
+   ],
+   "facts": [
+    {
+     "text": "Музей открыт в 1985 году в доме брата Бунина Евгения.",
+     "sourceUrl": "https://www.culture.ru/events/1396528/ekskursiya-bunin-i-efremovskaya-zemlya",
+     "verified": true
+    },
+    {
+     "text": "Адрес — ул. Тургенева, 47.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D0%BC-%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%91%D1%83%D0%BD%D0%B8%D0%BD%D0%B0_%D0%B2_%D0%95%D1%84%D1%80%D0%B5%D0%BC%D0%BE%D0%B2%D0%B5",
+     "verified": true
+    },
+    {
+     "text": "Это единственный сохранившийся мемориальный дом Бунина.",
+     "sourceUrl": "https://tonkosti.ru/%D0%94%D0%BE%D0%BC-%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%91%D1%83%D0%BD%D0%B8%D0%BD%D0%B0_%D0%B2_%D0%95%D1%84%D1%80%D0%B5%D0%BC%D0%BE%D0%B2%D0%B5",
+     "verified": false
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  },
+  {
+   "id": "efremov-park",
+   "name": "Парк имени Бунина",
+   "coords": {
+    "lat": 53.1482,
+    "lon": 38.1182
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 15,
+   "guideStory": [
+    "Центральный парк Ефремова назван в честь Ивана Бунина.",
+    "Ещё одно место памяти в городе — мемориал Курган Бессмертия. Финиш — Ефремов, центр: Как добраться: автобусом или своим ходом до центра — это подъезд, а не часть маршрута.. Формат остановки — «смотреть снаружи», заложите на неё около 15 минут."
+   ],
+   "facts": [
+    {
+     "text": "Центральный парк назван именем Бунина.",
+     "sourceUrl": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec",
+     "verified": true
+    },
+    {
+     "text": "В Ефремове есть Курган Бессмертия.",
+     "sourceUrl": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 50,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Ефремов берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Ефремов, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "efremov-title",
+  "name": "Путник: Ефремов",
+  "legend": "Проехал все свои точки маршрута «Ефремов» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: alice.yandex.ru",
+   "url": "https://alice.yandex.ru/neurum/c/puteshestviya/q/kakie_dostoprimechatelnosti_mozhno_posetit_cdfc2fec"
+  },
+  {
+   "title": "Источник: komandirovka.ru",
+   "url": "https://www.komandirovka.ru/sights/efremov/"
+  },
+  {
+   "title": "Источник: culture.ru",
+   "url": "https://www.culture.ru/events/1396528/ekskursiya-bunin-i-efremovskaya-zemlya"
+  },
+  {
+   "title": "Источник: tonkosti.ru",
+   "url": "https://tonkosti.ru/%D0%94%D0%BE%D0%BC-%D0%BC%D1%83%D0%B7%D0%B5%D0%B9_%D0%91%D1%83%D0%BD%D0%B8%D0%BD%D0%B0_%D0%B2_%D0%95%D1%84%D1%80%D0%B5%D0%BC%D0%BE%D0%B2%D0%B5"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     38.109958,
+     53.1462
+    ],
+    [
+     38.11066,
+     53.144628
+    ],
+    [
+     38.112579,
+     53.143477
+    ],
+    [
+     38.117479,
+     53.141377
+    ],
+    [
+     38.1201,
+     53.140956
+    ],
+    [
+     38.122721,
+     53.141377
+    ],
+    [
+     38.125721,
+     53.142377
+    ],
+    [
+     38.12764,
+     53.143528
+    ],
+    [
+     38.13074,
+     53.145528
+    ],
+    [
+     38.131442,
+     53.1471
+    ],
+    [
+     38.13074,
+     53.148672
+    ],
+    [
+     38.128821,
+     53.149823
+    ],
+    [
+     38.1262,
+     53.150244
+    ],
+    [
+     38.1182,
+     53.151344
+    ],
+    [
+     38.115579,
+     53.150923
+    ],
+    [
+     38.11366,
+     53.149772
+    ],
+    [
+     38.11066,
+     53.147772
+    ],
+    [
+     38.109958,
+     53.1462
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}
