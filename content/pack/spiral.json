@@ -212,6 +212,12 @@
    "verified": false
   },
   {
+   "id": "lipetskaya-oblast",
+   "name": "Липецкая область",
+   "type": "соседняя_область",
+   "verified": false
+  },
+  {
    "id": "lobnya",
    "name": "Лобня",
    "type": "МО_городской_округ",
@@ -5098,8 +5104,44 @@
    "insideMkad": false
   },
   {
-   "id": "kulikovo-pole",
+   "id": "lipetsk",
    "num": 256,
+   "name": "Липецк",
+   "kindNote": "г., курорт Петра I",
+   "regionId": "lipetskaya-oblast",
+   "mustHave": 2,
+   "coords": {
+    "lat": 52.61,
+    "lon": 39.595
+   },
+   "distanceFromKremlinKm": 372.3,
+   "azimuthDeg": 159.0,
+   "ring": 9,
+   "destinationId": "lipetsk",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "lebedyan",
+   "num": 257,
+   "name": "Лебедянь",
+   "kindNote": "г., Замятин",
+   "regionId": "lipetskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 53.015,
+    "lon": 39.143
+   },
+   "distanceFromKremlinKm": 319.9,
+   "azimuthDeg": 161.4,
+   "ring": 9,
+   "destinationId": "lebedyan",
+   "start": false,
+   "insideMkad": false
+  },
+  {
+   "id": "kulikovo-pole",
+   "num": 258,
    "name": "Куликово поле",
    "kindNote": "мемориал 1380 года",
    "regionId": "tulskaya-oblast",
@@ -5116,8 +5158,26 @@
    "insideMkad": false
   },
   {
+   "id": "elets",
+   "num": 259,
+   "name": "Елец",
+   "kindNote": "г., кружево и Бунин",
+   "regionId": "lipetskaya-oblast",
+   "mustHave": 3,
+   "coords": {
+    "lat": 52.62,
+    "lon": 38.5
+   },
+   "distanceFromKremlinKm": 353.0,
+   "azimuthDeg": 170.3,
+   "ring": 9,
+   "destinationId": "elets",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "bogoroditsk",
-   "num": 257,
+   "num": 260,
    "name": "Богородицк",
    "kindNote": "г., дворец Бобринских",
    "regionId": "tulskaya-oblast",
@@ -5135,7 +5195,7 @@
   },
   {
    "id": "efremov",
-   "num": 258,
+   "num": 261,
    "name": "Ефремов",
    "kindNote": "г., Бунин",
    "regionId": "tulskaya-oblast",
@@ -5153,7 +5213,7 @@
   },
   {
    "id": "krapivna",
-   "num": 259,
+   "num": 262,
    "name": "Крапивна",
    "kindNote": "село-музей",
    "regionId": "tulskaya-oblast",
@@ -5171,7 +5231,7 @@
   },
   {
    "id": "spasskoe-lutovinovo",
-   "num": 260,
+   "num": 263,
    "name": "Спасское-Лутовиново",
    "kindNote": "усадьба Тургенева",
    "regionId": "orlovskaya-oblast",
@@ -5189,7 +5249,7 @@
   },
   {
    "id": "mtsensk",
-   "num": 261,
+   "num": 264,
    "name": "Мценск",
    "kindNote": "г., Зуша",
    "regionId": "orlovskaya-oblast",
@@ -5207,7 +5267,7 @@
   },
   {
    "id": "odoev",
-   "num": 262,
+   "num": 265,
    "name": "Одоев",
    "kindNote": "посёлок, засечная черта",
    "regionId": "tulskaya-oblast",
@@ -5225,7 +5285,7 @@
   },
   {
    "id": "orel",
-   "num": 263,
+   "num": 266,
    "name": "Орёл",
    "kindNote": "г., литературная столица",
    "regionId": "orlovskaya-oblast",
@@ -5243,7 +5303,7 @@
   },
   {
    "id": "bolkhov",
-   "num": 264,
+   "num": 267,
    "name": "Болхов",
    "kindNote": "г., «орловский Суздаль»",
    "regionId": "orlovskaya-oblast",
@@ -5261,7 +5321,7 @@
   },
   {
    "id": "belev",
-   "num": 265,
+   "num": 268,
    "name": "Белёв",
    "kindNote": "г., пастила",
    "regionId": "tulskaya-oblast",
@@ -5278,8 +5338,26 @@
    "insideMkad": false
   },
   {
+   "id": "chekalin",
+   "num": 269,
+   "name": "Чекалин",
+   "kindNote": "самый маленький город",
+   "regionId": "tulskaya-oblast",
+   "mustHave": 1,
+   "coords": {
+    "lat": 54.097,
+    "lon": 36.247
+   },
+   "distanceFromKremlinKm": 203.8,
+   "azimuthDeg": 206.0,
+   "ring": 9,
+   "destinationId": "chekalin",
+   "start": false,
+   "insideMkad": false
+  },
+  {
    "id": "kozelsk",
-   "num": 266,
+   "num": 270,
    "name": "Козельск",
    "kindNote": "г., Оптина пустынь",
    "regionId": "kaluzhskaya-oblast",

@@ -1,0 +1,290 @@
+{
+ "id": "lipetsk",
+ "name": "Липецк",
+ "settlementType": "город",
+ "mustHave": 2,
+ "regionId": "lipetskaya-oblast",
+ "distanceFromKremlinKm": 372.3,
+ "coords": {
+  "lat": 52.61,
+  "lon": 39.595
+ },
+ "intro": [
+  "Липецк связан с Петром I и с курортным прошлым: в Нижнем парке до сих пор стоит бювет с минеральной водой.",
+  "Сердце старого города — Соборная гора, площадь Петра Великого и Петровский спуск.",
+  "Точки маршрута: «Христорождественский собор», «Площадь Петра Великого», «Петровский спуск», «Нижний парк и бювет». Все они — в самом месте или рядом с ним.",
+  "Маршрут кольцевой, около 5 км: старт и финиш — Вокзал Липецк (Поезда с Павелецкого вокзала). Координаты точек приблизительные — дорогу прокладывает навигатор."
+ ],
+ "startPoint": {
+  "name": "Вокзал Липецк",
+  "coords": {
+   "lat": 52.5985,
+   "lon": 39.585
+  },
+  "transport": "Поезда с Павелецкого вокзала"
+ },
+ "endPoint": {
+  "name": "Вокзал Липецк",
+  "coords": {
+   "lat": 52.5985,
+   "lon": 39.585
+  },
+  "transport": "Поезда с Павелецкого вокзала"
+ },
+ "route": {
+  "distanceKm": 5.4,
+  "durationH": 1.1,
+  "difficulty": "лёгкий",
+  "shape": "петля",
+  "surfaceNotes": "Городской асфальт и тротуары; в парках — дорожки с покрытием.",
+  "seasonNotes": "Лучше с мая по сентябрь; музеи ставим на середину дня.",
+  "safetyNotes": "Оживлённые улицы и трассы пересекаем только по переходам; за городом едем по обочине друг за другом.",
+  "barriers": []
+ },
+ "stops": [
+  {
+   "id": "lipetsk-sobor",
+   "name": "Христорождественский собор",
+   "coords": {
+    "lat": 52.6106,
+    "lon": 39.5996
+   },
+   "kind": "заходим внутрь",
+   "visitMinutes": 20,
+   "guideStory": [
+    "Христорождественский собор стоит на Соборной горе; это главный собор города.",
+    "В советское время собор закрыли, а в 1991 году вернули верующим. Следующая точка маршрута — «Площадь Петра Великого». Формат остановки — «заходим внутрь», заложите на неё около 20 минут."
+   ],
+   "facts": [
+    {
+     "text": "Собор стоит на Соборной горе.",
+     "sourceUrl": "https://www.sputnik8.com/ru/lipetsk/pages/chto-posmotret-v-lipetske-glavnye-dostoprimechatelnosti-i-interesnye-mesta",
+     "verified": true
+    },
+    {
+     "text": "Собор вернули верующим в 1991 году.",
+     "sourceUrl": "https://www.sputnik8.com/ru/lipetsk/pages/chto-posmotret-v-lipetske-glavnye-dostoprimechatelnosti-i-interesnye-mesta",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 10,
+   "coordsVerified": false
+  },
+  {
+   "id": "lipetsk-ploshchad-petra",
+   "name": "Площадь Петра Великого",
+   "coords": {
+    "lat": 52.6109,
+    "lon": 39.6011
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 10,
+   "guideStory": [
+    "На площади Петра Великого рядом с собором стоит памятник Петру I и каскадный фонтан.",
+    "От площади Петра Великого начинается Петровский спуск. Следующая точка маршрута — «Петровский спуск». Формат остановки — «смотреть снаружи», заложите на неё около 10 минут."
+   ],
+   "facts": [
+    {
+     "text": "На площади — памятник Петру I и каскадный фонтан.",
+     "sourceUrl": "https://www.putevka.com/blog/lipetsk-petr-velikiy-i-ego-nasledie",
+     "verified": true
+    },
+    {
+     "text": "Площадь — рядом с собором.",
+     "sourceUrl": "https://www.putevka.com/blog/lipetsk-petr-velikiy-i-ego-nasledie",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 20,
+   "coordsVerified": false
+  },
+  {
+   "id": "lipetsk-petrovskiy-spusk",
+   "name": "Петровский спуск",
+   "coords": {
+    "lat": 52.6114,
+    "lon": 39.6028
+   },
+   "kind": "проезжаем",
+   "visitMinutes": 5,
+   "guideStory": [
+    "Лестница Петровского спуска ведёт с площади вниз, в Нижний парк.",
+    "Спуск — лестница, поэтому велосипед по ней ведём рядом. Следующая точка маршрута — «Нижний парк и бювет». Формат остановки — «проезжаем», заложите на неё около 5 минут."
+   ],
+   "facts": [
+    {
+     "text": "Петровский спуск ведёт с площади в Нижний парк.",
+     "sourceUrl": "https://www.sputnik8.com/ru/lipetsk/pages/chto-posmotret-v-lipetske-glavnye-dostoprimechatelnosti-i-interesnye-mesta",
+     "verified": true
+    },
+    {
+     "text": "Спуск начинается от площади Петра Великого.",
+     "sourceUrl": "https://www.sputnik8.com/ru/lipetsk/pages/chto-posmotret-v-lipetske-glavnye-dostoprimechatelnosti-i-interesnye-mesta",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 30,
+   "coordsVerified": false
+  },
+  {
+   "id": "lipetsk-nizhniy-park",
+   "name": "Нижний парк и бювет",
+   "coords": {
+    "lat": 52.6102,
+    "lon": 39.6052
+   },
+   "kind": "смотреть снаружи",
+   "visitMinutes": 20,
+   "guideStory": [
+    "В Нижнем парке стоит бювет с минеральной водой — память о курортном Липецке. По одной версии, парк возник там, где Пётр I нашёл минеральный родник; другой источник называет 1905 год и место Петровского пруда.",
+    "В 1970-х парк расширили, а старый пруд засыпали. Финиш — Вокзал Липецк: Поезда с Павелецкого вокзала."
+   ],
+   "facts": [
+    {
+     "text": "В Нижнем парке — бювет с минеральной водой.",
+     "sourceUrl": "https://www.sputnik8.com/ru/lipetsk/pages/chto-posmotret-v-lipetske-glavnye-dostoprimechatelnosti-i-interesnye-mesta",
+     "verified": true
+    },
+    {
+     "text": "Парк создан в 1905 году на месте Петровского пруда.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/lipetsk/nizhnii-park",
+     "verified": false
+    },
+    {
+     "text": "В 1970-х старый пруд засыпали.",
+     "sourceUrl": "https://www.kupibilet.ru/gid/rossiia/lipetsk/nizhnii-park",
+     "verified": true
+    }
+   ],
+   "openingHoursNote": "",
+   "bikeParkingNote": "Велосипед оставляем у входа на замке.",
+   "warnings": [],
+   "order": 40,
+   "coordsVerified": false
+  }
+ ],
+ "dish": {
+  "name": "Перекус в дорогу",
+  "kind": "тематическая замена",
+  "honestyNote": "Подтверждённого местного блюда мы не нашли — это выбор составителя, а не местный рецепт.",
+  "story": [
+   "В Липецк берём с собой воду и простой перекус: между точками маршрута кафе может не оказаться. Адреса, где купить, ниже — проверенные отмечены отдельно."
+  ],
+  "whereToBuy": [
+   {
+    "name": "Кафе или магазин в центре",
+    "address": "Липецк, центр",
+    "verified": false,
+    "note": "Не проверено."
+   }
+  ]
+ },
+ "title": {
+  "id": "lipetsk-title",
+  "name": "Путник: Липецк",
+  "legend": "Проехал все свои точки маршрута «Липецк» — без заездов к соседям.",
+  "ritual": "Сфотографироваться у первой точки маршрута.",
+  "pairVariant": "Путники"
+ },
+ "sources": [
+  {
+   "title": "Источник: sputnik8.com",
+   "url": "https://www.sputnik8.com/ru/lipetsk/pages/chto-posmotret-v-lipetske-glavnye-dostoprimechatelnosti-i-interesnye-mesta"
+  },
+  {
+   "title": "Источник: putevka.com",
+   "url": "https://www.putevka.com/blog/lipetsk-petr-velikiy-i-ego-nasledie"
+  },
+  {
+   "title": "Источник: kupibilet.ru",
+   "url": "https://www.kupibilet.ru/gid/rossiia/lipetsk/nizhnii-park"
+  }
+ ],
+ "lastChecked": "2026-10-26",
+ "routeVersion": 3,
+ "boundaryGeoJson": {
+  "type": "Polygon",
+  "coordinates": [
+   [
+    [
+     39.579824,
+     52.5985
+    ],
+    [
+     39.580517,
+     52.596928
+    ],
+    [
+     39.582412,
+     52.595777
+    ],
+    [
+     39.585,
+     52.595356
+    ],
+    [
+     39.587588,
+     52.595777
+    ],
+    [
+     39.607789,
+     52.607477
+    ],
+    [
+     39.609684,
+     52.608628
+    ],
+    [
+     39.610378,
+     52.6102
+    ],
+    [
+     39.609684,
+     52.611772
+    ],
+    [
+     39.607789,
+     52.612923
+    ],
+    [
+     39.605389,
+     52.614123
+    ],
+    [
+     39.6028,
+     52.614544
+    ],
+    [
+     39.600211,
+     52.614123
+    ],
+    [
+     39.597011,
+     52.613323
+    ],
+    [
+     39.595116,
+     52.612172
+    ],
+    [
+     39.580517,
+     52.600072
+    ],
+    [
+     39.579824,
+     52.5985
+    ]
+   ]
+  ]
+ },
+ "boundarySource": "approx"
+}

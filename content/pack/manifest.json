@@ -258,7 +258,10 @@
     "murom.json",
     "kasimov.json",
     "skopin.json",
+    "lipetsk.json",
+    "lebedyan.json",
     "kulikovo-pole.json",
+    "elets.json",
     "bogoroditsk.json",
     "efremov.json",
     "krapivna.json",
@@ -268,6 +271,7 @@
     "orel.json",
     "bolkhov.json",
     "belev.json",
+    "chekalin.json",
     "kozelsk.json"
   ]
 }
